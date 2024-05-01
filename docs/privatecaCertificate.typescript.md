@@ -4,7 +4,7 @@
 
 ### PrivatecaCertificate <a name="PrivatecaCertificate" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate google_privateca_certificate}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate google_privateca_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer"></a>
 
@@ -556,7 +556,7 @@ The construct id used in the generated config for the PrivatecaCertificate to im
 
 The id of the existing PrivatecaCertificate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1361,11 +1361,11 @@ const privatecaCertificateConfig: privatecaCertificate.PrivatecaCertificateConfi
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.certificateAuthority">certificateAuthority</a></code> | <code>string</code> | The Certificate Authority ID that should issue the certificate. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.certificateTemplate">certificateTemplate</a></code> | <code>string</code> | The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/* /locations/* /certificateTemplates/*'. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.config">config</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA">PrivatecaCertificateConfigA</a></code> | config block. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#id PrivatecaCertificate#id}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#id PrivatecaCertificate#id}. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | Labels with user-defined metadata to apply to this resource. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.lifetime">lifetime</a></code> | <code>string</code> | The desired lifetime of the CA certificate. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.pemCsr">pemCsr</a></code> | <code>string</code> | Immutable. A pem-encoded X.509 certificate signing request (CSR). |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#project PrivatecaCertificate#project}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#project PrivatecaCertificate#project}. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1450,7 +1450,7 @@ public readonly location: string;
 
 Location of the Certificate. A full list of valid locations can be found by running 'gcloud privateca locations list'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#location PrivatecaCertificate#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#location PrivatecaCertificate#location}
 
 ---
 
@@ -1464,7 +1464,7 @@ public readonly name: string;
 
 The name for this Certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#name PrivatecaCertificate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#name PrivatecaCertificate#name}
 
 ---
 
@@ -1478,7 +1478,7 @@ public readonly pool: string;
 
 The name of the CaPool this Certificate belongs to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#pool PrivatecaCertificate#pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#pool PrivatecaCertificate#pool}
 
 ---
 
@@ -1497,7 +1497,7 @@ a Certificate Authority with resource name 'projects/my-project/locations/us-cen
 argument 'pool' should be set to 'projects/my-project/locations/us-central1/caPools/my-pool', argument 'certificate_authority'
 should be set to 'my-ca'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#certificate_authority PrivatecaCertificate#certificate_authority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#certificate_authority PrivatecaCertificate#certificate_authority}
 
 ---
 
@@ -1516,7 +1516,7 @@ the caller must have the necessary permission to use this template. If this is
 omitted, no template will be used. This template must be in the same location
 as the Certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#certificate_template PrivatecaCertificate#certificate_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#certificate_template PrivatecaCertificate#certificate_template}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -1532,7 +1532,7 @@ public readonly config: PrivatecaCertificateConfigA;
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#config PrivatecaCertificate#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#config PrivatecaCertificate#config}
 
 ---
 
@@ -1544,7 +1544,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#id PrivatecaCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#id PrivatecaCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1564,7 +1564,7 @@ Labels with user-defined metadata to apply to this resource.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#labels PrivatecaCertificate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#labels PrivatecaCertificate#labels}
 
 ---
 
@@ -1582,7 +1582,7 @@ Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#lifetime PrivatecaCertificate#lifetime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#lifetime PrivatecaCertificate#lifetime}
 
 ---
 
@@ -1596,7 +1596,7 @@ public readonly pemCsr: string;
 
 Immutable. A pem-encoded X.509 certificate signing request (CSR).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#pem_csr PrivatecaCertificate#pem_csr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#pem_csr PrivatecaCertificate#pem_csr}
 
 ---
 
@@ -1608,7 +1608,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#project PrivatecaCertificate#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#project PrivatecaCertificate#project}.
 
 ---
 
@@ -1622,7 +1622,7 @@ public readonly timeouts: PrivatecaCertificateTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#timeouts PrivatecaCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#timeouts PrivatecaCertificate#timeouts}
 
 ---
 
@@ -1643,6 +1643,7 @@ const privatecaCertificateConfigA: privatecaCertificate.PrivatecaCertificateConf
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA.property.publicKey">publicKey</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigPublicKey">PrivatecaCertificateConfigPublicKey</a></code> | public_key block. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA.property.subjectConfig">subjectConfig</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectConfig">PrivatecaCertificateConfigSubjectConfig</a></code> | subject_config block. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA.property.x509Config">x509Config</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509Config">PrivatecaCertificateConfigX509Config</a></code> | x509_config block. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA.property.subjectKeyId">subjectKeyId</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId">PrivatecaCertificateConfigSubjectKeyId</a></code> | subject_key_id block. |
 
 ---
 
@@ -1656,7 +1657,7 @@ public readonly publicKey: PrivatecaCertificateConfigPublicKey;
 
 public_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#public_key PrivatecaCertificate#public_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#public_key PrivatecaCertificate#public_key}
 
 ---
 
@@ -1670,7 +1671,7 @@ public readonly subjectConfig: PrivatecaCertificateConfigSubjectConfig;
 
 subject_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#subject_config PrivatecaCertificate#subject_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#subject_config PrivatecaCertificate#subject_config}
 
 ---
 
@@ -1684,7 +1685,21 @@ public readonly x509Config: PrivatecaCertificateConfigX509Config;
 
 x509_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#x509_config PrivatecaCertificate#x509_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#x509_config PrivatecaCertificate#x509_config}
+
+---
+
+##### `subjectKeyId`<sup>Optional</sup> <a name="subjectKeyId" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA.property.subjectKeyId"></a>
+
+```typescript
+public readonly subjectKeyId: PrivatecaCertificateConfigSubjectKeyId;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId">PrivatecaCertificateConfigSubjectKeyId</a>
+
+subject_key_id block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#subject_key_id PrivatecaCertificate#subject_key_id}
 
 ---
 
@@ -1717,7 +1732,7 @@ public readonly format: string;
 
 The format of the public key. Currently, only PEM format is supported. Possible values: ["KEY_TYPE_UNSPECIFIED", "PEM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#format PrivatecaCertificate#format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#format PrivatecaCertificate#format}
 
 ---
 
@@ -1733,7 +1748,7 @@ Required.
 
 A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#key PrivatecaCertificate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#key PrivatecaCertificate#key}
 
 ---
 
@@ -1766,7 +1781,7 @@ public readonly subject: PrivatecaCertificateConfigSubjectConfigSubject;
 
 subject block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#subject PrivatecaCertificate#subject}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#subject PrivatecaCertificate#subject}
 
 ---
 
@@ -1780,7 +1795,7 @@ public readonly subjectAltName: PrivatecaCertificateConfigSubjectConfigSubjectAl
 
 subject_alt_name block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#subject_alt_name PrivatecaCertificate#subject_alt_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#subject_alt_name PrivatecaCertificate#subject_alt_name}
 
 ---
 
@@ -1819,7 +1834,7 @@ public readonly commonName: string;
 
 The common name of the distinguished name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#common_name PrivatecaCertificate#common_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#common_name PrivatecaCertificate#common_name}
 
 ---
 
@@ -1833,7 +1848,7 @@ public readonly organization: string;
 
 The organization of the subject.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#organization PrivatecaCertificate#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#organization PrivatecaCertificate#organization}
 
 ---
 
@@ -1847,7 +1862,7 @@ public readonly countryCode: string;
 
 The country code of the subject.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#country_code PrivatecaCertificate#country_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#country_code PrivatecaCertificate#country_code}
 
 ---
 
@@ -1861,7 +1876,7 @@ public readonly locality: string;
 
 The locality or city of the subject.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#locality PrivatecaCertificate#locality}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#locality PrivatecaCertificate#locality}
 
 ---
 
@@ -1875,7 +1890,7 @@ public readonly organizationalUnit: string;
 
 The organizational unit of the subject.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#organizational_unit PrivatecaCertificate#organizational_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#organizational_unit PrivatecaCertificate#organizational_unit}
 
 ---
 
@@ -1889,7 +1904,7 @@ public readonly postalCode: string;
 
 The postal code of the subject.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#postal_code PrivatecaCertificate#postal_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#postal_code PrivatecaCertificate#postal_code}
 
 ---
 
@@ -1903,7 +1918,7 @@ public readonly province: string;
 
 The province, territory, or regional state of the subject.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#province PrivatecaCertificate#province}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#province PrivatecaCertificate#province}
 
 ---
 
@@ -1917,7 +1932,7 @@ public readonly streetAddress: string;
 
 The street address of the subject.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#street_address PrivatecaCertificate#street_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#street_address PrivatecaCertificate#street_address}
 
 ---
 
@@ -1952,7 +1967,7 @@ public readonly dnsNames: string[];
 
 Contains only valid, fully-qualified host names.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#dns_names PrivatecaCertificate#dns_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#dns_names PrivatecaCertificate#dns_names}
 
 ---
 
@@ -1966,7 +1981,7 @@ public readonly emailAddresses: string[];
 
 Contains only valid RFC 2822 E-mail addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#email_addresses PrivatecaCertificate#email_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#email_addresses PrivatecaCertificate#email_addresses}
 
 ---
 
@@ -1980,7 +1995,7 @@ public readonly ipAddresses: string[];
 
 Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#ip_addresses PrivatecaCertificate#ip_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#ip_addresses PrivatecaCertificate#ip_addresses}
 
 ---
 
@@ -1994,7 +2009,39 @@ public readonly uris: string[];
 
 Contains only valid RFC 3986 URIs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#uris PrivatecaCertificate#uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#uris PrivatecaCertificate#uris}
+
+---
+
+### PrivatecaCertificateConfigSubjectKeyId <a name="PrivatecaCertificateConfigSubjectKeyId" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId.Initializer"></a>
+
+```typescript
+import { privatecaCertificate } from '@cdktf/provider-google'
+
+const privatecaCertificateConfigSubjectKeyId: privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId.property.keyId">keyId</a></code> | <code>string</code> | The value of the KeyId in lowercase hexidecimal. |
+
+---
+
+##### `keyId`<sup>Optional</sup> <a name="keyId" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId.property.keyId"></a>
+
+```typescript
+public readonly keyId: string;
+```
+
+- *Type:* string
+
+The value of the KeyId in lowercase hexidecimal.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#key_id PrivatecaCertificate#key_id}
 
 ---
 
@@ -2031,7 +2078,7 @@ public readonly keyUsage: PrivatecaCertificateConfigX509ConfigKeyUsage;
 
 key_usage block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#key_usage PrivatecaCertificate#key_usage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#key_usage PrivatecaCertificate#key_usage}
 
 ---
 
@@ -2045,7 +2092,7 @@ public readonly additionalExtensions: IResolvable | PrivatecaCertificateConfigX5
 
 additional_extensions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#additional_extensions PrivatecaCertificate#additional_extensions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#additional_extensions PrivatecaCertificate#additional_extensions}
 
 ---
 
@@ -2059,7 +2106,7 @@ public readonly aiaOcspServers: string[];
 
 Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#aia_ocsp_servers PrivatecaCertificate#aia_ocsp_servers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#aia_ocsp_servers PrivatecaCertificate#aia_ocsp_servers}
 
 ---
 
@@ -2073,7 +2120,7 @@ public readonly caOptions: PrivatecaCertificateConfigX509ConfigCaOptions;
 
 ca_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#ca_options PrivatecaCertificate#ca_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#ca_options PrivatecaCertificate#ca_options}
 
 ---
 
@@ -2087,7 +2134,7 @@ public readonly nameConstraints: PrivatecaCertificateConfigX509ConfigNameConstra
 
 name_constraints block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#name_constraints PrivatecaCertificate#name_constraints}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#name_constraints PrivatecaCertificate#name_constraints}
 
 ---
 
@@ -2101,7 +2148,7 @@ public readonly policyIds: IResolvable | PrivatecaCertificateConfigX509ConfigPol
 
 policy_ids block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#policy_ids PrivatecaCertificate#policy_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#policy_ids PrivatecaCertificate#policy_ids}
 
 ---
 
@@ -2135,7 +2182,7 @@ public readonly critical: boolean | IResolvable;
 
 Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#critical PrivatecaCertificate#critical}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#critical PrivatecaCertificate#critical}
 
 ---
 
@@ -2149,7 +2196,7 @@ public readonly objectId: PrivatecaCertificateConfigX509ConfigAdditionalExtensio
 
 object_id block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#object_id PrivatecaCertificate#object_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#object_id PrivatecaCertificate#object_id}
 
 ---
 
@@ -2163,7 +2210,7 @@ public readonly value: string;
 
 The value of this X.509 extension. A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#value PrivatecaCertificate#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#value PrivatecaCertificate#value}
 
 ---
 
@@ -2195,7 +2242,7 @@ public readonly objectIdPath: number[];
 
 An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#object_id_path PrivatecaCertificate#object_id_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#object_id_path PrivatecaCertificate#object_id_path}
 
 ---
 
@@ -2230,7 +2277,7 @@ public readonly isCa: boolean | IResolvable;
 
 When true, the "CA" in Basic Constraints extension will be set to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#is_ca PrivatecaCertificate#is_ca}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#is_ca PrivatecaCertificate#is_ca}
 
 ---
 
@@ -2247,7 +2294,7 @@ Refers to the "path length constraint" in Basic Constraints extension.
 For a CA certificate, this value describes the depth of
 subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#max_issuer_path_length PrivatecaCertificate#max_issuer_path_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#max_issuer_path_length PrivatecaCertificate#max_issuer_path_length}
 
 ---
 
@@ -2263,7 +2310,7 @@ When true, the "CA" in Basic Constraints extension will be set to false.
 
 If both 'is_ca' and 'non_ca' are unset, the extension will be omitted from the CA certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#non_ca PrivatecaCertificate#non_ca}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#non_ca PrivatecaCertificate#non_ca}
 
 ---
 
@@ -2280,7 +2327,7 @@ When true, the "path length constraint" in Basic Constraints extension will be s
 if both 'max_issuer_path_length' and 'zero_max_issuer_path_length' are unset,
 the max path length will be omitted from the CA certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#zero_max_issuer_path_length PrivatecaCertificate#zero_max_issuer_path_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#zero_max_issuer_path_length PrivatecaCertificate#zero_max_issuer_path_length}
 
 ---
 
@@ -2314,7 +2361,7 @@ public readonly baseKeyUsage: PrivatecaCertificateConfigX509ConfigKeyUsageBaseKe
 
 base_key_usage block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#base_key_usage PrivatecaCertificate#base_key_usage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#base_key_usage PrivatecaCertificate#base_key_usage}
 
 ---
 
@@ -2328,7 +2375,7 @@ public readonly extendedKeyUsage: PrivatecaCertificateConfigX509ConfigKeyUsageEx
 
 extended_key_usage block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#extended_key_usage PrivatecaCertificate#extended_key_usage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#extended_key_usage PrivatecaCertificate#extended_key_usage}
 
 ---
 
@@ -2342,7 +2389,7 @@ public readonly unknownExtendedKeyUsages: IResolvable | PrivatecaCertificateConf
 
 unknown_extended_key_usages block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#unknown_extended_key_usages PrivatecaCertificate#unknown_extended_key_usages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#unknown_extended_key_usages PrivatecaCertificate#unknown_extended_key_usages}
 
 ---
 
@@ -2382,7 +2429,7 @@ public readonly certSign: boolean | IResolvable;
 
 The key may be used to sign certificates.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#cert_sign PrivatecaCertificate#cert_sign}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#cert_sign PrivatecaCertificate#cert_sign}
 
 ---
 
@@ -2396,7 +2443,7 @@ public readonly contentCommitment: boolean | IResolvable;
 
 The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#content_commitment PrivatecaCertificate#content_commitment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#content_commitment PrivatecaCertificate#content_commitment}
 
 ---
 
@@ -2410,7 +2457,7 @@ public readonly crlSign: boolean | IResolvable;
 
 The key may be used sign certificate revocation lists.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#crl_sign PrivatecaCertificate#crl_sign}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#crl_sign PrivatecaCertificate#crl_sign}
 
 ---
 
@@ -2424,7 +2471,7 @@ public readonly dataEncipherment: boolean | IResolvable;
 
 The key may be used to encipher data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#data_encipherment PrivatecaCertificate#data_encipherment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#data_encipherment PrivatecaCertificate#data_encipherment}
 
 ---
 
@@ -2438,7 +2485,7 @@ public readonly decipherOnly: boolean | IResolvable;
 
 The key may be used to decipher only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#decipher_only PrivatecaCertificate#decipher_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#decipher_only PrivatecaCertificate#decipher_only}
 
 ---
 
@@ -2452,7 +2499,7 @@ public readonly digitalSignature: boolean | IResolvable;
 
 The key may be used for digital signatures.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#digital_signature PrivatecaCertificate#digital_signature}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#digital_signature PrivatecaCertificate#digital_signature}
 
 ---
 
@@ -2466,7 +2513,7 @@ public readonly encipherOnly: boolean | IResolvable;
 
 The key may be used to encipher only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#encipher_only PrivatecaCertificate#encipher_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#encipher_only PrivatecaCertificate#encipher_only}
 
 ---
 
@@ -2480,7 +2527,7 @@ public readonly keyAgreement: boolean | IResolvable;
 
 The key may be used in a key agreement protocol.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#key_agreement PrivatecaCertificate#key_agreement}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#key_agreement PrivatecaCertificate#key_agreement}
 
 ---
 
@@ -2494,7 +2541,7 @@ public readonly keyEncipherment: boolean | IResolvable;
 
 The key may be used to encipher other keys.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#key_encipherment PrivatecaCertificate#key_encipherment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#key_encipherment PrivatecaCertificate#key_encipherment}
 
 ---
 
@@ -2531,7 +2578,7 @@ public readonly clientAuth: boolean | IResolvable;
 
 Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#client_auth PrivatecaCertificate#client_auth}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#client_auth PrivatecaCertificate#client_auth}
 
 ---
 
@@ -2545,7 +2592,7 @@ public readonly codeSigning: boolean | IResolvable;
 
 Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#code_signing PrivatecaCertificate#code_signing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#code_signing PrivatecaCertificate#code_signing}
 
 ---
 
@@ -2559,7 +2606,7 @@ public readonly emailProtection: boolean | IResolvable;
 
 Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#email_protection PrivatecaCertificate#email_protection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#email_protection PrivatecaCertificate#email_protection}
 
 ---
 
@@ -2573,7 +2620,7 @@ public readonly ocspSigning: boolean | IResolvable;
 
 Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#ocsp_signing PrivatecaCertificate#ocsp_signing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#ocsp_signing PrivatecaCertificate#ocsp_signing}
 
 ---
 
@@ -2587,7 +2634,7 @@ public readonly serverAuth: boolean | IResolvable;
 
 Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#server_auth PrivatecaCertificate#server_auth}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#server_auth PrivatecaCertificate#server_auth}
 
 ---
 
@@ -2601,7 +2648,7 @@ public readonly timeStamping: boolean | IResolvable;
 
 Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#time_stamping PrivatecaCertificate#time_stamping}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#time_stamping PrivatecaCertificate#time_stamping}
 
 ---
 
@@ -2633,7 +2680,7 @@ public readonly objectIdPath: number[];
 
 An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#object_id_path PrivatecaCertificate#object_id_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#object_id_path PrivatecaCertificate#object_id_path}
 
 ---
 
@@ -2673,7 +2720,7 @@ public readonly critical: boolean | IResolvable;
 
 Indicates whether or not the name constraints are marked critical.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#critical PrivatecaCertificate#critical}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#critical PrivatecaCertificate#critical}
 
 ---
 
@@ -2693,7 +2740,7 @@ the left-hand side of the name satisfies the name constraint.
 For example, 'example.com', 'www.example.com', 'www.sub.example.com'
 would satisfy 'example.com' while 'example1.com' does not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#excluded_dns_names PrivatecaCertificate#excluded_dns_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#excluded_dns_names PrivatecaCertificate#excluded_dns_names}
 
 ---
 
@@ -2712,7 +2759,7 @@ email address, a hostname to indicate all email addresses on that host or
 a domain with a leading period (e.g. '.example.com') to indicate
 all email addresses in that domain.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#excluded_email_addresses PrivatecaCertificate#excluded_email_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#excluded_email_addresses PrivatecaCertificate#excluded_email_addresses}
 
 ---
 
@@ -2731,7 +2778,7 @@ are expressed using CIDR notation as specified in RFC 4632.
 For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
 addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#excluded_ip_ranges PrivatecaCertificate#excluded_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#excluded_ip_ranges PrivatecaCertificate#excluded_ip_ranges}
 
 ---
 
@@ -2748,7 +2795,7 @@ Contains the excluded URIs that apply to the host part of the name.
 The value can be a hostname or a domain with a
 leading period (like '.example.com')
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#excluded_uris PrivatecaCertificate#excluded_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#excluded_uris PrivatecaCertificate#excluded_uris}
 
 ---
 
@@ -2768,7 +2815,7 @@ the left-hand side of the name satisfies the name constraint.
 For example, 'example.com', 'www.example.com', 'www.sub.example.com'
 would satisfy 'example.com' while 'example1.com' does not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#permitted_dns_names PrivatecaCertificate#permitted_dns_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#permitted_dns_names PrivatecaCertificate#permitted_dns_names}
 
 ---
 
@@ -2787,7 +2834,7 @@ email address, a hostname to indicate all email addresses on that host or
 a domain with a leading period (e.g. '.example.com') to indicate
 all email addresses in that domain.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#permitted_email_addresses PrivatecaCertificate#permitted_email_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#permitted_email_addresses PrivatecaCertificate#permitted_email_addresses}
 
 ---
 
@@ -2806,7 +2853,7 @@ are expressed using CIDR notation as specified in RFC 4632.
 For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
 addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#permitted_ip_ranges PrivatecaCertificate#permitted_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#permitted_ip_ranges PrivatecaCertificate#permitted_ip_ranges}
 
 ---
 
@@ -2823,7 +2870,7 @@ Contains the permitted URIs that apply to the host part of the name.
 The value can be a hostname or a domain with a
 leading period (like '.example.com')
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#permitted_uris PrivatecaCertificate#permitted_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#permitted_uris PrivatecaCertificate#permitted_uris}
 
 ---
 
@@ -2855,7 +2902,7 @@ public readonly objectIdPath: number[];
 
 An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#object_id_path PrivatecaCertificate#object_id_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#object_id_path PrivatecaCertificate#object_id_path}
 
 ---
 
@@ -2884,9 +2931,9 @@ const privatecaCertificateTimeouts: privatecaCertificate.PrivatecaCertificateTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#create PrivatecaCertificate#create}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#delete PrivatecaCertificate#delete}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#update PrivatecaCertificate#update}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#create PrivatecaCertificate#create}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#delete PrivatecaCertificate#delete}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#update PrivatecaCertificate#update}. |
 
 ---
 
@@ -2898,7 +2945,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#create PrivatecaCertificate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#create PrivatecaCertificate#create}.
 
 ---
 
@@ -2910,7 +2957,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#delete PrivatecaCertificate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#delete PrivatecaCertificate#delete}.
 
 ---
 
@@ -2922,7 +2969,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/privateca_certificate#update PrivatecaCertificate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/privateca_certificate#update PrivatecaCertificate#update}.
 
 ---
 
@@ -12147,7 +12194,9 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.putPublicKey">putPublicKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.putSubjectConfig">putSubjectConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.putSubjectKeyId">putSubjectKeyId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.putX509Config">putX509Config</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.resetSubjectKeyId">resetSubjectKeyId</a></code> | *No description.* |
 
 ---
 
@@ -12325,6 +12374,18 @@ public putSubjectConfig(value: PrivatecaCertificateConfigSubjectConfig): void
 
 ---
 
+##### `putSubjectKeyId` <a name="putSubjectKeyId" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.putSubjectKeyId"></a>
+
+```typescript
+public putSubjectKeyId(value: PrivatecaCertificateConfigSubjectKeyId): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.putSubjectKeyId.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId">PrivatecaCertificateConfigSubjectKeyId</a>
+
+---
+
 ##### `putX509Config` <a name="putX509Config" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.putX509Config"></a>
 
 ```typescript
@@ -12337,6 +12398,12 @@ public putX509Config(value: PrivatecaCertificateConfigX509Config): void
 
 ---
 
+##### `resetSubjectKeyId` <a name="resetSubjectKeyId" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.resetSubjectKeyId"></a>
+
+```typescript
+public resetSubjectKeyId(): void
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -12346,9 +12413,11 @@ public putX509Config(value: PrivatecaCertificateConfigX509Config): void
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.publicKey">publicKey</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigPublicKeyOutputReference">PrivatecaCertificateConfigPublicKeyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.subjectConfig">subjectConfig</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectConfigOutputReference">PrivatecaCertificateConfigSubjectConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.subjectKeyId">subjectKeyId</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference">PrivatecaCertificateConfigSubjectKeyIdOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.x509Config">x509Config</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigOutputReference">PrivatecaCertificateConfigX509ConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.publicKeyInput">publicKeyInput</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigPublicKey">PrivatecaCertificateConfigPublicKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.subjectConfigInput">subjectConfigInput</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectConfig">PrivatecaCertificateConfigSubjectConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.subjectKeyIdInput">subjectKeyIdInput</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId">PrivatecaCertificateConfigSubjectKeyId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.x509ConfigInput">x509ConfigInput</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509Config">PrivatecaCertificateConfigX509Config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA">PrivatecaCertificateConfigA</a></code> | *No description.* |
 
@@ -12398,6 +12467,16 @@ public readonly subjectConfig: PrivatecaCertificateConfigSubjectConfigOutputRefe
 
 ---
 
+##### `subjectKeyId`<sup>Required</sup> <a name="subjectKeyId" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.subjectKeyId"></a>
+
+```typescript
+public readonly subjectKeyId: PrivatecaCertificateConfigSubjectKeyIdOutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference">PrivatecaCertificateConfigSubjectKeyIdOutputReference</a>
+
+---
+
 ##### `x509Config`<sup>Required</sup> <a name="x509Config" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.x509Config"></a>
 
 ```typescript
@@ -12425,6 +12504,16 @@ public readonly subjectConfigInput: PrivatecaCertificateConfigSubjectConfig;
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectConfig">PrivatecaCertificateConfigSubjectConfig</a>
+
+---
+
+##### `subjectKeyIdInput`<sup>Optional</sup> <a name="subjectKeyIdInput" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigAOutputReference.property.subjectKeyIdInput"></a>
+
+```typescript
+public readonly subjectKeyIdInput: PrivatecaCertificateConfigSubjectKeyId;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId">PrivatecaCertificateConfigSubjectKeyId</a>
 
 ---
 
@@ -13903,6 +13992,284 @@ public readonly internalValue: PrivatecaCertificateConfigSubjectConfigSubject;
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectConfigSubject">PrivatecaCertificateConfigSubjectConfigSubject</a>
+
+---
+
+
+### PrivatecaCertificateConfigSubjectKeyIdOutputReference <a name="PrivatecaCertificateConfigSubjectKeyIdOutputReference" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.Initializer"></a>
+
+```typescript
+import { privatecaCertificate } from '@cdktf/provider-google'
+
+new privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.resetKeyId">resetKeyId</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetKeyId` <a name="resetKeyId" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.resetKeyId"></a>
+
+```typescript
+public resetKeyId(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.keyIdInput">keyIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.keyId">keyId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId">PrivatecaCertificateConfigSubjectKeyId</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `keyIdInput`<sup>Optional</sup> <a name="keyIdInput" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.keyIdInput"></a>
+
+```typescript
+public readonly keyIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `keyId`<sup>Required</sup> <a name="keyId" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.keyId"></a>
+
+```typescript
+public readonly keyId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyIdOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: PrivatecaCertificateConfigSubjectKeyId;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigSubjectKeyId">PrivatecaCertificateConfigSubjectKeyId</a>
 
 ---
 

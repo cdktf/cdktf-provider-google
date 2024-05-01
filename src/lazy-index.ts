@@ -282,6 +282,7 @@ Object.defineProperty(exports, 'computeRouterInterface', { get: function () { re
 Object.defineProperty(exports, 'computeRouterNat', { get: function () { return require('./compute-router-nat'); } });
 Object.defineProperty(exports, 'computeRouterPeer', { get: function () { return require('./compute-router-peer'); } });
 Object.defineProperty(exports, 'computeSecurityPolicy', { get: function () { return require('./compute-security-policy'); } });
+Object.defineProperty(exports, 'computeSecurityPolicyRule', { get: function () { return require('./compute-security-policy-rule'); } });
 Object.defineProperty(exports, 'computeServiceAttachment', { get: function () { return require('./compute-service-attachment'); } });
 Object.defineProperty(exports, 'computeSharedVpcHostProject', { get: function () { return require('./compute-shared-vpc-host-project'); } });
 Object.defineProperty(exports, 'computeSharedVpcServiceProject', { get: function () { return require('./compute-shared-vpc-service-project'); } });
@@ -342,6 +343,7 @@ Object.defineProperty(exports, 'dataFusionInstanceIamBinding', { get: function (
 Object.defineProperty(exports, 'dataFusionInstanceIamMember', { get: function () { return require('./data-fusion-instance-iam-member'); } });
 Object.defineProperty(exports, 'dataFusionInstanceIamPolicy', { get: function () { return require('./data-fusion-instance-iam-policy'); } });
 Object.defineProperty(exports, 'dataLossPreventionDeidentifyTemplate', { get: function () { return require('./data-loss-prevention-deidentify-template'); } });
+Object.defineProperty(exports, 'dataLossPreventionDiscoveryConfig', { get: function () { return require('./data-loss-prevention-discovery-config'); } });
 Object.defineProperty(exports, 'dataLossPreventionInspectTemplate', { get: function () { return require('./data-loss-prevention-inspect-template'); } });
 Object.defineProperty(exports, 'dataLossPreventionJobTrigger', { get: function () { return require('./data-loss-prevention-job-trigger'); } });
 Object.defineProperty(exports, 'dataLossPreventionStoredInfoType', { get: function () { return require('./data-loss-prevention-stored-info-type'); } });
@@ -560,6 +562,7 @@ Object.defineProperty(exports, 'identityPlatformTenantInboundSamlConfig', { get:
 Object.defineProperty(exports, 'identityPlatformTenantOauthIdpConfig', { get: function () { return require('./identity-platform-tenant-oauth-idp-config'); } });
 Object.defineProperty(exports, 'integrationConnectorsConnection', { get: function () { return require('./integration-connectors-connection'); } });
 Object.defineProperty(exports, 'integrationConnectorsEndpointAttachment', { get: function () { return require('./integration-connectors-endpoint-attachment'); } });
+Object.defineProperty(exports, 'integrationsAuthConfig', { get: function () { return require('./integrations-auth-config'); } });
 Object.defineProperty(exports, 'integrationsClient', { get: function () { return require('./integrations-client'); } });
 Object.defineProperty(exports, 'kmsCryptoKey', { get: function () { return require('./kms-crypto-key'); } });
 Object.defineProperty(exports, 'kmsCryptoKeyIamBinding', { get: function () { return require('./kms-crypto-key-iam-binding'); } });
@@ -614,6 +617,7 @@ Object.defineProperty(exports, 'netappVolume', { get: function () { return requi
 Object.defineProperty(exports, 'netappVolumeReplication', { get: function () { return require('./netapp-volume-replication'); } });
 Object.defineProperty(exports, 'netappVolumeSnapshot', { get: function () { return require('./netapp-volume-snapshot'); } });
 Object.defineProperty(exports, 'networkConnectivityHub', { get: function () { return require('./network-connectivity-hub'); } });
+Object.defineProperty(exports, 'networkConnectivityInternalRange', { get: function () { return require('./network-connectivity-internal-range'); } });
 Object.defineProperty(exports, 'networkConnectivityPolicyBasedRoute', { get: function () { return require('./network-connectivity-policy-based-route'); } });
 Object.defineProperty(exports, 'networkConnectivityServiceConnectionPolicy', { get: function () { return require('./network-connectivity-service-connection-policy'); } });
 Object.defineProperty(exports, 'networkConnectivitySpoke', { get: function () { return require('./network-connectivity-spoke'); } });
@@ -1027,6 +1031,7 @@ Object.defineProperty(exports, 'dataGoogleStorageBucket', { get: function () { r
 Object.defineProperty(exports, 'dataGoogleStorageBucketIamPolicy', { get: function () { return require('./data-google-storage-bucket-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleStorageBucketObject', { get: function () { return require('./data-google-storage-bucket-object'); } });
 Object.defineProperty(exports, 'dataGoogleStorageBucketObjectContent', { get: function () { return require('./data-google-storage-bucket-object-content'); } });
+Object.defineProperty(exports, 'dataGoogleStorageBucketObjects', { get: function () { return require('./data-google-storage-bucket-objects'); } });
 Object.defineProperty(exports, 'dataGoogleStorageObjectSignedUrl', { get: function () { return require('./data-google-storage-object-signed-url'); } });
 Object.defineProperty(exports, 'dataGoogleStorageProjectServiceAccount', { get: function () { return require('./data-google-storage-project-service-account'); } });
 Object.defineProperty(exports, 'dataGoogleStorageTransferProjectServiceAccount', { get: function () { return require('./data-google-storage-transfer-project-service-account'); } });
