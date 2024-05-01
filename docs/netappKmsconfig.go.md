@@ -4,12 +4,12 @@
 
 ### NetappKmsconfig <a name="NetappKmsconfig" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig google_netapp_kmsconfig}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig google_netapp_kmsconfig}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappkmsconfig"
 
 netappkmsconfig.NewNetappKmsconfig(scope Construct, id *string, config NetappKmsconfigConfig) NetappKmsconfig
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappkmsconfig"
 
 netappkmsconfig.NetappKmsconfig_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappkmsconfig"
 
 netappkmsconfig.NetappKmsconfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ netappkmsconfig.NetappKmsconfig_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappkmsconfig"
 
 netappkmsconfig.NetappKmsconfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ netappkmsconfig.NetappKmsconfig_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappkmsconfig"
 
 netappkmsconfig.NetappKmsconfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -515,7 +515,7 @@ The construct id used in the generated config for the NetappKmsconfig to import.
 
 The id of the existing NetappKmsconfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -935,7 +935,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappkmsconfig"
 
 &netappkmsconfig.NetappKmsconfigConfig {
 	Connection: interface{},
@@ -952,7 +952,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.netappKmsconfig.NetappKmsconfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.netappKmsconfig.NetappKmsconfigTimeouts,
 }
 ```
 
@@ -971,9 +971,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
 | <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.location">Location</a></code> | <code>*string</code> | Name of the policy location. CMEK policies apply to the whole region. |
 | <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.name">Name</a></code> | <code>*string</code> | Name of the CMEK policy. |
 | <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.description">Description</a></code> | <code>*string</code> | Description for the CMEK policy. |
-| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#id NetappKmsconfig#id}. |
+| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#id NetappKmsconfig#id}. |
 | <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", "purpose": "testing" }'. |
-| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#project NetappKmsconfig#project}. |
+| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#project NetappKmsconfig#project}. |
 | <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeouts">NetappKmsconfigTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1058,7 +1058,7 @@ CryptoKeyName *string
 
 Resource name of the KMS key to use. Only regional keys are supported. Format: 'projects/{{project}}/locations/{{location}}/keyRings/{{key_ring}}/cryptoKeys/{{key}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#crypto_key_name NetappKmsconfig#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#crypto_key_name NetappKmsconfig#crypto_key_name}
 
 ---
 
@@ -1072,7 +1072,7 @@ Location *string
 
 Name of the policy location. CMEK policies apply to the whole region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#location NetappKmsconfig#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#location NetappKmsconfig#location}
 
 ---
 
@@ -1086,7 +1086,7 @@ Name *string
 
 Name of the CMEK policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#name NetappKmsconfig#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#name NetappKmsconfig#name}
 
 ---
 
@@ -1100,7 +1100,7 @@ Description *string
 
 Description for the CMEK policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#description NetappKmsconfig#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#description NetappKmsconfig#description}
 
 ---
 
@@ -1112,7 +1112,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#id NetappKmsconfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#id NetappKmsconfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1132,7 +1132,7 @@ Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#labels NetappKmsconfig#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#labels NetappKmsconfig#labels}
 
 ---
 
@@ -1144,7 +1144,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#project NetappKmsconfig#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#project NetappKmsconfig#project}.
 
 ---
 
@@ -1158,7 +1158,7 @@ Timeouts NetappKmsconfigTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#timeouts NetappKmsconfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#timeouts NetappKmsconfig#timeouts}
 
 ---
 
@@ -1167,7 +1167,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappkmsconfig"
 
 &netappkmsconfig.NetappKmsconfigTimeouts {
 	Create: *string,
@@ -1180,9 +1180,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#create NetappKmsconfig#create}. |
-| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#delete NetappKmsconfig#delete}. |
-| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#update NetappKmsconfig#update}. |
+| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#create NetappKmsconfig#create}. |
+| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#delete NetappKmsconfig#delete}. |
+| <code><a href="#@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#update NetappKmsconfig#update}. |
 
 ---
 
@@ -1194,7 +1194,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#create NetappKmsconfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#create NetappKmsconfig#create}.
 
 ---
 
@@ -1206,7 +1206,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#delete NetappKmsconfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#delete NetappKmsconfig#delete}.
 
 ---
 
@@ -1218,7 +1218,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/netapp_kmsconfig#update NetappKmsconfig#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/netapp_kmsconfig#update NetappKmsconfig#update}.
 
 ---
 
@@ -1229,7 +1229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.netappKmsconfig.NetappKmsconfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappkmsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappkmsconfig"
 
 netappkmsconfig.NewNetappKmsconfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappKmsconfigTimeoutsOutputReference
 ```

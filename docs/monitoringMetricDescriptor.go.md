@@ -4,12 +4,12 @@
 
 ### MonitoringMetricDescriptor <a name="MonitoringMetricDescriptor" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptor"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor google_monitoring_metric_descriptor}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor google_monitoring_metric_descriptor}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.NewMonitoringMetricDescriptor(scope Construct, id *string, config MonitoringMetricDescriptorConfig) MonitoringMetricDescriptor
 ```
@@ -466,7 +466,7 @@ func ResetUnit()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.MonitoringMetricDescriptor_IsConstruct(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.MonitoringMetricDescriptor_IsTerraformElement(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ monitoringmetricdescriptor.MonitoringMetricDescriptor_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.MonitoringMetricDescriptor_IsTerraformResource(x interface{}) *bool
 ```
@@ -526,7 +526,7 @@ monitoringmetricdescriptor.MonitoringMetricDescriptor_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptor.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.MonitoringMetricDescriptor_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -555,7 +555,7 @@ The construct id used in the generated config for the MonitoringMetricDescriptor
 
 The id of the existing MonitoringMetricDescriptor that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1041,7 +1041,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 &monitoringmetricdescriptor.MonitoringMetricDescriptorConfig {
 	Connection: interface{},
@@ -1059,9 +1059,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdes
 	Id: *string,
 	Labels: interface{},
 	LaunchStage: *string,
-	Metadata: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringMetricDescriptor.MonitoringMetricDescriptorMetadata,
+	Metadata: github.com/cdktf/cdktf-provider-google-go/google.monitoringMetricDescriptor.MonitoringMetricDescriptorMetadata,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts,
 	Unit: *string,
 }
 ```
@@ -1082,11 +1082,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdes
 | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.metricKind">MetricKind</a></code> | <code>*string</code> | Whether the metric records instantaneous values, changes to a value, etc. |
 | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.type">Type</a></code> | <code>*string</code> | The metric type, including its DNS name prefix. |
 | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.valueType">ValueType</a></code> | <code>*string</code> | Whether the measurement is an integer, a floating-point number, etc. |
-| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#id MonitoringMetricDescriptor#id}. |
+| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#id MonitoringMetricDescriptor#id}. |
 | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.labels">Labels</a></code> | <code>interface{}</code> | labels block. |
 | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.launchStage">LaunchStage</a></code> | <code>*string</code> | The launch stage of the metric definition. Possible values: ["LAUNCH_STAGE_UNSPECIFIED", "UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]. |
 | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.metadata">Metadata</a></code> | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorMetadata">MonitoringMetricDescriptorMetadata</a></code> | metadata block. |
-| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#project MonitoringMetricDescriptor#project}. |
+| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#project MonitoringMetricDescriptor#project}. |
 | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts">MonitoringMetricDescriptorTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorConfig.property.unit">Unit</a></code> | <code>*string</code> | The units in which the metric value is reported. |
 
@@ -1172,7 +1172,7 @@ Description *string
 
 A detailed description of the metric, which can be used in documentation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#description MonitoringMetricDescriptor#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#description MonitoringMetricDescriptor#description}
 
 ---
 
@@ -1188,7 +1188,7 @@ A concise name for the metric, which can be displayed in user interfaces.
 
 Use sentence case without an ending period, for example "Request count".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#display_name MonitoringMetricDescriptor#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#display_name MonitoringMetricDescriptor#display_name}
 
 ---
 
@@ -1204,7 +1204,7 @@ Whether the metric records instantaneous values, changes to a value, etc.
 
 Some combinations of metricKind and valueType might not be supported. Possible values: ["METRIC_KIND_UNSPECIFIED", "GAUGE", "DELTA", "CUMULATIVE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#metric_kind MonitoringMetricDescriptor#metric_kind}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#metric_kind MonitoringMetricDescriptor#metric_kind}
 
 ---
 
@@ -1220,7 +1220,7 @@ The metric type, including its DNS name prefix.
 
 The type is not URL-encoded. All service defined metrics must be prefixed with the service name, in the format of {service name}/{relative metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric name must have only upper and lower-case letters, digits, '/' and underscores '_' are allowed. Additionally, the maximum number of characters allowed for the relative_metric_name is 100. All user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or logging.googleapis.com/user/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#type MonitoringMetricDescriptor#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#type MonitoringMetricDescriptor#type}
 
 ---
 
@@ -1236,7 +1236,7 @@ Whether the measurement is an integer, a floating-point number, etc.
 
 Some combinations of metricKind and valueType might not be supported. Possible values: ["BOOL", "INT64", "DOUBLE", "STRING", "DISTRIBUTION"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#value_type MonitoringMetricDescriptor#value_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#value_type MonitoringMetricDescriptor#value_type}
 
 ---
 
@@ -1248,7 +1248,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#id MonitoringMetricDescriptor#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#id MonitoringMetricDescriptor#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1265,7 +1265,7 @@ Labels interface{}
 
 labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#labels MonitoringMetricDescriptor#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#labels MonitoringMetricDescriptor#labels}
 
 ---
 
@@ -1279,7 +1279,7 @@ LaunchStage *string
 
 The launch stage of the metric definition. Possible values: ["LAUNCH_STAGE_UNSPECIFIED", "UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#launch_stage MonitoringMetricDescriptor#launch_stage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#launch_stage MonitoringMetricDescriptor#launch_stage}
 
 ---
 
@@ -1293,7 +1293,7 @@ Metadata MonitoringMetricDescriptorMetadata
 
 metadata block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#metadata MonitoringMetricDescriptor#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#metadata MonitoringMetricDescriptor#metadata}
 
 ---
 
@@ -1305,7 +1305,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#project MonitoringMetricDescriptor#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#project MonitoringMetricDescriptor#project}.
 
 ---
 
@@ -1319,7 +1319,7 @@ Timeouts MonitoringMetricDescriptorTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#timeouts MonitoringMetricDescriptor#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#timeouts MonitoringMetricDescriptor#timeouts}
 
 ---
 
@@ -1354,7 +1354,7 @@ The supported units are a subset of The Unified Code for Units of Measure standa
 More info can be found in the API documentation
 (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#unit MonitoringMetricDescriptor#unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#unit MonitoringMetricDescriptor#unit}
 
 ---
 
@@ -1363,7 +1363,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 &monitoringmetricdescriptor.MonitoringMetricDescriptorLabels {
 	Key: *string,
@@ -1394,7 +1394,7 @@ The key for this label.
 
 The key must not exceed 100 characters. The first character of the key must be an upper- or lower-case letter, the remaining characters must be letters, digits or underscores, and the key must match the regular expression [a-zA-Z][a-zA-Z0-9_]*
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#key MonitoringMetricDescriptor#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#key MonitoringMetricDescriptor#key}
 
 ---
 
@@ -1408,7 +1408,7 @@ Description *string
 
 A human-readable description for the label.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#description MonitoringMetricDescriptor#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#description MonitoringMetricDescriptor#description}
 
 ---
 
@@ -1422,7 +1422,7 @@ ValueType *string
 
 The type of data that can be assigned to the label. Default value: "STRING" Possible values: ["STRING", "BOOL", "INT64"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#value_type MonitoringMetricDescriptor#value_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#value_type MonitoringMetricDescriptor#value_type}
 
 ---
 
@@ -1431,7 +1431,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 &monitoringmetricdescriptor.MonitoringMetricDescriptorMetadata {
 	IngestDelay: *string,
@@ -1460,7 +1460,7 @@ The delay of data points caused by ingestion.
 
 Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#ingest_delay MonitoringMetricDescriptor#ingest_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#ingest_delay MonitoringMetricDescriptor#ingest_delay}
 
 ---
 
@@ -1476,7 +1476,7 @@ The sampling period of metric data points.
 
 For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#sample_period MonitoringMetricDescriptor#sample_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#sample_period MonitoringMetricDescriptor#sample_period}
 
 ---
 
@@ -1485,7 +1485,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 &monitoringmetricdescriptor.MonitoringMetricDescriptorTimeouts {
 	Create: *string,
@@ -1498,9 +1498,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdes
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#create MonitoringMetricDescriptor#create}. |
-| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#delete MonitoringMetricDescriptor#delete}. |
-| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#update MonitoringMetricDescriptor#update}. |
+| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#create MonitoringMetricDescriptor#create}. |
+| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#delete MonitoringMetricDescriptor#delete}. |
+| <code><a href="#@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#update MonitoringMetricDescriptor#update}. |
 
 ---
 
@@ -1512,7 +1512,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#create MonitoringMetricDescriptor#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#create MonitoringMetricDescriptor#create}.
 
 ---
 
@@ -1524,7 +1524,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#delete MonitoringMetricDescriptor#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#delete MonitoringMetricDescriptor#delete}.
 
 ---
 
@@ -1536,7 +1536,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.26.0/docs/resources/monitoring_metric_descriptor#update MonitoringMetricDescriptor#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/monitoring_metric_descriptor#update MonitoringMetricDescriptor#update}.
 
 ---
 
@@ -1547,7 +1547,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.NewMonitoringMetricDescriptorLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitoringMetricDescriptorLabelsList
 ```
@@ -1707,7 +1707,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.NewMonitoringMetricDescriptorLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitoringMetricDescriptorLabelsOutputReference
 ```
@@ -2054,7 +2054,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.NewMonitoringMetricDescriptorMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringMetricDescriptorMetadataOutputReference
 ```
@@ -2361,7 +2361,7 @@ func InternalValue() MonitoringMetricDescriptorMetadata
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringMetricDescriptor.MonitoringMetricDescriptorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/monitoringmetricdescriptor"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmetricdescriptor"
 
 monitoringmetricdescriptor.NewMonitoringMetricDescriptorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringMetricDescriptorTimeoutsOutputReference
 ```
