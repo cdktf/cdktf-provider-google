@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/data-sources/monitoring_cluster_istio_service
 // generated from terraform resource schema
 
