@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/network_security_address_group_iam_binding
 // generated from terraform resource schema
 
