@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client
+// https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,13 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface IntegrationsClientConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Indicates if sample integrations should be created along with provisioning.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#create_sample_integrations IntegrationsClient#create_sample_integrations}
+  */
+  readonly createSampleIntegrations?: boolean | cdktf.IResolvable;
+  /**
   * Indicates if sample workflow should be created along with provisioning.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#create_sample_workflows IntegrationsClient#create_sample_workflows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#create_sample_workflows IntegrationsClient#create_sample_workflows}
   */
   readonly createSampleWorkflows?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#id IntegrationsClient#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#id IntegrationsClient#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,35 +29,35 @@ export interface IntegrationsClientConfig extends cdktf.TerraformMetaArguments {
   /**
   * Location in which client needs to be provisioned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#location IntegrationsClient#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#location IntegrationsClient#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#project IntegrationsClient#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#project IntegrationsClient#project}
   */
   readonly project?: string;
   /**
   * Indicates provision with GMEK or CMEK.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#provision_gmek IntegrationsClient#provision_gmek}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#provision_gmek IntegrationsClient#provision_gmek}
   */
   readonly provisionGmek?: boolean | cdktf.IResolvable;
   /**
   * User input run-as service account, if empty, will bring up a new default service account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#run_as_service_account IntegrationsClient#run_as_service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#run_as_service_account IntegrationsClient#run_as_service_account}
   */
   readonly runAsServiceAccount?: string;
   /**
   * cloud_kms_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#cloud_kms_config IntegrationsClient#cloud_kms_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#cloud_kms_config IntegrationsClient#cloud_kms_config}
   */
   readonly cloudKmsConfig?: IntegrationsClientCloudKmsConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#timeouts IntegrationsClient#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#timeouts IntegrationsClient#timeouts}
   */
   readonly timeouts?: IntegrationsClientTimeouts;
 }
@@ -66,7 +67,7 @@ export interface IntegrationsClientCloudKmsConfig {
   * with metadata for the key. A key exists on exactly one key ring tied to a
   * specific location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#key IntegrationsClient#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#key IntegrationsClient#key}
   */
   readonly key: string;
   /**
@@ -75,13 +76,13 @@ export interface IntegrationsClientCloudKmsConfig {
   * or verify a signature, you must use the same key version that was used to
   * encrypt or sign the data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#key_version IntegrationsClient#key_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#key_version IntegrationsClient#key_version}
   */
   readonly keyVersion?: string;
   /**
   * Location name of the key ring, e.g. "us-west1".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#kms_location IntegrationsClient#kms_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#kms_location IntegrationsClient#kms_location}
   */
   readonly kmsLocation: string;
   /**
@@ -90,7 +91,7 @@ export interface IntegrationsClientCloudKmsConfig {
   * with CMEK, otherwise, the kms key is stored in the tenant project and
   * encrypted with GMEK.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#kms_project_id IntegrationsClient#kms_project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#kms_project_id IntegrationsClient#kms_project_id}
   */
   readonly kmsProjectId?: string;
   /**
@@ -98,7 +99,7 @@ export interface IntegrationsClientCloudKmsConfig {
   * manage access control on groups of keys. A key ring's name does not need to be
   * unique across a Google Cloud project, but must be unique within a given location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#kms_ring IntegrationsClient#kms_ring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#kms_ring IntegrationsClient#kms_ring}
   */
   readonly kmsRing: string;
 }
@@ -289,11 +290,11 @@ export class IntegrationsClientCloudKmsConfigOutputReference extends cdktf.Compl
 }
 export interface IntegrationsClientTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#create IntegrationsClient#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#create IntegrationsClient#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#delete IntegrationsClient#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#delete IntegrationsClient#delete}
   */
   readonly delete?: string;
 }
@@ -416,7 +417,7 @@ export class IntegrationsClientTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client google_integrations_client}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client google_integrations_client}
 */
 export class IntegrationsClient extends cdktf.TerraformResource {
 
@@ -432,7 +433,7 @@ export class IntegrationsClient extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IntegrationsClient resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IntegrationsClient to import
-  * @param importFromId The id of the existing IntegrationsClient that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IntegrationsClient that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IntegrationsClient to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -444,7 +445,7 @@ export class IntegrationsClient extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/integrations_client google_integrations_client} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/integrations_client google_integrations_client} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -455,7 +456,7 @@ export class IntegrationsClient extends cdktf.TerraformResource {
       terraformResourceType: 'google_integrations_client',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.27.0',
+        providerVersion: '5.28.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -466,6 +467,7 @@ export class IntegrationsClient extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._createSampleIntegrations = config.createSampleIntegrations;
     this._createSampleWorkflows = config.createSampleWorkflows;
     this._id = config.id;
     this._location = config.location;
@@ -479,6 +481,22 @@ export class IntegrationsClient extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // create_sample_integrations - computed: false, optional: true, required: false
+  private _createSampleIntegrations?: boolean | cdktf.IResolvable; 
+  public get createSampleIntegrations() {
+    return this.getBooleanAttribute('create_sample_integrations');
+  }
+  public set createSampleIntegrations(value: boolean | cdktf.IResolvable) {
+    this._createSampleIntegrations = value;
+  }
+  public resetCreateSampleIntegrations() {
+    this._createSampleIntegrations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createSampleIntegrationsInput() {
+    return this._createSampleIntegrations;
+  }
 
   // create_sample_workflows - computed: false, optional: true, required: false
   private _createSampleWorkflows?: boolean | cdktf.IResolvable; 
@@ -611,6 +629,7 @@ export class IntegrationsClient extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      create_sample_integrations: cdktf.booleanToTerraform(this._createSampleIntegrations),
       create_sample_workflows: cdktf.booleanToTerraform(this._createSampleWorkflows),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -624,6 +643,12 @@ export class IntegrationsClient extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      create_sample_integrations: {
+        value: cdktf.booleanToHclTerraform(this._createSampleIntegrations),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
       create_sample_workflows: {
         value: cdktf.booleanToHclTerraform(this._createSampleWorkflows),
         isBlock: false,

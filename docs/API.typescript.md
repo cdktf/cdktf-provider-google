@@ -578,6 +578,7 @@ The following submodules are available:
 - [dataGoogleStorageBucketObject](./dataGoogleStorageBucketObject.typescript.md)
 - [dataGoogleStorageBucketObjectContent](./dataGoogleStorageBucketObjectContent.typescript.md)
 - [dataGoogleStorageBucketObjects](./dataGoogleStorageBucketObjects.typescript.md)
+- [dataGoogleStorageBuckets](./dataGoogleStorageBuckets.typescript.md)
 - [dataGoogleStorageObjectSignedUrl](./dataGoogleStorageObjectSignedUrl.typescript.md)
 - [dataGoogleStorageProjectServiceAccount](./dataGoogleStorageProjectServiceAccount.typescript.md)
 - [dataGoogleStorageTransferProjectServiceAccount](./dataGoogleStorageTransferProjectServiceAccount.typescript.md)

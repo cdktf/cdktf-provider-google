@@ -578,6 +578,7 @@ The following submodules are available:
 - [dataGoogleStorageBucketObject](./dataGoogleStorageBucketObject.python.md)
 - [dataGoogleStorageBucketObjectContent](./dataGoogleStorageBucketObjectContent.python.md)
 - [dataGoogleStorageBucketObjects](./dataGoogleStorageBucketObjects.python.md)
+- [dataGoogleStorageBuckets](./dataGoogleStorageBuckets.python.md)
 - [dataGoogleStorageObjectSignedUrl](./dataGoogleStorageObjectSignedUrl.python.md)
 - [dataGoogleStorageProjectServiceAccount](./dataGoogleStorageProjectServiceAccount.python.md)
 - [dataGoogleStorageTransferProjectServiceAccount](./dataGoogleStorageTransferProjectServiceAccount.python.md)

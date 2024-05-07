@@ -578,6 +578,7 @@ The following submodules are available:
 - [dataGoogleStorageBucketObject](./dataGoogleStorageBucketObject.java.md)
 - [dataGoogleStorageBucketObjectContent](./dataGoogleStorageBucketObjectContent.java.md)
 - [dataGoogleStorageBucketObjects](./dataGoogleStorageBucketObjects.java.md)
+- [dataGoogleStorageBuckets](./dataGoogleStorageBuckets.java.md)
 - [dataGoogleStorageObjectSignedUrl](./dataGoogleStorageObjectSignedUrl.java.md)
 - [dataGoogleStorageProjectServiceAccount](./dataGoogleStorageProjectServiceAccount.java.md)
 - [dataGoogleStorageTransferProjectServiceAccount](./dataGoogleStorageTransferProjectServiceAccount.java.md)

@@ -4,12 +4,12 @@
 
 ### MigrationCenterGroup <a name="MigrationCenterGroup" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group google_migration_center_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group google_migration_center_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/migrationcentergroup"
 
 migrationcentergroup.NewMigrationCenterGroup(scope Construct, id *string, config MigrationCenterGroupConfig) MigrationCenterGroup
 ```
@@ -433,7 +433,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/migrationcentergroup"
 
 migrationcentergroup.MigrationCenterGroup_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/migrationcentergroup"
 
 migrationcentergroup.MigrationCenterGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ migrationcentergroup.MigrationCenterGroup_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/migrationcentergroup"
 
 migrationcentergroup.MigrationCenterGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ migrationcentergroup.MigrationCenterGroup_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/migrationcentergroup"
 
 migrationcentergroup.MigrationCenterGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -522,7 +522,7 @@ The construct id used in the generated config for the MigrationCenterGroup to im
 
 The id of the existing MigrationCenterGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -953,7 +953,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/migrationcentergroup"
 
 &migrationcentergroup.MigrationCenterGroupConfig {
 	Connection: interface{},
@@ -970,7 +970,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergrou
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.migrationCenterGroup.MigrationCenterGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.migrationCenterGroup.MigrationCenterGroupTimeouts,
 }
 ```
 
@@ -989,9 +989,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergrou
 | <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.location">Location</a></code> | <code>*string</code> | The location of the group. |
 | <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.description">Description</a></code> | <code>*string</code> | Optional. The description of the group. |
 | <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Optional. User-friendly display name. |
-| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#id MigrationCenterGroup#id}. |
+| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#id MigrationCenterGroup#id}. |
 | <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels as key value pairs. |
-| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#project MigrationCenterGroup#project}. |
+| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#project MigrationCenterGroup#project}. |
 | <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeouts">MigrationCenterGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1078,7 +1078,7 @@ Required.
 
 User specified ID for the group. It will become the last component of the group name. The ID must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. The ID must match the regular expression: '[a-z](%5Ba-z0-9-%5D%7B0,61%7D%5Ba-z0-9%5D)?'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#group_id MigrationCenterGroup#group_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#group_id MigrationCenterGroup#group_id}
 
 ---
 
@@ -1092,7 +1092,7 @@ Location *string
 
 The location of the group.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#location MigrationCenterGroup#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#location MigrationCenterGroup#location}
 
 ---
 
@@ -1106,7 +1106,7 @@ Description *string
 
 Optional. The description of the group.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#description MigrationCenterGroup#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#description MigrationCenterGroup#description}
 
 ---
 
@@ -1120,7 +1120,7 @@ DisplayName *string
 
 Optional. User-friendly display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#display_name MigrationCenterGroup#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#display_name MigrationCenterGroup#display_name}
 
 ---
 
@@ -1132,7 +1132,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#id MigrationCenterGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#id MigrationCenterGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1152,7 +1152,7 @@ Labels as key value pairs.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#labels MigrationCenterGroup#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#labels MigrationCenterGroup#labels}
 
 ---
 
@@ -1164,7 +1164,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#project MigrationCenterGroup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#project MigrationCenterGroup#project}.
 
 ---
 
@@ -1178,7 +1178,7 @@ Timeouts MigrationCenterGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#timeouts MigrationCenterGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#timeouts MigrationCenterGroup#timeouts}
 
 ---
 
@@ -1187,7 +1187,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/migrationcentergroup"
 
 &migrationcentergroup.MigrationCenterGroupTimeouts {
 	Create: *string,
@@ -1200,9 +1200,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergrou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#create MigrationCenterGroup#create}. |
-| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#delete MigrationCenterGroup#delete}. |
-| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#update MigrationCenterGroup#update}. |
+| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#create MigrationCenterGroup#create}. |
+| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#delete MigrationCenterGroup#delete}. |
+| <code><a href="#@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#update MigrationCenterGroup#update}. |
 
 ---
 
@@ -1214,7 +1214,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#create MigrationCenterGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#create MigrationCenterGroup#create}.
 
 ---
 
@@ -1226,7 +1226,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#delete MigrationCenterGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#delete MigrationCenterGroup#delete}.
 
 ---
 
@@ -1238,7 +1238,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/migration_center_group#update MigrationCenterGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/migration_center_group#update MigrationCenterGroup#update}.
 
 ---
 
@@ -1249,7 +1249,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.migrationCenterGroup.MigrationCenterGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/migrationcentergroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/migrationcentergroup"
 
 migrationcentergroup.NewMigrationCenterGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MigrationCenterGroupTimeoutsOutputReference
 ```

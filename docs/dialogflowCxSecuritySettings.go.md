@@ -4,12 +4,12 @@
 
 ### DialogflowCxSecuritySettings <a name="DialogflowCxSecuritySettings" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings google_dialogflow_cx_security_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings google_dialogflow_cx_security_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 dialogflowcxsecuritysettings.NewDialogflowCxSecuritySettings(scope Construct, id *string, config DialogflowCxSecuritySettingsConfig) DialogflowCxSecuritySettings
 ```
@@ -501,7 +501,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 dialogflowcxsecuritysettings.DialogflowCxSecuritySettings_IsConstruct(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 dialogflowcxsecuritysettings.DialogflowCxSecuritySettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -547,7 +547,7 @@ dialogflowcxsecuritysettings.DialogflowCxSecuritySettings_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettings.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 dialogflowcxsecuritysettings.DialogflowCxSecuritySettings_IsTerraformResource(x interface{}) *bool
 ```
@@ -561,7 +561,7 @@ dialogflowcxsecuritysettings.DialogflowCxSecuritySettings_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 dialogflowcxsecuritysettings.DialogflowCxSecuritySettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -590,7 +590,7 @@ The construct id used in the generated config for the DialogflowCxSecuritySettin
 
 The id of the existing DialogflowCxSecuritySettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1109,7 +1109,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsAudioExportSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 &dialogflowcxsecuritysettings.DialogflowCxSecuritySettingsAudioExportSettings {
 	AudioExportPattern: *string,
@@ -1140,7 +1140,7 @@ AudioExportPattern *string
 
 Filename pattern for exported audio.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#audio_export_pattern DialogflowCxSecuritySettings#audio_export_pattern}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#audio_export_pattern DialogflowCxSecuritySettings#audio_export_pattern}
 
 ---
 
@@ -1160,7 +1160,7 @@ Currently only in telephony recordings.
 * MP3: MP3 file format.
 * OGG: OGG Vorbis. Possible values: ["MULAW", "MP3", "OGG"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#audio_format DialogflowCxSecuritySettings#audio_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#audio_format DialogflowCxSecuritySettings#audio_format}
 
 ---
 
@@ -1174,7 +1174,7 @@ EnableAudioRedaction interface{}
 
 Enable audio redaction if it is true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#enable_audio_redaction DialogflowCxSecuritySettings#enable_audio_redaction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#enable_audio_redaction DialogflowCxSecuritySettings#enable_audio_redaction}
 
 ---
 
@@ -1190,7 +1190,7 @@ Cloud Storage bucket to export audio record to.
 
 Setting this field would grant the Storage Object Creator role to the Dialogflow Service Agent. API caller that tries to modify this field should have the permission of storage.buckets.setIamPolicy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#gcs_bucket DialogflowCxSecuritySettings#gcs_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#gcs_bucket DialogflowCxSecuritySettings#gcs_bucket}
 
 ---
 
@@ -1199,7 +1199,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 &dialogflowcxsecuritysettings.DialogflowCxSecuritySettingsConfig {
 	Connection: interface{},
@@ -1211,10 +1211,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecurit
 	Provisioners: *[]interface{},
 	DisplayName: *string,
 	Location: *string,
-	AudioExportSettings: github.com/cdktf/cdktf-provider-google-go/google/v13.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsAudioExportSettings,
+	AudioExportSettings: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsAudioExportSettings,
 	DeidentifyTemplate: *string,
 	Id: *string,
-	InsightsExportSettings: github.com/cdktf/cdktf-provider-google-go/google/v13.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsInsightsExportSettings,
+	InsightsExportSettings: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsInsightsExportSettings,
 	InspectTemplate: *string,
 	Project: *string,
 	PurgeDataTypes: *[]*string,
@@ -1222,7 +1222,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecurit
 	RedactionStrategy: *string,
 	RetentionStrategy: *string,
 	RetentionWindowDays: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts,
 }
 ```
 
@@ -1241,10 +1241,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecurit
 | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.location">Location</a></code> | <code>*string</code> | The location these settings are located in. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.audioExportSettings">AudioExportSettings</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsAudioExportSettings">DialogflowCxSecuritySettingsAudioExportSettings</a></code> | audio_export_settings block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.deidentifyTemplate">DeidentifyTemplate</a></code> | <code>*string</code> | [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with [redacted] text. Note: deidentifyTemplate must be located in the same region as the SecuritySettings. Format: projects/<Project ID>/locations/<Location ID>/deidentifyTemplates/<Template ID> OR organizations/<Organization ID>/locations/<Location ID>/deidentifyTemplates/<Template ID>. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#id DialogflowCxSecuritySettings#id}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#id DialogflowCxSecuritySettings#id}. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.insightsExportSettings">InsightsExportSettings</a></code> | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsInsightsExportSettings">DialogflowCxSecuritySettingsInsightsExportSettings</a></code> | insights_export_settings block. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.inspectTemplate">InspectTemplate</a></code> | <code>*string</code> | [DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. Note: inspectTemplate must be located in the same region as the SecuritySettings. Format: projects/<Project ID>/locations/<Location ID>/inspectTemplates/<Template ID> OR organizations/<Organization ID>/locations/<Location ID>/inspectTemplates/<Template ID>. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#project DialogflowCxSecuritySettings#project}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#project DialogflowCxSecuritySettings#project}. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.purgeDataTypes">PurgeDataTypes</a></code> | <code>*[]*string</code> | List of types of data to remove when retention settings triggers purge. Possible values: ["DIALOGFLOW_HISTORY"]. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.redactionScope">RedactionScope</a></code> | <code>*string</code> | Defines what types of data to redact. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsConfig.property.redactionStrategy">RedactionStrategy</a></code> | <code>*string</code> | Defines how we redact data. |
@@ -1334,7 +1334,7 @@ DisplayName *string
 
 The human-readable name of the security settings, unique within the location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#display_name DialogflowCxSecuritySettings#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#display_name DialogflowCxSecuritySettings#display_name}
 
 ---
 
@@ -1351,7 +1351,7 @@ The location these settings are located in.
 Settings can only be applied to an agent in the same location.
 See [Available Regions](https://cloud.google.com/dialogflow/cx/docs/concept/region#avail) for a list of supported locations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#location DialogflowCxSecuritySettings#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#location DialogflowCxSecuritySettings#location}
 
 ---
 
@@ -1365,7 +1365,7 @@ AudioExportSettings DialogflowCxSecuritySettingsAudioExportSettings
 
 audio_export_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#audio_export_settings DialogflowCxSecuritySettings#audio_export_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#audio_export_settings DialogflowCxSecuritySettings#audio_export_settings}
 
 ---
 
@@ -1379,7 +1379,7 @@ DeidentifyTemplate *string
 
 [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with [redacted] text. Note: deidentifyTemplate must be located in the same region as the SecuritySettings. Format: projects/<Project ID>/locations/<Location ID>/deidentifyTemplates/<Template ID> OR organizations/<Organization ID>/locations/<Location ID>/deidentifyTemplates/<Template ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#deidentify_template DialogflowCxSecuritySettings#deidentify_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#deidentify_template DialogflowCxSecuritySettings#deidentify_template}
 
 ---
 
@@ -1391,7 +1391,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#id DialogflowCxSecuritySettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#id DialogflowCxSecuritySettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1408,7 +1408,7 @@ InsightsExportSettings DialogflowCxSecuritySettingsInsightsExportSettings
 
 insights_export_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#insights_export_settings DialogflowCxSecuritySettings#insights_export_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#insights_export_settings DialogflowCxSecuritySettings#insights_export_settings}
 
 ---
 
@@ -1422,7 +1422,7 @@ InspectTemplate *string
 
 [DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. Note: inspectTemplate must be located in the same region as the SecuritySettings. Format: projects/<Project ID>/locations/<Location ID>/inspectTemplates/<Template ID> OR organizations/<Organization ID>/locations/<Location ID>/inspectTemplates/<Template ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#inspect_template DialogflowCxSecuritySettings#inspect_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#inspect_template DialogflowCxSecuritySettings#inspect_template}
 
 ---
 
@@ -1434,7 +1434,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#project DialogflowCxSecuritySettings#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#project DialogflowCxSecuritySettings#project}.
 
 ---
 
@@ -1448,7 +1448,7 @@ PurgeDataTypes *[]*string
 
 List of types of data to remove when retention settings triggers purge. Possible values: ["DIALOGFLOW_HISTORY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#purge_data_types DialogflowCxSecuritySettings#purge_data_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#purge_data_types DialogflowCxSecuritySettings#purge_data_types}
 
 ---
 
@@ -1466,7 +1466,7 @@ If not set, defaults to not redacting any kind of data.
 
 * REDACT_DISK_STORAGE: On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk. Possible values: ["REDACT_DISK_STORAGE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#redaction_scope DialogflowCxSecuritySettings#redaction_scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#redaction_scope DialogflowCxSecuritySettings#redaction_scope}
 
 ---
 
@@ -1484,7 +1484,7 @@ If not set, defaults to not redacting.
 
 * REDACT_WITH_SERVICE: Call redaction service to clean up the data to be persisted. Possible values: ["REDACT_WITH_SERVICE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#redaction_strategy DialogflowCxSecuritySettings#redaction_strategy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#redaction_strategy DialogflowCxSecuritySettings#redaction_strategy}
 
 ---
 
@@ -1502,7 +1502,7 @@ Only one of 'retention_window_days' and 'retention_strategy' may be set.
 
 * REMOVE_AFTER_CONVERSATION: Removes data when the conversation ends. If there is no conversation explicitly established, a default conversation ends when the corresponding Dialogflow session ends. Possible values: ["REMOVE_AFTER_CONVERSATION"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#retention_strategy DialogflowCxSecuritySettings#retention_strategy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#retention_strategy DialogflowCxSecuritySettings#retention_strategy}
 
 ---
 
@@ -1519,7 +1519,7 @@ Retains the data for the specified number of days.
 User must set a value lower than Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored and use default. Setting a value higher than that has no effect. A missing value or setting to 0 also means we use default TTL.
 Only one of 'retention_window_days' and 'retention_strategy' may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#retention_window_days DialogflowCxSecuritySettings#retention_window_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#retention_window_days DialogflowCxSecuritySettings#retention_window_days}
 
 ---
 
@@ -1533,7 +1533,7 @@ Timeouts DialogflowCxSecuritySettingsTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#timeouts DialogflowCxSecuritySettings#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#timeouts DialogflowCxSecuritySettings#timeouts}
 
 ---
 
@@ -1542,7 +1542,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsInsightsExportSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 &dialogflowcxsecuritysettings.DialogflowCxSecuritySettingsInsightsExportSettings {
 	EnableInsightsExport: interface{},
@@ -1567,7 +1567,7 @@ EnableInsightsExport interface{}
 
 If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#enable_insights_export DialogflowCxSecuritySettings#enable_insights_export}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#enable_insights_export DialogflowCxSecuritySettings#enable_insights_export}
 
 ---
 
@@ -1576,7 +1576,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 &dialogflowcxsecuritysettings.DialogflowCxSecuritySettingsTimeouts {
 	Create: *string,
@@ -1589,9 +1589,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecurit
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#create DialogflowCxSecuritySettings#create}. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#delete DialogflowCxSecuritySettings#delete}. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#update DialogflowCxSecuritySettings#update}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#create DialogflowCxSecuritySettings#create}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#delete DialogflowCxSecuritySettings#delete}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#update DialogflowCxSecuritySettings#update}. |
 
 ---
 
@@ -1603,7 +1603,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#create DialogflowCxSecuritySettings#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#create DialogflowCxSecuritySettings#create}.
 
 ---
 
@@ -1615,7 +1615,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#delete DialogflowCxSecuritySettings#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#delete DialogflowCxSecuritySettings#delete}.
 
 ---
 
@@ -1627,7 +1627,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dialogflow_cx_security_settings#update DialogflowCxSecuritySettings#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dialogflow_cx_security_settings#update DialogflowCxSecuritySettings#update}.
 
 ---
 
@@ -1638,7 +1638,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsAudioExportSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 dialogflowcxsecuritysettings.NewDialogflowCxSecuritySettingsAudioExportSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxSecuritySettingsAudioExportSettingsOutputReference
 ```
@@ -2003,7 +2003,7 @@ func InternalValue() DialogflowCxSecuritySettingsAudioExportSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsInsightsExportSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 dialogflowcxsecuritysettings.NewDialogflowCxSecuritySettingsInsightsExportSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxSecuritySettingsInsightsExportSettingsOutputReference
 ```
@@ -2274,7 +2274,7 @@ func InternalValue() DialogflowCxSecuritySettingsInsightsExportSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxSecuritySettings.DialogflowCxSecuritySettingsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dialogflowcxsecuritysettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxsecuritysettings"
 
 dialogflowcxsecuritysettings.NewDialogflowCxSecuritySettingsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxSecuritySettingsTimeoutsOutputReference
 ```

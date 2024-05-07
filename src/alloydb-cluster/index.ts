@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster
+// https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -20,25 +15,25 @@ export interface AlloydbClusterConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#annotations AlloydbCluster#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#annotations AlloydbCluster#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * The ID of the alloydb cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#cluster_id AlloydbCluster#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#cluster_id AlloydbCluster#cluster_id}
   */
   readonly clusterId: string;
   /**
   * The type of cluster. If not set, defaults to PRIMARY. Default value: "PRIMARY" Possible values: ["PRIMARY", "SECONDARY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#cluster_type AlloydbCluster#cluster_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#cluster_type AlloydbCluster#cluster_type}
   */
   readonly clusterType?: string;
   /**
   * The database engine major version. This is an optional field and it's populated at the Cluster creation time. This field cannot be changed after cluster creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#database_version AlloydbCluster#database_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#database_version AlloydbCluster#database_version}
   */
   readonly databaseVersion?: string;
   /**
@@ -46,23 +41,23 @@ export interface AlloydbClusterConfig extends cdktf.TerraformMetaArguments {
   * Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
   * Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#deletion_policy AlloydbCluster#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#deletion_policy AlloydbCluster#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * User-settable and human-readable display name for the Cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#display_name AlloydbCluster#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#display_name AlloydbCluster#display_name}
   */
   readonly displayName?: string;
   /**
   * For Resource freshness validation (https://google.aip.dev/154)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#etag AlloydbCluster#etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#etag AlloydbCluster#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#id AlloydbCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#id AlloydbCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -74,13 +69,13 @@ export interface AlloydbClusterConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#labels AlloydbCluster#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#labels AlloydbCluster#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location where the alloydb cluster should reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#location AlloydbCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#location AlloydbCluster#location}
   */
   readonly location: string;
   /**
@@ -88,65 +83,71 @@ export interface AlloydbClusterConfig extends cdktf.TerraformMetaArguments {
   * 
   * "projects/{projectNumber}/global/networks/{network_id}".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#network AlloydbCluster#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#network AlloydbCluster#network}
   */
   readonly network?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#project AlloydbCluster#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#project AlloydbCluster#project}
   */
   readonly project?: string;
   /**
   * automated_backup_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#automated_backup_policy AlloydbCluster#automated_backup_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#automated_backup_policy AlloydbCluster#automated_backup_policy}
   */
   readonly automatedBackupPolicy?: AlloydbClusterAutomatedBackupPolicy;
   /**
   * continuous_backup_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#continuous_backup_config AlloydbCluster#continuous_backup_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#continuous_backup_config AlloydbCluster#continuous_backup_config}
   */
   readonly continuousBackupConfig?: AlloydbClusterContinuousBackupConfig;
   /**
   * encryption_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#encryption_config AlloydbCluster#encryption_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#encryption_config AlloydbCluster#encryption_config}
   */
   readonly encryptionConfig?: AlloydbClusterEncryptionConfig;
   /**
   * initial_user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#initial_user AlloydbCluster#initial_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#initial_user AlloydbCluster#initial_user}
   */
   readonly initialUser?: AlloydbClusterInitialUser;
   /**
+  * maintenance_update_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#maintenance_update_policy AlloydbCluster#maintenance_update_policy}
+  */
+  readonly maintenanceUpdatePolicy?: AlloydbClusterMaintenanceUpdatePolicy;
+  /**
   * network_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#network_config AlloydbCluster#network_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#network_config AlloydbCluster#network_config}
   */
   readonly networkConfig?: AlloydbClusterNetworkConfig;
   /**
   * restore_backup_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#restore_backup_source AlloydbCluster#restore_backup_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#restore_backup_source AlloydbCluster#restore_backup_source}
   */
   readonly restoreBackupSource?: AlloydbClusterRestoreBackupSource;
   /**
   * restore_continuous_backup_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#restore_continuous_backup_source AlloydbCluster#restore_continuous_backup_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#restore_continuous_backup_source AlloydbCluster#restore_continuous_backup_source}
   */
   readonly restoreContinuousBackupSource?: AlloydbClusterRestoreContinuousBackupSource;
   /**
   * secondary_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#secondary_config AlloydbCluster#secondary_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#secondary_config AlloydbCluster#secondary_config}
   */
   readonly secondaryConfig?: AlloydbClusterSecondaryConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#timeouts AlloydbCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#timeouts AlloydbCluster#timeouts}
   */
   readonly timeouts?: AlloydbClusterTimeouts;
 }
@@ -565,7 +566,7 @@ export interface AlloydbClusterAutomatedBackupPolicyEncryptionConfig {
   /**
   * The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#kms_key_name AlloydbCluster#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#kms_key_name AlloydbCluster#kms_key_name}
   */
   readonly kmsKeyName?: string;
 }
@@ -651,7 +652,7 @@ export interface AlloydbClusterAutomatedBackupPolicyQuantityBasedRetention {
   /**
   * The number of backups to retain.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#count AlloydbCluster#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#count AlloydbCluster#count}
   */
   readonly count?: number;
 }
@@ -738,7 +739,7 @@ export interface AlloydbClusterAutomatedBackupPolicyTimeBasedRetention {
   * The retention period.
   * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#retention_period AlloydbCluster#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#retention_period AlloydbCluster#retention_period}
   */
   readonly retentionPeriod?: string;
 }
@@ -824,25 +825,25 @@ export interface AlloydbClusterAutomatedBackupPolicyWeeklyScheduleStartTimes {
   /**
   * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#hours AlloydbCluster#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#hours AlloydbCluster#hours}
   */
   readonly hours?: number;
   /**
   * Minutes of hour of day. Currently, only the value 0 is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#minutes AlloydbCluster#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#minutes AlloydbCluster#minutes}
   */
   readonly minutes?: number;
   /**
   * Fractions of seconds in nanoseconds. Currently, only the value 0 is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#nanos AlloydbCluster#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#nanos AlloydbCluster#nanos}
   */
   readonly nanos?: number;
   /**
   * Seconds of minutes of the time. Currently, only the value 0 is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#seconds AlloydbCluster#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#seconds AlloydbCluster#seconds}
   */
   readonly seconds?: number;
 }
@@ -1047,13 +1048,13 @@ export interface AlloydbClusterAutomatedBackupPolicyWeeklySchedule {
   /**
   * The days of the week to perform a backup. At least one day of the week must be provided. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#days_of_week AlloydbCluster#days_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#days_of_week AlloydbCluster#days_of_week}
   */
   readonly daysOfWeek?: string[];
   /**
   * start_times block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#start_times AlloydbCluster#start_times}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#start_times AlloydbCluster#start_times}
   */
   readonly startTimes: AlloydbClusterAutomatedBackupPolicyWeeklyScheduleStartTimes[] | cdktf.IResolvable;
 }
@@ -1169,49 +1170,49 @@ export interface AlloydbClusterAutomatedBackupPolicy {
   * 
   * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#backup_window AlloydbCluster#backup_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#backup_window AlloydbCluster#backup_window}
   */
   readonly backupWindow?: string;
   /**
   * Whether automated backups are enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#enabled AlloydbCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#enabled AlloydbCluster#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Labels to apply to backups created using this configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#labels AlloydbCluster#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#labels AlloydbCluster#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location where the backup will be stored. Currently, the only supported option is to store the backup in the same region as the cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#location AlloydbCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#location AlloydbCluster#location}
   */
   readonly location?: string;
   /**
   * encryption_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#encryption_config AlloydbCluster#encryption_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#encryption_config AlloydbCluster#encryption_config}
   */
   readonly encryptionConfig?: AlloydbClusterAutomatedBackupPolicyEncryptionConfig;
   /**
   * quantity_based_retention block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#quantity_based_retention AlloydbCluster#quantity_based_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#quantity_based_retention AlloydbCluster#quantity_based_retention}
   */
   readonly quantityBasedRetention?: AlloydbClusterAutomatedBackupPolicyQuantityBasedRetention;
   /**
   * time_based_retention block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#time_based_retention AlloydbCluster#time_based_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#time_based_retention AlloydbCluster#time_based_retention}
   */
   readonly timeBasedRetention?: AlloydbClusterAutomatedBackupPolicyTimeBasedRetention;
   /**
   * weekly_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#weekly_schedule AlloydbCluster#weekly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#weekly_schedule AlloydbCluster#weekly_schedule}
   */
   readonly weeklySchedule?: AlloydbClusterAutomatedBackupPolicyWeeklySchedule;
 }
@@ -1500,7 +1501,7 @@ export interface AlloydbClusterContinuousBackupConfigEncryptionConfig {
   /**
   * The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#kms_key_name AlloydbCluster#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#kms_key_name AlloydbCluster#kms_key_name}
   */
   readonly kmsKeyName?: string;
 }
@@ -1586,7 +1587,7 @@ export interface AlloydbClusterContinuousBackupConfig {
   /**
   * Whether continuous backup recovery is enabled. If not set, defaults to true.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#enabled AlloydbCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#enabled AlloydbCluster#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
@@ -1594,13 +1595,13 @@ export interface AlloydbClusterContinuousBackupConfig {
   * 
   * If not set, defaults to 14 days.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#recovery_window_days AlloydbCluster#recovery_window_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#recovery_window_days AlloydbCluster#recovery_window_days}
   */
   readonly recoveryWindowDays?: number;
   /**
   * encryption_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#encryption_config AlloydbCluster#encryption_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#encryption_config AlloydbCluster#encryption_config}
   */
   readonly encryptionConfig?: AlloydbClusterContinuousBackupConfigEncryptionConfig;
 }
@@ -1744,7 +1745,7 @@ export interface AlloydbClusterEncryptionConfig {
   /**
   * The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#kms_key_name AlloydbCluster#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#kms_key_name AlloydbCluster#kms_key_name}
   */
   readonly kmsKeyName?: string;
 }
@@ -1830,13 +1831,13 @@ export interface AlloydbClusterInitialUser {
   /**
   * The initial password for the user.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#password AlloydbCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#password AlloydbCluster#password}
   */
   readonly password: string;
   /**
   * The database username.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#user AlloydbCluster#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#user AlloydbCluster#user}
   */
   readonly user?: string;
 }
@@ -1944,19 +1945,440 @@ export class AlloydbClusterInitialUserOutputReference extends cdktf.ComplexObjec
     return this._user;
   }
 }
+export interface AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTime {
+  /**
+  * Hours of day in 24 hour format. Should be from 0 to 23.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#hours AlloydbCluster#hours}
+  */
+  readonly hours: number;
+  /**
+  * Minutes of hour of day. Currently, only the value 0 is supported.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#minutes AlloydbCluster#minutes}
+  */
+  readonly minutes?: number;
+  /**
+  * Fractions of seconds in nanoseconds. Currently, only the value 0 is supported.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#nanos AlloydbCluster#nanos}
+  */
+  readonly nanos?: number;
+  /**
+  * Seconds of minutes of the time. Currently, only the value 0 is supported.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#seconds AlloydbCluster#seconds}
+  */
+  readonly seconds?: number;
+}
+
+export function alloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeToTerraform(struct?: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeOutputReference | AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    hours: cdktf.numberToTerraform(struct!.hours),
+    minutes: cdktf.numberToTerraform(struct!.minutes),
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
+
+export function alloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeToHclTerraform(struct?: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeOutputReference | AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTime | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hours !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTime | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
+  // hours - computed: false, optional: false, required: true
+  private _hours?: number; 
+  public get hours() {
+    return this.getNumberAttribute('hours');
+  }
+  public set hours(value: number) {
+    this._hours = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours;
+  }
+
+  // minutes - computed: false, optional: true, required: false
+  private _minutes?: number; 
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+  public set minutes(value: number) {
+    this._minutes = value;
+  }
+  public resetMinutes() {
+    this._minutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes;
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos;
+  }
+
+  // seconds - computed: false, optional: true, required: false
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  public resetSeconds() {
+    this._seconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds;
+  }
+}
+export interface AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindows {
+  /**
+  * Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#day AlloydbCluster#day}
+  */
+  readonly day: string;
+  /**
+  * start_time block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#start_time AlloydbCluster#start_time}
+  */
+  readonly startTime: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTime;
+}
+
+export function alloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsToTerraform(struct?: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindows | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day: cdktf.stringToTerraform(struct!.day),
+    start_time: alloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeToTerraform(struct!.startTime),
+  }
+}
+
+
+export function alloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsToHclTerraform(struct?: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindows | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.stringToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time: {
+      value: alloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeToHclTerraform(struct!.startTime),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindows | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._day !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._startTime?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindows | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._day = undefined;
+      this._startTime.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._day = value.day;
+      this._startTime.internalValue = value.startTime;
+    }
+  }
+
+  // day - computed: false, optional: false, required: true
+  private _day?: string; 
+  public get day() {
+    return this.getStringAttribute('day');
+  }
+  public set day(value: string) {
+    this._day = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayInput() {
+    return this._day;
+  }
+
+  // start_time - computed: false, optional: false, required: true
+  private _startTime = new AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTimeOutputReference(this, "start_time");
+  public get startTime() {
+    return this._startTime;
+  }
+  public putStartTime(value: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsStartTime) {
+    this._startTime.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime.internalValue;
+  }
+}
+
+export class AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsList extends cdktf.ComplexList {
+  public internalValue? : AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindows[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsOutputReference {
+    return new AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AlloydbClusterMaintenanceUpdatePolicy {
+  /**
+  * maintenance_windows block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#maintenance_windows AlloydbCluster#maintenance_windows}
+  */
+  readonly maintenanceWindows?: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindows[] | cdktf.IResolvable;
+}
+
+export function alloydbClusterMaintenanceUpdatePolicyToTerraform(struct?: AlloydbClusterMaintenanceUpdatePolicyOutputReference | AlloydbClusterMaintenanceUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    maintenance_windows: cdktf.listMapper(alloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsToTerraform, true)(struct!.maintenanceWindows),
+  }
+}
+
+
+export function alloydbClusterMaintenanceUpdatePolicyToHclTerraform(struct?: AlloydbClusterMaintenanceUpdatePolicyOutputReference | AlloydbClusterMaintenanceUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    maintenance_windows: {
+      value: cdktf.listMapperHcl(alloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsToHclTerraform, true)(struct!.maintenanceWindows),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class AlloydbClusterMaintenanceUpdatePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AlloydbClusterMaintenanceUpdatePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maintenanceWindows?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maintenanceWindows = this._maintenanceWindows?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AlloydbClusterMaintenanceUpdatePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maintenanceWindows.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maintenanceWindows.internalValue = value.maintenanceWindows;
+    }
+  }
+
+  // maintenance_windows - computed: false, optional: true, required: false
+  private _maintenanceWindows = new AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindowsList(this, "maintenance_windows", false);
+  public get maintenanceWindows() {
+    return this._maintenanceWindows;
+  }
+  public putMaintenanceWindows(value: AlloydbClusterMaintenanceUpdatePolicyMaintenanceWindows[] | cdktf.IResolvable) {
+    this._maintenanceWindows.internalValue = value;
+  }
+  public resetMaintenanceWindows() {
+    this._maintenanceWindows.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceWindowsInput() {
+    return this._maintenanceWindows.internalValue;
+  }
+}
 export interface AlloydbClusterNetworkConfig {
   /**
   * The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default".
   * If set, the instance IPs for this cluster will be created in the allocated range.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#allocated_ip_range AlloydbCluster#allocated_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#allocated_ip_range AlloydbCluster#allocated_ip_range}
   */
   readonly allocatedIpRange?: string;
   /**
   * The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
   * It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#network AlloydbCluster#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#network AlloydbCluster#network}
   */
   readonly network?: string;
 }
@@ -2071,7 +2493,7 @@ export interface AlloydbClusterRestoreBackupSource {
   /**
   * The name of the backup that this cluster is restored from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#backup_name AlloydbCluster#backup_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#backup_name AlloydbCluster#backup_name}
   */
   readonly backupName: string;
 }
@@ -2154,13 +2576,13 @@ export interface AlloydbClusterRestoreContinuousBackupSource {
   /**
   * The name of the source cluster that this cluster is restored from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#cluster AlloydbCluster#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#cluster AlloydbCluster#cluster}
   */
   readonly cluster: string;
   /**
   * The point in time that this cluster is restored to, in RFC 3339 format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#point_in_time AlloydbCluster#point_in_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#point_in_time AlloydbCluster#point_in_time}
   */
   readonly pointInTime: string;
 }
@@ -2270,7 +2692,7 @@ export interface AlloydbClusterSecondaryConfig {
   * Name of the primary cluster must be in the format
   * 'projects/{project}/locations/{location}/clusters/{cluster_id}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#primary_cluster_name AlloydbCluster#primary_cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#primary_cluster_name AlloydbCluster#primary_cluster_name}
   */
   readonly primaryClusterName: string;
 }
@@ -2351,15 +2773,15 @@ export class AlloydbClusterSecondaryConfigOutputReference extends cdktf.ComplexO
 }
 export interface AlloydbClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#create AlloydbCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#create AlloydbCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#delete AlloydbCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#delete AlloydbCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#update AlloydbCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#update AlloydbCluster#update}
   */
   readonly update?: string;
 }
@@ -2511,7 +2933,7 @@ export class AlloydbClusterTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster google_alloydb_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster google_alloydb_cluster}
 */
 export class AlloydbCluster extends cdktf.TerraformResource {
 
@@ -2527,7 +2949,7 @@ export class AlloydbCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AlloydbCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AlloydbCluster to import
-  * @param importFromId The id of the existing AlloydbCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AlloydbCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AlloydbCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2539,7 +2961,7 @@ export class AlloydbCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/alloydb_cluster google_alloydb_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/alloydb_cluster google_alloydb_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2550,7 +2972,7 @@ export class AlloydbCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_alloydb_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.27.0',
+        providerVersion: '5.28.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -2577,6 +2999,7 @@ export class AlloydbCluster extends cdktf.TerraformResource {
     this._continuousBackupConfig.internalValue = config.continuousBackupConfig;
     this._encryptionConfig.internalValue = config.encryptionConfig;
     this._initialUser.internalValue = config.initialUser;
+    this._maintenanceUpdatePolicy.internalValue = config.maintenanceUpdatePolicy;
     this._networkConfig.internalValue = config.networkConfig;
     this._restoreBackupSource.internalValue = config.restoreBackupSource;
     this._restoreContinuousBackupSource.internalValue = config.restoreContinuousBackupSource;
@@ -2900,6 +3323,22 @@ export class AlloydbCluster extends cdktf.TerraformResource {
     return this._initialUser.internalValue;
   }
 
+  // maintenance_update_policy - computed: false, optional: true, required: false
+  private _maintenanceUpdatePolicy = new AlloydbClusterMaintenanceUpdatePolicyOutputReference(this, "maintenance_update_policy");
+  public get maintenanceUpdatePolicy() {
+    return this._maintenanceUpdatePolicy;
+  }
+  public putMaintenanceUpdatePolicy(value: AlloydbClusterMaintenanceUpdatePolicy) {
+    this._maintenanceUpdatePolicy.internalValue = value;
+  }
+  public resetMaintenanceUpdatePolicy() {
+    this._maintenanceUpdatePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceUpdatePolicyInput() {
+    return this._maintenanceUpdatePolicy.internalValue;
+  }
+
   // network_config - computed: false, optional: true, required: false
   private _networkConfig = new AlloydbClusterNetworkConfigOutputReference(this, "network_config");
   public get networkConfig() {
@@ -3002,6 +3441,7 @@ export class AlloydbCluster extends cdktf.TerraformResource {
       continuous_backup_config: alloydbClusterContinuousBackupConfigToTerraform(this._continuousBackupConfig.internalValue),
       encryption_config: alloydbClusterEncryptionConfigToTerraform(this._encryptionConfig.internalValue),
       initial_user: alloydbClusterInitialUserToTerraform(this._initialUser.internalValue),
+      maintenance_update_policy: alloydbClusterMaintenanceUpdatePolicyToTerraform(this._maintenanceUpdatePolicy.internalValue),
       network_config: alloydbClusterNetworkConfigToTerraform(this._networkConfig.internalValue),
       restore_backup_source: alloydbClusterRestoreBackupSourceToTerraform(this._restoreBackupSource.internalValue),
       restore_continuous_backup_source: alloydbClusterRestoreContinuousBackupSourceToTerraform(this._restoreContinuousBackupSource.internalValue),
@@ -3107,6 +3547,12 @@ export class AlloydbCluster extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "AlloydbClusterInitialUserList",
+      },
+      maintenance_update_policy: {
+        value: alloydbClusterMaintenanceUpdatePolicyToHclTerraform(this._maintenanceUpdatePolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AlloydbClusterMaintenanceUpdatePolicyList",
       },
       network_config: {
         value: alloydbClusterNetworkConfigToHclTerraform(this._networkConfig.internalValue),
