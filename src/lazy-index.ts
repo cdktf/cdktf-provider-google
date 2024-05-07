@@ -1032,6 +1032,7 @@ Object.defineProperty(exports, 'dataGoogleStorageBucketIamPolicy', { get: functi
 Object.defineProperty(exports, 'dataGoogleStorageBucketObject', { get: function () { return require('./data-google-storage-bucket-object'); } });
 Object.defineProperty(exports, 'dataGoogleStorageBucketObjectContent', { get: function () { return require('./data-google-storage-bucket-object-content'); } });
 Object.defineProperty(exports, 'dataGoogleStorageBucketObjects', { get: function () { return require('./data-google-storage-bucket-objects'); } });
+Object.defineProperty(exports, 'dataGoogleStorageBuckets', { get: function () { return require('./data-google-storage-buckets'); } });
 Object.defineProperty(exports, 'dataGoogleStorageObjectSignedUrl', { get: function () { return require('./data-google-storage-object-signed-url'); } });
 Object.defineProperty(exports, 'dataGoogleStorageProjectServiceAccount', { get: function () { return require('./data-google-storage-project-service-account'); } });
 Object.defineProperty(exports, 'dataGoogleStorageTransferProjectServiceAccount', { get: function () { return require('./data-google-storage-transfer-project-service-account'); } });

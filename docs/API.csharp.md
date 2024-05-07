@@ -578,6 +578,7 @@ The following submodules are available:
 - [dataGoogleStorageBucketObject](./dataGoogleStorageBucketObject.csharp.md)
 - [dataGoogleStorageBucketObjectContent](./dataGoogleStorageBucketObjectContent.csharp.md)
 - [dataGoogleStorageBucketObjects](./dataGoogleStorageBucketObjects.csharp.md)
+- [dataGoogleStorageBuckets](./dataGoogleStorageBuckets.csharp.md)
 - [dataGoogleStorageObjectSignedUrl](./dataGoogleStorageObjectSignedUrl.csharp.md)
 - [dataGoogleStorageProjectServiceAccount](./dataGoogleStorageProjectServiceAccount.csharp.md)
 - [dataGoogleStorageTransferProjectServiceAccount](./dataGoogleStorageTransferProjectServiceAccount.csharp.md)

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime
+// https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface NotebooksRuntimeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#id NotebooksRuntime#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,47 +31,47 @@ export interface NotebooksRuntimeConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * A reference to the zone where the machine resides.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#location NotebooksRuntime#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#location NotebooksRuntime#location}
   */
   readonly location: string;
   /**
   * The name specified for the Notebook runtime.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#name NotebooksRuntime#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#name NotebooksRuntime#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#project NotebooksRuntime#project}
   */
   readonly project?: string;
   /**
   * access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#access_config NotebooksRuntime#access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#access_config NotebooksRuntime#access_config}
   */
   readonly accessConfig?: NotebooksRuntimeAccessConfig;
   /**
   * software_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#software_config NotebooksRuntime#software_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#software_config NotebooksRuntime#software_config}
   */
   readonly softwareConfig?: NotebooksRuntimeSoftwareConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#timeouts NotebooksRuntime#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#timeouts NotebooksRuntime#timeouts}
   */
   readonly timeouts?: NotebooksRuntimeTimeouts;
   /**
   * virtual_machine block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#virtual_machine NotebooksRuntime#virtual_machine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#virtual_machine NotebooksRuntime#virtual_machine}
   */
   readonly virtualMachine?: NotebooksRuntimeVirtualMachine;
 }
@@ -157,14 +157,14 @@ export interface NotebooksRuntimeAccessConfig {
   * 'https://cloud.google.com/vertex-ai/docs/workbench/reference/
   * rest/v1/projects.locations.runtimes#RuntimeAccessType'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#access_type NotebooksRuntime#access_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#access_type NotebooksRuntime#access_type}
   */
   readonly accessType?: string;
   /**
   * The owner of this runtime after creation. Format: 'alias@example.com'.
   * Currently supports one owner only.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#runtime_owner NotebooksRuntime#runtime_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#runtime_owner NotebooksRuntime#runtime_owner}
   */
   readonly runtimeOwner?: string;
 }
@@ -285,13 +285,13 @@ export interface NotebooksRuntimeSoftwareConfigKernels {
   * The path to the container image repository.
   * For example: gcr.io/{project_id}/{imageName}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
   */
   readonly repository: string;
   /**
   * The tag of the container image. If not specified, this defaults to the latest tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#tag NotebooksRuntime#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#tag NotebooksRuntime#tag}
   */
   readonly tag?: string;
 }
@@ -436,40 +436,40 @@ export interface NotebooksRuntimeSoftwareConfig {
   * Specify a custom Cloud Storage path where the GPU driver is stored.
   * If not specified, we'll automatically choose from official GPU drivers.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#custom_gpu_driver_path NotebooksRuntime#custom_gpu_driver_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#custom_gpu_driver_path NotebooksRuntime#custom_gpu_driver_path}
   */
   readonly customGpuDriverPath?: string;
   /**
   * Verifies core internal services are running. Default: True.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#enable_health_monitoring NotebooksRuntime#enable_health_monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#enable_health_monitoring NotebooksRuntime#enable_health_monitoring}
   */
   readonly enableHealthMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Runtime will automatically shutdown after idle_shutdown_time.
   * Default: True
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#idle_shutdown NotebooksRuntime#idle_shutdown}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#idle_shutdown NotebooksRuntime#idle_shutdown}
   */
   readonly idleShutdown?: boolean | cdktf.IResolvable;
   /**
   * Time in minutes to wait before shuting down runtime.
   * Default: 180 minutes
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#idle_shutdown_timeout NotebooksRuntime#idle_shutdown_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#idle_shutdown_timeout NotebooksRuntime#idle_shutdown_timeout}
   */
   readonly idleShutdownTimeout?: number;
   /**
   * Install Nvidia Driver automatically.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#install_gpu_driver NotebooksRuntime#install_gpu_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#install_gpu_driver NotebooksRuntime#install_gpu_driver}
   */
   readonly installGpuDriver?: boolean | cdktf.IResolvable;
   /**
   * Cron expression in UTC timezone for schedule instance auto upgrade.
   * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#notebook_upgrade_schedule NotebooksRuntime#notebook_upgrade_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#notebook_upgrade_schedule NotebooksRuntime#notebook_upgrade_schedule}
   */
   readonly notebookUpgradeSchedule?: string;
   /**
@@ -477,19 +477,19 @@ export interface NotebooksRuntimeSoftwareConfig {
   * fully boots up. The path must be a URL or
   * Cloud Storage path (gs://path-to-file/file-name).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#post_startup_script NotebooksRuntime#post_startup_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#post_startup_script NotebooksRuntime#post_startup_script}
   */
   readonly postStartupScript?: string;
   /**
   * Behavior for the post startup script. Possible values: ["POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED", "RUN_EVERY_START", "DOWNLOAD_AND_RUN_EVERY_START"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#post_startup_script_behavior NotebooksRuntime#post_startup_script_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#post_startup_script_behavior NotebooksRuntime#post_startup_script_behavior}
   */
   readonly postStartupScriptBehavior?: string;
   /**
   * kernels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#kernels NotebooksRuntime#kernels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#kernels NotebooksRuntime#kernels}
   */
   readonly kernels?: NotebooksRuntimeSoftwareConfigKernels[] | cdktf.IResolvable;
 }
@@ -810,15 +810,15 @@ export class NotebooksRuntimeSoftwareConfigOutputReference extends cdktf.Complex
 }
 export interface NotebooksRuntimeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#create NotebooksRuntime#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#create NotebooksRuntime#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#delete NotebooksRuntime#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#delete NotebooksRuntime#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#update NotebooksRuntime#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#update NotebooksRuntime#update}
   */
   readonly update?: string;
 }
@@ -972,7 +972,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorCo
   /**
   * Count of cores of this accelerator.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#core_count NotebooksRuntime#core_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#core_count NotebooksRuntime#core_count}
   */
   readonly coreCount?: number;
   /**
@@ -980,7 +980,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorCo
   * 'https://cloud.google.com/vertex-ai/docs/workbench/reference/
   * rest/v1/projects.locations.runtimes#AcceleratorType'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
   */
   readonly type?: string;
 }
@@ -1096,13 +1096,13 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImag
   * The path to the container image repository.
   * For example: gcr.io/{project_id}/{imageName}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#repository NotebooksRuntime#repository}
   */
   readonly repository: string;
   /**
   * The tag of the container image. If not specified, this defaults to the latest tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#tag NotebooksRuntime#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#tag NotebooksRuntime#tag}
   */
   readonly tag?: string;
 }
@@ -1246,7 +1246,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskIniti
   /**
   * Provide this property when creating the disk.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#description NotebooksRuntime#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#description NotebooksRuntime#description}
   */
   readonly description?: string;
   /**
@@ -1255,7 +1255,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskIniti
   * instance name exists already in the given zone/region, a
   * new name will be automatically generated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#disk_name NotebooksRuntime#disk_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#disk_name NotebooksRuntime#disk_name}
   */
   readonly diskName?: string;
   /**
@@ -1264,7 +1264,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskIniti
   * (usually 10GB). If specified, the size must be equal to
   * or larger than 10GB. Default 100 GB.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#disk_size_gb NotebooksRuntime#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#disk_size_gb NotebooksRuntime#disk_size_gb}
   */
   readonly diskSizeGb?: number;
   /**
@@ -1273,7 +1273,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskIniti
   * see 'https://cloud.google.com/vertex-ai/docs/workbench/
   * reference/rest/v1/projects.locations.runtimes#disktype'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#disk_type NotebooksRuntime#disk_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#disk_type NotebooksRuntime#disk_type}
   */
   readonly diskType?: string;
   /**
@@ -1281,7 +1281,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskIniti
   * by the disks.setLabels method. This field is only
   * applicable for persistent disks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
   */
   readonly labels?: { [key: string]: string };
 }
@@ -1488,7 +1488,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk {
   * can use either NVME or SCSI. For performance characteristics of SCSI
   * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#interface NotebooksRuntime#interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#interface NotebooksRuntime#interface}
   */
   readonly interface?: string;
   /**
@@ -1496,27 +1496,27 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk {
   * or READ_ONLY. If not specified, the default is to attach
   * the disk in READ_WRITE mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#mode NotebooksRuntime#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#mode NotebooksRuntime#mode}
   */
   readonly mode?: string;
   /**
   * Specifies a valid partial or full URL to an existing
   * Persistent Disk resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#source NotebooksRuntime#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#source NotebooksRuntime#source}
   */
   readonly source?: string;
   /**
   * Specifies the type of the disk, either SCRATCH or PERSISTENT.
   * If not specified, the default is PERSISTENT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#type NotebooksRuntime#type}
   */
   readonly type?: string;
   /**
   * initialize_params block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#initialize_params NotebooksRuntime#initialize_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#initialize_params NotebooksRuntime#initialize_params}
   */
   readonly initializeParams?: NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams;
 }
@@ -1757,7 +1757,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionCon
   * 'projects/{PROJECT_ID}/locations/{REGION}/keyRings/
   * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#kms_key NotebooksRuntime#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#kms_key NotebooksRuntime#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -1848,7 +1848,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInsta
   * from the implicitly trusted boot image when the instance is
   * created. Enabled by default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#enable_integrity_monitoring NotebooksRuntime#enable_integrity_monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#enable_integrity_monitoring NotebooksRuntime#enable_integrity_monitoring}
   */
   readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
@@ -1858,14 +1858,14 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInsta
   * halting the boot process if signature verification fails.
   * Disabled by default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#enable_secure_boot NotebooksRuntime#enable_secure_boot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#enable_secure_boot NotebooksRuntime#enable_secure_boot}
   */
   readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Defines whether the instance has the vTPM enabled. Enabled by
   * default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#enable_vtpm NotebooksRuntime#enable_vtpm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#enable_vtpm NotebooksRuntime#enable_vtpm}
   */
   readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
@@ -2014,7 +2014,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfig {
   * enabled networks, and all dependencies must be configured to be
   * accessible without external IP addresses.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#internal_ip_only NotebooksRuntime#internal_ip_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#internal_ip_only NotebooksRuntime#internal_ip_only}
   */
   readonly internalIpOnly?: boolean | cdktf.IResolvable;
   /**
@@ -2025,13 +2025,13 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfig {
   * conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No
   * more than 32 labels can be associated with a cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#labels NotebooksRuntime#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The Compute Engine machine type used for runtimes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#machine_type NotebooksRuntime#machine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#machine_type NotebooksRuntime#machine_type}
   */
   readonly machineType: string;
   /**
@@ -2040,7 +2040,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfig {
   * /compute/docs/storing-retrieving-metadata#project_and_instance
   * _metadata)).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#metadata NotebooksRuntime#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#metadata NotebooksRuntime#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
@@ -2059,21 +2059,21 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfig {
   *   * Shared VPC (network & subnet are required). Requires
   *   configuring Private Service Access.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#network NotebooksRuntime#network}
   */
   readonly network?: string;
   /**
   * The type of vNIC to be used on this interface. This may be gVNIC
   * or VirtioNet. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#nic_type NotebooksRuntime#nic_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#nic_type NotebooksRuntime#nic_type}
   */
   readonly nicType?: string;
   /**
   * Reserved IP Range name is used for VPC Peering. The
   * subnetwork allocation will use the range *name* if it's assigned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#reserved_ip_range NotebooksRuntime#reserved_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#reserved_ip_range NotebooksRuntime#reserved_ip_range}
   */
   readonly reservedIpRange?: string;
   /**
@@ -2084,7 +2084,7 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfig {
   *   regions/us-east1/subnetworks/sub0'
   *   * 'projects/[project_id]/regions/us-east1/subnetworks/sub0'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#subnet NotebooksRuntime#subnet}
   */
   readonly subnet?: string;
   /**
@@ -2092,37 +2092,37 @@ export interface NotebooksRuntimeVirtualMachineVirtualMachineConfig {
   * (https://cloud.google.com/compute/docs/
   * label-or-tag-resources#tags)).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#tags NotebooksRuntime#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#tags NotebooksRuntime#tags}
   */
   readonly tags?: string[];
   /**
   * accelerator_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#accelerator_config NotebooksRuntime#accelerator_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#accelerator_config NotebooksRuntime#accelerator_config}
   */
   readonly acceleratorConfig?: NotebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig;
   /**
   * container_images block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#container_images NotebooksRuntime#container_images}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#container_images NotebooksRuntime#container_images}
   */
   readonly containerImages?: NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages[] | cdktf.IResolvable;
   /**
   * data_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#data_disk NotebooksRuntime#data_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#data_disk NotebooksRuntime#data_disk}
   */
   readonly dataDisk: NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDisk;
   /**
   * encryption_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#encryption_config NotebooksRuntime#encryption_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#encryption_config NotebooksRuntime#encryption_config}
   */
   readonly encryptionConfig?: NotebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfig;
   /**
   * shielded_instance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#shielded_instance_config NotebooksRuntime#shielded_instance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#shielded_instance_config NotebooksRuntime#shielded_instance_config}
   */
   readonly shieldedInstanceConfig?: NotebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig;
 }
@@ -2590,7 +2590,7 @@ export interface NotebooksRuntimeVirtualMachine {
   /**
   * virtual_machine_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#virtual_machine_config NotebooksRuntime#virtual_machine_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#virtual_machine_config NotebooksRuntime#virtual_machine_config}
   */
   readonly virtualMachineConfig?: NotebooksRuntimeVirtualMachineVirtualMachineConfig;
 }
@@ -2684,7 +2684,7 @@ export class NotebooksRuntimeVirtualMachineOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime google_notebooks_runtime}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime google_notebooks_runtime}
 */
 export class NotebooksRuntime extends cdktf.TerraformResource {
 
@@ -2700,7 +2700,7 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NotebooksRuntime resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NotebooksRuntime to import
-  * @param importFromId The id of the existing NotebooksRuntime that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NotebooksRuntime that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NotebooksRuntime to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2712,7 +2712,7 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/notebooks_runtime google_notebooks_runtime} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/notebooks_runtime google_notebooks_runtime} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2723,7 +2723,7 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_runtime',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.27.0',
+        providerVersion: '5.28.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

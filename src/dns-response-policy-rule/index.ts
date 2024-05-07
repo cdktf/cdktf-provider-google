@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule
+// https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,42 +15,42 @@ export interface DnsResponsePolicyRuleConfig extends cdktf.TerraformMetaArgument
   /**
   * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#dns_name DnsResponsePolicyRule#dns_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#dns_name DnsResponsePolicyRule#dns_name}
   */
   readonly dnsName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#id DnsResponsePolicyRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#id DnsResponsePolicyRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#project DnsResponsePolicyRule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#project DnsResponsePolicyRule#project}
   */
   readonly project?: string;
   /**
   * Identifies the response policy addressed by this request.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#response_policy DnsResponsePolicyRule#response_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#response_policy DnsResponsePolicyRule#response_policy}
   */
   readonly responsePolicy: string;
   /**
   * An identifier for this rule. Must be unique with the ResponsePolicy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#rule_name DnsResponsePolicyRule#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#rule_name DnsResponsePolicyRule#rule_name}
   */
   readonly ruleName: string;
   /**
   * local_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#local_data DnsResponsePolicyRule#local_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#local_data DnsResponsePolicyRule#local_data}
   */
   readonly localData?: DnsResponsePolicyRuleLocalData;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#timeouts DnsResponsePolicyRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#timeouts DnsResponsePolicyRule#timeouts}
   */
   readonly timeouts?: DnsResponsePolicyRuleTimeouts;
 }
@@ -58,26 +58,26 @@ export interface DnsResponsePolicyRuleLocalDataLocalDatas {
   /**
   * For example, www.example.com.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#name DnsResponsePolicyRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#name DnsResponsePolicyRule#name}
   */
   readonly name: string;
   /**
   * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#rrdatas DnsResponsePolicyRule#rrdatas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#rrdatas DnsResponsePolicyRule#rrdatas}
   */
   readonly rrdatas?: string[];
   /**
   * Number of seconds that this ResourceRecordSet can be cached by
   * resolvers.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#ttl DnsResponsePolicyRule#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#ttl DnsResponsePolicyRule#ttl}
   */
   readonly ttl?: number;
   /**
   * One of valid DNS resource types. Possible values: ["A", "AAAA", "CAA", "CNAME", "DNSKEY", "DS", "HTTPS", "IPSECVPNKEY", "MX", "NAPTR", "NS", "PTR", "SOA", "SPF", "SRV", "SSHFP", "SVCB", "TLSA", "TXT"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#type DnsResponsePolicyRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#type DnsResponsePolicyRule#type}
   */
   readonly type: string;
 }
@@ -276,7 +276,7 @@ export interface DnsResponsePolicyRuleLocalData {
   /**
   * local_datas block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#local_datas DnsResponsePolicyRule#local_datas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#local_datas DnsResponsePolicyRule#local_datas}
   */
   readonly localDatas: DnsResponsePolicyRuleLocalDataLocalDatas[] | cdktf.IResolvable;
 }
@@ -357,15 +357,15 @@ export class DnsResponsePolicyRuleLocalDataOutputReference extends cdktf.Complex
 }
 export interface DnsResponsePolicyRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#create DnsResponsePolicyRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#create DnsResponsePolicyRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#delete DnsResponsePolicyRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#delete DnsResponsePolicyRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#update DnsResponsePolicyRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#update DnsResponsePolicyRule#update}
   */
   readonly update?: string;
 }
@@ -517,7 +517,7 @@ export class DnsResponsePolicyRuleTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule google_dns_response_policy_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule google_dns_response_policy_rule}
 */
 export class DnsResponsePolicyRule extends cdktf.TerraformResource {
 
@@ -533,7 +533,7 @@ export class DnsResponsePolicyRule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DnsResponsePolicyRule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DnsResponsePolicyRule to import
-  * @param importFromId The id of the existing DnsResponsePolicyRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DnsResponsePolicyRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DnsResponsePolicyRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -545,7 +545,7 @@ export class DnsResponsePolicyRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs/resources/dns_response_policy_rule google_dns_response_policy_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/dns_response_policy_rule google_dns_response_policy_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -556,7 +556,7 @@ export class DnsResponsePolicyRule extends cdktf.TerraformResource {
       terraformResourceType: 'google_dns_response_policy_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.27.0',
+        providerVersion: '5.28.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

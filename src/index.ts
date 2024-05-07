@@ -1032,6 +1032,7 @@ export * as dataGoogleStorageBucketIamPolicy from './data-google-storage-bucket-
 export * as dataGoogleStorageBucketObject from './data-google-storage-bucket-object';
 export * as dataGoogleStorageBucketObjectContent from './data-google-storage-bucket-object-content';
 export * as dataGoogleStorageBucketObjects from './data-google-storage-bucket-objects';
+export * as dataGoogleStorageBuckets from './data-google-storage-buckets';
 export * as dataGoogleStorageObjectSignedUrl from './data-google-storage-object-signed-url';
 export * as dataGoogleStorageProjectServiceAccount from './data-google-storage-project-service-account';
 export * as dataGoogleStorageTransferProjectServiceAccount from './data-google-storage-transfer-project-service-account';

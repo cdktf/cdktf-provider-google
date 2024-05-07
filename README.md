@@ -1,7 +1,7 @@
 
-# CDKTF prebuilt bindings for hashicorp/google provider version 5.27.0
+# CDKTF prebuilt bindings for hashicorp/google provider version 5.28.0
 
-This repo builds and publishes the [Terraform google provider](https://registry.terraform.io/providers/hashicorp/google/5.27.0/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform google provider](https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Available Packages
 
@@ -63,7 +63,7 @@ This project is explicitly not tracking the Terraform google provider version 1:
 These are the upstream dependencies:
 
 - [CDK for Terraform](https://cdk.tf)
-- [Terraform google provider](https://registry.terraform.io/providers/hashicorp/google/5.27.0)
+- [Terraform google provider](https://registry.terraform.io/providers/hashicorp/google/5.28.0)
 - [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
