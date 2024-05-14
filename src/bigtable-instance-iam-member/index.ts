@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface BigtableInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#id BigtableInstanceIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#id BigtableInstanceIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#instance BigtableInstanceIamMember#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#instance BigtableInstanceIamMember#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#member BigtableInstanceIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#member BigtableInstanceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#project BigtableInstanceIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#project BigtableInstanceIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#role BigtableInstanceIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#role BigtableInstanceIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#condition BigtableInstanceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#condition BigtableInstanceIamMember#condition}
   */
   readonly condition?: BigtableInstanceIamMemberCondition;
 }
 export interface BigtableInstanceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#description BigtableInstanceIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#description BigtableInstanceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#expression BigtableInstanceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#expression BigtableInstanceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#title BigtableInstanceIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#title BigtableInstanceIamMember#title}
   */
   readonly title: string;
 }
@@ -188,7 +183,7 @@ export class BigtableInstanceIamMemberConditionOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member google_bigtable_instance_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member google_bigtable_instance_iam_member}
 */
 export class BigtableInstanceIamMember extends cdktf.TerraformResource {
 
@@ -204,7 +199,7 @@ export class BigtableInstanceIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigtableInstanceIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigtableInstanceIamMember to import
-  * @param importFromId The id of the existing BigtableInstanceIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigtableInstanceIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigtableInstanceIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -216,7 +211,7 @@ export class BigtableInstanceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.28.0/docs/resources/bigtable_instance_iam_member google_bigtable_instance_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_instance_iam_member google_bigtable_instance_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -227,7 +222,7 @@ export class BigtableInstanceIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_instance_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.28.0',
+        providerVersion: '5.29.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

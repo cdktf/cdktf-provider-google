@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 import * as cdktf from 'cdktf';
 export interface DataGoogleContainerClusterAddonsConfigCloudrunConfig {
 }
@@ -4169,6 +4164,11 @@ export class DataGoogleContainerClusterNodeConfigAdvancedMachineFeaturesOutputRe
     }
   }
 
+  // enable_nested_virtualization - computed: true, optional: false, required: false
+  public get enableNestedVirtualization() {
+    return this.getBooleanAttribute('enable_nested_virtualization');
+  }
+
   // threads_per_core - computed: true, optional: false, required: false
   public get threadsPerCore() {
     return this.getNumberAttribute('threads_per_core');
@@ -6545,6 +6545,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeatures
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // enable_nested_virtualization - computed: true, optional: false, required: false
+  public get enableNestedVirtualization() {
+    return this.getBooleanAttribute('enable_nested_virtualization');
   }
 
   // threads_per_core - computed: true, optional: false, required: false
