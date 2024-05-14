@@ -106,6 +106,7 @@ Object.defineProperty(exports, 'bigqueryTableIamBinding', { get: function () { r
 Object.defineProperty(exports, 'bigqueryTableIamMember', { get: function () { return require('./bigquery-table-iam-member'); } });
 Object.defineProperty(exports, 'bigqueryTableIamPolicy', { get: function () { return require('./bigquery-table-iam-policy'); } });
 Object.defineProperty(exports, 'bigtableAppProfile', { get: function () { return require('./bigtable-app-profile'); } });
+Object.defineProperty(exports, 'bigtableAuthorizedView', { get: function () { return require('./bigtable-authorized-view'); } });
 Object.defineProperty(exports, 'bigtableGcPolicy', { get: function () { return require('./bigtable-gc-policy'); } });
 Object.defineProperty(exports, 'bigtableInstance', { get: function () { return require('./bigtable-instance'); } });
 Object.defineProperty(exports, 'bigtableInstanceIamBinding', { get: function () { return require('./bigtable-instance-iam-binding'); } });
@@ -562,6 +563,7 @@ Object.defineProperty(exports, 'identityPlatformTenantInboundSamlConfig', { get:
 Object.defineProperty(exports, 'identityPlatformTenantOauthIdpConfig', { get: function () { return require('./identity-platform-tenant-oauth-idp-config'); } });
 Object.defineProperty(exports, 'integrationConnectorsConnection', { get: function () { return require('./integration-connectors-connection'); } });
 Object.defineProperty(exports, 'integrationConnectorsEndpointAttachment', { get: function () { return require('./integration-connectors-endpoint-attachment'); } });
+Object.defineProperty(exports, 'integrationConnectorsManagedZone', { get: function () { return require('./integration-connectors-managed-zone'); } });
 Object.defineProperty(exports, 'integrationsAuthConfig', { get: function () { return require('./integrations-auth-config'); } });
 Object.defineProperty(exports, 'integrationsClient', { get: function () { return require('./integrations-client'); } });
 Object.defineProperty(exports, 'kmsCryptoKey', { get: function () { return require('./kms-crypto-key'); } });
@@ -619,6 +621,7 @@ Object.defineProperty(exports, 'netappVolumeSnapshot', { get: function () { retu
 Object.defineProperty(exports, 'networkConnectivityHub', { get: function () { return require('./network-connectivity-hub'); } });
 Object.defineProperty(exports, 'networkConnectivityInternalRange', { get: function () { return require('./network-connectivity-internal-range'); } });
 Object.defineProperty(exports, 'networkConnectivityPolicyBasedRoute', { get: function () { return require('./network-connectivity-policy-based-route'); } });
+Object.defineProperty(exports, 'networkConnectivityRegionalEndpoint', { get: function () { return require('./network-connectivity-regional-endpoint'); } });
 Object.defineProperty(exports, 'networkConnectivityServiceConnectionPolicy', { get: function () { return require('./network-connectivity-service-connection-policy'); } });
 Object.defineProperty(exports, 'networkConnectivitySpoke', { get: function () { return require('./network-connectivity-spoke'); } });
 Object.defineProperty(exports, 'networkManagementConnectivityTest', { get: function () { return require('./network-management-connectivity-test'); } });
@@ -626,8 +629,13 @@ Object.defineProperty(exports, 'networkSecurityAddressGroup', { get: function ()
 Object.defineProperty(exports, 'networkSecurityAddressGroupIamBinding', { get: function () { return require('./network-security-address-group-iam-binding'); } });
 Object.defineProperty(exports, 'networkSecurityAddressGroupIamMember', { get: function () { return require('./network-security-address-group-iam-member'); } });
 Object.defineProperty(exports, 'networkSecurityAddressGroupIamPolicy', { get: function () { return require('./network-security-address-group-iam-policy'); } });
+Object.defineProperty(exports, 'networkSecurityFirewallEndpoint', { get: function () { return require('./network-security-firewall-endpoint'); } });
+Object.defineProperty(exports, 'networkSecurityFirewallEndpointAssociation', { get: function () { return require('./network-security-firewall-endpoint-association'); } });
 Object.defineProperty(exports, 'networkSecurityGatewaySecurityPolicy', { get: function () { return require('./network-security-gateway-security-policy'); } });
 Object.defineProperty(exports, 'networkSecurityGatewaySecurityPolicyRule', { get: function () { return require('./network-security-gateway-security-policy-rule'); } });
+Object.defineProperty(exports, 'networkSecuritySecurityProfile', { get: function () { return require('./network-security-security-profile'); } });
+Object.defineProperty(exports, 'networkSecuritySecurityProfileGroup', { get: function () { return require('./network-security-security-profile-group'); } });
+Object.defineProperty(exports, 'networkSecurityTlsInspectionPolicy', { get: function () { return require('./network-security-tls-inspection-policy'); } });
 Object.defineProperty(exports, 'networkSecurityUrlLists', { get: function () { return require('./network-security-url-lists'); } });
 Object.defineProperty(exports, 'networkServicesEdgeCacheKeyset', { get: function () { return require('./network-services-edge-cache-keyset'); } });
 Object.defineProperty(exports, 'networkServicesEdgeCacheOrigin', { get: function () { return require('./network-services-edge-cache-origin'); } });
