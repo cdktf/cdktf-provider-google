@@ -1,3 +1,3 @@
 # `google_kms_crypto_key`
 
-Refer to the Terraform Registry for docs: [`google_kms_crypto_key`](https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/kms_crypto_key).
+Refer to the Terraform Registry for docs: [`google_kms_crypto_key`](https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/kms_crypto_key).
