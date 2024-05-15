@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudbuildv2_connection_iam_policy
 // generated from terraform resource schema
 
