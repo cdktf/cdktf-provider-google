@@ -1,3 +1,3 @@
 # `google_storage_bucket_acl`
 
-Refer to the Terraform Registry for docs: [`google_storage_bucket_acl`](https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/storage_bucket_acl).
+Refer to the Terraform Registry for docs: [`google_storage_bucket_acl`](https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/storage_bucket_acl).

@@ -4,12 +4,12 @@
 
 ### BigtableTable <a name="BigtableTable" id="@cdktf/provider-google.bigtableTable.BigtableTable"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table google_bigtable_table}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table google_bigtable_table}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableTable.BigtableTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 bigtabletable.NewBigtableTable(scope Construct, id *string, config BigtableTableConfig) BigtableTable
 ```
@@ -453,7 +453,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigtableTable.BigtableTable.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 bigtabletable.BigtableTable_IsConstruct(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigtableTable.BigtableTable.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 bigtabletable.BigtableTable_IsTerraformElement(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ bigtabletable.BigtableTable_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigtableTable.BigtableTable.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 bigtabletable.BigtableTable_IsTerraformResource(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ bigtabletable.BigtableTable_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigtableTable.BigtableTable.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 bigtabletable.BigtableTable_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -542,7 +542,7 @@ The construct id used in the generated config for the BigtableTable to import.
 
 The id of the existing BigtableTable that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -940,7 +940,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableTable.BigtableTableColumnFamily.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 &bigtabletable.BigtableTableColumnFamily {
 	Family: *string,
@@ -965,7 +965,7 @@ Family *string
 
 The name of the column family.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#family BigtableTable#family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#family BigtableTable#family}
 
 ---
 
@@ -974,7 +974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableTable.BigtableTableConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 &bigtabletable.BigtableTableConfig {
 	Connection: interface{},
@@ -992,7 +992,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
 	Id: *string,
 	Project: *string,
 	SplitKeys: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.bigtableTable.BigtableTableTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.bigtableTable.BigtableTableTimeouts,
 }
 ```
 
@@ -1012,7 +1012,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.changeStreamRetention">ChangeStreamRetention</a></code> | <code>*string</code> | Duration to retain change stream data for the table. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.columnFamily">ColumnFamily</a></code> | <code>interface{}</code> | column_family block. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.deletionProtection">DeletionProtection</a></code> | <code>*string</code> | A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. |
-| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#id BigtableTable#id}. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#id BigtableTable#id}. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.project">Project</a></code> | <code>*string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.splitKeys">SplitKeys</a></code> | <code>*[]*string</code> | A list of predefined keys to split the table on. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts">BigtableTableTimeouts</a></code> | timeouts block. |
@@ -1099,7 +1099,7 @@ InstanceName *string
 
 The name of the Bigtable instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#instance_name BigtableTable#instance_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#instance_name BigtableTable#instance_name}
 
 ---
 
@@ -1113,7 +1113,7 @@ Name *string
 
 The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#name BigtableTable#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#name BigtableTable#name}
 
 ---
 
@@ -1129,7 +1129,7 @@ Duration to retain change stream data for the table.
 
 Set to 0 to disable. Must be between 1 and 7 days.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#change_stream_retention BigtableTable#change_stream_retention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#change_stream_retention BigtableTable#change_stream_retention}
 
 ---
 
@@ -1143,7 +1143,7 @@ ColumnFamily interface{}
 
 column_family block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#column_family BigtableTable#column_family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#column_family BigtableTable#column_family}
 
 ---
 
@@ -1157,7 +1157,7 @@ DeletionProtection *string
 
 A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#deletion_protection BigtableTable#deletion_protection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#deletion_protection BigtableTable#deletion_protection}
 
 ---
 
@@ -1169,7 +1169,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#id BigtableTable#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#id BigtableTable#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1188,7 +1188,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#project BigtableTable#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#project BigtableTable#project}
 
 ---
 
@@ -1204,7 +1204,7 @@ A list of predefined keys to split the table on.
 
 !> Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#split_keys BigtableTable#split_keys}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#split_keys BigtableTable#split_keys}
 
 ---
 
@@ -1218,7 +1218,7 @@ Timeouts BigtableTableTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#timeouts BigtableTable#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#timeouts BigtableTable#timeouts}
 
 ---
 
@@ -1227,7 +1227,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 &bigtabletable.BigtableTableTimeouts {
 	Create: *string,
@@ -1239,8 +1239,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#create BigtableTable#create}. |
-| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#update BigtableTable#update}. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#create BigtableTable#create}. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#update BigtableTable#update}. |
 
 ---
 
@@ -1252,7 +1252,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#create BigtableTable#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#create BigtableTable#create}.
 
 ---
 
@@ -1264,7 +1264,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigtable_table#update BigtableTable#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigtable_table#update BigtableTable#update}.
 
 ---
 
@@ -1275,7 +1275,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableTable.BigtableTableColumnFamilyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 bigtabletable.NewBigtableTableColumnFamilyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BigtableTableColumnFamilyList
 ```
@@ -1435,7 +1435,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableTable.BigtableTableColumnFamilyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 bigtabletable.NewBigtableTableColumnFamilyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BigtableTableColumnFamilyOutputReference
 ```
@@ -1724,7 +1724,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableTable.BigtableTableTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtabletable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletable"
 
 bigtabletable.NewBigtableTableTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableTableTimeoutsOutputReference
 ```

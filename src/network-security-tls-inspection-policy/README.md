@@ -1,3 +1,3 @@
 # `google_network_security_tls_inspection_policy`
 
-Refer to the Terraform Registry for docs: [`google_network_security_tls_inspection_policy`](https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/network_security_tls_inspection_policy).
+Refer to the Terraform Registry for docs: [`google_network_security_tls_inspection_policy`](https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/network_security_tls_inspection_policy).

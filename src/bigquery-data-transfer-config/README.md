@@ -1,3 +1,3 @@
 # `google_bigquery_data_transfer_config`
 
-Refer to the Terraform Registry for docs: [`google_bigquery_data_transfer_config`](https://registry.terraform.io/providers/hashicorp/google/5.29.0/docs/resources/bigquery_data_transfer_config).
+Refer to the Terraform Registry for docs: [`google_bigquery_data_transfer_config`](https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/bigquery_data_transfer_config).
