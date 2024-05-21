@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory
+// https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,41 +15,41 @@ export interface NetappActiveDirectoryConfig extends cdktf.TerraformMetaArgument
   /**
   * Enables AES-128 and AES-256 encryption for Kerberos-based communication with Active Directory.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#aes_encryption NetappActiveDirectory#aes_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#aes_encryption NetappActiveDirectory#aes_encryption}
   */
   readonly aesEncryption?: boolean | cdktf.IResolvable;
   /**
   * Domain user/group accounts to be added to the Backup Operators group of the SMB service. The Backup Operators group allows members to backup and restore files regardless of whether they have read or write access to the files. Comma-separated list.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#backup_operators NetappActiveDirectory#backup_operators}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#backup_operators NetappActiveDirectory#backup_operators}
   */
   readonly backupOperators?: string[];
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#description NetappActiveDirectory#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#description NetappActiveDirectory#description}
   */
   readonly description?: string;
   /**
   * Comma separated list of DNS server IP addresses for the Active Directory domain.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#dns NetappActiveDirectory#dns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#dns NetappActiveDirectory#dns}
   */
   readonly dns: string;
   /**
   * Fully qualified domain name for the Active Directory domain.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#domain NetappActiveDirectory#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#domain NetappActiveDirectory#domain}
   */
   readonly domain: string;
   /**
   * If enabled, traffic between the SMB server to Domain Controller (DC) will be encrypted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#encrypt_dc_connections NetappActiveDirectory#encrypt_dc_connections}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#encrypt_dc_connections NetappActiveDirectory#encrypt_dc_connections}
   */
   readonly encryptDcConnections?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#id NetappActiveDirectory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#id NetappActiveDirectory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -58,13 +58,13 @@ export interface NetappActiveDirectoryConfig extends cdktf.TerraformMetaArgument
   /**
   * Hostname of the Active Directory server used as Kerberos Key Distribution Center. Only requried for volumes using kerberized NFSv4.1
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#kdc_hostname NetappActiveDirectory#kdc_hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#kdc_hostname NetappActiveDirectory#kdc_hostname}
   */
   readonly kdcHostname?: string;
   /**
   * IP address of the Active Directory server used as Kerberos Key Distribution Center.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#kdc_ip NetappActiveDirectory#kdc_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#kdc_ip NetappActiveDirectory#kdc_ip}
   */
   readonly kdcIp?: string;
   /**
@@ -74,25 +74,25 @@ export interface NetappActiveDirectoryConfig extends cdktf.TerraformMetaArgument
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#labels NetappActiveDirectory#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#labels NetappActiveDirectory#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Specifies whether or not the LDAP traffic needs to be signed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#ldap_signing NetappActiveDirectory#ldap_signing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#ldap_signing NetappActiveDirectory#ldap_signing}
   */
   readonly ldapSigning?: boolean | cdktf.IResolvable;
   /**
   * Name of the region for the policy to apply to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#location NetappActiveDirectory#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#location NetappActiveDirectory#location}
   */
   readonly location: string;
   /**
   * The resource name of the Active Directory pool. Needs to be unique per location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#name NetappActiveDirectory#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#name NetappActiveDirectory#name}
   */
   readonly name: string;
   /**
@@ -100,70 +100,70 @@ export interface NetappActiveDirectoryConfig extends cdktf.TerraformMetaArgument
   * A five-character random ID is generated automatically, for example, -6f9a, and appended to the prefix. The full UNC share path will have the following format:
   * '\\NetBIOS_PREFIX-ABCD.DOMAIN_NAME\SHARE_NAME'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#net_bios_prefix NetappActiveDirectory#net_bios_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#net_bios_prefix NetappActiveDirectory#net_bios_prefix}
   */
   readonly netBiosPrefix: string;
   /**
   * Local UNIX users on clients without valid user information in Active Directory are blocked from access to LDAP enabled volumes.
   * This option can be used to temporarily switch such volumes to AUTH_SYS authentication (user ID + 1-16 groups).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#nfs_users_with_ldap NetappActiveDirectory#nfs_users_with_ldap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#nfs_users_with_ldap NetappActiveDirectory#nfs_users_with_ldap}
   */
   readonly nfsUsersWithLdap?: boolean | cdktf.IResolvable;
   /**
   * Name of the Organizational Unit where you intend to create the computer account for NetApp Volumes.
   * Defaults to 'CN=Computers' if left empty.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#organizational_unit NetappActiveDirectory#organizational_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#organizational_unit NetappActiveDirectory#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
   * Password for specified username. Note - Manual changes done to the password will not be detected. Terraform will not re-apply the password, unless you use a new password in Terraform.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#password NetappActiveDirectory#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#password NetappActiveDirectory#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#project NetappActiveDirectory#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#project NetappActiveDirectory#project}
   */
   readonly project?: string;
   /**
   * Domain accounts that require elevated privileges such as 'SeSecurityPrivilege' to manage security logs. Comma-separated list.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#security_operators NetappActiveDirectory#security_operators}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#security_operators NetappActiveDirectory#security_operators}
   */
   readonly securityOperators?: string[];
   /**
   * Specifies an Active Directory site to manage domain controller selection.
   * Use when Active Directory domain controllers in multiple regions are configured. Defaults to 'Default-First-Site-Name' if left empty.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#site NetappActiveDirectory#site}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#site NetappActiveDirectory#site}
   */
   readonly site?: string;
   /**
   * Username for the Active Directory account with permissions to create the compute account within the specified organizational unit.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#username NetappActiveDirectory#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#username NetappActiveDirectory#username}
   */
   readonly username: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#timeouts NetappActiveDirectory#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#timeouts NetappActiveDirectory#timeouts}
   */
   readonly timeouts?: NetappActiveDirectoryTimeouts;
 }
 export interface NetappActiveDirectoryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#create NetappActiveDirectory#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#create NetappActiveDirectory#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#delete NetappActiveDirectory#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#delete NetappActiveDirectory#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#update NetappActiveDirectory#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#update NetappActiveDirectory#update}
   */
   readonly update?: string;
 }
@@ -315,7 +315,7 @@ export class NetappActiveDirectoryTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory google_netapp_active_directory}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory google_netapp_active_directory}
 */
 export class NetappActiveDirectory extends cdktf.TerraformResource {
 
@@ -331,7 +331,7 @@ export class NetappActiveDirectory extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappActiveDirectory resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappActiveDirectory to import
-  * @param importFromId The id of the existing NetappActiveDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappActiveDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappActiveDirectory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -343,7 +343,7 @@ export class NetappActiveDirectory extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/netapp_active_directory google_netapp_active_directory} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/netapp_active_directory google_netapp_active_directory} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -354,7 +354,7 @@ export class NetappActiveDirectory extends cdktf.TerraformResource {
       terraformResourceType: 'google_netapp_active_directory',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.29.1',
+        providerVersion: '5.30.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

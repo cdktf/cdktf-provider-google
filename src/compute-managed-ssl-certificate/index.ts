@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate
+// https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface ComputeManagedSslCertificateConfig extends cdktf.TerraformMetaA
   /**
   * The unique identifier for the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#certificate_id ComputeManagedSslCertificate#certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#certificate_id ComputeManagedSslCertificate#certificate_id}
   */
   readonly certificateId?: number;
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#description ComputeManagedSslCertificate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#description ComputeManagedSslCertificate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -43,30 +43,30 @@ export interface ComputeManagedSslCertificateConfig extends cdktf.TerraformMetaA
   * 
   * These are in the same namespace as the managed SSL certificates.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#name ComputeManagedSslCertificate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#name ComputeManagedSslCertificate#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}
   */
   readonly project?: string;
   /**
   * Enum field whose value is always 'MANAGED' - used to signal to the API
   * which type this is. Default value: "MANAGED" Possible values: ["MANAGED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#type ComputeManagedSslCertificate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#type ComputeManagedSslCertificate#type}
   */
   readonly type?: string;
   /**
   * managed block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#managed ComputeManagedSslCertificate#managed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#managed ComputeManagedSslCertificate#managed}
   */
   readonly managed?: ComputeManagedSslCertificateManaged;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#timeouts ComputeManagedSslCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#timeouts ComputeManagedSslCertificate#timeouts}
   */
   readonly timeouts?: ComputeManagedSslCertificateTimeouts;
 }
@@ -75,7 +75,7 @@ export interface ComputeManagedSslCertificateManaged {
   * Domains for which a managed SSL certificate will be valid.  Currently,
   * there can be up to 100 domains in this list.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#domains ComputeManagedSslCertificate#domains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#domains ComputeManagedSslCertificate#domains}
   */
   readonly domains: string[];
 }
@@ -156,11 +156,11 @@ export class ComputeManagedSslCertificateManagedOutputReference extends cdktf.Co
 }
 export interface ComputeManagedSslCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}
   */
   readonly delete?: string;
 }
@@ -283,7 +283,7 @@ export class ComputeManagedSslCertificateTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate google_compute_managed_ssl_certificate}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate google_compute_managed_ssl_certificate}
 */
 export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
 
@@ -299,7 +299,7 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeManagedSslCertificate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeManagedSslCertificate to import
-  * @param importFromId The id of the existing ComputeManagedSslCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeManagedSslCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeManagedSslCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -311,7 +311,7 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_managed_ssl_certificate google_compute_managed_ssl_certificate} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_managed_ssl_certificate google_compute_managed_ssl_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -322,7 +322,7 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_managed_ssl_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.29.1',
+        providerVersion: '5.30.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

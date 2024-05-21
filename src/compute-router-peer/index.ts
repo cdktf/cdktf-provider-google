@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer
+// https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,7 +16,7 @@ export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   * User-specified flag to indicate which mode to use for advertisement.
   * Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#advertise_mode ComputeRouterPeer#advertise_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#advertise_mode ComputeRouterPeer#advertise_mode}
   */
   readonly advertiseMode?: string;
   /**
@@ -33,7 +33,7 @@ export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   * These groups are advertised in addition to any specified prefixes.
   * Leave this field blank to advertise no custom groups.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#advertised_groups ComputeRouterPeer#advertised_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#advertised_groups ComputeRouterPeer#advertised_groups}
   */
   readonly advertisedGroups?: string[];
   /**
@@ -41,7 +41,7 @@ export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   * Where there is more than one matching route of maximum
   * length, the routes with the lowest priority value win.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#advertised_route_priority ComputeRouterPeer#advertised_route_priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#advertised_route_priority ComputeRouterPeer#advertised_route_priority}
   */
   readonly advertisedRoutePriority?: number;
   /**
@@ -50,17 +50,23 @@ export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   * If set to true, the peer connection can be established with routing information.
   * The default is true.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#enable ComputeRouterPeer#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#enable ComputeRouterPeer#enable}
   */
   readonly enable?: boolean | cdktf.IResolvable;
   /**
+  * Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#enable_ipv4 ComputeRouterPeer#enable_ipv4}
+  */
+  readonly enableIpv4?: boolean | cdktf.IResolvable;
+  /**
   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#enable_ipv6 ComputeRouterPeer#enable_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#enable_ipv6 ComputeRouterPeer#enable_ipv6}
   */
   readonly enableIpv6?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#id ComputeRouterPeer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -69,23 +75,29 @@ export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Name of the interface the BGP peer is associated with.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#interface ComputeRouterPeer#interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#interface ComputeRouterPeer#interface}
   */
   readonly interface: string;
   /**
   * IP address of the interface inside Google Cloud Platform.
   * Only IPv4 is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#ip_address ComputeRouterPeer#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#ip_address ComputeRouterPeer#ip_address}
   */
   readonly ipAddress?: string;
+  /**
+  * IPv4 address of the interface inside Google Cloud Platform.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#ipv4_nexthop_address ComputeRouterPeer#ipv4_nexthop_address}
+  */
+  readonly ipv4NexthopAddress?: string;
   /**
   * IPv6 address of the interface inside Google Cloud Platform.
   * The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
   * If you do not specify the next hop addresses, Google Cloud automatically
   * assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#ipv6_nexthop_address ComputeRouterPeer#ipv6_nexthop_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#ipv6_nexthop_address ComputeRouterPeer#ipv6_nexthop_address}
   */
   readonly ipv6NexthopAddress?: string;
   /**
@@ -96,47 +108,53 @@ export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   * following characters must be a dash, lowercase letter, or digit,
   * except the last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
   */
   readonly name: string;
   /**
   * Peer BGP Autonomous System Number (ASN).
   * Each BGP interface may use a different value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#peer_asn ComputeRouterPeer#peer_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#peer_asn ComputeRouterPeer#peer_asn}
   */
   readonly peerAsn: number;
   /**
   * IP address of the BGP interface outside Google Cloud Platform.
   * Only IPv4 is supported. Required if 'ip_address' is set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#peer_ip_address ComputeRouterPeer#peer_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#peer_ip_address ComputeRouterPeer#peer_ip_address}
   */
   readonly peerIpAddress?: string;
+  /**
+  * IPv4 address of the BGP interface outside Google Cloud Platform.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#peer_ipv4_nexthop_address ComputeRouterPeer#peer_ipv4_nexthop_address}
+  */
+  readonly peerIpv4NexthopAddress?: string;
   /**
   * IPv6 address of the BGP interface outside Google Cloud Platform.
   * The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
   * If you do not specify the next hop addresses, Google Cloud automatically
   * assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#peer_ipv6_nexthop_address ComputeRouterPeer#peer_ipv6_nexthop_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#peer_ipv6_nexthop_address ComputeRouterPeer#peer_ipv6_nexthop_address}
   */
   readonly peerIpv6NexthopAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#project ComputeRouterPeer#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}
   */
   readonly project?: string;
   /**
   * Region where the router and BgpPeer reside.
   * If it is not provided, the provider region is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#region ComputeRouterPeer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#region ComputeRouterPeer#region}
   */
   readonly region?: string;
   /**
   * The name of the Cloud Router in which this BgpPeer will be configured.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#router ComputeRouterPeer#router}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#router ComputeRouterPeer#router}
   */
   readonly router: string;
   /**
@@ -145,31 +163,31 @@ export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   * The VM instance must be located in zones contained in the same region as
   * this Cloud Router. The VM instance is the peer side of the BGP session.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#router_appliance_instance ComputeRouterPeer#router_appliance_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#router_appliance_instance ComputeRouterPeer#router_appliance_instance}
   */
   readonly routerApplianceInstance?: string;
   /**
   * advertised_ip_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
   */
   readonly advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable;
   /**
   * bfd block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#bfd ComputeRouterPeer#bfd}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#bfd ComputeRouterPeer#bfd}
   */
   readonly bfd?: ComputeRouterPeerBfd;
   /**
   * md5_authentication_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#md5_authentication_key ComputeRouterPeer#md5_authentication_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#md5_authentication_key ComputeRouterPeer#md5_authentication_key}
   */
   readonly md5AuthenticationKey?: ComputeRouterPeerMd5AuthenticationKey;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#timeouts ComputeRouterPeer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#timeouts ComputeRouterPeer#timeouts}
   */
   readonly timeouts?: ComputeRouterPeerTimeouts;
 }
@@ -177,14 +195,14 @@ export interface ComputeRouterPeerAdvertisedIpRanges {
   /**
   * User-specified description for the IP range.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#description ComputeRouterPeer#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#description ComputeRouterPeer#description}
   */
   readonly description?: string;
   /**
   * The IP range to advertise. The value must be a
   * CIDR-formatted string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#range ComputeRouterPeer#range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#range ComputeRouterPeer#range}
   */
   readonly range: string;
 }
@@ -332,7 +350,7 @@ export interface ComputeRouterPeerBfd {
   * and the transmit interval of the other router. If set, this value
   * must be between 1000 and 30000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#min_receive_interval ComputeRouterPeer#min_receive_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#min_receive_interval ComputeRouterPeer#min_receive_interval}
   */
   readonly minReceiveInterval?: number;
   /**
@@ -342,7 +360,7 @@ export interface ComputeRouterPeerBfd {
   * and the corresponding receive interval of the other router. If set,
   * this value must be between 1000 and 30000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#min_transmit_interval ComputeRouterPeer#min_transmit_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#min_transmit_interval ComputeRouterPeer#min_transmit_interval}
   */
   readonly minTransmitInterval?: number;
   /**
@@ -350,7 +368,7 @@ export interface ComputeRouterPeerBfd {
   * BFD declares that a peer is unavailable. If set, the value must
   * be a value between 5 and 16.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#multiplier ComputeRouterPeer#multiplier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#multiplier ComputeRouterPeer#multiplier}
   */
   readonly multiplier?: number;
   /**
@@ -360,7 +378,7 @@ export interface ComputeRouterPeerBfd {
   * for the peer router to initiate the BFD session for this BGP peer.
   * If set to 'DISABLED', BFD is disabled for this BGP peer. Possible values: ["ACTIVE", "DISABLED", "PASSIVE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#session_initialization_mode ComputeRouterPeer#session_initialization_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#session_initialization_mode ComputeRouterPeer#session_initialization_mode}
   */
   readonly sessionInitializationMode: string;
 }
@@ -530,14 +548,14 @@ export interface ComputeRouterPeerMd5AuthenticationKey {
   /**
   * Value of the key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#key ComputeRouterPeer#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#key ComputeRouterPeer#key}
   */
   readonly key: string;
   /**
   * [REQUIRED] Name used to identify the key.
   * Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
   */
   readonly name: string;
 }
@@ -644,15 +662,15 @@ export class ComputeRouterPeerMd5AuthenticationKeyOutputReference extends cdktf.
 }
 export interface ComputeRouterPeerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#create ComputeRouterPeer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#create ComputeRouterPeer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#delete ComputeRouterPeer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#delete ComputeRouterPeer#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#update ComputeRouterPeer#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#update ComputeRouterPeer#update}
   */
   readonly update?: string;
 }
@@ -804,7 +822,7 @@ export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer google_compute_router_peer}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer google_compute_router_peer}
 */
 export class ComputeRouterPeer extends cdktf.TerraformResource {
 
@@ -820,7 +838,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRouterPeer resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRouterPeer to import
-  * @param importFromId The id of the existing ComputeRouterPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRouterPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRouterPeer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -832,7 +850,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/compute_router_peer google_compute_router_peer} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_router_peer google_compute_router_peer} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -843,7 +861,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_peer',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.29.1',
+        providerVersion: '5.30.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -858,14 +876,17 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     this._advertisedGroups = config.advertisedGroups;
     this._advertisedRoutePriority = config.advertisedRoutePriority;
     this._enable = config.enable;
+    this._enableIpv4 = config.enableIpv4;
     this._enableIpv6 = config.enableIpv6;
     this._id = config.id;
     this._interface = config.interface;
     this._ipAddress = config.ipAddress;
+    this._ipv4NexthopAddress = config.ipv4NexthopAddress;
     this._ipv6NexthopAddress = config.ipv6NexthopAddress;
     this._name = config.name;
     this._peerAsn = config.peerAsn;
     this._peerIpAddress = config.peerIpAddress;
+    this._peerIpv4NexthopAddress = config.peerIpv4NexthopAddress;
     this._peerIpv6NexthopAddress = config.peerIpv6NexthopAddress;
     this._project = config.project;
     this._region = config.region;
@@ -945,6 +966,22 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     return this._enable;
   }
 
+  // enable_ipv4 - computed: true, optional: true, required: false
+  private _enableIpv4?: boolean | cdktf.IResolvable; 
+  public get enableIpv4() {
+    return this.getBooleanAttribute('enable_ipv4');
+  }
+  public set enableIpv4(value: boolean | cdktf.IResolvable) {
+    this._enableIpv4 = value;
+  }
+  public resetEnableIpv4() {
+    this._enableIpv4 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableIpv4Input() {
+    return this._enableIpv4;
+  }
+
   // enable_ipv6 - computed: false, optional: true, required: false
   private _enableIpv6?: boolean | cdktf.IResolvable; 
   public get enableIpv6() {
@@ -1004,6 +1041,22 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ipAddressInput() {
     return this._ipAddress;
+  }
+
+  // ipv4_nexthop_address - computed: true, optional: true, required: false
+  private _ipv4NexthopAddress?: string; 
+  public get ipv4NexthopAddress() {
+    return this.getStringAttribute('ipv4_nexthop_address');
+  }
+  public set ipv4NexthopAddress(value: string) {
+    this._ipv4NexthopAddress = value;
+  }
+  public resetIpv4NexthopAddress() {
+    this._ipv4NexthopAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv4NexthopAddressInput() {
+    return this._ipv4NexthopAddress;
   }
 
   // ipv6_nexthop_address - computed: true, optional: true, required: false
@@ -1067,6 +1120,22 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get peerIpAddressInput() {
     return this._peerIpAddress;
+  }
+
+  // peer_ipv4_nexthop_address - computed: true, optional: true, required: false
+  private _peerIpv4NexthopAddress?: string; 
+  public get peerIpv4NexthopAddress() {
+    return this.getStringAttribute('peer_ipv4_nexthop_address');
+  }
+  public set peerIpv4NexthopAddress(value: string) {
+    this._peerIpv4NexthopAddress = value;
+  }
+  public resetPeerIpv4NexthopAddress() {
+    this._peerIpv4NexthopAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerIpv4NexthopAddressInput() {
+    return this._peerIpv4NexthopAddress;
   }
 
   // peer_ipv6_nexthop_address - computed: true, optional: true, required: false
@@ -1220,14 +1289,17 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       advertised_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(this._advertisedGroups),
       advertised_route_priority: cdktf.numberToTerraform(this._advertisedRoutePriority),
       enable: cdktf.booleanToTerraform(this._enable),
+      enable_ipv4: cdktf.booleanToTerraform(this._enableIpv4),
       enable_ipv6: cdktf.booleanToTerraform(this._enableIpv6),
       id: cdktf.stringToTerraform(this._id),
       interface: cdktf.stringToTerraform(this._interface),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
+      ipv4_nexthop_address: cdktf.stringToTerraform(this._ipv4NexthopAddress),
       ipv6_nexthop_address: cdktf.stringToTerraform(this._ipv6NexthopAddress),
       name: cdktf.stringToTerraform(this._name),
       peer_asn: cdktf.numberToTerraform(this._peerAsn),
       peer_ip_address: cdktf.stringToTerraform(this._peerIpAddress),
+      peer_ipv4_nexthop_address: cdktf.stringToTerraform(this._peerIpv4NexthopAddress),
       peer_ipv6_nexthop_address: cdktf.stringToTerraform(this._peerIpv6NexthopAddress),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
@@ -1266,6 +1338,12 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "boolean",
       },
+      enable_ipv4: {
+        value: cdktf.booleanToHclTerraform(this._enableIpv4),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
       enable_ipv6: {
         value: cdktf.booleanToHclTerraform(this._enableIpv6),
         isBlock: false,
@@ -1290,6 +1368,12 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      ipv4_nexthop_address: {
+        value: cdktf.stringToHclTerraform(this._ipv4NexthopAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       ipv6_nexthop_address: {
         value: cdktf.stringToHclTerraform(this._ipv6NexthopAddress),
         isBlock: false,
@@ -1310,6 +1394,12 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       },
       peer_ip_address: {
         value: cdktf.stringToHclTerraform(this._peerIpAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_ipv4_nexthop_address: {
+        value: cdktf.stringToHclTerraform(this._peerIpv4NexthopAddress),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
