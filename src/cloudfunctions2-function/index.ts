@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function
+// https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface Cloudfunctions2FunctionConfig extends cdktf.TerraformMetaArgume
   /**
   * User-provided description of a function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#description Cloudfunctions2Function#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#description Cloudfunctions2Function#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#id Cloudfunctions2Function#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#id Cloudfunctions2Function#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,7 +24,7 @@ export interface Cloudfunctions2FunctionConfig extends cdktf.TerraformMetaArgume
   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
   * It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#kms_key_name Cloudfunctions2Function#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#kms_key_name Cloudfunctions2Function#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
@@ -39,50 +34,50 @@ export interface Cloudfunctions2FunctionConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#labels Cloudfunctions2Function#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#labels Cloudfunctions2Function#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of this cloud function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#location Cloudfunctions2Function#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#location Cloudfunctions2Function#location}
   */
   readonly location: string;
   /**
   * A user-defined name of the function. Function names must
   * be unique globally and match pattern 'projects/* /locations/* /functions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#name Cloudfunctions2Function#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#name Cloudfunctions2Function#name}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#project Cloudfunctions2Function#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#project Cloudfunctions2Function#project}
   */
   readonly project?: string;
   /**
   * build_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#build_config Cloudfunctions2Function#build_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#build_config Cloudfunctions2Function#build_config}
   */
   readonly buildConfig?: Cloudfunctions2FunctionBuildConfig;
   /**
   * event_trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#event_trigger Cloudfunctions2Function#event_trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#event_trigger Cloudfunctions2Function#event_trigger}
   */
   readonly eventTrigger?: Cloudfunctions2FunctionEventTrigger;
   /**
   * service_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#service_config Cloudfunctions2Function#service_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#service_config Cloudfunctions2Function#service_config}
   */
   readonly serviceConfig?: Cloudfunctions2FunctionServiceConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#timeouts Cloudfunctions2Function#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#timeouts Cloudfunctions2Function#timeouts}
   */
   readonly timeouts?: Cloudfunctions2FunctionTimeouts;
 }
@@ -90,45 +85,45 @@ export interface Cloudfunctions2FunctionBuildConfigSourceRepoSource {
   /**
   * Regex matching branches to build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#branch_name Cloudfunctions2Function#branch_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#branch_name Cloudfunctions2Function#branch_name}
   */
   readonly branchName?: string;
   /**
   * Regex matching tags to build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#commit_sha Cloudfunctions2Function#commit_sha}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#commit_sha Cloudfunctions2Function#commit_sha}
   */
   readonly commitSha?: string;
   /**
   * Directory, relative to the source root, in which to run the build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#dir Cloudfunctions2Function#dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#dir Cloudfunctions2Function#dir}
   */
   readonly dir?: string;
   /**
   * Only trigger a build if the revision regex does
   * NOT match the revision regex.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#invert_regex Cloudfunctions2Function#invert_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#invert_regex Cloudfunctions2Function#invert_regex}
   */
   readonly invertRegex?: boolean | cdktf.IResolvable;
   /**
   * ID of the project that owns the Cloud Source Repository. If omitted, the
   * project ID requesting the build is assumed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#project_id Cloudfunctions2Function#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#project_id Cloudfunctions2Function#project_id}
   */
   readonly projectId?: string;
   /**
   * Name of the Cloud Source Repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#repo_name Cloudfunctions2Function#repo_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#repo_name Cloudfunctions2Function#repo_name}
   */
   readonly repoName?: string;
   /**
   * Regex matching tags to build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#tag_name Cloudfunctions2Function#tag_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#tag_name Cloudfunctions2Function#tag_name}
   */
   readonly tagName?: string;
 }
@@ -388,20 +383,20 @@ export interface Cloudfunctions2FunctionBuildConfigSourceStorageSource {
   /**
   * Google Cloud Storage bucket containing the source
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#bucket Cloudfunctions2Function#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#bucket Cloudfunctions2Function#bucket}
   */
   readonly bucket?: string;
   /**
   * Google Cloud Storage generation for the object. If the generation
   * is omitted, the latest generation will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#generation Cloudfunctions2Function#generation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#generation Cloudfunctions2Function#generation}
   */
   readonly generation?: number;
   /**
   * Google Cloud Storage object containing the source.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#object Cloudfunctions2Function#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#object Cloudfunctions2Function#object}
   */
   readonly object?: string;
 }
@@ -545,13 +540,13 @@ export interface Cloudfunctions2FunctionBuildConfigSource {
   /**
   * repo_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#repo_source Cloudfunctions2Function#repo_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#repo_source Cloudfunctions2Function#repo_source}
   */
   readonly repoSource?: Cloudfunctions2FunctionBuildConfigSourceRepoSource;
   /**
   * storage_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#storage_source Cloudfunctions2Function#storage_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#storage_source Cloudfunctions2Function#storage_source}
   */
   readonly storageSource?: Cloudfunctions2FunctionBuildConfigSourceStorageSource;
 }
@@ -666,7 +661,7 @@ export interface Cloudfunctions2FunctionBuildConfig {
   /**
   * User managed repository created in Artifact Registry optionally with a customer managed encryption key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#docker_repository Cloudfunctions2Function#docker_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#docker_repository Cloudfunctions2Function#docker_repository}
   */
   readonly dockerRepository?: string;
   /**
@@ -676,38 +671,38 @@ export interface Cloudfunctions2FunctionBuildConfig {
   * will try to use function named "function". For Node.js this is name of a
   * function exported by the module specified in source_location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#entry_point Cloudfunctions2Function#entry_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#entry_point Cloudfunctions2Function#entry_point}
   */
   readonly entryPoint?: string;
   /**
   * User-provided build-time environment variables for the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#environment_variables Cloudfunctions2Function#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#environment_variables Cloudfunctions2Function#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
   * The runtime in which to run the function. Required when deploying a new
   * function, optional when updating an existing function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#runtime Cloudfunctions2Function#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#runtime Cloudfunctions2Function#runtime}
   */
   readonly runtime?: string;
   /**
   * The fully-qualified name of the service account to be used for building the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#service_account Cloudfunctions2Function#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#service_account Cloudfunctions2Function#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * Name of the Cloud Build Custom Worker Pool that should be used to build the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#worker_pool Cloudfunctions2Function#worker_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#worker_pool Cloudfunctions2Function#worker_pool}
   */
   readonly workerPool?: string;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#source Cloudfunctions2Function#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#source Cloudfunctions2Function#source}
   */
   readonly source?: Cloudfunctions2FunctionBuildConfigSource;
 }
@@ -974,7 +969,7 @@ export interface Cloudfunctions2FunctionEventTriggerEventFilters {
   * Currently, only a subset of attributes are supported for filtering. Use the 'gcloud eventarc providers describe' command to learn more about events and their attributes.
   * Do not filter for the 'type' attribute here, as this is already achieved by the resource's 'event_type' attribute.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#attribute Cloudfunctions2Function#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#attribute Cloudfunctions2Function#attribute}
   */
   readonly attribute: string;
   /**
@@ -984,14 +979,14 @@ export interface Cloudfunctions2FunctionEventTriggerEventFilters {
   * The only allowed value is 'match-path-pattern'.
   * [See documentation on path patterns here](https://cloud.google.com/eventarc/docs/path-patterns)'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#operator Cloudfunctions2Function#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#operator Cloudfunctions2Function#operator}
   */
   readonly operator?: string;
   /**
   * Required. The value for the attribute.
   * If the operator field is set as 'match-path-pattern', this value can be a path pattern instead of an exact value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#value Cloudfunctions2Function#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#value Cloudfunctions2Function#value}
   */
   readonly value: string;
 }
@@ -1161,21 +1156,21 @@ export interface Cloudfunctions2FunctionEventTrigger {
   /**
   * Required. The type of event to observe.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#event_type Cloudfunctions2Function#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#event_type Cloudfunctions2Function#event_type}
   */
   readonly eventType?: string;
   /**
   * The name of a Pub/Sub topic in the same project that will be used
   * as the transport topic for the event delivery.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#pubsub_topic Cloudfunctions2Function#pubsub_topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#pubsub_topic Cloudfunctions2Function#pubsub_topic}
   */
   readonly pubsubTopic?: string;
   /**
   * Describes the retry policy in case of function's execution failure.
   * Retried execution is charged as any other execution. Possible values: ["RETRY_POLICY_UNSPECIFIED", "RETRY_POLICY_DO_NOT_RETRY", "RETRY_POLICY_RETRY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#retry_policy Cloudfunctions2Function#retry_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#retry_policy Cloudfunctions2Function#retry_policy}
   */
   readonly retryPolicy?: string;
   /**
@@ -1183,7 +1178,7 @@ export interface Cloudfunctions2FunctionEventTrigger {
   * must have permission to invoke Cloud Run services. If empty, defaults to the
   * Compute Engine default service account: {project_number}-compute@developer.gserviceaccount.com.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#service_account_email Cloudfunctions2Function#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#service_account_email Cloudfunctions2Function#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
@@ -1192,13 +1187,13 @@ export interface Cloudfunctions2FunctionEventTrigger {
   * region as the function, a different region or multi-region, or the global
   * region. If not provided, defaults to the same region as the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#trigger_region Cloudfunctions2Function#trigger_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#trigger_region Cloudfunctions2Function#trigger_region}
   */
   readonly triggerRegion?: string;
   /**
   * event_filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#event_filters Cloudfunctions2Function#event_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#event_filters Cloudfunctions2Function#event_filters}
   */
   readonly eventFilters?: Cloudfunctions2FunctionEventTriggerEventFilters[] | cdktf.IResolvable;
 }
@@ -1434,25 +1429,25 @@ export interface Cloudfunctions2FunctionServiceConfigSecretEnvironmentVariables 
   /**
   * Name of the environment variable.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#key Cloudfunctions2Function#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#key Cloudfunctions2Function#key}
   */
   readonly key: string;
   /**
   * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#project_id Cloudfunctions2Function#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#project_id Cloudfunctions2Function#project_id}
   */
   readonly projectId: string;
   /**
   * Name of the secret in secret manager (not the full resource name).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#secret Cloudfunctions2Function#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#secret Cloudfunctions2Function#secret}
   */
   readonly secret: string;
   /**
   * Version of the secret (version number or the string 'latest'). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new instances start.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#version Cloudfunctions2Function#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#version Cloudfunctions2Function#version}
   */
   readonly version: string;
 }
@@ -1645,13 +1640,13 @@ export interface Cloudfunctions2FunctionServiceConfigSecretVolumesVersions {
   /**
   * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mountPath as '/etc/secrets' and path as secret_foo would mount the secret value file at /etc/secrets/secret_foo.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#path Cloudfunctions2Function#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#path Cloudfunctions2Function#path}
   */
   readonly path: string;
   /**
   * Version of the secret (version number or the string 'latest'). It is preferable to use latest version with secret volumes as secret value changes are reflected immediately.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#version Cloudfunctions2Function#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#version Cloudfunctions2Function#version}
   */
   readonly version: string;
 }
@@ -1792,25 +1787,25 @@ export interface Cloudfunctions2FunctionServiceConfigSecretVolumes {
   /**
   * The path within the container to mount the secret volume. For example, setting the mountPath as /etc/secrets would mount the secret value files under the /etc/secrets directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount path: /etc/secrets
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#mount_path Cloudfunctions2Function#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#mount_path Cloudfunctions2Function#mount_path}
   */
   readonly mountPath: string;
   /**
   * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#project_id Cloudfunctions2Function#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#project_id Cloudfunctions2Function#project_id}
   */
   readonly projectId: string;
   /**
   * Name of the secret in secret manager (not the full resource name).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#secret Cloudfunctions2Function#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#secret Cloudfunctions2Function#secret}
   */
   readonly secret: string;
   /**
   * versions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#versions Cloudfunctions2Function#versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#versions Cloudfunctions2Function#versions}
   */
   readonly versions?: Cloudfunctions2FunctionServiceConfigSecretVolumesVersions[] | cdktf.IResolvable;
 }
@@ -2006,13 +2001,13 @@ export interface Cloudfunctions2FunctionServiceConfig {
   /**
   * Whether 100% of traffic is routed to the latest revision. Defaults to true.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#all_traffic_on_latest_revision Cloudfunctions2Function#all_traffic_on_latest_revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#all_traffic_on_latest_revision Cloudfunctions2Function#all_traffic_on_latest_revision}
   */
   readonly allTrafficOnLatestRevision?: boolean | cdktf.IResolvable;
   /**
   * The number of CPUs used in a single container instance. Default value is calculated from available memory.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#available_cpu Cloudfunctions2Function#available_cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#available_cpu Cloudfunctions2Function#available_cpu}
   */
   readonly availableCpu?: string;
   /**
@@ -2020,51 +2015,51 @@ export interface Cloudfunctions2FunctionServiceConfig {
   * Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is
   * supplied the value is interpreted as bytes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#available_memory Cloudfunctions2Function#available_memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#available_memory Cloudfunctions2Function#available_memory}
   */
   readonly availableMemory?: string;
   /**
   * Environment variables that shall be available during function execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#environment_variables Cloudfunctions2Function#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#environment_variables Cloudfunctions2Function#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
   * Available ingress settings. Defaults to "ALLOW_ALL" if unspecified. Default value: "ALLOW_ALL" Possible values: ["ALLOW_ALL", "ALLOW_INTERNAL_ONLY", "ALLOW_INTERNAL_AND_GCLB"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#ingress_settings Cloudfunctions2Function#ingress_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#ingress_settings Cloudfunctions2Function#ingress_settings}
   */
   readonly ingressSettings?: string;
   /**
   * The limit on the maximum number of function instances that may coexist at a
   * given time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#max_instance_count Cloudfunctions2Function#max_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#max_instance_count Cloudfunctions2Function#max_instance_count}
   */
   readonly maxInstanceCount?: number;
   /**
   * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#max_instance_request_concurrency Cloudfunctions2Function#max_instance_request_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#max_instance_request_concurrency Cloudfunctions2Function#max_instance_request_concurrency}
   */
   readonly maxInstanceRequestConcurrency?: number;
   /**
   * The limit on the minimum number of function instances that may coexist at a
   * given time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#min_instance_count Cloudfunctions2Function#min_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#min_instance_count Cloudfunctions2Function#min_instance_count}
   */
   readonly minInstanceCount?: number;
   /**
   * Name of the service associated with a Function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#service Cloudfunctions2Function#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#service Cloudfunctions2Function#service}
   */
   readonly service?: string;
   /**
   * The email of the service account for this function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#service_account_email Cloudfunctions2Function#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#service_account_email Cloudfunctions2Function#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
@@ -2072,31 +2067,31 @@ export interface Cloudfunctions2FunctionServiceConfig {
   * can be terminated if the function is not completed at the end of the
   * timeout period. Defaults to 60 seconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#timeout_seconds Cloudfunctions2Function#timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#timeout_seconds Cloudfunctions2Function#timeout_seconds}
   */
   readonly timeoutSeconds?: number;
   /**
   * The Serverless VPC Access connector that this cloud function can connect to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#vpc_connector Cloudfunctions2Function#vpc_connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#vpc_connector Cloudfunctions2Function#vpc_connector}
   */
   readonly vpcConnector?: string;
   /**
   * Available egress settings. Possible values: ["VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED", "PRIVATE_RANGES_ONLY", "ALL_TRAFFIC"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#vpc_connector_egress_settings Cloudfunctions2Function#vpc_connector_egress_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#vpc_connector_egress_settings Cloudfunctions2Function#vpc_connector_egress_settings}
   */
   readonly vpcConnectorEgressSettings?: string;
   /**
   * secret_environment_variables block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#secret_environment_variables Cloudfunctions2Function#secret_environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#secret_environment_variables Cloudfunctions2Function#secret_environment_variables}
   */
   readonly secretEnvironmentVariables?: Cloudfunctions2FunctionServiceConfigSecretEnvironmentVariables[] | cdktf.IResolvable;
   /**
   * secret_volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#secret_volumes Cloudfunctions2Function#secret_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#secret_volumes Cloudfunctions2Function#secret_volumes}
   */
   readonly secretVolumes?: Cloudfunctions2FunctionServiceConfigSecretVolumes[] | cdktf.IResolvable;
 }
@@ -2596,15 +2591,15 @@ export class Cloudfunctions2FunctionServiceConfigOutputReference extends cdktf.C
 }
 export interface Cloudfunctions2FunctionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#create Cloudfunctions2Function#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#create Cloudfunctions2Function#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#delete Cloudfunctions2Function#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#delete Cloudfunctions2Function#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#update Cloudfunctions2Function#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#update Cloudfunctions2Function#update}
   */
   readonly update?: string;
 }
@@ -2756,7 +2751,7 @@ export class Cloudfunctions2FunctionTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function google_cloudfunctions2_function}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function google_cloudfunctions2_function}
 */
 export class Cloudfunctions2Function extends cdktf.TerraformResource {
 
@@ -2772,7 +2767,7 @@ export class Cloudfunctions2Function extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Cloudfunctions2Function resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Cloudfunctions2Function to import
-  * @param importFromId The id of the existing Cloudfunctions2Function that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Cloudfunctions2Function that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Cloudfunctions2Function to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2784,7 +2779,7 @@ export class Cloudfunctions2Function extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.29.1/docs/resources/cloudfunctions2_function google_cloudfunctions2_function} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/cloudfunctions2_function google_cloudfunctions2_function} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2795,7 +2790,7 @@ export class Cloudfunctions2Function extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions2_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.29.1',
+        providerVersion: '5.30.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
