@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstance(scope Construct, id *string, config AlloydbInstanceConfig) AlloydbInstance
 ```
@@ -547,7 +547,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.alloydbInstance.AlloydbInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.AlloydbInstance_IsConstruct(x interface{}) *bool
 ```
@@ -579,7 +579,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.alloydbInstance.AlloydbInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.AlloydbInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -593,7 +593,7 @@ alloydbinstance.AlloydbInstance_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.alloydbInstance.AlloydbInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.AlloydbInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -607,7 +607,7 @@ alloydbinstance.AlloydbInstance_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.alloydbInstance.AlloydbInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.AlloydbInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1309,11 +1309,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceClientConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceClientConnectionConfig {
 	RequireConnectors: interface{},
-	SslConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.alloydbInstance.AlloydbInstanceClientConnectionConfigSslConfig,
+	SslConfig: github.com/cdktf/cdktf-provider-google-go/google.alloydbInstance.AlloydbInstanceClientConnectionConfigSslConfig,
 }
 ```
 
@@ -1359,7 +1359,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceClientConnectionConfigSslConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceClientConnectionConfigSslConfig {
 	SslMode: *string,
@@ -1393,7 +1393,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceConfig {
 	Connection: interface{},
@@ -1408,17 +1408,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
 	InstanceType: *string,
 	Annotations: *map[string]*string,
 	AvailabilityType: *string,
-	ClientConnectionConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.alloydbInstance.AlloydbInstanceClientConnectionConfig,
+	ClientConnectionConfig: github.com/cdktf/cdktf-provider-google-go/google.alloydbInstance.AlloydbInstanceClientConnectionConfig,
 	DatabaseFlags: *map[string]*string,
 	DisplayName: *string,
 	GceZone: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	MachineConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.alloydbInstance.AlloydbInstanceMachineConfig,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.alloydbInstance.AlloydbInstanceNetworkConfig,
-	QueryInsightsConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.alloydbInstance.AlloydbInstanceQueryInsightsConfig,
-	ReadPoolConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.alloydbInstance.AlloydbInstanceReadPoolConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.alloydbInstance.AlloydbInstanceTimeouts,
+	MachineConfig: github.com/cdktf/cdktf-provider-google-go/google.alloydbInstance.AlloydbInstanceMachineConfig,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google.alloydbInstance.AlloydbInstanceNetworkConfig,
+	QueryInsightsConfig: github.com/cdktf/cdktf-provider-google-go/google.alloydbInstance.AlloydbInstanceQueryInsightsConfig,
+	ReadPoolConfig: github.com/cdktf/cdktf-provider-google-go/google.alloydbInstance.AlloydbInstanceReadPoolConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.alloydbInstance.AlloydbInstanceTimeouts,
 }
 ```
 
@@ -1774,7 +1774,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceMachineConfig {
 	CpuCount: *f64,
@@ -1808,7 +1808,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceNetworkConfig {
 	AuthorizedExternalNetworks: interface{},
@@ -1862,7 +1862,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceNetworkConfigAuthorizedExternalNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceNetworkConfigAuthorizedExternalNetworks {
 	CidrRange: *string,
@@ -1896,7 +1896,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceQueryInsightsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceQueryInsightsConfig {
 	QueryPlansPerMinute: *f64,
@@ -1980,7 +1980,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceReadPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceReadPoolConfig {
 	NodeCount: *f64,
@@ -2014,7 +2014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 &alloydbinstance.AlloydbInstanceTimeouts {
 	Create: *string,
@@ -2076,7 +2076,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceClientConnectionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceClientConnectionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbInstanceClientConnectionConfigOutputReference
 ```
@@ -2396,7 +2396,7 @@ func InternalValue() AlloydbInstanceClientConnectionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceClientConnectionConfigSslConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceClientConnectionConfigSslConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbInstanceClientConnectionConfigSslConfigOutputReference
 ```
@@ -2674,7 +2674,7 @@ func InternalValue() AlloydbInstanceClientConnectionConfigSslConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceMachineConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceMachineConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbInstanceMachineConfigOutputReference
 ```
@@ -2952,7 +2952,7 @@ func InternalValue() AlloydbInstanceMachineConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceNetworkConfigAuthorizedExternalNetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceNetworkConfigAuthorizedExternalNetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AlloydbInstanceNetworkConfigAuthorizedExternalNetworksList
 ```
@@ -3112,7 +3112,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceNetworkConfigAuthorizedExternalNetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceNetworkConfigAuthorizedExternalNetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AlloydbInstanceNetworkConfigAuthorizedExternalNetworksOutputReference
 ```
@@ -3408,7 +3408,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbInstanceNetworkConfigOutputReference
 ```
@@ -3728,7 +3728,7 @@ func InternalValue() AlloydbInstanceNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceQueryInsightsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceQueryInsightsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbInstanceQueryInsightsConfigOutputReference
 ```
@@ -4093,7 +4093,7 @@ func InternalValue() AlloydbInstanceQueryInsightsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceReadPoolConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceReadPoolConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbInstanceReadPoolConfigOutputReference
 ```
@@ -4371,7 +4371,7 @@ func InternalValue() AlloydbInstanceReadPoolConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbInstance.AlloydbInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/alloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbinstance"
 
 alloydbinstance.NewAlloydbInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbInstanceTimeoutsOutputReference
 ```
