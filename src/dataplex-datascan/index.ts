@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan
+// https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +15,23 @@ export interface DataplexDatascanConfig extends cdktf.TerraformMetaArguments {
   /**
   * DataScan identifier. Must contain only lowercase letters, numbers and hyphens. Must start with a letter. Must end with a number or a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#data_scan_id DataplexDatascan#data_scan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#data_scan_id DataplexDatascan#data_scan_id}
   */
   readonly dataScanId: string;
   /**
   * Description of the scan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#description DataplexDatascan#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#description DataplexDatascan#description}
   */
   readonly description?: string;
   /**
   * User friendly display name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#display_name DataplexDatascan#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#display_name DataplexDatascan#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#id DataplexDatascan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#id DataplexDatascan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -44,47 +44,47 @@ export interface DataplexDatascanConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#labels DataplexDatascan#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#labels DataplexDatascan#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location where the data scan should reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#location DataplexDatascan#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#location DataplexDatascan#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#project DataplexDatascan#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#project DataplexDatascan#project}
   */
   readonly project?: string;
   /**
   * data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#data DataplexDatascan#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#data DataplexDatascan#data}
   */
   readonly data: DataplexDatascanData;
   /**
   * data_profile_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#data_profile_spec DataplexDatascan#data_profile_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#data_profile_spec DataplexDatascan#data_profile_spec}
   */
   readonly dataProfileSpec?: DataplexDatascanDataProfileSpec;
   /**
   * data_quality_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#data_quality_spec DataplexDatascan#data_quality_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#data_quality_spec DataplexDatascan#data_quality_spec}
   */
   readonly dataQualitySpec?: DataplexDatascanDataQualitySpec;
   /**
   * execution_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#execution_spec DataplexDatascan#execution_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#execution_spec DataplexDatascan#execution_spec}
   */
   readonly executionSpec: DataplexDatascanExecutionSpec;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#timeouts DataplexDatascan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#timeouts DataplexDatascan#timeouts}
   */
   readonly timeouts?: DataplexDatascanTimeouts;
 }
@@ -172,14 +172,14 @@ export interface DataplexDatascanData {
   /**
   * The Dataplex entity that represents the data source(e.g. BigQuery table) for Datascan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#entity DataplexDatascan#entity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#entity DataplexDatascan#entity}
   */
   readonly entity?: string;
   /**
   * The service-qualified full resource name of the cloud resource for a DataScan job to scan against. The field could be:
   * (Cloud Storage bucket for DataDiscoveryScan)BigQuery table of type "TABLE" for DataProfileScan/DataQualityScan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#resource DataplexDatascan#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#resource DataplexDatascan#resource}
   */
   readonly resource?: string;
 }
@@ -296,7 +296,7 @@ export interface DataplexDatascanDataProfileSpecExcludeFields {
   * Only top-level field names for nested fields are supported.
   * For instance, if 'x' is of nested field type, listing 'x' is supported but 'x.y.z' is not supported. Here 'y' and 'y.z' are nested fields of 'x'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#field_names DataplexDatascan#field_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#field_names DataplexDatascan#field_names}
   */
   readonly fieldNames?: string[];
 }
@@ -384,7 +384,7 @@ export interface DataplexDatascanDataProfileSpecIncludeFields {
   * Only top-level field names for nested fields are supported.
   * For instance, if 'x' is of nested field type, listing 'x' is supported but 'x.y.z' is not supported. Here 'y' and 'y.z' are nested fields of 'x'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#field_names DataplexDatascan#field_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#field_names DataplexDatascan#field_names}
   */
   readonly fieldNames?: string[];
 }
@@ -471,7 +471,7 @@ export interface DataplexDatascanDataProfileSpecPostScanActionsBigqueryExport {
   * The BigQuery table to export DataProfileScan results to.
   * Format://bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#results_table DataplexDatascan#results_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#results_table DataplexDatascan#results_table}
   */
   readonly resultsTable?: string;
 }
@@ -557,7 +557,7 @@ export interface DataplexDatascanDataProfileSpecPostScanActions {
   /**
   * bigquery_export block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#bigquery_export DataplexDatascan#bigquery_export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#bigquery_export DataplexDatascan#bigquery_export}
   */
   readonly bigqueryExport?: DataplexDatascanDataProfileSpecPostScanActionsBigqueryExport;
 }
@@ -643,7 +643,7 @@ export interface DataplexDatascanDataProfileSpec {
   /**
   * A filter applied to all rows in a single DataScan job. The filter needs to be a valid SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2 < 10
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#row_filter DataplexDatascan#row_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#row_filter DataplexDatascan#row_filter}
   */
   readonly rowFilter?: string;
   /**
@@ -651,25 +651,25 @@ export interface DataplexDatascanDataProfileSpec {
   * Value can range between 0.0 and 100.0 with up to 3 significant decimal digits.
   * Sampling is not applied if 'sampling_percent' is not specified, 0 or 100.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#sampling_percent DataplexDatascan#sampling_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#sampling_percent DataplexDatascan#sampling_percent}
   */
   readonly samplingPercent?: number;
   /**
   * exclude_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#exclude_fields DataplexDatascan#exclude_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#exclude_fields DataplexDatascan#exclude_fields}
   */
   readonly excludeFields?: DataplexDatascanDataProfileSpecExcludeFields;
   /**
   * include_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#include_fields DataplexDatascan#include_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#include_fields DataplexDatascan#include_fields}
   */
   readonly includeFields?: DataplexDatascanDataProfileSpecIncludeFields;
   /**
   * post_scan_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#post_scan_actions DataplexDatascan#post_scan_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#post_scan_actions DataplexDatascan#post_scan_actions}
   */
   readonly postScanActions?: DataplexDatascanDataProfileSpecPostScanActions;
 }
@@ -872,7 +872,7 @@ export interface DataplexDatascanDataQualitySpecPostScanActionsBigqueryExport {
   * The BigQuery table to export DataQualityScan results to.
   * Format://bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#results_table DataplexDatascan#results_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#results_table DataplexDatascan#results_table}
   */
   readonly resultsTable?: string;
 }
@@ -958,7 +958,7 @@ export interface DataplexDatascanDataQualitySpecPostScanActions {
   /**
   * bigquery_export block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#bigquery_export DataplexDatascan#bigquery_export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#bigquery_export DataplexDatascan#bigquery_export}
   */
   readonly bigqueryExport?: DataplexDatascanDataQualitySpecPostScanActionsBigqueryExport;
 }
@@ -1093,27 +1093,27 @@ export interface DataplexDatascanDataQualitySpecRulesRangeExpectation {
   /**
   * The maximum column value allowed for a row to pass this validation. At least one of minValue and maxValue need to be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#max_value DataplexDatascan#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#max_value DataplexDatascan#max_value}
   */
   readonly maxValue?: string;
   /**
   * The minimum column value allowed for a row to pass this validation. At least one of minValue and maxValue need to be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#min_value DataplexDatascan#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#min_value DataplexDatascan#min_value}
   */
   readonly minValue?: string;
   /**
   * Whether each value needs to be strictly lesser than ('<') the maximum, or if equality is allowed.
   * Only relevant if a maxValue has been defined. Default = false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#strict_max_enabled DataplexDatascan#strict_max_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#strict_max_enabled DataplexDatascan#strict_max_enabled}
   */
   readonly strictMaxEnabled?: boolean | cdktf.IResolvable;
   /**
   * Whether each value needs to be strictly greater than ('>') the minimum, or if equality is allowed.
   * Only relevant if a minValue has been defined. Default = false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#strict_min_enabled DataplexDatascan#strict_min_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#strict_min_enabled DataplexDatascan#strict_min_enabled}
   */
   readonly strictMinEnabled?: boolean | cdktf.IResolvable;
 }
@@ -1286,7 +1286,7 @@ export interface DataplexDatascanDataQualitySpecRulesRegexExpectation {
   /**
   * A regular expression the column value is expected to match.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#regex DataplexDatascan#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#regex DataplexDatascan#regex}
   */
   readonly regex: string;
 }
@@ -1369,7 +1369,7 @@ export interface DataplexDatascanDataQualitySpecRulesRowConditionExpectation {
   /**
   * The SQL expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#sql_expression DataplexDatascan#sql_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#sql_expression DataplexDatascan#sql_expression}
   */
   readonly sqlExpression: string;
 }
@@ -1452,7 +1452,7 @@ export interface DataplexDatascanDataQualitySpecRulesSetExpectation {
   /**
   * Expected values for the column value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#values DataplexDatascan#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#values DataplexDatascan#values}
   */
   readonly values: string[];
 }
@@ -1536,34 +1536,34 @@ export interface DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation {
   * The maximum column statistic value allowed for a row to pass this validation.
   * At least one of minValue and maxValue need to be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#max_value DataplexDatascan#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#max_value DataplexDatascan#max_value}
   */
   readonly maxValue?: string;
   /**
   * The minimum column statistic value allowed for a row to pass this validation.
   * At least one of minValue and maxValue need to be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#min_value DataplexDatascan#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#min_value DataplexDatascan#min_value}
   */
   readonly minValue?: string;
   /**
   * column statistics. Possible values: ["STATISTIC_UNDEFINED", "MEAN", "MIN", "MAX"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#statistic DataplexDatascan#statistic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#statistic DataplexDatascan#statistic}
   */
   readonly statistic: string;
   /**
   * Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is allowed.
   * Only relevant if a maxValue has been defined. Default = false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#strict_max_enabled DataplexDatascan#strict_max_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#strict_max_enabled DataplexDatascan#strict_max_enabled}
   */
   readonly strictMaxEnabled?: boolean | cdktf.IResolvable;
   /**
   * Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is allowed.
   * Only relevant if a minValue has been defined. Default = false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#strict_min_enabled DataplexDatascan#strict_min_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#strict_min_enabled DataplexDatascan#strict_min_enabled}
   */
   readonly strictMinEnabled?: boolean | cdktf.IResolvable;
 }
@@ -1762,7 +1762,7 @@ export interface DataplexDatascanDataQualitySpecRulesTableConditionExpectation {
   /**
   * The SQL expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#sql_expression DataplexDatascan#sql_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#sql_expression DataplexDatascan#sql_expression}
   */
   readonly sqlExpression: string;
 }
@@ -1894,26 +1894,26 @@ export interface DataplexDatascanDataQualitySpecRules {
   /**
   * The unnested column which this rule is evaluated against.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#column DataplexDatascan#column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#column DataplexDatascan#column}
   */
   readonly column?: string;
   /**
   * Description of the rule.
   * The maximum length is 1,024 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#description DataplexDatascan#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#description DataplexDatascan#description}
   */
   readonly description?: string;
   /**
   * The dimension a rule belongs to. Results are also aggregated at the dimension level. Supported dimensions are ["COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#dimension DataplexDatascan#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#dimension DataplexDatascan#dimension}
   */
   readonly dimension: string;
   /**
   * Rows with null values will automatically fail a rule, unless ignoreNull is true. In that case, such null rows are trivially considered passing. Only applicable to ColumnMap rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#ignore_null DataplexDatascan#ignore_null}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#ignore_null DataplexDatascan#ignore_null}
   */
   readonly ignoreNull?: boolean | cdktf.IResolvable;
   /**
@@ -1923,61 +1923,61 @@ export interface DataplexDatascanDataQualitySpecRules {
   * Must start with a letter.
   * Must end with a number or a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#name DataplexDatascan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#name DataplexDatascan#name}
   */
   readonly name?: string;
   /**
   * The minimum ratio of passing_rows / total_rows required to pass this rule, with a range of [0.0, 1.0]. 0 indicates default value (i.e. 1.0).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#threshold DataplexDatascan#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#threshold DataplexDatascan#threshold}
   */
   readonly threshold?: number;
   /**
   * non_null_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#non_null_expectation DataplexDatascan#non_null_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#non_null_expectation DataplexDatascan#non_null_expectation}
   */
   readonly nonNullExpectation?: DataplexDatascanDataQualitySpecRulesNonNullExpectation;
   /**
   * range_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#range_expectation DataplexDatascan#range_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#range_expectation DataplexDatascan#range_expectation}
   */
   readonly rangeExpectation?: DataplexDatascanDataQualitySpecRulesRangeExpectation;
   /**
   * regex_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#regex_expectation DataplexDatascan#regex_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#regex_expectation DataplexDatascan#regex_expectation}
   */
   readonly regexExpectation?: DataplexDatascanDataQualitySpecRulesRegexExpectation;
   /**
   * row_condition_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#row_condition_expectation DataplexDatascan#row_condition_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#row_condition_expectation DataplexDatascan#row_condition_expectation}
   */
   readonly rowConditionExpectation?: DataplexDatascanDataQualitySpecRulesRowConditionExpectation;
   /**
   * set_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#set_expectation DataplexDatascan#set_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#set_expectation DataplexDatascan#set_expectation}
   */
   readonly setExpectation?: DataplexDatascanDataQualitySpecRulesSetExpectation;
   /**
   * statistic_range_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#statistic_range_expectation DataplexDatascan#statistic_range_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#statistic_range_expectation DataplexDatascan#statistic_range_expectation}
   */
   readonly statisticRangeExpectation?: DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation;
   /**
   * table_condition_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#table_condition_expectation DataplexDatascan#table_condition_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#table_condition_expectation DataplexDatascan#table_condition_expectation}
   */
   readonly tableConditionExpectation?: DataplexDatascanDataQualitySpecRulesTableConditionExpectation;
   /**
   * uniqueness_expectation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#uniqueness_expectation DataplexDatascan#uniqueness_expectation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#uniqueness_expectation DataplexDatascan#uniqueness_expectation}
   */
   readonly uniquenessExpectation?: DataplexDatascanDataQualitySpecRulesUniquenessExpectation;
 }
@@ -2469,7 +2469,7 @@ export interface DataplexDatascanDataQualitySpec {
   /**
   * A filter applied to all rows in a single DataScan job. The filter needs to be a valid SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2 < 10
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#row_filter DataplexDatascan#row_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#row_filter DataplexDatascan#row_filter}
   */
   readonly rowFilter?: string;
   /**
@@ -2477,19 +2477,19 @@ export interface DataplexDatascanDataQualitySpec {
   * Value can range between 0.0 and 100.0 with up to 3 significant decimal digits.
   * Sampling is not applied if 'sampling_percent' is not specified, 0 or 100.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#sampling_percent DataplexDatascan#sampling_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#sampling_percent DataplexDatascan#sampling_percent}
   */
   readonly samplingPercent?: number;
   /**
   * post_scan_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#post_scan_actions DataplexDatascan#post_scan_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#post_scan_actions DataplexDatascan#post_scan_actions}
   */
   readonly postScanActions?: DataplexDatascanDataQualitySpecPostScanActions;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#rules DataplexDatascan#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#rules DataplexDatascan#rules}
   */
   readonly rules?: DataplexDatascanDataQualitySpecRules[] | cdktf.IResolvable;
 }
@@ -2711,7 +2711,7 @@ export interface DataplexDatascanExecutionSpecTriggerSchedule {
   /**
   * Cron schedule for running scans periodically. This field is required for Schedule scans.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#cron DataplexDatascan#cron}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#cron DataplexDatascan#cron}
   */
   readonly cron: string;
 }
@@ -2794,13 +2794,13 @@ export interface DataplexDatascanExecutionSpecTrigger {
   /**
   * on_demand block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#on_demand DataplexDatascan#on_demand}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#on_demand DataplexDatascan#on_demand}
   */
   readonly onDemand?: DataplexDatascanExecutionSpecTriggerOnDemand;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#schedule DataplexDatascan#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#schedule DataplexDatascan#schedule}
   */
   readonly schedule?: DataplexDatascanExecutionSpecTriggerSchedule;
 }
@@ -2915,13 +2915,13 @@ export interface DataplexDatascanExecutionSpec {
   /**
   * The unnested field (of type Date or Timestamp) that contains values which monotonically increase over time. If not specified, a data scan will run for all data in the table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#field DataplexDatascan#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#field DataplexDatascan#field}
   */
   readonly field?: string;
   /**
   * trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#trigger DataplexDatascan#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#trigger DataplexDatascan#trigger}
   */
   readonly trigger: DataplexDatascanExecutionSpecTrigger;
 }
@@ -3031,15 +3031,15 @@ export class DataplexDatascanExecutionSpecOutputReference extends cdktf.ComplexO
 }
 export interface DataplexDatascanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#create DataplexDatascan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#create DataplexDatascan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#delete DataplexDatascan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#delete DataplexDatascan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#update DataplexDatascan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#update DataplexDatascan#update}
   */
   readonly update?: string;
 }
@@ -3191,7 +3191,7 @@ export class DataplexDatascanTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan google_dataplex_datascan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan google_dataplex_datascan}
 */
 export class DataplexDatascan extends cdktf.TerraformResource {
 
@@ -3207,7 +3207,7 @@ export class DataplexDatascan extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataplexDatascan resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataplexDatascan to import
-  * @param importFromId The id of the existing DataplexDatascan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataplexDatascan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataplexDatascan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -3219,7 +3219,7 @@ export class DataplexDatascan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/dataplex_datascan google_dataplex_datascan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dataplex_datascan google_dataplex_datascan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3230,7 +3230,7 @@ export class DataplexDatascan extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_datascan',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.30.0',
+        providerVersion: '5.31.1',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

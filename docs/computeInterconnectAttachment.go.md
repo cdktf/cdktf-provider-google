@@ -4,7 +4,7 @@
 
 ### ComputeInterconnectAttachment <a name="ComputeInterconnectAttachment" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment google_compute_interconnect_attachment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment google_compute_interconnect_attachment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer"></a>
 
@@ -87,6 +87,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetProject">ResetProject</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetRegion">ResetRegion</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetStackType">ResetStackType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetSubnetLength">ResetSubnetLength</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetType">ResetType</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetVlanTag8021Q">ResetVlanTag8021Q</a></code> | *No description.* |
@@ -471,6 +472,12 @@ func ResetRegion()
 func ResetStackType()
 ```
 
+##### `ResetSubnetLength` <a name="ResetSubnetLength" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetSubnetLength"></a>
+
+```go
+func ResetSubnetLength()
+```
+
 ##### `ResetTimeouts` <a name="ResetTimeouts" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.resetTimeouts"></a>
 
 ```go
@@ -592,7 +599,7 @@ The construct id used in the generated config for the ComputeInterconnectAttachm
 
 The id of the existing ComputeInterconnectAttachment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -649,6 +656,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.regionInput">RegionInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.routerInput">RouterInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.stackTypeInput">StackTypeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.subnetLengthInput">SubnetLengthInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.typeInput">TypeInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.vlanTag8021QInput">VlanTag8021QInput</a></code> | <code>*f64</code> | *No description.* |
@@ -667,6 +675,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.region">Region</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.router">Router</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.stackType">StackType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.subnetLength">SubnetLength</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.type">Type</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.vlanTag8021Q">VlanTag8021Q</a></code> | <code>*f64</code> | *No description.* |
 
@@ -1084,6 +1093,16 @@ func StackTypeInput() *string
 
 ---
 
+##### `SubnetLengthInput`<sup>Optional</sup> <a name="SubnetLengthInput" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.subnetLengthInput"></a>
+
+```go
+func SubnetLengthInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.timeoutsInput"></a>
 
 ```go
@@ -1264,6 +1283,16 @@ func StackType() *string
 
 ---
 
+##### `SubnetLength`<sup>Required</sup> <a name="SubnetLength" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.subnetLength"></a>
+
+```go
+func SubnetLength() *f64
+```
+
+- *Type:* *f64
+
+---
+
 ##### `Type`<sup>Required</sup> <a name="Type" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.property.type"></a>
 
 ```go
@@ -1334,6 +1363,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinterconnect
 	Project: *string,
 	Region: *string,
 	StackType: *string,
+	SubnetLength: *f64,
 	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeInterconnectAttachment.ComputeInterconnectAttachmentTimeouts,
 	Type: *string,
 	VlanTag8021Q: *f64,
@@ -1358,14 +1388,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinterconnect
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.candidateSubnets">CandidateSubnets</a></code> | <code>*[]*string</code> | Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress and customerRouterIpAddress for this attachment. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.edgeAvailabilityDomain">EdgeAvailabilityDomain</a></code> | <code>*string</code> | Desired availability domain for the attachment. |
-| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.encryption">Encryption</a></code> | <code>*string</code> | Indicates the user-supplied encryption option of this interconnect attachment. Can only be specified at attachment creation for PARTNER or DEDICATED attachments. |
-| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#id ComputeInterconnectAttachment#id}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.encryption">Encryption</a></code> | <code>*string</code> | Indicates the user-supplied encryption option of this interconnect attachment. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#id ComputeInterconnectAttachment#id}. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.interconnect">Interconnect</a></code> | <code>*string</code> | URL of the underlying Interconnect object that this attachment's traffic will traverse through. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.ipsecInternalAddresses">IpsecInternalAddresses</a></code> | <code>*[]*string</code> | URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has the encryption option as IPSEC. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.mtu">Mtu</a></code> | <code>*string</code> | Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. |
-| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#project ComputeInterconnectAttachment#project}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#project ComputeInterconnectAttachment#project}. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.region">Region</a></code> | <code>*string</code> | Region where the regional interconnect attachment resides. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.stackType">StackType</a></code> | <code>*string</code> | The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled or not. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.subnetLength">SubnetLength</a></code> | <code>*f64</code> | Length of the IPv4 subnet mask. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentTimeouts">ComputeInterconnectAttachmentTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.type">Type</a></code> | <code>*string</code> | The type of InterconnectAttachment you wish to create. Defaults to DEDICATED. Possible values: ["DEDICATED", "PARTNER", "PARTNER_PROVIDER"]. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.vlanTag8021Q">VlanTag8021Q</a></code> | <code>*f64</code> | The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When using PARTNER type this will be managed upstream. |
@@ -1459,7 +1490,7 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#name ComputeInterconnectAttachment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#name ComputeInterconnectAttachment#name}
 
 ---
 
@@ -1478,7 +1509,7 @@ the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#router ComputeInterconnectAttachment#router}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#router ComputeInterconnectAttachment#router}
 
 ---
 
@@ -1492,7 +1523,7 @@ AdminEnabled interface{}
 
 Whether the VLAN attachment is enabled or disabled.  When using PARTNER type this will Pre-Activate the interconnect attachment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#admin_enabled ComputeInterconnectAttachment#admin_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#admin_enabled ComputeInterconnectAttachment#admin_enabled}
 
 ---
 
@@ -1511,7 +1542,7 @@ For attachments of type PARTNER, the Google Partner that is operating the interc
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G Possible values: ["BPS_50M", "BPS_100M", "BPS_200M", "BPS_300M", "BPS_400M", "BPS_500M", "BPS_1G", "BPS_2G", "BPS_5G", "BPS_10G", "BPS_20G", "BPS_50G"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#bandwidth ComputeInterconnectAttachment#bandwidth}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#bandwidth ComputeInterconnectAttachment#bandwidth}
 
 ---
 
@@ -1531,7 +1562,7 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#candidate_subnets ComputeInterconnectAttachment#candidate_subnets}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#candidate_subnets ComputeInterconnectAttachment#candidate_subnets}
 
 ---
 
@@ -1545,7 +1576,7 @@ Description *string
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#description ComputeInterconnectAttachment#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#description ComputeInterconnectAttachment#description}
 
 ---
 
@@ -1566,7 +1597,7 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#edge_availability_domain ComputeInterconnectAttachment#edge_availability_domain}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#edge_availability_domain ComputeInterconnectAttachment#edge_availability_domain}
 
 ---
 
@@ -1578,7 +1609,10 @@ Encryption *string
 
 - *Type:* *string
 
-Indicates the user-supplied encryption option of this interconnect attachment. Can only be specified at attachment creation for PARTNER or DEDICATED attachments.
+Indicates the user-supplied encryption option of this interconnect attachment.
+
+Can only be specified at attachment creation for PARTNER or
+DEDICATED attachments.
 
 * NONE - This is the default value, which means that the VLAN attachment
   carries unencrypted traffic. VMs are able to send traffic to, or receive
@@ -1589,7 +1623,7 @@ Indicates the user-supplied encryption option of this interconnect attachment. C
   such a VLAN attachment. To use HA VPN over Cloud Interconnect, the VLAN
   attachment must be created with this option. Default value: "NONE" Possible values: ["NONE", "IPSEC"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#encryption ComputeInterconnectAttachment#encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#encryption ComputeInterconnectAttachment#encryption}
 
 ---
 
@@ -1601,7 +1635,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#id ComputeInterconnectAttachment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#id ComputeInterconnectAttachment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1621,7 +1655,7 @@ URL of the underlying Interconnect object that this attachment's traffic will tr
 Required if type is DEDICATED, must not
 be set if type is PARTNER.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#interconnect ComputeInterconnectAttachment#interconnect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#interconnect ComputeInterconnectAttachment#interconnect}
 
 ---
 
@@ -1639,18 +1673,16 @@ The addresses must be RFC 1918 IP address ranges. When creating HA VPN
 gateway over the interconnect attachment, if the attachment is configured
 to use an RFC 1918 IP address, then the VPN gateway's IP address will be
 allocated from the IP address range specified here.
-
 For example, if the HA VPN gateway's interface 0 is paired to this
 interconnect attachment, then an RFC 1918 IP address for the VPN gateway
 interface 0 will be allocated from the IP address specified for this
 interconnect attachment.
-
 If this field is not specified for interconnect attachment that has
 encryption option as IPSEC, later on when creating HA VPN gateway on this
 interconnect attachment, the HA VPN gateway's IP address will be
 allocated from regional external IP address pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#ipsec_internal_addresses ComputeInterconnectAttachment#ipsec_internal_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#ipsec_internal_addresses ComputeInterconnectAttachment#ipsec_internal_addresses}
 
 ---
 
@@ -1666,7 +1698,7 @@ Maximum Transmission Unit (MTU), in bytes, of packets passing through this inter
 
 Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#mtu ComputeInterconnectAttachment#mtu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#mtu ComputeInterconnectAttachment#mtu}
 
 ---
 
@@ -1678,7 +1710,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#project ComputeInterconnectAttachment#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#project ComputeInterconnectAttachment#project}.
 
 ---
 
@@ -1692,7 +1724,7 @@ Region *string
 
 Region where the regional interconnect attachment resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#region ComputeInterconnectAttachment#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#region ComputeInterconnectAttachment#region}
 
 ---
 
@@ -1707,11 +1739,31 @@ StackType *string
 The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled or not.
 
 If not specified, IPV4_ONLY will be used.
-
 This field can be both set at interconnect attachments creation and update
 interconnect attachment operations. Possible values: ["IPV4_IPV6", "IPV4_ONLY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#stack_type ComputeInterconnectAttachment#stack_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#stack_type ComputeInterconnectAttachment#stack_type}
+
+---
+
+##### `SubnetLength`<sup>Optional</sup> <a name="SubnetLength" id="@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.subnetLength"></a>
+
+```go
+SubnetLength *f64
+```
+
+- *Type:* *f64
+
+Length of the IPv4 subnet mask.
+
+Allowed values: 29 (default), 30. The default value is 29,
+except for Cross-Cloud Interconnect connections that use an InterconnectRemoteLocation with a
+constraints.subnetLengthRange.min equal to 30. For example, connections that use an Azure
+remote location fall into this category. In these cases, the default value is 30, and
+requesting 29 returns an error. Where both 29 and 30 are allowed, 29 is preferred, because it
+gives Google Cloud Support more debugging visibility.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#subnet_length ComputeInterconnectAttachment#subnet_length}
 
 ---
 
@@ -1725,7 +1777,7 @@ Timeouts ComputeInterconnectAttachmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#timeouts ComputeInterconnectAttachment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#timeouts ComputeInterconnectAttachment#timeouts}
 
 ---
 
@@ -1739,7 +1791,7 @@ Type *string
 
 The type of InterconnectAttachment you wish to create. Defaults to DEDICATED. Possible values: ["DEDICATED", "PARTNER", "PARTNER_PROVIDER"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#type ComputeInterconnectAttachment#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#type ComputeInterconnectAttachment#type}
 
 ---
 
@@ -1753,7 +1805,7 @@ VlanTag8021Q *f64
 
 The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When using PARTNER type this will be managed upstream.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#vlan_tag8021q ComputeInterconnectAttachment#vlan_tag8021q}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#vlan_tag8021q ComputeInterconnectAttachment#vlan_tag8021q}
 
 ---
 
@@ -1788,9 +1840,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeinterconnect
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#create ComputeInterconnectAttachment#create}. |
-| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#delete ComputeInterconnectAttachment#delete}. |
-| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#update ComputeInterconnectAttachment#update}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#create ComputeInterconnectAttachment#create}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#delete ComputeInterconnectAttachment#delete}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#update ComputeInterconnectAttachment#update}. |
 
 ---
 
@@ -1802,7 +1854,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#create ComputeInterconnectAttachment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#create ComputeInterconnectAttachment#create}.
 
 ---
 
@@ -1814,7 +1866,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#delete ComputeInterconnectAttachment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#delete ComputeInterconnectAttachment#delete}.
 
 ---
 
@@ -1826,7 +1878,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/compute_interconnect_attachment#update ComputeInterconnectAttachment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/compute_interconnect_attachment#update ComputeInterconnectAttachment#update}.
 
 ---
 

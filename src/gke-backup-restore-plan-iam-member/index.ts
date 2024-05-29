@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface GkeBackupRestorePlanIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#id GkeBackupRestorePlanIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#id GkeBackupRestorePlanIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#location GkeBackupRestorePlanIamMember#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#location GkeBackupRestorePlanIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#member GkeBackupRestorePlanIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#member GkeBackupRestorePlanIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#name GkeBackupRestorePlanIamMember#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#name GkeBackupRestorePlanIamMember#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#project GkeBackupRestorePlanIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#project GkeBackupRestorePlanIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#role GkeBackupRestorePlanIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#role GkeBackupRestorePlanIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#condition GkeBackupRestorePlanIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#condition GkeBackupRestorePlanIamMember#condition}
   */
   readonly condition?: GkeBackupRestorePlanIamMemberCondition;
 }
 export interface GkeBackupRestorePlanIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#description GkeBackupRestorePlanIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#description GkeBackupRestorePlanIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#expression GkeBackupRestorePlanIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#expression GkeBackupRestorePlanIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#title GkeBackupRestorePlanIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#title GkeBackupRestorePlanIamMember#title}
   */
   readonly title: string;
 }
@@ -192,7 +192,7 @@ export class GkeBackupRestorePlanIamMemberConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member google_gke_backup_restore_plan_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member google_gke_backup_restore_plan_iam_member}
 */
 export class GkeBackupRestorePlanIamMember extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class GkeBackupRestorePlanIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a GkeBackupRestorePlanIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the GkeBackupRestorePlanIamMember to import
-  * @param importFromId The id of the existing GkeBackupRestorePlanIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing GkeBackupRestorePlanIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the GkeBackupRestorePlanIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +220,7 @@ export class GkeBackupRestorePlanIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/gke_backup_restore_plan_iam_member google_gke_backup_restore_plan_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/gke_backup_restore_plan_iam_member google_gke_backup_restore_plan_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +231,7 @@ export class GkeBackupRestorePlanIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_backup_restore_plan_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.30.0',
+        providerVersion: '5.31.1',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
