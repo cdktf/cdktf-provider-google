@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table
+// https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,41 +10,41 @@ export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   /**
   * Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#clustering BigqueryTable#clustering}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#clustering BigqueryTable#clustering}
   */
   readonly clustering?: string[];
   /**
   * The dataset ID to create the table in. Changing this forces a new resource to be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#dataset_id BigqueryTable#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#dataset_id BigqueryTable#dataset_id}
   */
   readonly datasetId: string;
   /**
   * Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#deletion_protection BigqueryTable#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#deletion_protection BigqueryTable#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * The field description.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#description BigqueryTable#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#description BigqueryTable#description}
   */
   readonly description?: string;
   /**
   * The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#expiration_time BigqueryTable#expiration_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#expiration_time BigqueryTable#expiration_time}
   */
   readonly expirationTime?: number;
   /**
   * A descriptive name for the table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#friendly_name BigqueryTable#friendly_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#friendly_name BigqueryTable#friendly_name}
   */
   readonly friendlyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#id BigqueryTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#id BigqueryTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -61,85 +56,85 @@ export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   * 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * 				Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#labels BigqueryTable#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#labels BigqueryTable#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of [SQL IntervalValue type](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#interval_type).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#max_staleness BigqueryTable#max_staleness}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#max_staleness BigqueryTable#max_staleness}
   */
   readonly maxStaleness?: string;
   /**
   * The ID of the project in which the resource belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#project BigqueryTable#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#project BigqueryTable#project}
   */
   readonly project?: string;
   /**
   * If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#require_partition_filter BigqueryTable#require_partition_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#require_partition_filter BigqueryTable#require_partition_filter}
   */
   readonly requirePartitionFilter?: boolean | cdktf.IResolvable;
   /**
   * A JSON schema for the table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#schema BigqueryTable#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#schema BigqueryTable#schema}
   */
   readonly schema?: string;
   /**
   * A unique ID for the resource. Changing this forces a new resource to be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#table_id BigqueryTable#table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#table_id BigqueryTable#table_id}
   */
   readonly tableId: string;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#encryption_configuration BigqueryTable#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#encryption_configuration BigqueryTable#encryption_configuration}
   */
   readonly encryptionConfiguration?: BigqueryTableEncryptionConfiguration;
   /**
   * external_data_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#external_data_configuration BigqueryTable#external_data_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#external_data_configuration BigqueryTable#external_data_configuration}
   */
   readonly externalDataConfiguration?: BigqueryTableExternalDataConfiguration;
   /**
   * materialized_view block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#materialized_view BigqueryTable#materialized_view}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#materialized_view BigqueryTable#materialized_view}
   */
   readonly materializedView?: BigqueryTableMaterializedView;
   /**
   * range_partitioning block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#range_partitioning BigqueryTable#range_partitioning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#range_partitioning BigqueryTable#range_partitioning}
   */
   readonly rangePartitioning?: BigqueryTableRangePartitioning;
   /**
   * table_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#table_constraints BigqueryTable#table_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#table_constraints BigqueryTable#table_constraints}
   */
   readonly tableConstraints?: BigqueryTableTableConstraints;
   /**
   * table_replication_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#table_replication_info BigqueryTable#table_replication_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#table_replication_info BigqueryTable#table_replication_info}
   */
   readonly tableReplicationInfo?: BigqueryTableTableReplicationInfo;
   /**
   * time_partitioning block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#time_partitioning BigqueryTable#time_partitioning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#time_partitioning BigqueryTable#time_partitioning}
   */
   readonly timePartitioning?: BigqueryTableTimePartitioning;
   /**
   * view block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#view BigqueryTable#view}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#view BigqueryTable#view}
   */
   readonly view?: BigqueryTableView;
 }
@@ -147,7 +142,7 @@ export interface BigqueryTableEncryptionConfiguration {
   /**
   * The self link or full name of a key which should be used to encrypt this table. Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#kms_key_name BigqueryTable#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#kms_key_name BigqueryTable#kms_key_name}
   */
   readonly kmsKeyName: string;
 }
@@ -235,7 +230,7 @@ export interface BigqueryTableExternalDataConfigurationAvroOptions {
   /**
   * If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#use_avro_logical_types BigqueryTable#use_avro_logical_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#use_avro_logical_types BigqueryTable#use_avro_logical_types}
   */
   readonly useAvroLogicalTypes: boolean | cdktf.IResolvable;
 }
@@ -314,41 +309,783 @@ export class BigqueryTableExternalDataConfigurationAvroOptionsOutputReference ex
     return this._useAvroLogicalTypes;
   }
 }
+export interface BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn {
+  /**
+  * The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column family level. However, the setting at this level takes precedence if 'encoding' is set at both levels.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#encoding BigqueryTable#encoding}
+  */
+  readonly encoding?: string;
+  /**
+  * If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#field_name BigqueryTable#field_name}
+  */
+  readonly fieldName?: string;
+  /**
+  * If this is set, only the latest version of value in this column are exposed. 'onlyReadLatest' can also be set at the column family level. However, the setting at this level takes precedence if 'onlyReadLatest' is set at both levels.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#only_read_latest BigqueryTable#only_read_latest}
+  */
+  readonly onlyReadLatest?: boolean | cdktf.IResolvable;
+  /**
+  * Qualifier of the column. Columns in the parent column family that has this exact qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified in the qualifierString field. Otherwise, a base-64 encoded value must be set to qualifierEncoded. The column field name is the same as the column qualifier. However, if the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as fieldName.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#qualifier_encoded BigqueryTable#qualifier_encoded}
+  */
+  readonly qualifierEncoded?: string;
+  /**
+  * Qualifier string.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#qualifier_string BigqueryTable#qualifier_string}
+  */
+  readonly qualifierString?: string;
+  /**
+  * The type to convert the value in cells of this column. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive): "BYTES", "STRING", "INTEGER", "FLOAT", "BOOLEAN", "JSON", Default type is "BYTES". 'type' can also be set at the column family level. However, the setting at this level takes precedence if 'type' is set at both levels.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#type BigqueryTable#type}
+  */
+  readonly type?: string;
+}
+
+export function bigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnToTerraform(struct?: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    field_name: cdktf.stringToTerraform(struct!.fieldName),
+    only_read_latest: cdktf.booleanToTerraform(struct!.onlyReadLatest),
+    qualifier_encoded: cdktf.stringToTerraform(struct!.qualifierEncoded),
+    qualifier_string: cdktf.stringToTerraform(struct!.qualifierString),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function bigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnToHclTerraform(struct?: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    encoding: {
+      value: cdktf.stringToHclTerraform(struct!.encoding),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    field_name: {
+      value: cdktf.stringToHclTerraform(struct!.fieldName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    only_read_latest: {
+      value: cdktf.booleanToHclTerraform(struct!.onlyReadLatest),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    qualifier_encoded: {
+      value: cdktf.stringToHclTerraform(struct!.qualifierEncoded),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    qualifier_string: {
+      value: cdktf.stringToHclTerraform(struct!.qualifierString),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._encoding !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encoding = this._encoding;
+    }
+    if (this._fieldName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fieldName = this._fieldName;
+    }
+    if (this._onlyReadLatest !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.onlyReadLatest = this._onlyReadLatest;
+    }
+    if (this._qualifierEncoded !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.qualifierEncoded = this._qualifierEncoded;
+    }
+    if (this._qualifierString !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.qualifierString = this._qualifierString;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._encoding = undefined;
+      this._fieldName = undefined;
+      this._onlyReadLatest = undefined;
+      this._qualifierEncoded = undefined;
+      this._qualifierString = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._encoding = value.encoding;
+      this._fieldName = value.fieldName;
+      this._onlyReadLatest = value.onlyReadLatest;
+      this._qualifierEncoded = value.qualifierEncoded;
+      this._qualifierString = value.qualifierString;
+      this._type = value.type;
+    }
+  }
+
+  // encoding - computed: false, optional: true, required: false
+  private _encoding?: string; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string) {
+    this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding;
+  }
+
+  // field_name - computed: false, optional: true, required: false
+  private _fieldName?: string; 
+  public get fieldName() {
+    return this.getStringAttribute('field_name');
+  }
+  public set fieldName(value: string) {
+    this._fieldName = value;
+  }
+  public resetFieldName() {
+    this._fieldName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldNameInput() {
+    return this._fieldName;
+  }
+
+  // only_read_latest - computed: false, optional: true, required: false
+  private _onlyReadLatest?: boolean | cdktf.IResolvable; 
+  public get onlyReadLatest() {
+    return this.getBooleanAttribute('only_read_latest');
+  }
+  public set onlyReadLatest(value: boolean | cdktf.IResolvable) {
+    this._onlyReadLatest = value;
+  }
+  public resetOnlyReadLatest() {
+    this._onlyReadLatest = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onlyReadLatestInput() {
+    return this._onlyReadLatest;
+  }
+
+  // qualifier_encoded - computed: false, optional: true, required: false
+  private _qualifierEncoded?: string; 
+  public get qualifierEncoded() {
+    return this.getStringAttribute('qualifier_encoded');
+  }
+  public set qualifierEncoded(value: string) {
+    this._qualifierEncoded = value;
+  }
+  public resetQualifierEncoded() {
+    this._qualifierEncoded = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qualifierEncodedInput() {
+    return this._qualifierEncoded;
+  }
+
+  // qualifier_string - computed: false, optional: true, required: false
+  private _qualifierString?: string; 
+  public get qualifierString() {
+    return this.getStringAttribute('qualifier_string');
+  }
+  public set qualifierString(value: string) {
+    this._qualifierString = value;
+  }
+  public resetQualifierString() {
+    this._qualifierString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qualifierStringInput() {
+    return this._qualifierString;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList extends cdktf.ComplexList {
+  public internalValue? : BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference {
+    return new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily {
+  /**
+  * The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in 'columns' and specifying an encoding for it.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#encoding BigqueryTable#encoding}
+  */
+  readonly encoding?: string;
+  /**
+  * Identifier of the column family.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#family_id BigqueryTable#family_id}
+  */
+  readonly familyId?: string;
+  /**
+  * If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in 'columns' and specifying a different setting for that column.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#only_read_latest BigqueryTable#only_read_latest}
+  */
+  readonly onlyReadLatest?: boolean | cdktf.IResolvable;
+  /**
+  * The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive): "BYTES", "STRING", "INTEGER", "FLOAT", "BOOLEAN", "JSON". Default type is BYTES. This can be overridden for a specific column by listing that column in 'columns' and specifying a type for it.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#type BigqueryTable#type}
+  */
+  readonly type?: string;
+  /**
+  * column block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#column BigqueryTable#column}
+  */
+  readonly column?: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn[] | cdktf.IResolvable;
+}
+
+export function bigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyToTerraform(struct?: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    family_id: cdktf.stringToTerraform(struct!.familyId),
+    only_read_latest: cdktf.booleanToTerraform(struct!.onlyReadLatest),
+    type: cdktf.stringToTerraform(struct!.type),
+    column: cdktf.listMapper(bigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnToTerraform, true)(struct!.column),
+  }
+}
+
+
+export function bigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyToHclTerraform(struct?: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    encoding: {
+      value: cdktf.stringToHclTerraform(struct!.encoding),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    family_id: {
+      value: cdktf.stringToHclTerraform(struct!.familyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    only_read_latest: {
+      value: cdktf.booleanToHclTerraform(struct!.onlyReadLatest),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    column: {
+      value: cdktf.listMapperHcl(bigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnToHclTerraform, true)(struct!.column),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._encoding !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encoding = this._encoding;
+    }
+    if (this._familyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.familyId = this._familyId;
+    }
+    if (this._onlyReadLatest !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.onlyReadLatest = this._onlyReadLatest;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._column?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._encoding = undefined;
+      this._familyId = undefined;
+      this._onlyReadLatest = undefined;
+      this._type = undefined;
+      this._column.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._encoding = value.encoding;
+      this._familyId = value.familyId;
+      this._onlyReadLatest = value.onlyReadLatest;
+      this._type = value.type;
+      this._column.internalValue = value.column;
+    }
+  }
+
+  // encoding - computed: false, optional: true, required: false
+  private _encoding?: string; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string) {
+    this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding;
+  }
+
+  // family_id - computed: false, optional: true, required: false
+  private _familyId?: string; 
+  public get familyId() {
+    return this.getStringAttribute('family_id');
+  }
+  public set familyId(value: string) {
+    this._familyId = value;
+  }
+  public resetFamilyId() {
+    this._familyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get familyIdInput() {
+    return this._familyId;
+  }
+
+  // only_read_latest - computed: false, optional: true, required: false
+  private _onlyReadLatest?: boolean | cdktf.IResolvable; 
+  public get onlyReadLatest() {
+    return this.getBooleanAttribute('only_read_latest');
+  }
+  public set onlyReadLatest(value: boolean | cdktf.IResolvable) {
+    this._onlyReadLatest = value;
+  }
+  public resetOnlyReadLatest() {
+    this._onlyReadLatest = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onlyReadLatestInput() {
+    return this._onlyReadLatest;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // column - computed: false, optional: true, required: false
+  private _column = new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumnList(this, "column", false);
+  public get column() {
+    return this._column;
+  }
+  public putColumn(value: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyColumn[] | cdktf.IResolvable) {
+    this._column.internalValue = value;
+  }
+  public resetColumn() {
+    this._column.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column.internalValue;
+  }
+}
+
+export class BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList extends cdktf.ComplexList {
+  public internalValue? : BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference {
+    return new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BigqueryTableExternalDataConfigurationBigtableOptions {
+  /**
+  * If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#ignore_unspecified_column_families BigqueryTable#ignore_unspecified_column_families}
+  */
+  readonly ignoreUnspecifiedColumnFamilies?: boolean | cdktf.IResolvable;
+  /**
+  * If field is true, then each column family will be read as a single JSON column. Otherwise they are read as a repeated cell structure containing timestamp/value tuples. The default value is false.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#output_column_families_as_json BigqueryTable#output_column_families_as_json}
+  */
+  readonly outputColumnFamiliesAsJson?: boolean | cdktf.IResolvable;
+  /**
+  * If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#read_rowkey_as_string BigqueryTable#read_rowkey_as_string}
+  */
+  readonly readRowkeyAsString?: boolean | cdktf.IResolvable;
+  /**
+  * column_family block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#column_family BigqueryTable#column_family}
+  */
+  readonly columnFamily?: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily[] | cdktf.IResolvable;
+}
+
+export function bigqueryTableExternalDataConfigurationBigtableOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference | BigqueryTableExternalDataConfigurationBigtableOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ignore_unspecified_column_families: cdktf.booleanToTerraform(struct!.ignoreUnspecifiedColumnFamilies),
+    output_column_families_as_json: cdktf.booleanToTerraform(struct!.outputColumnFamiliesAsJson),
+    read_rowkey_as_string: cdktf.booleanToTerraform(struct!.readRowkeyAsString),
+    column_family: cdktf.listMapper(bigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyToTerraform, true)(struct!.columnFamily),
+  }
+}
+
+
+export function bigqueryTableExternalDataConfigurationBigtableOptionsToHclTerraform(struct?: BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference | BigqueryTableExternalDataConfigurationBigtableOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ignore_unspecified_column_families: {
+      value: cdktf.booleanToHclTerraform(struct!.ignoreUnspecifiedColumnFamilies),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    output_column_families_as_json: {
+      value: cdktf.booleanToHclTerraform(struct!.outputColumnFamiliesAsJson),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    read_rowkey_as_string: {
+      value: cdktf.booleanToHclTerraform(struct!.readRowkeyAsString),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    column_family: {
+      value: cdktf.listMapperHcl(bigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyToHclTerraform, true)(struct!.columnFamily),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryTableExternalDataConfigurationBigtableOptions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ignoreUnspecifiedColumnFamilies !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreUnspecifiedColumnFamilies = this._ignoreUnspecifiedColumnFamilies;
+    }
+    if (this._outputColumnFamiliesAsJson !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outputColumnFamiliesAsJson = this._outputColumnFamiliesAsJson;
+    }
+    if (this._readRowkeyAsString !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readRowkeyAsString = this._readRowkeyAsString;
+    }
+    if (this._columnFamily?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.columnFamily = this._columnFamily?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryTableExternalDataConfigurationBigtableOptions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._ignoreUnspecifiedColumnFamilies = undefined;
+      this._outputColumnFamiliesAsJson = undefined;
+      this._readRowkeyAsString = undefined;
+      this._columnFamily.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._ignoreUnspecifiedColumnFamilies = value.ignoreUnspecifiedColumnFamilies;
+      this._outputColumnFamiliesAsJson = value.outputColumnFamiliesAsJson;
+      this._readRowkeyAsString = value.readRowkeyAsString;
+      this._columnFamily.internalValue = value.columnFamily;
+    }
+  }
+
+  // ignore_unspecified_column_families - computed: false, optional: true, required: false
+  private _ignoreUnspecifiedColumnFamilies?: boolean | cdktf.IResolvable; 
+  public get ignoreUnspecifiedColumnFamilies() {
+    return this.getBooleanAttribute('ignore_unspecified_column_families');
+  }
+  public set ignoreUnspecifiedColumnFamilies(value: boolean | cdktf.IResolvable) {
+    this._ignoreUnspecifiedColumnFamilies = value;
+  }
+  public resetIgnoreUnspecifiedColumnFamilies() {
+    this._ignoreUnspecifiedColumnFamilies = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreUnspecifiedColumnFamiliesInput() {
+    return this._ignoreUnspecifiedColumnFamilies;
+  }
+
+  // output_column_families_as_json - computed: false, optional: true, required: false
+  private _outputColumnFamiliesAsJson?: boolean | cdktf.IResolvable; 
+  public get outputColumnFamiliesAsJson() {
+    return this.getBooleanAttribute('output_column_families_as_json');
+  }
+  public set outputColumnFamiliesAsJson(value: boolean | cdktf.IResolvable) {
+    this._outputColumnFamiliesAsJson = value;
+  }
+  public resetOutputColumnFamiliesAsJson() {
+    this._outputColumnFamiliesAsJson = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputColumnFamiliesAsJsonInput() {
+    return this._outputColumnFamiliesAsJson;
+  }
+
+  // read_rowkey_as_string - computed: false, optional: true, required: false
+  private _readRowkeyAsString?: boolean | cdktf.IResolvable; 
+  public get readRowkeyAsString() {
+    return this.getBooleanAttribute('read_rowkey_as_string');
+  }
+  public set readRowkeyAsString(value: boolean | cdktf.IResolvable) {
+    this._readRowkeyAsString = value;
+  }
+  public resetReadRowkeyAsString() {
+    this._readRowkeyAsString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readRowkeyAsStringInput() {
+    return this._readRowkeyAsString;
+  }
+
+  // column_family - computed: false, optional: true, required: false
+  private _columnFamily = new BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamilyList(this, "column_family", false);
+  public get columnFamily() {
+    return this._columnFamily;
+  }
+  public putColumnFamily(value: BigqueryTableExternalDataConfigurationBigtableOptionsColumnFamily[] | cdktf.IResolvable) {
+    this._columnFamily.internalValue = value;
+  }
+  public resetColumnFamily() {
+    this._columnFamily.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnFamilyInput() {
+    return this._columnFamily.internalValue;
+  }
+}
 export interface BigqueryTableExternalDataConfigurationCsvOptions {
   /**
   * Indicates if BigQuery should accept rows that are missing trailing optional columns.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#allow_jagged_rows BigqueryTable#allow_jagged_rows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#allow_jagged_rows BigqueryTable#allow_jagged_rows}
   */
   readonly allowJaggedRows?: boolean | cdktf.IResolvable;
   /**
   * Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#allow_quoted_newlines BigqueryTable#allow_quoted_newlines}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#allow_quoted_newlines BigqueryTable#allow_quoted_newlines}
   */
   readonly allowQuotedNewlines?: boolean | cdktf.IResolvable;
   /**
   * The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#encoding BigqueryTable#encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#encoding BigqueryTable#encoding}
   */
   readonly encoding?: string;
   /**
   * The separator for fields in a CSV file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#field_delimiter BigqueryTable#field_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#field_delimiter BigqueryTable#field_delimiter}
   */
   readonly fieldDelimiter?: string;
   /**
   * The value that is used to quote data sections in a CSV file. If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allow_quoted_newlines property to true. The API-side default is ", specified in Terraform escaped as \". Due to limitations with Terraform default values, this value is required to be explicitly set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#quote BigqueryTable#quote}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#quote BigqueryTable#quote}
   */
   readonly quote: string;
   /**
   * The number of rows at the top of a CSV file that BigQuery will skip when reading the data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#skip_leading_rows BigqueryTable#skip_leading_rows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#skip_leading_rows BigqueryTable#skip_leading_rows}
   */
   readonly skipLeadingRows?: number;
 }
@@ -574,15 +1311,15 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
 }
 export interface BigqueryTableExternalDataConfigurationGoogleSheetsOptions {
   /**
-  * Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: "sheet_name!top_left_cell_id:bottom_right_cell_id" For example: "sheet1!A1:B20"
+  * Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: "sheet_name!top_left_cell_id:bottom_right_cell_id" For example: "sheet1!A1:B20
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#range BigqueryTable#range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#range BigqueryTable#range}
   */
   readonly range?: string;
   /**
   * The number of rows at the top of the sheet that BigQuery will skip when reading the data. At least one of range or skip_leading_rows must be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#skip_leading_rows BigqueryTable#skip_leading_rows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#skip_leading_rows BigqueryTable#skip_leading_rows}
   */
   readonly skipLeadingRows?: number;
 }
@@ -697,19 +1434,19 @@ export interface BigqueryTableExternalDataConfigurationHivePartitioningOptions {
   /**
   * When set, what mode of hive partitioning to use when reading data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#mode BigqueryTable#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#mode BigqueryTable#mode}
   */
   readonly mode?: string;
   /**
   * If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#require_partition_filter BigqueryTable#require_partition_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#require_partition_filter BigqueryTable#require_partition_filter}
   */
   readonly requirePartitionFilter?: boolean | cdktf.IResolvable;
   /**
   * When hive partition detection is requested, a common for all source uris must be required. The prefix must end immediately before the partition key encoding begins.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#source_uri_prefix BigqueryTable#source_uri_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#source_uri_prefix BigqueryTable#source_uri_prefix}
   */
   readonly sourceUriPrefix?: string;
 }
@@ -853,7 +1590,7 @@ export interface BigqueryTableExternalDataConfigurationJsonOptions {
   /**
   * The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#encoding BigqueryTable#encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#encoding BigqueryTable#encoding}
   */
   readonly encoding?: string;
 }
@@ -939,13 +1676,13 @@ export interface BigqueryTableExternalDataConfigurationParquetOptions {
   /**
   * Indicates whether to use schema inference specifically for Parquet LIST logical type.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#enable_list_inference BigqueryTable#enable_list_inference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#enable_list_inference BigqueryTable#enable_list_inference}
   */
   readonly enableListInference?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#enum_as_string BigqueryTable#enum_as_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#enum_as_string BigqueryTable#enum_as_string}
   */
   readonly enumAsString?: boolean | cdktf.IResolvable;
 }
@@ -1060,115 +1797,121 @@ export interface BigqueryTableExternalDataConfiguration {
   /**
   * Let BigQuery try to autodetect the schema and format of the table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#autodetect BigqueryTable#autodetect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#autodetect BigqueryTable#autodetect}
   */
   readonly autodetect: boolean | cdktf.IResolvable;
   /**
   * The compression type of the data source. Valid values are "NONE" or "GZIP".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#compression BigqueryTable#compression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#compression BigqueryTable#compression}
   */
   readonly compression?: string;
   /**
   * The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3. The connectionId can have the form "{{project}}.{{location}}.{{connection_id}}" or "projects/{{project}}/locations/{{location}}/connections/{{connection_id}}".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#connection_id BigqueryTable#connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#connection_id BigqueryTable#connection_id}
   */
   readonly connectionId?: string;
   /**
   * Specifies how source URIs are interpreted for constructing the file set to load.  By default source URIs are expanded against the underlying storage.  Other options include specifying manifest files. Only applicable to object storage systems.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#file_set_spec_type BigqueryTable#file_set_spec_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#file_set_spec_type BigqueryTable#file_set_spec_type}
   */
   readonly fileSetSpecType?: string;
   /**
   * Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#ignore_unknown_values BigqueryTable#ignore_unknown_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#ignore_unknown_values BigqueryTable#ignore_unknown_values}
   */
   readonly ignoreUnknownValues?: boolean | cdktf.IResolvable;
   /**
   * Load option to be used together with sourceFormat newline-delimited JSON to indicate that a variant of JSON is being loaded. To load newline-delimited GeoJSON, specify GEOJSON (and sourceFormat must be set to NEWLINE_DELIMITED_JSON).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#json_extension BigqueryTable#json_extension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#json_extension BigqueryTable#json_extension}
   */
   readonly jsonExtension?: string;
   /**
   * The maximum number of bad records that BigQuery can ignore when reading data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#max_bad_records BigqueryTable#max_bad_records}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#max_bad_records BigqueryTable#max_bad_records}
   */
   readonly maxBadRecords?: number;
   /**
   * Metadata Cache Mode for the table. Set this to enable caching of metadata from external data source.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#metadata_cache_mode BigqueryTable#metadata_cache_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#metadata_cache_mode BigqueryTable#metadata_cache_mode}
   */
   readonly metadataCacheMode?: string;
   /**
   * Object Metadata is used to create Object Tables. Object Tables contain a listing of objects (with their metadata) found at the sourceUris. If ObjectMetadata is set, sourceFormat should be omitted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#object_metadata BigqueryTable#object_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#object_metadata BigqueryTable#object_metadata}
   */
   readonly objectMetadata?: string;
   /**
   * When creating an external table, the user can provide a reference file with the table schema. This is enabled for the following formats: AVRO, PARQUET, ORC.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#reference_file_schema_uri BigqueryTable#reference_file_schema_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#reference_file_schema_uri BigqueryTable#reference_file_schema_uri}
   */
   readonly referenceFileSchemaUri?: string;
   /**
   * A JSON schema for the external table. Schema is required for CSV and JSON formats and is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats when using external tables.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#schema BigqueryTable#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#schema BigqueryTable#schema}
   */
   readonly schema?: string;
   /**
-  *  Please see sourceFormat under ExternalDataConfiguration in Bigquery's public API documentation (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#externaldataconfiguration) for supported formats. To use "GOOGLE_SHEETS" the scopes must include "googleapis.com/auth/drive.readonly".
+  * Please see sourceFormat under ExternalDataConfiguration in Bigquery's public API documentation (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#externaldataconfiguration) for supported formats. To use "GOOGLE_SHEETS" the scopes must include "googleapis.com/auth/drive.readonly".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#source_format BigqueryTable#source_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#source_format BigqueryTable#source_format}
   */
   readonly sourceFormat?: string;
   /**
   * A list of the fully-qualified URIs that point to your data in Google Cloud.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#source_uris BigqueryTable#source_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#source_uris BigqueryTable#source_uris}
   */
   readonly sourceUris: string[];
   /**
   * avro_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#avro_options BigqueryTable#avro_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#avro_options BigqueryTable#avro_options}
   */
   readonly avroOptions?: BigqueryTableExternalDataConfigurationAvroOptions;
   /**
+  * bigtable_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#bigtable_options BigqueryTable#bigtable_options}
+  */
+  readonly bigtableOptions?: BigqueryTableExternalDataConfigurationBigtableOptions;
+  /**
   * csv_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#csv_options BigqueryTable#csv_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#csv_options BigqueryTable#csv_options}
   */
   readonly csvOptions?: BigqueryTableExternalDataConfigurationCsvOptions;
   /**
   * google_sheets_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#google_sheets_options BigqueryTable#google_sheets_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#google_sheets_options BigqueryTable#google_sheets_options}
   */
   readonly googleSheetsOptions?: BigqueryTableExternalDataConfigurationGoogleSheetsOptions;
   /**
   * hive_partitioning_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#hive_partitioning_options BigqueryTable#hive_partitioning_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#hive_partitioning_options BigqueryTable#hive_partitioning_options}
   */
   readonly hivePartitioningOptions?: BigqueryTableExternalDataConfigurationHivePartitioningOptions;
   /**
   * json_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#json_options BigqueryTable#json_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#json_options BigqueryTable#json_options}
   */
   readonly jsonOptions?: BigqueryTableExternalDataConfigurationJsonOptions;
   /**
   * parquet_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#parquet_options BigqueryTable#parquet_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#parquet_options BigqueryTable#parquet_options}
   */
   readonly parquetOptions?: BigqueryTableExternalDataConfigurationParquetOptions;
 }
@@ -1193,6 +1936,7 @@ export function bigqueryTableExternalDataConfigurationToTerraform(struct?: Bigqu
     source_format: cdktf.stringToTerraform(struct!.sourceFormat),
     source_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceUris),
     avro_options: bigqueryTableExternalDataConfigurationAvroOptionsToTerraform(struct!.avroOptions),
+    bigtable_options: bigqueryTableExternalDataConfigurationBigtableOptionsToTerraform(struct!.bigtableOptions),
     csv_options: bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct!.csvOptions),
     google_sheets_options: bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(struct!.googleSheetsOptions),
     hive_partitioning_options: bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform(struct!.hivePartitioningOptions),
@@ -1291,6 +2035,12 @@ export function bigqueryTableExternalDataConfigurationToHclTerraform(struct?: Bi
       isBlock: true,
       type: "list",
       storageClassType: "BigqueryTableExternalDataConfigurationAvroOptionsList",
+    },
+    bigtable_options: {
+      value: bigqueryTableExternalDataConfigurationBigtableOptionsToHclTerraform(struct!.bigtableOptions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryTableExternalDataConfigurationBigtableOptionsList",
     },
     csv_options: {
       value: bigqueryTableExternalDataConfigurationCsvOptionsToHclTerraform(struct!.csvOptions),
@@ -1398,6 +2148,10 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.avroOptions = this._avroOptions?.internalValue;
     }
+    if (this._bigtableOptions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bigtableOptions = this._bigtableOptions?.internalValue;
+    }
     if (this._csvOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.csvOptions = this._csvOptions?.internalValue;
@@ -1438,6 +2192,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this._sourceFormat = undefined;
       this._sourceUris = undefined;
       this._avroOptions.internalValue = undefined;
+      this._bigtableOptions.internalValue = undefined;
       this._csvOptions.internalValue = undefined;
       this._googleSheetsOptions.internalValue = undefined;
       this._hivePartitioningOptions.internalValue = undefined;
@@ -1460,6 +2215,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this._sourceFormat = value.sourceFormat;
       this._sourceUris = value.sourceUris;
       this._avroOptions.internalValue = value.avroOptions;
+      this._bigtableOptions.internalValue = value.bigtableOptions;
       this._csvOptions.internalValue = value.csvOptions;
       this._googleSheetsOptions.internalValue = value.googleSheetsOptions;
       this._hivePartitioningOptions.internalValue = value.hivePartitioningOptions;
@@ -1686,6 +2442,22 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
     return this._avroOptions.internalValue;
   }
 
+  // bigtable_options - computed: false, optional: true, required: false
+  private _bigtableOptions = new BigqueryTableExternalDataConfigurationBigtableOptionsOutputReference(this, "bigtable_options");
+  public get bigtableOptions() {
+    return this._bigtableOptions;
+  }
+  public putBigtableOptions(value: BigqueryTableExternalDataConfigurationBigtableOptions) {
+    this._bigtableOptions.internalValue = value;
+  }
+  public resetBigtableOptions() {
+    this._bigtableOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigtableOptionsInput() {
+    return this._bigtableOptions.internalValue;
+  }
+
   // csv_options - computed: false, optional: true, required: false
   private _csvOptions = new BigqueryTableExternalDataConfigurationCsvOptionsOutputReference(this, "csv_options");
   public get csvOptions() {
@@ -1770,25 +2542,25 @@ export interface BigqueryTableMaterializedView {
   /**
   * Allow non incremental materialized view definition. The default value is false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#allow_non_incremental_definition BigqueryTable#allow_non_incremental_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#allow_non_incremental_definition BigqueryTable#allow_non_incremental_definition}
   */
   readonly allowNonIncrementalDefinition?: boolean | cdktf.IResolvable;
   /**
   * Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#enable_refresh BigqueryTable#enable_refresh}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#enable_refresh BigqueryTable#enable_refresh}
   */
   readonly enableRefresh?: boolean | cdktf.IResolvable;
   /**
   * A query whose result is persisted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#query BigqueryTable#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#query BigqueryTable#query}
   */
   readonly query: string;
   /**
   * Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#refresh_interval_ms BigqueryTable#refresh_interval_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#refresh_interval_ms BigqueryTable#refresh_interval_ms}
   */
   readonly refreshIntervalMs?: number;
 }
@@ -1958,19 +2730,19 @@ export interface BigqueryTableRangePartitioningRange {
   /**
   * End of the range partitioning, exclusive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#end BigqueryTable#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#end BigqueryTable#end}
   */
   readonly end: number;
   /**
   * The width of each range within the partition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#interval BigqueryTable#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#interval BigqueryTable#interval}
   */
   readonly interval: number;
   /**
   * Start of the range partitioning, inclusive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#start BigqueryTable#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#start BigqueryTable#start}
   */
   readonly start: number;
 }
@@ -2105,13 +2877,13 @@ export interface BigqueryTableRangePartitioning {
   /**
   * The field used to determine how to create a range-based partition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#field BigqueryTable#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#field BigqueryTable#field}
   */
   readonly field: string;
   /**
   * range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#range BigqueryTable#range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#range BigqueryTable#range}
   */
   readonly range: BigqueryTableRangePartitioningRange;
 }
@@ -2220,13 +2992,13 @@ export interface BigqueryTableTableConstraintsForeignKeysColumnReferences {
   /**
   * The column in the primary key that are referenced by the referencingColumn.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#referenced_column BigqueryTable#referenced_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#referenced_column BigqueryTable#referenced_column}
   */
   readonly referencedColumn: string;
   /**
   * The column that composes the foreign key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#referencing_column BigqueryTable#referencing_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#referencing_column BigqueryTable#referencing_column}
   */
   readonly referencingColumn: string;
 }
@@ -2335,19 +3107,19 @@ export interface BigqueryTableTableConstraintsForeignKeysReferencedTable {
   /**
   * The ID of the dataset containing this table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#dataset_id BigqueryTable#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#dataset_id BigqueryTable#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#project_id BigqueryTable#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#project_id BigqueryTable#project_id}
   */
   readonly projectId: string;
   /**
   * The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters. Certain operations allow suffixing of the table ID with a partition decorator, such as sample_table$20190123.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#table_id BigqueryTable#table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#table_id BigqueryTable#table_id}
   */
   readonly tableId: string;
 }
@@ -2482,19 +3254,19 @@ export interface BigqueryTableTableConstraintsForeignKeys {
   /**
   * Set only if the foreign key constraint is named.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#name BigqueryTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#name BigqueryTable#name}
   */
   readonly name?: string;
   /**
   * column_references block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#column_references BigqueryTable#column_references}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#column_references BigqueryTable#column_references}
   */
   readonly columnReferences: BigqueryTableTableConstraintsForeignKeysColumnReferences;
   /**
   * referenced_table block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#referenced_table BigqueryTable#referenced_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#referenced_table BigqueryTable#referenced_table}
   */
   readonly referencedTable: BigqueryTableTableConstraintsForeignKeysReferencedTable;
 }
@@ -2664,7 +3436,7 @@ export interface BigqueryTableTableConstraintsPrimaryKey {
   /**
   * The columns that are composed of the primary key constraint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#columns BigqueryTable#columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#columns BigqueryTable#columns}
   */
   readonly columns: string[];
 }
@@ -2747,13 +3519,13 @@ export interface BigqueryTableTableConstraints {
   /**
   * foreign_keys block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#foreign_keys BigqueryTable#foreign_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#foreign_keys BigqueryTable#foreign_keys}
   */
   readonly foreignKeys?: BigqueryTableTableConstraintsForeignKeys[] | cdktf.IResolvable;
   /**
   * primary_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#primary_key BigqueryTable#primary_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#primary_key BigqueryTable#primary_key}
   */
   readonly primaryKey?: BigqueryTableTableConstraintsPrimaryKey;
 }
@@ -2868,25 +3640,25 @@ export interface BigqueryTableTableReplicationInfo {
   /**
   * The interval at which the source materialized view is polled for updates. The default is 300000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#replication_interval_ms BigqueryTable#replication_interval_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#replication_interval_ms BigqueryTable#replication_interval_ms}
   */
   readonly replicationIntervalMs?: number;
   /**
   * The ID of the source dataset.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#source_dataset_id BigqueryTable#source_dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#source_dataset_id BigqueryTable#source_dataset_id}
   */
   readonly sourceDatasetId: string;
   /**
   * The ID of the source project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#source_project_id BigqueryTable#source_project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#source_project_id BigqueryTable#source_project_id}
   */
   readonly sourceProjectId: string;
   /**
   * The ID of the source materialized view.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#source_table_id BigqueryTable#source_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#source_table_id BigqueryTable#source_table_id}
   */
   readonly sourceTableId: string;
 }
@@ -3050,25 +3822,25 @@ export interface BigqueryTableTimePartitioning {
   /**
   * Number of milliseconds for which to keep the storage for a partition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#expiration_ms BigqueryTable#expiration_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#expiration_ms BigqueryTable#expiration_ms}
   */
   readonly expirationMs?: number;
   /**
   * The field used to determine how to create a time-based partition. If time-based partitioning is enabled without this value, the table is partitioned based on the load time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#field BigqueryTable#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#field BigqueryTable#field}
   */
   readonly field?: string;
   /**
   * If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#require_partition_filter BigqueryTable#require_partition_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#require_partition_filter BigqueryTable#require_partition_filter}
   */
   readonly requirePartitionFilter?: boolean | cdktf.IResolvable;
   /**
   * The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#type BigqueryTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#type BigqueryTable#type}
   */
   readonly type: string;
 }
@@ -3238,13 +4010,13 @@ export interface BigqueryTableView {
   /**
   * A query that BigQuery executes when the view is referenced.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#query BigqueryTable#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#query BigqueryTable#query}
   */
   readonly query: string;
   /**
   * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#use_legacy_sql BigqueryTable#use_legacy_sql}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#use_legacy_sql BigqueryTable#use_legacy_sql}
   */
   readonly useLegacySql?: boolean | cdktf.IResolvable;
 }
@@ -3354,7 +4126,7 @@ export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table google_bigquery_table}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table google_bigquery_table}
 */
 export class BigqueryTable extends cdktf.TerraformResource {
 
@@ -3370,7 +4142,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigqueryTable resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigqueryTable to import
-  * @param importFromId The id of the existing BigqueryTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigqueryTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigqueryTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -3382,7 +4154,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.30.0/docs/resources/bigquery_table google_bigquery_table} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_table google_bigquery_table} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3393,7 +4165,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_table',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.30.0',
+        providerVersion: '5.31.1',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
