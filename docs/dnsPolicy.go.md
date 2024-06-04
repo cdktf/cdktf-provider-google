@@ -4,12 +4,12 @@
 
 ### DnsPolicy <a name="DnsPolicy" id="@cdktf/provider-google.dnsPolicy.DnsPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy google_dns_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy google_dns_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.NewDnsPolicy(scope Construct, id *string, config DnsPolicyConfig) DnsPolicy
 ```
@@ -473,7 +473,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dnsPolicy.DnsPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.DnsPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dnsPolicy.DnsPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.DnsPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ dnspolicy.DnsPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dnsPolicy.DnsPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.DnsPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ dnspolicy.DnsPolicy_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dnsPolicy.DnsPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.DnsPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -562,7 +562,7 @@ The construct id used in the generated config for the DnsPolicy to import.
 
 The id of the existing DnsPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -960,7 +960,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsPolicy.DnsPolicyAlternativeNameServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 &dnspolicy.DnsPolicyAlternativeNameServerConfig {
 	TargetNameServers: interface{},
@@ -985,7 +985,7 @@ TargetNameServers interface{}
 
 target_name_servers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#target_name_servers DnsPolicy#target_name_servers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#target_name_servers DnsPolicy#target_name_servers}
 
 ---
 
@@ -994,7 +994,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsPolicy.DnsPolicyAlternativeNameServerConfigTargetNameServers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 &dnspolicy.DnsPolicyAlternativeNameServerConfigTargetNameServers {
 	Ipv4Address: *string,
@@ -1021,7 +1021,7 @@ Ipv4Address *string
 
 IPv4 address to forward to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#ipv4_address DnsPolicy#ipv4_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#ipv4_address DnsPolicy#ipv4_address}
 
 ---
 
@@ -1039,7 +1039,7 @@ If unset or 'default' Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#forwarding_path DnsPolicy#forwarding_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#forwarding_path DnsPolicy#forwarding_path}
 
 ---
 
@@ -1048,7 +1048,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 &dnspolicy.DnsPolicyConfig {
 	Connection: interface{},
@@ -1059,14 +1059,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	AlternativeNameServerConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dnsPolicy.DnsPolicyAlternativeNameServerConfig,
+	AlternativeNameServerConfig: github.com/cdktf/cdktf-provider-google-go/google.dnsPolicy.DnsPolicyAlternativeNameServerConfig,
 	Description: *string,
 	EnableInboundForwarding: interface{},
 	EnableLogging: interface{},
 	Id: *string,
 	Networks: interface{},
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.dnsPolicy.DnsPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dnsPolicy.DnsPolicyTimeouts,
 }
 ```
 
@@ -1086,9 +1086,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.description">Description</a></code> | <code>*string</code> | A textual description field. Defaults to 'Managed by Terraform'. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.enableInboundForwarding">EnableInboundForwarding</a></code> | <code>interface{}</code> | Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.enableLogging">EnableLogging</a></code> | <code>interface{}</code> | Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#id DnsPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#id DnsPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.networks">Networks</a></code> | <code>interface{}</code> | networks block. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#project DnsPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#project DnsPolicy#project}. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts">DnsPolicyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1173,7 +1173,7 @@ Name *string
 
 User assigned name for this policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#name DnsPolicy#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#name DnsPolicy#name}
 
 ---
 
@@ -1187,7 +1187,7 @@ AlternativeNameServerConfig DnsPolicyAlternativeNameServerConfig
 
 alternative_name_server_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#alternative_name_server_config DnsPolicy#alternative_name_server_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#alternative_name_server_config DnsPolicy#alternative_name_server_config}
 
 ---
 
@@ -1201,7 +1201,7 @@ Description *string
 
 A textual description field. Defaults to 'Managed by Terraform'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#description DnsPolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#description DnsPolicy#description}
 
 ---
 
@@ -1219,7 +1219,7 @@ When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#enable_inbound_forwarding DnsPolicy#enable_inbound_forwarding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#enable_inbound_forwarding DnsPolicy#enable_inbound_forwarding}
 
 ---
 
@@ -1233,7 +1233,7 @@ EnableLogging interface{}
 
 Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#enable_logging DnsPolicy#enable_logging}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#enable_logging DnsPolicy#enable_logging}
 
 ---
 
@@ -1245,7 +1245,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#id DnsPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#id DnsPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1262,7 +1262,7 @@ Networks interface{}
 
 networks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#networks DnsPolicy#networks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#networks DnsPolicy#networks}
 
 ---
 
@@ -1274,7 +1274,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#project DnsPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#project DnsPolicy#project}.
 
 ---
 
@@ -1288,7 +1288,7 @@ Timeouts DnsPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#timeouts DnsPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#timeouts DnsPolicy#timeouts}
 
 ---
 
@@ -1297,7 +1297,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsPolicy.DnsPolicyNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 &dnspolicy.DnsPolicyNetworks {
 	NetworkUrl: *string,
@@ -1325,7 +1325,7 @@ The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#network_url DnsPolicy#network_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#network_url DnsPolicy#network_url}
 
 ---
 
@@ -1334,7 +1334,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 &dnspolicy.DnsPolicyTimeouts {
 	Create: *string,
@@ -1347,9 +1347,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#create DnsPolicy#create}. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#delete DnsPolicy#delete}. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#update DnsPolicy#update}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#create DnsPolicy#create}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#delete DnsPolicy#delete}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#update DnsPolicy#update}. |
 
 ---
 
@@ -1361,7 +1361,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#create DnsPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#create DnsPolicy#create}.
 
 ---
 
@@ -1373,7 +1373,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#delete DnsPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#delete DnsPolicy#delete}.
 
 ---
 
@@ -1385,7 +1385,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/dns_policy#update DnsPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/dns_policy#update DnsPolicy#update}.
 
 ---
 
@@ -1396,7 +1396,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsPolicy.DnsPolicyAlternativeNameServerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.NewDnsPolicyAlternativeNameServerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DnsPolicyAlternativeNameServerConfigOutputReference
 ```
@@ -1680,7 +1680,7 @@ func InternalValue() DnsPolicyAlternativeNameServerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsPolicy.DnsPolicyAlternativeNameServerConfigTargetNameServersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.NewDnsPolicyAlternativeNameServerConfigTargetNameServersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DnsPolicyAlternativeNameServerConfigTargetNameServersList
 ```
@@ -1840,7 +1840,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsPolicy.DnsPolicyAlternativeNameServerConfigTargetNameServersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.NewDnsPolicyAlternativeNameServerConfigTargetNameServersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DnsPolicyAlternativeNameServerConfigTargetNameServersOutputReference
 ```
@@ -2158,7 +2158,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsPolicy.DnsPolicyNetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.NewDnsPolicyNetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DnsPolicyNetworksList
 ```
@@ -2318,7 +2318,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsPolicy.DnsPolicyNetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.NewDnsPolicyNetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DnsPolicyNetworksOutputReference
 ```
@@ -2607,7 +2607,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsPolicy.DnsPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dnspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dnspolicy"
 
 dnspolicy.NewDnsPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DnsPolicyTimeoutsOutputReference
 ```

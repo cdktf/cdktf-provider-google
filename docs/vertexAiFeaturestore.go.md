@@ -4,12 +4,12 @@
 
 ### VertexAiFeaturestore <a name="VertexAiFeaturestore" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestore"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore google_vertex_ai_featurestore}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore google_vertex_ai_featurestore}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.NewVertexAiFeaturestore(scope Construct, id *string, config VertexAiFeaturestoreConfig) VertexAiFeaturestore
 ```
@@ -480,7 +480,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestore.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.VertexAiFeaturestore_IsConstruct(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestore.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.VertexAiFeaturestore_IsTerraformElement(x interface{}) *bool
 ```
@@ -526,7 +526,7 @@ vertexaifeaturestore.VertexAiFeaturestore_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestore.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.VertexAiFeaturestore_IsTerraformResource(x interface{}) *bool
 ```
@@ -540,7 +540,7 @@ vertexaifeaturestore.VertexAiFeaturestore_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestore.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.VertexAiFeaturestore_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -569,7 +569,7 @@ The construct id used in the generated config for the VertexAiFeaturestore to im
 
 The id of the existing VertexAiFeaturestore that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1022,7 +1022,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 &vertexaifeaturestore.VertexAiFeaturestoreConfig {
 	Connection: interface{},
@@ -1032,15 +1032,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestor
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google/v13.vertexAiFeaturestore.VertexAiFeaturestoreEncryptionSpec,
+	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestore.VertexAiFeaturestoreEncryptionSpec,
 	ForceDestroy: interface{},
 	Id: *string,
 	Labels: *map[string]*string,
 	Name: *string,
-	OnlineServingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfig,
+	OnlineServingConfig: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfig,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts,
 }
 ```
 
@@ -1057,11 +1057,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestor
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.encryptionSpec">EncryptionSpec</a></code> | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreEncryptionSpec">VertexAiFeaturestoreEncryptionSpec</a></code> | encryption_spec block. |
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.forceDestroy">ForceDestroy</a></code> | <code>interface{}</code> | If set to true, any EntityTypes and Features for this Featurestore will also be deleted. |
-| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#id VertexAiFeaturestore#id}. |
+| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#id VertexAiFeaturestore#id}. |
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | A set of key/value label pairs to assign to this Featurestore. |
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Featurestore. |
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.onlineServingConfig">OnlineServingConfig</a></code> | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfig">VertexAiFeaturestoreOnlineServingConfig</a></code> | online_serving_config block. |
-| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#project VertexAiFeaturestore#project}. |
+| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#project VertexAiFeaturestore#project}. |
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.region">Region</a></code> | <code>*string</code> | The region of the dataset. eg us-central1. |
 | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts">VertexAiFeaturestoreTimeouts</a></code> | timeouts block. |
 
@@ -1147,7 +1147,7 @@ EncryptionSpec VertexAiFeaturestoreEncryptionSpec
 
 encryption_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#encryption_spec VertexAiFeaturestore#encryption_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#encryption_spec VertexAiFeaturestore#encryption_spec}
 
 ---
 
@@ -1161,7 +1161,7 @@ ForceDestroy interface{}
 
 If set to true, any EntityTypes and Features for this Featurestore will also be deleted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#force_destroy VertexAiFeaturestore#force_destroy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#force_destroy VertexAiFeaturestore#force_destroy}
 
 ---
 
@@ -1173,7 +1173,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#id VertexAiFeaturestore#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#id VertexAiFeaturestore#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1193,7 +1193,7 @@ A set of key/value label pairs to assign to this Featurestore.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#labels VertexAiFeaturestore#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#labels VertexAiFeaturestore#labels}
 
 ---
 
@@ -1209,7 +1209,7 @@ The name of the Featurestore.
 
 This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#name VertexAiFeaturestore#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#name VertexAiFeaturestore#name}
 
 ---
 
@@ -1223,7 +1223,7 @@ OnlineServingConfig VertexAiFeaturestoreOnlineServingConfig
 
 online_serving_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#online_serving_config VertexAiFeaturestore#online_serving_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#online_serving_config VertexAiFeaturestore#online_serving_config}
 
 ---
 
@@ -1235,7 +1235,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#project VertexAiFeaturestore#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#project VertexAiFeaturestore#project}.
 
 ---
 
@@ -1249,7 +1249,7 @@ Region *string
 
 The region of the dataset. eg us-central1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#region VertexAiFeaturestore#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#region VertexAiFeaturestore#region}
 
 ---
 
@@ -1263,7 +1263,7 @@ Timeouts VertexAiFeaturestoreTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#timeouts VertexAiFeaturestore#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#timeouts VertexAiFeaturestore#timeouts}
 
 ---
 
@@ -1272,7 +1272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreEncryptionSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 &vertexaifeaturestore.VertexAiFeaturestoreEncryptionSpec {
 	KmsKeyName: *string,
@@ -1299,7 +1299,7 @@ The Cloud KMS resource identifier of the customer managed encryption key used to
 
 Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#kms_key_name VertexAiFeaturestore#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#kms_key_name VertexAiFeaturestore#kms_key_name}
 
 ---
 
@@ -1308,11 +1308,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 &vertexaifeaturestore.VertexAiFeaturestoreOnlineServingConfig {
 	FixedNodeCount: *f64,
-	Scaling: github.com/cdktf/cdktf-provider-google-go/google/v13.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfigScaling,
+	Scaling: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfigScaling,
 }
 ```
 
@@ -1337,7 +1337,7 @@ The number of nodes for each cluster.
 
 The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#fixed_node_count VertexAiFeaturestore#fixed_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#fixed_node_count VertexAiFeaturestore#fixed_node_count}
 
 ---
 
@@ -1351,7 +1351,7 @@ Scaling VertexAiFeaturestoreOnlineServingConfigScaling
 
 scaling block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#scaling VertexAiFeaturestore#scaling}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#scaling VertexAiFeaturestore#scaling}
 
 ---
 
@@ -1360,7 +1360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfigScaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 &vertexaifeaturestore.VertexAiFeaturestoreOnlineServingConfigScaling {
 	MaxNodeCount: *f64,
@@ -1389,7 +1389,7 @@ The maximum number of nodes to scale up to.
 
 Must be greater than minNodeCount, and less than or equal to 10 times of 'minNodeCount'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#max_node_count VertexAiFeaturestore#max_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#max_node_count VertexAiFeaturestore#max_node_count}
 
 ---
 
@@ -1403,7 +1403,7 @@ MinNodeCount *f64
 
 The minimum number of nodes to scale down to. Must be greater than or equal to 1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#min_node_count VertexAiFeaturestore#min_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#min_node_count VertexAiFeaturestore#min_node_count}
 
 ---
 
@@ -1412,7 +1412,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 &vertexaifeaturestore.VertexAiFeaturestoreTimeouts {
 	Create: *string,
@@ -1425,9 +1425,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestor
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#create VertexAiFeaturestore#create}. |
-| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#delete VertexAiFeaturestore#delete}. |
-| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#update VertexAiFeaturestore#update}. |
+| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#create VertexAiFeaturestore#create}. |
+| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#delete VertexAiFeaturestore#delete}. |
+| <code><a href="#@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#update VertexAiFeaturestore#update}. |
 
 ---
 
@@ -1439,7 +1439,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#create VertexAiFeaturestore#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#create VertexAiFeaturestore#create}.
 
 ---
 
@@ -1451,7 +1451,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#delete VertexAiFeaturestore#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#delete VertexAiFeaturestore#delete}.
 
 ---
 
@@ -1463,7 +1463,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/vertex_ai_featurestore#update VertexAiFeaturestore#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/vertex_ai_featurestore#update VertexAiFeaturestore#update}.
 
 ---
 
@@ -1474,7 +1474,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreEncryptionSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.NewVertexAiFeaturestoreEncryptionSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreEncryptionSpecOutputReference
 ```
@@ -1745,7 +1745,7 @@ func InternalValue() VertexAiFeaturestoreEncryptionSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.NewVertexAiFeaturestoreOnlineServingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreOnlineServingConfigOutputReference
 ```
@@ -2065,7 +2065,7 @@ func InternalValue() VertexAiFeaturestoreOnlineServingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreOnlineServingConfigScalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.NewVertexAiFeaturestoreOnlineServingConfigScalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreOnlineServingConfigScalingOutputReference
 ```
@@ -2358,7 +2358,7 @@ func InternalValue() VertexAiFeaturestoreOnlineServingConfigScaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeaturestore.VertexAiFeaturestoreTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeaturestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeaturestore"
 
 vertexaifeaturestore.NewVertexAiFeaturestoreTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeaturestoreTimeoutsOutputReference
 ```
