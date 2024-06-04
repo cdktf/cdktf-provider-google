@@ -369,6 +369,10 @@ Object.defineProperty(exports, 'dataplexEntryGroup', { get: function () { return
 Object.defineProperty(exports, 'dataplexEntryGroupIamBinding', { get: function () { return require('./dataplex-entry-group-iam-binding'); } });
 Object.defineProperty(exports, 'dataplexEntryGroupIamMember', { get: function () { return require('./dataplex-entry-group-iam-member'); } });
 Object.defineProperty(exports, 'dataplexEntryGroupIamPolicy', { get: function () { return require('./dataplex-entry-group-iam-policy'); } });
+Object.defineProperty(exports, 'dataplexEntryType', { get: function () { return require('./dataplex-entry-type'); } });
+Object.defineProperty(exports, 'dataplexEntryTypeIamBinding', { get: function () { return require('./dataplex-entry-type-iam-binding'); } });
+Object.defineProperty(exports, 'dataplexEntryTypeIamMember', { get: function () { return require('./dataplex-entry-type-iam-member'); } });
+Object.defineProperty(exports, 'dataplexEntryTypeIamPolicy', { get: function () { return require('./dataplex-entry-type-iam-policy'); } });
 Object.defineProperty(exports, 'dataplexLake', { get: function () { return require('./dataplex-lake'); } });
 Object.defineProperty(exports, 'dataplexLakeIamBinding', { get: function () { return require('./dataplex-lake-iam-binding'); } });
 Object.defineProperty(exports, 'dataplexLakeIamMember', { get: function () { return require('./dataplex-lake-iam-member'); } });
@@ -944,6 +948,7 @@ Object.defineProperty(exports, 'dataGoogleDataplexAspectTypeIamPolicy', { get: f
 Object.defineProperty(exports, 'dataGoogleDataplexAssetIamPolicy', { get: function () { return require('./data-google-dataplex-asset-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleDataplexDatascanIamPolicy', { get: function () { return require('./data-google-dataplex-datascan-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleDataplexEntryGroupIamPolicy', { get: function () { return require('./data-google-dataplex-entry-group-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleDataplexEntryTypeIamPolicy', { get: function () { return require('./data-google-dataplex-entry-type-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleDataplexLakeIamPolicy', { get: function () { return require('./data-google-dataplex-lake-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleDataplexTaskIamPolicy', { get: function () { return require('./data-google-dataplex-task-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleDataplexZoneIamPolicy', { get: function () { return require('./data-google-dataplex-zone-iam-policy'); } });

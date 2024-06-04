@@ -369,6 +369,10 @@ export * as dataplexEntryGroup from './dataplex-entry-group';
 export * as dataplexEntryGroupIamBinding from './dataplex-entry-group-iam-binding';
 export * as dataplexEntryGroupIamMember from './dataplex-entry-group-iam-member';
 export * as dataplexEntryGroupIamPolicy from './dataplex-entry-group-iam-policy';
+export * as dataplexEntryType from './dataplex-entry-type';
+export * as dataplexEntryTypeIamBinding from './dataplex-entry-type-iam-binding';
+export * as dataplexEntryTypeIamMember from './dataplex-entry-type-iam-member';
+export * as dataplexEntryTypeIamPolicy from './dataplex-entry-type-iam-policy';
 export * as dataplexLake from './dataplex-lake';
 export * as dataplexLakeIamBinding from './dataplex-lake-iam-binding';
 export * as dataplexLakeIamMember from './dataplex-lake-iam-member';
@@ -944,6 +948,7 @@ export * as dataGoogleDataplexAspectTypeIamPolicy from './data-google-dataplex-a
 export * as dataGoogleDataplexAssetIamPolicy from './data-google-dataplex-asset-iam-policy';
 export * as dataGoogleDataplexDatascanIamPolicy from './data-google-dataplex-datascan-iam-policy';
 export * as dataGoogleDataplexEntryGroupIamPolicy from './data-google-dataplex-entry-group-iam-policy';
+export * as dataGoogleDataplexEntryTypeIamPolicy from './data-google-dataplex-entry-type-iam-policy';
 export * as dataGoogleDataplexLakeIamPolicy from './data-google-dataplex-lake-iam-policy';
 export * as dataGoogleDataplexTaskIamPolicy from './data-google-dataplex-task-iam-policy';
 export * as dataGoogleDataplexZoneIamPolicy from './data-google-dataplex-zone-iam-policy';

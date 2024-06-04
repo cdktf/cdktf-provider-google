@@ -1,3 +1,3 @@
 # `google_bigquery_job`
 
-Refer to the Terraform Registry for docs: [`google_bigquery_job`](https://registry.terraform.io/providers/hashicorp/google/5.31.1/docs/resources/bigquery_job).
+Refer to the Terraform Registry for docs: [`google_bigquery_job`](https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/bigquery_job).
