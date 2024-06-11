@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture
+// https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface SecurityposturePostureConfig extends cdktf.TerraformMetaArgumen
   /**
   * Description of the posture.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,38 +23,38 @@ export interface SecurityposturePostureConfig extends cdktf.TerraformMetaArgumen
   /**
   * Location of the resource, eg: global.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
   */
   readonly location: string;
   /**
   * The parent of the resource, an organization. Format should be 'organizations/{organization_id}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#parent SecurityposturePosture#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#parent SecurityposturePosture#parent}
   */
   readonly parent: string;
   /**
   * Id of the posture. It is an immutable field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#posture_id SecurityposturePosture#posture_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#posture_id SecurityposturePosture#posture_id}
   */
   readonly postureId: string;
   /**
   * State of the posture. Update to state field should not be triggered along with
   * with other field updates. Possible values: ["DEPRECATED", "DRAFT", "ACTIVE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#state SecurityposturePosture#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#state SecurityposturePosture#state}
   */
   readonly state: string;
   /**
   * policy_sets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#policy_sets SecurityposturePosture#policy_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#policy_sets SecurityposturePosture#policy_sets}
   */
   readonly policySets: SecurityposturePosturePolicySets[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#timeouts SecurityposturePosture#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#timeouts SecurityposturePosture#timeouts}
   */
   readonly timeouts?: SecurityposturePostureTimeouts;
 }
@@ -67,13 +62,13 @@ export interface SecurityposturePosturePolicySetsPoliciesComplianceStandards {
   /**
   * Mapping of security controls for the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#control SecurityposturePosture#control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#control SecurityposturePosture#control}
   */
   readonly control?: string;
   /**
   * Mapping of compliance standards for the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#standard SecurityposturePosture#standard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#standard SecurityposturePosture#standard}
   */
   readonly standard?: string;
 }
@@ -220,25 +215,25 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * Description of the expression
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
   */
   readonly title?: string;
 }
@@ -408,13 +403,13 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * List of values allowed at this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
   */
   readonly allowedValues?: string[];
   /**
   * List of values denied at this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
   */
   readonly deniedValues?: string[];
 }
@@ -529,32 +524,32 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * Setting this to true means that all values are allowed. This field can be set only in policies for list constraints.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
   */
   readonly allowAll?: boolean | cdktf.IResolvable;
   /**
   * Setting this to true means that all values are denied. This field can be set only in policies for list constraints.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
   */
   readonly denyAll?: boolean | cdktf.IResolvable;
   /**
   * If 'true', then the policy is enforced. If 'false', then any configuration is acceptable.
   * This field can be set only in policies for boolean constraints.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
   */
   readonly enforce?: boolean | cdktf.IResolvable;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
   */
   readonly condition?: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesCondition;
   /**
   * values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
   */
   readonly values?: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRulesValues;
 }
@@ -788,13 +783,13 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * Organization policy canned constraint Id
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#canned_constraint_id SecurityposturePosture#canned_constraint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#canned_constraint_id SecurityposturePosture#canned_constraint_id}
   */
   readonly cannedConstraintId: string;
   /**
   * policy_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
   */
   readonly policyRules: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPolicyRules[] | cdktf.IResolvable;
 }
@@ -903,43 +898,43 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * The action to take if the condition is met. Possible values: ["ALLOW", "DENY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#action_type SecurityposturePosture#action_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#action_type SecurityposturePosture#action_type}
   */
   readonly actionType: string;
   /**
   * A CEL condition that refers to a supported service resource, for example 'resource.management.autoUpgrade == false'. For details about CEL usage, see [Common Expression Language](https://cloud.google.com/resource-manager/docs/organization-policy/creating-managing-custom-constraints#common_expression_language).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
   */
   readonly condition: string;
   /**
   * A human-friendly description of the constraint to display as an error message when the policy is violated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
   * A human-friendly name for the constraint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
   */
   readonly displayName?: string;
   /**
   * A list of RESTful methods for which to enforce the constraint. Can be 'CREATE', 'UPDATE', or both. Not all Google Cloud services support both methods. To see supported methods for each service, find the service in [Supported services](https://cloud.google.com/resource-manager/docs/organization-policy/custom-constraint-supported-services).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#method_types SecurityposturePosture#method_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#method_types SecurityposturePosture#method_types}
   */
   readonly methodTypes: string[];
   /**
   * Immutable. The name of the custom constraint. This is unique within the organization.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
   */
   readonly name: string;
   /**
   * Immutable. The fully qualified name of the Google Cloud REST resource containing the object and field you want to restrict. For example, 'container.googleapis.com/NodePool'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
   */
   readonly resourceTypes: string[];
 }
@@ -1184,25 +1179,25 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * Description of the expression
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
   */
   readonly title?: string;
 }
@@ -1372,13 +1367,13 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * List of values allowed at this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
   */
   readonly allowedValues?: string[];
   /**
   * List of values denied at this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
   */
   readonly deniedValues?: string[];
 }
@@ -1493,32 +1488,32 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * Setting this to true means that all values are allowed. This field can be set only in policies for list constraints.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
   */
   readonly allowAll?: boolean | cdktf.IResolvable;
   /**
   * Setting this to true means that all values are denied. This field can be set only in policies for list constraints.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
   */
   readonly denyAll?: boolean | cdktf.IResolvable;
   /**
   * If 'true', then the policy is enforced. If 'false', then any configuration is acceptable.
   * This field can be set only in policies for boolean constraints.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
   */
   readonly enforce?: boolean | cdktf.IResolvable;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
   */
   readonly condition?: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesCondition;
   /**
   * values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
   */
   readonly values?: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRulesValues;
 }
@@ -1752,13 +1747,13 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyCons
   /**
   * custom_constraint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#custom_constraint SecurityposturePosture#custom_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#custom_constraint SecurityposturePosture#custom_constraint}
   */
   readonly customConstraint?: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomCustomConstraint;
   /**
   * policy_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
   */
   readonly policyRules: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustomPolicyRules[] | cdktf.IResolvable;
 }
@@ -1870,25 +1865,25 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealt
   /**
   * Description of the expression
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
   */
   readonly title?: string;
 }
@@ -2058,13 +2053,13 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealt
   /**
   * Name of the property for the custom output.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
   */
   readonly name: string;
   /**
   * value_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#value_expression SecurityposturePosture#value_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#value_expression SecurityposturePosture#value_expression}
   */
   readonly valueExpression?: SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalyticsCustomModuleConfigCustomOutputPropertiesValueExpression;
 }
@@ -2208,7 +2203,7 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealt
   /**
   * properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#properties SecurityposturePosture#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#properties SecurityposturePosture#properties}
   */
   readonly properties?: SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalyticsCustomModuleConfigCustomOutputProperties[] | cdktf.IResolvable;
 }
@@ -2294,25 +2289,25 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealt
   /**
   * Description of the expression
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
   */
   readonly title?: string;
 }
@@ -2482,7 +2477,7 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealt
   /**
   * The resource types to run the detector on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
   */
   readonly resourceTypes: string[];
 }
@@ -2566,38 +2561,38 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealt
   * Text that describes the vulnerability or misconfiguration that the custom
   * module detects.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
   * An explanation of the recommended steps that security teams can take to
   * resolve the detected issue
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#recommendation SecurityposturePosture#recommendation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#recommendation SecurityposturePosture#recommendation}
   */
   readonly recommendation?: string;
   /**
   * The severity to assign to findings generated by the module. Possible values: ["SEVERITY_UNSPECIFIED", "CRITICAL", "HIGH", "MEDIUM", "LOW"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#severity SecurityposturePosture#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#severity SecurityposturePosture#severity}
   */
   readonly severity: string;
   /**
   * custom_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#custom_output SecurityposturePosture#custom_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#custom_output SecurityposturePosture#custom_output}
   */
   readonly customOutput?: SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalyticsCustomModuleConfigCustomOutput;
   /**
   * predicate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#predicate SecurityposturePosture#predicate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#predicate SecurityposturePosture#predicate}
   */
   readonly predicate: SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalyticsCustomModuleConfigPredicate;
   /**
   * resource_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#resource_selector SecurityposturePosture#resource_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#resource_selector SecurityposturePosture#resource_selector}
   */
   readonly resourceSelector: SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalyticsCustomModuleConfigResourceSelector;
 }
@@ -2821,19 +2816,19 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealt
   * display name becomes the finding category for all findings that are
   * returned by this custom module.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
   */
   readonly displayName?: string;
   /**
   * The state of enablement for the module at its level of the resource hierarchy. Possible values: ["ENABLEMENT_STATE_UNSPECIFIED", "ENABLED", "DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
   */
   readonly moduleEnablementState?: string;
   /**
   * config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#config SecurityposturePosture#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#config SecurityposturePosture#config}
   */
   readonly config: SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalyticsCustomModuleConfig;
 }
@@ -2979,13 +2974,13 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealt
   /**
   * The state of enablement for the module at its level of the resource hierarchy. Possible values: ["ENABLEMENT_STATE_UNSPECIFIED", "ENABLED", "DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
   */
   readonly moduleEnablementState?: string;
   /**
   * The name of the module eg: BIGQUERY_TABLE_CMEK_DISABLED.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#module_name SecurityposturePosture#module_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#module_name SecurityposturePosture#module_name}
   */
   readonly moduleName: string;
 }
@@ -3097,25 +3092,25 @@ export interface SecurityposturePosturePolicySetsPoliciesConstraint {
   /**
   * org_policy_constraint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#org_policy_constraint SecurityposturePosture#org_policy_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#org_policy_constraint SecurityposturePosture#org_policy_constraint}
   */
   readonly orgPolicyConstraint?: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraint;
   /**
   * org_policy_constraint_custom block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#org_policy_constraint_custom SecurityposturePosture#org_policy_constraint_custom}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#org_policy_constraint_custom SecurityposturePosture#org_policy_constraint_custom}
   */
   readonly orgPolicyConstraintCustom?: SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCustom;
   /**
   * security_health_analytics_custom_module block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#security_health_analytics_custom_module SecurityposturePosture#security_health_analytics_custom_module}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#security_health_analytics_custom_module SecurityposturePosture#security_health_analytics_custom_module}
   */
   readonly securityHealthAnalyticsCustomModule?: SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalyticsCustomModule;
   /**
   * security_health_analytics_module block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#security_health_analytics_module SecurityposturePosture#security_health_analytics_module}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#security_health_analytics_module SecurityposturePosture#security_health_analytics_module}
   */
   readonly securityHealthAnalyticsModule?: SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalyticsModule;
 }
@@ -3288,25 +3283,25 @@ export interface SecurityposturePosturePolicySetsPolicies {
   /**
   * Description of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
   * ID of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#policy_id SecurityposturePosture#policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#policy_id SecurityposturePosture#policy_id}
   */
   readonly policyId: string;
   /**
   * compliance_standards block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#compliance_standards SecurityposturePosture#compliance_standards}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#compliance_standards SecurityposturePosture#compliance_standards}
   */
   readonly complianceStandards?: SecurityposturePosturePolicySetsPoliciesComplianceStandards[] | cdktf.IResolvable;
   /**
   * constraint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#constraint SecurityposturePosture#constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#constraint SecurityposturePosture#constraint}
   */
   readonly constraint: SecurityposturePosturePolicySetsPoliciesConstraint;
 }
@@ -3505,19 +3500,19 @@ export interface SecurityposturePosturePolicySets {
   /**
   * Description of the policy set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
   */
   readonly description?: string;
   /**
   * ID of the policy set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#policy_set_id SecurityposturePosture#policy_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#policy_set_id SecurityposturePosture#policy_set_id}
   */
   readonly policySetId: string;
   /**
   * policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#policies SecurityposturePosture#policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#policies SecurityposturePosture#policies}
   */
   readonly policies: SecurityposturePosturePolicySetsPolicies[] | cdktf.IResolvable;
 }
@@ -3685,15 +3680,15 @@ export class SecurityposturePosturePolicySetsList extends cdktf.ComplexList {
 }
 export interface SecurityposturePostureTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}
   */
   readonly update?: string;
 }
@@ -3845,7 +3840,7 @@ export class SecurityposturePostureTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture google_securityposture_posture}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture google_securityposture_posture}
 */
 export class SecurityposturePosture extends cdktf.TerraformResource {
 
@@ -3861,7 +3856,7 @@ export class SecurityposturePosture extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SecurityposturePosture resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SecurityposturePosture to import
-  * @param importFromId The id of the existing SecurityposturePosture that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SecurityposturePosture that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SecurityposturePosture to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -3873,7 +3868,7 @@ export class SecurityposturePosture extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/securityposture_posture google_securityposture_posture} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/securityposture_posture google_securityposture_posture} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3884,7 +3879,7 @@ export class SecurityposturePosture extends cdktf.TerraformResource {
       terraformResourceType: 'google_securityposture_posture',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.32.0',
+        providerVersion: '5.33.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

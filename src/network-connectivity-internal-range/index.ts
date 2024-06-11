@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range
+// https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface NetworkConnectivityInternalRangeConfig extends cdktf.TerraformM
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#description NetworkConnectivityInternalRange#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#description NetworkConnectivityInternalRange#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#id NetworkConnectivityInternalRange#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#id NetworkConnectivityInternalRange#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +23,7 @@ export interface NetworkConnectivityInternalRangeConfig extends cdktf.TerraformM
   /**
   * The IP range that this internal range defines.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#ip_cidr_range NetworkConnectivityInternalRange#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#ip_cidr_range NetworkConnectivityInternalRange#ip_cidr_range}
   */
   readonly ipCidrRange?: string;
   /**
@@ -38,75 +33,75 @@ export interface NetworkConnectivityInternalRangeConfig extends cdktf.TerraformM
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#labels NetworkConnectivityInternalRange#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#labels NetworkConnectivityInternalRange#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the policy based route.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#name NetworkConnectivityInternalRange#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#name NetworkConnectivityInternalRange#name}
   */
   readonly name: string;
   /**
   * Fully-qualified URL of the network that this route applies to, for example: projects/my-project/global/networks/my-network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#network NetworkConnectivityInternalRange#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#network NetworkConnectivityInternalRange#network}
   */
   readonly network: string;
   /**
   * Optional. Types of resources that are allowed to overlap with the current internal range. Possible values: ["OVERLAP_ROUTE_RANGE", "OVERLAP_EXISTING_SUBNET_RANGE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#overlaps NetworkConnectivityInternalRange#overlaps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#overlaps NetworkConnectivityInternalRange#overlaps}
   */
   readonly overlaps?: string[];
   /**
   * The type of peering set for this internal range. Possible values: ["FOR_SELF", "FOR_PEER", "NOT_SHARED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#peering NetworkConnectivityInternalRange#peering}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#peering NetworkConnectivityInternalRange#peering}
   */
   readonly peering: string;
   /**
   * An alternate to ipCidrRange. Can be set when trying to create a reservation that automatically finds a free range of the given size.
   * If both ipCidrRange and prefixLength are set, there is an error if the range sizes do not match. Can also be used during updates to change the range size.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#prefix_length NetworkConnectivityInternalRange#prefix_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#prefix_length NetworkConnectivityInternalRange#prefix_length}
   */
   readonly prefixLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#project NetworkConnectivityInternalRange#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#project NetworkConnectivityInternalRange#project}
   */
   readonly project?: string;
   /**
   * Optional. Can be set to narrow down or pick a different address space while searching for a free range.
   * If not set, defaults to the "10.0.0.0/8" address space. This can be used to search in other rfc-1918 address spaces like "172.16.0.0/12" and "192.168.0.0/16" or non-rfc-1918 address spaces used in the VPC.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#target_cidr_range NetworkConnectivityInternalRange#target_cidr_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#target_cidr_range NetworkConnectivityInternalRange#target_cidr_range}
   */
   readonly targetCidrRange?: string[];
   /**
   * The type of usage set for this InternalRange. Possible values: ["FOR_VPC", "EXTERNAL_TO_VPC"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#usage NetworkConnectivityInternalRange#usage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#usage NetworkConnectivityInternalRange#usage}
   */
   readonly usage: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#timeouts NetworkConnectivityInternalRange#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#timeouts NetworkConnectivityInternalRange#timeouts}
   */
   readonly timeouts?: NetworkConnectivityInternalRangeTimeouts;
 }
 export interface NetworkConnectivityInternalRangeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#create NetworkConnectivityInternalRange#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#create NetworkConnectivityInternalRange#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#delete NetworkConnectivityInternalRange#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#delete NetworkConnectivityInternalRange#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#update NetworkConnectivityInternalRange#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#update NetworkConnectivityInternalRange#update}
   */
   readonly update?: string;
 }
@@ -258,7 +253,7 @@ export class NetworkConnectivityInternalRangeTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range google_network_connectivity_internal_range}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range google_network_connectivity_internal_range}
 */
 export class NetworkConnectivityInternalRange extends cdktf.TerraformResource {
 
@@ -274,7 +269,7 @@ export class NetworkConnectivityInternalRange extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkConnectivityInternalRange resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkConnectivityInternalRange to import
-  * @param importFromId The id of the existing NetworkConnectivityInternalRange that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkConnectivityInternalRange that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkConnectivityInternalRange to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -286,7 +281,7 @@ export class NetworkConnectivityInternalRange extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/network_connectivity_internal_range google_network_connectivity_internal_range} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/network_connectivity_internal_range google_network_connectivity_internal_range} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -297,7 +292,7 @@ export class NetworkConnectivityInternalRange extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_connectivity_internal_range',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.32.0',
+        providerVersion: '5.33.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

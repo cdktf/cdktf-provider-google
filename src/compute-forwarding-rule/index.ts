@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule
+// https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -29,7 +24,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * forwarding rule. The L3_DEFAULT protocol requires 'allPorts' be set to
   * true.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#all_ports ComputeForwardingRule#all_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#all_ports ComputeForwardingRule#all_ports}
   */
   readonly allPorts?: boolean | cdktf.IResolvable;
   /**
@@ -43,13 +38,13 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * Otherwise only allows access from clients in the same region as the
   * internal load balancer.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#allow_global_access ComputeForwardingRule#allow_global_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#allow_global_access ComputeForwardingRule#allow_global_access}
   */
   readonly allowGlobalAccess?: boolean | cdktf.IResolvable;
   /**
   * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#allow_psc_global_access ComputeForwardingRule#allow_psc_global_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#allow_psc_global_access ComputeForwardingRule#allow_psc_global_access}
   */
   readonly allowPscGlobalAccess?: boolean | cdktf.IResolvable;
   /**
@@ -58,18 +53,18 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * Required for Internal TCP/UDP Load Balancing and Network Load Balancing;
   * must be omitted for all other load balancer types.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#backend_service ComputeForwardingRule#backend_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#backend_service ComputeForwardingRule#backend_service}
   */
   readonly backendService?: string;
   /**
   * An optional description of this resource. Provide this property when
   * you create the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#description ComputeForwardingRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#description ComputeForwardingRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#id ComputeForwardingRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#id ComputeForwardingRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -117,7 +112,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * When reading an 'IPAddress', the API always returns the IP
   * address number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#ip_address ComputeForwardingRule#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#ip_address ComputeForwardingRule#ip_address}
   */
   readonly ipAddress?: string;
   /**
@@ -136,7 +131,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * backend service with UNSPECIFIED protocol.
   * A forwarding rule with "L3_DEFAULT" IPProtocal cannot be attached to a backend service with TCP or UDP. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP", "L3_DEFAULT"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#ip_protocol ComputeForwardingRule#ip_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#ip_protocol ComputeForwardingRule#ip_protocol}
   */
   readonly ipProtocol?: string;
   /**
@@ -145,7 +140,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * 
   * If not set, the IPv4 address will be used by default. Possible values: ["IPV4", "IPV6"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#ip_version ComputeForwardingRule#ip_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#ip_version ComputeForwardingRule#ip_version}
   */
   readonly ipVersion?: string;
   /**
@@ -157,7 +152,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * This can only be set to true for load balancers that have their
   * 'loadBalancingScheme' set to 'INTERNAL'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#is_mirroring_collector ComputeForwardingRule#is_mirroring_collector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#is_mirroring_collector ComputeForwardingRule#is_mirroring_collector}
   */
   readonly isMirroringCollector?: boolean | cdktf.IResolvable;
   /**
@@ -167,7 +162,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#labels ComputeForwardingRule#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#labels ComputeForwardingRule#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -176,7 +171,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * For more information about forwarding rules, refer to
   * [Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: "EXTERNAL" Possible values: ["EXTERNAL", "EXTERNAL_MANAGED", "INTERNAL", "INTERNAL_MANAGED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#load_balancing_scheme ComputeForwardingRule#load_balancing_scheme}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#load_balancing_scheme ComputeForwardingRule#load_balancing_scheme}
   */
   readonly loadBalancingScheme?: string;
   /**
@@ -194,7 +189,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * APIs, the forwarding rule name must be a 1-20 characters string with
   * lowercase letters and numbers and must start with a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#name ComputeForwardingRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#name ComputeForwardingRule#name}
   */
   readonly name: string;
   /**
@@ -209,7 +204,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * For Private Service Connect forwarding rules that forward traffic to Google
   * APIs, a network must be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#network ComputeForwardingRule#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#network ComputeForwardingRule#network}
   */
   readonly network?: string;
   /**
@@ -225,13 +220,13 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * If 'IPAddress' is specified, this value must be equal to the
   * networkTier of the Address. Possible values: ["PREMIUM", "STANDARD"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#network_tier ComputeForwardingRule#network_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#network_tier ComputeForwardingRule#network_tier}
   */
   readonly networkTier?: string;
   /**
   * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#no_automate_dns_zone ComputeForwardingRule#no_automate_dns_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#no_automate_dns_zone ComputeForwardingRule#no_automate_dns_zone}
   */
   readonly noAutomateDnsZone?: boolean | cdktf.IResolvable;
   /**
@@ -260,7 +255,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * 
   * @pattern: \d+(?:-\d+)?
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#port_range ComputeForwardingRule#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#port_range ComputeForwardingRule#port_range}
   */
   readonly portRange?: string;
   /**
@@ -287,17 +282,17 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * 
   * @pattern: \d+(?:-\d+)?
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#ports ComputeForwardingRule#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#ports ComputeForwardingRule#ports}
   */
   readonly ports?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#project ComputeForwardingRule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#project ComputeForwardingRule#project}
   */
   readonly project?: string;
   /**
   * This is used in PSC consumer ForwardingRule to make terraform recreate the ForwardingRule when the status is closed
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#recreate_closed_psc ComputeForwardingRule#recreate_closed_psc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#recreate_closed_psc ComputeForwardingRule#recreate_closed_psc}
   */
   readonly recreateClosedPsc?: boolean | cdktf.IResolvable;
   /**
@@ -305,7 +300,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * 
   * This field is not applicable to global forwarding rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#region ComputeForwardingRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#region ComputeForwardingRule#region}
   */
   readonly region?: string;
   /**
@@ -322,13 +317,13 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * 
   * This field is only used for INTERNAL load balancing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#service_label ComputeForwardingRule#service_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#service_label ComputeForwardingRule#service_label}
   */
   readonly serviceLabel?: string;
   /**
   * If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#source_ip_ranges ComputeForwardingRule#source_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#source_ip_ranges ComputeForwardingRule#source_ip_ranges}
   */
   readonly sourceIpRanges?: string[];
   /**
@@ -340,7 +335,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * However, a subnetwork must be specified if the network is in custom subnet
   * mode or when creating external forwarding rule with IPv6.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#subnetwork ComputeForwardingRule#subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#subnetwork ComputeForwardingRule#subnetwork}
   */
   readonly subnetwork?: string;
   /**
@@ -358,19 +353,19 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * 
   * For Private Service Connect forwarding rules that forward traffic to managed services, the target must be a service attachment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#target ComputeForwardingRule#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#target ComputeForwardingRule#target}
   */
   readonly target?: string;
   /**
   * service_directory_registrations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#service_directory_registrations ComputeForwardingRule#service_directory_registrations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#service_directory_registrations ComputeForwardingRule#service_directory_registrations}
   */
   readonly serviceDirectoryRegistrations?: ComputeForwardingRuleServiceDirectoryRegistrations;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#timeouts ComputeForwardingRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#timeouts ComputeForwardingRule#timeouts}
   */
   readonly timeouts?: ComputeForwardingRuleTimeouts;
 }
@@ -378,13 +373,13 @@ export interface ComputeForwardingRuleServiceDirectoryRegistrations {
   /**
   * Service Directory namespace to register the forwarding rule under.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#namespace ComputeForwardingRule#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#namespace ComputeForwardingRule#namespace}
   */
   readonly namespace?: string;
   /**
   * Service Directory service to register the forwarding rule under.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#service ComputeForwardingRule#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#service ComputeForwardingRule#service}
   */
   readonly service?: string;
 }
@@ -497,15 +492,15 @@ export class ComputeForwardingRuleServiceDirectoryRegistrationsOutputReference e
 }
 export interface ComputeForwardingRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#create ComputeForwardingRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#create ComputeForwardingRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#delete ComputeForwardingRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#delete ComputeForwardingRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#update ComputeForwardingRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#update ComputeForwardingRule#update}
   */
   readonly update?: string;
 }
@@ -657,7 +652,7 @@ export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule google_compute_forwarding_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule google_compute_forwarding_rule}
 */
 export class ComputeForwardingRule extends cdktf.TerraformResource {
 
@@ -673,7 +668,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeForwardingRule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeForwardingRule to import
-  * @param importFromId The id of the existing ComputeForwardingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeForwardingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeForwardingRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -685,7 +680,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.32.0/docs/resources/compute_forwarding_rule google_compute_forwarding_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/compute_forwarding_rule google_compute_forwarding_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -696,7 +691,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.32.0',
+        providerVersion: '5.33.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
