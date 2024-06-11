@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamMember.FolderIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiammember"
 
 folderiammember.NewFolderIamMember(scope Construct, id *string, config FolderIamMemberConfig) FolderIamMember
 ```
@@ -405,7 +405,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.folderIamMember.FolderIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiammember"
 
 folderiammember.FolderIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.folderIamMember.FolderIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiammember"
 
 folderiammember.FolderIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ folderiammember.FolderIamMember_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.folderIamMember.FolderIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiammember"
 
 folderiammember.FolderIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ folderiammember.FolderIamMember_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.folderIamMember.FolderIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiammember"
 
 folderiammember.FolderIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -815,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderIamMember.FolderIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiammember"
 
 &folderiammember.FolderIamMemberCondition {
 	Expression: *string,
@@ -875,7 +875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderIamMember.FolderIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiammember"
 
 &folderiammember.FolderIamMemberConfig {
 	Connection: interface{},
@@ -888,7 +888,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
 	Folder: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.folderIamMember.FolderIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.folderIamMember.FolderIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -1054,7 +1054,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamMember.FolderIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/folderiammember"
 
 folderiammember.NewFolderIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderIamMemberConditionOutputReference
 ```
