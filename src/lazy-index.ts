@@ -248,6 +248,7 @@ Object.defineProperty(exports, 'computeNodeGroup', { get: function () { return r
 Object.defineProperty(exports, 'computeNodeTemplate', { get: function () { return require('./compute-node-template'); } });
 Object.defineProperty(exports, 'computePacketMirroring', { get: function () { return require('./compute-packet-mirroring'); } });
 Object.defineProperty(exports, 'computePerInstanceConfig', { get: function () { return require('./compute-per-instance-config'); } });
+Object.defineProperty(exports, 'computeProjectCloudArmorTier', { get: function () { return require('./compute-project-cloud-armor-tier'); } });
 Object.defineProperty(exports, 'computeProjectDefaultNetworkTier', { get: function () { return require('./compute-project-default-network-tier'); } });
 Object.defineProperty(exports, 'computeProjectMetadata', { get: function () { return require('./compute-project-metadata'); } });
 Object.defineProperty(exports, 'computeProjectMetadataItem', { get: function () { return require('./compute-project-metadata-item'); } });
@@ -726,6 +727,7 @@ Object.defineProperty(exports, 'redisInstance', { get: function () { return requ
 Object.defineProperty(exports, 'resourceManagerLien', { get: function () { return require('./resource-manager-lien'); } });
 Object.defineProperty(exports, 'sccEventThreatDetectionCustomModule', { get: function () { return require('./scc-event-threat-detection-custom-module'); } });
 Object.defineProperty(exports, 'sccFolderCustomModule', { get: function () { return require('./scc-folder-custom-module'); } });
+Object.defineProperty(exports, 'sccManagementOrganizationEventThreatDetectionCustomModule', { get: function () { return require('./scc-management-organization-event-threat-detection-custom-module'); } });
 Object.defineProperty(exports, 'sccMuteConfig', { get: function () { return require('./scc-mute-config'); } });
 Object.defineProperty(exports, 'sccNotificationConfig', { get: function () { return require('./scc-notification-config'); } });
 Object.defineProperty(exports, 'sccOrganizationCustomModule', { get: function () { return require('./scc-organization-custom-module'); } });
@@ -761,6 +763,7 @@ Object.defineProperty(exports, 'spannerDatabaseIamBinding', { get: function () {
 Object.defineProperty(exports, 'spannerDatabaseIamMember', { get: function () { return require('./spanner-database-iam-member'); } });
 Object.defineProperty(exports, 'spannerDatabaseIamPolicy', { get: function () { return require('./spanner-database-iam-policy'); } });
 Object.defineProperty(exports, 'spannerInstance', { get: function () { return require('./spanner-instance'); } });
+Object.defineProperty(exports, 'spannerInstanceConfig', { get: function () { return require('./spanner-instance-config'); } });
 Object.defineProperty(exports, 'spannerInstanceIamBinding', { get: function () { return require('./spanner-instance-iam-binding'); } });
 Object.defineProperty(exports, 'spannerInstanceIamMember', { get: function () { return require('./spanner-instance-iam-member'); } });
 Object.defineProperty(exports, 'spannerInstanceIamPolicy', { get: function () { return require('./spanner-instance-iam-policy'); } });
@@ -921,6 +924,7 @@ Object.defineProperty(exports, 'dataGoogleComputeResourcePolicy', { get: functio
 Object.defineProperty(exports, 'dataGoogleComputeRouter', { get: function () { return require('./data-google-compute-router'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRouterNat', { get: function () { return require('./data-google-compute-router-nat'); } });
 Object.defineProperty(exports, 'dataGoogleComputeRouterStatus', { get: function () { return require('./data-google-compute-router-status'); } });
+Object.defineProperty(exports, 'dataGoogleComputeSecurityPolicy', { get: function () { return require('./data-google-compute-security-policy'); } });
 Object.defineProperty(exports, 'dataGoogleComputeSnapshot', { get: function () { return require('./data-google-compute-snapshot'); } });
 Object.defineProperty(exports, 'dataGoogleComputeSnapshotIamPolicy', { get: function () { return require('./data-google-compute-snapshot-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleComputeSslCertificate', { get: function () { return require('./data-google-compute-ssl-certificate'); } });
