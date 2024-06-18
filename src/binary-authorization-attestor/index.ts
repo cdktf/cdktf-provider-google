@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor
+// https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +11,11 @@ export interface BinaryAuthorizationAttestorConfig extends cdktf.TerraformMetaAr
   * A descriptive comment. This field may be updated. The field may be
   * displayed in chooser dialogs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#description BinaryAuthorizationAttestor#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#description BinaryAuthorizationAttestor#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#id BinaryAuthorizationAttestor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#id BinaryAuthorizationAttestor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,23 +24,23 @@ export interface BinaryAuthorizationAttestorConfig extends cdktf.TerraformMetaAr
   /**
   * The resource name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#name BinaryAuthorizationAttestor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#name BinaryAuthorizationAttestor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#project BinaryAuthorizationAttestor#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#project BinaryAuthorizationAttestor#project}
   */
   readonly project?: string;
   /**
   * attestation_authority_note block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#attestation_authority_note BinaryAuthorizationAttestor#attestation_authority_note}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#attestation_authority_note BinaryAuthorizationAttestor#attestation_authority_note}
   */
   readonly attestationAuthorityNote: BinaryAuthorizationAttestorAttestationAuthorityNote;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#timeouts BinaryAuthorizationAttestor#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#timeouts BinaryAuthorizationAttestor#timeouts}
   */
   readonly timeouts?: BinaryAuthorizationAttestorTimeouts;
 }
@@ -54,7 +49,7 @@ export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPk
   * A PEM-encoded public key, as described in
   * 'https://tools.ietf.org/html/rfc7468#section-13'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#public_key_pem BinaryAuthorizationAttestor#public_key_pem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#public_key_pem BinaryAuthorizationAttestor#public_key_pem}
   */
   readonly publicKeyPem?: string;
   /**
@@ -64,7 +59,7 @@ export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPk
   * publicKeyPem (i.e. this algorithm must match that of the
   * public key).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#signature_algorithm BinaryAuthorizationAttestor#signature_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#signature_algorithm BinaryAuthorizationAttestor#signature_algorithm}
   */
   readonly signatureAlgorithm?: string;
 }
@@ -187,13 +182,13 @@ export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys {
   * upper-case hex. If id is provided by the caller, it will
   * be overwritten by the API-calculated ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#ascii_armored_pgp_public_key BinaryAuthorizationAttestor#ascii_armored_pgp_public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#ascii_armored_pgp_public_key BinaryAuthorizationAttestor#ascii_armored_pgp_public_key}
   */
   readonly asciiArmoredPgpPublicKey?: string;
   /**
   * A descriptive comment. This field may be updated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#comment BinaryAuthorizationAttestor#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#comment BinaryAuthorizationAttestor#comment}
   */
   readonly comment?: string;
   /**
@@ -204,7 +199,7 @@ export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys {
   * be imposed based on which public key type is encapsulated.
   * See the documentation on publicKey cases below for details.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#id BinaryAuthorizationAttestor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#id BinaryAuthorizationAttestor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -213,7 +208,7 @@ export interface BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys {
   /**
   * pkix_public_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#pkix_public_key BinaryAuthorizationAttestor#pkix_public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#pkix_public_key BinaryAuthorizationAttestor#pkix_public_key}
   */
   readonly pkixPublicKey?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey;
 }
@@ -424,7 +419,7 @@ export interface BinaryAuthorizationAttestorAttestationAuthorityNote {
   * ATTESTATION_AUTHORITY Occurrence that names a container image
   * and that links to this Note.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#note_reference BinaryAuthorizationAttestor#note_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#note_reference BinaryAuthorizationAttestor#note_reference}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -432,7 +427,7 @@ export interface BinaryAuthorizationAttestorAttestationAuthorityNote {
   /**
   * public_keys block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#public_keys BinaryAuthorizationAttestor#public_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#public_keys BinaryAuthorizationAttestor#public_keys}
   */
   readonly publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | cdktf.IResolvable;
 }
@@ -547,15 +542,15 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
 }
 export interface BinaryAuthorizationAttestorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#create BinaryAuthorizationAttestor#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#create BinaryAuthorizationAttestor#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#delete BinaryAuthorizationAttestor#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#delete BinaryAuthorizationAttestor#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#update BinaryAuthorizationAttestor#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#update BinaryAuthorizationAttestor#update}
   */
   readonly update?: string;
 }
@@ -707,7 +702,7 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor google_binary_authorization_attestor}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor google_binary_authorization_attestor}
 */
 export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
 
@@ -723,7 +718,7 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BinaryAuthorizationAttestor resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BinaryAuthorizationAttestor to import
-  * @param importFromId The id of the existing BinaryAuthorizationAttestor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BinaryAuthorizationAttestor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BinaryAuthorizationAttestor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -735,7 +730,7 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/binary_authorization_attestor google_binary_authorization_attestor} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/binary_authorization_attestor google_binary_authorization_attestor} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -746,7 +741,7 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
       terraformResourceType: 'google_binary_authorization_attestor',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.33.0',
+        providerVersion: '5.34.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

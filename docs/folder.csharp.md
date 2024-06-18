@@ -4,7 +4,7 @@
 
 ### Folder <a name="Folder" id="@cdktf/provider-google.folder.Folder"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder google_folder}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder google_folder}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folder.Folder.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the Folder to import.
 
 The id of the existing Folder that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -856,7 +856,7 @@ new FolderConfig {
 | <code><a href="#@cdktf/provider-google.folder.FolderConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folder.FolderConfig.property.displayName">DisplayName</a></code> | <code>string</code> | The folder's display name. |
 | <code><a href="#@cdktf/provider-google.folder.FolderConfig.property.parent">Parent</a></code> | <code>string</code> | The resource name of the parent Folder or Organization. Must be of the form folders/{folder_id} or organizations/{org_id}. |
-| <code><a href="#@cdktf/provider-google.folder.FolderConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#id Folder#id}. |
+| <code><a href="#@cdktf/provider-google.folder.FolderConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#id Folder#id}. |
 | <code><a href="#@cdktf/provider-google.folder.FolderConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a></code> | timeouts block. |
 
 ---
@@ -943,7 +943,7 @@ The folder's display name.
 
 A folder's display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#display_name Folder#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#display_name Folder#display_name}
 
 ---
 
@@ -957,7 +957,7 @@ public string Parent { get; set; }
 
 The resource name of the parent Folder or Organization. Must be of the form folders/{folder_id} or organizations/{org_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#parent Folder#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#parent Folder#parent}
 
 ---
 
@@ -969,7 +969,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#id Folder#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#id Folder#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -986,7 +986,7 @@ public FolderTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#timeouts Folder#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#timeouts Folder#timeouts}
 
 ---
 
@@ -1009,10 +1009,10 @@ new FolderTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.folder.FolderTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#create Folder#create}. |
-| <code><a href="#@cdktf/provider-google.folder.FolderTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#delete Folder#delete}. |
-| <code><a href="#@cdktf/provider-google.folder.FolderTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#read Folder#read}. |
-| <code><a href="#@cdktf/provider-google.folder.FolderTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#update Folder#update}. |
+| <code><a href="#@cdktf/provider-google.folder.FolderTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#create Folder#create}. |
+| <code><a href="#@cdktf/provider-google.folder.FolderTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#delete Folder#delete}. |
+| <code><a href="#@cdktf/provider-google.folder.FolderTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#read Folder#read}. |
+| <code><a href="#@cdktf/provider-google.folder.FolderTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#update Folder#update}. |
 
 ---
 
@@ -1024,7 +1024,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#create Folder#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#create Folder#create}.
 
 ---
 
@@ -1036,7 +1036,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#delete Folder#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#delete Folder#delete}.
 
 ---
 
@@ -1048,7 +1048,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#read Folder#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#read Folder#read}.
 
 ---
 
@@ -1060,7 +1060,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/folder#update Folder#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/folder#update Folder#update}.
 
 ---
 

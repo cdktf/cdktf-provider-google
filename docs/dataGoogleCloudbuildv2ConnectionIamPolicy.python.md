@@ -4,7 +4,7 @@
 
 ### DataGoogleCloudbuildv2ConnectionIamPolicy <a name="DataGoogleCloudbuildv2ConnectionIamPolicy" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy google_cloudbuildv2_connection_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy google_cloudbuildv2_connection_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer"></a>
 
@@ -39,10 +39,10 @@ dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPol
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#name DataGoogleCloudbuildv2ConnectionIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#id DataGoogleCloudbuildv2ConnectionIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#location DataGoogleCloudbuildv2ConnectionIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#project DataGoogleCloudbuildv2ConnectionIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#name DataGoogleCloudbuildv2ConnectionIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#id DataGoogleCloudbuildv2ConnectionIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#location DataGoogleCloudbuildv2ConnectionIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#project DataGoogleCloudbuildv2ConnectionIamPolicy#project}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#name DataGoogleCloudbuildv2ConnectionIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#name DataGoogleCloudbuildv2ConnectionIamPolicy#name}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#id DataGoogleCloudbuildv2ConnectionIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#id DataGoogleCloudbuildv2ConnectionIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -129,7 +129,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#location DataGoogleCloudbuildv2ConnectionIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#location DataGoogleCloudbuildv2ConnectionIamPolicy#location}.
 
 ---
 
@@ -137,7 +137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#project DataGoogleCloudbuildv2ConnectionIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#project DataGoogleCloudbuildv2ConnectionIamPolicy#project}.
 
 ---
 
@@ -517,7 +517,7 @@ The construct id used in the generated config for the DataGoogleCloudbuildv2Conn
 
 The id of the existing DataGoogleCloudbuildv2ConnectionIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -833,10 +833,10 @@ dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPol
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#name DataGoogleCloudbuildv2ConnectionIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#id DataGoogleCloudbuildv2ConnectionIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#location DataGoogleCloudbuildv2ConnectionIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#project DataGoogleCloudbuildv2ConnectionIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#name DataGoogleCloudbuildv2ConnectionIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#id DataGoogleCloudbuildv2ConnectionIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#location DataGoogleCloudbuildv2ConnectionIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#project DataGoogleCloudbuildv2ConnectionIamPolicy#project}. |
 
 ---
 
@@ -918,7 +918,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#name DataGoogleCloudbuildv2ConnectionIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#name DataGoogleCloudbuildv2ConnectionIamPolicy#name}.
 
 ---
 
@@ -930,7 +930,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#id DataGoogleCloudbuildv2ConnectionIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#id DataGoogleCloudbuildv2ConnectionIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -945,7 +945,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#location DataGoogleCloudbuildv2ConnectionIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#location DataGoogleCloudbuildv2ConnectionIamPolicy#location}.
 
 ---
 
@@ -957,7 +957,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloudbuildv2_connection_iam_policy#project DataGoogleCloudbuildv2ConnectionIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloudbuildv2_connection_iam_policy#project DataGoogleCloudbuildv2ConnectionIamPolicy#project}.
 
 ---
 

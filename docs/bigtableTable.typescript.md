@@ -4,7 +4,7 @@
 
 ### BigtableTable <a name="BigtableTable" id="@cdktf/provider-google.bigtableTable.BigtableTable"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table google_bigtable_table}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table google_bigtable_table}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableTable.BigtableTable.Initializer"></a>
 
@@ -73,8 +73,10 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.putAutomatedBackupPolicy">putAutomatedBackupPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.putColumnFamily">putColumnFamily</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.putTimeouts">putTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.resetAutomatedBackupPolicy">resetAutomatedBackupPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.resetChangeStreamRetention">resetChangeStreamRetention</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.resetColumnFamily">resetColumnFamily</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.resetDeletionProtection">resetDeletionProtection</a></code> | *No description.* |
@@ -373,6 +375,18 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
+##### `putAutomatedBackupPolicy` <a name="putAutomatedBackupPolicy" id="@cdktf/provider-google.bigtableTable.BigtableTable.putAutomatedBackupPolicy"></a>
+
+```typescript
+public putAutomatedBackupPolicy(value: BigtableTableAutomatedBackupPolicy): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.bigtableTable.BigtableTable.putAutomatedBackupPolicy.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy">BigtableTableAutomatedBackupPolicy</a>
+
+---
+
 ##### `putColumnFamily` <a name="putColumnFamily" id="@cdktf/provider-google.bigtableTable.BigtableTable.putColumnFamily"></a>
 
 ```typescript
@@ -396,6 +410,12 @@ public putTimeouts(value: BigtableTableTimeouts): void
 - *Type:* <a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts">BigtableTableTimeouts</a>
 
 ---
+
+##### `resetAutomatedBackupPolicy` <a name="resetAutomatedBackupPolicy" id="@cdktf/provider-google.bigtableTable.BigtableTable.resetAutomatedBackupPolicy"></a>
+
+```typescript
+public resetAutomatedBackupPolicy(): void
+```
 
 ##### `resetChangeStreamRetention` <a name="resetChangeStreamRetention" id="@cdktf/provider-google.bigtableTable.BigtableTable.resetChangeStreamRetention"></a>
 
@@ -542,7 +562,7 @@ The construct id used in the generated config for the BigtableTable to import.
 
 The id of the existing BigtableTable that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -572,8 +592,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.automatedBackupPolicy">automatedBackupPolicy</a></code> | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference">BigtableTableAutomatedBackupPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.columnFamily">columnFamily</a></code> | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableColumnFamilyList">BigtableTableColumnFamilyList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeoutsOutputReference">BigtableTableTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.automatedBackupPolicyInput">automatedBackupPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy">BigtableTableAutomatedBackupPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.changeStreamRetentionInput">changeStreamRetentionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.columnFamilyInput">columnFamilyInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.bigtableTable.BigtableTableColumnFamily">BigtableTableColumnFamily</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTable.property.deletionProtectionInput">deletionProtectionInput</a></code> | <code>string</code> | *No description.* |
@@ -735,6 +757,16 @@ public readonly provisioners: FileProvisioner | LocalExecProvisioner | RemoteExe
 
 ---
 
+##### `automatedBackupPolicy`<sup>Required</sup> <a name="automatedBackupPolicy" id="@cdktf/provider-google.bigtableTable.BigtableTable.property.automatedBackupPolicy"></a>
+
+```typescript
+public readonly automatedBackupPolicy: BigtableTableAutomatedBackupPolicyOutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference">BigtableTableAutomatedBackupPolicyOutputReference</a>
+
+---
+
 ##### `columnFamily`<sup>Required</sup> <a name="columnFamily" id="@cdktf/provider-google.bigtableTable.BigtableTable.property.columnFamily"></a>
 
 ```typescript
@@ -752,6 +784,16 @@ public readonly timeouts: BigtableTableTimeoutsOutputReference;
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeoutsOutputReference">BigtableTableTimeoutsOutputReference</a>
+
+---
+
+##### `automatedBackupPolicyInput`<sup>Optional</sup> <a name="automatedBackupPolicyInput" id="@cdktf/provider-google.bigtableTable.BigtableTable.property.automatedBackupPolicyInput"></a>
+
+```typescript
+public readonly automatedBackupPolicyInput: BigtableTableAutomatedBackupPolicy;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy">BigtableTableAutomatedBackupPolicy</a>
 
 ---
 
@@ -935,6 +977,53 @@ public readonly tfResourceType: string;
 
 ## Structs <a name="Structs" id="Structs"></a>
 
+### BigtableTableAutomatedBackupPolicy <a name="BigtableTableAutomatedBackupPolicy" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy.Initializer"></a>
+
+```typescript
+import { bigtableTable } from '@cdktf/provider-google'
+
+const bigtableTableAutomatedBackupPolicy: bigtableTable.BigtableTableAutomatedBackupPolicy = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy.property.frequency">frequency</a></code> | <code>string</code> | How frequently automated backups should occur. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy.property.retentionPeriod">retentionPeriod</a></code> | <code>string</code> | How long the automated backups should be retained. |
+
+---
+
+##### `frequency`<sup>Optional</sup> <a name="frequency" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy.property.frequency"></a>
+
+```typescript
+public readonly frequency: string;
+```
+
+- *Type:* string
+
+How frequently automated backups should occur.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#frequency BigtableTable#frequency}
+
+---
+
+##### `retentionPeriod`<sup>Optional</sup> <a name="retentionPeriod" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy.property.retentionPeriod"></a>
+
+```typescript
+public readonly retentionPeriod: string;
+```
+
+- *Type:* string
+
+How long the automated backups should be retained.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#retention_period BigtableTable#retention_period}
+
+---
+
 ### BigtableTableColumnFamily <a name="BigtableTableColumnFamily" id="@cdktf/provider-google.bigtableTable.BigtableTableColumnFamily"></a>
 
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableTable.BigtableTableColumnFamily.Initializer"></a>
@@ -963,7 +1052,7 @@ public readonly family: string;
 
 The name of the column family.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#family BigtableTable#family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#family BigtableTable#family}
 
 ---
 
@@ -990,10 +1079,11 @@ const bigtableTableConfig: bigtableTable.BigtableTableConfig = { ... }
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.instanceName">instanceName</a></code> | <code>string</code> | The name of the Bigtable instance. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.name">name</a></code> | <code>string</code> | The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.automatedBackupPolicy">automatedBackupPolicy</a></code> | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy">BigtableTableAutomatedBackupPolicy</a></code> | automated_backup_policy block. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.changeStreamRetention">changeStreamRetention</a></code> | <code>string</code> | Duration to retain change stream data for the table. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.columnFamily">columnFamily</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.bigtableTable.BigtableTableColumnFamily">BigtableTableColumnFamily</a>[]</code> | column_family block. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.deletionProtection">deletionProtection</a></code> | <code>string</code> | A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. |
-| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#id BigtableTable#id}. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#id BigtableTable#id}. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.project">project</a></code> | <code>string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.splitKeys">splitKeys</a></code> | <code>string[]</code> | A list of predefined keys to split the table on. |
 | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts">BigtableTableTimeouts</a></code> | timeouts block. |
@@ -1080,7 +1170,7 @@ public readonly instanceName: string;
 
 The name of the Bigtable instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#instance_name BigtableTable#instance_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#instance_name BigtableTable#instance_name}
 
 ---
 
@@ -1094,7 +1184,21 @@ public readonly name: string;
 
 The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#name BigtableTable#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#name BigtableTable#name}
+
+---
+
+##### `automatedBackupPolicy`<sup>Optional</sup> <a name="automatedBackupPolicy" id="@cdktf/provider-google.bigtableTable.BigtableTableConfig.property.automatedBackupPolicy"></a>
+
+```typescript
+public readonly automatedBackupPolicy: BigtableTableAutomatedBackupPolicy;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy">BigtableTableAutomatedBackupPolicy</a>
+
+automated_backup_policy block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#automated_backup_policy BigtableTable#automated_backup_policy}
 
 ---
 
@@ -1110,7 +1214,7 @@ Duration to retain change stream data for the table.
 
 Set to 0 to disable. Must be between 1 and 7 days.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#change_stream_retention BigtableTable#change_stream_retention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#change_stream_retention BigtableTable#change_stream_retention}
 
 ---
 
@@ -1124,7 +1228,7 @@ public readonly columnFamily: IResolvable | BigtableTableColumnFamily[];
 
 column_family block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#column_family BigtableTable#column_family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#column_family BigtableTable#column_family}
 
 ---
 
@@ -1138,7 +1242,7 @@ public readonly deletionProtection: string;
 
 A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#deletion_protection BigtableTable#deletion_protection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#deletion_protection BigtableTable#deletion_protection}
 
 ---
 
@@ -1150,7 +1254,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#id BigtableTable#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#id BigtableTable#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1169,7 +1273,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#project BigtableTable#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#project BigtableTable#project}
 
 ---
 
@@ -1185,7 +1289,7 @@ A list of predefined keys to split the table on.
 
 !> Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#split_keys BigtableTable#split_keys}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#split_keys BigtableTable#split_keys}
 
 ---
 
@@ -1199,7 +1303,7 @@ public readonly timeouts: BigtableTableTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#timeouts BigtableTable#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#timeouts BigtableTable#timeouts}
 
 ---
 
@@ -1217,8 +1321,8 @@ const bigtableTableTimeouts: bigtableTable.BigtableTableTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#create BigtableTable#create}. |
-| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#update BigtableTable#update}. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#create BigtableTable#create}. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#update BigtableTable#update}. |
 
 ---
 
@@ -1230,7 +1334,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#create BigtableTable#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#create BigtableTable#create}.
 
 ---
 
@@ -1242,11 +1346,318 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/bigtable_table#update BigtableTable#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/bigtable_table#update BigtableTable#update}.
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### BigtableTableAutomatedBackupPolicyOutputReference <a name="BigtableTableAutomatedBackupPolicyOutputReference" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.Initializer"></a>
+
+```typescript
+import { bigtableTable } from '@cdktf/provider-google'
+
+new bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.resetFrequency">resetFrequency</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.resetRetentionPeriod">resetRetentionPeriod</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetFrequency` <a name="resetFrequency" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.resetFrequency"></a>
+
+```typescript
+public resetFrequency(): void
+```
+
+##### `resetRetentionPeriod` <a name="resetRetentionPeriod" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.resetRetentionPeriod"></a>
+
+```typescript
+public resetRetentionPeriod(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.frequencyInput">frequencyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.retentionPeriodInput">retentionPeriodInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.frequency">frequency</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.retentionPeriod">retentionPeriod</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy">BigtableTableAutomatedBackupPolicy</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `frequencyInput`<sup>Optional</sup> <a name="frequencyInput" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.frequencyInput"></a>
+
+```typescript
+public readonly frequencyInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `retentionPeriodInput`<sup>Optional</sup> <a name="retentionPeriodInput" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.retentionPeriodInput"></a>
+
+```typescript
+public readonly retentionPeriodInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `frequency`<sup>Required</sup> <a name="frequency" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.frequency"></a>
+
+```typescript
+public readonly frequency: string;
+```
+
+- *Type:* string
+
+---
+
+##### `retentionPeriod`<sup>Required</sup> <a name="retentionPeriod" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.retentionPeriod"></a>
+
+```typescript
+public readonly retentionPeriod: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicyOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: BigtableTableAutomatedBackupPolicy;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.bigtableTable.BigtableTableAutomatedBackupPolicy">BigtableTableAutomatedBackupPolicy</a>
+
+---
+
 
 ### BigtableTableColumnFamilyList <a name="BigtableTableColumnFamilyList" id="@cdktf/provider-google.bigtableTable.BigtableTableColumnFamilyList"></a>
 

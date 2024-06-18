@@ -4,12 +4,12 @@
 
 ### NetappActiveDirectory <a name="NetappActiveDirectory" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory google_netapp_active_directory}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory google_netapp_active_directory}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirectory"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappactivedirectory"
 
 netappactivedirectory.NewNetappActiveDirectory(scope Construct, id *string, config NetappActiveDirectoryConfig) NetappActiveDirectory
 ```
@@ -74,6 +74,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.putTimeouts">PutTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.resetAdministrators">ResetAdministrators</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.resetAesEncryption">ResetAesEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.resetBackupOperators">ResetBackupOperators</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.resetDescription">ResetDescription</a></code> | *No description.* |
@@ -392,6 +393,12 @@ func PutTimeouts(value NetappActiveDirectoryTimeouts)
 
 ---
 
+##### `ResetAdministrators` <a name="ResetAdministrators" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.resetAdministrators"></a>
+
+```go
+func ResetAdministrators()
+```
+
 ##### `ResetAesEncryption` <a name="ResetAesEncryption" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.resetAesEncryption"></a>
 
 ```go
@@ -496,7 +503,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirectory"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappactivedirectory"
 
 netappactivedirectory.NetappActiveDirectory_IsConstruct(x interface{}) *bool
 ```
@@ -528,7 +535,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirectory"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappactivedirectory"
 
 netappactivedirectory.NetappActiveDirectory_IsTerraformElement(x interface{}) *bool
 ```
@@ -542,7 +549,7 @@ netappactivedirectory.NetappActiveDirectory_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirectory"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappactivedirectory"
 
 netappactivedirectory.NetappActiveDirectory_IsTerraformResource(x interface{}) *bool
 ```
@@ -556,7 +563,7 @@ netappactivedirectory.NetappActiveDirectory_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirectory"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappactivedirectory"
 
 netappactivedirectory.NetappActiveDirectory_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -585,7 +592,7 @@ The construct id used in the generated config for the NetappActiveDirectory to i
 
 The id of the existing NetappActiveDirectory that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -621,6 +628,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.stateDetails">StateDetails</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.terraformLabels">TerraformLabels</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeoutsOutputReference">NetappActiveDirectoryTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.administratorsInput">AdministratorsInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.aesEncryptionInput">AesEncryptionInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.backupOperatorsInput">BackupOperatorsInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.descriptionInput">DescriptionInput</a></code> | <code>*string</code> | *No description.* |
@@ -643,6 +651,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.siteInput">SiteInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.usernameInput">UsernameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.administrators">Administrators</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.aesEncryption">AesEncryption</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.backupOperators">BackupOperators</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.description">Description</a></code> | <code>*string</code> | *No description.* |
@@ -869,6 +878,16 @@ func Timeouts() NetappActiveDirectoryTimeoutsOutputReference
 
 ---
 
+##### `AdministratorsInput`<sup>Optional</sup> <a name="AdministratorsInput" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.administratorsInput"></a>
+
+```go
+func AdministratorsInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
 ##### `AesEncryptionInput`<sup>Optional</sup> <a name="AesEncryptionInput" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.aesEncryptionInput"></a>
 
 ```go
@@ -1086,6 +1105,16 @@ func UsernameInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `Administrators`<sup>Required</sup> <a name="Administrators" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectory.property.administrators"></a>
+
+```go
+func Administrators() *[]*string
+```
+
+- *Type:* *[]*string
 
 ---
 
@@ -1324,7 +1353,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirectory"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappactivedirectory"
 
 &netappactivedirectory.NetappActiveDirectoryConfig {
 	Connection: interface{},
@@ -1341,6 +1370,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirecto
 	NetBiosPrefix: *string,
 	Password: *string,
 	Username: *string,
+	Administrators: *[]*string,
 	AesEncryption: interface{},
 	BackupOperators: *[]*string,
 	Description: *string,
@@ -1355,7 +1385,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirecto
 	Project: *string,
 	SecurityOperators: *[]*string,
 	Site: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.netappActiveDirectory.NetappActiveDirectoryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.netappActiveDirectory.NetappActiveDirectoryTimeouts,
 }
 ```
 
@@ -1377,18 +1407,19 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirecto
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.netBiosPrefix">NetBiosPrefix</a></code> | <code>*string</code> | NetBIOS name prefix of the server to be created. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.password">Password</a></code> | <code>*string</code> | Password for specified username. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.username">Username</a></code> | <code>*string</code> | Username for the Active Directory account with permissions to create the compute account within the specified organizational unit. |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.administrators">Administrators</a></code> | <code>*[]*string</code> | Domain user accounts to be added to the local Administrators group of the SMB service. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.aesEncryption">AesEncryption</a></code> | <code>interface{}</code> | Enables AES-128 and AES-256 encryption for Kerberos-based communication with Active Directory. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.backupOperators">BackupOperators</a></code> | <code>*[]*string</code> | Domain user/group accounts to be added to the Backup Operators group of the SMB service. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.encryptDcConnections">EncryptDcConnections</a></code> | <code>interface{}</code> | If enabled, traffic between the SMB server to Domain Controller (DC) will be encrypted. |
-| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#id NetappActiveDirectory#id}. |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#id NetappActiveDirectory#id}. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.kdcHostname">KdcHostname</a></code> | <code>*string</code> | Hostname of the Active Directory server used as Kerberos Key Distribution Center. Only requried for volumes using kerberized NFSv4.1. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.kdcIp">KdcIp</a></code> | <code>*string</code> | IP address of the Active Directory server used as Kerberos Key Distribution Center. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", "purpose": "testing" }'. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.ldapSigning">LdapSigning</a></code> | <code>interface{}</code> | Specifies whether or not the LDAP traffic needs to be signed. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.nfsUsersWithLdap">NfsUsersWithLdap</a></code> | <code>interface{}</code> | Local UNIX users on clients without valid user information in Active Directory are blocked from access to LDAP enabled volumes. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.organizationalUnit">OrganizationalUnit</a></code> | <code>*string</code> | Name of the Organizational Unit where you intend to create the computer account for NetApp Volumes. |
-| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#project NetappActiveDirectory#project}. |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#project NetappActiveDirectory#project}. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.securityOperators">SecurityOperators</a></code> | <code>*[]*string</code> | Domain accounts that require elevated privileges such as 'SeSecurityPrivilege' to manage security logs. Comma-separated list. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.site">Site</a></code> | <code>*string</code> | Specifies an Active Directory site to manage domain controller selection. |
 | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeouts">NetappActiveDirectoryTimeouts</a></code> | timeouts block. |
@@ -1475,7 +1506,7 @@ Dns *string
 
 Comma separated list of DNS server IP addresses for the Active Directory domain.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#dns NetappActiveDirectory#dns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#dns NetappActiveDirectory#dns}
 
 ---
 
@@ -1489,7 +1520,7 @@ Domain *string
 
 Fully qualified domain name for the Active Directory domain.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#domain NetappActiveDirectory#domain}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#domain NetappActiveDirectory#domain}
 
 ---
 
@@ -1503,7 +1534,7 @@ Location *string
 
 Name of the region for the policy to apply to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#location NetappActiveDirectory#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#location NetappActiveDirectory#location}
 
 ---
 
@@ -1517,7 +1548,7 @@ Name *string
 
 The resource name of the Active Directory pool. Needs to be unique per location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#name NetappActiveDirectory#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#name NetappActiveDirectory#name}
 
 ---
 
@@ -1534,7 +1565,7 @@ NetBIOS name prefix of the server to be created.
 A five-character random ID is generated automatically, for example, -6f9a, and appended to the prefix. The full UNC share path will have the following format:
 '\NetBIOS_PREFIX-ABCD.DOMAIN_NAME\SHARE_NAME'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#net_bios_prefix NetappActiveDirectory#net_bios_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#net_bios_prefix NetappActiveDirectory#net_bios_prefix}
 
 ---
 
@@ -1550,7 +1581,7 @@ Password for specified username.
 
 Note - Manual changes done to the password will not be detected. Terraform will not re-apply the password, unless you use a new password in Terraform.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#password NetappActiveDirectory#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#password NetappActiveDirectory#password}
 
 ---
 
@@ -1564,7 +1595,23 @@ Username *string
 
 Username for the Active Directory account with permissions to create the compute account within the specified organizational unit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#username NetappActiveDirectory#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#username NetappActiveDirectory#username}
+
+---
+
+##### `Administrators`<sup>Optional</sup> <a name="Administrators" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryConfig.property.administrators"></a>
+
+```go
+Administrators *[]*string
+```
+
+- *Type:* *[]*string
+
+Domain user accounts to be added to the local Administrators group of the SMB service.
+
+Comma-separated list of domain users or groups. The Domain Admin group is automatically added when the service joins your domain as a hidden group.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#administrators NetappActiveDirectory#administrators}
 
 ---
 
@@ -1578,7 +1625,7 @@ AesEncryption interface{}
 
 Enables AES-128 and AES-256 encryption for Kerberos-based communication with Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#aes_encryption NetappActiveDirectory#aes_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#aes_encryption NetappActiveDirectory#aes_encryption}
 
 ---
 
@@ -1594,7 +1641,7 @@ Domain user/group accounts to be added to the Backup Operators group of the SMB 
 
 The Backup Operators group allows members to backup and restore files regardless of whether they have read or write access to the files. Comma-separated list.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#backup_operators NetappActiveDirectory#backup_operators}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#backup_operators NetappActiveDirectory#backup_operators}
 
 ---
 
@@ -1608,7 +1655,7 @@ Description *string
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#description NetappActiveDirectory#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#description NetappActiveDirectory#description}
 
 ---
 
@@ -1622,7 +1669,7 @@ EncryptDcConnections interface{}
 
 If enabled, traffic between the SMB server to Domain Controller (DC) will be encrypted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#encrypt_dc_connections NetappActiveDirectory#encrypt_dc_connections}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#encrypt_dc_connections NetappActiveDirectory#encrypt_dc_connections}
 
 ---
 
@@ -1634,7 +1681,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#id NetappActiveDirectory#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#id NetappActiveDirectory#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1651,7 +1698,7 @@ KdcHostname *string
 
 Hostname of the Active Directory server used as Kerberos Key Distribution Center. Only requried for volumes using kerberized NFSv4.1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#kdc_hostname NetappActiveDirectory#kdc_hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#kdc_hostname NetappActiveDirectory#kdc_hostname}
 
 ---
 
@@ -1665,7 +1712,7 @@ KdcIp *string
 
 IP address of the Active Directory server used as Kerberos Key Distribution Center.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#kdc_ip NetappActiveDirectory#kdc_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#kdc_ip NetappActiveDirectory#kdc_ip}
 
 ---
 
@@ -1682,7 +1729,7 @@ Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#labels NetappActiveDirectory#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#labels NetappActiveDirectory#labels}
 
 ---
 
@@ -1696,7 +1743,7 @@ LdapSigning interface{}
 
 Specifies whether or not the LDAP traffic needs to be signed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#ldap_signing NetappActiveDirectory#ldap_signing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#ldap_signing NetappActiveDirectory#ldap_signing}
 
 ---
 
@@ -1712,7 +1759,7 @@ Local UNIX users on clients without valid user information in Active Directory a
 
 This option can be used to temporarily switch such volumes to AUTH_SYS authentication (user ID + 1-16 groups).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#nfs_users_with_ldap NetappActiveDirectory#nfs_users_with_ldap}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#nfs_users_with_ldap NetappActiveDirectory#nfs_users_with_ldap}
 
 ---
 
@@ -1728,7 +1775,7 @@ Name of the Organizational Unit where you intend to create the computer account 
 
 Defaults to 'CN=Computers' if left empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#organizational_unit NetappActiveDirectory#organizational_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#organizational_unit NetappActiveDirectory#organizational_unit}
 
 ---
 
@@ -1740,7 +1787,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#project NetappActiveDirectory#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#project NetappActiveDirectory#project}.
 
 ---
 
@@ -1754,7 +1801,7 @@ SecurityOperators *[]*string
 
 Domain accounts that require elevated privileges such as 'SeSecurityPrivilege' to manage security logs. Comma-separated list.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#security_operators NetappActiveDirectory#security_operators}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#security_operators NetappActiveDirectory#security_operators}
 
 ---
 
@@ -1770,7 +1817,7 @@ Specifies an Active Directory site to manage domain controller selection.
 
 Use when Active Directory domain controllers in multiple regions are configured. Defaults to 'Default-First-Site-Name' if left empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#site NetappActiveDirectory#site}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#site NetappActiveDirectory#site}
 
 ---
 
@@ -1784,7 +1831,7 @@ Timeouts NetappActiveDirectoryTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#timeouts NetappActiveDirectory#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#timeouts NetappActiveDirectory#timeouts}
 
 ---
 
@@ -1793,7 +1840,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirectory"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappactivedirectory"
 
 &netappactivedirectory.NetappActiveDirectoryTimeouts {
 	Create: *string,
@@ -1806,9 +1853,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirecto
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#create NetappActiveDirectory#create}. |
-| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#delete NetappActiveDirectory#delete}. |
-| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#update NetappActiveDirectory#update}. |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#create NetappActiveDirectory#create}. |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#delete NetappActiveDirectory#delete}. |
+| <code><a href="#@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#update NetappActiveDirectory#update}. |
 
 ---
 
@@ -1820,7 +1867,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#create NetappActiveDirectory#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#create NetappActiveDirectory#create}.
 
 ---
 
@@ -1832,7 +1879,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#delete NetappActiveDirectory#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#delete NetappActiveDirectory#delete}.
 
 ---
 
@@ -1844,7 +1891,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/netapp_active_directory#update NetappActiveDirectory#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/netapp_active_directory#update NetappActiveDirectory#update}.
 
 ---
 
@@ -1855,7 +1902,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.netappActiveDirectory.NetappActiveDirectoryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/netappactivedirectory"
+import "github.com/cdktf/cdktf-provider-google-go/google/netappactivedirectory"
 
 netappactivedirectory.NewNetappActiveDirectoryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappActiveDirectoryTimeoutsOutputReference
 ```

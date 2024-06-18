@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection
+// https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,17 +13,17 @@ export interface Cloudbuildv2ConnectionConfig extends cdktf.TerraformMetaArgumen
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#annotations Cloudbuildv2Connection#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#annotations Cloudbuildv2Connection#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * If disabled is set to true, functionality is disabled for this connection. Repository based API methods and webhooks processing for repositories in this connection will be disabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#disabled Cloudbuildv2Connection#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#disabled Cloudbuildv2Connection#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#id Cloudbuildv2Connection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#id Cloudbuildv2Connection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,41 +32,53 @@ export interface Cloudbuildv2ConnectionConfig extends cdktf.TerraformMetaArgumen
   /**
   * The location for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#location Cloudbuildv2Connection#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#location Cloudbuildv2Connection#location}
   */
   readonly location: string;
   /**
   * Immutable. The resource name of the connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#name Cloudbuildv2Connection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#name Cloudbuildv2Connection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#project Cloudbuildv2Connection#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#project Cloudbuildv2Connection#project}
   */
   readonly project?: string;
   /**
+  * bitbucket_cloud_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#bitbucket_cloud_config Cloudbuildv2Connection#bitbucket_cloud_config}
+  */
+  readonly bitbucketCloudConfig?: Cloudbuildv2ConnectionBitbucketCloudConfig;
+  /**
+  * bitbucket_data_center_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#bitbucket_data_center_config Cloudbuildv2Connection#bitbucket_data_center_config}
+  */
+  readonly bitbucketDataCenterConfig?: Cloudbuildv2ConnectionBitbucketDataCenterConfig;
+  /**
   * github_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#github_config Cloudbuildv2Connection#github_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#github_config Cloudbuildv2Connection#github_config}
   */
   readonly githubConfig?: Cloudbuildv2ConnectionGithubConfig;
   /**
   * github_enterprise_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#github_enterprise_config Cloudbuildv2Connection#github_enterprise_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#github_enterprise_config Cloudbuildv2Connection#github_enterprise_config}
   */
   readonly githubEnterpriseConfig?: Cloudbuildv2ConnectionGithubEnterpriseConfig;
   /**
   * gitlab_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#gitlab_config Cloudbuildv2Connection#gitlab_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#gitlab_config Cloudbuildv2Connection#gitlab_config}
   */
   readonly gitlabConfig?: Cloudbuildv2ConnectionGitlabConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#timeouts Cloudbuildv2Connection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#timeouts Cloudbuildv2Connection#timeouts}
   */
   readonly timeouts?: Cloudbuildv2ConnectionTimeouts;
 }
@@ -160,11 +167,891 @@ export class Cloudbuildv2ConnectionInstallationStateList extends cdktf.ComplexLi
     return new Cloudbuildv2ConnectionInstallationStateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredential {
+  /**
+  * Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly userTokenSecretVersion: string;
+}
+
+export function cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialToTerraform(struct?: Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    user_token_secret_version: cdktf.stringToTerraform(struct!.userTokenSecretVersion),
+  }
+}
+
+
+export function cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialToHclTerraform(struct?: Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._userTokenSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userTokenSecretVersion = this._userTokenSecretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._userTokenSecretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._userTokenSecretVersion = value.userTokenSecretVersion;
+    }
+  }
+
+  // user_token_secret_version - computed: false, optional: false, required: true
+  private _userTokenSecretVersion?: string; 
+  public get userTokenSecretVersion() {
+    return this.getStringAttribute('user_token_secret_version');
+  }
+  public set userTokenSecretVersion(value: string) {
+    this._userTokenSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTokenSecretVersionInput() {
+    return this._userTokenSecretVersion;
+  }
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+}
+export interface Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredential {
+  /**
+  * Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly userTokenSecretVersion: string;
+}
+
+export function cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialToTerraform(struct?: Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    user_token_secret_version: cdktf.stringToTerraform(struct!.userTokenSecretVersion),
+  }
+}
+
+
+export function cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialToHclTerraform(struct?: Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._userTokenSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userTokenSecretVersion = this._userTokenSecretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._userTokenSecretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._userTokenSecretVersion = value.userTokenSecretVersion;
+    }
+  }
+
+  // user_token_secret_version - computed: false, optional: false, required: true
+  private _userTokenSecretVersion?: string; 
+  public get userTokenSecretVersion() {
+    return this.getStringAttribute('user_token_secret_version');
+  }
+  public set userTokenSecretVersion(value: string) {
+    this._userTokenSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTokenSecretVersionInput() {
+    return this._userTokenSecretVersion;
+  }
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+}
+export interface Cloudbuildv2ConnectionBitbucketCloudConfig {
+  /**
+  * Required. Immutable. SecretManager resource containing the webhook secret used to verify webhook events, formatted as 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#webhook_secret_secret_version Cloudbuildv2Connection#webhook_secret_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly webhookSecretSecretVersion: string;
+  /**
+  * The Bitbucket Cloud Workspace ID to be connected to Google Cloud Platform.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#workspace Cloudbuildv2Connection#workspace}
+  */
+  readonly workspace: string;
+  /**
+  * authorizer_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#authorizer_credential Cloudbuildv2Connection#authorizer_credential}
+  */
+  readonly authorizerCredential: Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredential;
+  /**
+  * read_authorizer_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#read_authorizer_credential Cloudbuildv2Connection#read_authorizer_credential}
+  */
+  readonly readAuthorizerCredential: Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredential;
+}
+
+export function cloudbuildv2ConnectionBitbucketCloudConfigToTerraform(struct?: Cloudbuildv2ConnectionBitbucketCloudConfigOutputReference | Cloudbuildv2ConnectionBitbucketCloudConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    webhook_secret_secret_version: cdktf.stringToTerraform(struct!.webhookSecretSecretVersion),
+    workspace: cdktf.stringToTerraform(struct!.workspace),
+    authorizer_credential: cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialToTerraform(struct!.authorizerCredential),
+    read_authorizer_credential: cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialToTerraform(struct!.readAuthorizerCredential),
+  }
+}
+
+
+export function cloudbuildv2ConnectionBitbucketCloudConfigToHclTerraform(struct?: Cloudbuildv2ConnectionBitbucketCloudConfigOutputReference | Cloudbuildv2ConnectionBitbucketCloudConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    webhook_secret_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.webhookSecretSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    workspace: {
+      value: cdktf.stringToHclTerraform(struct!.workspace),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    authorizer_credential: {
+      value: cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialToHclTerraform(struct!.authorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialList",
+    },
+    read_authorizer_credential: {
+      value: cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialToHclTerraform(struct!.readAuthorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class Cloudbuildv2ConnectionBitbucketCloudConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): Cloudbuildv2ConnectionBitbucketCloudConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._webhookSecretSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webhookSecretSecretVersion = this._webhookSecretSecretVersion;
+    }
+    if (this._workspace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.workspace = this._workspace;
+    }
+    if (this._authorizerCredential?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authorizerCredential = this._authorizerCredential?.internalValue;
+    }
+    if (this._readAuthorizerCredential?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readAuthorizerCredential = this._readAuthorizerCredential?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: Cloudbuildv2ConnectionBitbucketCloudConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._webhookSecretSecretVersion = undefined;
+      this._workspace = undefined;
+      this._authorizerCredential.internalValue = undefined;
+      this._readAuthorizerCredential.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._webhookSecretSecretVersion = value.webhookSecretSecretVersion;
+      this._workspace = value.workspace;
+      this._authorizerCredential.internalValue = value.authorizerCredential;
+      this._readAuthorizerCredential.internalValue = value.readAuthorizerCredential;
+    }
+  }
+
+  // webhook_secret_secret_version - computed: false, optional: false, required: true
+  private _webhookSecretSecretVersion?: string; 
+  public get webhookSecretSecretVersion() {
+    return this.getStringAttribute('webhook_secret_secret_version');
+  }
+  public set webhookSecretSecretVersion(value: string) {
+    this._webhookSecretSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookSecretSecretVersionInput() {
+    return this._webhookSecretSecretVersion;
+  }
+
+  // workspace - computed: false, optional: false, required: true
+  private _workspace?: string; 
+  public get workspace() {
+    return this.getStringAttribute('workspace');
+  }
+  public set workspace(value: string) {
+    this._workspace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceInput() {
+    return this._workspace;
+  }
+
+  // authorizer_credential - computed: false, optional: false, required: true
+  private _authorizerCredential = new Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredentialOutputReference(this, "authorizer_credential");
+  public get authorizerCredential() {
+    return this._authorizerCredential;
+  }
+  public putAuthorizerCredential(value: Cloudbuildv2ConnectionBitbucketCloudConfigAuthorizerCredential) {
+    this._authorizerCredential.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizerCredentialInput() {
+    return this._authorizerCredential.internalValue;
+  }
+
+  // read_authorizer_credential - computed: false, optional: false, required: true
+  private _readAuthorizerCredential = new Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredentialOutputReference(this, "read_authorizer_credential");
+  public get readAuthorizerCredential() {
+    return this._readAuthorizerCredential;
+  }
+  public putReadAuthorizerCredential(value: Cloudbuildv2ConnectionBitbucketCloudConfigReadAuthorizerCredential) {
+    this._readAuthorizerCredential.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readAuthorizerCredentialInput() {
+    return this._readAuthorizerCredential.internalValue;
+  }
+}
+export interface Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredential {
+  /**
+  * Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly userTokenSecretVersion: string;
+}
+
+export function cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialToTerraform(struct?: Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    user_token_secret_version: cdktf.stringToTerraform(struct!.userTokenSecretVersion),
+  }
+}
+
+
+export function cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialToHclTerraform(struct?: Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._userTokenSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userTokenSecretVersion = this._userTokenSecretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._userTokenSecretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._userTokenSecretVersion = value.userTokenSecretVersion;
+    }
+  }
+
+  // user_token_secret_version - computed: false, optional: false, required: true
+  private _userTokenSecretVersion?: string; 
+  public get userTokenSecretVersion() {
+    return this.getStringAttribute('user_token_secret_version');
+  }
+  public set userTokenSecretVersion(value: string) {
+    this._userTokenSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTokenSecretVersionInput() {
+    return this._userTokenSecretVersion;
+  }
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+}
+export interface Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredential {
+  /**
+  * Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly userTokenSecretVersion: string;
+}
+
+export function cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialToTerraform(struct?: Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    user_token_secret_version: cdktf.stringToTerraform(struct!.userTokenSecretVersion),
+  }
+}
+
+
+export function cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialToHclTerraform(struct?: Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialOutputReference | Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._userTokenSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userTokenSecretVersion = this._userTokenSecretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._userTokenSecretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._userTokenSecretVersion = value.userTokenSecretVersion;
+    }
+  }
+
+  // user_token_secret_version - computed: false, optional: false, required: true
+  private _userTokenSecretVersion?: string; 
+  public get userTokenSecretVersion() {
+    return this.getStringAttribute('user_token_secret_version');
+  }
+  public set userTokenSecretVersion(value: string) {
+    this._userTokenSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTokenSecretVersionInput() {
+    return this._userTokenSecretVersion;
+  }
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+}
+export interface Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfig {
+  /**
+  * Required. The Service Directory service name. Format: projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#service Cloudbuildv2Connection#service}
+  */
+  readonly service: string;
+}
+
+export function cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigToTerraform(struct?: Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigOutputReference | Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    service: cdktf.stringToTerraform(struct!.service),
+  }
+}
+
+
+export function cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigToHclTerraform(struct?: Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigOutputReference | Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._service !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._service = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._service = value.service;
+    }
+  }
+
+  // service - computed: false, optional: false, required: true
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+}
+export interface Cloudbuildv2ConnectionBitbucketDataCenterConfig {
+  /**
+  * The URI of the Bitbucket Data Center host this connection is for.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#host_uri Cloudbuildv2Connection#host_uri}
+  */
+  readonly hostUri: string;
+  /**
+  * SSL certificate to use for requests to the Bitbucket Data Center.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#ssl_ca Cloudbuildv2Connection#ssl_ca}
+  */
+  readonly sslCa?: string;
+  /**
+  * Required. Immutable. SecretManager resource containing the webhook secret used to verify webhook events, formatted as 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#webhook_secret_secret_version Cloudbuildv2Connection#webhook_secret_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly webhookSecretSecretVersion: string;
+  /**
+  * authorizer_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#authorizer_credential Cloudbuildv2Connection#authorizer_credential}
+  */
+  readonly authorizerCredential: Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredential;
+  /**
+  * read_authorizer_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#read_authorizer_credential Cloudbuildv2Connection#read_authorizer_credential}
+  */
+  readonly readAuthorizerCredential: Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredential;
+  /**
+  * service_directory_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#service_directory_config Cloudbuildv2Connection#service_directory_config}
+  */
+  readonly serviceDirectoryConfig?: Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfig;
+}
+
+export function cloudbuildv2ConnectionBitbucketDataCenterConfigToTerraform(struct?: Cloudbuildv2ConnectionBitbucketDataCenterConfigOutputReference | Cloudbuildv2ConnectionBitbucketDataCenterConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    host_uri: cdktf.stringToTerraform(struct!.hostUri),
+    ssl_ca: cdktf.stringToTerraform(struct!.sslCa),
+    webhook_secret_secret_version: cdktf.stringToTerraform(struct!.webhookSecretSecretVersion),
+    authorizer_credential: cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialToTerraform(struct!.authorizerCredential),
+    read_authorizer_credential: cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialToTerraform(struct!.readAuthorizerCredential),
+    service_directory_config: cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigToTerraform(struct!.serviceDirectoryConfig),
+  }
+}
+
+
+export function cloudbuildv2ConnectionBitbucketDataCenterConfigToHclTerraform(struct?: Cloudbuildv2ConnectionBitbucketDataCenterConfigOutputReference | Cloudbuildv2ConnectionBitbucketDataCenterConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host_uri: {
+      value: cdktf.stringToHclTerraform(struct!.hostUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssl_ca: {
+      value: cdktf.stringToHclTerraform(struct!.sslCa),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    webhook_secret_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.webhookSecretSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    authorizer_credential: {
+      value: cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialToHclTerraform(struct!.authorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialList",
+    },
+    read_authorizer_credential: {
+      value: cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialToHclTerraform(struct!.readAuthorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialList",
+    },
+    service_directory_config: {
+      value: cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigToHclTerraform(struct!.serviceDirectoryConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class Cloudbuildv2ConnectionBitbucketDataCenterConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): Cloudbuildv2ConnectionBitbucketDataCenterConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hostUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostUri = this._hostUri;
+    }
+    if (this._sslCa !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslCa = this._sslCa;
+    }
+    if (this._webhookSecretSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webhookSecretSecretVersion = this._webhookSecretSecretVersion;
+    }
+    if (this._authorizerCredential?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authorizerCredential = this._authorizerCredential?.internalValue;
+    }
+    if (this._readAuthorizerCredential?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readAuthorizerCredential = this._readAuthorizerCredential?.internalValue;
+    }
+    if (this._serviceDirectoryConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceDirectoryConfig = this._serviceDirectoryConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: Cloudbuildv2ConnectionBitbucketDataCenterConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hostUri = undefined;
+      this._sslCa = undefined;
+      this._webhookSecretSecretVersion = undefined;
+      this._authorizerCredential.internalValue = undefined;
+      this._readAuthorizerCredential.internalValue = undefined;
+      this._serviceDirectoryConfig.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hostUri = value.hostUri;
+      this._sslCa = value.sslCa;
+      this._webhookSecretSecretVersion = value.webhookSecretSecretVersion;
+      this._authorizerCredential.internalValue = value.authorizerCredential;
+      this._readAuthorizerCredential.internalValue = value.readAuthorizerCredential;
+      this._serviceDirectoryConfig.internalValue = value.serviceDirectoryConfig;
+    }
+  }
+
+  // host_uri - computed: false, optional: false, required: true
+  private _hostUri?: string; 
+  public get hostUri() {
+    return this.getStringAttribute('host_uri');
+  }
+  public set hostUri(value: string) {
+    this._hostUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostUriInput() {
+    return this._hostUri;
+  }
+
+  // server_version - computed: true, optional: false, required: false
+  public get serverVersion() {
+    return this.getStringAttribute('server_version');
+  }
+
+  // ssl_ca - computed: false, optional: true, required: false
+  private _sslCa?: string; 
+  public get sslCa() {
+    return this.getStringAttribute('ssl_ca');
+  }
+  public set sslCa(value: string) {
+    this._sslCa = value;
+  }
+  public resetSslCa() {
+    this._sslCa = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslCaInput() {
+    return this._sslCa;
+  }
+
+  // webhook_secret_secret_version - computed: false, optional: false, required: true
+  private _webhookSecretSecretVersion?: string; 
+  public get webhookSecretSecretVersion() {
+    return this.getStringAttribute('webhook_secret_secret_version');
+  }
+  public set webhookSecretSecretVersion(value: string) {
+    this._webhookSecretSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookSecretSecretVersionInput() {
+    return this._webhookSecretSecretVersion;
+  }
+
+  // authorizer_credential - computed: false, optional: false, required: true
+  private _authorizerCredential = new Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredentialOutputReference(this, "authorizer_credential");
+  public get authorizerCredential() {
+    return this._authorizerCredential;
+  }
+  public putAuthorizerCredential(value: Cloudbuildv2ConnectionBitbucketDataCenterConfigAuthorizerCredential) {
+    this._authorizerCredential.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizerCredentialInput() {
+    return this._authorizerCredential.internalValue;
+  }
+
+  // read_authorizer_credential - computed: false, optional: false, required: true
+  private _readAuthorizerCredential = new Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredentialOutputReference(this, "read_authorizer_credential");
+  public get readAuthorizerCredential() {
+    return this._readAuthorizerCredential;
+  }
+  public putReadAuthorizerCredential(value: Cloudbuildv2ConnectionBitbucketDataCenterConfigReadAuthorizerCredential) {
+    this._readAuthorizerCredential.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readAuthorizerCredentialInput() {
+    return this._readAuthorizerCredential.internalValue;
+  }
+
+  // service_directory_config - computed: false, optional: true, required: false
+  private _serviceDirectoryConfig = new Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfigOutputReference(this, "service_directory_config");
+  public get serviceDirectoryConfig() {
+    return this._serviceDirectoryConfig;
+  }
+  public putServiceDirectoryConfig(value: Cloudbuildv2ConnectionBitbucketDataCenterConfigServiceDirectoryConfig) {
+    this._serviceDirectoryConfig.internalValue = value;
+  }
+  public resetServiceDirectoryConfig() {
+    this._serviceDirectoryConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceDirectoryConfigInput() {
+    return this._serviceDirectoryConfig.internalValue;
+  }
+}
 export interface Cloudbuildv2ConnectionGithubConfigAuthorizerCredential {
   /**
   * A SecretManager resource containing the OAuth token that authorizes the Cloud Build connection. Format: 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#oauth_token_secret_version Cloudbuildv2Connection#oauth_token_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#oauth_token_secret_version Cloudbuildv2Connection#oauth_token_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -257,13 +1144,13 @@ export interface Cloudbuildv2ConnectionGithubConfig {
   /**
   * GitHub App installation id.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#app_installation_id Cloudbuildv2Connection#app_installation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#app_installation_id Cloudbuildv2Connection#app_installation_id}
   */
   readonly appInstallationId?: number;
   /**
   * authorizer_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#authorizer_credential Cloudbuildv2Connection#authorizer_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#authorizer_credential Cloudbuildv2Connection#authorizer_credential}
   */
   readonly authorizerCredential?: Cloudbuildv2ConnectionGithubConfigAuthorizerCredential;
 }
@@ -378,7 +1265,7 @@ export interface Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryCon
   /**
   * Required. The Service Directory service name. Format: projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#service Cloudbuildv2Connection#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#service Cloudbuildv2Connection#service}
   */
   readonly service: string;
 }
@@ -461,31 +1348,31 @@ export interface Cloudbuildv2ConnectionGithubEnterpriseConfig {
   /**
   * Id of the GitHub App created from the manifest.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#app_id Cloudbuildv2Connection#app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#app_id Cloudbuildv2Connection#app_id}
   */
   readonly appId?: number;
   /**
   * ID of the installation of the GitHub App.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#app_installation_id Cloudbuildv2Connection#app_installation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#app_installation_id Cloudbuildv2Connection#app_installation_id}
   */
   readonly appInstallationId?: number;
   /**
   * The URL-friendly name of the GitHub App.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#app_slug Cloudbuildv2Connection#app_slug}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#app_slug Cloudbuildv2Connection#app_slug}
   */
   readonly appSlug?: string;
   /**
   * Required. The URI of the GitHub Enterprise host this connection is for.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#host_uri Cloudbuildv2Connection#host_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#host_uri Cloudbuildv2Connection#host_uri}
   */
   readonly hostUri: string;
   /**
   * SecretManager resource containing the private key of the GitHub App, formatted as 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#private_key_secret_version Cloudbuildv2Connection#private_key_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#private_key_secret_version Cloudbuildv2Connection#private_key_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -493,13 +1380,13 @@ export interface Cloudbuildv2ConnectionGithubEnterpriseConfig {
   /**
   * SSL certificate to use for requests to GitHub Enterprise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#ssl_ca Cloudbuildv2Connection#ssl_ca}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#ssl_ca Cloudbuildv2Connection#ssl_ca}
   */
   readonly sslCa?: string;
   /**
   * SecretManager resource containing the webhook secret of the GitHub App, formatted as 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#webhook_secret_secret_version Cloudbuildv2Connection#webhook_secret_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#webhook_secret_secret_version Cloudbuildv2Connection#webhook_secret_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -507,7 +1394,7 @@ export interface Cloudbuildv2ConnectionGithubEnterpriseConfig {
   /**
   * service_directory_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#service_directory_config Cloudbuildv2Connection#service_directory_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#service_directory_config Cloudbuildv2Connection#service_directory_config}
   */
   readonly serviceDirectoryConfig?: Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfig;
 }
@@ -793,7 +1680,7 @@ export interface Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential {
   /**
   * Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -883,7 +1770,7 @@ export interface Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential {
   /**
   * Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -973,7 +1860,7 @@ export interface Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig {
   /**
   * Required. The Service Directory service name. Format: projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#service Cloudbuildv2Connection#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#service Cloudbuildv2Connection#service}
   */
   readonly service: string;
 }
@@ -1056,19 +1943,19 @@ export interface Cloudbuildv2ConnectionGitlabConfig {
   /**
   * The URI of the GitLab Enterprise host this connection is for. If not specified, the default value is https://gitlab.com.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#host_uri Cloudbuildv2Connection#host_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#host_uri Cloudbuildv2Connection#host_uri}
   */
   readonly hostUri?: string;
   /**
   * SSL certificate to use for requests to GitLab Enterprise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#ssl_ca Cloudbuildv2Connection#ssl_ca}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#ssl_ca Cloudbuildv2Connection#ssl_ca}
   */
   readonly sslCa?: string;
   /**
   * Required. Immutable. SecretManager resource containing the webhook secret of a GitLab Enterprise project, formatted as 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#webhook_secret_secret_version Cloudbuildv2Connection#webhook_secret_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#webhook_secret_secret_version Cloudbuildv2Connection#webhook_secret_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1076,19 +1963,19 @@ export interface Cloudbuildv2ConnectionGitlabConfig {
   /**
   * authorizer_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#authorizer_credential Cloudbuildv2Connection#authorizer_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#authorizer_credential Cloudbuildv2Connection#authorizer_credential}
   */
   readonly authorizerCredential: Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential;
   /**
   * read_authorizer_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#read_authorizer_credential Cloudbuildv2Connection#read_authorizer_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#read_authorizer_credential Cloudbuildv2Connection#read_authorizer_credential}
   */
   readonly readAuthorizerCredential: Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential;
   /**
   * service_directory_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#service_directory_config Cloudbuildv2Connection#service_directory_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#service_directory_config Cloudbuildv2Connection#service_directory_config}
   */
   readonly serviceDirectoryConfig?: Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig;
 }
@@ -1313,15 +2200,15 @@ export class Cloudbuildv2ConnectionGitlabConfigOutputReference extends cdktf.Com
 }
 export interface Cloudbuildv2ConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#create Cloudbuildv2Connection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#create Cloudbuildv2Connection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#delete Cloudbuildv2Connection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#delete Cloudbuildv2Connection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#update Cloudbuildv2Connection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#update Cloudbuildv2Connection#update}
   */
   readonly update?: string;
 }
@@ -1473,7 +2360,7 @@ export class Cloudbuildv2ConnectionTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection google_cloudbuildv2_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection google_cloudbuildv2_connection}
 */
 export class Cloudbuildv2Connection extends cdktf.TerraformResource {
 
@@ -1489,7 +2376,7 @@ export class Cloudbuildv2Connection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Cloudbuildv2Connection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Cloudbuildv2Connection to import
-  * @param importFromId The id of the existing Cloudbuildv2Connection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Cloudbuildv2Connection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Cloudbuildv2Connection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1501,7 +2388,7 @@ export class Cloudbuildv2Connection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/cloudbuildv2_connection google_cloudbuildv2_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/cloudbuildv2_connection google_cloudbuildv2_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1512,7 +2399,7 @@ export class Cloudbuildv2Connection extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuildv2_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.33.0',
+        providerVersion: '5.34.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -1529,6 +2416,8 @@ export class Cloudbuildv2Connection extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
+    this._bitbucketCloudConfig.internalValue = config.bitbucketCloudConfig;
+    this._bitbucketDataCenterConfig.internalValue = config.bitbucketDataCenterConfig;
     this._githubConfig.internalValue = config.githubConfig;
     this._githubEnterpriseConfig.internalValue = config.githubEnterpriseConfig;
     this._gitlabConfig.internalValue = config.gitlabConfig;
@@ -1661,6 +2550,38 @@ export class Cloudbuildv2Connection extends cdktf.TerraformResource {
     return this.getStringAttribute('update_time');
   }
 
+  // bitbucket_cloud_config - computed: false, optional: true, required: false
+  private _bitbucketCloudConfig = new Cloudbuildv2ConnectionBitbucketCloudConfigOutputReference(this, "bitbucket_cloud_config");
+  public get bitbucketCloudConfig() {
+    return this._bitbucketCloudConfig;
+  }
+  public putBitbucketCloudConfig(value: Cloudbuildv2ConnectionBitbucketCloudConfig) {
+    this._bitbucketCloudConfig.internalValue = value;
+  }
+  public resetBitbucketCloudConfig() {
+    this._bitbucketCloudConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bitbucketCloudConfigInput() {
+    return this._bitbucketCloudConfig.internalValue;
+  }
+
+  // bitbucket_data_center_config - computed: false, optional: true, required: false
+  private _bitbucketDataCenterConfig = new Cloudbuildv2ConnectionBitbucketDataCenterConfigOutputReference(this, "bitbucket_data_center_config");
+  public get bitbucketDataCenterConfig() {
+    return this._bitbucketDataCenterConfig;
+  }
+  public putBitbucketDataCenterConfig(value: Cloudbuildv2ConnectionBitbucketDataCenterConfig) {
+    this._bitbucketDataCenterConfig.internalValue = value;
+  }
+  public resetBitbucketDataCenterConfig() {
+    this._bitbucketDataCenterConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bitbucketDataCenterConfigInput() {
+    return this._bitbucketDataCenterConfig.internalValue;
+  }
+
   // github_config - computed: false, optional: true, required: false
   private _githubConfig = new Cloudbuildv2ConnectionGithubConfigOutputReference(this, "github_config");
   public get githubConfig() {
@@ -1737,6 +2658,8 @@ export class Cloudbuildv2Connection extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      bitbucket_cloud_config: cloudbuildv2ConnectionBitbucketCloudConfigToTerraform(this._bitbucketCloudConfig.internalValue),
+      bitbucket_data_center_config: cloudbuildv2ConnectionBitbucketDataCenterConfigToTerraform(this._bitbucketDataCenterConfig.internalValue),
       github_config: cloudbuildv2ConnectionGithubConfigToTerraform(this._githubConfig.internalValue),
       github_enterprise_config: cloudbuildv2ConnectionGithubEnterpriseConfigToTerraform(this._githubEnterpriseConfig.internalValue),
       gitlab_config: cloudbuildv2ConnectionGitlabConfigToTerraform(this._gitlabConfig.internalValue),
@@ -1781,6 +2704,18 @@ export class Cloudbuildv2Connection extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      bitbucket_cloud_config: {
+        value: cloudbuildv2ConnectionBitbucketCloudConfigToHclTerraform(this._bitbucketCloudConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "Cloudbuildv2ConnectionBitbucketCloudConfigList",
+      },
+      bitbucket_data_center_config: {
+        value: cloudbuildv2ConnectionBitbucketDataCenterConfigToHclTerraform(this._bitbucketDataCenterConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "Cloudbuildv2ConnectionBitbucketDataCenterConfigList",
       },
       github_config: {
         value: cloudbuildv2ConnectionGithubConfigToHclTerraform(this._githubConfig.internalValue),

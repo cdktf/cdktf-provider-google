@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config
+// https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface CertificateManagerTrustConfigConfig extends cdktf.TerraformMeta
   /**
   * One or more paragraphs of text description of a trust config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#description CertificateManagerTrustConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#description CertificateManagerTrustConfig#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#id CertificateManagerTrustConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#id CertificateManagerTrustConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,49 +26,49 @@ export interface CertificateManagerTrustConfigConfig extends cdktf.TerraformMeta
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#labels CertificateManagerTrustConfig#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#labels CertificateManagerTrustConfig#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The trust config location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#location CertificateManagerTrustConfig#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#location CertificateManagerTrustConfig#location}
   */
   readonly location: string;
   /**
   * A user-defined name of the trust config. Trust config names must be unique globally.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#name CertificateManagerTrustConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#name CertificateManagerTrustConfig#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#project CertificateManagerTrustConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#project CertificateManagerTrustConfig#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#timeouts CertificateManagerTrustConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#timeouts CertificateManagerTrustConfig#timeouts}
   */
   readonly timeouts?: CertificateManagerTrustConfigTimeouts;
   /**
   * trust_stores block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#trust_stores CertificateManagerTrustConfig#trust_stores}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#trust_stores CertificateManagerTrustConfig#trust_stores}
   */
   readonly trustStores?: CertificateManagerTrustConfigTrustStores[] | cdktf.IResolvable;
 }
 export interface CertificateManagerTrustConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#create CertificateManagerTrustConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#create CertificateManagerTrustConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#delete CertificateManagerTrustConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#delete CertificateManagerTrustConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#update CertificateManagerTrustConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#update CertificateManagerTrustConfig#update}
   */
   readonly update?: string;
 }
@@ -228,7 +223,7 @@ export interface CertificateManagerTrustConfigTrustStoresIntermediateCas {
   * PEM intermediate certificate used for building up paths for validation.
   * Each certificate provided in PEM format may occupy up to 5kB.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#pem_certificate CertificateManagerTrustConfig#pem_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#pem_certificate CertificateManagerTrustConfig#pem_certificate}
   */
   readonly pemCertificate?: string;
 }
@@ -347,7 +342,7 @@ export interface CertificateManagerTrustConfigTrustStoresTrustAnchors {
   * PEM root certificate of the PKI used for validation.
   * Each certificate provided in PEM format may occupy up to 5kB.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#pem_certificate CertificateManagerTrustConfig#pem_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#pem_certificate CertificateManagerTrustConfig#pem_certificate}
   */
   readonly pemCertificate?: string;
 }
@@ -465,13 +460,13 @@ export interface CertificateManagerTrustConfigTrustStores {
   /**
   * intermediate_cas block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#intermediate_cas CertificateManagerTrustConfig#intermediate_cas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#intermediate_cas CertificateManagerTrustConfig#intermediate_cas}
   */
   readonly intermediateCas?: CertificateManagerTrustConfigTrustStoresIntermediateCas[] | cdktf.IResolvable;
   /**
   * trust_anchors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#trust_anchors CertificateManagerTrustConfig#trust_anchors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#trust_anchors CertificateManagerTrustConfig#trust_anchors}
   */
   readonly trustAnchors?: CertificateManagerTrustConfigTrustStoresTrustAnchors[] | cdktf.IResolvable;
 }
@@ -616,7 +611,7 @@ export class CertificateManagerTrustConfigTrustStoresList extends cdktf.ComplexL
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config google_certificate_manager_trust_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config google_certificate_manager_trust_config}
 */
 export class CertificateManagerTrustConfig extends cdktf.TerraformResource {
 
@@ -632,7 +627,7 @@ export class CertificateManagerTrustConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CertificateManagerTrustConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CertificateManagerTrustConfig to import
-  * @param importFromId The id of the existing CertificateManagerTrustConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CertificateManagerTrustConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CertificateManagerTrustConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -644,7 +639,7 @@ export class CertificateManagerTrustConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/resources/certificate_manager_trust_config google_certificate_manager_trust_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/certificate_manager_trust_config google_certificate_manager_trust_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -655,7 +650,7 @@ export class CertificateManagerTrustConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_certificate_manager_trust_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.33.0',
+        providerVersion: '5.34.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
