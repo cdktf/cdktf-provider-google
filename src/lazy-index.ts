@@ -629,6 +629,7 @@ Object.defineProperty(exports, 'monitoringService', { get: function () { return 
 Object.defineProperty(exports, 'monitoringSlo', { get: function () { return require('./monitoring-slo'); } });
 Object.defineProperty(exports, 'monitoringUptimeCheckConfig', { get: function () { return require('./monitoring-uptime-check-config'); } });
 Object.defineProperty(exports, 'netappActiveDirectory', { get: function () { return require('./netapp-active-directory'); } });
+Object.defineProperty(exports, 'netappBackup', { get: function () { return require('./netapp-backup'); } });
 Object.defineProperty(exports, 'netappBackupPolicy', { get: function () { return require('./netapp-backup-policy'); } });
 Object.defineProperty(exports, 'netappBackupVault', { get: function () { return require('./netapp-backup-vault'); } });
 Object.defineProperty(exports, 'netappKmsconfig', { get: function () { return require('./netapp-kmsconfig'); } });
@@ -727,7 +728,10 @@ Object.defineProperty(exports, 'redisInstance', { get: function () { return requ
 Object.defineProperty(exports, 'resourceManagerLien', { get: function () { return require('./resource-manager-lien'); } });
 Object.defineProperty(exports, 'sccEventThreatDetectionCustomModule', { get: function () { return require('./scc-event-threat-detection-custom-module'); } });
 Object.defineProperty(exports, 'sccFolderCustomModule', { get: function () { return require('./scc-folder-custom-module'); } });
+Object.defineProperty(exports, 'sccManagementFolderSecurityHealthAnalyticsCustomModule', { get: function () { return require('./scc-management-folder-security-health-analytics-custom-module'); } });
 Object.defineProperty(exports, 'sccManagementOrganizationEventThreatDetectionCustomModule', { get: function () { return require('./scc-management-organization-event-threat-detection-custom-module'); } });
+Object.defineProperty(exports, 'sccManagementOrganizationSecurityHealthAnalyticsCustomModule', { get: function () { return require('./scc-management-organization-security-health-analytics-custom-module'); } });
+Object.defineProperty(exports, 'sccManagementProjectSecurityHealthAnalyticsCustomModule', { get: function () { return require('./scc-management-project-security-health-analytics-custom-module'); } });
 Object.defineProperty(exports, 'sccMuteConfig', { get: function () { return require('./scc-mute-config'); } });
 Object.defineProperty(exports, 'sccNotificationConfig', { get: function () { return require('./scc-notification-config'); } });
 Object.defineProperty(exports, 'sccOrganizationCustomModule', { get: function () { return require('./scc-organization-custom-module'); } });

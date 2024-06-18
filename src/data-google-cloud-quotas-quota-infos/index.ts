@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloud_quotas_quota_infos
+// https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloud_quotas_quota_infos
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,18 +13,18 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudQuotasQuotaInfosConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloud_quotas_quota_infos#id DataGoogleCloudQuotasQuotaInfos#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloud_quotas_quota_infos#id DataGoogleCloudQuotasQuotaInfos#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloud_quotas_quota_infos#parent DataGoogleCloudQuotasQuotaInfos#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloud_quotas_quota_infos#parent DataGoogleCloudQuotasQuotaInfos#parent}
   */
   readonly parent: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloud_quotas_quota_infos#service DataGoogleCloudQuotasQuotaInfos#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloud_quotas_quota_infos#service DataGoogleCloudQuotasQuotaInfos#service}
   */
   readonly service: string;
 }
@@ -424,7 +424,7 @@ export class DataGoogleCloudQuotasQuotaInfosQuotaInfosList extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloud_quotas_quota_infos google_cloud_quotas_quota_infos}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloud_quotas_quota_infos google_cloud_quotas_quota_infos}
 */
 export class DataGoogleCloudQuotasQuotaInfos extends cdktf.TerraformDataSource {
 
@@ -440,7 +440,7 @@ export class DataGoogleCloudQuotasQuotaInfos extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleCloudQuotasQuotaInfos resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleCloudQuotasQuotaInfos to import
-  * @param importFromId The id of the existing DataGoogleCloudQuotasQuotaInfos that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloud_quotas_quota_infos#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleCloudQuotasQuotaInfos that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloud_quotas_quota_infos#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleCloudQuotasQuotaInfos to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -452,7 +452,7 @@ export class DataGoogleCloudQuotasQuotaInfos extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.33.0/docs/data-sources/cloud_quotas_quota_infos google_cloud_quotas_quota_infos} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/data-sources/cloud_quotas_quota_infos google_cloud_quotas_quota_infos} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -463,7 +463,7 @@ export class DataGoogleCloudQuotasQuotaInfos extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloud_quotas_quota_infos',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.33.0',
+        providerVersion: '5.34.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
