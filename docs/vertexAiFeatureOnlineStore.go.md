@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.NewVertexAiFeatureOnlineStore(scope Construct, id *string, config VertexAiFeatureOnlineStoreConfig) VertexAiFeatureOnlineStore
 ```
@@ -473,7 +473,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStore.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.VertexAiFeatureOnlineStore_IsConstruct(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStore.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.VertexAiFeatureOnlineStore_IsTerraformElement(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ vertexaifeatureonlinestore.VertexAiFeatureOnlineStore_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStore.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.VertexAiFeatureOnlineStore_IsTerraformResource(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ vertexaifeatureonlinestore.VertexAiFeatureOnlineStore_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStore.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.VertexAiFeatureOnlineStore_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1026,10 +1026,10 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreBigtable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 &vertexaifeatureonlinestore.VertexAiFeatureOnlineStoreBigtable {
-	AutoScaling: github.com/cdktf/cdktf-provider-google-go/google/v13.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreBigtableAutoScaling,
+	AutoScaling: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreBigtableAutoScaling,
 }
 ```
 
@@ -1060,7 +1060,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreBigtableAutoScaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 &vertexaifeatureonlinestore.VertexAiFeatureOnlineStoreBigtableAutoScaling {
 	MaxNodeCount: *f64,
@@ -1130,7 +1130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 &vertexaifeatureonlinestore.VertexAiFeatureOnlineStoreConfig {
 	Connection: interface{},
@@ -1141,14 +1141,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonli
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	Bigtable: github.com/cdktf/cdktf-provider-google-go/google/v13.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreBigtable,
+	Bigtable: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreBigtable,
 	ForceDestroy: interface{},
 	Id: *string,
 	Labels: *map[string]*string,
-	Optimized: github.com/cdktf/cdktf-provider-google-go/google/v13.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreOptimized,
+	Optimized: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreOptimized,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreTimeouts,
 }
 ```
 
@@ -1380,7 +1380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreOptimized.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 &vertexaifeatureonlinestore.VertexAiFeatureOnlineStoreOptimized {
 
@@ -1393,7 +1393,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonli
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 &vertexaifeatureonlinestore.VertexAiFeatureOnlineStoreTimeouts {
 	Create: *string,
@@ -1455,7 +1455,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreBigtableAutoScalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.NewVertexAiFeatureOnlineStoreBigtableAutoScalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeatureOnlineStoreBigtableAutoScalingOutputReference
 ```
@@ -1777,7 +1777,7 @@ func InternalValue() VertexAiFeatureOnlineStoreBigtableAutoScaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreBigtableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.NewVertexAiFeatureOnlineStoreBigtableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeatureOnlineStoreBigtableOutputReference
 ```
@@ -2061,7 +2061,7 @@ func InternalValue() VertexAiFeatureOnlineStoreBigtable
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreOptimizedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.NewVertexAiFeatureOnlineStoreOptimizedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeatureOnlineStoreOptimizedOutputReference
 ```
@@ -2310,7 +2310,7 @@ func InternalValue() VertexAiFeatureOnlineStoreOptimized
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiFeatureOnlineStore.VertexAiFeatureOnlineStoreTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/vertexaifeatureonlinestore"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaifeatureonlinestore"
 
 vertexaifeatureonlinestore.NewVertexAiFeatureOnlineStoreTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiFeatureOnlineStoreTimeoutsOutputReference
 ```
