@@ -758,6 +758,7 @@ export * as serviceAccountIamPolicy from './service-account-iam-policy';
 export * as serviceAccountKey from './service-account-key';
 export * as serviceNetworkingConnection from './service-networking-connection';
 export * as serviceNetworkingPeeredDnsDomain from './service-networking-peered-dns-domain';
+export * as serviceNetworkingVpcServiceControls from './service-networking-vpc-service-controls';
 export * as sourcerepoRepository from './sourcerepo-repository';
 export * as sourcerepoRepositoryIamBinding from './sourcerepo-repository-iam-binding';
 export * as sourcerepoRepositoryIamMember from './sourcerepo-repository-iam-member';
@@ -842,6 +843,7 @@ export * as dataGoogleAppEngineDefaultServiceAccount from './data-google-app-eng
 export * as dataGoogleApphubApplication from './data-google-apphub-application';
 export * as dataGoogleApphubDiscoveredService from './data-google-apphub-discovered-service';
 export * as dataGoogleApphubDiscoveredWorkload from './data-google-apphub-discovered-workload';
+export * as dataGoogleArtifactRegistryDockerImage from './data-google-artifact-registry-docker-image';
 export * as dataGoogleArtifactRegistryRepository from './data-google-artifact-registry-repository';
 export * as dataGoogleArtifactRegistryRepositoryIamPolicy from './data-google-artifact-registry-repository-iam-policy';
 export * as dataGoogleBeyondcorpAppConnection from './data-google-beyondcorp-app-connection';

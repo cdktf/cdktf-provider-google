@@ -1,3 +1,3 @@
 # `google_tags_tag_value`
 
-Refer to the Terraform Registry for docs: [`google_tags_tag_value`](https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/tags_tag_value).
+Refer to the Terraform Registry for docs: [`google_tags_tag_value`](https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/tags_tag_value).

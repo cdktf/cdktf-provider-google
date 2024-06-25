@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface SecureSourceManagerInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#id SecureSourceManagerInstanceIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#instance_id SecureSourceManagerInstanceIamBinding#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#location SecureSourceManagerInstanceIamBinding#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#members SecureSourceManagerInstanceIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#project SecureSourceManagerInstanceIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#role SecureSourceManagerInstanceIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#condition SecureSourceManagerInstanceIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#condition SecureSourceManagerInstanceIamBinding#condition}
   */
   readonly condition?: SecureSourceManagerInstanceIamBindingCondition;
 }
 export interface SecureSourceManagerInstanceIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#description SecureSourceManagerInstanceIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#description SecureSourceManagerInstanceIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#expression SecureSourceManagerInstanceIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#expression SecureSourceManagerInstanceIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#title SecureSourceManagerInstanceIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#title SecureSourceManagerInstanceIamBinding#title}
   */
   readonly title: string;
 }
@@ -192,7 +192,7 @@ export class SecureSourceManagerInstanceIamBindingConditionOutputReference exten
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding google_secure_source_manager_instance_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding google_secure_source_manager_instance_iam_binding}
 */
 export class SecureSourceManagerInstanceIamBinding extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class SecureSourceManagerInstanceIamBinding extends cdktf.TerraformResour
   * Generates CDKTF code for importing a SecureSourceManagerInstanceIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SecureSourceManagerInstanceIamBinding to import
-  * @param importFromId The id of the existing SecureSourceManagerInstanceIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SecureSourceManagerInstanceIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SecureSourceManagerInstanceIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +220,7 @@ export class SecureSourceManagerInstanceIamBinding extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/secure_source_manager_instance_iam_binding google_secure_source_manager_instance_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/secure_source_manager_instance_iam_binding google_secure_source_manager_instance_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +231,7 @@ export class SecureSourceManagerInstanceIamBinding extends cdktf.TerraformResour
       terraformResourceType: 'google_secure_source_manager_instance_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.34.0',
+        providerVersion: '5.35.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

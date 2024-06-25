@@ -4,7 +4,7 @@
 
 ### HealthcareDataset <a name="HealthcareDataset" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset google_healthcare_dataset}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset google_healthcare_dataset}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the HealthcareDataset to impor
 
 The id of the existing HealthcareDataset that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -883,8 +883,8 @@ new HealthcareDatasetConfig {
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.location">Location</a></code> | <code>string</code> | The location for the Dataset. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.name">Name</a></code> | <code>string</code> | The resource name for the Dataset. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts">HealthcareDatasetTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.timeZone">TimeZone</a></code> | <code>string</code> | The default timezone used by this dataset. |
 
@@ -970,7 +970,7 @@ public string Location { get; set; }
 
 The location for the Dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
 
 ---
 
@@ -984,7 +984,7 @@ public string Name { get; set; }
 
 The resource name for the Dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
 
 ---
 
@@ -996,7 +996,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1011,7 +1011,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}.
 
 ---
 
@@ -1025,7 +1025,7 @@ public HealthcareDatasetTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
 
 ---
 
@@ -1043,7 +1043,7 @@ Must be a either a valid IANA time zone name such as
 "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
 (e.g., HL7 messages) where no explicit timezone is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
 
 ---
 
@@ -1065,9 +1065,9 @@ new HealthcareDatasetTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}. |
 
 ---
 
@@ -1079,7 +1079,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}.
 
 ---
 
@@ -1091,7 +1091,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}.
 
 ---
 
@@ -1103,7 +1103,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}.
 
 ---
 
