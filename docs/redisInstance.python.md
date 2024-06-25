@@ -4,7 +4,7 @@
 
 ### RedisInstance <a name="RedisInstance" id="@cdktf/provider-google.redisInstance.RedisInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance google_redis_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance google_redis_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisInstance.RedisInstance.Initializer"></a>
 
@@ -33,6 +33,7 @@ redisInstance.RedisInstance(
   labels: typing.Mapping[str] = None,
   location_id: str = None,
   maintenance_policy: RedisInstanceMaintenancePolicy = None,
+  maintenance_version: str = None,
   persistence_config: RedisInstancePersistenceConfig = None,
   project: str = None,
   read_replicas_mode: str = None,
@@ -67,12 +68,13 @@ redisInstance.RedisInstance(
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.connectMode">connect_mode</a></code> | <code>str</code> | The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"]. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.customerManagedKey">customer_managed_key</a></code> | <code>str</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | An arbitrary and optional user-provided name for the instance. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#id RedisInstance#id}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#id RedisInstance#id}. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Resource labels to represent user provided metadata. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.locationId">location_id</a></code> | <code>str</code> | The zone where the instance will be provisioned. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.maintenancePolicy">maintenance_policy</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenancePolicy">RedisInstanceMaintenancePolicy</a></code> | maintenance_policy block. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.maintenanceVersion">maintenance_version</a></code> | <code>str</code> | The self service update maintenance version. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.persistenceConfig">persistence_config</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstancePersistenceConfig">RedisInstancePersistenceConfig</a></code> | persistence_config block. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#project RedisInstance#project}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#project RedisInstance#project}. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.readReplicasMode">read_replicas_mode</a></code> | <code>str</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.redisConfigs">redis_configs</a></code> | <code>typing.Mapping[str]</code> | Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for the list of supported parameters: https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.redisVersion">redis_version</a></code> | <code>str</code> | The version of Redis software. |
@@ -152,7 +154,7 @@ Must be unique amongst siblings in the same scope
 
 Redis memory size in GiB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#memory_size_gb RedisInstance#memory_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#memory_size_gb RedisInstance#memory_size_gb}
 
 ---
 
@@ -162,7 +164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The ID of the instance or a fully qualified identifier for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#name RedisInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#name RedisInstance#name}
 
 ---
 
@@ -175,7 +177,7 @@ Only applicable to STANDARD_HA tier which protects the instance against zonal fa
 If provided, it must be a different zone from the one provided in
 [locationId].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
 
 ---
 
@@ -189,7 +191,7 @@ Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
 
 ---
 
@@ -202,7 +204,7 @@ The full name of the Google Compute Engine network to which the instance is conn
 If left unspecified, the default network
 will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
 
 ---
 
@@ -212,7 +214,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#connect_mode RedisInstance#connect_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#connect_mode RedisInstance#connect_mode}
 
 ---
 
@@ -225,7 +227,7 @@ Optional.
 The KMS key reference that you want to use to encrypt the data at rest for this Redis
 instance. If this is provided, CMEK is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
 
 ---
 
@@ -235,7 +237,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An arbitrary and optional user-provided name for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#display_name RedisInstance#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#display_name RedisInstance#display_name}
 
 ---
 
@@ -243,7 +245,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#id RedisInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#id RedisInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -259,7 +261,7 @@ Resource labels to represent user provided metadata.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#labels RedisInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#labels RedisInstance#labels}
 
 ---
 
@@ -275,7 +277,7 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#location_id RedisInstance#location_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#location_id RedisInstance#location_id}
 
 ---
 
@@ -285,7 +287,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 maintenance_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
+
+---
+
+##### `maintenance_version`<sup>Optional</sup> <a name="maintenance_version" id="@cdktf/provider-google.redisInstance.RedisInstance.Initializer.parameter.maintenanceVersion"></a>
+
+- *Type:* str
+
+The self service update maintenance version.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#maintenance_version RedisInstance#maintenance_version}
 
 ---
 
@@ -295,7 +307,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 persistence_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#persistence_config RedisInstance#persistence_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#persistence_config RedisInstance#persistence_config}
 
 ---
 
@@ -303,7 +315,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#project RedisInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#project RedisInstance#project}.
 
 ---
 
@@ -321,7 +333,7 @@ If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
 * READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance
   can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
 
 ---
 
@@ -331,7 +343,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for the list of supported parameters: https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
 
 ---
 
@@ -345,7 +357,7 @@ If not provided, latest supported
 version will be used. Please check the API documentation linked
 at the top for the latest valid values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
 
 ---
 
@@ -355,7 +367,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the Redis region of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#region RedisInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#region RedisInstance#region}
 
 ---
 
@@ -370,7 +382,7 @@ read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabl
 for a Standard Tier instance, the only valid value is 1 and the default is 1.
 The valid value for basic tier is 0 and the default is also 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
 
 ---
 
@@ -385,7 +397,7 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
 
 ---
 
@@ -400,7 +412,7 @@ an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size
 "auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
 range associated with the private service access connection, or "auto".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
 
 ---
 
@@ -413,7 +425,7 @@ The service tier of the instance. Must be one of these values:.
 * BASIC: standalone instance
 * STANDARD_HA: highly available primary/replica instances Default value: "BASIC" Possible values: ["BASIC", "STANDARD_HA"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#tier RedisInstance#tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#tier RedisInstance#tier}
 
 ---
 
@@ -423,7 +435,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#timeouts RedisInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#timeouts RedisInstance#timeouts}
 
 ---
 
@@ -435,7 +447,7 @@ The TLS mode of the Redis instance, If not provided, TLS is disabled for the ins
 
 * SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
 
 ---
 
@@ -479,6 +491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetLabels">reset_labels</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetLocationId">reset_location_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetMaintenancePolicy">reset_maintenance_policy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetMaintenanceVersion">reset_maintenance_version</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetPersistenceConfig">reset_persistence_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetProject">reset_project</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetReadReplicasMode">reset_read_replicas_mode</a></code> | *No description.* |
@@ -834,7 +847,7 @@ def put_maintenance_policy(
 
 Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#description RedisInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#description RedisInstance#description}
 
 ---
 
@@ -844,7 +857,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 weekly_maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
 
 ---
 
@@ -867,7 +880,7 @@ Optional. Controls whether Persistence features are enabled. If not provided, th
 * DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted.
 * RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
 
 ---
 
@@ -882,7 +895,7 @@ Optional. Available snapshot periods for scheduling.
 * TWELVE_HOURS:	Snapshot every 12 hours.
 * TWENTY_FOUR_HOURS:	Snapshot every 24 hours. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
 
 ---
 
@@ -899,7 +912,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution
 and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
 
 ---
 
@@ -917,7 +930,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#create RedisInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#create RedisInstance#create}.
 
 ---
 
@@ -925,7 +938,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#delete RedisInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#delete RedisInstance#delete}.
 
 ---
 
@@ -933,7 +946,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#update RedisInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#update RedisInstance#update}.
 
 ---
 
@@ -995,6 +1008,12 @@ def reset_location_id() -> None
 
 ```python
 def reset_maintenance_policy() -> None
+```
+
+##### `reset_maintenance_version` <a name="reset_maintenance_version" id="@cdktf/provider-google.redisInstance.RedisInstance.resetMaintenanceVersion"></a>
+
+```python
+def reset_maintenance_version() -> None
 ```
 
 ##### `reset_persistence_config` <a name="reset_persistence_config" id="@cdktf/provider-google.redisInstance.RedisInstance.resetPersistenceConfig"></a>
@@ -1183,7 +1202,7 @@ The construct id used in the generated config for the RedisInstance to import.
 
 The id of the existing RedisInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1239,6 +1258,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.labelsInput">labels_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.locationIdInput">location_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.maintenancePolicyInput">maintenance_policy_input</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenancePolicy">RedisInstanceMaintenancePolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceVersionInput">maintenance_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.memorySizeGbInput">memory_size_gb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.persistenceConfigInput">persistence_config_input</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstancePersistenceConfig">RedisInstancePersistenceConfig</a></code> | *No description.* |
@@ -1262,6 +1282,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.locationId">location_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceVersion">maintenance_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.memorySizeGb">memory_size_gb</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.project">project</a></code> | <code>str</code> | *No description.* |
@@ -1679,6 +1700,16 @@ maintenance_policy_input: RedisInstanceMaintenancePolicy
 
 ---
 
+##### `maintenance_version_input`<sup>Optional</sup> <a name="maintenance_version_input" id="@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceVersionInput"></a>
+
+```python
+maintenance_version_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `memory_size_gb_input`<sup>Optional</sup> <a name="memory_size_gb_input" id="@cdktf/provider-google.redisInstance.RedisInstance.property.memorySizeGbInput"></a>
 
 ```python
@@ -1909,6 +1940,16 @@ location_id: str
 
 ---
 
+##### `maintenance_version`<sup>Required</sup> <a name="maintenance_version" id="@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceVersion"></a>
+
+```python
+maintenance_version: str
+```
+
+- *Type:* str
+
+---
+
 ##### `memory_size_gb`<sup>Required</sup> <a name="memory_size_gb" id="@cdktf/provider-google.redisInstance.RedisInstance.property.memorySizeGb"></a>
 
 ```python
@@ -2076,6 +2117,7 @@ redisInstance.RedisInstanceConfig(
   labels: typing.Mapping[str] = None,
   location_id: str = None,
   maintenance_policy: RedisInstanceMaintenancePolicy = None,
+  maintenance_version: str = None,
   persistence_config: RedisInstancePersistenceConfig = None,
   project: str = None,
   read_replicas_mode: str = None,
@@ -2110,12 +2152,13 @@ redisInstance.RedisInstanceConfig(
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.connectMode">connect_mode</a></code> | <code>str</code> | The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"]. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.customerManagedKey">customer_managed_key</a></code> | <code>str</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.displayName">display_name</a></code> | <code>str</code> | An arbitrary and optional user-provided name for the instance. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#id RedisInstance#id}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#id RedisInstance#id}. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Resource labels to represent user provided metadata. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.locationId">location_id</a></code> | <code>str</code> | The zone where the instance will be provisioned. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.maintenancePolicy">maintenance_policy</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenancePolicy">RedisInstanceMaintenancePolicy</a></code> | maintenance_policy block. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.maintenanceVersion">maintenance_version</a></code> | <code>str</code> | The self service update maintenance version. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.persistenceConfig">persistence_config</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstancePersistenceConfig">RedisInstancePersistenceConfig</a></code> | persistence_config block. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#project RedisInstance#project}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#project RedisInstance#project}. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.readReplicasMode">read_replicas_mode</a></code> | <code>str</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.redisConfigs">redis_configs</a></code> | <code>typing.Mapping[str]</code> | Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for the list of supported parameters: https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.redisVersion">redis_version</a></code> | <code>str</code> | The version of Redis software. |
@@ -2209,7 +2252,7 @@ memory_size_gb: typing.Union[int, float]
 
 Redis memory size in GiB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#memory_size_gb RedisInstance#memory_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#memory_size_gb RedisInstance#memory_size_gb}
 
 ---
 
@@ -2223,7 +2266,7 @@ name: str
 
 The ID of the instance or a fully qualified identifier for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#name RedisInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#name RedisInstance#name}
 
 ---
 
@@ -2240,7 +2283,7 @@ Only applicable to STANDARD_HA tier which protects the instance against zonal fa
 If provided, it must be a different zone from the one provided in
 [locationId].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
 
 ---
 
@@ -2258,7 +2301,7 @@ Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
 
 ---
 
@@ -2275,7 +2318,7 @@ The full name of the Google Compute Engine network to which the instance is conn
 If left unspecified, the default network
 will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
 
 ---
 
@@ -2289,7 +2332,7 @@ connect_mode: str
 
 The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#connect_mode RedisInstance#connect_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#connect_mode RedisInstance#connect_mode}
 
 ---
 
@@ -2306,7 +2349,7 @@ Optional.
 The KMS key reference that you want to use to encrypt the data at rest for this Redis
 instance. If this is provided, CMEK is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
 
 ---
 
@@ -2320,7 +2363,7 @@ display_name: str
 
 An arbitrary and optional user-provided name for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#display_name RedisInstance#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#display_name RedisInstance#display_name}
 
 ---
 
@@ -2332,7 +2375,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#id RedisInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#id RedisInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2352,7 +2395,7 @@ Resource labels to represent user provided metadata.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#labels RedisInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#labels RedisInstance#labels}
 
 ---
 
@@ -2372,7 +2415,7 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#location_id RedisInstance#location_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#location_id RedisInstance#location_id}
 
 ---
 
@@ -2386,7 +2429,21 @@ maintenance_policy: RedisInstanceMaintenancePolicy
 
 maintenance_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
+
+---
+
+##### `maintenance_version`<sup>Optional</sup> <a name="maintenance_version" id="@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.maintenanceVersion"></a>
+
+```python
+maintenance_version: str
+```
+
+- *Type:* str
+
+The self service update maintenance version.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#maintenance_version RedisInstance#maintenance_version}
 
 ---
 
@@ -2400,7 +2457,7 @@ persistence_config: RedisInstancePersistenceConfig
 
 persistence_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#persistence_config RedisInstance#persistence_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#persistence_config RedisInstance#persistence_config}
 
 ---
 
@@ -2412,7 +2469,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#project RedisInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#project RedisInstance#project}.
 
 ---
 
@@ -2434,7 +2491,7 @@ If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
 * READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance
   can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
 
 ---
 
@@ -2448,7 +2505,7 @@ redis_configs: typing.Mapping[str]
 
 Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for the list of supported parameters: https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
 
 ---
 
@@ -2466,7 +2523,7 @@ If not provided, latest supported
 version will be used. Please check the API documentation linked
 at the top for the latest valid values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
 
 ---
 
@@ -2480,7 +2537,7 @@ region: str
 
 The name of the Redis region of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#region RedisInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#region RedisInstance#region}
 
 ---
 
@@ -2499,7 +2556,7 @@ read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabl
 for a Standard Tier instance, the only valid value is 1 and the default is 1.
 The valid value for basic tier is 0 and the default is also 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
 
 ---
 
@@ -2518,7 +2575,7 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
 
 ---
 
@@ -2537,7 +2594,7 @@ an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size
 "auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
 range associated with the private service access connection, or "auto".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
 
 ---
 
@@ -2554,7 +2611,7 @@ The service tier of the instance. Must be one of these values:.
 * BASIC: standalone instance
 * STANDARD_HA: highly available primary/replica instances Default value: "BASIC" Possible values: ["BASIC", "STANDARD_HA"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#tier RedisInstance#tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#tier RedisInstance#tier}
 
 ---
 
@@ -2568,7 +2625,7 @@ timeouts: RedisInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#timeouts RedisInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#timeouts RedisInstance#timeouts}
 
 ---
 
@@ -2584,7 +2641,7 @@ The TLS mode of the Redis instance, If not provided, TLS is disabled for the ins
 
 * SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
 
 ---
 
@@ -2620,7 +2677,7 @@ description: str
 
 Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#description RedisInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#description RedisInstance#description}
 
 ---
 
@@ -2634,7 +2691,7 @@ weekly_maintenance_window: typing.Union[IResolvable, typing.List[RedisInstanceMa
 
 weekly_maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
 
 ---
 
@@ -2679,7 +2736,7 @@ Required. The day of week that maintenance updates occur.
 * SATURDAY: Saturday
 * SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#day RedisInstance#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#day RedisInstance#day}
 
 ---
 
@@ -2693,7 +2750,7 @@ start_time: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime
 
 start_time block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#start_time RedisInstance#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#start_time RedisInstance#start_time}
 
 ---
 
@@ -2736,7 +2793,7 @@ Hours of day in 24 hour format.
 Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#hours RedisInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#hours RedisInstance#hours}
 
 ---
 
@@ -2750,7 +2807,7 @@ minutes: typing.Union[int, float]
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#minutes RedisInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#minutes RedisInstance#minutes}
 
 ---
 
@@ -2764,7 +2821,7 @@ nanos: typing.Union[int, float]
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#nanos RedisInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#nanos RedisInstance#nanos}
 
 ---
 
@@ -2781,7 +2838,7 @@ Seconds of minutes of the time.
 Must normally be from 0 to 59.
 An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#seconds RedisInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#seconds RedisInstance#seconds}
 
 ---
 
@@ -2844,7 +2901,7 @@ Optional. Controls whether Persistence features are enabled. If not provided, th
 * DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted.
 * RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
 
 ---
 
@@ -2863,7 +2920,7 @@ Optional. Available snapshot periods for scheduling.
 * TWELVE_HOURS:	Snapshot every 12 hours.
 * TWENTY_FOUR_HOURS:	Snapshot every 24 hours. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
 
 ---
 
@@ -2884,7 +2941,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution
 and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
 
 ---
 
@@ -2917,9 +2974,9 @@ redisInstance.RedisInstanceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#create RedisInstance#create}. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#delete RedisInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#update RedisInstance#update}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#create RedisInstance#create}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#delete RedisInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#update RedisInstance#update}. |
 
 ---
 
@@ -2931,7 +2988,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#create RedisInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#create RedisInstance#create}.
 
 ---
 
@@ -2943,7 +3000,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#delete RedisInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#delete RedisInstance#delete}.
 
 ---
 
@@ -2955,7 +3012,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#update RedisInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#update RedisInstance#update}.
 
 ---
 
@@ -3769,7 +3826,7 @@ Hours of day in 24 hour format.
 Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#hours RedisInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#hours RedisInstance#hours}
 
 ---
 
@@ -3779,7 +3836,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#minutes RedisInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#minutes RedisInstance#minutes}
 
 ---
 
@@ -3789,7 +3846,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#nanos RedisInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#nanos RedisInstance#nanos}
 
 ---
 
@@ -3802,7 +3859,7 @@ Seconds of minutes of the time.
 Must normally be from 0 to 59.
 An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.34.0/docs/resources/redis_instance#seconds RedisInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/redis_instance#seconds RedisInstance#seconds}
 
 ---
 
