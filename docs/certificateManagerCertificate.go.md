@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.NewCertificateManagerCertificate(scope Construct, id *string, config CertificateManagerCertificateConfig) CertificateManagerCertificate
 ```
@@ -480,7 +480,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.CertificateManagerCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.CertificateManagerCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -526,7 +526,7 @@ certificatemanagercertificate.CertificateManagerCertificate_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.CertificateManagerCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -540,7 +540,7 @@ certificatemanagercertificate.CertificateManagerCertificate_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.CertificateManagerCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1011,7 +1011,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 &certificatemanagercertificate.CertificateManagerCertificateConfig {
 	Connection: interface{},
@@ -1026,11 +1026,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagerc
 	Id: *string,
 	Labels: *map[string]*string,
 	Location: *string,
-	Managed: github.com/cdktf/cdktf-provider-google-go/google/v13.certificateManagerCertificate.CertificateManagerCertificateManaged,
+	Managed: github.com/cdktf/cdktf-provider-google-go/google.certificateManagerCertificate.CertificateManagerCertificateManaged,
 	Project: *string,
 	Scope: *string,
-	SelfManaged: github.com/cdktf/cdktf-provider-google-go/google/v13.certificateManagerCertificate.CertificateManagerCertificateSelfManaged,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.certificateManagerCertificate.CertificateManagerCertificateTimeouts,
+	SelfManaged: github.com/cdktf/cdktf-provider-google-go/google.certificateManagerCertificate.CertificateManagerCertificateSelfManaged,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.certificateManagerCertificate.CertificateManagerCertificateTimeouts,
 }
 ```
 
@@ -1288,7 +1288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateManaged.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 &certificatemanagercertificate.CertificateManagerCertificateManaged {
 	DnsAuthorizations: *[]*string,
@@ -1359,7 +1359,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateManagedAuthorizationAttemptInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 &certificatemanagercertificate.CertificateManagerCertificateManagedAuthorizationAttemptInfo {
 
@@ -1372,7 +1372,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateManagedProvisioningIssue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 &certificatemanagercertificate.CertificateManagerCertificateManagedProvisioningIssue {
 
@@ -1385,7 +1385,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagerc
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateSelfManaged.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 &certificatemanagercertificate.CertificateManagerCertificateSelfManaged {
 	CertificatePem: *string,
@@ -1471,7 +1471,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 &certificatemanagercertificate.CertificateManagerCertificateTimeouts {
 	Create: *string,
@@ -1533,7 +1533,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateManagedAuthorizationAttemptInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.NewCertificateManagerCertificateManagedAuthorizationAttemptInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CertificateManagerCertificateManagedAuthorizationAttemptInfoList
 ```
@@ -1682,7 +1682,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateManagedAuthorizationAttemptInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.NewCertificateManagerCertificateManagedAuthorizationAttemptInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CertificateManagerCertificateManagedAuthorizationAttemptInfoOutputReference
 ```
@@ -1993,7 +1993,7 @@ func InternalValue() CertificateManagerCertificateManagedAuthorizationAttemptInf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateManagedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.NewCertificateManagerCertificateManagedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateManagerCertificateManagedOutputReference
 ```
@@ -2362,7 +2362,7 @@ func InternalValue() CertificateManagerCertificateManaged
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateManagedProvisioningIssueList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.NewCertificateManagerCertificateManagedProvisioningIssueList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CertificateManagerCertificateManagedProvisioningIssueList
 ```
@@ -2511,7 +2511,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateManagedProvisioningIssueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.NewCertificateManagerCertificateManagedProvisioningIssueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CertificateManagerCertificateManagedProvisioningIssueOutputReference
 ```
@@ -2800,7 +2800,7 @@ func InternalValue() CertificateManagerCertificateManagedProvisioningIssue
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateSelfManagedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.NewCertificateManagerCertificateSelfManagedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateManagerCertificateSelfManagedOutputReference
 ```
@@ -3165,7 +3165,7 @@ func InternalValue() CertificateManagerCertificateSelfManaged
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerCertificate.CertificateManagerCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/certificatemanagercertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagercertificate"
 
 certificatemanagercertificate.NewCertificateManagerCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateManagerCertificateTimeoutsOutputReference
 ```
