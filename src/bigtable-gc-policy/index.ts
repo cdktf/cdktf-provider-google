@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy
+// https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +15,7 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the column family.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#column_family BigtableGcPolicy#column_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#column_family BigtableGcPolicy#column_family}
   */
   readonly columnFamily: string;
   /**
@@ -23,62 +23,71 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   * 				to be abandoned rather than deleted. This is useful for GC policy as it cannot be deleted
   * 				in a replicated instance. Possible values are: "ABANDON".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#deletion_policy BigtableGcPolicy#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#deletion_policy BigtableGcPolicy#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * Serialized JSON string for garbage collection policy. Conflicts with "mode", "max_age" and "max_version".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#gc_rules BigtableGcPolicy#gc_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#gc_rules BigtableGcPolicy#gc_rules}
   */
   readonly gcRules?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#id BigtableGcPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#id BigtableGcPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
+  * Allows ignoring warnings when updating the GC policy. This can be used
+  * 				to increase the gc policy on replicated clusters. Doing this may make clusters be
+  * 				inconsistent for a longer period of time, before using this make sure you understand
+  * 				the risks listed at https://cloud.google.com/bigtable/docs/garbage-collection#increasing
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#ignore_warnings BigtableGcPolicy#ignore_warnings}
+  */
+  readonly ignoreWarnings?: boolean | cdktf.IResolvable;
+  /**
   * The name of the Bigtable instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#instance_name BigtableGcPolicy#instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#instance_name BigtableGcPolicy#instance_name}
   */
   readonly instanceName: string;
   /**
   * NOTE: 'gc_rules' is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. If multiple policies are set, you should choose between UNION OR INTERSECTION.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#mode BigtableGcPolicy#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#mode BigtableGcPolicy#mode}
   */
   readonly mode?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#project BigtableGcPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#project BigtableGcPolicy#project}
   */
   readonly project?: string;
   /**
   * The name of the table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#table BigtableGcPolicy#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#table BigtableGcPolicy#table}
   */
   readonly table: string;
   /**
   * max_age block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#max_age BigtableGcPolicy#max_age}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#max_age BigtableGcPolicy#max_age}
   */
   readonly maxAge?: BigtableGcPolicyMaxAge;
   /**
   * max_version block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#max_version BigtableGcPolicy#max_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#max_version BigtableGcPolicy#max_version}
   */
   readonly maxVersion?: BigtableGcPolicyMaxVersion[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#timeouts BigtableGcPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#timeouts BigtableGcPolicy#timeouts}
   */
   readonly timeouts?: BigtableGcPolicyTimeouts;
 }
@@ -86,13 +95,13 @@ export interface BigtableGcPolicyMaxAge {
   /**
   * Number of days before applying GC policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#days BigtableGcPolicy#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#days BigtableGcPolicy#days}
   */
   readonly days?: number;
   /**
   * Duration before applying GC policy
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#duration BigtableGcPolicy#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#duration BigtableGcPolicy#duration}
   */
   readonly duration?: string;
 }
@@ -207,7 +216,7 @@ export interface BigtableGcPolicyMaxVersion {
   /**
   * Number of version before applying the GC policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#number BigtableGcPolicy#number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#number BigtableGcPolicy#number}
   */
   readonly number: number;
 }
@@ -320,11 +329,11 @@ export class BigtableGcPolicyMaxVersionList extends cdktf.ComplexList {
 }
 export interface BigtableGcPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#create BigtableGcPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#create BigtableGcPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#delete BigtableGcPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#delete BigtableGcPolicy#delete}
   */
   readonly delete?: string;
 }
@@ -447,7 +456,7 @@ export class BigtableGcPolicyTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy google_bigtable_gc_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy google_bigtable_gc_policy}
 */
 export class BigtableGcPolicy extends cdktf.TerraformResource {
 
@@ -463,7 +472,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigtableGcPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigtableGcPolicy to import
-  * @param importFromId The id of the existing BigtableGcPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigtableGcPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigtableGcPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -475,7 +484,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/bigtable_gc_policy google_bigtable_gc_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/bigtable_gc_policy google_bigtable_gc_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -486,7 +495,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_gc_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.35.0',
+        providerVersion: '5.36.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -501,6 +510,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
     this._deletionPolicy = config.deletionPolicy;
     this._gcRules = config.gcRules;
     this._id = config.id;
+    this._ignoreWarnings = config.ignoreWarnings;
     this._instanceName = config.instanceName;
     this._mode = config.mode;
     this._project = config.project;
@@ -573,6 +583,22 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // ignore_warnings - computed: false, optional: true, required: false
+  private _ignoreWarnings?: boolean | cdktf.IResolvable; 
+  public get ignoreWarnings() {
+    return this.getBooleanAttribute('ignore_warnings');
+  }
+  public set ignoreWarnings(value: boolean | cdktf.IResolvable) {
+    this._ignoreWarnings = value;
+  }
+  public resetIgnoreWarnings() {
+    this._ignoreWarnings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreWarningsInput() {
+    return this._ignoreWarnings;
   }
 
   // instance_name - computed: false, optional: false, required: true
@@ -691,6 +717,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
       deletion_policy: cdktf.stringToTerraform(this._deletionPolicy),
       gc_rules: cdktf.stringToTerraform(this._gcRules),
       id: cdktf.stringToTerraform(this._id),
+      ignore_warnings: cdktf.booleanToTerraform(this._ignoreWarnings),
       instance_name: cdktf.stringToTerraform(this._instanceName),
       mode: cdktf.stringToTerraform(this._mode),
       project: cdktf.stringToTerraform(this._project),
@@ -726,6 +753,12 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      ignore_warnings: {
+        value: cdktf.booleanToHclTerraform(this._ignoreWarnings),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       instance_name: {
         value: cdktf.stringToHclTerraform(this._instanceName),

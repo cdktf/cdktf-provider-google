@@ -236,6 +236,7 @@ Object.defineProperty(exports, 'computeInterconnect', { get: function () { retur
 Object.defineProperty(exports, 'computeInterconnectAttachment', { get: function () { return require('./compute-interconnect-attachment'); } });
 Object.defineProperty(exports, 'computeManagedSslCertificate', { get: function () { return require('./compute-managed-ssl-certificate'); } });
 Object.defineProperty(exports, 'computeNetwork', { get: function () { return require('./compute-network'); } });
+Object.defineProperty(exports, 'computeNetworkAttachment', { get: function () { return require('./compute-network-attachment'); } });
 Object.defineProperty(exports, 'computeNetworkEndpoint', { get: function () { return require('./compute-network-endpoint'); } });
 Object.defineProperty(exports, 'computeNetworkEndpointGroup', { get: function () { return require('./compute-network-endpoint-group'); } });
 Object.defineProperty(exports, 'computeNetworkEndpoints', { get: function () { return require('./compute-network-endpoints'); } });
@@ -788,6 +789,10 @@ Object.defineProperty(exports, 'storageDefaultObjectAccessControl', { get: funct
 Object.defineProperty(exports, 'storageDefaultObjectAcl', { get: function () { return require('./storage-default-object-acl'); } });
 Object.defineProperty(exports, 'storageHmacKey', { get: function () { return require('./storage-hmac-key'); } });
 Object.defineProperty(exports, 'storageInsightsReportConfig', { get: function () { return require('./storage-insights-report-config'); } });
+Object.defineProperty(exports, 'storageManagedFolder', { get: function () { return require('./storage-managed-folder'); } });
+Object.defineProperty(exports, 'storageManagedFolderIamBinding', { get: function () { return require('./storage-managed-folder-iam-binding'); } });
+Object.defineProperty(exports, 'storageManagedFolderIamMember', { get: function () { return require('./storage-managed-folder-iam-member'); } });
+Object.defineProperty(exports, 'storageManagedFolderIamPolicy', { get: function () { return require('./storage-managed-folder-iam-policy'); } });
 Object.defineProperty(exports, 'storageNotification', { get: function () { return require('./storage-notification'); } });
 Object.defineProperty(exports, 'storageObjectAccessControl', { get: function () { return require('./storage-object-access-control'); } });
 Object.defineProperty(exports, 'storageObjectAcl', { get: function () { return require('./storage-object-acl'); } });
@@ -1076,6 +1081,7 @@ Object.defineProperty(exports, 'dataGoogleStorageBucketObject', { get: function 
 Object.defineProperty(exports, 'dataGoogleStorageBucketObjectContent', { get: function () { return require('./data-google-storage-bucket-object-content'); } });
 Object.defineProperty(exports, 'dataGoogleStorageBucketObjects', { get: function () { return require('./data-google-storage-bucket-objects'); } });
 Object.defineProperty(exports, 'dataGoogleStorageBuckets', { get: function () { return require('./data-google-storage-buckets'); } });
+Object.defineProperty(exports, 'dataGoogleStorageManagedFolderIamPolicy', { get: function () { return require('./data-google-storage-managed-folder-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleStorageObjectSignedUrl', { get: function () { return require('./data-google-storage-object-signed-url'); } });
 Object.defineProperty(exports, 'dataGoogleStorageProjectServiceAccount', { get: function () { return require('./data-google-storage-project-service-account'); } });
 Object.defineProperty(exports, 'dataGoogleStorageTransferProjectServiceAccount', { get: function () { return require('./data-google-storage-transfer-project-service-account'); } });

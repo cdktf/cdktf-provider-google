@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset
+// https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,17 +22,17 @@ export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location for the Dataset.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
   */
   readonly location: string;
   /**
   * The resource name for the Dataset.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}
   */
   readonly project?: string;
   /**
@@ -40,27 +40,122 @@ export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
   * (e.g., HL7 messages) where no explicit timezone is specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
   */
   readonly timeZone?: string;
   /**
+  * encryption_spec block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#encryption_spec HealthcareDataset#encryption_spec}
+  */
+  readonly encryptionSpec?: HealthcareDatasetEncryptionSpec;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
   */
   readonly timeouts?: HealthcareDatasetTimeouts;
 }
+export interface HealthcareDatasetEncryptionSpec {
+  /**
+  * KMS encryption key that is used to secure this dataset and its sub-resources. The key used for
+  * encryption and the dataset must be in the same location. If empty, the default Google encryption
+  * key will be used to secure this dataset. The format is
+  * projects/{projectId}/locations/{locationId}/keyRings/{keyRingId}/cryptoKeys/{keyId}.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#kms_key_name HealthcareDataset#kms_key_name}
+  */
+  readonly kmsKeyName?: string;
+}
+
+export function healthcareDatasetEncryptionSpecToTerraform(struct?: HealthcareDatasetEncryptionSpecOutputReference | HealthcareDatasetEncryptionSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
+
+export function healthcareDatasetEncryptionSpecToHclTerraform(struct?: HealthcareDatasetEncryptionSpecOutputReference | HealthcareDatasetEncryptionSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class HealthcareDatasetEncryptionSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HealthcareDatasetEncryptionSpec | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareDatasetEncryptionSpec | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeyName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeyName = value.kmsKeyName;
+    }
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
+  }
+}
 export interface HealthcareDatasetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}
   */
   readonly update?: string;
 }
@@ -212,7 +307,7 @@ export class HealthcareDatasetTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset google_healthcare_dataset}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset google_healthcare_dataset}
 */
 export class HealthcareDataset extends cdktf.TerraformResource {
 
@@ -228,7 +323,7 @@ export class HealthcareDataset extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HealthcareDataset resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HealthcareDataset to import
-  * @param importFromId The id of the existing HealthcareDataset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HealthcareDataset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HealthcareDataset to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -240,7 +335,7 @@ export class HealthcareDataset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset google_healthcare_dataset} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset google_healthcare_dataset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -251,7 +346,7 @@ export class HealthcareDataset extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_dataset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.35.0',
+        providerVersion: '5.36.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -267,6 +362,7 @@ export class HealthcareDataset extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._timeZone = config.timeZone;
+    this._encryptionSpec.internalValue = config.encryptionSpec;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -353,6 +449,22 @@ export class HealthcareDataset extends cdktf.TerraformResource {
     return this._timeZone;
   }
 
+  // encryption_spec - computed: false, optional: true, required: false
+  private _encryptionSpec = new HealthcareDatasetEncryptionSpecOutputReference(this, "encryption_spec");
+  public get encryptionSpec() {
+    return this._encryptionSpec;
+  }
+  public putEncryptionSpec(value: HealthcareDatasetEncryptionSpec) {
+    this._encryptionSpec.internalValue = value;
+  }
+  public resetEncryptionSpec() {
+    this._encryptionSpec.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionSpecInput() {
+    return this._encryptionSpec.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new HealthcareDatasetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -380,6 +492,7 @@ export class HealthcareDataset extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       time_zone: cdktf.stringToTerraform(this._timeZone),
+      encryption_spec: healthcareDatasetEncryptionSpecToTerraform(this._encryptionSpec.internalValue),
       timeouts: healthcareDatasetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -415,6 +528,12 @@ export class HealthcareDataset extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      encryption_spec: {
+        value: healthcareDatasetEncryptionSpecToHclTerraform(this._encryptionSpec.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HealthcareDatasetEncryptionSpecList",
       },
       timeouts: {
         value: healthcareDatasetTimeoutsToHclTerraform(this._timeouts.internalValue),

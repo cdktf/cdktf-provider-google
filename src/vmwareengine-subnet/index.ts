@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet
+// https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface VmwareengineSubnetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#id VmwareengineSubnet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#id VmwareengineSubnet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,14 +22,14 @@ export interface VmwareengineSubnetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The IP address range of the subnet in CIDR format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#ip_cidr_range VmwareengineSubnet#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#ip_cidr_range VmwareengineSubnet#ip_cidr_range}
   */
   readonly ipCidrRange: string;
   /**
   * The ID of the subnet. For userDefined subnets, this name should be in the format of "service-n",
   * where n ranges from 1 to 5.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#name VmwareengineSubnet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#name VmwareengineSubnet#name}
   */
   readonly name: string;
   /**
@@ -37,13 +37,13 @@ export interface VmwareengineSubnetConfig extends cdktf.TerraformMetaArguments {
   * Resource names are schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
   * For example: projects/my-project/locations/us-west1-a/privateClouds/my-cloud
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#parent VmwareengineSubnet#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#parent VmwareengineSubnet#parent}
   */
   readonly parent: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#timeouts VmwareengineSubnet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#timeouts VmwareengineSubnet#timeouts}
   */
   readonly timeouts?: VmwareengineSubnetTimeouts;
 }
@@ -129,15 +129,15 @@ export class VmwareengineSubnetDhcpAddressRangesList extends cdktf.ComplexList {
 }
 export interface VmwareengineSubnetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#create VmwareengineSubnet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#create VmwareengineSubnet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#delete VmwareengineSubnet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#delete VmwareengineSubnet#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#update VmwareengineSubnet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#update VmwareengineSubnet#update}
   */
   readonly update?: string;
 }
@@ -289,7 +289,7 @@ export class VmwareengineSubnetTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet google_vmwareengine_subnet}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet google_vmwareengine_subnet}
 */
 export class VmwareengineSubnet extends cdktf.TerraformResource {
 
@@ -305,7 +305,7 @@ export class VmwareengineSubnet extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VmwareengineSubnet resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VmwareengineSubnet to import
-  * @param importFromId The id of the existing VmwareengineSubnet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VmwareengineSubnet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VmwareengineSubnet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -317,7 +317,7 @@ export class VmwareengineSubnet extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/vmwareengine_subnet google_vmwareengine_subnet} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/vmwareengine_subnet google_vmwareengine_subnet} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -328,7 +328,7 @@ export class VmwareengineSubnet extends cdktf.TerraformResource {
       terraformResourceType: 'google_vmwareengine_subnet',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.35.0',
+        providerVersion: '5.36.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
