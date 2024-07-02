@@ -4,12 +4,12 @@
 
 ### AppEngineServiceNetworkSettings <a name="AppEngineServiceNetworkSettings" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings google_app_engine_service_network_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings google_app_engine_service_network_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 appengineservicenetworksettings.NewAppEngineServiceNetworkSettings(scope Construct, id *string, config AppEngineServiceNetworkSettingsConfig) AppEngineServiceNetworkSettings
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 appengineservicenetworksettings.AppEngineServiceNetworkSettings_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 appengineservicenetworksettings.AppEngineServiceNetworkSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ appengineservicenetworksettings.AppEngineServiceNetworkSettings_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettings.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 appengineservicenetworksettings.AppEngineServiceNetworkSettings_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ appengineservicenetworksettings.AppEngineServiceNetworkSettings_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 appengineservicenetworksettings.AppEngineServiceNetworkSettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -514,7 +514,7 @@ The construct id used in the generated config for the AppEngineServiceNetworkSet
 
 The id of the existing AppEngineServiceNetworkSettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -824,7 +824,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 &appengineservicenetworksettings.AppEngineServiceNetworkSettingsConfig {
 	Connection: interface{},
@@ -834,11 +834,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenet
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	NetworkSettings: github.com/cdktf/cdktf-provider-google-go/google/v13.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsNetworkSettings,
+	NetworkSettings: github.com/cdktf/cdktf-provider-google-go/google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsNetworkSettings,
 	Service: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts,
 }
 ```
 
@@ -855,8 +855,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenet
 | <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.property.networkSettings">NetworkSettings</a></code> | <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsNetworkSettings">AppEngineServiceNetworkSettingsNetworkSettings</a></code> | network_settings block. |
 | <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.property.service">Service</a></code> | <code>*string</code> | The name of the service these settings apply to. |
-| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#id AppEngineServiceNetworkSettings#id}. |
-| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#project AppEngineServiceNetworkSettings#project}. |
+| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#id AppEngineServiceNetworkSettings#id}. |
+| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#project AppEngineServiceNetworkSettings#project}. |
 | <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts">AppEngineServiceNetworkSettingsTimeouts</a></code> | timeouts block. |
 
 ---
@@ -941,7 +941,7 @@ NetworkSettings AppEngineServiceNetworkSettingsNetworkSettings
 
 network_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#network_settings AppEngineServiceNetworkSettings#network_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#network_settings AppEngineServiceNetworkSettings#network_settings}
 
 ---
 
@@ -955,7 +955,7 @@ Service *string
 
 The name of the service these settings apply to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#service AppEngineServiceNetworkSettings#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#service AppEngineServiceNetworkSettings#service}
 
 ---
 
@@ -967,7 +967,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#id AppEngineServiceNetworkSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#id AppEngineServiceNetworkSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -982,7 +982,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#project AppEngineServiceNetworkSettings#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#project AppEngineServiceNetworkSettings#project}.
 
 ---
 
@@ -996,7 +996,7 @@ Timeouts AppEngineServiceNetworkSettingsTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#timeouts AppEngineServiceNetworkSettings#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#timeouts AppEngineServiceNetworkSettings#timeouts}
 
 ---
 
@@ -1005,7 +1005,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsNetworkSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 &appengineservicenetworksettings.AppEngineServiceNetworkSettingsNetworkSettings {
 	IngressTrafficAllowed: *string,
@@ -1030,7 +1030,7 @@ IngressTrafficAllowed *string
 
 The ingress settings for version or service. Default value: "INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED" Possible values: ["INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED", "INGRESS_TRAFFIC_ALLOWED_ALL", "INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY", "INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#ingress_traffic_allowed AppEngineServiceNetworkSettings#ingress_traffic_allowed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#ingress_traffic_allowed AppEngineServiceNetworkSettings#ingress_traffic_allowed}
 
 ---
 
@@ -1039,7 +1039,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 &appengineservicenetworksettings.AppEngineServiceNetworkSettingsTimeouts {
 	Create: *string,
@@ -1052,9 +1052,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenet
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#create AppEngineServiceNetworkSettings#create}. |
-| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#delete AppEngineServiceNetworkSettings#delete}. |
-| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#update AppEngineServiceNetworkSettings#update}. |
+| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#create AppEngineServiceNetworkSettings#create}. |
+| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#delete AppEngineServiceNetworkSettings#delete}. |
+| <code><a href="#@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#update AppEngineServiceNetworkSettings#update}. |
 
 ---
 
@@ -1066,7 +1066,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#create AppEngineServiceNetworkSettings#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#create AppEngineServiceNetworkSettings#create}.
 
 ---
 
@@ -1078,7 +1078,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#delete AppEngineServiceNetworkSettings#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#delete AppEngineServiceNetworkSettings#delete}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/app_engine_service_network_settings#update AppEngineServiceNetworkSettings#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/app_engine_service_network_settings#update AppEngineServiceNetworkSettings#update}.
 
 ---
 
@@ -1101,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsNetworkSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 appengineservicenetworksettings.NewAppEngineServiceNetworkSettingsNetworkSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineServiceNetworkSettingsNetworkSettingsOutputReference
 ```
@@ -1379,7 +1379,7 @@ func InternalValue() AppEngineServiceNetworkSettingsNetworkSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineServiceNetworkSettings.AppEngineServiceNetworkSettingsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/appengineservicenetworksettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicenetworksettings"
 
 appengineservicenetworksettings.NewAppEngineServiceNetworkSettingsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineServiceNetworkSettingsTimeoutsOutputReference
 ```

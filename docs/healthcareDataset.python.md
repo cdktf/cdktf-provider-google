@@ -4,7 +4,7 @@
 
 ### HealthcareDataset <a name="HealthcareDataset" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset google_healthcare_dataset}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset google_healthcare_dataset}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer"></a>
 
@@ -23,6 +23,7 @@ healthcareDataset.HealthcareDataset(
   provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
   location: str,
   name: str,
+  encryption_spec: HealthcareDatasetEncryptionSpec = None,
   id: str = None,
   project: str = None,
   timeouts: HealthcareDatasetTimeouts = None,
@@ -43,8 +44,9 @@ healthcareDataset.HealthcareDataset(
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.location">location</a></code> | <code>str</code> | The location for the Dataset. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name for the Dataset. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.encryptionSpec">encryption_spec</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec">HealthcareDatasetEncryptionSpec</a></code> | encryption_spec block. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts">HealthcareDatasetTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.timeZone">time_zone</a></code> | <code>str</code> | The default timezone used by this dataset. |
 
@@ -116,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 The location for the Dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
 
 ---
 
@@ -126,7 +128,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The resource name for the Dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
+
+---
+
+##### `encryption_spec`<sup>Optional</sup> <a name="encryption_spec" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.Initializer.parameter.encryptionSpec"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec">HealthcareDatasetEncryptionSpec</a>
+
+encryption_spec block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#encryption_spec HealthcareDataset#encryption_spec}
 
 ---
 
@@ -134,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -145,7 +157,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}.
 
 ---
 
@@ -155,7 +167,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
 
 ---
 
@@ -169,7 +181,7 @@ Must be a either a valid IANA time zone name such as
 "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
 (e.g., HL7 messages) where no explicit timezone is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
 
 ---
 
@@ -200,7 +212,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.moveFromId">move_from_id</a></code> | Move the resource corresponding to "id" to this resource. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.putEncryptionSpec">put_encryption_spec</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.putTimeouts">put_timeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.resetEncryptionSpec">reset_encryption_spec</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.resetId">reset_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.resetProject">reset_project</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.resetTimeouts">reset_timeouts</a></code> | *No description.* |
@@ -533,6 +547,29 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
+##### `put_encryption_spec` <a name="put_encryption_spec" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.putEncryptionSpec"></a>
+
+```python
+def put_encryption_spec(
+  kms_key_name: str = None
+) -> None
+```
+
+###### `kms_key_name`<sup>Optional</sup> <a name="kms_key_name" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.putEncryptionSpec.parameter.kmsKeyName"></a>
+
+- *Type:* str
+
+KMS encryption key that is used to secure this dataset and its sub-resources.
+
+The key used for
+encryption and the dataset must be in the same location. If empty, the default Google encryption
+key will be used to secure this dataset. The format is
+projects/{projectId}/locations/{locationId}/keyRings/{keyRingId}/cryptoKeys/{keyId}.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#kms_key_name HealthcareDataset#kms_key_name}
+
+---
+
 ##### `put_timeouts` <a name="put_timeouts" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.putTimeouts"></a>
 
 ```python
@@ -547,7 +584,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}.
 
 ---
 
@@ -555,7 +592,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}.
 
 ---
 
@@ -563,9 +600,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}.
 
 ---
+
+##### `reset_encryption_spec` <a name="reset_encryption_spec" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.resetEncryptionSpec"></a>
+
+```python
+def reset_encryption_spec() -> None
+```
 
 ##### `reset_id` <a name="reset_id" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.resetId"></a>
 
@@ -705,7 +748,7 @@ The construct id used in the generated config for the HealthcareDataset to impor
 
 The id of the existing HealthcareDataset that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -735,8 +778,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.encryptionSpec">encryption_spec</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference">HealthcareDatasetEncryptionSpecOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.selfLink">self_link</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeoutsOutputReference">HealthcareDatasetTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.encryptionSpecInput">encryption_spec_input</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec">HealthcareDatasetEncryptionSpec</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
@@ -893,6 +938,16 @@ provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, Re
 
 ---
 
+##### `encryption_spec`<sup>Required</sup> <a name="encryption_spec" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.encryptionSpec"></a>
+
+```python
+encryption_spec: HealthcareDatasetEncryptionSpecOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference">HealthcareDatasetEncryptionSpecOutputReference</a>
+
+---
+
 ##### `self_link`<sup>Required</sup> <a name="self_link" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.selfLink"></a>
 
 ```python
@@ -910,6 +965,16 @@ timeouts: HealthcareDatasetTimeoutsOutputReference
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeoutsOutputReference">HealthcareDatasetTimeoutsOutputReference</a>
+
+---
+
+##### `encryption_spec_input`<sup>Optional</sup> <a name="encryption_spec_input" id="@cdktf/provider-google.healthcareDataset.HealthcareDataset.property.encryptionSpecInput"></a>
+
+```python
+encryption_spec_input: HealthcareDatasetEncryptionSpec
+```
+
+- *Type:* <a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec">HealthcareDatasetEncryptionSpec</a>
 
 ---
 
@@ -1060,6 +1125,7 @@ healthcareDataset.HealthcareDatasetConfig(
   provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
   location: str,
   name: str,
+  encryption_spec: HealthcareDatasetEncryptionSpec = None,
   id: str = None,
   project: str = None,
   timeouts: HealthcareDatasetTimeouts = None,
@@ -1080,8 +1146,9 @@ healthcareDataset.HealthcareDatasetConfig(
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.location">location</a></code> | <code>str</code> | The location for the Dataset. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.name">name</a></code> | <code>str</code> | The resource name for the Dataset. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.encryptionSpec">encryption_spec</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec">HealthcareDatasetEncryptionSpec</a></code> | encryption_spec block. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts">HealthcareDatasetTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.timeZone">time_zone</a></code> | <code>str</code> | The default timezone used by this dataset. |
 
@@ -1167,7 +1234,7 @@ location: str
 
 The location for the Dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
 
 ---
 
@@ -1181,7 +1248,21 @@ name: str
 
 The resource name for the Dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
+
+---
+
+##### `encryption_spec`<sup>Optional</sup> <a name="encryption_spec" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetConfig.property.encryptionSpec"></a>
+
+```python
+encryption_spec: HealthcareDatasetEncryptionSpec
+```
+
+- *Type:* <a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec">HealthcareDatasetEncryptionSpec</a>
+
+encryption_spec block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#encryption_spec HealthcareDataset#encryption_spec}
 
 ---
 
@@ -1193,7 +1274,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1208,7 +1289,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}.
 
 ---
 
@@ -1222,7 +1303,7 @@ timeouts: HealthcareDatasetTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
 
 ---
 
@@ -1240,7 +1321,46 @@ Must be a either a valid IANA time zone name such as
 "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
 (e.g., HL7 messages) where no explicit timezone is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
+
+---
+
+### HealthcareDatasetEncryptionSpec <a name="HealthcareDatasetEncryptionSpec" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import healthcare_dataset
+
+healthcareDataset.HealthcareDatasetEncryptionSpec(
+  kms_key_name: str = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec.property.kmsKeyName">kms_key_name</a></code> | <code>str</code> | KMS encryption key that is used to secure this dataset and its sub-resources. |
+
+---
+
+##### `kms_key_name`<sup>Optional</sup> <a name="kms_key_name" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec.property.kmsKeyName"></a>
+
+```python
+kms_key_name: str
+```
+
+- *Type:* str
+
+KMS encryption key that is used to secure this dataset and its sub-resources.
+
+The key used for
+encryption and the dataset must be in the same location. If empty, the default Google encryption
+key will be used to secure this dataset. The format is
+projects/{projectId}/locations/{locationId}/keyRings/{keyRingId}/cryptoKeys/{keyId}.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#kms_key_name HealthcareDataset#kms_key_name}
 
 ---
 
@@ -1262,9 +1382,9 @@ healthcareDataset.HealthcareDatasetTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}. |
-| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}. |
 
 ---
 
@@ -1276,7 +1396,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}.
 
 ---
 
@@ -1288,7 +1408,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}.
 
 ---
 
@@ -1300,11 +1420,314 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}.
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### HealthcareDatasetEncryptionSpecOutputReference <a name="HealthcareDatasetEncryptionSpecOutputReference" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import healthcare_dataset
+
+healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.resetKmsKeyName">reset_kms_key_name</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_kms_key_name` <a name="reset_kms_key_name" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.resetKmsKeyName"></a>
+
+```python
+def reset_kms_key_name() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.kmsKeyNameInput">kms_key_name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.kmsKeyName">kms_key_name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec">HealthcareDatasetEncryptionSpec</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `kms_key_name_input`<sup>Optional</sup> <a name="kms_key_name_input" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.kmsKeyNameInput"></a>
+
+```python
+kms_key_name_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `kms_key_name`<sup>Required</sup> <a name="kms_key_name" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.kmsKeyName"></a>
+
+```python
+kms_key_name: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpecOutputReference.property.internalValue"></a>
+
+```python
+internal_value: HealthcareDatasetEncryptionSpec
+```
+
+- *Type:* <a href="#@cdktf/provider-google.healthcareDataset.HealthcareDatasetEncryptionSpec">HealthcareDatasetEncryptionSpec</a>
+
+---
+
 
 ### HealthcareDatasetTimeoutsOutputReference <a name="HealthcareDatasetTimeoutsOutputReference" id="@cdktf/provider-google.healthcareDataset.HealthcareDatasetTimeoutsOutputReference"></a>
 

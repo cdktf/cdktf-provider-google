@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#id DataGoogleIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#id DataGoogleIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,23 +17,23 @@ export interface DataGoogleIamPolicyConfig extends cdktf.TerraformMetaArguments 
   /**
   * audit_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#audit_config DataGoogleIamPolicy#audit_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#audit_config DataGoogleIamPolicy#audit_config}
   */
   readonly auditConfig?: DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable;
   /**
   * binding block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#binding DataGoogleIamPolicy#binding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#binding DataGoogleIamPolicy#binding}
   */
   readonly binding?: DataGoogleIamPolicyBinding[] | cdktf.IResolvable;
 }
 export interface DataGoogleIamPolicyAuditConfigAuditLogConfigs {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#exempted_members DataGoogleIamPolicy#exempted_members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#exempted_members DataGoogleIamPolicy#exempted_members}
   */
   readonly exemptedMembers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#log_type DataGoogleIamPolicy#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#log_type DataGoogleIamPolicy#log_type}
   */
   readonly logType: string;
 }
@@ -180,13 +175,13 @@ export class DataGoogleIamPolicyAuditConfigAuditLogConfigsList extends cdktf.Com
 }
 export interface DataGoogleIamPolicyAuditConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#service DataGoogleIamPolicy#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#service DataGoogleIamPolicy#service}
   */
   readonly service: string;
   /**
   * audit_log_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#audit_log_configs DataGoogleIamPolicy#audit_log_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#audit_log_configs DataGoogleIamPolicy#audit_log_configs}
   */
   readonly auditLogConfigs: DataGoogleIamPolicyAuditConfigAuditLogConfigs[] | cdktf.IResolvable;
 }
@@ -325,15 +320,15 @@ export class DataGoogleIamPolicyAuditConfigList extends cdktf.ComplexList {
 }
 export interface DataGoogleIamPolicyBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#description DataGoogleIamPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#description DataGoogleIamPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#expression DataGoogleIamPolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#expression DataGoogleIamPolicy#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#title DataGoogleIamPolicy#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#title DataGoogleIamPolicy#title}
   */
   readonly title: string;
 }
@@ -469,17 +464,17 @@ export class DataGoogleIamPolicyBindingConditionOutputReference extends cdktf.Co
 }
 export interface DataGoogleIamPolicyBinding {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#members DataGoogleIamPolicy#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#members DataGoogleIamPolicy#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#role DataGoogleIamPolicy#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#role DataGoogleIamPolicy#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#condition DataGoogleIamPolicy#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#condition DataGoogleIamPolicy#condition}
   */
   readonly condition?: DataGoogleIamPolicyBindingCondition;
 }
@@ -647,7 +642,7 @@ export class DataGoogleIamPolicyBindingList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy google_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy google_iam_policy}
 */
 export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
 
@@ -663,7 +658,7 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleIamPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleIamPolicy to import
-  * @param importFromId The id of the existing DataGoogleIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleIamPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleIamPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -675,7 +670,7 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.35.0/docs/data-sources/iam_policy google_iam_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/iam_policy google_iam_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -686,7 +681,7 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.35.0',
+        providerVersion: '5.36.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
