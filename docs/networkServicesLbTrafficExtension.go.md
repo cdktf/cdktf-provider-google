@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NewNetworkServicesLbTrafficExtension(scope Construct, id *string, config NetworkServicesLbTrafficExtensionConfig) NetworkServicesLbTrafficExtension
 ```
@@ -446,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtension.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NetworkServicesLbTrafficExtension_IsConstruct(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtension.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NetworkServicesLbTrafficExtension_IsTerraformElement(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ networkserviceslbtrafficextension.NetworkServicesLbTrafficExtension_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtension.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NetworkServicesLbTrafficExtension_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ networkserviceslbtrafficextension.NetworkServicesLbTrafficExtension_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtension.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NetworkServicesLbTrafficExtension_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -977,7 +977,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 &networkserviceslbtrafficextension.NetworkServicesLbTrafficExtensionConfig {
 	Connection: interface{},
@@ -996,7 +996,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtraffi
 	Labels: *map[string]*string,
 	LoadBalancingScheme: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionTimeouts,
 }
 ```
 
@@ -1246,11 +1246,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChains.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 &networkserviceslbtrafficextension.NetworkServicesLbTrafficExtensionExtensionChains {
 	Extensions: interface{},
-	MatchCondition: github.com/cdktf/cdktf-provider-google-go/google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsMatchCondition,
+	MatchCondition: github.com/cdktf/cdktf-provider-google-go/google/v13.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsMatchCondition,
 	Name: *string,
 }
 ```
@@ -1317,7 +1317,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsExtensions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 &networkserviceslbtrafficextension.NetworkServicesLbTrafficExtensionExtensionChainsExtensions {
 	Name: *string,
@@ -1467,7 +1467,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsMatchCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 &networkserviceslbtrafficextension.NetworkServicesLbTrafficExtensionExtensionChainsMatchCondition {
 	CelExpression: *string,
@@ -1501,7 +1501,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 &networkserviceslbtrafficextension.NetworkServicesLbTrafficExtensionTimeouts {
 	Create: *string,
@@ -1563,7 +1563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsExtensionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NewNetworkServicesLbTrafficExtensionExtensionChainsExtensionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesLbTrafficExtensionExtensionChainsExtensionsList
 ```
@@ -1723,7 +1723,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsExtensionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NewNetworkServicesLbTrafficExtensionExtensionChainsExtensionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesLbTrafficExtensionExtensionChainsExtensionsOutputReference
 ```
@@ -2179,7 +2179,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NewNetworkServicesLbTrafficExtensionExtensionChainsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesLbTrafficExtensionExtensionChainsList
 ```
@@ -2339,7 +2339,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsMatchConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NewNetworkServicesLbTrafficExtensionExtensionChainsMatchConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesLbTrafficExtensionExtensionChainsMatchConditionOutputReference
 ```
@@ -2610,7 +2610,7 @@ func InternalValue() NetworkServicesLbTrafficExtensionExtensionChainsMatchCondit
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionExtensionChainsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NewNetworkServicesLbTrafficExtensionExtensionChainsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesLbTrafficExtensionExtensionChainsOutputReference
 ```
@@ -2969,7 +2969,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbTrafficExtension.NetworkServicesLbTrafficExtensionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbtrafficextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkserviceslbtrafficextension"
 
 networkserviceslbtrafficextension.NewNetworkServicesLbTrafficExtensionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesLbTrafficExtensionTimeoutsOutputReference
 ```
