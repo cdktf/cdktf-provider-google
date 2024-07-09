@@ -4,7 +4,7 @@
 
 ### DataGoogleLoggingFolderSettings <a name="DataGoogleLoggingFolderSettings" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/logging_folder_settings google_logging_folder_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/logging_folder_settings google_logging_folder_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer"></a>
 
@@ -372,7 +372,7 @@ The construct id used in the generated config for the DataGoogleLoggingFolderSet
 
 The id of the existing DataGoogleLoggingFolderSettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/logging_folder_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/logging_folder_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -687,7 +687,7 @@ new DataGoogleLoggingFolderSettingsConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.folder">Folder</a></code> | <code>string</code> | The folder for which to retrieve settings. |
-| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}. |
 
 ---
 
@@ -771,7 +771,7 @@ public string Folder { get; set; }
 
 The folder for which to retrieve settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/logging_folder_settings#folder DataGoogleLoggingFolderSettings#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/logging_folder_settings#folder DataGoogleLoggingFolderSettings#folder}
 
 ---
 
@@ -783,7 +783,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.36.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
