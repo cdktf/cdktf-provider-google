@@ -695,6 +695,7 @@ Object.defineProperty(exports, 'privatecaCertificateTemplate', { get: function (
 Object.defineProperty(exports, 'privatecaCertificateTemplateIamBinding', { get: function () { return require('./privateca-certificate-template-iam-binding'); } });
 Object.defineProperty(exports, 'privatecaCertificateTemplateIamMember', { get: function () { return require('./privateca-certificate-template-iam-member'); } });
 Object.defineProperty(exports, 'privatecaCertificateTemplateIamPolicy', { get: function () { return require('./privateca-certificate-template-iam-policy'); } });
+Object.defineProperty(exports, 'privilegedAccessManagerEntitlement', { get: function () { return require('./privileged-access-manager-entitlement'); } });
 Object.defineProperty(exports, 'project', { get: function () { return require('./project'); } });
 Object.defineProperty(exports, 'projectAccessApprovalSettings', { get: function () { return require('./project-access-approval-settings'); } });
 Object.defineProperty(exports, 'projectDefaultServiceAccounts', { get: function () { return require('./project-default-service-accounts'); } });
@@ -737,6 +738,7 @@ Object.defineProperty(exports, 'sccMuteConfig', { get: function () { return requ
 Object.defineProperty(exports, 'sccNotificationConfig', { get: function () { return require('./scc-notification-config'); } });
 Object.defineProperty(exports, 'sccOrganizationCustomModule', { get: function () { return require('./scc-organization-custom-module'); } });
 Object.defineProperty(exports, 'sccProjectCustomModule', { get: function () { return require('./scc-project-custom-module'); } });
+Object.defineProperty(exports, 'sccProjectNotificationConfig', { get: function () { return require('./scc-project-notification-config'); } });
 Object.defineProperty(exports, 'sccSource', { get: function () { return require('./scc-source'); } });
 Object.defineProperty(exports, 'sccSourceIamBinding', { get: function () { return require('./scc-source-iam-binding'); } });
 Object.defineProperty(exports, 'sccSourceIamMember', { get: function () { return require('./scc-source-iam-member'); } });
@@ -994,6 +996,7 @@ Object.defineProperty(exports, 'dataGoogleFolders', { get: function () { return 
 Object.defineProperty(exports, 'dataGoogleGkeBackupBackupPlanIamPolicy', { get: function () { return require('./data-google-gke-backup-backup-plan-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleGkeBackupRestorePlanIamPolicy', { get: function () { return require('./data-google-gke-backup-restore-plan-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleGkeHubFeatureIamPolicy', { get: function () { return require('./data-google-gke-hub-feature-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleGkeHubMembershipBinding', { get: function () { return require('./data-google-gke-hub-membership-binding'); } });
 Object.defineProperty(exports, 'dataGoogleGkeHubMembershipIamPolicy', { get: function () { return require('./data-google-gke-hub-membership-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleGkeHubScopeIamPolicy', { get: function () { return require('./data-google-gke-hub-scope-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleHealthcareConsentStoreIamPolicy', { get: function () { return require('./data-google-healthcare-consent-store-iam-policy'); } });
@@ -1070,6 +1073,7 @@ Object.defineProperty(exports, 'dataGoogleServiceAccountIdToken', { get: functio
 Object.defineProperty(exports, 'dataGoogleServiceAccountJwt', { get: function () { return require('./data-google-service-account-jwt'); } });
 Object.defineProperty(exports, 'dataGoogleServiceAccountKey', { get: function () { return require('./data-google-service-account-key'); } });
 Object.defineProperty(exports, 'dataGoogleServiceNetworkingPeeredDnsDomain', { get: function () { return require('./data-google-service-networking-peered-dns-domain'); } });
+Object.defineProperty(exports, 'dataGoogleSiteVerificationToken', { get: function () { return require('./data-google-site-verification-token'); } });
 Object.defineProperty(exports, 'dataGoogleSourcerepoRepository', { get: function () { return require('./data-google-sourcerepo-repository'); } });
 Object.defineProperty(exports, 'dataGoogleSourcerepoRepositoryIamPolicy', { get: function () { return require('./data-google-sourcerepo-repository-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleSpannerDatabaseIamPolicy', { get: function () { return require('./data-google-spanner-database-iam-policy'); } });

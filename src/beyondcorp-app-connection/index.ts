@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection
+// https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface BeyondcorpAppConnectionConfig extends cdktf.TerraformMetaArgume
   /**
   * List of AppConnectors that are authorised to be associated with this AppConnection
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#connectors BeyondcorpAppConnection#connectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#connectors BeyondcorpAppConnection#connectors}
   */
   readonly connectors?: string[];
   /**
   * An arbitrary user-provided name for the AppConnection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#display_name BeyondcorpAppConnection#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#display_name BeyondcorpAppConnection#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#id BeyondcorpAppConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#id BeyondcorpAppConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -38,23 +38,23 @@ export interface BeyondcorpAppConnectionConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#labels BeyondcorpAppConnection#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#labels BeyondcorpAppConnection#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * ID of the AppConnection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#name BeyondcorpAppConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#name BeyondcorpAppConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#project BeyondcorpAppConnection#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#project BeyondcorpAppConnection#project}
   */
   readonly project?: string;
   /**
   * The region of the AppConnection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#region BeyondcorpAppConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#region BeyondcorpAppConnection#region}
   */
   readonly region?: string;
   /**
@@ -62,25 +62,25 @@ export interface BeyondcorpAppConnectionConfig extends cdktf.TerraformMetaArgume
   * to https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#type
   * for a list of possible values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#type BeyondcorpAppConnection#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#type BeyondcorpAppConnection#type}
   */
   readonly type?: string;
   /**
   * application_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#application_endpoint BeyondcorpAppConnection#application_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#application_endpoint BeyondcorpAppConnection#application_endpoint}
   */
   readonly applicationEndpoint: BeyondcorpAppConnectionApplicationEndpoint;
   /**
   * gateway block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#gateway BeyondcorpAppConnection#gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#gateway BeyondcorpAppConnection#gateway}
   */
   readonly gateway?: BeyondcorpAppConnectionGateway;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#timeouts BeyondcorpAppConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#timeouts BeyondcorpAppConnection#timeouts}
   */
   readonly timeouts?: BeyondcorpAppConnectionTimeouts;
 }
@@ -88,13 +88,13 @@ export interface BeyondcorpAppConnectionApplicationEndpoint {
   /**
   * Hostname or IP address of the remote application endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#host BeyondcorpAppConnection#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#host BeyondcorpAppConnection#host}
   */
   readonly host: string;
   /**
   * Port of the remote application endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#port BeyondcorpAppConnection#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#port BeyondcorpAppConnection#port}
   */
   readonly port: number;
 }
@@ -203,7 +203,7 @@ export interface BeyondcorpAppConnectionGateway {
   /**
   * AppGateway name in following format: projects/{project_id}/locations/{locationId}/appgateways/{gateway_id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#app_gateway BeyondcorpAppConnection#app_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#app_gateway BeyondcorpAppConnection#app_gateway}
   */
   readonly appGateway: string;
   /**
@@ -211,7 +211,7 @@ export interface BeyondcorpAppConnectionGateway {
   * https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#Type_1
   * for a list of possible values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#type BeyondcorpAppConnection#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#type BeyondcorpAppConnection#type}
   */
   readonly type?: string;
 }
@@ -331,15 +331,15 @@ export class BeyondcorpAppConnectionGatewayOutputReference extends cdktf.Complex
 }
 export interface BeyondcorpAppConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#create BeyondcorpAppConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#create BeyondcorpAppConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#delete BeyondcorpAppConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#delete BeyondcorpAppConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#update BeyondcorpAppConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#update BeyondcorpAppConnection#update}
   */
   readonly update?: string;
 }
@@ -491,7 +491,7 @@ export class BeyondcorpAppConnectionTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection google_beyondcorp_app_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection google_beyondcorp_app_connection}
 */
 export class BeyondcorpAppConnection extends cdktf.TerraformResource {
 
@@ -507,7 +507,7 @@ export class BeyondcorpAppConnection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BeyondcorpAppConnection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BeyondcorpAppConnection to import
-  * @param importFromId The id of the existing BeyondcorpAppConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BeyondcorpAppConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BeyondcorpAppConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -519,7 +519,7 @@ export class BeyondcorpAppConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/beyondcorp_app_connection google_beyondcorp_app_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/beyondcorp_app_connection google_beyondcorp_app_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -530,7 +530,7 @@ export class BeyondcorpAppConnection extends cdktf.TerraformResource {
       terraformResourceType: 'google_beyondcorp_app_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.37.0',
+        providerVersion: '5.38.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/compute_health_check
+// https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/data-sources/compute_health_check
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeHealthCheckConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/compute_health_check#id DataGoogleComputeHealthCheck#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/data-sources/compute_health_check#id DataGoogleComputeHealthCheck#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,11 +28,11 @@ export interface DataGoogleComputeHealthCheckConfig extends cdktf.TerraformMetaA
   * characters must be a dash, lowercase letter, or digit, except the
   * last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/compute_health_check#name DataGoogleComputeHealthCheck#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/data-sources/compute_health_check#name DataGoogleComputeHealthCheck#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/compute_health_check#project DataGoogleComputeHealthCheck#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/data-sources/compute_health_check#project DataGoogleComputeHealthCheck#project}
   */
   readonly project?: string;
 }
@@ -718,7 +718,7 @@ export class DataGoogleComputeHealthCheckTcpHealthCheckList extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/compute_health_check google_compute_health_check}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/data-sources/compute_health_check google_compute_health_check}
 */
 export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
 
@@ -734,7 +734,7 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleComputeHealthCheck resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeHealthCheck to import
-  * @param importFromId The id of the existing DataGoogleComputeHealthCheck that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/compute_health_check#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeHealthCheck that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/data-sources/compute_health_check#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeHealthCheck to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -746,7 +746,7 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/data-sources/compute_health_check google_compute_health_check} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/data-sources/compute_health_check google_compute_health_check} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -757,7 +757,7 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_health_check',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.37.0',
+        providerVersion: '5.38.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
