@@ -4,7 +4,7 @@
 
 ### LoggingBillingAccountExclusion <a name="LoggingBillingAccountExclusion" id="@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion google_logging_billing_account_exclusion}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion google_logging_billing_account_exclusion}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer"></a>
 
@@ -44,12 +44,12 @@ LoggingBillingAccountExclusion.Builder.create(Construct scope, java.lang.String 
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.billingAccount">billingAccount</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#billing_account LoggingBillingAccountExclusion#billing_account}. |
+| <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.billingAccount">billingAccount</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#billing_account LoggingBillingAccountExclusion#billing_account}. |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.filter">filter</a></code> | <code>java.lang.String</code> | The filter to apply when excluding logs. Only log entries that match the filter are excluded. |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The name of the logging exclusion. |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | A human-readable description. |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether this exclusion rule should be disabled or not. This defaults to false. |
-| <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#id LoggingBillingAccountExclusion#id}. |
+| <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusion.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#id LoggingBillingAccountExclusion#id}. |
 
 ---
 
@@ -117,7 +117,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#billing_account LoggingBillingAccountExclusion#billing_account}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#billing_account LoggingBillingAccountExclusion#billing_account}.
 
 ---
 
@@ -127,7 +127,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#filter LoggingBillingAccountExclusion#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#filter LoggingBillingAccountExclusion#filter}
 
 ---
 
@@ -137,7 +137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the logging exclusion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#name LoggingBillingAccountExclusion#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#name LoggingBillingAccountExclusion#name}
 
 ---
 
@@ -147,7 +147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A human-readable description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#description LoggingBillingAccountExclusion#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#description LoggingBillingAccountExclusion#description}
 
 ---
 
@@ -157,7 +157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether this exclusion rule should be disabled or not. This defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#disabled LoggingBillingAccountExclusion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#disabled LoggingBillingAccountExclusion#disabled}
 
 ---
 
@@ -165,7 +165,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#id LoggingBillingAccountExclusion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#id LoggingBillingAccountExclusion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -616,7 +616,7 @@ The construct id used in the generated config for the LoggingBillingAccountExclu
 
 The id of the existing LoggingBillingAccountExclusion that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -983,12 +983,12 @@ LoggingBillingAccountExclusionConfig.builder()
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.billingAccount">billingAccount</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#billing_account LoggingBillingAccountExclusion#billing_account}. |
+| <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.billingAccount">billingAccount</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#billing_account LoggingBillingAccountExclusion#billing_account}. |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.filter">filter</a></code> | <code>java.lang.String</code> | The filter to apply when excluding logs. Only log entries that match the filter are excluded. |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.name">name</a></code> | <code>java.lang.String</code> | The name of the logging exclusion. |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.description">description</a></code> | <code>java.lang.String</code> | A human-readable description. |
 | <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether this exclusion rule should be disabled or not. This defaults to false. |
-| <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#id LoggingBillingAccountExclusion#id}. |
+| <code><a href="#@cdktf/provider-google.loggingBillingAccountExclusion.LoggingBillingAccountExclusionConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#id LoggingBillingAccountExclusion#id}. |
 
 ---
 
@@ -1070,7 +1070,7 @@ public java.lang.String getBillingAccount();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#billing_account LoggingBillingAccountExclusion#billing_account}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#billing_account LoggingBillingAccountExclusion#billing_account}.
 
 ---
 
@@ -1084,7 +1084,7 @@ public java.lang.String getFilter();
 
 The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#filter LoggingBillingAccountExclusion#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#filter LoggingBillingAccountExclusion#filter}
 
 ---
 
@@ -1098,7 +1098,7 @@ public java.lang.String getName();
 
 The name of the logging exclusion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#name LoggingBillingAccountExclusion#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#name LoggingBillingAccountExclusion#name}
 
 ---
 
@@ -1112,7 +1112,7 @@ public java.lang.String getDescription();
 
 A human-readable description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#description LoggingBillingAccountExclusion#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#description LoggingBillingAccountExclusion#description}
 
 ---
 
@@ -1126,7 +1126,7 @@ public java.lang.Object getDisabled();
 
 Whether this exclusion rule should be disabled or not. This defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#disabled LoggingBillingAccountExclusion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#disabled LoggingBillingAccountExclusion#disabled}
 
 ---
 
@@ -1138,7 +1138,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/logging_billing_account_exclusion#id LoggingBillingAccountExclusion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/logging_billing_account_exclusion#id LoggingBillingAccountExclusion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

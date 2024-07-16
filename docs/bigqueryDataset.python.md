@@ -4,7 +4,7 @@
 
 ### BigqueryDataset <a name="BigqueryDataset" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset google_bigquery_dataset}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset google_bigquery_dataset}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer"></a>
 
@@ -58,17 +58,17 @@ bigqueryDataset.BigqueryDataset(
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.defaultCollation">default_collation</a></code> | <code>str</code> | Defines the default collation specification of future tables created in the dataset. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.defaultEncryptionConfiguration">default_encryption_configuration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetDefaultEncryptionConfiguration">BigqueryDatasetDefaultEncryptionConfiguration</a></code> | default_encryption_configuration block. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.defaultPartitionExpirationMs">default_partition_expiration_ms</a></code> | <code>typing.Union[int, float]</code> | The default partition expiration for all partitioned tables in the dataset, in milliseconds. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.defaultTableExpirationMs">default_table_expiration_ms</a></code> | <code>typing.Union[int, float]</code> | The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.defaultTableExpirationMs">default_table_expiration_ms</a></code> | <code>typing.Union[int, float]</code> | The default lifetime of all tables in the dataset, in milliseconds. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.deleteContentsOnDestroy">delete_contents_on_destroy</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set to 'true', delete all the tables in the dataset when destroying the resource; |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.description">description</a></code> | <code>str</code> | A user-friendly description of the dataset. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.externalDatasetReference">external_dataset_reference</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalDatasetReference">BigqueryDatasetExternalDatasetReference</a></code> | external_dataset_reference block. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.friendlyName">friendly_name</a></code> | <code>str</code> | A descriptive name for the dataset. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.isCaseInsensitive">is_case_insensitive</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | TRUE if the dataset and its table names are case-insensitive, otherwise FALSE. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | The labels associated with this dataset. You can use these to organize and group your datasets. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.location">location</a></code> | <code>str</code> | The geographic location where the dataset should reside. See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations). |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.location">location</a></code> | <code>str</code> | The geographic location where the dataset should reside. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.maxTimeTravelHours">max_time_travel_hours</a></code> | <code>str</code> | Defines the time travel window in hours. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.storageBillingModel">storage_billing_model</a></code> | <code>str</code> | Specifies the storage billing model for the dataset. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts">BigqueryDatasetTimeouts</a></code> | timeouts block. |
 
@@ -144,7 +144,7 @@ The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 access block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#access BigqueryDataset#access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#access BigqueryDataset#access}
 
 ---
 
@@ -175,7 +175,7 @@ The following values are supported:
 * 'und:ci': undetermined locale, case insensitive.
 * '': empty string. Default to case-sensitive behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#default_collation BigqueryDataset#default_collation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#default_collation BigqueryDataset#default_collation}
 
 ---
 
@@ -185,7 +185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 default_encryption_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
 
 ---
 
@@ -207,7 +207,7 @@ table. If you provide an explicit 'timePartitioning.expirationMs' when
 creating or updating a partitioned table, that value takes precedence
 over the default partition expiration time indicated by this property.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
 
 ---
 
@@ -215,8 +215,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[int, float]
 
-The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour).
+The default lifetime of all tables in the dataset, in milliseconds.
 
+The minimum value is 3600000 milliseconds (one hour).
 Once this property is set, all newly-created tables in the dataset
 will have an 'expirationTime' property set to the creation time plus
 the value in this property, and changing the value will only affect
@@ -227,7 +228,7 @@ table expires, or if you provide an explicit 'expirationTime' when
 creating a table, that value takes precedence over the default
 expiration time indicated by this property.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
 
 ---
 
@@ -240,7 +241,7 @@ If set to 'true', delete all the tables in the dataset when destroying the resou
 otherwise,
 destroying the resource will fail if tables are present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
 
 ---
 
@@ -250,7 +251,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A user-friendly description of the dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
 
 ---
 
@@ -260,7 +261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 external_dataset_reference block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#external_dataset_reference BigqueryDataset#external_dataset_reference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#external_dataset_reference BigqueryDataset#external_dataset_reference}
 
 ---
 
@@ -270,7 +271,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A descriptive name for the dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#friendly_name BigqueryDataset#friendly_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#friendly_name BigqueryDataset#friendly_name}
 
 ---
 
@@ -278,7 +279,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -294,7 +295,7 @@ TRUE if the dataset and its table names are case-insensitive, otherwise FALSE.
 By default, this is FALSE, which means the dataset and its table names are
 case-sensitive. This field does not affect routine references.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
 
 ---
 
@@ -307,7 +308,7 @@ The labels associated with this dataset. You can use these to organize and group
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
 
 ---
 
@@ -315,17 +316,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-The geographic location where the dataset should reside. See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
+The geographic location where the dataset should reside.
 
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 There are two types of locations, regional or multi-regional. A regional
 location is a specific geographic place, such as Tokyo, and a multi-regional
 location is a large geographic area, such as the United States, that
 contains at least two geographic places.
-
 The default value is multi-regional location 'US'.
 Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
 
 ---
 
@@ -337,7 +338,7 @@ Defines the time travel window in hours.
 
 The value can be from 48 to 168 hours (2 to 7 days).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#max_time_travel_hours BigqueryDataset#max_time_travel_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#max_time_travel_hours BigqueryDataset#max_time_travel_hours}
 
 ---
 
@@ -345,7 +346,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}.
 
 ---
 
@@ -360,7 +361,7 @@ or to PHYSICAL to use physical bytes instead.
 
 LOGICAL is the default if this flag isn't specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#storage_billing_model BigqueryDataset#storage_billing_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#storage_billing_model BigqueryDataset#storage_billing_model}
 
 ---
 
@@ -370,7 +371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#timeouts BigqueryDataset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#timeouts BigqueryDataset#timeouts}
 
 ---
 
@@ -781,7 +782,7 @@ Describes the Cloud KMS encryption key that will be used to protect destination 
 The BigQuery Service Account associated with your project requires
 access to this encryption key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
 
 ---
 
@@ -800,7 +801,7 @@ def put_external_dataset_reference(
 
 The connection id that is used to access the externalSource. Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#connection BigqueryDataset#connection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#connection BigqueryDataset#connection}
 
 ---
 
@@ -810,7 +811,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 External source that backs this dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#external_source BigqueryDataset#external_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#external_source BigqueryDataset#external_source}
 
 ---
 
@@ -828,7 +829,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}.
 
 ---
 
@@ -836,7 +837,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}.
 
 ---
 
@@ -844,7 +845,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}.
 
 ---
 
@@ -1064,7 +1065,7 @@ The construct id used in the generated config for the BigqueryDataset to import.
 
 The id of the existing BigqueryDataset that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1751,7 +1752,7 @@ bigqueryDataset.BigqueryDatasetAccess(
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccess.property.iamMember">iam_member</a></code> | <code>str</code> | Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccess.property.role">role</a></code> | <code>str</code> | Describes the rights granted to the user specified by the other member of the access object. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccess.property.routine">routine</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccessRoutine">BigqueryDatasetAccessRoutine</a></code> | routine block. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccess.property.specialGroup">special_group</a></code> | <code>str</code> | A special group to grant access to. Possible values include:. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccess.property.specialGroup">special_group</a></code> | <code>str</code> | A special group to grant access to. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccess.property.userByEmail">user_by_email</a></code> | <code>str</code> | An email address of a user to grant access to. For example: fred@example.com. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccess.property.view">view</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetAccessView">BigqueryDatasetAccessView</a></code> | view block. |
 
@@ -1767,7 +1768,7 @@ dataset: BigqueryDatasetAccessDataset
 
 dataset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
 
 ---
 
@@ -1781,7 +1782,7 @@ domain: str
 
 A domain to grant access to. Any users signed in with the domain specified will be granted the specified access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#domain BigqueryDataset#domain}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#domain BigqueryDataset#domain}
 
 ---
 
@@ -1795,7 +1796,7 @@ group_by_email: str
 
 An email address of a Google Group to grant access to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#group_by_email BigqueryDataset#group_by_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#group_by_email BigqueryDataset#group_by_email}
 
 ---
 
@@ -1811,7 +1812,7 @@ Some other type of member that appears in the IAM Policy but isn't a user, group
 
 For example: 'allUsers'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#iam_member BigqueryDataset#iam_member}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#iam_member BigqueryDataset#iam_member}
 
 ---
 
@@ -1830,7 +1831,7 @@ are supported. Predefined roles that have equivalent basic roles
 are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#role BigqueryDataset#role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#role BigqueryDataset#role}
 
 ---
 
@@ -1844,7 +1845,7 @@ routine: BigqueryDatasetAccessRoutine
 
 routine block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#routine BigqueryDataset#routine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#routine BigqueryDataset#routine}
 
 ---
 
@@ -1856,14 +1857,16 @@ special_group: str
 
 - *Type:* str
 
-A special group to grant access to. Possible values include:.
+A special group to grant access to.
+
+Possible values include:
 
 * 'projectOwners': Owners of the enclosing project.
 * 'projectReaders': Readers of the enclosing project.
 * 'projectWriters': Writers of the enclosing project.
 * 'allAuthenticatedUsers': All authenticated BigQuery users.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#special_group BigqueryDataset#special_group}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#special_group BigqueryDataset#special_group}
 
 ---
 
@@ -1877,7 +1880,7 @@ user_by_email: str
 
 An email address of a user to grant access to. For example: fred@example.com.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#user_by_email BigqueryDataset#user_by_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#user_by_email BigqueryDataset#user_by_email}
 
 ---
 
@@ -1891,7 +1894,7 @@ view: BigqueryDatasetAccessView
 
 view block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#view BigqueryDataset#view}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#view BigqueryDataset#view}
 
 ---
 
@@ -1927,7 +1930,7 @@ dataset: BigqueryDatasetAccessDatasetDataset
 
 dataset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
 
 ---
 
@@ -1944,7 +1947,7 @@ Which resources in the dataset this entry applies to.
 Currently, only views are supported,
 but additional target types may be added in the future. Possible values: VIEWS
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#target_types BigqueryDataset#target_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#target_types BigqueryDataset#target_types}
 
 ---
 
@@ -1980,7 +1983,7 @@ dataset_id: str
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -1994,7 +1997,7 @@ project_id: str
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -2032,7 +2035,7 @@ dataset_id: str
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -2046,7 +2049,7 @@ project_id: str
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -2064,7 +2067,7 @@ The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 256 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#routine_id BigqueryDataset#routine_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#routine_id BigqueryDataset#routine_id}
 
 ---
 
@@ -2102,7 +2105,7 @@ dataset_id: str
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -2116,7 +2119,7 @@ project_id: str
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -2134,7 +2137,7 @@ The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#table_id BigqueryDataset#table_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#table_id BigqueryDataset#table_id}
 
 ---
 
@@ -2190,17 +2193,17 @@ bigqueryDataset.BigqueryDatasetConfig(
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.defaultCollation">default_collation</a></code> | <code>str</code> | Defines the default collation specification of future tables created in the dataset. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.defaultEncryptionConfiguration">default_encryption_configuration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetDefaultEncryptionConfiguration">BigqueryDatasetDefaultEncryptionConfiguration</a></code> | default_encryption_configuration block. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.defaultPartitionExpirationMs">default_partition_expiration_ms</a></code> | <code>typing.Union[int, float]</code> | The default partition expiration for all partitioned tables in the dataset, in milliseconds. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.defaultTableExpirationMs">default_table_expiration_ms</a></code> | <code>typing.Union[int, float]</code> | The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.defaultTableExpirationMs">default_table_expiration_ms</a></code> | <code>typing.Union[int, float]</code> | The default lifetime of all tables in the dataset, in milliseconds. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.deleteContentsOnDestroy">delete_contents_on_destroy</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set to 'true', delete all the tables in the dataset when destroying the resource; |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.description">description</a></code> | <code>str</code> | A user-friendly description of the dataset. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.externalDatasetReference">external_dataset_reference</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalDatasetReference">BigqueryDatasetExternalDatasetReference</a></code> | external_dataset_reference block. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.friendlyName">friendly_name</a></code> | <code>str</code> | A descriptive name for the dataset. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.isCaseInsensitive">is_case_insensitive</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | TRUE if the dataset and its table names are case-insensitive, otherwise FALSE. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | The labels associated with this dataset. You can use these to organize and group your datasets. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.location">location</a></code> | <code>str</code> | The geographic location where the dataset should reside. See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations). |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.location">location</a></code> | <code>str</code> | The geographic location where the dataset should reside. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.maxTimeTravelHours">max_time_travel_hours</a></code> | <code>str</code> | Defines the time travel window in hours. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.storageBillingModel">storage_billing_model</a></code> | <code>str</code> | Specifies the storage billing model for the dataset. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts">BigqueryDatasetTimeouts</a></code> | timeouts block. |
 
@@ -2290,7 +2293,7 @@ The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -2304,7 +2307,7 @@ access: typing.Union[IResolvable, typing.List[BigqueryDatasetAccess]]
 
 access block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#access BigqueryDataset#access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#access BigqueryDataset#access}
 
 ---
 
@@ -2329,7 +2332,7 @@ The following values are supported:
 * 'und:ci': undetermined locale, case insensitive.
 * '': empty string. Default to case-sensitive behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#default_collation BigqueryDataset#default_collation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#default_collation BigqueryDataset#default_collation}
 
 ---
 
@@ -2343,7 +2346,7 @@ default_encryption_configuration: BigqueryDatasetDefaultEncryptionConfiguration
 
 default_encryption_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
 
 ---
 
@@ -2369,7 +2372,7 @@ table. If you provide an explicit 'timePartitioning.expirationMs' when
 creating or updating a partitioned table, that value takes precedence
 over the default partition expiration time indicated by this property.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
 
 ---
 
@@ -2381,8 +2384,9 @@ default_table_expiration_ms: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour).
+The default lifetime of all tables in the dataset, in milliseconds.
 
+The minimum value is 3600000 milliseconds (one hour).
 Once this property is set, all newly-created tables in the dataset
 will have an 'expirationTime' property set to the creation time plus
 the value in this property, and changing the value will only affect
@@ -2393,7 +2397,7 @@ table expires, or if you provide an explicit 'expirationTime' when
 creating a table, that value takes precedence over the default
 expiration time indicated by this property.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
 
 ---
 
@@ -2410,7 +2414,7 @@ If set to 'true', delete all the tables in the dataset when destroying the resou
 otherwise,
 destroying the resource will fail if tables are present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
 
 ---
 
@@ -2424,7 +2428,7 @@ description: str
 
 A user-friendly description of the dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
 
 ---
 
@@ -2438,7 +2442,7 @@ external_dataset_reference: BigqueryDatasetExternalDatasetReference
 
 external_dataset_reference block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#external_dataset_reference BigqueryDataset#external_dataset_reference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#external_dataset_reference BigqueryDataset#external_dataset_reference}
 
 ---
 
@@ -2452,7 +2456,7 @@ friendly_name: str
 
 A descriptive name for the dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#friendly_name BigqueryDataset#friendly_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#friendly_name BigqueryDataset#friendly_name}
 
 ---
 
@@ -2464,7 +2468,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2484,7 +2488,7 @@ TRUE if the dataset and its table names are case-insensitive, otherwise FALSE.
 By default, this is FALSE, which means the dataset and its table names are
 case-sensitive. This field does not affect routine references.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
 
 ---
 
@@ -2501,7 +2505,7 @@ The labels associated with this dataset. You can use these to organize and group
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
 
 ---
 
@@ -2513,17 +2517,17 @@ location: str
 
 - *Type:* str
 
-The geographic location where the dataset should reside. See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
+The geographic location where the dataset should reside.
 
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 There are two types of locations, regional or multi-regional. A regional
 location is a specific geographic place, such as Tokyo, and a multi-regional
 location is a large geographic area, such as the United States, that
 contains at least two geographic places.
-
 The default value is multi-regional location 'US'.
 Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
 
 ---
 
@@ -2539,7 +2543,7 @@ Defines the time travel window in hours.
 
 The value can be from 48 to 168 hours (2 to 7 days).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#max_time_travel_hours BigqueryDataset#max_time_travel_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#max_time_travel_hours BigqueryDataset#max_time_travel_hours}
 
 ---
 
@@ -2551,7 +2555,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}.
 
 ---
 
@@ -2570,7 +2574,7 @@ or to PHYSICAL to use physical bytes instead.
 
 LOGICAL is the default if this flag isn't specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#storage_billing_model BigqueryDataset#storage_billing_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#storage_billing_model BigqueryDataset#storage_billing_model}
 
 ---
 
@@ -2584,7 +2588,7 @@ timeouts: BigqueryDatasetTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#timeouts BigqueryDataset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#timeouts BigqueryDataset#timeouts}
 
 ---
 
@@ -2621,7 +2625,7 @@ Describes the Cloud KMS encryption key that will be used to protect destination 
 The BigQuery Service Account associated with your project requires
 access to this encryption key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
 
 ---
 
@@ -2657,7 +2661,7 @@ connection: str
 
 The connection id that is used to access the externalSource. Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#connection BigqueryDataset#connection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#connection BigqueryDataset#connection}
 
 ---
 
@@ -2671,7 +2675,7 @@ external_source: str
 
 External source that backs this dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#external_source BigqueryDataset#external_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#external_source BigqueryDataset#external_source}
 
 ---
 
@@ -2693,9 +2697,9 @@ bigqueryDataset.BigqueryDatasetTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}. |
 
 ---
 
@@ -2707,7 +2711,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}.
 
 ---
 
@@ -2719,7 +2723,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}.
 
 ---
 
@@ -2731,7 +2735,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}.
 
 ---
 
@@ -3299,7 +3303,7 @@ def put_dataset(
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -3309,7 +3313,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -3848,7 +3852,7 @@ def put_dataset(
 
 dataset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
 
 ---
 
@@ -3861,7 +3865,7 @@ Which resources in the dataset this entry applies to.
 Currently, only views are supported,
 but additional target types may be added in the future. Possible values: VIEWS
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#target_types BigqueryDataset#target_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#target_types BigqueryDataset#target_types}
 
 ---
 
@@ -3881,7 +3885,7 @@ def put_routine(
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -3891,7 +3895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -3905,7 +3909,7 @@ The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 256 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#routine_id BigqueryDataset#routine_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#routine_id BigqueryDataset#routine_id}
 
 ---
 
@@ -3925,7 +3929,7 @@ def put_view(
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -3935,7 +3939,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -3949,7 +3953,7 @@ The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/bigquery_dataset#table_id BigqueryDataset#table_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/bigquery_dataset#table_id BigqueryDataset#table_id}
 
 ---
 

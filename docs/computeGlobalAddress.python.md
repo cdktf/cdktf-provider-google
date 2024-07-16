@@ -4,7 +4,7 @@
 
 ### ComputeGlobalAddress <a name="ComputeGlobalAddress" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address google_compute_global_address}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address google_compute_global_address}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer"></a>
 
@@ -27,6 +27,7 @@ computeGlobalAddress.ComputeGlobalAddress(
   description: str = None,
   id: str = None,
   ip_version: str = None,
+  labels: typing.Mapping[str] = None,
   network: str = None,
   prefix_length: typing.Union[int, float] = None,
   project: str = None,
@@ -50,11 +51,12 @@ computeGlobalAddress.ComputeGlobalAddress(
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.address">address</a></code> | <code>str</code> | The IP address or beginning of the address range represented by this resource. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.addressType">address_type</a></code> | <code>str</code> | The type of the address to reserve. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.description">description</a></code> | <code>str</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#id ComputeGlobalAddress#id}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#id ComputeGlobalAddress#id}. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.ipVersion">ip_version</a></code> | <code>str</code> | The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"]. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Labels to apply to this address.  A list of key->value pairs. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.network">network</a></code> | <code>str</code> | The URL of the network in which to reserve the IP range. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.prefixLength">prefix_length</a></code> | <code>typing.Union[int, float]</code> | The prefix length of the IP range. If not present, it means the address field is a single IP address. |
-| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#project ComputeGlobalAddress#project}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#project ComputeGlobalAddress#project}. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.purpose">purpose</a></code> | <code>str</code> | The purpose of the resource. Possible values include:. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts">ComputeGlobalAddressTimeouts</a></code> | timeouts block. |
 
@@ -134,7 +136,7 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#name ComputeGlobalAddress#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#name ComputeGlobalAddress#name}
 
 ---
 
@@ -147,7 +149,7 @@ The IP address or beginning of the address range represented by this resource.
 This can be supplied as an input to reserve a specific
 address or omitted to allow GCP to choose a valid one for you.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#address ComputeGlobalAddress#address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#address ComputeGlobalAddress#address}
 
 ---
 
@@ -160,7 +162,7 @@ The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#address_type ComputeGlobalAddress#address_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#address_type ComputeGlobalAddress#address_type}
 
 ---
 
@@ -170,7 +172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#description ComputeGlobalAddress#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#description ComputeGlobalAddress#description}
 
 ---
 
@@ -178,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#id ComputeGlobalAddress#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#id ComputeGlobalAddress#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -191,7 +193,20 @@ If you experience problems setting this value it might not be settable. Please t
 
 The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#ip_version ComputeGlobalAddress#ip_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#ip_version ComputeGlobalAddress#ip_version}
+
+---
+
+##### `labels`<sup>Optional</sup> <a name="labels" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer.parameter.labels"></a>
+
+- *Type:* typing.Mapping[str]
+
+Labels to apply to this address.  A list of key->value pairs.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field 'effective_labels' for all of the labels present on the resource.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#labels ComputeGlobalAddress#labels}
 
 ---
 
@@ -207,7 +222,7 @@ any reserved IP ranges referring to it.
 
 This should only be set when using an Internal address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#network ComputeGlobalAddress#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#network ComputeGlobalAddress#network}
 
 ---
 
@@ -220,7 +235,7 @@ The prefix length of the IP range. If not present, it means the address field is
 This field is not applicable to addresses with addressType=INTERNAL
 when purpose=PRIVATE_SERVICE_CONNECT
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#prefix_length ComputeGlobalAddress#prefix_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#prefix_length ComputeGlobalAddress#prefix_length}
 
 ---
 
@@ -228,7 +243,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#project ComputeGlobalAddress#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#project ComputeGlobalAddress#project}.
 
 ---
 
@@ -241,7 +256,7 @@ The purpose of the resource. Possible values include:.
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#purpose ComputeGlobalAddress#purpose}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#purpose ComputeGlobalAddress#purpose}
 
 ---
 
@@ -251,7 +266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#timeouts ComputeGlobalAddress#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#timeouts ComputeGlobalAddress#timeouts}
 
 ---
 
@@ -288,6 +303,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetDescription">reset_description</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetId">reset_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetIpVersion">reset_ip_version</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetLabels">reset_labels</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetNetwork">reset_network</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetPrefixLength">reset_prefix_length</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetProject">reset_project</a></code> | *No description.* |
@@ -626,7 +642,8 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ```python
 def put_timeouts(
   create: str = None,
-  delete: str = None
+  delete: str = None,
+  update: str = None
 ) -> None
 ```
 
@@ -634,7 +651,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#create ComputeGlobalAddress#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#create ComputeGlobalAddress#create}.
 
 ---
 
@@ -642,7 +659,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#delete ComputeGlobalAddress#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#delete ComputeGlobalAddress#delete}.
+
+---
+
+###### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.putTimeouts.parameter.update"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#update ComputeGlobalAddress#update}.
 
 ---
 
@@ -674,6 +699,12 @@ def reset_id() -> None
 
 ```python
 def reset_ip_version() -> None
+```
+
+##### `reset_labels` <a name="reset_labels" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetLabels"></a>
+
+```python
+def reset_labels() -> None
 ```
 
 ##### `reset_network` <a name="reset_network" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.resetNetwork"></a>
@@ -820,7 +851,7 @@ The construct id used in the generated config for the ComputeGlobalAddress to im
 
 The id of the existing ComputeGlobalAddress that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -851,13 +882,16 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.creationTimestamp">creation_timestamp</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.effectiveLabels">effective_labels</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.selfLink">self_link</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.terraformLabels">terraform_labels</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference">ComputeGlobalAddressTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.addressInput">address_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.addressTypeInput">address_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.ipVersionInput">ip_version_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.labelsInput">labels_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.networkInput">network_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.prefixLengthInput">prefix_length_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -869,6 +903,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.ipVersion">ip_version</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.network">network</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.prefixLength">prefix_length</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -1029,6 +1064,16 @@ creation_timestamp: str
 
 ---
 
+##### `effective_labels`<sup>Required</sup> <a name="effective_labels" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.effectiveLabels"></a>
+
+```python
+effective_labels: StringMap
+```
+
+- *Type:* cdktf.StringMap
+
+---
+
 ##### `self_link`<sup>Required</sup> <a name="self_link" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.selfLink"></a>
 
 ```python
@@ -1036,6 +1081,16 @@ self_link: str
 ```
 
 - *Type:* str
+
+---
+
+##### `terraform_labels`<sup>Required</sup> <a name="terraform_labels" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.terraformLabels"></a>
+
+```python
+terraform_labels: StringMap
+```
+
+- *Type:* cdktf.StringMap
 
 ---
 
@@ -1096,6 +1151,16 @@ ip_version_input: str
 ```
 
 - *Type:* str
+
+---
+
+##### `labels_input`<sup>Optional</sup> <a name="labels_input" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.labelsInput"></a>
+
+```python
+labels_input: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
 
 ---
 
@@ -1209,6 +1274,16 @@ ip_version: str
 
 ---
 
+##### `labels`<sup>Required</sup> <a name="labels" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.labels"></a>
+
+```python
+labels: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+---
+
 ##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.property.name"></a>
 
 ```python
@@ -1300,6 +1375,7 @@ computeGlobalAddress.ComputeGlobalAddressConfig(
   description: str = None,
   id: str = None,
   ip_version: str = None,
+  labels: typing.Mapping[str] = None,
   network: str = None,
   prefix_length: typing.Union[int, float] = None,
   project: str = None,
@@ -1323,11 +1399,12 @@ computeGlobalAddress.ComputeGlobalAddressConfig(
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.address">address</a></code> | <code>str</code> | The IP address or beginning of the address range represented by this resource. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.addressType">address_type</a></code> | <code>str</code> | The type of the address to reserve. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.description">description</a></code> | <code>str</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#id ComputeGlobalAddress#id}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#id ComputeGlobalAddress#id}. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.ipVersion">ip_version</a></code> | <code>str</code> | The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"]. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Labels to apply to this address.  A list of key->value pairs. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.network">network</a></code> | <code>str</code> | The URL of the network in which to reserve the IP range. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.prefixLength">prefix_length</a></code> | <code>typing.Union[int, float]</code> | The prefix length of the IP range. If not present, it means the address field is a single IP address. |
-| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#project ComputeGlobalAddress#project}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#project ComputeGlobalAddress#project}. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.purpose">purpose</a></code> | <code>str</code> | The purpose of the resource. Possible values include:. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts">ComputeGlobalAddressTimeouts</a></code> | timeouts block. |
 
@@ -1421,7 +1498,7 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#name ComputeGlobalAddress#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#name ComputeGlobalAddress#name}
 
 ---
 
@@ -1438,7 +1515,7 @@ The IP address or beginning of the address range represented by this resource.
 This can be supplied as an input to reserve a specific
 address or omitted to allow GCP to choose a valid one for you.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#address ComputeGlobalAddress#address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#address ComputeGlobalAddress#address}
 
 ---
 
@@ -1455,7 +1532,7 @@ The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#address_type ComputeGlobalAddress#address_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#address_type ComputeGlobalAddress#address_type}
 
 ---
 
@@ -1469,7 +1546,7 @@ description: str
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#description ComputeGlobalAddress#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#description ComputeGlobalAddress#description}
 
 ---
 
@@ -1481,7 +1558,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#id ComputeGlobalAddress#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#id ComputeGlobalAddress#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1498,7 +1575,24 @@ ip_version: str
 
 The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#ip_version ComputeGlobalAddress#ip_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#ip_version ComputeGlobalAddress#ip_version}
+
+---
+
+##### `labels`<sup>Optional</sup> <a name="labels" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.property.labels"></a>
+
+```python
+labels: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+Labels to apply to this address.  A list of key->value pairs.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field 'effective_labels' for all of the labels present on the resource.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#labels ComputeGlobalAddress#labels}
 
 ---
 
@@ -1518,7 +1612,7 @@ any reserved IP ranges referring to it.
 
 This should only be set when using an Internal address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#network ComputeGlobalAddress#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#network ComputeGlobalAddress#network}
 
 ---
 
@@ -1535,7 +1629,7 @@ The prefix length of the IP range. If not present, it means the address field is
 This field is not applicable to addresses with addressType=INTERNAL
 when purpose=PRIVATE_SERVICE_CONNECT
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#prefix_length ComputeGlobalAddress#prefix_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#prefix_length ComputeGlobalAddress#prefix_length}
 
 ---
 
@@ -1547,7 +1641,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#project ComputeGlobalAddress#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#project ComputeGlobalAddress#project}.
 
 ---
 
@@ -1564,7 +1658,7 @@ The purpose of the resource. Possible values include:.
 * VPC_PEERING - for peer networks
 * PRIVATE_SERVICE_CONNECT - for ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Private Service Connect networks
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#purpose ComputeGlobalAddress#purpose}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#purpose ComputeGlobalAddress#purpose}
 
 ---
 
@@ -1578,7 +1672,7 @@ timeouts: ComputeGlobalAddressTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#timeouts ComputeGlobalAddress#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#timeouts ComputeGlobalAddress#timeouts}
 
 ---
 
@@ -1591,7 +1685,8 @@ from cdktf_cdktf_provider_google import compute_global_address
 
 computeGlobalAddress.ComputeGlobalAddressTimeouts(
   create: str = None,
-  delete: str = None
+  delete: str = None,
+  update: str = None
 )
 ```
 
@@ -1599,8 +1694,9 @@ computeGlobalAddress.ComputeGlobalAddressTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#create ComputeGlobalAddress#create}. |
-| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#delete ComputeGlobalAddress#delete}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#create ComputeGlobalAddress#create}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#delete ComputeGlobalAddress#delete}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#update ComputeGlobalAddress#update}. |
 
 ---
 
@@ -1612,7 +1708,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#create ComputeGlobalAddress#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#create ComputeGlobalAddress#create}.
 
 ---
 
@@ -1624,7 +1720,19 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.37.0/docs/resources/compute_global_address#delete ComputeGlobalAddress#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#delete ComputeGlobalAddress#delete}.
+
+---
+
+##### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts.property.update"></a>
+
+```python
+update: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_global_address#update ComputeGlobalAddress#update}.
 
 ---
 
@@ -1685,6 +1793,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.resetCreate">reset_create</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.resetDelete">reset_delete</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.resetUpdate">reset_update</a></code> | *No description.* |
 
 ---
 
@@ -1872,6 +1981,12 @@ def reset_create() -> None
 def reset_delete() -> None
 ```
 
+##### `reset_update` <a name="reset_update" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.resetUpdate"></a>
+
+```python
+def reset_update() -> None
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1881,8 +1996,10 @@ def reset_delete() -> None
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.createInput">create_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.updateInput">update_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts">ComputeGlobalAddressTimeouts</a>]</code> | *No description.* |
 
 ---
@@ -1931,6 +2048,16 @@ delete_input: str
 
 ---
 
+##### `update_input`<sup>Optional</sup> <a name="update_input" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.updateInput"></a>
+
+```python
+update_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `create`<sup>Required</sup> <a name="create" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.create"></a>
 
 ```python
@@ -1945,6 +2072,16 @@ create: str
 
 ```python
 delete: str
+```
+
+- *Type:* str
+
+---
+
+##### `update`<sup>Required</sup> <a name="update" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.property.update"></a>
+
+```python
+update: str
 ```
 
 - *Type:* str
