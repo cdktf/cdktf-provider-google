@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleA(scope Construct, id *string, config ComputeSecurityPolicyRuleAConfig) ComputeSecurityPolicyRuleA
 ```
@@ -486,7 +486,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.ComputeSecurityPolicyRuleA_IsConstruct(x interface{}) *bool
 ```
@@ -518,7 +518,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.ComputeSecurityPolicyRuleA_IsTerraformElement(x interface{}) *bool
 ```
@@ -532,7 +532,7 @@ computesecuritypolicyrule.ComputeSecurityPolicyRuleA_IsTerraformElement(x interf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.ComputeSecurityPolicyRuleA_IsTerraformResource(x interface{}) *bool
 ```
@@ -546,7 +546,7 @@ computesecuritypolicyrule.ComputeSecurityPolicyRuleA_IsTerraformResource(x inter
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleA.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.ComputeSecurityPolicyRuleA_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1017,7 +1017,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleAConfig {
 	Connection: interface{},
@@ -1032,12 +1032,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyru
 	SecurityPolicy: *string,
 	Description: *string,
 	Id: *string,
-	Match: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchA,
-	PreconfiguredWafConfig: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfig,
+	Match: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchA,
+	PreconfiguredWafConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfig,
 	Preview: interface{},
 	Project: *string,
-	RateLimitOptions: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsA,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleTimeouts,
+	RateLimitOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsA,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleTimeouts,
 }
 ```
 
@@ -1303,12 +1303,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleMatchA {
-	Config: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchConfigA,
-	Expr: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprA,
-	ExprOptions: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprOptionsA,
+	Config: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchConfigA,
+	Expr: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprA,
+	ExprOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprOptionsA,
 	VersionedExpr: *string,
 }
 ```
@@ -1388,7 +1388,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchConfigA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleMatchConfigA {
 	SrcIpRanges: *[]*string,
@@ -1422,7 +1422,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleMatchExprA {
 	Expression: *string,
@@ -1458,10 +1458,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprOptionsA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleMatchExprOptionsA {
-	RecaptchaOptions: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptionsA,
+	RecaptchaOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptionsA,
 }
 ```
 
@@ -1492,7 +1492,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptionsA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptionsA {
 	ActionTokenSiteKeys: *[]*string,
@@ -1546,7 +1546,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRulePreconfiguredWafConfig {
 	Exclusion: interface{},
@@ -1580,7 +1580,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion {
 	TargetRuleSet: *string,
@@ -1696,7 +1696,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie {
 	Operator: *string,
@@ -1755,7 +1755,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader {
 	Operator: *string,
@@ -1814,7 +1814,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam {
 	Operator: *string,
@@ -1873,7 +1873,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri {
 	Operator: *string,
@@ -1932,18 +1932,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleRateLimitOptionsA {
 	BanDurationSec: *f64,
-	BanThreshold: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsBanThresholdA,
+	BanThreshold: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsBanThresholdA,
 	ConformAction: *string,
 	EnforceOnKey: *string,
 	EnforceOnKeyConfigs: interface{},
 	EnforceOnKeyName: *string,
 	ExceedAction: *string,
-	ExceedRedirectOptions: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsA,
-	RateLimitThreshold: github.com/cdktf/cdktf-provider-google-go/google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThresholdA,
+	ExceedRedirectOptions: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsA,
+	RateLimitThreshold: github.com/cdktf/cdktf-provider-google-go/google/v13.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThresholdA,
 }
 ```
 
@@ -2113,7 +2113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsBanThresholdA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleRateLimitOptionsBanThresholdA {
 	Count: *f64,
@@ -2163,7 +2163,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigs {
 	EnforceOnKeyName: *string,
@@ -2228,7 +2228,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsA {
 	Target: *string,
@@ -2278,7 +2278,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThresholdA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThresholdA {
 	Count: *f64,
@@ -2328,7 +2328,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 &computesecuritypolicyrule.ComputeSecurityPolicyRuleTimeouts {
 	Create: *string,
@@ -2390,7 +2390,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleMatchAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleMatchAOutputReference
 ```
@@ -2794,7 +2794,7 @@ func InternalValue() ComputeSecurityPolicyRuleMatchA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchConfigAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleMatchConfigAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleMatchConfigAOutputReference
 ```
@@ -3072,7 +3072,7 @@ func InternalValue() ComputeSecurityPolicyRuleMatchConfigA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleMatchExprAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleMatchExprAOutputReference
 ```
@@ -3343,7 +3343,7 @@ func InternalValue() ComputeSecurityPolicyRuleMatchExprA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprOptionsAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleMatchExprOptionsAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleMatchExprOptionsAOutputReference
 ```
@@ -3627,7 +3627,7 @@ func InternalValue() ComputeSecurityPolicyRuleMatchExprOptionsA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptionsAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptionsAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptionsAOutputReference
 ```
@@ -3934,7 +3934,7 @@ func InternalValue() ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptionsA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionList
 ```
@@ -4094,7 +4094,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionOutputReference
 ```
@@ -4580,7 +4580,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieList
 ```
@@ -4740,7 +4740,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieOutputReference
 ```
@@ -5058,7 +5058,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderList
 ```
@@ -5218,7 +5218,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderOutputReference
 ```
@@ -5536,7 +5536,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamList
 ```
@@ -5696,7 +5696,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamOutputReference
 ```
@@ -6014,7 +6014,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriList
 ```
@@ -6174,7 +6174,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriOutputReference
 ```
@@ -6492,7 +6492,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRulePreconfiguredWafConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRulePreconfiguredWafConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRulePreconfiguredWafConfigOutputReference
 ```
@@ -6783,7 +6783,7 @@ func InternalValue() ComputeSecurityPolicyRulePreconfiguredWafConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleRateLimitOptionsAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleRateLimitOptionsAOutputReference
 ```
@@ -7345,7 +7345,7 @@ func InternalValue() ComputeSecurityPolicyRuleRateLimitOptionsA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsBanThresholdAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleRateLimitOptionsBanThresholdAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleRateLimitOptionsBanThresholdAOutputReference
 ```
@@ -7652,7 +7652,7 @@ func InternalValue() ComputeSecurityPolicyRuleRateLimitOptionsBanThresholdA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigsList
 ```
@@ -7812,7 +7812,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigsOutputReference
 ```
@@ -8137,7 +8137,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsAOutputReference
 ```
@@ -8444,7 +8444,7 @@ func InternalValue() ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOpti
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThresholdAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleRateLimitOptionsRateLimitThresholdAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThresholdAOutputReference
 ```
@@ -8751,7 +8751,7 @@ func InternalValue() ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThreshold
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSecurityPolicyRule.ComputeSecurityPolicyRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computesecuritypolicyrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/computesecuritypolicyrule"
 
 computesecuritypolicyrule.NewComputeSecurityPolicyRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSecurityPolicyRuleTimeoutsOutputReference
 ```
