@@ -4,7 +4,7 @@
 
 ### SecurityposturePosture <a name="SecurityposturePosture" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosture"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture google_securityposture_posture}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture google_securityposture_posture}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.securityposturePosture.SecurityposturePosture.Initializer"></a>
 
@@ -52,7 +52,7 @@ SecurityposturePosture.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosture.Initializer.parameter.postureId">postureId</a></code> | <code>java.lang.String</code> | Id of the posture. It is an immutable field. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosture.Initializer.parameter.state">state</a></code> | <code>java.lang.String</code> | State of the posture. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosture.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | Description of the posture. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosture.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosture.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePosture.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts">SecurityposturePostureTimeouts</a></code> | timeouts block. |
 
 ---
@@ -123,7 +123,7 @@ Must be unique amongst siblings in the same scope
 
 Location of the resource, eg: global.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -133,7 +133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The parent of the resource, an organization. Format should be 'organizations/{organization_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#parent SecurityposturePosture#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#parent SecurityposturePosture#parent}
 
 ---
 
@@ -143,7 +143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 policy_sets block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#policy_sets SecurityposturePosture#policy_sets}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#policy_sets SecurityposturePosture#policy_sets}
 
 ---
 
@@ -153,7 +153,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Id of the posture. It is an immutable field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#posture_id SecurityposturePosture#posture_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#posture_id SecurityposturePosture#posture_id}
 
 ---
 
@@ -166,7 +166,7 @@ State of the posture.
 Update to state field should not be triggered along with
 with other field updates. Possible values: ["DEPRECATED", "DRAFT", "ACTIVE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#state SecurityposturePosture#state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#state SecurityposturePosture#state}
 
 ---
 
@@ -176,7 +176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Description of the posture.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -184,7 +184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -197,7 +197,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#timeouts SecurityposturePosture#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#timeouts SecurityposturePosture#timeouts}
 
 ---
 
@@ -671,7 +671,7 @@ The construct id used in the generated config for the SecurityposturePosture to 
 
 The id of the existing SecurityposturePosture that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1156,7 +1156,7 @@ SecurityposturePostureConfig.builder()
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.postureId">postureId</a></code> | <code>java.lang.String</code> | Id of the posture. It is an immutable field. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.state">state</a></code> | <code>java.lang.String</code> | State of the posture. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.description">description</a></code> | <code>java.lang.String</code> | Description of the posture. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}. |
 | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts">SecurityposturePostureTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1241,7 +1241,7 @@ public java.lang.String getLocation();
 
 Location of the resource, eg: global.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -1255,7 +1255,7 @@ public java.lang.String getParent();
 
 The parent of the resource, an organization. Format should be 'organizations/{organization_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#parent SecurityposturePosture#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#parent SecurityposturePosture#parent}
 
 ---
 
@@ -1269,7 +1269,7 @@ public java.lang.Object getPolicySets();
 
 policy_sets block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#policy_sets SecurityposturePosture#policy_sets}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#policy_sets SecurityposturePosture#policy_sets}
 
 ---
 
@@ -1283,7 +1283,7 @@ public java.lang.String getPostureId();
 
 Id of the posture. It is an immutable field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#posture_id SecurityposturePosture#posture_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#posture_id SecurityposturePosture#posture_id}
 
 ---
 
@@ -1300,7 +1300,7 @@ State of the posture.
 Update to state field should not be triggered along with
 with other field updates. Possible values: ["DEPRECATED", "DRAFT", "ACTIVE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#state SecurityposturePosture#state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#state SecurityposturePosture#state}
 
 ---
 
@@ -1314,7 +1314,7 @@ public java.lang.String getDescription();
 
 Description of the posture.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -1326,7 +1326,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#id SecurityposturePosture#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1343,7 +1343,7 @@ public SecurityposturePostureTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#timeouts SecurityposturePosture#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#timeouts SecurityposturePosture#timeouts}
 
 ---
 
@@ -1382,7 +1382,7 @@ public java.lang.Object getPolicies();
 
 policies block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#policies SecurityposturePosture#policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#policies SecurityposturePosture#policies}
 
 ---
 
@@ -1396,7 +1396,7 @@ public java.lang.String getPolicySetId();
 
 ID of the policy set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#policy_set_id SecurityposturePosture#policy_set_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#policy_set_id SecurityposturePosture#policy_set_id}
 
 ---
 
@@ -1410,7 +1410,7 @@ public java.lang.String getDescription();
 
 Description of the policy set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -1451,7 +1451,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraint getConstraint();
 
 constraint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#constraint SecurityposturePosture#constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#constraint SecurityposturePosture#constraint}
 
 ---
 
@@ -1465,7 +1465,7 @@ public java.lang.String getPolicyId();
 
 ID of the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#policy_id SecurityposturePosture#policy_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#policy_id SecurityposturePosture#policy_id}
 
 ---
 
@@ -1479,7 +1479,7 @@ public java.lang.Object getComplianceStandards();
 
 compliance_standards block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#compliance_standards SecurityposturePosture#compliance_standards}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#compliance_standards SecurityposturePosture#compliance_standards}
 
 ---
 
@@ -1493,7 +1493,7 @@ public java.lang.String getDescription();
 
 Description of the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -1529,7 +1529,7 @@ public java.lang.String getControl();
 
 Mapping of security controls for the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#control SecurityposturePosture#control}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#control SecurityposturePosture#control}
 
 ---
 
@@ -1543,7 +1543,7 @@ public java.lang.String getStandard();
 
 Mapping of compliance standards for the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#standard SecurityposturePosture#standard}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#standard SecurityposturePosture#standard}
 
 ---
 
@@ -1583,7 +1583,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraint get
 
 org_policy_constraint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#org_policy_constraint SecurityposturePosture#org_policy_constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#org_policy_constraint SecurityposturePosture#org_policy_constraint}
 
 ---
 
@@ -1597,7 +1597,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCust
 
 org_policy_constraint_custom block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#org_policy_constraint_custom SecurityposturePosture#org_policy_constraint_custom}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#org_policy_constraint_custom SecurityposturePosture#org_policy_constraint_custom}
 
 ---
 
@@ -1611,7 +1611,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 security_health_analytics_custom_module block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#security_health_analytics_custom_module SecurityposturePosture#security_health_analytics_custom_module}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#security_health_analytics_custom_module SecurityposturePosture#security_health_analytics_custom_module}
 
 ---
 
@@ -1625,7 +1625,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 security_health_analytics_module block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#security_health_analytics_module SecurityposturePosture#security_health_analytics_module}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#security_health_analytics_module SecurityposturePosture#security_health_analytics_module}
 
 ---
 
@@ -1662,7 +1662,7 @@ public java.lang.String getCannedConstraintId();
 
 Organization policy canned constraint Id.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#canned_constraint_id SecurityposturePosture#canned_constraint_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#canned_constraint_id SecurityposturePosture#canned_constraint_id}
 
 ---
 
@@ -1676,7 +1676,7 @@ public java.lang.Object getPolicyRules();
 
 policy_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
 
 ---
 
@@ -1713,7 +1713,7 @@ public java.lang.Object getPolicyRules();
 
 policy_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#policy_rules SecurityposturePosture#policy_rules}
 
 ---
 
@@ -1727,7 +1727,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCust
 
 custom_constraint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#custom_constraint SecurityposturePosture#custom_constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#custom_constraint SecurityposturePosture#custom_constraint}
 
 ---
 
@@ -1773,7 +1773,7 @@ public java.lang.String getActionType();
 
 The action to take if the condition is met. Possible values: ["ALLOW", "DENY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#action_type SecurityposturePosture#action_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#action_type SecurityposturePosture#action_type}
 
 ---
 
@@ -1787,7 +1787,7 @@ public java.lang.String getCondition();
 
 A CEL condition that refers to a supported service resource, for example 'resource.management.autoUpgrade == false'. For details about CEL usage, see [Common Expression Language](https://cloud.google.com/resource-manager/docs/organization-policy/creating-managing-custom-constraints#common_expression_language).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
 
 ---
 
@@ -1803,7 +1803,7 @@ A list of RESTful methods for which to enforce the constraint.
 
 Can be 'CREATE', 'UPDATE', or both. Not all Google Cloud services support both methods. To see supported methods for each service, find the service in [Supported services](https://cloud.google.com/resource-manager/docs/organization-policy/custom-constraint-supported-services).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#method_types SecurityposturePosture#method_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#method_types SecurityposturePosture#method_types}
 
 ---
 
@@ -1817,7 +1817,7 @@ public java.lang.String getName();
 
 Immutable. The name of the custom constraint. This is unique within the organization.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
 
 ---
 
@@ -1833,7 +1833,7 @@ Immutable.
 
 The fully qualified name of the Google Cloud REST resource containing the object and field you want to restrict. For example, 'container.googleapis.com/NodePool'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
 
 ---
 
@@ -1847,7 +1847,7 @@ public java.lang.String getDescription();
 
 A human-friendly description of the constraint to display as an error message when the policy is violated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -1861,7 +1861,7 @@ public java.lang.String getDisplayName();
 
 A human-friendly name for the constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
 
 ---
 
@@ -1908,7 +1908,7 @@ Setting this to true means that all values are allowed.
 
 This field can be set only in policies for list constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
 
 ---
 
@@ -1922,7 +1922,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCust
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
 
 ---
 
@@ -1938,7 +1938,7 @@ Setting this to true means that all values are denied.
 
 This field can be set only in policies for list constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
 
 ---
 
@@ -1955,7 +1955,7 @@ If 'true', then the policy is enforced.
 If 'false', then any configuration is acceptable.
 This field can be set only in policies for boolean constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
 
 ---
 
@@ -1969,7 +1969,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintCust
 
 values block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
 
 ---
 
@@ -2009,7 +2009,7 @@ public java.lang.String getExpression();
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
 
 ---
 
@@ -2023,7 +2023,7 @@ public java.lang.String getDescription();
 
 Description of the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -2037,7 +2037,7 @@ public java.lang.String getLocation();
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -2051,7 +2051,7 @@ public java.lang.String getTitle();
 
 Title for the expression, i.e. a short string describing its purpose.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
 
 ---
 
@@ -2087,7 +2087,7 @@ public java.util.List<java.lang.String> getAllowedValues();
 
 List of values allowed at this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
 
 ---
 
@@ -2101,7 +2101,7 @@ public java.util.List<java.lang.String> getDeniedValues();
 
 List of values denied at this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
 
 ---
 
@@ -2148,7 +2148,7 @@ Setting this to true means that all values are allowed.
 
 This field can be set only in policies for list constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#allow_all SecurityposturePosture#allow_all}
 
 ---
 
@@ -2162,7 +2162,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPoli
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#condition SecurityposturePosture#condition}
 
 ---
 
@@ -2178,7 +2178,7 @@ Setting this to true means that all values are denied.
 
 This field can be set only in policies for list constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#deny_all SecurityposturePosture#deny_all}
 
 ---
 
@@ -2195,7 +2195,7 @@ If 'true', then the policy is enforced.
 If 'false', then any configuration is acceptable.
 This field can be set only in policies for boolean constraints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#enforce SecurityposturePosture#enforce}
 
 ---
 
@@ -2209,7 +2209,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintOrgPolicyConstraintPoli
 
 values block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#values SecurityposturePosture#values}
 
 ---
 
@@ -2249,7 +2249,7 @@ public java.lang.String getExpression();
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
 
 ---
 
@@ -2263,7 +2263,7 @@ public java.lang.String getDescription();
 
 Description of the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -2277,7 +2277,7 @@ public java.lang.String getLocation();
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -2291,7 +2291,7 @@ public java.lang.String getTitle();
 
 Title for the expression, i.e. a short string describing its purpose.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
 
 ---
 
@@ -2327,7 +2327,7 @@ public java.util.List<java.lang.String> getAllowedValues();
 
 List of values allowed at this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#allowed_values SecurityposturePosture#allowed_values}
 
 ---
 
@@ -2341,7 +2341,7 @@ public java.util.List<java.lang.String> getDeniedValues();
 
 List of values denied at this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#denied_values SecurityposturePosture#denied_values}
 
 ---
 
@@ -2379,7 +2379,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#config SecurityposturePosture#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#config SecurityposturePosture#config}
 
 ---
 
@@ -2397,7 +2397,7 @@ This
 display name becomes the finding category for all findings that are
 returned by this custom module.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#display_name SecurityposturePosture#display_name}
 
 ---
 
@@ -2411,7 +2411,7 @@ public java.lang.String getModuleEnablementState();
 
 The state of enablement for the module at its level of the resource hierarchy. Possible values: ["ENABLEMENT_STATE_UNSPECIFIED", "ENABLED", "DISABLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
 
 ---
 
@@ -2455,7 +2455,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 predicate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#predicate SecurityposturePosture#predicate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#predicate SecurityposturePosture#predicate}
 
 ---
 
@@ -2469,7 +2469,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 resource_selector block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#resource_selector SecurityposturePosture#resource_selector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#resource_selector SecurityposturePosture#resource_selector}
 
 ---
 
@@ -2483,7 +2483,7 @@ public java.lang.String getSeverity();
 
 The severity to assign to findings generated by the module. Possible values: ["SEVERITY_UNSPECIFIED", "CRITICAL", "HIGH", "MEDIUM", "LOW"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#severity SecurityposturePosture#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#severity SecurityposturePosture#severity}
 
 ---
 
@@ -2497,7 +2497,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 custom_output block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#custom_output SecurityposturePosture#custom_output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#custom_output SecurityposturePosture#custom_output}
 
 ---
 
@@ -2511,7 +2511,7 @@ public java.lang.String getDescription();
 
 Text that describes the vulnerability or misconfiguration that the custom module detects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -2525,7 +2525,7 @@ public java.lang.String getRecommendation();
 
 An explanation of the recommended steps that security teams can take to resolve the detected issue.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#recommendation SecurityposturePosture#recommendation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#recommendation SecurityposturePosture#recommendation}
 
 ---
 
@@ -2560,7 +2560,7 @@ public java.lang.Object getProperties();
 
 properties block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#properties SecurityposturePosture#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#properties SecurityposturePosture#properties}
 
 ---
 
@@ -2596,7 +2596,7 @@ public java.lang.String getName();
 
 Name of the property for the custom output.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#name SecurityposturePosture#name}
 
 ---
 
@@ -2610,7 +2610,7 @@ public SecurityposturePosturePolicySetsPoliciesConstraintSecurityHealthAnalytics
 
 value_expression block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#value_expression SecurityposturePosture#value_expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#value_expression SecurityposturePosture#value_expression}
 
 ---
 
@@ -2650,7 +2650,7 @@ public java.lang.String getExpression();
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
 
 ---
 
@@ -2664,7 +2664,7 @@ public java.lang.String getDescription();
 
 Description of the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -2678,7 +2678,7 @@ public java.lang.String getLocation();
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -2692,7 +2692,7 @@ public java.lang.String getTitle();
 
 Title for the expression, i.e. a short string describing its purpose.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
 
 ---
 
@@ -2732,7 +2732,7 @@ public java.lang.String getExpression();
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#expression SecurityposturePosture#expression}
 
 ---
 
@@ -2746,7 +2746,7 @@ public java.lang.String getDescription();
 
 Description of the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#description SecurityposturePosture#description}
 
 ---
 
@@ -2760,7 +2760,7 @@ public java.lang.String getLocation();
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#location SecurityposturePosture#location}
 
 ---
 
@@ -2774,7 +2774,7 @@ public java.lang.String getTitle();
 
 Title for the expression, i.e. a short string describing its purpose.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#title SecurityposturePosture#title}
 
 ---
 
@@ -2808,7 +2808,7 @@ public java.util.List<java.lang.String> getResourceTypes();
 
 The resource types to run the detector on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#resource_types SecurityposturePosture#resource_types}
 
 ---
 
@@ -2844,7 +2844,7 @@ public java.lang.String getModuleName();
 
 The name of the module eg: BIGQUERY_TABLE_CMEK_DISABLED.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#module_name SecurityposturePosture#module_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#module_name SecurityposturePosture#module_name}
 
 ---
 
@@ -2858,7 +2858,7 @@ public java.lang.String getModuleEnablementState();
 
 The state of enablement for the module at its level of the resource hierarchy. Possible values: ["ENABLEMENT_STATE_UNSPECIFIED", "ENABLED", "DISABLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#module_enablement_state SecurityposturePosture#module_enablement_state}
 
 ---
 
@@ -2880,9 +2880,9 @@ SecurityposturePostureTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}. |
-| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}. |
+| <code><a href="#@cdktf/provider-google.securityposturePosture.SecurityposturePostureTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}. |
 
 ---
 
@@ -2894,7 +2894,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#create SecurityposturePosture#create}.
 
 ---
 
@@ -2906,7 +2906,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#delete SecurityposturePosture#delete}.
 
 ---
 
@@ -2918,7 +2918,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/securityposture_posture#update SecurityposturePosture#update}.
 
 ---
 

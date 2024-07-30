@@ -4,7 +4,7 @@
 
 ### ApigeeAddonsConfig <a name="ApigeeAddonsConfig" id="@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config google_apigee_addons_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config google_apigee_addons_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfig.Initializer"></a>
 
@@ -514,7 +514,7 @@ The construct id used in the generated config for the ApigeeAddonsConfig to impo
 
 The id of the existing ApigeeAddonsConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -835,7 +835,7 @@ public ApigeeAddonsConfigAddonsConfigAdvancedApiOpsConfig AdvancedApiOpsConfig {
 
 advanced_api_ops_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#advanced_api_ops_config ApigeeAddonsConfig#advanced_api_ops_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#advanced_api_ops_config ApigeeAddonsConfig#advanced_api_ops_config}
 
 ---
 
@@ -849,7 +849,7 @@ public ApigeeAddonsConfigAddonsConfigApiSecurityConfig ApiSecurityConfig { get; 
 
 api_security_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#api_security_config ApigeeAddonsConfig#api_security_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#api_security_config ApigeeAddonsConfig#api_security_config}
 
 ---
 
@@ -863,7 +863,7 @@ public ApigeeAddonsConfigAddonsConfigConnectorsPlatformConfig ConnectorsPlatform
 
 connectors_platform_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#connectors_platform_config ApigeeAddonsConfig#connectors_platform_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#connectors_platform_config ApigeeAddonsConfig#connectors_platform_config}
 
 ---
 
@@ -877,7 +877,7 @@ public ApigeeAddonsConfigAddonsConfigIntegrationConfig IntegrationConfig { get; 
 
 integration_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#integration_config ApigeeAddonsConfig#integration_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#integration_config ApigeeAddonsConfig#integration_config}
 
 ---
 
@@ -891,7 +891,7 @@ public ApigeeAddonsConfigAddonsConfigMonetizationConfig MonetizationConfig { get
 
 monetization_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#monetization_config ApigeeAddonsConfig#monetization_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#monetization_config ApigeeAddonsConfig#monetization_config}
 
 ---
 
@@ -925,7 +925,7 @@ public object Enabled { get; set; }
 
 Flag that specifies whether the Advanced API Ops add-on is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
 
 ---
 
@@ -959,7 +959,7 @@ public object Enabled { get; set; }
 
 Flag that specifies whether the Advanced API Ops add-on is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
 
 ---
 
@@ -993,7 +993,7 @@ public object Enabled { get; set; }
 
 Flag that specifies whether the Advanced API Ops add-on is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
 
 ---
 
@@ -1027,7 +1027,7 @@ public object Enabled { get; set; }
 
 Flag that specifies whether the Advanced API Ops add-on is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
 
 ---
 
@@ -1061,7 +1061,7 @@ public object Enabled { get; set; }
 
 Flag that specifies whether the Advanced API Ops add-on is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#enabled ApigeeAddonsConfig#enabled}
 
 ---
 
@@ -1100,7 +1100,7 @@ new ApigeeAddonsConfigConfig {
 | <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigConfig.property.org">Org</a></code> | <code>string</code> | Name of the Apigee organization. |
 | <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigConfig.property.addonsConfig">AddonsConfig</a></code> | <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigAddonsConfig">ApigeeAddonsConfigAddonsConfig</a></code> | addons_config block. |
-| <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#id ApigeeAddonsConfig#id}. |
+| <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#id ApigeeAddonsConfig#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigTimeouts">ApigeeAddonsConfigTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1185,7 +1185,7 @@ public string Org { get; set; }
 
 Name of the Apigee organization.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#org ApigeeAddonsConfig#org}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#org ApigeeAddonsConfig#org}
 
 ---
 
@@ -1199,7 +1199,7 @@ public ApigeeAddonsConfigAddonsConfig AddonsConfig { get; set; }
 
 addons_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#addons_config ApigeeAddonsConfig#addons_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#addons_config ApigeeAddonsConfig#addons_config}
 
 ---
 
@@ -1211,7 +1211,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#id ApigeeAddonsConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#id ApigeeAddonsConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1228,7 +1228,7 @@ public ApigeeAddonsConfigTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#timeouts ApigeeAddonsConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#timeouts ApigeeAddonsConfig#timeouts}
 
 ---
 
@@ -1250,9 +1250,9 @@ new ApigeeAddonsConfigTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#create ApigeeAddonsConfig#create}. |
-| <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#delete ApigeeAddonsConfig#delete}. |
-| <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#update ApigeeAddonsConfig#update}. |
+| <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#create ApigeeAddonsConfig#create}. |
+| <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#delete ApigeeAddonsConfig#delete}. |
+| <code><a href="#@cdktf/provider-google.apigeeAddonsConfig.ApigeeAddonsConfigTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#update ApigeeAddonsConfig#update}. |
 
 ---
 
@@ -1264,7 +1264,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#create ApigeeAddonsConfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#create ApigeeAddonsConfig#create}.
 
 ---
 
@@ -1276,7 +1276,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#delete ApigeeAddonsConfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#delete ApigeeAddonsConfig#delete}.
 
 ---
 
@@ -1288,7 +1288,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/apigee_addons_config#update ApigeeAddonsConfig#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/apigee_addons_config#update ApigeeAddonsConfig#update}.
 
 ---
 

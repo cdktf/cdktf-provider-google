@@ -4,7 +4,7 @@
 
 ### ComputeRouterPeer <a name="ComputeRouterPeer" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer google_compute_router_peer}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer google_compute_router_peer}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer"></a>
 
@@ -33,6 +33,9 @@ ComputeRouterPeer.Builder.create(Construct scope, java.lang.String id)
 //  .advertisedRoutePriority(java.lang.Number)
 //  .advertiseMode(java.lang.String)
 //  .bfd(ComputeRouterPeerBfd)
+//  .customLearnedIpRanges(IResolvable)
+//  .customLearnedIpRanges(java.util.List<ComputeRouterPeerCustomLearnedIpRanges>)
+//  .customLearnedRoutePriority(java.lang.Number)
 //  .enable(java.lang.Boolean)
 //  .enable(IResolvable)
 //  .enableIpv4(java.lang.Boolean)
@@ -74,10 +77,12 @@ ComputeRouterPeer.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.advertisedRoutePriority">advertisedRoutePriority</a></code> | <code>java.lang.Number</code> | The priority of routes advertised to this BGP peer. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.advertiseMode">advertiseMode</a></code> | <code>java.lang.String</code> | User-specified flag to indicate which mode to use for advertisement. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.bfd">bfd</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerBfd">ComputeRouterPeerBfd</a></code> | bfd block. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.customLearnedIpRanges">customLearnedIpRanges</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>></code> | custom_learned_ip_ranges block. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.customLearnedRoutePriority">customLearnedRoutePriority</a></code> | <code>java.lang.Number</code> | The user-defined custom learned route priority for a BGP session. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.enable">enable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | The status of the BGP peer connection. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.enableIpv4">enableIpv4</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.enableIpv6">enableIpv6</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default. |
-| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | IP address of the interface inside Google Cloud Platform. Only IPv4 is supported. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.ipv4NexthopAddress">ipv4NexthopAddress</a></code> | <code>java.lang.String</code> | IPv4 address of the interface inside Google Cloud Platform. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.ipv6NexthopAddress">ipv6NexthopAddress</a></code> | <code>java.lang.String</code> | IPv6 address of the interface inside Google Cloud Platform. |
@@ -85,7 +90,7 @@ ComputeRouterPeer.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.peerIpAddress">peerIpAddress</a></code> | <code>java.lang.String</code> | IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported. Required if 'ip_address' is set. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.peerIpv4NexthopAddress">peerIpv4NexthopAddress</a></code> | <code>java.lang.String</code> | IPv4 address of the BGP interface outside Google Cloud Platform. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.peerIpv6NexthopAddress">peerIpv6NexthopAddress</a></code> | <code>java.lang.String</code> | IPv6 address of the BGP interface outside Google Cloud Platform. |
-| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Region where the router and BgpPeer reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.routerApplianceInstance">routerApplianceInstance</a></code> | <code>java.lang.String</code> | The URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts">ComputeRouterPeerTimeouts</a></code> | timeouts block. |
@@ -158,7 +163,7 @@ Must be unique amongst siblings in the same scope
 
 Name of the interface the BGP peer is associated with.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#interface ComputeRouterPeer#interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#interface ComputeRouterPeer#interface}
 
 ---
 
@@ -175,7 +180,7 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
 
 ---
 
@@ -185,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#peer_asn ComputeRouterPeer#peer_asn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#peer_asn ComputeRouterPeer#peer_asn}
 
 ---
 
@@ -195,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the Cloud Router in which this BgpPeer will be configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#router ComputeRouterPeer#router}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#router ComputeRouterPeer#router}
 
 ---
 
@@ -214,7 +219,7 @@ and overrides the list defined for the router (in the "bgp" message).
 These groups are advertised in addition to any specified prefixes.
 Leave this field blank to advertise no custom groups.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#advertised_groups ComputeRouterPeer#advertised_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#advertised_groups ComputeRouterPeer#advertised_groups}
 
 ---
 
@@ -224,7 +229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 advertised_ip_ranges block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
 
 ---
 
@@ -237,7 +242,7 @@ The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#advertised_route_priority ComputeRouterPeer#advertised_route_priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#advertised_route_priority ComputeRouterPeer#advertised_route_priority}
 
 ---
 
@@ -249,7 +254,7 @@ User-specified flag to indicate which mode to use for advertisement.
 
 Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#advertise_mode ComputeRouterPeer#advertise_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#advertise_mode ComputeRouterPeer#advertise_mode}
 
 ---
 
@@ -259,7 +264,30 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 bfd block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#bfd ComputeRouterPeer#bfd}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#bfd ComputeRouterPeer#bfd}
+
+---
+
+##### `customLearnedIpRanges`<sup>Optional</sup> <a name="customLearnedIpRanges" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.customLearnedIpRanges"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>>
+
+custom_learned_ip_ranges block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#custom_learned_ip_ranges ComputeRouterPeer#custom_learned_ip_ranges}
+
+---
+
+##### `customLearnedRoutePriority`<sup>Optional</sup> <a name="customLearnedRoutePriority" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer.parameter.customLearnedRoutePriority"></a>
+
+- *Type:* java.lang.Number
+
+The user-defined custom learned route priority for a BGP session.
+
+This value is applied to all custom learned route ranges for the session. You can choose a value
+from 0 to 65335. If you don't provide a value, Google Cloud assigns a priority of 100 to the ranges.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#custom_learned_route_priority ComputeRouterPeer#custom_learned_route_priority}
 
 ---
 
@@ -274,7 +302,7 @@ with the peer is terminated and all associated routing information is removed.
 If set to true, the peer connection can be established with routing information.
 The default is true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#enable ComputeRouterPeer#enable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#enable ComputeRouterPeer#enable}
 
 ---
 
@@ -284,7 +312,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#enable_ipv4 ComputeRouterPeer#enable_ipv4}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#enable_ipv4 ComputeRouterPeer#enable_ipv4}
 
 ---
 
@@ -294,7 +322,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#enable_ipv6 ComputeRouterPeer#enable_ipv6}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#enable_ipv6 ComputeRouterPeer#enable_ipv6}
 
 ---
 
@@ -302,7 +330,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -315,7 +343,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#ip_address ComputeRouterPeer#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#ip_address ComputeRouterPeer#ip_address}
 
 ---
 
@@ -325,7 +353,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 IPv4 address of the interface inside Google Cloud Platform.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#ipv4_nexthop_address ComputeRouterPeer#ipv4_nexthop_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#ipv4_nexthop_address ComputeRouterPeer#ipv4_nexthop_address}
 
 ---
 
@@ -339,7 +367,7 @@ The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
 If you do not specify the next hop addresses, Google Cloud automatically
 assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#ipv6_nexthop_address ComputeRouterPeer#ipv6_nexthop_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#ipv6_nexthop_address ComputeRouterPeer#ipv6_nexthop_address}
 
 ---
 
@@ -349,7 +377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 md5_authentication_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#md5_authentication_key ComputeRouterPeer#md5_authentication_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#md5_authentication_key ComputeRouterPeer#md5_authentication_key}
 
 ---
 
@@ -359,7 +387,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported. Required if 'ip_address' is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#peer_ip_address ComputeRouterPeer#peer_ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#peer_ip_address ComputeRouterPeer#peer_ip_address}
 
 ---
 
@@ -369,7 +397,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 IPv4 address of the BGP interface outside Google Cloud Platform.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#peer_ipv4_nexthop_address ComputeRouterPeer#peer_ipv4_nexthop_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#peer_ipv4_nexthop_address ComputeRouterPeer#peer_ipv4_nexthop_address}
 
 ---
 
@@ -383,7 +411,7 @@ The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
 If you do not specify the next hop addresses, Google Cloud automatically
 assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#peer_ipv6_nexthop_address ComputeRouterPeer#peer_ipv6_nexthop_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#peer_ipv6_nexthop_address ComputeRouterPeer#peer_ipv6_nexthop_address}
 
 ---
 
@@ -391,7 +419,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}.
 
 ---
 
@@ -401,7 +429,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#region ComputeRouterPeer#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#region ComputeRouterPeer#region}
 
 ---
 
@@ -414,7 +442,7 @@ The URI of the VM instance that is used as third-party router appliances such as
 The VM instance must be located in zones contained in the same region as
 this Cloud Router. The VM instance is the peer side of the BGP session.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#router_appliance_instance ComputeRouterPeer#router_appliance_instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#router_appliance_instance ComputeRouterPeer#router_appliance_instance}
 
 ---
 
@@ -424,7 +452,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#timeouts ComputeRouterPeer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#timeouts ComputeRouterPeer#timeouts}
 
 ---
 
@@ -457,6 +485,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.putAdvertisedIpRanges">putAdvertisedIpRanges</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.putBfd">putBfd</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.putCustomLearnedIpRanges">putCustomLearnedIpRanges</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.putMd5AuthenticationKey">putMd5AuthenticationKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetAdvertisedGroups">resetAdvertisedGroups</a></code> | *No description.* |
@@ -464,6 +493,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetAdvertisedRoutePriority">resetAdvertisedRoutePriority</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetAdvertiseMode">resetAdvertiseMode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetBfd">resetBfd</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetCustomLearnedIpRanges">resetCustomLearnedIpRanges</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetCustomLearnedRoutePriority">resetCustomLearnedRoutePriority</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetEnable">resetEnable</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetEnableIpv4">resetEnableIpv4</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetEnableIpv6">resetEnableIpv6</a></code> | *No description.* |
@@ -796,6 +827,18 @@ public void putBfd(ComputeRouterPeerBfd value)
 
 ---
 
+##### `putCustomLearnedIpRanges` <a name="putCustomLearnedIpRanges" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.putCustomLearnedIpRanges"></a>
+
+```java
+public void putCustomLearnedIpRanges(IResolvable OR java.util.List<ComputeRouterPeerCustomLearnedIpRanges> value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.putCustomLearnedIpRanges.parameter.value"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>>
+
+---
+
 ##### `putMd5AuthenticationKey` <a name="putMd5AuthenticationKey" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.putMd5AuthenticationKey"></a>
 
 ```java
@@ -848,6 +891,18 @@ public void resetAdvertiseMode()
 
 ```java
 public void resetBfd()
+```
+
+##### `resetCustomLearnedIpRanges` <a name="resetCustomLearnedIpRanges" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetCustomLearnedIpRanges"></a>
+
+```java
+public void resetCustomLearnedIpRanges()
+```
+
+##### `resetCustomLearnedRoutePriority` <a name="resetCustomLearnedRoutePriority" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetCustomLearnedRoutePriority"></a>
+
+```java
+public void resetCustomLearnedRoutePriority()
 ```
 
 ##### `resetEnable` <a name="resetEnable" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.resetEnable"></a>
@@ -1043,7 +1098,7 @@ The construct id used in the generated config for the ComputeRouterPeer to impor
 
 The id of the existing ComputeRouterPeer that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1075,6 +1130,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.advertisedIpRanges">advertisedIpRanges</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerAdvertisedIpRangesList">ComputeRouterPeerAdvertisedIpRangesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.bfd">bfd</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerBfdOutputReference">ComputeRouterPeerBfdOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.customLearnedIpRanges">customLearnedIpRanges</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList">ComputeRouterPeerCustomLearnedIpRangesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.managementType">managementType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.md5AuthenticationKey">md5AuthenticationKey</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerMd5AuthenticationKeyOutputReference">ComputeRouterPeerMd5AuthenticationKeyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeoutsOutputReference">ComputeRouterPeerTimeoutsOutputReference</a></code> | *No description.* |
@@ -1083,6 +1139,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.advertisedRoutePriorityInput">advertisedRoutePriorityInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.advertiseModeInput">advertiseModeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.bfdInput">bfdInput</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerBfd">ComputeRouterPeerBfd</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.customLearnedIpRangesInput">customLearnedIpRangesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.customLearnedRoutePriorityInput">customLearnedRoutePriorityInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.enableInput">enableInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.enableIpv4Input">enableIpv4Input</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.enableIpv6Input">enableIpv6Input</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
@@ -1105,6 +1163,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.advertisedGroups">advertisedGroups</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.advertisedRoutePriority">advertisedRoutePriority</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.advertiseMode">advertiseMode</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.customLearnedRoutePriority">customLearnedRoutePriority</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.enable">enable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.enableIpv4">enableIpv4</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.enableIpv6">enableIpv6</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
@@ -1287,6 +1346,16 @@ public ComputeRouterPeerBfdOutputReference getBfd();
 
 ---
 
+##### `customLearnedIpRanges`<sup>Required</sup> <a name="customLearnedIpRanges" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.customLearnedIpRanges"></a>
+
+```java
+public ComputeRouterPeerCustomLearnedIpRangesList getCustomLearnedIpRanges();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList">ComputeRouterPeerCustomLearnedIpRangesList</a>
+
+---
+
 ##### `managementType`<sup>Required</sup> <a name="managementType" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.managementType"></a>
 
 ```java
@@ -1364,6 +1433,26 @@ public ComputeRouterPeerBfd getBfdInput();
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerBfd">ComputeRouterPeerBfd</a>
+
+---
+
+##### `customLearnedIpRangesInput`<sup>Optional</sup> <a name="customLearnedIpRangesInput" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.customLearnedIpRangesInput"></a>
+
+```java
+public java.lang.Object getCustomLearnedIpRangesInput();
+```
+
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>>
+
+---
+
+##### `customLearnedRoutePriorityInput`<sup>Optional</sup> <a name="customLearnedRoutePriorityInput" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.customLearnedRoutePriorityInput"></a>
+
+```java
+public java.lang.Number getCustomLearnedRoutePriorityInput();
+```
+
+- *Type:* java.lang.Number
 
 ---
 
@@ -1584,6 +1673,16 @@ public java.lang.String getAdvertiseMode();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `customLearnedRoutePriority`<sup>Required</sup> <a name="customLearnedRoutePriority" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.property.customLearnedRoutePriority"></a>
+
+```java
+public java.lang.Number getCustomLearnedRoutePriority();
+```
+
+- *Type:* java.lang.Number
 
 ---
 
@@ -1809,7 +1908,7 @@ public java.lang.String getRange();
 
 The IP range to advertise. The value must be a CIDR-formatted string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#range ComputeRouterPeer#range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#range ComputeRouterPeer#range}
 
 ---
 
@@ -1823,7 +1922,7 @@ public java.lang.String getDescription();
 
 User-specified description for the IP range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#description ComputeRouterPeer#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#description ComputeRouterPeer#description}
 
 ---
 
@@ -1868,7 +1967,7 @@ for this BGP peer. If set to 'PASSIVE', the Cloud Router will wait
 for the peer router to initiate the BFD session for this BGP peer.
 If set to 'DISABLED', BFD is disabled for this BGP peer. Possible values: ["ACTIVE", "DISABLED", "PASSIVE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#session_initialization_mode ComputeRouterPeer#session_initialization_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#session_initialization_mode ComputeRouterPeer#session_initialization_mode}
 
 ---
 
@@ -1887,7 +1986,7 @@ between the two routers and is equal to the greater of this value
 and the transmit interval of the other router. If set, this value
 must be between 1000 and 30000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#min_receive_interval ComputeRouterPeer#min_receive_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#min_receive_interval ComputeRouterPeer#min_receive_interval}
 
 ---
 
@@ -1906,7 +2005,7 @@ between the two routers and is equal to the greater of this value
 and the corresponding receive interval of the other router. If set,
 this value must be between 1000 and 30000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#min_transmit_interval ComputeRouterPeer#min_transmit_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#min_transmit_interval ComputeRouterPeer#min_transmit_interval}
 
 ---
 
@@ -1923,7 +2022,7 @@ The number of consecutive BFD packets that must be missed before BFD declares th
 If set, the value must
 be a value between 5 and 16.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#multiplier ComputeRouterPeer#multiplier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#multiplier ComputeRouterPeer#multiplier}
 
 ---
 
@@ -1956,6 +2055,9 @@ ComputeRouterPeerConfig.builder()
 //  .advertisedRoutePriority(java.lang.Number)
 //  .advertiseMode(java.lang.String)
 //  .bfd(ComputeRouterPeerBfd)
+//  .customLearnedIpRanges(IResolvable)
+//  .customLearnedIpRanges(java.util.List<ComputeRouterPeerCustomLearnedIpRanges>)
+//  .customLearnedRoutePriority(java.lang.Number)
 //  .enable(java.lang.Boolean)
 //  .enable(IResolvable)
 //  .enableIpv4(java.lang.Boolean)
@@ -1997,10 +2099,12 @@ ComputeRouterPeerConfig.builder()
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.advertisedRoutePriority">advertisedRoutePriority</a></code> | <code>java.lang.Number</code> | The priority of routes advertised to this BGP peer. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.advertiseMode">advertiseMode</a></code> | <code>java.lang.String</code> | User-specified flag to indicate which mode to use for advertisement. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.bfd">bfd</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerBfd">ComputeRouterPeerBfd</a></code> | bfd block. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.customLearnedIpRanges">customLearnedIpRanges</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>></code> | custom_learned_ip_ranges block. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.customLearnedRoutePriority">customLearnedRoutePriority</a></code> | <code>java.lang.Number</code> | The user-defined custom learned route priority for a BGP session. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.enable">enable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | The status of the BGP peer connection. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.enableIpv4">enableIpv4</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.enableIpv6">enableIpv6</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default. |
-| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | IP address of the interface inside Google Cloud Platform. Only IPv4 is supported. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.ipv4NexthopAddress">ipv4NexthopAddress</a></code> | <code>java.lang.String</code> | IPv4 address of the interface inside Google Cloud Platform. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.ipv6NexthopAddress">ipv6NexthopAddress</a></code> | <code>java.lang.String</code> | IPv6 address of the interface inside Google Cloud Platform. |
@@ -2008,7 +2112,7 @@ ComputeRouterPeerConfig.builder()
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.peerIpAddress">peerIpAddress</a></code> | <code>java.lang.String</code> | IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported. Required if 'ip_address' is set. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.peerIpv4NexthopAddress">peerIpv4NexthopAddress</a></code> | <code>java.lang.String</code> | IPv4 address of the BGP interface outside Google Cloud Platform. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.peerIpv6NexthopAddress">peerIpv6NexthopAddress</a></code> | <code>java.lang.String</code> | IPv6 address of the BGP interface outside Google Cloud Platform. |
-| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.region">region</a></code> | <code>java.lang.String</code> | Region where the router and BgpPeer reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.routerApplianceInstance">routerApplianceInstance</a></code> | <code>java.lang.String</code> | The URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. |
 | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts">ComputeRouterPeerTimeouts</a></code> | timeouts block. |
@@ -2095,7 +2199,7 @@ public java.lang.String getInterface();
 
 Name of the interface the BGP peer is associated with.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#interface ComputeRouterPeer#interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#interface ComputeRouterPeer#interface}
 
 ---
 
@@ -2116,7 +2220,7 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
 
 ---
 
@@ -2130,7 +2234,7 @@ public java.lang.Number getPeerAsn();
 
 Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#peer_asn ComputeRouterPeer#peer_asn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#peer_asn ComputeRouterPeer#peer_asn}
 
 ---
 
@@ -2144,7 +2248,7 @@ public java.lang.String getRouter();
 
 The name of the Cloud Router in which this BgpPeer will be configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#router ComputeRouterPeer#router}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#router ComputeRouterPeer#router}
 
 ---
 
@@ -2167,7 +2271,7 @@ and overrides the list defined for the router (in the "bgp" message).
 These groups are advertised in addition to any specified prefixes.
 Leave this field blank to advertise no custom groups.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#advertised_groups ComputeRouterPeer#advertised_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#advertised_groups ComputeRouterPeer#advertised_groups}
 
 ---
 
@@ -2181,7 +2285,7 @@ public java.lang.Object getAdvertisedIpRanges();
 
 advertised_ip_ranges block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
 
 ---
 
@@ -2198,7 +2302,7 @@ The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#advertised_route_priority ComputeRouterPeer#advertised_route_priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#advertised_route_priority ComputeRouterPeer#advertised_route_priority}
 
 ---
 
@@ -2214,7 +2318,7 @@ User-specified flag to indicate which mode to use for advertisement.
 
 Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#advertise_mode ComputeRouterPeer#advertise_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#advertise_mode ComputeRouterPeer#advertise_mode}
 
 ---
 
@@ -2228,7 +2332,38 @@ public ComputeRouterPeerBfd getBfd();
 
 bfd block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#bfd ComputeRouterPeer#bfd}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#bfd ComputeRouterPeer#bfd}
+
+---
+
+##### `customLearnedIpRanges`<sup>Optional</sup> <a name="customLearnedIpRanges" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.customLearnedIpRanges"></a>
+
+```java
+public java.lang.Object getCustomLearnedIpRanges();
+```
+
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>>
+
+custom_learned_ip_ranges block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#custom_learned_ip_ranges ComputeRouterPeer#custom_learned_ip_ranges}
+
+---
+
+##### `customLearnedRoutePriority`<sup>Optional</sup> <a name="customLearnedRoutePriority" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.property.customLearnedRoutePriority"></a>
+
+```java
+public java.lang.Number getCustomLearnedRoutePriority();
+```
+
+- *Type:* java.lang.Number
+
+The user-defined custom learned route priority for a BGP session.
+
+This value is applied to all custom learned route ranges for the session. You can choose a value
+from 0 to 65335. If you don't provide a value, Google Cloud assigns a priority of 100 to the ranges.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#custom_learned_route_priority ComputeRouterPeer#custom_learned_route_priority}
 
 ---
 
@@ -2247,7 +2382,7 @@ with the peer is terminated and all associated routing information is removed.
 If set to true, the peer connection can be established with routing information.
 The default is true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#enable ComputeRouterPeer#enable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#enable ComputeRouterPeer#enable}
 
 ---
 
@@ -2261,7 +2396,7 @@ public java.lang.Object getEnableIpv4();
 
 Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#enable_ipv4 ComputeRouterPeer#enable_ipv4}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#enable_ipv4 ComputeRouterPeer#enable_ipv4}
 
 ---
 
@@ -2275,7 +2410,7 @@ public java.lang.Object getEnableIpv6();
 
 Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#enable_ipv6 ComputeRouterPeer#enable_ipv6}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#enable_ipv6 ComputeRouterPeer#enable_ipv6}
 
 ---
 
@@ -2287,7 +2422,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#id ComputeRouterPeer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2304,7 +2439,7 @@ public java.lang.String getIpAddress();
 
 IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#ip_address ComputeRouterPeer#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#ip_address ComputeRouterPeer#ip_address}
 
 ---
 
@@ -2318,7 +2453,7 @@ public java.lang.String getIpv4NexthopAddress();
 
 IPv4 address of the interface inside Google Cloud Platform.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#ipv4_nexthop_address ComputeRouterPeer#ipv4_nexthop_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#ipv4_nexthop_address ComputeRouterPeer#ipv4_nexthop_address}
 
 ---
 
@@ -2336,7 +2471,7 @@ The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
 If you do not specify the next hop addresses, Google Cloud automatically
 assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#ipv6_nexthop_address ComputeRouterPeer#ipv6_nexthop_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#ipv6_nexthop_address ComputeRouterPeer#ipv6_nexthop_address}
 
 ---
 
@@ -2350,7 +2485,7 @@ public ComputeRouterPeerMd5AuthenticationKey getMd5AuthenticationKey();
 
 md5_authentication_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#md5_authentication_key ComputeRouterPeer#md5_authentication_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#md5_authentication_key ComputeRouterPeer#md5_authentication_key}
 
 ---
 
@@ -2364,7 +2499,7 @@ public java.lang.String getPeerIpAddress();
 
 IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported. Required if 'ip_address' is set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#peer_ip_address ComputeRouterPeer#peer_ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#peer_ip_address ComputeRouterPeer#peer_ip_address}
 
 ---
 
@@ -2378,7 +2513,7 @@ public java.lang.String getPeerIpv4NexthopAddress();
 
 IPv4 address of the BGP interface outside Google Cloud Platform.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#peer_ipv4_nexthop_address ComputeRouterPeer#peer_ipv4_nexthop_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#peer_ipv4_nexthop_address ComputeRouterPeer#peer_ipv4_nexthop_address}
 
 ---
 
@@ -2396,7 +2531,7 @@ The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
 If you do not specify the next hop addresses, Google Cloud automatically
 assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#peer_ipv6_nexthop_address ComputeRouterPeer#peer_ipv6_nexthop_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#peer_ipv6_nexthop_address ComputeRouterPeer#peer_ipv6_nexthop_address}
 
 ---
 
@@ -2408,7 +2543,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#project ComputeRouterPeer#project}.
 
 ---
 
@@ -2422,7 +2557,7 @@ public java.lang.String getRegion();
 
 Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#region ComputeRouterPeer#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#region ComputeRouterPeer#region}
 
 ---
 
@@ -2439,7 +2574,7 @@ The URI of the VM instance that is used as third-party router appliances such as
 The VM instance must be located in zones contained in the same region as
 this Cloud Router. The VM instance is the peer side of the BGP session.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#router_appliance_instance ComputeRouterPeer#router_appliance_instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#router_appliance_instance ComputeRouterPeer#router_appliance_instance}
 
 ---
 
@@ -2453,7 +2588,41 @@ public ComputeRouterPeerTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#timeouts ComputeRouterPeer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#timeouts ComputeRouterPeer#timeouts}
+
+---
+
+### ComputeRouterPeerCustomLearnedIpRanges <a name="ComputeRouterPeerCustomLearnedIpRanges" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_router_peer.ComputeRouterPeerCustomLearnedIpRanges;
+
+ComputeRouterPeerCustomLearnedIpRanges.builder()
+    .range(java.lang.String)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges.property.range">range</a></code> | <code>java.lang.String</code> | The IP range to advertise. The value must be a CIDR-formatted string. |
+
+---
+
+##### `range`<sup>Required</sup> <a name="range" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges.property.range"></a>
+
+```java
+public java.lang.String getRange();
+```
+
+- *Type:* java.lang.String
+
+The IP range to advertise. The value must be a CIDR-formatted string.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#range ComputeRouterPeer#range}
 
 ---
 
@@ -2489,7 +2658,7 @@ public java.lang.String getKey();
 
 Value of the key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#key ComputeRouterPeer#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#key ComputeRouterPeer#key}
 
 ---
 
@@ -2505,7 +2674,7 @@ public java.lang.String getName();
 
 Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
 
 ---
 
@@ -2527,9 +2696,9 @@ ComputeRouterPeerTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#create ComputeRouterPeer#create}. |
-| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#delete ComputeRouterPeer#delete}. |
-| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#update ComputeRouterPeer#update}. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#create ComputeRouterPeer#create}. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#delete ComputeRouterPeer#delete}. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#update ComputeRouterPeer#update}. |
 
 ---
 
@@ -2541,7 +2710,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#create ComputeRouterPeer#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#create ComputeRouterPeer#create}.
 
 ---
 
@@ -2553,7 +2722,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#delete ComputeRouterPeer#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#delete ComputeRouterPeer#delete}.
 
 ---
 
@@ -2565,7 +2734,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.38.0/docs/resources/compute_router_peer#update ComputeRouterPeer#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/compute_router_peer#update ComputeRouterPeer#update}.
 
 ---
 
@@ -3403,6 +3572,455 @@ public ComputeRouterPeerBfd getInternalValue();
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerBfd">ComputeRouterPeerBfd</a>
+
+---
+
+
+### ComputeRouterPeerCustomLearnedIpRangesList <a name="ComputeRouterPeerCustomLearnedIpRangesList" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_router_peer.ComputeRouterPeerCustomLearnedIpRangesList;
+
+new ComputeRouterPeerCustomLearnedIpRangesList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.get"></a>
+
+```java
+public ComputeRouterPeerCustomLearnedIpRangesOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.property.internalValue"></a>
+
+```java
+public java.lang.Object getInternalValue();
+```
+
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>>
+
+---
+
+
+### ComputeRouterPeerCustomLearnedIpRangesOutputReference <a name="ComputeRouterPeerCustomLearnedIpRangesOutputReference" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_router_peer.ComputeRouterPeerCustomLearnedIpRangesOutputReference;
+
+new ComputeRouterPeerCustomLearnedIpRangesOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.rangeInput">rangeInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.range">range</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `rangeInput`<sup>Optional</sup> <a name="rangeInput" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.rangeInput"></a>
+
+```java
+public java.lang.String getRangeInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `range`<sup>Required</sup> <a name="range" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.range"></a>
+
+```java
+public java.lang.String getRange();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.property.internalValue"></a>
+
+```java
+public java.lang.Object getInternalValue();
+```
+
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges">ComputeRouterPeerCustomLearnedIpRanges</a>
 
 ---
 
