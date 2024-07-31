@@ -4,12 +4,12 @@
 
 ### ClouddeployCustomTargetType <a name="ClouddeployCustomTargetType" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetType"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type google_clouddeploy_custom_target_type}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type google_clouddeploy_custom_target_type}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.NewClouddeployCustomTargetType(scope Construct, id *string, config ClouddeployCustomTargetTypeConfig) ClouddeployCustomTargetType
 ```
@@ -453,7 +453,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetType.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.ClouddeployCustomTargetType_IsConstruct(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetType.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.ClouddeployCustomTargetType_IsTerraformElement(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ clouddeploycustomtargettype.ClouddeployCustomTargetType_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetType.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.ClouddeployCustomTargetType_IsTerraformResource(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ clouddeploycustomtargettype.ClouddeployCustomTargetType_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetType.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.ClouddeployCustomTargetType_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -542,7 +542,7 @@ The construct id used in the generated config for the ClouddeployCustomTargetTyp
 
 The id of the existing ClouddeployCustomTargetType that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1028,7 +1028,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 &clouddeploycustomtargettype.ClouddeployCustomTargetTypeConfig {
 	Connection: interface{},
@@ -1041,12 +1041,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomta
 	Location: *string,
 	Name: *string,
 	Annotations: *map[string]*string,
-	CustomActions: github.com/cdktf/cdktf-provider-google-go/google/v13.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActions,
+	CustomActions: github.com/cdktf/cdktf-provider-google-go/google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActions,
 	Description: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts,
 }
 ```
 
@@ -1066,9 +1066,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomta
 | <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.annotations">Annotations</a></code> | <code>*map[string]*string</code> | User annotations. |
 | <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.customActions">CustomActions</a></code> | <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActions">ClouddeployCustomTargetTypeCustomActions</a></code> | custom_actions block. |
 | <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.description">Description</a></code> | <code>*string</code> | Description of the 'CustomTargetType'. Max length is 255 characters. |
-| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#id ClouddeployCustomTargetType#id}. |
+| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#id ClouddeployCustomTargetType#id}. |
 | <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels are attributes that can be set and used by both the user and by Cloud Deploy. |
-| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#project ClouddeployCustomTargetType#project}. |
+| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#project ClouddeployCustomTargetType#project}. |
 | <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts">ClouddeployCustomTargetTypeTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1153,7 +1153,7 @@ Location *string
 
 The location of the source.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#location ClouddeployCustomTargetType#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#location ClouddeployCustomTargetType#location}
 
 ---
 
@@ -1167,7 +1167,7 @@ Name *string
 
 Name of the 'CustomTargetType'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#name ClouddeployCustomTargetType#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#name ClouddeployCustomTargetType#name}
 
 ---
 
@@ -1186,7 +1186,7 @@ These attributes can only be set and used by the user, and not by Cloud Deploy. 
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#annotations ClouddeployCustomTargetType#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#annotations ClouddeployCustomTargetType#annotations}
 
 ---
 
@@ -1200,7 +1200,7 @@ CustomActions ClouddeployCustomTargetTypeCustomActions
 
 custom_actions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#custom_actions ClouddeployCustomTargetType#custom_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#custom_actions ClouddeployCustomTargetType#custom_actions}
 
 ---
 
@@ -1214,7 +1214,7 @@ Description *string
 
 Description of the 'CustomTargetType'. Max length is 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#description ClouddeployCustomTargetType#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#description ClouddeployCustomTargetType#description}
 
 ---
 
@@ -1226,7 +1226,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#id ClouddeployCustomTargetType#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#id ClouddeployCustomTargetType#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1248,7 +1248,7 @@ Labels must meet the following constraints: * Keys and values can contain only l
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#labels ClouddeployCustomTargetType#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#labels ClouddeployCustomTargetType#labels}
 
 ---
 
@@ -1260,7 +1260,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#project ClouddeployCustomTargetType#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#project ClouddeployCustomTargetType#project}.
 
 ---
 
@@ -1274,7 +1274,7 @@ Timeouts ClouddeployCustomTargetTypeTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#timeouts ClouddeployCustomTargetType#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#timeouts ClouddeployCustomTargetType#timeouts}
 
 ---
 
@@ -1283,7 +1283,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 &clouddeploycustomtargettype.ClouddeployCustomTargetTypeCustomActions {
 	DeployAction: *string,
@@ -1312,7 +1312,7 @@ DeployAction *string
 
 The Skaffold custom action responsible for deploy operations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#deploy_action ClouddeployCustomTargetType#deploy_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#deploy_action ClouddeployCustomTargetType#deploy_action}
 
 ---
 
@@ -1326,7 +1326,7 @@ IncludeSkaffoldModules interface{}
 
 include_skaffold_modules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#include_skaffold_modules ClouddeployCustomTargetType#include_skaffold_modules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#include_skaffold_modules ClouddeployCustomTargetType#include_skaffold_modules}
 
 ---
 
@@ -1342,7 +1342,7 @@ The Skaffold custom action responsible for render operations.
 
 If not provided then Cloud Deploy will perform the render operations via 'skaffold render'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#render_action ClouddeployCustomTargetType#render_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#render_action ClouddeployCustomTargetType#render_action}
 
 ---
 
@@ -1351,13 +1351,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 &clouddeploycustomtargettype.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModules {
 	Configs: *[]*string,
-	Git: github.com/cdktf/cdktf-provider-google-go/google/v13.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGit,
-	GoogleCloudBuildRepo: github.com/cdktf/cdktf-provider-google-go/google/v13.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepo,
-	GoogleCloudStorage: github.com/cdktf/cdktf-provider-google-go/google/v13.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudStorage,
+	Git: github.com/cdktf/cdktf-provider-google-go/google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGit,
+	GoogleCloudBuildRepo: github.com/cdktf/cdktf-provider-google-go/google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepo,
+	GoogleCloudStorage: github.com/cdktf/cdktf-provider-google-go/google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudStorage,
 }
 ```
 
@@ -1382,7 +1382,7 @@ Configs *[]*string
 
 The Skaffold Config modules to use from the specified source.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#configs ClouddeployCustomTargetType#configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#configs ClouddeployCustomTargetType#configs}
 
 ---
 
@@ -1396,7 +1396,7 @@ Git ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGit
 
 git block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#git ClouddeployCustomTargetType#git}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#git ClouddeployCustomTargetType#git}
 
 ---
 
@@ -1410,7 +1410,7 @@ GoogleCloudBuildRepo ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModu
 
 google_cloud_build_repo block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#google_cloud_build_repo ClouddeployCustomTargetType#google_cloud_build_repo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#google_cloud_build_repo ClouddeployCustomTargetType#google_cloud_build_repo}
 
 ---
 
@@ -1424,7 +1424,7 @@ GoogleCloudStorage ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModule
 
 google_cloud_storage block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#google_cloud_storage ClouddeployCustomTargetType#google_cloud_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#google_cloud_storage ClouddeployCustomTargetType#google_cloud_storage}
 
 ---
 
@@ -1433,7 +1433,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 &clouddeploycustomtargettype.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGit {
 	Repo: *string,
@@ -1462,7 +1462,7 @@ Repo *string
 
 Git repository the package should be cloned from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#repo ClouddeployCustomTargetType#repo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#repo ClouddeployCustomTargetType#repo}
 
 ---
 
@@ -1476,7 +1476,7 @@ Path *string
 
 Relative path from the repository root to the Skaffold file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#path ClouddeployCustomTargetType#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#path ClouddeployCustomTargetType#path}
 
 ---
 
@@ -1490,7 +1490,7 @@ Ref *string
 
 Git ref the package should be cloned from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#ref ClouddeployCustomTargetType#ref}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#ref ClouddeployCustomTargetType#ref}
 
 ---
 
@@ -1499,7 +1499,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 &clouddeploycustomtargettype.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepo {
 	Repository: *string,
@@ -1528,7 +1528,7 @@ Repository *string
 
 Cloud Build 2nd gen repository in the format of 'projects/<project>/locations/<location>/connections/<connection>/repositories/<repository>'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#repository ClouddeployCustomTargetType#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#repository ClouddeployCustomTargetType#repository}
 
 ---
 
@@ -1542,7 +1542,7 @@ Path *string
 
 Relative path from the repository root to the Skaffold file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#path ClouddeployCustomTargetType#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#path ClouddeployCustomTargetType#path}
 
 ---
 
@@ -1556,7 +1556,7 @@ Ref *string
 
 Branch or tag to use when cloning the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#ref ClouddeployCustomTargetType#ref}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#ref ClouddeployCustomTargetType#ref}
 
 ---
 
@@ -1565,7 +1565,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 &clouddeploycustomtargettype.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudStorage {
 	Source: *string,
@@ -1594,7 +1594,7 @@ Cloud Storage source paths to copy recursively.
 
 For example, providing 'gs://my-bucket/dir/configs/*' will result in Skaffold copying all files within the 'dir/configs' directory in the bucket 'my-bucket'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#source ClouddeployCustomTargetType#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#source ClouddeployCustomTargetType#source}
 
 ---
 
@@ -1608,7 +1608,7 @@ Path *string
 
 Relative path from the source to the Skaffold file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#path ClouddeployCustomTargetType#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#path ClouddeployCustomTargetType#path}
 
 ---
 
@@ -1617,7 +1617,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 &clouddeploycustomtargettype.ClouddeployCustomTargetTypeTimeouts {
 	Create: *string,
@@ -1630,9 +1630,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomta
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#create ClouddeployCustomTargetType#create}. |
-| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#delete ClouddeployCustomTargetType#delete}. |
-| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#update ClouddeployCustomTargetType#update}. |
+| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#create ClouddeployCustomTargetType#create}. |
+| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#delete ClouddeployCustomTargetType#delete}. |
+| <code><a href="#@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#update ClouddeployCustomTargetType#update}. |
 
 ---
 
@@ -1644,7 +1644,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#create ClouddeployCustomTargetType#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#create ClouddeployCustomTargetType#create}.
 
 ---
 
@@ -1656,7 +1656,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#delete ClouddeployCustomTargetType#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#delete ClouddeployCustomTargetType#delete}.
 
 ---
 
@@ -1668,7 +1668,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/clouddeploy_custom_target_type#update ClouddeployCustomTargetType#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/clouddeploy_custom_target_type#update ClouddeployCustomTargetType#update}.
 
 ---
 
@@ -1679,7 +1679,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.NewClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGitOutputReference
 ```
@@ -2008,7 +2008,7 @@ func InternalValue() ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.NewClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepoOutputReference
 ```
@@ -2337,7 +2337,7 @@ func InternalValue() ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.NewClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesGoogleCloudStorageOutputReference
 ```
@@ -2637,7 +2637,7 @@ func InternalValue() ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.NewClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesList
 ```
@@ -2797,7 +2797,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.NewClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ClouddeployCustomTargetTypeCustomActionsIncludeSkaffoldModulesOutputReference
 ```
@@ -3219,7 +3219,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeCustomActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.NewClouddeployCustomTargetTypeCustomActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployCustomTargetTypeCustomActionsOutputReference
 ```
@@ -3561,7 +3561,7 @@ func InternalValue() ClouddeployCustomTargetTypeCustomActions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetType.ClouddeployCustomTargetTypeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/clouddeploycustomtargettype"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettype"
 
 clouddeploycustomtargettype.NewClouddeployCustomTargetTypeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployCustomTargetTypeTimeoutsOutputReference
 ```

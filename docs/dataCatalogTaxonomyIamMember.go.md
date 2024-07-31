@@ -4,12 +4,12 @@
 
 ### DataCatalogTaxonomyIamMember <a name="DataCatalogTaxonomyIamMember" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member google_data_catalog_taxonomy_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member google_data_catalog_taxonomy_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.NewDataCatalogTaxonomyIamMember(scope Construct, id *string, config DataCatalogTaxonomyIamMemberConfig) DataCatalogTaxonomyIamMember
 ```
@@ -419,7 +419,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -508,7 +508,7 @@ The construct id used in the generated config for the DataCatalogTaxonomyIamMemb
 
 The id of the existing DataCatalogTaxonomyIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 &datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMemberCondition {
 	Expression: *string,
@@ -886,9 +886,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomy
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#expression DataCatalogTaxonomyIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#title DataCatalogTaxonomyIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#description DataCatalogTaxonomyIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#expression DataCatalogTaxonomyIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#title DataCatalogTaxonomyIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#description DataCatalogTaxonomyIamMember#description}. |
 
 ---
 
@@ -900,7 +900,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#expression DataCatalogTaxonomyIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#expression DataCatalogTaxonomyIamMember#expression}.
 
 ---
 
@@ -912,7 +912,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#title DataCatalogTaxonomyIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#title DataCatalogTaxonomyIamMember#title}.
 
 ---
 
@@ -924,7 +924,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#description DataCatalogTaxonomyIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#description DataCatalogTaxonomyIamMember#description}.
 
 ---
 
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 &datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMemberConfig {
 	Connection: interface{},
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomy
 	Member: *string,
 	Role: *string,
 	Taxonomy: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v13.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -964,13 +964,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomy
 | <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#member DataCatalogTaxonomyIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#role DataCatalogTaxonomyIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.taxonomy">Taxonomy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#taxonomy DataCatalogTaxonomyIamMember#taxonomy}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#member DataCatalogTaxonomyIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#role DataCatalogTaxonomyIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.taxonomy">Taxonomy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#taxonomy DataCatalogTaxonomyIamMember#taxonomy}. |
 | <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition">DataCatalogTaxonomyIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#id DataCatalogTaxonomyIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#project DataCatalogTaxonomyIamMember#project}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#region DataCatalogTaxonomyIamMember#region}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#id DataCatalogTaxonomyIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#project DataCatalogTaxonomyIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#region DataCatalogTaxonomyIamMember#region}. |
 
 ---
 
@@ -1052,7 +1052,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#member DataCatalogTaxonomyIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#member DataCatalogTaxonomyIamMember#member}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#role DataCatalogTaxonomyIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#role DataCatalogTaxonomyIamMember#role}.
 
 ---
 
@@ -1076,7 +1076,7 @@ Taxonomy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#taxonomy DataCatalogTaxonomyIamMember#taxonomy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#taxonomy DataCatalogTaxonomyIamMember#taxonomy}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Condition DataCatalogTaxonomyIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#condition DataCatalogTaxonomyIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#condition DataCatalogTaxonomyIamMember#condition}
 
 ---
 
@@ -1102,7 +1102,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#id DataCatalogTaxonomyIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#id DataCatalogTaxonomyIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1117,7 +1117,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#project DataCatalogTaxonomyIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#project DataCatalogTaxonomyIamMember#project}.
 
 ---
 
@@ -1129,7 +1129,7 @@ Region *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/data_catalog_taxonomy_iam_member#region DataCatalogTaxonomyIamMember#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/data_catalog_taxonomy_iam_member#region DataCatalogTaxonomyIamMember#region}.
 
 ---
 
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.NewDataCatalogTaxonomyIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataCatalogTaxonomyIamMemberConditionOutputReference
 ```

@@ -4,7 +4,7 @@
 
 ### BigqueryDatasetIamBinding <a name="BigqueryDatasetIamBinding" id="@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding google_bigquery_dataset_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding google_bigquery_dataset_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBinding.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the BigqueryDatasetIamBinding 
 
 The id of the existing BigqueryDatasetIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -857,9 +857,9 @@ new BigqueryDatasetIamBindingCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#expression BigqueryDatasetIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#title BigqueryDatasetIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#description BigqueryDatasetIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#expression BigqueryDatasetIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#title BigqueryDatasetIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#description BigqueryDatasetIamBinding#description}. |
 
 ---
 
@@ -871,7 +871,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#expression BigqueryDatasetIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#expression BigqueryDatasetIamBinding#expression}.
 
 ---
 
@@ -883,7 +883,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#title BigqueryDatasetIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#title BigqueryDatasetIamBinding#title}.
 
 ---
 
@@ -895,7 +895,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#description BigqueryDatasetIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#description BigqueryDatasetIamBinding#description}.
 
 ---
 
@@ -934,12 +934,12 @@ new BigqueryDatasetIamBindingConfig {
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.datasetId">DatasetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#dataset_id BigqueryDatasetIamBinding#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#members BigqueryDatasetIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#role BigqueryDatasetIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.datasetId">DatasetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#dataset_id BigqueryDatasetIamBinding#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#members BigqueryDatasetIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#role BigqueryDatasetIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingCondition">BigqueryDatasetIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#id BigqueryDatasetIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#project BigqueryDatasetIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#id BigqueryDatasetIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamBinding.BigqueryDatasetIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#project BigqueryDatasetIamBinding#project}. |
 
 ---
 
@@ -1021,7 +1021,7 @@ public string DatasetId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#dataset_id BigqueryDatasetIamBinding#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#dataset_id BigqueryDatasetIamBinding#dataset_id}.
 
 ---
 
@@ -1033,7 +1033,7 @@ public string[] Members { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#members BigqueryDatasetIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#members BigqueryDatasetIamBinding#members}.
 
 ---
 
@@ -1045,7 +1045,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#role BigqueryDatasetIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#role BigqueryDatasetIamBinding#role}.
 
 ---
 
@@ -1059,7 +1059,7 @@ public BigqueryDatasetIamBindingCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#condition BigqueryDatasetIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#condition BigqueryDatasetIamBinding#condition}
 
 ---
 
@@ -1071,7 +1071,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#id BigqueryDatasetIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#id BigqueryDatasetIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1086,7 +1086,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.0/docs/resources/bigquery_dataset_iam_binding#project BigqueryDatasetIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/bigquery_dataset_iam_binding#project BigqueryDatasetIamBinding#project}.
 
 ---
 
