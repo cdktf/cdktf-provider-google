@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/access_context_manager_service_perimeter_egress_policy
 // generated from terraform resource schema
 
