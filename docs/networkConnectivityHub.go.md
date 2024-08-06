@@ -4,7 +4,7 @@
 
 ### NetworkConnectivityHub <a name="NetworkConnectivityHub" id="@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub google_network_connectivity_hub}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub google_network_connectivity_hub}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.Initializer"></a>
 
@@ -75,6 +75,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.resetDescription">ResetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.resetExportPsc">ResetExportPsc</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.resetLabels">ResetLabels</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.resetName">ResetName</a></code> | *No description.* |
@@ -389,6 +390,12 @@ func PutTimeouts(value NetworkConnectivityHubTimeouts)
 func ResetDescription()
 ```
 
+##### `ResetExportPsc` <a name="ResetExportPsc" id="@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.resetExportPsc"></a>
+
+```go
+func ResetExportPsc()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.resetId"></a>
 
 ```go
@@ -522,7 +529,7 @@ The construct id used in the generated config for the NetworkConnectivityHub to 
 
 The id of the existing NetworkConnectivityHub that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -561,12 +568,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.3
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.uniqueId">UniqueId</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.updateTime">UpdateTime</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.descriptionInput">DescriptionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.exportPscInput">ExportPscInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.labelsInput">LabelsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.projectInput">ProjectInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.description">Description</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.exportPsc">ExportPsc</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.labels">Labels</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.name">Name</a></code> | <code>*string</code> | *No description.* |
@@ -806,6 +815,16 @@ func DescriptionInput() *string
 
 ---
 
+##### `ExportPscInput`<sup>Optional</sup> <a name="ExportPscInput" id="@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.exportPscInput"></a>
+
+```go
+func ExportPscInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
 ##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.idInput"></a>
 
 ```go
@@ -863,6 +882,16 @@ func Description() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `ExportPsc`<sup>Required</sup> <a name="ExportPsc" id="@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHub.property.exportPsc"></a>
+
+```go
+func ExportPsc() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -942,6 +971,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivity
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Description: *string,
+	ExportPsc: interface{},
 	Id: *string,
 	Labels: *map[string]*string,
 	Name: *string,
@@ -962,10 +992,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivity
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of the hub. |
-| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#id NetworkConnectivityHub#id}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.exportPsc">ExportPsc</a></code> | <code>interface{}</code> | Whether Private Service Connect transitivity is enabled for the hub. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#id NetworkConnectivityHub#id}. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements). |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.name">Name</a></code> | <code>*string</code> | Immutable. The name of the hub. Hub names must be unique. They use the following form: 'projects/{project_number}/locations/global/hubs/{hub_id}'. |
-| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubTimeouts">NetworkConnectivityHubTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1050,7 +1081,23 @@ Description *string
 
 An optional description of the hub.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#description NetworkConnectivityHub#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#description NetworkConnectivityHub#description}
+
+---
+
+##### `ExportPsc`<sup>Optional</sup> <a name="ExportPsc" id="@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubConfig.property.exportPsc"></a>
+
+```go
+ExportPsc interface{}
+```
+
+- *Type:* interface{}
+
+Whether Private Service Connect transitivity is enabled for the hub.
+
+If true, Private Service Connect endpoints in VPC spokes attached to the hub are made accessible to other VPC spokes attached to the hub. The default value is false.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#export_psc NetworkConnectivityHub#export_psc}
 
 ---
 
@@ -1062,7 +1109,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#id NetworkConnectivityHub#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#id NetworkConnectivityHub#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1082,7 +1129,7 @@ Optional labels in key:value format. For more information about labels, see [Req
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#labels NetworkConnectivityHub#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#labels NetworkConnectivityHub#labels}
 
 ---
 
@@ -1096,7 +1143,7 @@ Name *string
 
 Immutable. The name of the hub. Hub names must be unique. They use the following form: 'projects/{project_number}/locations/global/hubs/{hub_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#name NetworkConnectivityHub#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#name NetworkConnectivityHub#name}
 
 ---
 
@@ -1108,7 +1155,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}.
 
 ---
 
@@ -1122,7 +1169,7 @@ Timeouts NetworkConnectivityHubTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#timeouts NetworkConnectivityHub#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#timeouts NetworkConnectivityHub#timeouts}
 
 ---
 
@@ -1157,9 +1204,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/networkconnectivity
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#create NetworkConnectivityHub#create}. |
-| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#delete NetworkConnectivityHub#delete}. |
-| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#update NetworkConnectivityHub#update}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#create NetworkConnectivityHub#create}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#delete NetworkConnectivityHub#delete}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityHub.NetworkConnectivityHubTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#update NetworkConnectivityHub#update}. |
 
 ---
 
@@ -1171,7 +1218,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#create NetworkConnectivityHub#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#create NetworkConnectivityHub#create}.
 
 ---
 
@@ -1183,7 +1230,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#delete NetworkConnectivityHub#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#delete NetworkConnectivityHub#delete}.
 
 ---
 
@@ -1195,7 +1242,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/network_connectivity_hub#update NetworkConnectivityHub#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/network_connectivity_hub#update NetworkConnectivityHub#update}.
 
 ---
 

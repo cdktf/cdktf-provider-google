@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization
+// https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface ApigeeSyncAuthorizationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization#id ApigeeSyncAuthorization#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization#id ApigeeSyncAuthorization#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,33 +28,33 @@ export interface ApigeeSyncAuthorizationConfig extends cdktf.TerraformMetaArgume
   * 
   * The service accounts must have **Apigee Synchronizer Manager** role. See also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/v1.8/sa-about#create-the-service-accounts).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization#identities ApigeeSyncAuthorization#identities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization#identities ApigeeSyncAuthorization#identities}
   */
   readonly identities: string[];
   /**
   * Name of the Apigee organization.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization#name ApigeeSyncAuthorization#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization#name ApigeeSyncAuthorization#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization#timeouts ApigeeSyncAuthorization#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization#timeouts ApigeeSyncAuthorization#timeouts}
   */
   readonly timeouts?: ApigeeSyncAuthorizationTimeouts;
 }
 export interface ApigeeSyncAuthorizationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization#create ApigeeSyncAuthorization#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization#create ApigeeSyncAuthorization#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization#delete ApigeeSyncAuthorization#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization#delete ApigeeSyncAuthorization#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization#update ApigeeSyncAuthorization#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization#update ApigeeSyncAuthorization#update}
   */
   readonly update?: string;
 }
@@ -206,7 +206,7 @@ export class ApigeeSyncAuthorizationTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization google_apigee_sync_authorization}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization google_apigee_sync_authorization}
 */
 export class ApigeeSyncAuthorization extends cdktf.TerraformResource {
 
@@ -222,7 +222,7 @@ export class ApigeeSyncAuthorization extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeSyncAuthorization resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeSyncAuthorization to import
-  * @param importFromId The id of the existing ApigeeSyncAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeSyncAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeSyncAuthorization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -234,7 +234,7 @@ export class ApigeeSyncAuthorization extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/apigee_sync_authorization google_apigee_sync_authorization} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/apigee_sync_authorization google_apigee_sync_authorization} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -245,7 +245,7 @@ export class ApigeeSyncAuthorization extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_sync_authorization',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.39.1',
+        providerVersion: '5.40.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

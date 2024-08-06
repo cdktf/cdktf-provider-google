@@ -1,3 +1,3 @@
 # `google_vertex_ai_featurestore_entitytype`
 
-Refer to the Terraform Registry for docs: [`google_vertex_ai_featurestore_entitytype`](https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/vertex_ai_featurestore_entitytype).
+Refer to the Terraform Registry for docs: [`google_vertex_ai_featurestore_entitytype`](https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/vertex_ai_featurestore_entitytype).

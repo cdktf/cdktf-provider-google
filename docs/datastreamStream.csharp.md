@@ -4,7 +4,7 @@
 
 ### DatastreamStream <a name="DatastreamStream" id="@cdktf/provider-google.datastreamStream.DatastreamStream"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream google_datastream_stream}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream google_datastream_stream}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.datastreamStream.DatastreamStream.Initializer"></a>
 
@@ -595,7 +595,7 @@ The construct id used in the generated config for the DatastreamStream to import
 
 The id of the existing DatastreamStream that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1178,7 +1178,7 @@ public DatastreamStreamBackfillAllMysqlExcludedObjects MysqlExcludedObjects { ge
 
 mysql_excluded_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_excluded_objects DatastreamStream#mysql_excluded_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_excluded_objects DatastreamStream#mysql_excluded_objects}
 
 ---
 
@@ -1192,7 +1192,7 @@ public DatastreamStreamBackfillAllOracleExcludedObjects OracleExcludedObjects { 
 
 oracle_excluded_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_excluded_objects DatastreamStream#oracle_excluded_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_excluded_objects DatastreamStream#oracle_excluded_objects}
 
 ---
 
@@ -1206,7 +1206,7 @@ public DatastreamStreamBackfillAllPostgresqlExcludedObjects PostgresqlExcludedOb
 
 postgresql_excluded_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_excluded_objects DatastreamStream#postgresql_excluded_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_excluded_objects DatastreamStream#postgresql_excluded_objects}
 
 ---
 
@@ -1220,7 +1220,7 @@ public DatastreamStreamBackfillAllSqlServerExcludedObjects SqlServerExcludedObje
 
 sql_server_excluded_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#sql_server_excluded_objects DatastreamStream#sql_server_excluded_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#sql_server_excluded_objects DatastreamStream#sql_server_excluded_objects}
 
 ---
 
@@ -1254,7 +1254,7 @@ public object MysqlDatabases { get; set; }
 
 mysql_databases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_databases DatastreamStream#mysql_databases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_databases DatastreamStream#mysql_databases}
 
 ---
 
@@ -1290,7 +1290,7 @@ public string Database { get; set; }
 
 Database name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#database DatastreamStream#database}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#database DatastreamStream#database}
 
 ---
 
@@ -1304,7 +1304,7 @@ public object MysqlTables { get; set; }
 
 mysql_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_tables DatastreamStream#mysql_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_tables DatastreamStream#mysql_tables}
 
 ---
 
@@ -1340,7 +1340,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -1354,7 +1354,7 @@ public object MysqlColumns { get; set; }
 
 mysql_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_columns DatastreamStream#mysql_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_columns DatastreamStream#mysql_columns}
 
 ---
 
@@ -1398,7 +1398,7 @@ public string Collation { get; set; }
 
 Column collation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#collation DatastreamStream#collation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#collation DatastreamStream#collation}
 
 ---
 
@@ -1412,7 +1412,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -1426,7 +1426,7 @@ public string DataType { get; set; }
 
 The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -1440,7 +1440,7 @@ public object Nullable { get; set; }
 
 Whether or not the column can accept a null value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
 
 ---
 
@@ -1454,7 +1454,7 @@ public double OrdinalPosition { get; set; }
 
 The ordinal position of the column in the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
 
 ---
 
@@ -1468,7 +1468,7 @@ public object PrimaryKey { get; set; }
 
 Whether or not the column represents a primary key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
 
 ---
 
@@ -1502,7 +1502,7 @@ public object OracleSchemas { get; set; }
 
 oracle_schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
 
 ---
 
@@ -1538,7 +1538,7 @@ public string Schema { get; set; }
 
 Schema name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -1552,7 +1552,7 @@ public object OracleTables { get; set; }
 
 oracle_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
 
 ---
 
@@ -1588,7 +1588,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -1602,7 +1602,7 @@ public object OracleColumns { get; set; }
 
 oracle_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
 
 ---
 
@@ -1638,7 +1638,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -1652,7 +1652,7 @@ public string DataType { get; set; }
 
 The Oracle data type. Full data types list can be found here: https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -1686,7 +1686,7 @@ public object PostgresqlSchemas { get; set; }
 
 postgresql_schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
 
 ---
 
@@ -1722,7 +1722,7 @@ public string Schema { get; set; }
 
 Database name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -1736,7 +1736,7 @@ public object PostgresqlTables { get; set; }
 
 postgresql_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
 
 ---
 
@@ -1772,7 +1772,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -1786,7 +1786,7 @@ public object PostgresqlColumns { get; set; }
 
 postgresql_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
 
 ---
 
@@ -1828,7 +1828,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -1842,7 +1842,7 @@ public string DataType { get; set; }
 
 The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -1856,7 +1856,7 @@ public object Nullable { get; set; }
 
 Whether or not the column can accept a null value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
 
 ---
 
@@ -1870,7 +1870,7 @@ public double OrdinalPosition { get; set; }
 
 The ordinal position of the column in the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
 
 ---
 
@@ -1884,7 +1884,7 @@ public object PrimaryKey { get; set; }
 
 Whether or not the column represents a primary key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
 
 ---
 
@@ -1918,7 +1918,7 @@ public object Schemas { get; set; }
 
 schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schemas DatastreamStream#schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schemas DatastreamStream#schemas}
 
 ---
 
@@ -1954,7 +1954,7 @@ public string Schema { get; set; }
 
 Schema name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -1968,7 +1968,7 @@ public object Tables { get; set; }
 
 tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#tables DatastreamStream#tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#tables DatastreamStream#tables}
 
 ---
 
@@ -2004,7 +2004,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -2018,7 +2018,7 @@ public object Columns { get; set; }
 
 columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#columns DatastreamStream#columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#columns DatastreamStream#columns}
 
 ---
 
@@ -2054,7 +2054,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -2068,7 +2068,7 @@ public string DataType { get; set; }
 
 The SQL Server data type. Full data types list can be found here: https://learn.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver16.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -2138,9 +2138,9 @@ new DatastreamStreamConfig {
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.createWithoutValidation">CreateWithoutValidation</a></code> | <code>object</code> | Create the stream without validating it. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.customerManagedEncryptionKey">CustomerManagedEncryptionKey</a></code> | <code>string</code> | A reference to a KMS encryption key. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.desiredState">DesiredState</a></code> | <code>string</code> | Desired state of the Stream. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#id DatastreamStream#id}. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#id DatastreamStream#id}. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Labels. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#project DatastreamStream#project}. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#project DatastreamStream#project}. |
 | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts">DatastreamStreamTimeouts</a></code> | timeouts block. |
 
 ---
@@ -2225,7 +2225,7 @@ public DatastreamStreamDestinationConfig DestinationConfig { get; set; }
 
 destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#destination_config DatastreamStream#destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#destination_config DatastreamStream#destination_config}
 
 ---
 
@@ -2239,7 +2239,7 @@ public string DisplayName { get; set; }
 
 Display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#display_name DatastreamStream#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#display_name DatastreamStream#display_name}
 
 ---
 
@@ -2253,7 +2253,7 @@ public string Location { get; set; }
 
 The name of the location this stream is located in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#location DatastreamStream#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#location DatastreamStream#location}
 
 ---
 
@@ -2267,7 +2267,7 @@ public DatastreamStreamSourceConfig SourceConfig { get; set; }
 
 source_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#source_config DatastreamStream#source_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#source_config DatastreamStream#source_config}
 
 ---
 
@@ -2281,7 +2281,7 @@ public string StreamId { get; set; }
 
 The stream identifier.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#stream_id DatastreamStream#stream_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#stream_id DatastreamStream#stream_id}
 
 ---
 
@@ -2295,7 +2295,7 @@ public DatastreamStreamBackfillAll BackfillAll { get; set; }
 
 backfill_all block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#backfill_all DatastreamStream#backfill_all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#backfill_all DatastreamStream#backfill_all}
 
 ---
 
@@ -2309,7 +2309,7 @@ public DatastreamStreamBackfillNone BackfillNone { get; set; }
 
 backfill_none block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#backfill_none DatastreamStream#backfill_none}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#backfill_none DatastreamStream#backfill_none}
 
 ---
 
@@ -2323,7 +2323,7 @@ public object CreateWithoutValidation { get; set; }
 
 Create the stream without validating it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#create_without_validation DatastreamStream#create_without_validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#create_without_validation DatastreamStream#create_without_validation}
 
 ---
 
@@ -2340,7 +2340,7 @@ A reference to a KMS encryption key.
 If provided, it will be used to encrypt the data. If left blank, data
 will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#customer_managed_encryption_key DatastreamStream#customer_managed_encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#customer_managed_encryption_key DatastreamStream#customer_managed_encryption_key}
 
 ---
 
@@ -2356,7 +2356,7 @@ Desired state of the Stream.
 
 Set this field to 'RUNNING' to start the stream, and 'PAUSED' to pause the stream.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#desired_state DatastreamStream#desired_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#desired_state DatastreamStream#desired_state}
 
 ---
 
@@ -2368,7 +2368,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#id DatastreamStream#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#id DatastreamStream#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2388,7 +2388,7 @@ Labels.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#labels DatastreamStream#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#labels DatastreamStream#labels}
 
 ---
 
@@ -2400,7 +2400,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#project DatastreamStream#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#project DatastreamStream#project}.
 
 ---
 
@@ -2414,7 +2414,7 @@ public DatastreamStreamTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#timeouts DatastreamStream#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#timeouts DatastreamStream#timeouts}
 
 ---
 
@@ -2452,7 +2452,7 @@ public string DestinationConnectionProfile { get; set; }
 
 Destination connection profile resource. Format: projects/{project}/locations/{location}/connectionProfiles/{name}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#destination_connection_profile DatastreamStream#destination_connection_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#destination_connection_profile DatastreamStream#destination_connection_profile}
 
 ---
 
@@ -2466,7 +2466,7 @@ public DatastreamStreamDestinationConfigBigqueryDestinationConfig BigqueryDestin
 
 bigquery_destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#bigquery_destination_config DatastreamStream#bigquery_destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#bigquery_destination_config DatastreamStream#bigquery_destination_config}
 
 ---
 
@@ -2480,7 +2480,7 @@ public DatastreamStreamDestinationConfigGcsDestinationConfig GcsDestinationConfi
 
 gcs_destination_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#gcs_destination_config DatastreamStream#gcs_destination_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#gcs_destination_config DatastreamStream#gcs_destination_config}
 
 ---
 
@@ -2522,7 +2522,7 @@ public DatastreamStreamDestinationConfigBigqueryDestinationConfigAppendOnly Appe
 
 append_only block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#append_only DatastreamStream#append_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#append_only DatastreamStream#append_only}
 
 ---
 
@@ -2540,7 +2540,7 @@ Editing this field will only affect new tables created in the future, but existi
 will not be impacted. Lower values mean that queries will return fresher data, but may result in higher cost.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_freshness DatastreamStream#data_freshness}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_freshness DatastreamStream#data_freshness}
 
 ---
 
@@ -2554,7 +2554,7 @@ public DatastreamStreamDestinationConfigBigqueryDestinationConfigMerge Merge { g
 
 merge block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#merge DatastreamStream#merge}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#merge DatastreamStream#merge}
 
 ---
 
@@ -2568,7 +2568,7 @@ public DatastreamStreamDestinationConfigBigqueryDestinationConfigSingleTargetDat
 
 single_target_dataset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#single_target_dataset DatastreamStream#single_target_dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#single_target_dataset DatastreamStream#single_target_dataset}
 
 ---
 
@@ -2582,7 +2582,7 @@ public DatastreamStreamDestinationConfigBigqueryDestinationConfigSourceHierarchy
 
 source_hierarchy_datasets block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#source_hierarchy_datasets DatastreamStream#source_hierarchy_datasets}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#source_hierarchy_datasets DatastreamStream#source_hierarchy_datasets}
 
 ---
 
@@ -2642,7 +2642,7 @@ public string DatasetId { get; set; }
 
 Dataset ID in the format projects/{project}/datasets/{dataset_id} or {project}:{dataset_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#dataset_id DatastreamStream#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#dataset_id DatastreamStream#dataset_id}
 
 ---
 
@@ -2676,7 +2676,7 @@ public DatastreamStreamDestinationConfigBigqueryDestinationConfigSourceHierarchy
 
 dataset_template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#dataset_template DatastreamStream#dataset_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#dataset_template DatastreamStream#dataset_template}
 
 ---
 
@@ -2714,7 +2714,7 @@ public string Location { get; set; }
 
 The geographic location where the dataset should reside. See https://cloud.google.com/bigquery/docs/locations for supported locations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#location DatastreamStream#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#location DatastreamStream#location}
 
 ---
 
@@ -2730,7 +2730,7 @@ If supplied, every created dataset will have its name prefixed by the provided v
 
 The prefix and name will be separated by an underscore. i.e. _.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#dataset_id_prefix DatastreamStream#dataset_id_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#dataset_id_prefix DatastreamStream#dataset_id_prefix}
 
 ---
 
@@ -2748,7 +2748,7 @@ The BigQuery Service Account associated with your project requires access to thi
 encryption key. i.e. projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{cryptoKey}.
 See https://cloud.google.com/bigquery/docs/customer-managed-encryption for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#kms_key_name DatastreamStream#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#kms_key_name DatastreamStream#kms_key_name}
 
 ---
 
@@ -2790,7 +2790,7 @@ public DatastreamStreamDestinationConfigGcsDestinationConfigAvroFileFormat AvroF
 
 avro_file_format block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#avro_file_format DatastreamStream#avro_file_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#avro_file_format DatastreamStream#avro_file_format}
 
 ---
 
@@ -2806,7 +2806,7 @@ The maximum duration for which new events are added before a file is closed and 
 
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#file_rotation_interval DatastreamStream#file_rotation_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#file_rotation_interval DatastreamStream#file_rotation_interval}
 
 ---
 
@@ -2820,7 +2820,7 @@ public double FileRotationMb { get; set; }
 
 The maximum file size to be saved in the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#file_rotation_mb DatastreamStream#file_rotation_mb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#file_rotation_mb DatastreamStream#file_rotation_mb}
 
 ---
 
@@ -2834,7 +2834,7 @@ public DatastreamStreamDestinationConfigGcsDestinationConfigJsonFileFormat JsonF
 
 json_file_format block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#json_file_format DatastreamStream#json_file_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#json_file_format DatastreamStream#json_file_format}
 
 ---
 
@@ -2848,7 +2848,7 @@ public string Path { get; set; }
 
 Path inside the Cloud Storage bucket to write data to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#path DatastreamStream#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#path DatastreamStream#path}
 
 ---
 
@@ -2897,7 +2897,7 @@ public string Compression { get; set; }
 
 Compression of the loaded JSON file. Possible values: ["NO_COMPRESSION", "GZIP"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#compression DatastreamStream#compression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#compression DatastreamStream#compression}
 
 ---
 
@@ -2911,7 +2911,7 @@ public string SchemaFileFormat { get; set; }
 
 The schema file format along JSON data files. Possible values: ["NO_SCHEMA_FILE", "AVRO_SCHEMA_FILE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema_file_format DatastreamStream#schema_file_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema_file_format DatastreamStream#schema_file_format}
 
 ---
 
@@ -2953,7 +2953,7 @@ public string SourceConnectionProfile { get; set; }
 
 Source connection profile resource. Format: projects/{project}/locations/{location}/connectionProfiles/{name}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#source_connection_profile DatastreamStream#source_connection_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#source_connection_profile DatastreamStream#source_connection_profile}
 
 ---
 
@@ -2967,7 +2967,7 @@ public DatastreamStreamSourceConfigMysqlSourceConfig MysqlSourceConfig { get; se
 
 mysql_source_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_source_config DatastreamStream#mysql_source_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_source_config DatastreamStream#mysql_source_config}
 
 ---
 
@@ -2981,7 +2981,7 @@ public DatastreamStreamSourceConfigOracleSourceConfig OracleSourceConfig { get; 
 
 oracle_source_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_source_config DatastreamStream#oracle_source_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_source_config DatastreamStream#oracle_source_config}
 
 ---
 
@@ -2995,7 +2995,7 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfig PostgresqlSourceConfig
 
 postgresql_source_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_source_config DatastreamStream#postgresql_source_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_source_config DatastreamStream#postgresql_source_config}
 
 ---
 
@@ -3009,7 +3009,7 @@ public DatastreamStreamSourceConfigSqlServerSourceConfig SqlServerSourceConfig {
 
 sql_server_source_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#sql_server_source_config DatastreamStream#sql_server_source_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#sql_server_source_config DatastreamStream#sql_server_source_config}
 
 ---
 
@@ -3049,7 +3049,7 @@ public DatastreamStreamSourceConfigMysqlSourceConfigExcludeObjects ExcludeObject
 
 exclude_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
 
 ---
 
@@ -3063,7 +3063,7 @@ public DatastreamStreamSourceConfigMysqlSourceConfigIncludeObjects IncludeObject
 
 include_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#include_objects DatastreamStream#include_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#include_objects DatastreamStream#include_objects}
 
 ---
 
@@ -3080,7 +3080,7 @@ Maximum number of concurrent backfill tasks.
 The number should be non negative.
 If not set (or set to 0), the system's default value will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
 
 ---
 
@@ -3097,7 +3097,7 @@ Maximum number of concurrent CDC tasks.
 The number should be non negative.
 If not set (or set to 0), the system's default value will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
 
 ---
 
@@ -3131,7 +3131,7 @@ public object MysqlDatabases { get; set; }
 
 mysql_databases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_databases DatastreamStream#mysql_databases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_databases DatastreamStream#mysql_databases}
 
 ---
 
@@ -3167,7 +3167,7 @@ public string Database { get; set; }
 
 Database name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#database DatastreamStream#database}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#database DatastreamStream#database}
 
 ---
 
@@ -3181,7 +3181,7 @@ public object MysqlTables { get; set; }
 
 mysql_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_tables DatastreamStream#mysql_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_tables DatastreamStream#mysql_tables}
 
 ---
 
@@ -3217,7 +3217,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -3231,7 +3231,7 @@ public object MysqlColumns { get; set; }
 
 mysql_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_columns DatastreamStream#mysql_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_columns DatastreamStream#mysql_columns}
 
 ---
 
@@ -3275,7 +3275,7 @@ public string Collation { get; set; }
 
 Column collation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#collation DatastreamStream#collation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#collation DatastreamStream#collation}
 
 ---
 
@@ -3289,7 +3289,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -3303,7 +3303,7 @@ public string DataType { get; set; }
 
 The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -3317,7 +3317,7 @@ public object Nullable { get; set; }
 
 Whether or not the column can accept a null value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
 
 ---
 
@@ -3331,7 +3331,7 @@ public double OrdinalPosition { get; set; }
 
 The ordinal position of the column in the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
 
 ---
 
@@ -3345,7 +3345,7 @@ public object PrimaryKey { get; set; }
 
 Whether or not the column represents a primary key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
 
 ---
 
@@ -3379,7 +3379,7 @@ public object MysqlDatabases { get; set; }
 
 mysql_databases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_databases DatastreamStream#mysql_databases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_databases DatastreamStream#mysql_databases}
 
 ---
 
@@ -3415,7 +3415,7 @@ public string Database { get; set; }
 
 Database name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#database DatastreamStream#database}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#database DatastreamStream#database}
 
 ---
 
@@ -3429,7 +3429,7 @@ public object MysqlTables { get; set; }
 
 mysql_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_tables DatastreamStream#mysql_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_tables DatastreamStream#mysql_tables}
 
 ---
 
@@ -3465,7 +3465,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -3479,7 +3479,7 @@ public object MysqlColumns { get; set; }
 
 mysql_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#mysql_columns DatastreamStream#mysql_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#mysql_columns DatastreamStream#mysql_columns}
 
 ---
 
@@ -3523,7 +3523,7 @@ public string Collation { get; set; }
 
 Column collation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#collation DatastreamStream#collation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#collation DatastreamStream#collation}
 
 ---
 
@@ -3537,7 +3537,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -3551,7 +3551,7 @@ public string DataType { get; set; }
 
 The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -3565,7 +3565,7 @@ public object Nullable { get; set; }
 
 Whether or not the column can accept a null value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
 
 ---
 
@@ -3579,7 +3579,7 @@ public double OrdinalPosition { get; set; }
 
 The ordinal position of the column in the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
 
 ---
 
@@ -3593,7 +3593,7 @@ public object PrimaryKey { get; set; }
 
 Whether or not the column represents a primary key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
 
 ---
 
@@ -3637,7 +3637,7 @@ public DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects DropLargeO
 
 drop_large_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#drop_large_objects DatastreamStream#drop_large_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#drop_large_objects DatastreamStream#drop_large_objects}
 
 ---
 
@@ -3651,7 +3651,7 @@ public DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects ExcludeObjec
 
 exclude_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
 
 ---
 
@@ -3665,7 +3665,7 @@ public DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects IncludeObjec
 
 include_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#include_objects DatastreamStream#include_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#include_objects DatastreamStream#include_objects}
 
 ---
 
@@ -3682,7 +3682,7 @@ Maximum number of concurrent backfill tasks.
 The number should be non negative.
 If not set (or set to 0), the system's default value will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
 
 ---
 
@@ -3699,7 +3699,7 @@ Maximum number of concurrent CDC tasks.
 The number should be non negative.
 If not set (or set to 0), the system's default value will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
 
 ---
 
@@ -3713,7 +3713,7 @@ public DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjects StreamLa
 
 stream_large_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#stream_large_objects DatastreamStream#stream_large_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#stream_large_objects DatastreamStream#stream_large_objects}
 
 ---
 
@@ -3760,7 +3760,7 @@ public object OracleSchemas { get; set; }
 
 oracle_schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
 
 ---
 
@@ -3796,7 +3796,7 @@ public string Schema { get; set; }
 
 Schema name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -3810,7 +3810,7 @@ public object OracleTables { get; set; }
 
 oracle_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
 
 ---
 
@@ -3846,7 +3846,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -3860,7 +3860,7 @@ public object OracleColumns { get; set; }
 
 oracle_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
 
 ---
 
@@ -3896,7 +3896,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -3910,7 +3910,7 @@ public string DataType { get; set; }
 
 The Oracle data type. Full data types list can be found here: https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -3944,7 +3944,7 @@ public object OracleSchemas { get; set; }
 
 oracle_schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
 
 ---
 
@@ -3980,7 +3980,7 @@ public string Schema { get; set; }
 
 Schema name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -3994,7 +3994,7 @@ public object OracleTables { get; set; }
 
 oracle_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
 
 ---
 
@@ -4030,7 +4030,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -4044,7 +4044,7 @@ public object OracleColumns { get; set; }
 
 oracle_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
 
 ---
 
@@ -4080,7 +4080,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -4094,7 +4094,7 @@ public string DataType { get; set; }
 
 The Oracle data type. Full data types list can be found here: https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -4149,7 +4149,7 @@ public string Publication { get; set; }
 
 The name of the publication that includes the set of all tables that are defined in the stream's include_objects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#publication DatastreamStream#publication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#publication DatastreamStream#publication}
 
 ---
 
@@ -4163,7 +4163,7 @@ public string ReplicationSlot { get; set; }
 
 The name of the logical replication slot that's configured with the pgoutput plugin.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#replication_slot DatastreamStream#replication_slot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#replication_slot DatastreamStream#replication_slot}
 
 ---
 
@@ -4177,7 +4177,7 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects ExcludeO
 
 exclude_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
 
 ---
 
@@ -4191,7 +4191,7 @@ public DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects IncludeO
 
 include_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#include_objects DatastreamStream#include_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#include_objects DatastreamStream#include_objects}
 
 ---
 
@@ -4208,7 +4208,7 @@ Maximum number of concurrent backfill tasks.
 The number should be non
 negative. If not set (or set to 0), the system's default value will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
 
 ---
 
@@ -4242,7 +4242,7 @@ public object PostgresqlSchemas { get; set; }
 
 postgresql_schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
 
 ---
 
@@ -4278,7 +4278,7 @@ public string Schema { get; set; }
 
 Database name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -4292,7 +4292,7 @@ public object PostgresqlTables { get; set; }
 
 postgresql_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
 
 ---
 
@@ -4328,7 +4328,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -4342,7 +4342,7 @@ public object PostgresqlColumns { get; set; }
 
 postgresql_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
 
 ---
 
@@ -4384,7 +4384,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -4398,7 +4398,7 @@ public string DataType { get; set; }
 
 The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -4412,7 +4412,7 @@ public object Nullable { get; set; }
 
 Whether or not the column can accept a null value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
 
 ---
 
@@ -4426,7 +4426,7 @@ public double OrdinalPosition { get; set; }
 
 The ordinal position of the column in the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
 
 ---
 
@@ -4440,7 +4440,7 @@ public object PrimaryKey { get; set; }
 
 Whether or not the column represents a primary key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
 
 ---
 
@@ -4474,7 +4474,7 @@ public object PostgresqlSchemas { get; set; }
 
 postgresql_schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
 
 ---
 
@@ -4510,7 +4510,7 @@ public string Schema { get; set; }
 
 Database name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -4524,7 +4524,7 @@ public object PostgresqlTables { get; set; }
 
 postgresql_tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
 
 ---
 
@@ -4560,7 +4560,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -4574,7 +4574,7 @@ public object PostgresqlColumns { get; set; }
 
 postgresql_columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
 
 ---
 
@@ -4616,7 +4616,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -4630,7 +4630,7 @@ public string DataType { get; set; }
 
 The PostgreSQL data type. Full data types list can be found here: https://www.postgresql.org/docs/current/datatype.html.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -4644,7 +4644,7 @@ public object Nullable { get; set; }
 
 Whether or not the column can accept a null value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#nullable DatastreamStream#nullable}
 
 ---
 
@@ -4658,7 +4658,7 @@ public double OrdinalPosition { get; set; }
 
 The ordinal position of the column in the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
 
 ---
 
@@ -4672,7 +4672,7 @@ public object PrimaryKey { get; set; }
 
 Whether or not the column represents a primary key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#primary_key DatastreamStream#primary_key}
 
 ---
 
@@ -4712,7 +4712,7 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigExcludeObjects ExcludeOb
 
 exclude_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
 
 ---
 
@@ -4726,7 +4726,7 @@ public DatastreamStreamSourceConfigSqlServerSourceConfigIncludeObjects IncludeOb
 
 include_objects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#include_objects DatastreamStream#include_objects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#include_objects DatastreamStream#include_objects}
 
 ---
 
@@ -4740,7 +4740,7 @@ public double MaxConcurrentBackfillTasks { get; set; }
 
 Max concurrent backfill tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
 
 ---
 
@@ -4754,7 +4754,7 @@ public double MaxConcurrentCdcTasks { get; set; }
 
 Max concurrent CDC tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
 
 ---
 
@@ -4788,7 +4788,7 @@ public object Schemas { get; set; }
 
 schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schemas DatastreamStream#schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schemas DatastreamStream#schemas}
 
 ---
 
@@ -4824,7 +4824,7 @@ public string Schema { get; set; }
 
 Schema name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -4838,7 +4838,7 @@ public object Tables { get; set; }
 
 tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#tables DatastreamStream#tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#tables DatastreamStream#tables}
 
 ---
 
@@ -4874,7 +4874,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -4888,7 +4888,7 @@ public object Columns { get; set; }
 
 columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#columns DatastreamStream#columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#columns DatastreamStream#columns}
 
 ---
 
@@ -4924,7 +4924,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -4938,7 +4938,7 @@ public string DataType { get; set; }
 
 The SQL Server data type. Full data types list can be found here: https://learn.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver16.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -4972,7 +4972,7 @@ public object Schemas { get; set; }
 
 schemas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schemas DatastreamStream#schemas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schemas DatastreamStream#schemas}
 
 ---
 
@@ -5008,7 +5008,7 @@ public string Schema { get; set; }
 
 Schema name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#schema DatastreamStream#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#schema DatastreamStream#schema}
 
 ---
 
@@ -5022,7 +5022,7 @@ public object Tables { get; set; }
 
 tables block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#tables DatastreamStream#tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#tables DatastreamStream#tables}
 
 ---
 
@@ -5058,7 +5058,7 @@ public string Table { get; set; }
 
 Table name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#table DatastreamStream#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#table DatastreamStream#table}
 
 ---
 
@@ -5072,7 +5072,7 @@ public object Columns { get; set; }
 
 columns block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#columns DatastreamStream#columns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#columns DatastreamStream#columns}
 
 ---
 
@@ -5108,7 +5108,7 @@ public string Column { get; set; }
 
 Column name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#column DatastreamStream#column}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#column DatastreamStream#column}
 
 ---
 
@@ -5122,7 +5122,7 @@ public string DataType { get; set; }
 
 The SQL Server data type. Full data types list can be found here: https://learn.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver16.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#data_type DatastreamStream#data_type}
 
 ---
 
@@ -5144,9 +5144,9 @@ new DatastreamStreamTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#create DatastreamStream#create}. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#delete DatastreamStream#delete}. |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#update DatastreamStream#update}. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#create DatastreamStream#create}. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#delete DatastreamStream#delete}. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#update DatastreamStream#update}. |
 
 ---
 
@@ -5158,7 +5158,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#create DatastreamStream#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#create DatastreamStream#create}.
 
 ---
 
@@ -5170,7 +5170,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#delete DatastreamStream#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#delete DatastreamStream#delete}.
 
 ---
 
@@ -5182,7 +5182,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/datastream_stream#update DatastreamStream#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/datastream_stream#update DatastreamStream#update}.
 
 ---
 
