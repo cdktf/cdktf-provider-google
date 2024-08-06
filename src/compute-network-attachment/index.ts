@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment
+// https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,53 +10,53 @@ export interface ComputeNetworkAttachmentConfig extends cdktf.TerraformMetaArgum
   /**
   * The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules. Possible values: ["ACCEPT_AUTOMATIC", "ACCEPT_MANUAL", "INVALID"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#connection_preference ComputeNetworkAttachment#connection_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#connection_preference ComputeNetworkAttachment#connection_preference}
   */
   readonly connectionPreference: string;
   /**
   * An optional description of this resource. Provide this property when you create the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#description ComputeNetworkAttachment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#description ComputeNetworkAttachment#description}
   */
   readonly description?: string;
   /**
   * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#name ComputeNetworkAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#name ComputeNetworkAttachment#name}
   */
   readonly name: string;
   /**
   * Projects that are allowed to connect to this network attachment. The project can be specified using its id or number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#producer_accept_lists ComputeNetworkAttachment#producer_accept_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#producer_accept_lists ComputeNetworkAttachment#producer_accept_lists}
   */
   readonly producerAcceptLists?: string[];
   /**
   * Projects that are not allowed to connect to this network attachment. The project can be specified using its id or number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#producer_reject_lists ComputeNetworkAttachment#producer_reject_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#producer_reject_lists ComputeNetworkAttachment#producer_reject_lists}
   */
   readonly producerRejectLists?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#project ComputeNetworkAttachment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#project ComputeNetworkAttachment#project}
   */
   readonly project?: string;
   /**
   * URL of the region where the network attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#region ComputeNetworkAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#region ComputeNetworkAttachment#region}
   */
   readonly region?: string;
   /**
   * An array of URLs where each entry is the URL of a subnet provided by the service consumer to use for endpoints in the producers that connect to this network attachment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#subnetworks ComputeNetworkAttachment#subnetworks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#subnetworks ComputeNetworkAttachment#subnetworks}
   */
   readonly subnetworks: string[];
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#timeouts ComputeNetworkAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#timeouts ComputeNetworkAttachment#timeouts}
   */
   readonly timeouts?: ComputeNetworkAttachmentTimeouts;
 }
@@ -162,11 +157,11 @@ export class ComputeNetworkAttachmentConnectionEndpointsList extends cdktf.Compl
 }
 export interface ComputeNetworkAttachmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#create ComputeNetworkAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#create ComputeNetworkAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#delete ComputeNetworkAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#delete ComputeNetworkAttachment#delete}
   */
   readonly delete?: string;
 }
@@ -289,7 +284,7 @@ export class ComputeNetworkAttachmentTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment google_compute_network_attachment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment google_compute_network_attachment}
 */
 export class ComputeNetworkAttachment extends cdktf.TerraformResource {
 
@@ -305,7 +300,7 @@ export class ComputeNetworkAttachment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeNetworkAttachment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeNetworkAttachment to import
-  * @param importFromId The id of the existing ComputeNetworkAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeNetworkAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeNetworkAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -317,7 +312,7 @@ export class ComputeNetworkAttachment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.39.1/docs/resources/compute_network_attachment google_compute_network_attachment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/compute_network_attachment google_compute_network_attachment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -328,7 +323,7 @@ export class ComputeNetworkAttachment extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network_attachment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.39.1',
+        providerVersion: '5.40.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
