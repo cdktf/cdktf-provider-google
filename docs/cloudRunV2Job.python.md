@@ -4,7 +4,7 @@
 
 ### CloudRunV2Job <a name="CloudRunV2Job" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job google_cloud_run_v2_job}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job google_cloud_run_v2_job}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer"></a>
 
@@ -54,10 +54,10 @@ cloudRunV2Job.CloudRunV2Job(
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.binaryAuthorization">binary_authorization</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization">CloudRunV2JobBinaryAuthorization</a></code> | binary_authorization block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.client">client</a></code> | <code>str</code> | Arbitrary identifier for the API client. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.clientVersion">client_version</a></code> | <code>str</code> | Arbitrary version identifier for the API client. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Unstructured key value map that can be used to organize and categorize objects. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.launchStage">launch_stage</a></code> | <code>str</code> | The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts">CloudRunV2JobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -128,7 +128,7 @@ Must be unique amongst siblings in the same scope
 
 The location of the cloud run job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#location CloudRunV2Job#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#location CloudRunV2Job#location}
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Name of the Job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
 
 ---
 
@@ -168,7 +168,7 @@ This field follows Kubernetes annotations' namespacing, limits, and rules.
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
 
 ---
 
@@ -178,7 +178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 binary_authorization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#binary_authorization CloudRunV2Job#binary_authorization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#binary_authorization CloudRunV2Job#binary_authorization}
 
 ---
 
@@ -188,7 +188,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Arbitrary identifier for the API client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#client CloudRunV2Job#client}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#client CloudRunV2Job#client}
 
 ---
 
@@ -198,7 +198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Arbitrary version identifier for the API client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#client_version CloudRunV2Job#client_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#client_version CloudRunV2Job#client_version}
 
 ---
 
@@ -206,7 +206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -228,7 +228,7 @@ All system labels in v1 now have a corresponding field in v2 Job.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
 
 ---
 
@@ -240,7 +240,7 @@ The launch stage as defined by [Google Cloud Platform Launch Stages](https://clo
 
 For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: ["UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#launch_stage CloudRunV2Job#launch_stage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#launch_stage CloudRunV2Job#launch_stage}
 
 ---
 
@@ -248,7 +248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}.
 
 ---
 
@@ -258,7 +258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#timeouts CloudRunV2Job#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#timeouts CloudRunV2Job#timeouts}
 
 ---
 
@@ -634,6 +634,7 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ```python
 def put_binary_authorization(
   breakglass_justification: str = None,
+  policy: str = None,
   use_default: typing.Union[bool, IResolvable] = None
 ) -> None
 ```
@@ -646,7 +647,17 @@ If present, indicates to use Breakglass using this justification.
 
 If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#breakglass_justification CloudRunV2Job#breakglass_justification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#breakglass_justification CloudRunV2Job#breakglass_justification}
+
+---
+
+###### `policy`<sup>Optional</sup> <a name="policy" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2Job.putBinaryAuthorization.parameter.policy"></a>
+
+- *Type:* str
+
+The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#policy CloudRunV2Job#policy}
 
 ---
 
@@ -656,7 +667,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#use_default CloudRunV2Job#use_default}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#use_default CloudRunV2Job#use_default}
 
 ---
 
@@ -678,7 +689,7 @@ def put_template(
 
 template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
 
 ---
 
@@ -695,7 +706,7 @@ All system annotations in v1 now have a corresponding field in v2 ExecutionTempl
 
 This field follows Kubernetes annotations' namespacing, limits, and rules.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
 
 ---
 
@@ -712,7 +723,7 @@ https://cloud.google.com/run/docs/configuring/labels.
 Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
 All system labels in v1 now have a corresponding field in v2 ExecutionTemplate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
 
 ---
 
@@ -724,7 +735,7 @@ Specifies the maximum desired number of tasks the execution should run at given 
 
 Must be <= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#parallelism CloudRunV2Job#parallelism}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#parallelism CloudRunV2Job#parallelism}
 
 ---
 
@@ -736,7 +747,7 @@ Specifies the desired number of tasks the execution should run.
 
 Setting to 1 means that parallelism is limited to 1 and the success of that task signals the success of the execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#task_count CloudRunV2Job#task_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#task_count CloudRunV2Job#task_count}
 
 ---
 
@@ -754,7 +765,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#create CloudRunV2Job#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#create CloudRunV2Job#create}.
 
 ---
 
@@ -762,7 +773,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#delete CloudRunV2Job#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#delete CloudRunV2Job#delete}.
 
 ---
 
@@ -770,7 +781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#update CloudRunV2Job#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#update CloudRunV2Job#update}.
 
 ---
 
@@ -942,7 +953,7 @@ The construct id used in the generated config for the CloudRunV2Job to import.
 
 The id of the existing CloudRunV2Job that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1608,6 +1619,7 @@ from cdktf_cdktf_provider_google import cloud_run_v2_job
 
 cloudRunV2Job.CloudRunV2JobBinaryAuthorization(
   breakglass_justification: str = None,
+  policy: str = None,
   use_default: typing.Union[bool, IResolvable] = None
 )
 ```
@@ -1617,6 +1629,7 @@ cloudRunV2Job.CloudRunV2JobBinaryAuthorization(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.breakglassJustification">breakglass_justification</a></code> | <code>str</code> | If present, indicates to use Breakglass using this justification. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.policy">policy</a></code> | <code>str</code> | The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.useDefault">use_default</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled. |
 
 ---
@@ -1633,7 +1646,21 @@ If present, indicates to use Breakglass using this justification.
 
 If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#breakglass_justification CloudRunV2Job#breakglass_justification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#breakglass_justification CloudRunV2Job#breakglass_justification}
+
+---
+
+##### `policy`<sup>Optional</sup> <a name="policy" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization.property.policy"></a>
+
+```python
+policy: str
+```
+
+- *Type:* str
+
+The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#policy CloudRunV2Job#policy}
 
 ---
 
@@ -1647,7 +1674,7 @@ use_default: typing.Union[bool, IResolvable]
 
 If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#use_default CloudRunV2Job#use_default}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#use_default CloudRunV2Job#use_default}
 
 ---
 
@@ -1710,10 +1737,10 @@ cloudRunV2Job.CloudRunV2JobConfig(
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.binaryAuthorization">binary_authorization</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization">CloudRunV2JobBinaryAuthorization</a></code> | binary_authorization block. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.client">client</a></code> | <code>str</code> | Arbitrary identifier for the API client. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.clientVersion">client_version</a></code> | <code>str</code> | Arbitrary version identifier for the API client. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Unstructured key value map that can be used to organize and categorize objects. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.launchStage">launch_stage</a></code> | <code>str</code> | The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts">CloudRunV2JobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1798,7 +1825,7 @@ location: str
 
 The location of the cloud run job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#location CloudRunV2Job#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#location CloudRunV2Job#location}
 
 ---
 
@@ -1812,7 +1839,7 @@ name: str
 
 Name of the Job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
 
 ---
 
@@ -1826,7 +1853,7 @@ template: CloudRunV2JobTemplate
 
 template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
 
 ---
 
@@ -1850,7 +1877,7 @@ This field follows Kubernetes annotations' namespacing, limits, and rules.
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
 
 ---
 
@@ -1864,7 +1891,7 @@ binary_authorization: CloudRunV2JobBinaryAuthorization
 
 binary_authorization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#binary_authorization CloudRunV2Job#binary_authorization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#binary_authorization CloudRunV2Job#binary_authorization}
 
 ---
 
@@ -1878,7 +1905,7 @@ client: str
 
 Arbitrary identifier for the API client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#client CloudRunV2Job#client}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#client CloudRunV2Job#client}
 
 ---
 
@@ -1892,7 +1919,7 @@ client_version: str
 
 Arbitrary version identifier for the API client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#client_version CloudRunV2Job#client_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#client_version CloudRunV2Job#client_version}
 
 ---
 
@@ -1904,7 +1931,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1930,7 +1957,7 @@ All system labels in v1 now have a corresponding field in v2 Job.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
 
 ---
 
@@ -1946,7 +1973,7 @@ The launch stage as defined by [Google Cloud Platform Launch Stages](https://clo
 
 For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: ["UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#launch_stage CloudRunV2Job#launch_stage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#launch_stage CloudRunV2Job#launch_stage}
 
 ---
 
@@ -1958,7 +1985,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}.
 
 ---
 
@@ -1972,7 +1999,7 @@ timeouts: CloudRunV2JobTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#timeouts CloudRunV2Job#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#timeouts CloudRunV2Job#timeouts}
 
 ---
 
@@ -2025,7 +2052,7 @@ template: CloudRunV2JobTemplateTemplate
 
 template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
 
 ---
 
@@ -2046,7 +2073,7 @@ All system annotations in v1 now have a corresponding field in v2 ExecutionTempl
 
 This field follows Kubernetes annotations' namespacing, limits, and rules.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
 
 ---
 
@@ -2067,7 +2094,7 @@ https://cloud.google.com/run/docs/configuring/labels.
 Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
 All system labels in v1 now have a corresponding field in v2 ExecutionTemplate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
 
 ---
 
@@ -2083,7 +2110,7 @@ Specifies the maximum desired number of tasks the execution should run at given 
 
 Must be <= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#parallelism CloudRunV2Job#parallelism}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#parallelism CloudRunV2Job#parallelism}
 
 ---
 
@@ -2099,7 +2126,7 @@ Specifies the desired number of tasks the execution should run.
 
 Setting to 1 means that parallelism is limited to 1 and the success of that task signals the success of the execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#task_count CloudRunV2Job#task_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#task_count CloudRunV2Job#task_count}
 
 ---
 
@@ -2147,7 +2174,7 @@ containers: typing.Union[IResolvable, typing.List[CloudRunV2JobTemplateTemplateC
 
 containers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#containers CloudRunV2Job#containers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#containers CloudRunV2Job#containers}
 
 ---
 
@@ -2163,7 +2190,7 @@ A reference to a customer managed encryption key (CMEK) to use to encrypt this c
 
 For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#encryption_key CloudRunV2Job#encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#encryption_key CloudRunV2Job#encryption_key}
 
 ---
 
@@ -2177,7 +2204,7 @@ execution_environment: str
 
 The execution environment being used to host this Task. Possible values: ["EXECUTION_ENVIRONMENT_GEN1", "EXECUTION_ENVIRONMENT_GEN2"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#execution_environment CloudRunV2Job#execution_environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#execution_environment CloudRunV2Job#execution_environment}
 
 ---
 
@@ -2191,7 +2218,7 @@ max_retries: typing.Union[int, float]
 
 Number of retries allowed per Task, before marking this Task failed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#max_retries CloudRunV2Job#max_retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#max_retries CloudRunV2Job#max_retries}
 
 ---
 
@@ -2207,7 +2234,7 @@ Email address of the IAM service account associated with the Task of a Job.
 
 The service account represents the identity of the running task, and determines what permissions the task has. If not provided, the task will use the project's default service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#service_account CloudRunV2Job#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#service_account CloudRunV2Job#service_account}
 
 ---
 
@@ -2225,7 +2252,7 @@ This applies per attempt of a task, meaning each retry can run for the full time
 
 A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#timeout CloudRunV2Job#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#timeout CloudRunV2Job#timeout}
 
 ---
 
@@ -2239,7 +2266,7 @@ volumes: typing.Union[IResolvable, typing.List[CloudRunV2JobTemplateTemplateVolu
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#volumes CloudRunV2Job#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#volumes CloudRunV2Job#volumes}
 
 ---
 
@@ -2253,7 +2280,7 @@ vpc_access: CloudRunV2JobTemplateTemplateVpcAccess
 
 vpc_access block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#vpc_access CloudRunV2Job#vpc_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#vpc_access CloudRunV2Job#vpc_access}
 
 ---
 
@@ -2303,7 +2330,7 @@ image: str
 
 URL of the Container image in Google Container Registry or Google Artifact Registry. More info: https://kubernetes.io/docs/concepts/containers/images.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#image CloudRunV2Job#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#image CloudRunV2Job#image}
 
 ---
 
@@ -2319,7 +2346,7 @@ Arguments to the entrypoint.
 
 The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#args CloudRunV2Job#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#args CloudRunV2Job#args}
 
 ---
 
@@ -2335,7 +2362,7 @@ Entrypoint array.
 
 Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#command CloudRunV2Job#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#command CloudRunV2Job#command}
 
 ---
 
@@ -2349,7 +2376,7 @@ env: typing.Union[IResolvable, typing.List[CloudRunV2JobTemplateTemplateContaine
 
 env block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#env CloudRunV2Job#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#env CloudRunV2Job#env}
 
 ---
 
@@ -2363,7 +2390,7 @@ name: str
 
 Name of the container specified as a DNS_LABEL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
 
 ---
 
@@ -2377,7 +2404,7 @@ ports: typing.Union[IResolvable, typing.List[CloudRunV2JobTemplateTemplateContai
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#ports CloudRunV2Job#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#ports CloudRunV2Job#ports}
 
 ---
 
@@ -2391,7 +2418,7 @@ resources: CloudRunV2JobTemplateTemplateContainersResources
 
 resources block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#resources CloudRunV2Job#resources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#resources CloudRunV2Job#resources}
 
 ---
 
@@ -2405,7 +2432,7 @@ volume_mounts: typing.Union[IResolvable, typing.List[CloudRunV2JobTemplateTempla
 
 volume_mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#volume_mounts CloudRunV2Job#volume_mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#volume_mounts CloudRunV2Job#volume_mounts}
 
 ---
 
@@ -2421,7 +2448,7 @@ Container's working directory.
 
 If not specified, the container runtime's default will be used, which might be configured in the container image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#working_dir CloudRunV2Job#working_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#working_dir CloudRunV2Job#working_dir}
 
 ---
 
@@ -2459,7 +2486,7 @@ name: str
 
 Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
 
 ---
 
@@ -2475,7 +2502,7 @@ Variable references $(VAR_NAME) are expanded using the previous defined environm
 
 If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "", and the maximum length is 32768 bytes
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#value CloudRunV2Job#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#value CloudRunV2Job#value}
 
 ---
 
@@ -2489,7 +2516,7 @@ value_source: CloudRunV2JobTemplateTemplateContainersEnvValueSource
 
 value_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#value_source CloudRunV2Job#value_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#value_source CloudRunV2Job#value_source}
 
 ---
 
@@ -2523,7 +2550,7 @@ secret_key_ref: CloudRunV2JobTemplateTemplateContainersEnvValueSourceSecretKeyRe
 
 secret_key_ref block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#secret_key_ref CloudRunV2Job#secret_key_ref}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#secret_key_ref CloudRunV2Job#secret_key_ref}
 
 ---
 
@@ -2561,7 +2588,7 @@ The name of the secret in Cloud Secret Manager.
 
 Format: {secretName} if the secret is in the same project. projects/{project}/secrets/{secretName} if the secret is in a different project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
 
 ---
 
@@ -2577,7 +2604,7 @@ The Cloud Secret Manager secret version.
 
 Can be 'latest' for the latest value or an integer for a specific version.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
 
 ---
 
@@ -2613,7 +2640,7 @@ container_port: typing.Union[int, float]
 
 Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#container_port CloudRunV2Job#container_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#container_port CloudRunV2Job#container_port}
 
 ---
 
@@ -2627,7 +2654,7 @@ name: str
 
 If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
 
 ---
 
@@ -2663,7 +2690,7 @@ Only memory and CPU are supported.
 
 Use key 'cpu' for CPU limit and 'memory' for memory limit. Note: The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#limits CloudRunV2Job#limits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#limits CloudRunV2Job#limits}
 
 ---
 
@@ -2701,7 +2728,7 @@ Path within the container at which the volume should be mounted.
 
 Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#mount_path CloudRunV2Job#mount_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#mount_path CloudRunV2Job#mount_path}
 
 ---
 
@@ -2715,7 +2742,7 @@ name: str
 
 This must match the Name of a Volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
 
 ---
 
@@ -2753,7 +2780,7 @@ name: str
 
 Volume's name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
 
 ---
 
@@ -2767,7 +2794,7 @@ cloud_sql_instance: CloudRunV2JobTemplateTemplateVolumesCloudSqlInstance
 
 cloud_sql_instance block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#cloud_sql_instance CloudRunV2Job#cloud_sql_instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#cloud_sql_instance CloudRunV2Job#cloud_sql_instance}
 
 ---
 
@@ -2781,7 +2808,7 @@ secret: CloudRunV2JobTemplateTemplateVolumesSecret
 
 secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
 
 ---
 
@@ -2815,7 +2842,7 @@ instances: typing.List[str]
 
 The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#instances CloudRunV2Job#instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#instances CloudRunV2Job#instances}
 
 ---
 
@@ -2855,7 +2882,7 @@ The name of the secret in Cloud Secret Manager.
 
 Format: {secret} if the secret is in the same project. projects/{project}/secrets/{secret} if the secret is in a different project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
 
 ---
 
@@ -2871,7 +2898,7 @@ Integer representation of mode bits to use on created files by default.
 
 Must be a value between 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this setting.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#default_mode CloudRunV2Job#default_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#default_mode CloudRunV2Job#default_mode}
 
 ---
 
@@ -2885,7 +2912,7 @@ items: typing.Union[IResolvable, typing.List[CloudRunV2JobTemplateTemplateVolume
 
 items block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#items CloudRunV2Job#items}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#items CloudRunV2Job#items}
 
 ---
 
@@ -2923,7 +2950,7 @@ path: str
 
 The relative path of the secret in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#path CloudRunV2Job#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#path CloudRunV2Job#path}
 
 ---
 
@@ -2939,7 +2966,7 @@ The Cloud Secret Manager secret version.
 
 Can be 'latest' for the latest value or an integer for a specific version
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
 
 ---
 
@@ -2955,7 +2982,7 @@ Integer octal mode bits to use on this file, must be a value between 01 and 0777
 
 If 0 or not set, the Volume's default mode will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#mode CloudRunV2Job#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#mode CloudRunV2Job#mode}
 
 ---
 
@@ -2993,7 +3020,7 @@ connector: str
 
 VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#connector CloudRunV2Job#connector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#connector CloudRunV2Job#connector}
 
 ---
 
@@ -3007,7 +3034,7 @@ egress: str
 
 Traffic VPC egress settings. Possible values: ["ALL_TRAFFIC", "PRIVATE_RANGES_ONLY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#egress CloudRunV2Job#egress}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#egress CloudRunV2Job#egress}
 
 ---
 
@@ -3021,7 +3048,7 @@ network_interfaces: typing.Union[IResolvable, typing.List[CloudRunV2JobTemplateT
 
 network_interfaces block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#network_interfaces CloudRunV2Job#network_interfaces}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#network_interfaces CloudRunV2Job#network_interfaces}
 
 ---
 
@@ -3063,7 +3090,7 @@ At least one of network or subnetwork must be specified. If both
 network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be
 looked up from the subnetwork.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#network CloudRunV2Job#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#network CloudRunV2Job#network}
 
 ---
 
@@ -3081,7 +3108,7 @@ At least one of network or subnetwork must be specified. If both
 network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
 subnetwork with the same name with the network will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#subnetwork CloudRunV2Job#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#subnetwork CloudRunV2Job#subnetwork}
 
 ---
 
@@ -3095,7 +3122,7 @@ tags: typing.List[str]
 
 Network tags applied to this Cloud Run job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#tags CloudRunV2Job#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#tags CloudRunV2Job#tags}
 
 ---
 
@@ -3128,9 +3155,9 @@ cloudRunV2Job.CloudRunV2JobTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#create CloudRunV2Job#create}. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#delete CloudRunV2Job#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#update CloudRunV2Job#update}. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#create CloudRunV2Job#create}. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#delete CloudRunV2Job#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#update CloudRunV2Job#update}. |
 
 ---
 
@@ -3142,7 +3169,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#create CloudRunV2Job#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#create CloudRunV2Job#create}.
 
 ---
 
@@ -3154,7 +3181,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#delete CloudRunV2Job#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#delete CloudRunV2Job#delete}.
 
 ---
 
@@ -3166,7 +3193,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#update CloudRunV2Job#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#update CloudRunV2Job#update}.
 
 ---
 
@@ -3226,6 +3253,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.resetBreakglassJustification">reset_breakglass_justification</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.resetPolicy">reset_policy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.resetUseDefault">reset_use_default</a></code> | *No description.* |
 
 ---
@@ -3408,6 +3436,12 @@ Returns a reversible string representation.
 def reset_breakglass_justification() -> None
 ```
 
+##### `reset_policy` <a name="reset_policy" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.resetPolicy"></a>
+
+```python
+def reset_policy() -> None
+```
+
 ##### `reset_use_default` <a name="reset_use_default" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.resetUseDefault"></a>
 
 ```python
@@ -3422,8 +3456,10 @@ def reset_use_default() -> None
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.breakglassJustificationInput">breakglass_justification_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.policyInput">policy_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefaultInput">use_default_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.breakglassJustification">breakglass_justification</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.policy">policy</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefault">use_default</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorization">CloudRunV2JobBinaryAuthorization</a></code> | *No description.* |
 
@@ -3463,6 +3499,16 @@ breakglass_justification_input: str
 
 ---
 
+##### `policy_input`<sup>Optional</sup> <a name="policy_input" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.policyInput"></a>
+
+```python
+policy_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `use_default_input`<sup>Optional</sup> <a name="use_default_input" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.useDefaultInput"></a>
 
 ```python
@@ -3477,6 +3523,16 @@ use_default_input: typing.Union[bool, IResolvable]
 
 ```python
 breakglass_justification: str
+```
+
+- *Type:* str
+
+---
+
+##### `policy`<sup>Required</sup> <a name="policy" id="@cdktf/provider-google.cloudRunV2Job.CloudRunV2JobBinaryAuthorizationOutputReference.property.policy"></a>
+
+```python
+policy: str
 ```
 
 - *Type:* str
@@ -4785,7 +4841,7 @@ def put_template(
 
 containers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#containers CloudRunV2Job#containers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#containers CloudRunV2Job#containers}
 
 ---
 
@@ -4797,7 +4853,7 @@ A reference to a customer managed encryption key (CMEK) to use to encrypt this c
 
 For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#encryption_key CloudRunV2Job#encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#encryption_key CloudRunV2Job#encryption_key}
 
 ---
 
@@ -4807,7 +4863,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The execution environment being used to host this Task. Possible values: ["EXECUTION_ENVIRONMENT_GEN1", "EXECUTION_ENVIRONMENT_GEN2"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#execution_environment CloudRunV2Job#execution_environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#execution_environment CloudRunV2Job#execution_environment}
 
 ---
 
@@ -4817,7 +4873,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Number of retries allowed per Task, before marking this Task failed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#max_retries CloudRunV2Job#max_retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#max_retries CloudRunV2Job#max_retries}
 
 ---
 
@@ -4829,7 +4885,7 @@ Email address of the IAM service account associated with the Task of a Job.
 
 The service account represents the identity of the running task, and determines what permissions the task has. If not provided, the task will use the project's default service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#service_account CloudRunV2Job#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#service_account CloudRunV2Job#service_account}
 
 ---
 
@@ -4843,7 +4899,7 @@ This applies per attempt of a task, meaning each retry can run for the full time
 
 A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#timeout CloudRunV2Job#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#timeout CloudRunV2Job#timeout}
 
 ---
 
@@ -4853,7 +4909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 volumes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#volumes CloudRunV2Job#volumes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#volumes CloudRunV2Job#volumes}
 
 ---
 
@@ -4863,7 +4919,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 vpc_access block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#vpc_access CloudRunV2Job#vpc_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#vpc_access CloudRunV2Job#vpc_access}
 
 ---
 
@@ -5482,7 +5538,7 @@ def put_value_source(
 
 secret_key_ref block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#secret_key_ref CloudRunV2Job#secret_key_ref}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#secret_key_ref CloudRunV2Job#secret_key_ref}
 
 ---
 
@@ -5857,7 +5913,7 @@ The name of the secret in Cloud Secret Manager.
 
 Format: {secretName} if the secret is in the same project. projects/{project}/secrets/{secretName} if the secret is in a different project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
 
 ---
 
@@ -5869,7 +5925,7 @@ The Cloud Secret Manager secret version.
 
 Can be 'latest' for the latest value or an integer for a specific version.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
 
 ---
 
@@ -6739,7 +6795,7 @@ Only memory and CPU are supported.
 
 Use key 'cpu' for CPU limit and 'memory' for memory limit. Note: The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#limits CloudRunV2Job#limits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#limits CloudRunV2Job#limits}
 
 ---
 
@@ -8665,7 +8721,7 @@ def put_vpc_access(
 
 VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#connector CloudRunV2Job#connector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#connector CloudRunV2Job#connector}
 
 ---
 
@@ -8675,7 +8731,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Traffic VPC egress settings. Possible values: ["ALL_TRAFFIC", "PRIVATE_RANGES_ONLY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#egress CloudRunV2Job#egress}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#egress CloudRunV2Job#egress}
 
 ---
 
@@ -8685,7 +8741,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 network_interfaces block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#network_interfaces CloudRunV2Job#network_interfaces}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#network_interfaces CloudRunV2Job#network_interfaces}
 
 ---
 
@@ -9698,7 +9754,7 @@ def put_cloud_sql_instance(
 
 The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#instances CloudRunV2Job#instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#instances CloudRunV2Job#instances}
 
 ---
 
@@ -9720,7 +9776,7 @@ The name of the secret in Cloud Secret Manager.
 
 Format: {secret} if the secret is in the same project. projects/{project}/secrets/{secret} if the secret is in a different project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
 
 ---
 
@@ -9732,7 +9788,7 @@ Integer representation of mode bits to use on created files by default.
 
 Must be a value between 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this setting.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#default_mode CloudRunV2Job#default_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#default_mode CloudRunV2Job#default_mode}
 
 ---
 
@@ -9742,7 +9798,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 items block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/resources/cloud_run_v2_job#items CloudRunV2Job#items}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/cloud_run_v2_job#items CloudRunV2Job#items}
 
 ---
 

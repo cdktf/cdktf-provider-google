@@ -4,12 +4,12 @@
 
 ### DataGoogleAlloydbLocations <a name="DataGoogleAlloydbLocations" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/alloydb_locations google_alloydb_locations}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/alloydb_locations google_alloydb_locations}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 datagooglealloydblocations.NewDataGoogleAlloydbLocations(scope Construct, id *string, config DataGoogleAlloydbLocationsConfig) DataGoogleAlloydbLocations
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 datagooglealloydblocations.DataGoogleAlloydbLocations_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 datagooglealloydblocations.DataGoogleAlloydbLocations_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagooglealloydblocations.DataGoogleAlloydbLocations_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 datagooglealloydblocations.DataGoogleAlloydbLocations_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglealloydblocations.DataGoogleAlloydbLocations_IsTerraformDataSource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocations.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 datagooglealloydblocations.DataGoogleAlloydbLocations_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleAlloydbLocations
 
 The id of the existing DataGoogleAlloydbLocations that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/alloydb_locations#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/alloydb_locations#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -612,7 +612,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 &datagooglealloydblocations.DataGoogleAlloydbLocationsConfig {
 	Connection: interface{},
@@ -638,7 +638,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblo
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsConfig.property.project">Project</a></code> | <code>*string</code> | Project ID of the project. |
 
 ---
@@ -721,7 +721,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/alloydb_locations#id DataGoogleAlloydbLocations#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -738,7 +738,7 @@ Project *string
 
 Project ID of the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/alloydb_locations#project DataGoogleAlloydbLocations#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/alloydb_locations#project DataGoogleAlloydbLocations#project}
 
 ---
 
@@ -747,7 +747,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsLocations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 &datagooglealloydblocations.DataGoogleAlloydbLocationsLocations {
 
@@ -762,7 +762,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsLocationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 datagooglealloydblocations.NewDataGoogleAlloydbLocationsLocationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbLocationsLocationsList
 ```
@@ -911,7 +911,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbLocations.DataGoogleAlloydbLocationsLocationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglealloydblocations"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydblocations"
 
 datagooglealloydblocations.NewDataGoogleAlloydbLocationsLocationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbLocationsLocationsOutputReference
 ```
