@@ -2136,6 +2136,11 @@ export class DataGoogleContainerClusterClusterAutoscalingOutputReference extends
     return this._autoProvisioningDefaults;
   }
 
+  // auto_provisioning_locations - computed: true, optional: false, required: false
+  public get autoProvisioningLocations() {
+    return this.getListAttribute('auto_provisioning_locations');
+  }
+
   // autoscaling_profile - computed: true, optional: false, required: false
   public get autoscalingProfile() {
     return this.getStringAttribute('autoscaling_profile');

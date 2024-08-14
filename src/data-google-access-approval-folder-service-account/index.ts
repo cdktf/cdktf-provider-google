@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/access_approval_folder_service_account
+// https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/access_approval_folder_service_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,11 +13,11 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleAccessApprovalFolderServiceAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/access_approval_folder_service_account#folder_id DataGoogleAccessApprovalFolderServiceAccount#folder_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/access_approval_folder_service_account#folder_id DataGoogleAccessApprovalFolderServiceAccount#folder_id}
   */
   readonly folderId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/access_approval_folder_service_account#id DataGoogleAccessApprovalFolderServiceAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/access_approval_folder_service_account#id DataGoogleAccessApprovalFolderServiceAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,7 +26,7 @@ export interface DataGoogleAccessApprovalFolderServiceAccountConfig extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/access_approval_folder_service_account google_access_approval_folder_service_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/access_approval_folder_service_account google_access_approval_folder_service_account}
 */
 export class DataGoogleAccessApprovalFolderServiceAccount extends cdktf.TerraformDataSource {
 
@@ -42,7 +42,7 @@ export class DataGoogleAccessApprovalFolderServiceAccount extends cdktf.Terrafor
   * Generates CDKTF code for importing a DataGoogleAccessApprovalFolderServiceAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleAccessApprovalFolderServiceAccount to import
-  * @param importFromId The id of the existing DataGoogleAccessApprovalFolderServiceAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/access_approval_folder_service_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleAccessApprovalFolderServiceAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/access_approval_folder_service_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleAccessApprovalFolderServiceAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -54,7 +54,7 @@ export class DataGoogleAccessApprovalFolderServiceAccount extends cdktf.Terrafor
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.40.0/docs/data-sources/access_approval_folder_service_account google_access_approval_folder_service_account} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/data-sources/access_approval_folder_service_account google_access_approval_folder_service_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -65,7 +65,7 @@ export class DataGoogleAccessApprovalFolderServiceAccount extends cdktf.Terrafor
       terraformResourceType: 'google_access_approval_folder_service_account',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.40.0',
+        providerVersion: '5.41.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
