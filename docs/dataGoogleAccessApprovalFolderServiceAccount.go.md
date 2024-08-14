@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAccessApprovalFolderServiceAccount.DataGoogleAccessApprovalFolderServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccessapprovalfolderserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleaccessapprovalfolderserviceaccount"
 
 datagoogleaccessapprovalfolderserviceaccount.NewDataGoogleAccessApprovalFolderServiceAccount(scope Construct, id *string, config DataGoogleAccessApprovalFolderServiceAccountConfig) DataGoogleAccessApprovalFolderServiceAccount
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleAccessApprovalFolderServiceAccount.DataGoogleAccessApprovalFolderServiceAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccessapprovalfolderserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleaccessapprovalfolderserviceaccount"
 
 datagoogleaccessapprovalfolderserviceaccount.DataGoogleAccessApprovalFolderServiceAccount_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleAccessApprovalFolderServiceAccount.DataGoogleAccessApprovalFolderServiceAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccessapprovalfolderserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleaccessapprovalfolderserviceaccount"
 
 datagoogleaccessapprovalfolderserviceaccount.DataGoogleAccessApprovalFolderServiceAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagoogleaccessapprovalfolderserviceaccount.DataGoogleAccessApprovalFolderServi
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleAccessApprovalFolderServiceAccount.DataGoogleAccessApprovalFolderServiceAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccessapprovalfolderserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleaccessapprovalfolderserviceaccount"
 
 datagoogleaccessapprovalfolderserviceaccount.DataGoogleAccessApprovalFolderServiceAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagoogleaccessapprovalfolderserviceaccount.DataGoogleAccessApprovalFolderServi
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleAccessApprovalFolderServiceAccount.DataGoogleAccessApprovalFolderServiceAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccessapprovalfolderserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleaccessapprovalfolderserviceaccount"
 
 datagoogleaccessapprovalfolderserviceaccount.DataGoogleAccessApprovalFolderServiceAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -616,7 +616,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAccessApprovalFolderServiceAccount.DataGoogleAccessApprovalFolderServiceAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleaccessapprovalfolderserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagoogleaccessapprovalfolderserviceaccount"
 
 &datagoogleaccessapprovalfolderserviceaccount.DataGoogleAccessApprovalFolderServiceAccountConfig {
 	Connection: interface{},
