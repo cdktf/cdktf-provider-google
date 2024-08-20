@@ -4,7 +4,7 @@
 
 ### DataPipelinePipeline <a name="DataPipelinePipeline" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline google_data_pipeline_pipeline}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline google_data_pipeline_pipeline}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer"></a>
 
@@ -53,9 +53,9 @@ DataPipelinePipeline.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.state">state</a></code> | <code>java.lang.String</code> | The state of the pipeline. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.type">type</a></code> | <code>java.lang.String</code> | The type of the pipeline. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.displayName">displayName</a></code> | <code>java.lang.String</code> | The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_). |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.pipelineSources">pipelineSources</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | The sources of the pipeline (for example, Dataplex). |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | A reference to the region. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.scheduleInfo">scheduleInfo</a></code> | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineScheduleInfo">DataPipelinePipelineScheduleInfo</a></code> | schedule_info block. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer.parameter.schedulerServiceAccountEmail">schedulerServiceAccountEmail</a></code> | <code>java.lang.String</code> | Optional. |
@@ -135,7 +135,7 @@ For example': 'projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID."
 "LOCATION_ID is the canonical ID for the pipeline's location. The list of available locations can be obtained by calling google.cloud.location.Locations.ListLocations. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only available in App Engine regions."
 "PIPELINE_ID is the ID of the pipeline. Must be unique for the selected project and location."
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#name DataPipelinePipeline#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#name DataPipelinePipeline#name}
 
 ---
 
@@ -148,7 +148,7 @@ The state of the pipeline.
 When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through pipelines.patch requests.
 https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#state Possible values: ["STATE_UNSPECIFIED", "STATE_RESUMING", "STATE_ACTIVE", "STATE_STOPPING", "STATE_ARCHIVED", "STATE_PAUSED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#state DataPipelinePipeline#state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#state DataPipelinePipeline#state}
 
 ---
 
@@ -161,7 +161,7 @@ The type of the pipeline.
 This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
 https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#pipelinetype Possible values: ["PIPELINE_TYPE_UNSPECIFIED", "PIPELINE_TYPE_BATCH", "PIPELINE_TYPE_STREAMING"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#type DataPipelinePipeline#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#type DataPipelinePipeline#type}
 
 ---
 
@@ -171,7 +171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#display_name DataPipelinePipeline#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#display_name DataPipelinePipeline#display_name}
 
 ---
 
@@ -179,7 +179,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -195,7 +195,7 @@ The sources of the pipeline (for example, Dataplex).
 The keys and values are set by the corresponding sources during pipeline creation.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#pipeline_sources DataPipelinePipeline#pipeline_sources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#pipeline_sources DataPipelinePipeline#pipeline_sources}
 
 ---
 
@@ -203,7 +203,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}.
 
 ---
 
@@ -213,7 +213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A reference to the region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#region DataPipelinePipeline#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#region DataPipelinePipeline#region}
 
 ---
 
@@ -223,7 +223,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 schedule_info block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#schedule_info DataPipelinePipeline#schedule_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#schedule_info DataPipelinePipeline#schedule_info}
 
 ---
 
@@ -235,7 +235,7 @@ Optional.
 
 A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#scheduler_service_account_email DataPipelinePipeline#scheduler_service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#scheduler_service_account_email DataPipelinePipeline#scheduler_service_account_email}
 
 ---
 
@@ -245,7 +245,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#timeouts DataPipelinePipeline#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#timeouts DataPipelinePipeline#timeouts}
 
 ---
 
@@ -255,7 +255,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 workload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#workload DataPipelinePipeline#workload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#workload DataPipelinePipeline#workload}
 
 ---
 
@@ -784,7 +784,7 @@ The construct id used in the generated config for the DataPipelinePipeline to im
 
 The id of the existing DataPipelinePipeline that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1325,9 +1325,9 @@ DataPipelinePipelineConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.state">state</a></code> | <code>java.lang.String</code> | The state of the pipeline. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.type">type</a></code> | <code>java.lang.String</code> | The type of the pipeline. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.displayName">displayName</a></code> | <code>java.lang.String</code> | The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_). |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.pipelineSources">pipelineSources</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | The sources of the pipeline (for example, Dataplex). |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.region">region</a></code> | <code>java.lang.String</code> | A reference to the region. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.scheduleInfo">scheduleInfo</a></code> | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineScheduleInfo">DataPipelinePipelineScheduleInfo</a></code> | schedule_info block. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.schedulerServiceAccountEmail">schedulerServiceAccountEmail</a></code> | <code>java.lang.String</code> | Optional. |
@@ -1421,7 +1421,7 @@ For example': 'projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID."
 "LOCATION_ID is the canonical ID for the pipeline's location. The list of available locations can be obtained by calling google.cloud.location.Locations.ListLocations. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only available in App Engine regions."
 "PIPELINE_ID is the ID of the pipeline. Must be unique for the selected project and location."
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#name DataPipelinePipeline#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#name DataPipelinePipeline#name}
 
 ---
 
@@ -1438,7 +1438,7 @@ The state of the pipeline.
 When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through pipelines.patch requests.
 https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#state Possible values: ["STATE_UNSPECIFIED", "STATE_RESUMING", "STATE_ACTIVE", "STATE_STOPPING", "STATE_ARCHIVED", "STATE_PAUSED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#state DataPipelinePipeline#state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#state DataPipelinePipeline#state}
 
 ---
 
@@ -1455,7 +1455,7 @@ The type of the pipeline.
 This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
 https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#pipelinetype Possible values: ["PIPELINE_TYPE_UNSPECIFIED", "PIPELINE_TYPE_BATCH", "PIPELINE_TYPE_STREAMING"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#type DataPipelinePipeline#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#type DataPipelinePipeline#type}
 
 ---
 
@@ -1469,7 +1469,7 @@ public java.lang.String getDisplayName();
 
 The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#display_name DataPipelinePipeline#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#display_name DataPipelinePipeline#display_name}
 
 ---
 
@@ -1481,7 +1481,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1501,7 +1501,7 @@ The sources of the pipeline (for example, Dataplex).
 The keys and values are set by the corresponding sources during pipeline creation.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#pipeline_sources DataPipelinePipeline#pipeline_sources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#pipeline_sources DataPipelinePipeline#pipeline_sources}
 
 ---
 
@@ -1513,7 +1513,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}.
 
 ---
 
@@ -1527,7 +1527,7 @@ public java.lang.String getRegion();
 
 A reference to the region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#region DataPipelinePipeline#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#region DataPipelinePipeline#region}
 
 ---
 
@@ -1541,7 +1541,7 @@ public DataPipelinePipelineScheduleInfo getScheduleInfo();
 
 schedule_info block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#schedule_info DataPipelinePipeline#schedule_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#schedule_info DataPipelinePipeline#schedule_info}
 
 ---
 
@@ -1557,7 +1557,7 @@ Optional.
 
 A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#scheduler_service_account_email DataPipelinePipeline#scheduler_service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#scheduler_service_account_email DataPipelinePipeline#scheduler_service_account_email}
 
 ---
 
@@ -1571,7 +1571,7 @@ public DataPipelinePipelineTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#timeouts DataPipelinePipeline#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#timeouts DataPipelinePipeline#timeouts}
 
 ---
 
@@ -1585,7 +1585,7 @@ public DataPipelinePipelineWorkload getWorkload();
 
 workload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#workload DataPipelinePipeline#workload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#workload DataPipelinePipeline#workload}
 
 ---
 
@@ -1621,7 +1621,7 @@ public java.lang.String getSchedule();
 
 Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#schedule DataPipelinePipeline#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#schedule DataPipelinePipeline#schedule}
 
 ---
 
@@ -1635,7 +1635,7 @@ public java.lang.String getTimeZone();
 
 Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#time_zone DataPipelinePipeline#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#time_zone DataPipelinePipeline#time_zone}
 
 ---
 
@@ -1657,9 +1657,9 @@ DataPipelinePipelineTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#create DataPipelinePipeline#create}. |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#delete DataPipelinePipeline#delete}. |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#create DataPipelinePipeline#create}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#delete DataPipelinePipeline#delete}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}. |
 
 ---
 
@@ -1671,7 +1671,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#create DataPipelinePipeline#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#create DataPipelinePipeline#create}.
 
 ---
 
@@ -1683,7 +1683,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#delete DataPipelinePipeline#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#delete DataPipelinePipeline#delete}.
 
 ---
 
@@ -1695,7 +1695,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}.
 
 ---
 
@@ -1731,7 +1731,7 @@ public DataPipelinePipelineWorkloadDataflowFlexTemplateRequest getDataflowFlexTe
 
 dataflow_flex_template_request block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#dataflow_flex_template_request DataPipelinePipeline#dataflow_flex_template_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#dataflow_flex_template_request DataPipelinePipeline#dataflow_flex_template_request}
 
 ---
 
@@ -1745,7 +1745,7 @@ public DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest getDataflowLaun
 
 dataflow_launch_template_request block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#dataflow_launch_template_request DataPipelinePipeline#dataflow_launch_template_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#dataflow_launch_template_request DataPipelinePipeline#dataflow_launch_template_request}
 
 ---
 
@@ -1786,7 +1786,7 @@ public DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameter ge
 
 launch_parameter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#launch_parameter DataPipelinePipeline#launch_parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#launch_parameter DataPipelinePipeline#launch_parameter}
 
 ---
 
@@ -1800,7 +1800,7 @@ public java.lang.String getLocation();
 
 The regional endpoint to which to direct the request. For example, us-central1, us-west1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#location DataPipelinePipeline#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#location DataPipelinePipeline#location}
 
 ---
 
@@ -1814,7 +1814,7 @@ public java.lang.String getProjectId();
 
 The ID of the Cloud Platform project that the job belongs to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#project_id DataPipelinePipeline#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#project_id DataPipelinePipeline#project_id}
 
 ---
 
@@ -1828,7 +1828,7 @@ public java.lang.Object getValidateOnly();
 
 If true, the request is validated but not actually executed. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}
 
 ---
 
@@ -1877,7 +1877,7 @@ The job name to use for the created job.
 
 For an update job request, the job name should be the same as the existing running job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#job_name DataPipelinePipeline#job_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#job_name DataPipelinePipeline#job_name}
 
 ---
 
@@ -1891,7 +1891,7 @@ public java.lang.String getContainerSpecGcsPath();
 
 Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#container_spec_gcs_path DataPipelinePipeline#container_spec_gcs_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#container_spec_gcs_path DataPipelinePipeline#container_spec_gcs_path}
 
 ---
 
@@ -1905,7 +1905,7 @@ public DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterEnv
 
 environment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#environment DataPipelinePipeline#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#environment DataPipelinePipeline#environment}
 
 ---
 
@@ -1922,7 +1922,7 @@ Launch options for this Flex Template job.
 This is a common set of options across languages and templates. This should not be used to pass job parameters.
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#launch_options DataPipelinePipeline#launch_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#launch_options DataPipelinePipeline#launch_options}
 
 ---
 
@@ -1939,7 +1939,7 @@ public java.util.Map<java.lang.String, java.lang.String> getParameters();
 Example: {"numWorkers":"5"}'
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#parameters DataPipelinePipeline#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#parameters DataPipelinePipeline#parameters}
 
 ---
 
@@ -1956,7 +1956,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTransformNameMapping
 Example: {"oldTransformName":"newTransformName",...}'
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#transform_name_mappings DataPipelinePipeline#transform_name_mappings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#transform_name_mappings DataPipelinePipeline#transform_name_mappings}
 
 ---
 
@@ -1972,7 +1972,7 @@ Set this to true if you are sending a request to update a running streaming job.
 
 When set, the job name should be the same as the running job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}
 
 ---
 
@@ -2037,7 +2037,7 @@ public java.util.List<java.lang.String> getAdditionalExperiments();
 
 Additional experiment flags for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#additional_experiments DataPipelinePipeline#additional_experiments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#additional_experiments DataPipelinePipeline#additional_experiments}
 
 ---
 
@@ -2055,7 +2055,7 @@ Keys and values should follow the restrictions specified in the labeling restric
 'Example: { "name": "wrench", "mass": "1kg", "count": "3" }.'
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#additional_user_labels DataPipelinePipeline#additional_user_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#additional_user_labels DataPipelinePipeline#additional_user_labels}
 
 ---
 
@@ -2069,7 +2069,7 @@ public java.lang.Object getEnableStreamingEngine();
 
 Whether to enable Streaming Engine for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#enable_streaming_engine DataPipelinePipeline#enable_streaming_engine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#enable_streaming_engine DataPipelinePipeline#enable_streaming_engine}
 
 ---
 
@@ -2083,7 +2083,7 @@ public java.lang.String getFlexrsGoal();
 
 Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#FlexResourceSchedulingGoal Possible values: ["FLEXRS_UNSPECIFIED", "FLEXRS_SPEED_OPTIMIZED", "FLEXRS_COST_OPTIMIZED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#flexrs_goal DataPipelinePipeline#flexrs_goal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#flexrs_goal DataPipelinePipeline#flexrs_goal}
 
 ---
 
@@ -2097,7 +2097,7 @@ public java.lang.String getIpConfiguration();
 
 Configuration for VM IPs. https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#WorkerIPAddressConfiguration Possible values: ["WORKER_IP_UNSPECIFIED", "WORKER_IP_PUBLIC", "WORKER_IP_PRIVATE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#ip_configuration DataPipelinePipeline#ip_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#ip_configuration DataPipelinePipeline#ip_configuration}
 
 ---
 
@@ -2111,7 +2111,7 @@ public java.lang.String getKmsKeyName();
 
 'Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#kms_key_name DataPipelinePipeline#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#kms_key_name DataPipelinePipeline#kms_key_name}
 
 ---
 
@@ -2125,7 +2125,7 @@ public java.lang.String getMachineType();
 
 The machine type to use for the job. Defaults to the value from the template if not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#machine_type DataPipelinePipeline#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#machine_type DataPipelinePipeline#machine_type}
 
 ---
 
@@ -2139,7 +2139,7 @@ public java.lang.Number getMaxWorkers();
 
 The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#max_workers DataPipelinePipeline#max_workers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#max_workers DataPipelinePipeline#max_workers}
 
 ---
 
@@ -2153,7 +2153,7 @@ public java.lang.String getNetwork();
 
 Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#network DataPipelinePipeline#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#network DataPipelinePipeline#network}
 
 ---
 
@@ -2167,7 +2167,7 @@ public java.lang.Number getNumWorkers();
 
 The initial number of Compute Engine instances for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#num_workers DataPipelinePipeline#num_workers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#num_workers DataPipelinePipeline#num_workers}
 
 ---
 
@@ -2181,7 +2181,7 @@ public java.lang.String getServiceAccountEmail();
 
 The email address of the service account to run the job as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#service_account_email DataPipelinePipeline#service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#service_account_email DataPipelinePipeline#service_account_email}
 
 ---
 
@@ -2197,7 +2197,7 @@ Subnetwork to which VMs will be assigned, if desired.
 
 You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#subnetwork DataPipelinePipeline#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#subnetwork DataPipelinePipeline#subnetwork}
 
 ---
 
@@ -2211,7 +2211,7 @@ public java.lang.String getTempLocation();
 
 The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with gs://.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#temp_location DataPipelinePipeline#temp_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#temp_location DataPipelinePipeline#temp_location}
 
 ---
 
@@ -2225,7 +2225,7 @@ public java.lang.String getWorkerRegion();
 
 The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with workerZone. If neither workerRegion nor workerZone is specified, default to the control plane's region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#worker_region DataPipelinePipeline#worker_region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#worker_region DataPipelinePipeline#worker_region}
 
 ---
 
@@ -2239,7 +2239,7 @@ public java.lang.String getWorkerZone();
 
 The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with workerRegion. If neither workerRegion nor workerZone is specified, a zone in the control plane's region is chosen based on available capacity. If both workerZone and zone are set, workerZone takes precedence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#worker_zone DataPipelinePipeline#worker_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#worker_zone DataPipelinePipeline#worker_zone}
 
 ---
 
@@ -2255,7 +2255,7 @@ The Compute Engine availability zone for launching worker instances to run your 
 
 In the future, workerZone will take precedence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#zone DataPipelinePipeline#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#zone DataPipelinePipeline#zone}
 
 ---
 
@@ -2284,7 +2284,7 @@ DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.builder()
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.gcsPath">gcsPath</a></code> | <code>java.lang.String</code> | A Cloud Storage path to the template from which to create the job. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.launchParameters">launchParameters</a></code> | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters">DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters</a></code> | launch_parameters block. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.location">location</a></code> | <code>java.lang.String</code> | The regional endpoint to which to direct the request. |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.validateOnly">validateOnly</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.validateOnly">validateOnly</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}. |
 
 ---
 
@@ -2298,7 +2298,7 @@ public java.lang.String getProjectId();
 
 The ID of the Cloud Platform project that the job belongs to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#project_id DataPipelinePipeline#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#project_id DataPipelinePipeline#project_id}
 
 ---
 
@@ -2314,7 +2314,7 @@ A Cloud Storage path to the template from which to create the job.
 
 Must be a valid Cloud Storage URL, beginning with 'gs://'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#gcs_path DataPipelinePipeline#gcs_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#gcs_path DataPipelinePipeline#gcs_path}
 
 ---
 
@@ -2328,7 +2328,7 @@ public DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters
 
 launch_parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#launch_parameters DataPipelinePipeline#launch_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#launch_parameters DataPipelinePipeline#launch_parameters}
 
 ---
 
@@ -2342,7 +2342,7 @@ public java.lang.String getLocation();
 
 The regional endpoint to which to direct the request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#location DataPipelinePipeline#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#location DataPipelinePipeline#location}
 
 ---
 
@@ -2354,7 +2354,7 @@ public java.lang.Object getValidateOnly();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}.
 
 ---
 
@@ -2397,7 +2397,7 @@ public java.lang.String getJobName();
 
 The job name to use for the created job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#job_name DataPipelinePipeline#job_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#job_name DataPipelinePipeline#job_name}
 
 ---
 
@@ -2411,7 +2411,7 @@ public DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters
 
 environment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#environment DataPipelinePipeline#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#environment DataPipelinePipeline#environment}
 
 ---
 
@@ -2427,7 +2427,7 @@ The runtime parameters to pass to the job.
 
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#parameters DataPipelinePipeline#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#parameters DataPipelinePipeline#parameters}
 
 ---
 
@@ -2444,7 +2444,7 @@ Map of transform name prefixes of the job to be replaced to the corresponding na
 Only applicable when updating a pipeline.
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#transform_name_mapping DataPipelinePipeline#transform_name_mapping}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#transform_name_mapping DataPipelinePipeline#transform_name_mapping}
 
 ---
 
@@ -2458,7 +2458,7 @@ public java.lang.Object getUpdate();
 
 If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}
 
 ---
 
@@ -2524,7 +2524,7 @@ public java.util.List<java.lang.String> getAdditionalExperiments();
 
 Additional experiment flags for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#additional_experiments DataPipelinePipeline#additional_experiments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#additional_experiments DataPipelinePipeline#additional_experiments}
 
 ---
 
@@ -2542,7 +2542,7 @@ Keys and values should follow the restrictions specified in the labeling restric
 'Example: { "name": "wrench", "mass": "1kg", "count": "3" }.'
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#additional_user_labels DataPipelinePipeline#additional_user_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#additional_user_labels DataPipelinePipeline#additional_user_labels}
 
 ---
 
@@ -2556,7 +2556,7 @@ public java.lang.Object getBypassTempDirValidation();
 
 Whether to bypass the safety checks for the job's temporary directory. Use with caution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#bypass_temp_dir_validation DataPipelinePipeline#bypass_temp_dir_validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#bypass_temp_dir_validation DataPipelinePipeline#bypass_temp_dir_validation}
 
 ---
 
@@ -2570,7 +2570,7 @@ public java.lang.Object getEnableStreamingEngine();
 
 Whether to enable Streaming Engine for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#enable_streaming_engine DataPipelinePipeline#enable_streaming_engine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#enable_streaming_engine DataPipelinePipeline#enable_streaming_engine}
 
 ---
 
@@ -2584,7 +2584,7 @@ public java.lang.String getIpConfiguration();
 
 Configuration for VM IPs. https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#WorkerIPAddressConfiguration Possible values: ["WORKER_IP_UNSPECIFIED", "WORKER_IP_PUBLIC", "WORKER_IP_PRIVATE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#ip_configuration DataPipelinePipeline#ip_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#ip_configuration DataPipelinePipeline#ip_configuration}
 
 ---
 
@@ -2598,7 +2598,7 @@ public java.lang.String getKmsKeyName();
 
 'Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#kms_key_name DataPipelinePipeline#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#kms_key_name DataPipelinePipeline#kms_key_name}
 
 ---
 
@@ -2612,7 +2612,7 @@ public java.lang.String getMachineType();
 
 The machine type to use for the job. Defaults to the value from the template if not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#machine_type DataPipelinePipeline#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#machine_type DataPipelinePipeline#machine_type}
 
 ---
 
@@ -2626,7 +2626,7 @@ public java.lang.Number getMaxWorkers();
 
 The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#max_workers DataPipelinePipeline#max_workers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#max_workers DataPipelinePipeline#max_workers}
 
 ---
 
@@ -2640,7 +2640,7 @@ public java.lang.String getNetwork();
 
 Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#network DataPipelinePipeline#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#network DataPipelinePipeline#network}
 
 ---
 
@@ -2654,7 +2654,7 @@ public java.lang.Number getNumWorkers();
 
 The initial number of Compute Engine instances for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#num_workers DataPipelinePipeline#num_workers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#num_workers DataPipelinePipeline#num_workers}
 
 ---
 
@@ -2668,7 +2668,7 @@ public java.lang.String getServiceAccountEmail();
 
 The email address of the service account to run the job as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#service_account_email DataPipelinePipeline#service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#service_account_email DataPipelinePipeline#service_account_email}
 
 ---
 
@@ -2684,7 +2684,7 @@ Subnetwork to which VMs will be assigned, if desired.
 
 You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#subnetwork DataPipelinePipeline#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#subnetwork DataPipelinePipeline#subnetwork}
 
 ---
 
@@ -2698,7 +2698,7 @@ public java.lang.String getTempLocation();
 
 The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with gs://.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#temp_location DataPipelinePipeline#temp_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#temp_location DataPipelinePipeline#temp_location}
 
 ---
 
@@ -2712,7 +2712,7 @@ public java.lang.String getWorkerRegion();
 
 The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with workerZone. If neither workerRegion nor workerZone is specified, default to the control plane's region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#worker_region DataPipelinePipeline#worker_region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#worker_region DataPipelinePipeline#worker_region}
 
 ---
 
@@ -2726,7 +2726,7 @@ public java.lang.String getWorkerZone();
 
 The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with workerRegion. If neither workerRegion nor workerZone is specified, a zone in the control plane's region is chosen based on available capacity. If both workerZone and zone are set, workerZone takes precedence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#worker_zone DataPipelinePipeline#worker_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#worker_zone DataPipelinePipeline#worker_zone}
 
 ---
 
@@ -2742,7 +2742,7 @@ The Compute Engine availability zone for launching worker instances to run your 
 
 In the future, workerZone will take precedence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/data_pipeline_pipeline#zone DataPipelinePipeline#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/data_pipeline_pipeline#zone DataPipelinePipeline#zone}
 
 ---
 

@@ -1,3 +1,3 @@
 # `google_compute_route`
 
-Refer to the Terraform Registry for docs: [`google_compute_route`](https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_route).
+Refer to the Terraform Registry for docs: [`google_compute_route`](https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_route).

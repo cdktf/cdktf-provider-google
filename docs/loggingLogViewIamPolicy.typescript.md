@@ -4,7 +4,7 @@
 
 ### LoggingLogViewIamPolicy <a name="LoggingLogViewIamPolicy" id="@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy google_logging_log_view_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy google_logging_log_view_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicy.Initializer"></a>
 
@@ -481,7 +481,7 @@ The construct id used in the generated config for the LoggingLogViewIamPolicy to
 
 The id of the existing LoggingLogViewIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -840,12 +840,12 @@ const loggingLogViewIamPolicyConfig: loggingLogViewIamPolicy.LoggingLogViewIamPo
 | <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.bucket">bucket</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#bucket LoggingLogViewIamPolicy#bucket}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#name LoggingLogViewIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.parent">parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#parent LoggingLogViewIamPolicy#parent}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#policy_data LoggingLogViewIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#id LoggingLogViewIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#location LoggingLogViewIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.bucket">bucket</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#bucket LoggingLogViewIamPolicy#bucket}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#name LoggingLogViewIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.parent">parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#parent LoggingLogViewIamPolicy#parent}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#policy_data LoggingLogViewIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#id LoggingLogViewIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#location LoggingLogViewIamPolicy#location}. |
 
 ---
 
@@ -927,7 +927,7 @@ public readonly bucket: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#bucket LoggingLogViewIamPolicy#bucket}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#bucket LoggingLogViewIamPolicy#bucket}.
 
 ---
 
@@ -939,7 +939,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#name LoggingLogViewIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#name LoggingLogViewIamPolicy#name}.
 
 ---
 
@@ -951,7 +951,7 @@ public readonly parent: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#parent LoggingLogViewIamPolicy#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#parent LoggingLogViewIamPolicy#parent}.
 
 ---
 
@@ -963,7 +963,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#policy_data LoggingLogViewIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#policy_data LoggingLogViewIamPolicy#policy_data}.
 
 ---
 
@@ -975,7 +975,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#id LoggingLogViewIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#id LoggingLogViewIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -990,7 +990,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/logging_log_view_iam_policy#location LoggingLogViewIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/logging_log_view_iam_policy#location LoggingLogViewIamPolicy#location}.
 
 ---
 

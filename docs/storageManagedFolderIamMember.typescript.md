@@ -4,7 +4,7 @@
 
 ### StorageManagedFolderIamMember <a name="StorageManagedFolderIamMember" id="@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member google_storage_managed_folder_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member google_storage_managed_folder_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMember.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the StorageManagedFolderIamMem
 
 The id of the existing StorageManagedFolderIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -846,9 +846,9 @@ const storageManagedFolderIamMemberCondition: storageManagedFolderIamMember.Stor
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#expression StorageManagedFolderIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#title StorageManagedFolderIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#description StorageManagedFolderIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#expression StorageManagedFolderIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#title StorageManagedFolderIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#description StorageManagedFolderIamMember#description}. |
 
 ---
 
@@ -860,7 +860,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#expression StorageManagedFolderIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#expression StorageManagedFolderIamMember#expression}.
 
 ---
 
@@ -872,7 +872,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#title StorageManagedFolderIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#title StorageManagedFolderIamMember#title}.
 
 ---
 
@@ -884,7 +884,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#description StorageManagedFolderIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#description StorageManagedFolderIamMember#description}.
 
 ---
 
@@ -909,12 +909,12 @@ const storageManagedFolderIamMemberConfig: storageManagedFolderIamMember.Storage
 | <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.bucket">bucket</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#bucket StorageManagedFolderIamMember#bucket}. |
-| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.managedFolder">managedFolder</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#managed_folder StorageManagedFolderIamMember#managed_folder}. |
-| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#member StorageManagedFolderIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#role StorageManagedFolderIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.bucket">bucket</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#bucket StorageManagedFolderIamMember#bucket}. |
+| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.managedFolder">managedFolder</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#managed_folder StorageManagedFolderIamMember#managed_folder}. |
+| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#member StorageManagedFolderIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#role StorageManagedFolderIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberCondition">StorageManagedFolderIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#id StorageManagedFolderIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.storageManagedFolderIamMember.StorageManagedFolderIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#id StorageManagedFolderIamMember#id}. |
 
 ---
 
@@ -996,7 +996,7 @@ public readonly bucket: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#bucket StorageManagedFolderIamMember#bucket}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#bucket StorageManagedFolderIamMember#bucket}.
 
 ---
 
@@ -1008,7 +1008,7 @@ public readonly managedFolder: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#managed_folder StorageManagedFolderIamMember#managed_folder}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#managed_folder StorageManagedFolderIamMember#managed_folder}.
 
 ---
 
@@ -1020,7 +1020,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#member StorageManagedFolderIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#member StorageManagedFolderIamMember#member}.
 
 ---
 
@@ -1032,7 +1032,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#role StorageManagedFolderIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#role StorageManagedFolderIamMember#role}.
 
 ---
 
@@ -1046,7 +1046,7 @@ public readonly condition: StorageManagedFolderIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#condition StorageManagedFolderIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#condition StorageManagedFolderIamMember#condition}
 
 ---
 
@@ -1058,7 +1058,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/storage_managed_folder_iam_member#id StorageManagedFolderIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/storage_managed_folder_iam_member#id StorageManagedFolderIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

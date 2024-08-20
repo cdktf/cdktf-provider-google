@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database
+// https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,13 +15,13 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * The App Engine integration mode to use for this database. Possible values: ["ENABLED", "DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#app_engine_integration_mode FirestoreDatabase#app_engine_integration_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#app_engine_integration_mode FirestoreDatabase#app_engine_integration_mode}
   */
   readonly appEngineIntegrationMode?: string;
   /**
   * The concurrency control mode to use for this database. Possible values: ["OPTIMISTIC", "PESSIMISTIC", "OPTIMISTIC_WITH_ENTITY_GROUPS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#concurrency_mode FirestoreDatabase#concurrency_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#concurrency_mode FirestoreDatabase#concurrency_mode}
   */
   readonly concurrencyMode?: string;
   /**
@@ -30,7 +30,7 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   * The default value is 'DELETE_PROTECTION_STATE_UNSPECIFIED', which is currently equivalent to 'DELETE_PROTECTION_DISABLED'.
   * **Note:** Additionally, to delete this database using 'terraform destroy', 'deletion_policy' must be set to 'DELETE'. Possible values: ["DELETE_PROTECTION_STATE_UNSPECIFIED", "DELETE_PROTECTION_ENABLED", "DELETE_PROTECTION_DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#delete_protection_state FirestoreDatabase#delete_protection_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#delete_protection_state FirestoreDatabase#delete_protection_state}
   */
   readonly deleteProtectionState?: string;
   /**
@@ -40,11 +40,11 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   * The default value is 'ABANDON'.
   * See also 'delete_protection'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#deletion_policy FirestoreDatabase#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#deletion_policy FirestoreDatabase#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#id FirestoreDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#id FirestoreDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -54,7 +54,7 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   * The location of the database. Available locations are listed at
   * https://cloud.google.com/firestore/docs/locations.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#location_id FirestoreDatabase#location_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#location_id FirestoreDatabase#location_id}
   */
   readonly locationId: string;
   /**
@@ -65,7 +65,7 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   * UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
   * "(default)" database id is also valid.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#name FirestoreDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#name FirestoreDatabase#name}
   */
   readonly name: string;
   /**
@@ -75,11 +75,11 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   * and reads against 1-minute snapshots beyond 1 hour and within 7 days.
   * If 'POINT_IN_TIME_RECOVERY_DISABLED' is selected, reads are supported on any version of the data from within the past 1 hour. Default value: "POINT_IN_TIME_RECOVERY_DISABLED" Possible values: ["POINT_IN_TIME_RECOVERY_ENABLED", "POINT_IN_TIME_RECOVERY_DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#point_in_time_recovery_enablement FirestoreDatabase#point_in_time_recovery_enablement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#point_in_time_recovery_enablement FirestoreDatabase#point_in_time_recovery_enablement}
   */
   readonly pointInTimeRecoveryEnablement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#project FirestoreDatabase#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#project FirestoreDatabase#project}
   */
   readonly project?: string;
   /**
@@ -87,27 +87,133 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   * See https://cloud.google.com/datastore/docs/firestore-or-datastore
   * for information about how to choose. Possible values: ["FIRESTORE_NATIVE", "DATASTORE_MODE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#type FirestoreDatabase#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#type FirestoreDatabase#type}
   */
   readonly type: string;
   /**
+  * cmek_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#cmek_config FirestoreDatabase#cmek_config}
+  */
+  readonly cmekConfig?: FirestoreDatabaseCmekConfig;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#timeouts FirestoreDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#timeouts FirestoreDatabase#timeouts}
   */
   readonly timeouts?: FirestoreDatabaseTimeouts;
 }
+export interface FirestoreDatabaseCmekConfig {
+  /**
+  * The resource ID of a Cloud KMS key. If set, the database created will
+  * be a Customer-managed Encryption Key (CMEK) database encrypted with
+  * this key. This feature is allowlist only in initial launch.
+  * 
+  * Only keys in the same location as this database are allowed to be used
+  * for encryption. For Firestore's nam5 multi-region, this corresponds to Cloud KMS
+  * multi-region us. For Firestore's eur3 multi-region, this corresponds to
+  * Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations.
+  * 
+  * This value should be the KMS key resource ID in the format of
+  * 'projects/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}'.
+  * How to retrive this resource ID is listed at
+  * https://cloud.google.com/kms/docs/getting-resource-ids#getting_the_id_for_a_key_and_version.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#kms_key_name FirestoreDatabase#kms_key_name}
+  */
+  readonly kmsKeyName: string;
+}
+
+export function firestoreDatabaseCmekConfigToTerraform(struct?: FirestoreDatabaseCmekConfigOutputReference | FirestoreDatabaseCmekConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
+
+export function firestoreDatabaseCmekConfigToHclTerraform(struct?: FirestoreDatabaseCmekConfigOutputReference | FirestoreDatabaseCmekConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class FirestoreDatabaseCmekConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): FirestoreDatabaseCmekConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirestoreDatabaseCmekConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeyName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeyName = value.kmsKeyName;
+    }
+  }
+
+  // active_key_version - computed: true, optional: false, required: false
+  public get activeKeyVersion() {
+    return this.getListAttribute('active_key_version');
+  }
+
+  // kms_key_name - computed: false, optional: false, required: true
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
+  }
+}
 export interface FirestoreDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#create FirestoreDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#create FirestoreDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#delete FirestoreDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#delete FirestoreDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#update FirestoreDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#update FirestoreDatabase#update}
   */
   readonly update?: string;
 }
@@ -259,7 +365,7 @@ export class FirestoreDatabaseTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database google_firestore_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database google_firestore_database}
 */
 export class FirestoreDatabase extends cdktf.TerraformResource {
 
@@ -275,7 +381,7 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FirestoreDatabase resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FirestoreDatabase to import
-  * @param importFromId The id of the existing FirestoreDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FirestoreDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FirestoreDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -287,7 +393,7 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/firestore_database google_firestore_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/firestore_database google_firestore_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -298,7 +404,7 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_firestore_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.41.0',
+        providerVersion: '5.42.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
@@ -319,6 +425,7 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
     this._pointInTimeRecoveryEnablement = config.pointInTimeRecoveryEnablement;
     this._project = config.project;
     this._type = config.type;
+    this._cmekConfig.internalValue = config.cmekConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -512,6 +619,22 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
     return this.getStringAttribute('version_retention_period');
   }
 
+  // cmek_config - computed: false, optional: true, required: false
+  private _cmekConfig = new FirestoreDatabaseCmekConfigOutputReference(this, "cmek_config");
+  public get cmekConfig() {
+    return this._cmekConfig;
+  }
+  public putCmekConfig(value: FirestoreDatabaseCmekConfig) {
+    this._cmekConfig.internalValue = value;
+  }
+  public resetCmekConfig() {
+    this._cmekConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cmekConfigInput() {
+    return this._cmekConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new FirestoreDatabaseTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -544,6 +667,7 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
       point_in_time_recovery_enablement: cdktf.stringToTerraform(this._pointInTimeRecoveryEnablement),
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
+      cmek_config: firestoreDatabaseCmekConfigToTerraform(this._cmekConfig.internalValue),
       timeouts: firestoreDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -609,6 +733,12 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      cmek_config: {
+        value: firestoreDatabaseCmekConfigToHclTerraform(this._cmekConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirestoreDatabaseCmekConfigList",
       },
       timeouts: {
         value: firestoreDatabaseTimeoutsToHclTerraform(this._timeouts.internalValue),
