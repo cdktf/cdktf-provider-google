@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group
+// https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments
   /**
   * An optional textual description of the instance group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#description ComputeInstanceGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#description ComputeInstanceGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#id ComputeInstanceGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#id ComputeInstanceGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,43 +23,43 @@ export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments
   /**
   * The list of instances in the group, in self_link format. When adding instances they must all be in the same network and zone as the instance group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#instances ComputeInstanceGroup#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#instances ComputeInstanceGroup#instances}
   */
   readonly instances?: string[];
   /**
   * The name of the instance group. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#name ComputeInstanceGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#name ComputeInstanceGroup#name}
   */
   readonly name: string;
   /**
   * The URL of the network the instance group is in. If this is different from the network where the instances are in, the creation fails. Defaults to the network where the instances are in (if neither network nor instances is specified, this field will be blank).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#network ComputeInstanceGroup#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#network ComputeInstanceGroup#network}
   */
   readonly network?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#project ComputeInstanceGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#project ComputeInstanceGroup#project}
   */
   readonly project?: string;
   /**
   * The zone that this instance group should be created in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#zone ComputeInstanceGroup#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#zone ComputeInstanceGroup#zone}
   */
   readonly zone?: string;
   /**
   * named_port block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#named_port ComputeInstanceGroup#named_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#named_port ComputeInstanceGroup#named_port}
   */
   readonly namedPort?: ComputeInstanceGroupNamedPort[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#timeouts ComputeInstanceGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#timeouts ComputeInstanceGroup#timeouts}
   */
   readonly timeouts?: ComputeInstanceGroupTimeouts;
 }
@@ -72,13 +67,13 @@ export interface ComputeInstanceGroupNamedPort {
   /**
   * The name which the port will be mapped to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#name ComputeInstanceGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#name ComputeInstanceGroup#name}
   */
   readonly name: string;
   /**
   * The port number to map the name to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#port ComputeInstanceGroup#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#port ComputeInstanceGroup#port}
   */
   readonly port: number;
 }
@@ -217,15 +212,15 @@ export class ComputeInstanceGroupNamedPortList extends cdktf.ComplexList {
 }
 export interface ComputeInstanceGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#create ComputeInstanceGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#create ComputeInstanceGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#delete ComputeInstanceGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#delete ComputeInstanceGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#update ComputeInstanceGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#update ComputeInstanceGroup#update}
   */
   readonly update?: string;
 }
@@ -377,7 +372,7 @@ export class ComputeInstanceGroupTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group google_compute_instance_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group google_compute_instance_group}
 */
 export class ComputeInstanceGroup extends cdktf.TerraformResource {
 
@@ -393,7 +388,7 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeInstanceGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeInstanceGroup to import
-  * @param importFromId The id of the existing ComputeInstanceGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeInstanceGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeInstanceGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -405,7 +400,7 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.41.0/docs/resources/compute_instance_group google_compute_instance_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_instance_group google_compute_instance_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -416,7 +411,7 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.41.0',
+        providerVersion: '5.42.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
