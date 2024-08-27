@@ -4,7 +4,7 @@
 
 ### DataGoogleClientConfig <a name="DataGoogleClientConfig" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/client_config google_client_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/client_config google_client_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.Initializer"></a>
 
@@ -365,7 +365,7 @@ The construct id used in the generated config for the DataGoogleClientConfig to 
 
 The id of the existing DataGoogleClientConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/client_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/client_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -394,6 +394,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.accessToken">AccessToken</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.defaultLabels">DefaultLabels</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.project">Project</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.region">Region</a></code> | <code>*string</code> | *No description.* |
@@ -530,6 +531,16 @@ func AccessToken() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `DefaultLabels`<sup>Required</sup> <a name="DefaultLabels" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.defaultLabels"></a>
+
+```go
+func DefaultLabels() StringMap
+```
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.StringMap
 
 ---
 

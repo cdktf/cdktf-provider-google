@@ -4,7 +4,7 @@
 
 ### ServiceNetworkingConnection <a name="ServiceNetworkingConnection" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection google_service_networking_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection google_service_networking_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer"></a>
 
@@ -46,7 +46,7 @@ serviceNetworkingConnection.ServiceNetworkingConnection(
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.reservedPeeringRanges">reserved_peering_ranges</a></code> | <code>typing.List[str]</code> | Named IP address range(s) of PEERING type reserved for this service provider. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.service">service</a></code> | <code>str</code> | Provider peering service that is managing peering connectivity for a service provider organization. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.deletionPolicy">deletion_policy</a></code> | <code>str</code> | When set to ABANDON, terraform will abandon management of the resource instead of deleting it. |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}. |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnection.Initializer.parameter.updateOnCreationFail">update_on_creation_fail</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure. |
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 Name of VPC network connected with service producers using VPC peering.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#network ServiceNetworkingConnection#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#network ServiceNetworkingConnection#network}
 
 ---
 
@@ -130,7 +130,7 @@ Named IP address range(s) of PEERING type reserved for this service provider.
 
 Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#reserved_peering_ranges ServiceNetworkingConnection#reserved_peering_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#reserved_peering_ranges ServiceNetworkingConnection#reserved_peering_ranges}
 
 ---
 
@@ -142,7 +142,7 @@ Provider peering service that is managing peering connectivity for a service pro
 
 For Google services that support this functionality it is 'servicenetworking.googleapis.com'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#service ServiceNetworkingConnection#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#service ServiceNetworkingConnection#service}
 
 ---
 
@@ -154,7 +154,7 @@ When set to ABANDON, terraform will abandon management of the resource instead o
 
 Prevents terraform apply failures with CloudSQL. Note: The resource will still exist.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#deletion_policy ServiceNetworkingConnection#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#deletion_policy ServiceNetworkingConnection#deletion_policy}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -175,7 +175,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#timeouts ServiceNetworkingConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#timeouts ServiceNetworkingConnection#timeouts}
 
 ---
 
@@ -185,7 +185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#update_on_creation_fail ServiceNetworkingConnection#update_on_creation_fail}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#update_on_creation_fail ServiceNetworkingConnection#update_on_creation_fail}
 
 ---
 
@@ -563,7 +563,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#create ServiceNetworkingConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#create ServiceNetworkingConnection#create}.
 
 ---
 
@@ -571,7 +571,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#delete ServiceNetworkingConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#delete ServiceNetworkingConnection#delete}.
 
 ---
 
@@ -579,7 +579,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#update ServiceNetworkingConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#update ServiceNetworkingConnection#update}.
 
 ---
 
@@ -721,7 +721,7 @@ The construct id used in the generated config for the ServiceNetworkingConnectio
 
 The id of the existing ServiceNetworkingConnection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1121,7 +1121,7 @@ serviceNetworkingConnection.ServiceNetworkingConnectionConfig(
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.reservedPeeringRanges">reserved_peering_ranges</a></code> | <code>typing.List[str]</code> | Named IP address range(s) of PEERING type reserved for this service provider. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.service">service</a></code> | <code>str</code> | Provider peering service that is managing peering connectivity for a service provider organization. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.deletionPolicy">deletion_policy</a></code> | <code>str</code> | When set to ABANDON, terraform will abandon management of the resource instead of deleting it. |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}. |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts">ServiceNetworkingConnectionTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionConfig.property.updateOnCreationFail">update_on_creation_fail</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure. |
 
@@ -1207,7 +1207,7 @@ network: str
 
 Name of VPC network connected with service producers using VPC peering.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#network ServiceNetworkingConnection#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#network ServiceNetworkingConnection#network}
 
 ---
 
@@ -1223,7 +1223,7 @@ Named IP address range(s) of PEERING type reserved for this service provider.
 
 Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#reserved_peering_ranges ServiceNetworkingConnection#reserved_peering_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#reserved_peering_ranges ServiceNetworkingConnection#reserved_peering_ranges}
 
 ---
 
@@ -1239,7 +1239,7 @@ Provider peering service that is managing peering connectivity for a service pro
 
 For Google services that support this functionality it is 'servicenetworking.googleapis.com'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#service ServiceNetworkingConnection#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#service ServiceNetworkingConnection#service}
 
 ---
 
@@ -1255,7 +1255,7 @@ When set to ABANDON, terraform will abandon management of the resource instead o
 
 Prevents terraform apply failures with CloudSQL. Note: The resource will still exist.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#deletion_policy ServiceNetworkingConnection#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#deletion_policy ServiceNetworkingConnection#deletion_policy}
 
 ---
 
@@ -1267,7 +1267,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#id ServiceNetworkingConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1284,7 +1284,7 @@ timeouts: ServiceNetworkingConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#timeouts ServiceNetworkingConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#timeouts ServiceNetworkingConnection#timeouts}
 
 ---
 
@@ -1298,7 +1298,7 @@ update_on_creation_fail: typing.Union[bool, IResolvable]
 
 When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#update_on_creation_fail ServiceNetworkingConnection#update_on_creation_fail}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#update_on_creation_fail ServiceNetworkingConnection#update_on_creation_fail}
 
 ---
 
@@ -1320,9 +1320,9 @@ serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#create ServiceNetworkingConnection#create}. |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#delete ServiceNetworkingConnection#delete}. |
-| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#update ServiceNetworkingConnection#update}. |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#create ServiceNetworkingConnection#create}. |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#delete ServiceNetworkingConnection#delete}. |
+| <code><a href="#@cdktf/provider-google.serviceNetworkingConnection.ServiceNetworkingConnectionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#update ServiceNetworkingConnection#update}. |
 
 ---
 
@@ -1334,7 +1334,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#create ServiceNetworkingConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#create ServiceNetworkingConnection#create}.
 
 ---
 
@@ -1346,7 +1346,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#delete ServiceNetworkingConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#delete ServiceNetworkingConnection#delete}.
 
 ---
 
@@ -1358,7 +1358,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/service_networking_connection#update ServiceNetworkingConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/service_networking_connection#update ServiceNetworkingConnection#update}.
 
 ---
 

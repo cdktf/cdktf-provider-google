@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run
+// https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface DataGoogleSqlBackupRunConfig extends cdktf.TerraformMetaArgumen
   /**
   * The identifier for this backup run. Unique only for a specific Cloud SQL instance. If left empty and multiple backups exist for the instance, most_recent must be set to true.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
   */
   readonly backupId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,25 +28,25 @@ export interface DataGoogleSqlBackupRunConfig extends cdktf.TerraformMetaArgumen
   /**
   * Name of the database instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
   */
   readonly instance: string;
   /**
   * Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
   */
   readonly mostRecent?: boolean | cdktf.IResolvable;
   /**
   * Project ID of the project that contains the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run#project DataGoogleSqlBackupRun#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run#project DataGoogleSqlBackupRun#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run google_sql_backup_run}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run google_sql_backup_run}
 */
 export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
 
@@ -62,7 +62,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleSqlBackupRun resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleSqlBackupRun to import
-  * @param importFromId The id of the existing DataGoogleSqlBackupRun that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleSqlBackupRun that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleSqlBackupRun to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -74,7 +74,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/sql_backup_run google_sql_backup_run} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/sql_backup_run google_sql_backup_run} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -85,7 +85,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_backup_run',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.42.0',
+        providerVersion: '5.43.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

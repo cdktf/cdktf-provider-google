@@ -4,7 +4,7 @@
 
 ### DataGoogleClientConfig <a name="DataGoogleClientConfig" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/client_config google_client_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/client_config google_client_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.Initializer"></a>
 
@@ -419,7 +419,7 @@ The construct id used in the generated config for the DataGoogleClientConfig to 
 
 The id of the existing DataGoogleClientConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/client_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/client_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -448,6 +448,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.accessToken">accessToken</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.defaultLabels">defaultLabels</a></code> | <code>com.hashicorp.cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.project">project</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.region">region</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -584,6 +585,16 @@ public java.lang.String getAccessToken();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `defaultLabels`<sup>Required</sup> <a name="defaultLabels" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.defaultLabels"></a>
+
+```java
+public StringMap getDefaultLabels();
+```
+
+- *Type:* com.hashicorp.cdktf.StringMap
 
 ---
 
