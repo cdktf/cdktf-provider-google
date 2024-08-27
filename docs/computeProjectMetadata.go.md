@@ -4,12 +4,12 @@
 
 ### ComputeProjectMetadata <a name="ComputeProjectMetadata" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata google_compute_project_metadata}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata google_compute_project_metadata}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.NewComputeProjectMetadata(scope Construct, id *string, config ComputeProjectMetadataConfig) ComputeProjectMetadata
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.ComputeProjectMetadata_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.ComputeProjectMetadata_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ computeprojectmetadata.ComputeProjectMetadata_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.ComputeProjectMetadata_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ computeprojectmetadata.ComputeProjectMetadata_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.ComputeProjectMetadata_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the ComputeProjectMetadata to 
 
 The id of the existing ComputeProjectMetadata that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -789,7 +789,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 &computeprojectmetadata.ComputeProjectMetadataConfig {
 	Connection: interface{},
@@ -802,7 +802,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetad
 	Metadata: *map[string]*string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeProjectMetadata.ComputeProjectMetadataTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeProjectMetadata.ComputeProjectMetadataTimeouts,
 }
 ```
 
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetad
 | <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | A series of key value pairs. |
-| <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#id ComputeProjectMetadata#id}. |
+| <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#id ComputeProjectMetadata#id}. |
 | <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.property.project">Project</a></code> | <code>*string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeouts">ComputeProjectMetadataTimeouts</a></code> | timeouts block. |
 
@@ -904,7 +904,7 @@ Metadata *map[string]*string
 
 A series of key value pairs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#metadata ComputeProjectMetadata#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#metadata ComputeProjectMetadata#metadata}
 
 ---
 
@@ -916,7 +916,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#id ComputeProjectMetadata#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#id ComputeProjectMetadata#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -935,7 +935,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#project ComputeProjectMetadata#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#project ComputeProjectMetadata#project}
 
 ---
 
@@ -949,7 +949,7 @@ Timeouts ComputeProjectMetadataTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#timeouts ComputeProjectMetadata#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#timeouts ComputeProjectMetadata#timeouts}
 
 ---
 
@@ -958,7 +958,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 &computeprojectmetadata.ComputeProjectMetadataTimeouts {
 	Create: *string,
@@ -970,8 +970,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetad
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#create ComputeProjectMetadata#create}. |
-| <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#delete ComputeProjectMetadata#delete}. |
+| <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#create ComputeProjectMetadata#create}. |
+| <code><a href="#@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#delete ComputeProjectMetadata#delete}. |
 
 ---
 
@@ -983,7 +983,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#create ComputeProjectMetadata#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#create ComputeProjectMetadata#create}.
 
 ---
 
@@ -995,7 +995,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_project_metadata#delete ComputeProjectMetadata#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_project_metadata#delete ComputeProjectMetadata#delete}.
 
 ---
 
@@ -1006,7 +1006,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.NewComputeProjectMetadataTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeProjectMetadataTimeoutsOutputReference
 ```

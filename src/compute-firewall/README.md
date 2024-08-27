@@ -1,3 +1,3 @@
 # `google_compute_firewall`
 
-Refer to the Terraform Registry for docs: [`google_compute_firewall`](https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/compute_firewall).
+Refer to the Terraform Registry for docs: [`google_compute_firewall`](https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_firewall).

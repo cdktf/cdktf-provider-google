@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network
+// https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface EdgenetworkNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
   * A free-text description of the resource. Max length 1024 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#description EdgenetworkNetwork#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#description EdgenetworkNetwork#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#id EdgenetworkNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#id EdgenetworkNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,51 +23,51 @@ export interface EdgenetworkNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
   * Labels associated with this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#labels EdgenetworkNetwork#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#labels EdgenetworkNetwork#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The Google Cloud region to which the target Distributed Cloud Edge zone belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#location EdgenetworkNetwork#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#location EdgenetworkNetwork#location}
   */
   readonly location: string;
   /**
   * IP (L3) MTU value of the network. Default value is '1500'. Possible values are: '1500', '9000'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#mtu EdgenetworkNetwork#mtu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#mtu EdgenetworkNetwork#mtu}
   */
   readonly mtu?: number;
   /**
   * A unique ID that identifies this network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#network_id EdgenetworkNetwork#network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#network_id EdgenetworkNetwork#network_id}
   */
   readonly networkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#project EdgenetworkNetwork#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#project EdgenetworkNetwork#project}
   */
   readonly project?: string;
   /**
   * The name of the target Distributed Cloud Edge zone.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#zone EdgenetworkNetwork#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#zone EdgenetworkNetwork#zone}
   */
   readonly zone: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#timeouts EdgenetworkNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#timeouts EdgenetworkNetwork#timeouts}
   */
   readonly timeouts?: EdgenetworkNetworkTimeouts;
 }
 export interface EdgenetworkNetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#create EdgenetworkNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#create EdgenetworkNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#delete EdgenetworkNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#delete EdgenetworkNetwork#delete}
   */
   readonly delete?: string;
 }
@@ -195,7 +190,7 @@ export class EdgenetworkNetworkTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network google_edgenetwork_network}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network google_edgenetwork_network}
 */
 export class EdgenetworkNetwork extends cdktf.TerraformResource {
 
@@ -211,7 +206,7 @@ export class EdgenetworkNetwork extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a EdgenetworkNetwork resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the EdgenetworkNetwork to import
-  * @param importFromId The id of the existing EdgenetworkNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing EdgenetworkNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the EdgenetworkNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -223,7 +218,7 @@ export class EdgenetworkNetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/resources/edgenetwork_network google_edgenetwork_network} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/edgenetwork_network google_edgenetwork_network} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -234,7 +229,7 @@ export class EdgenetworkNetwork extends cdktf.TerraformResource {
       terraformResourceType: 'google_edgenetwork_network',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.42.0',
+        providerVersion: '5.43.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

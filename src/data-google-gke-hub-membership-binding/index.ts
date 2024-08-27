@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding
+// https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleGkeHubMembershipBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding#id DataGoogleGkeHubMembershipBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding#id DataGoogleGkeHubMembershipBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,23 +17,23 @@ export interface DataGoogleGkeHubMembershipBindingConfig extends cdktf.Terraform
   /**
   * Location of the membership
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding#location DataGoogleGkeHubMembershipBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding#location DataGoogleGkeHubMembershipBinding#location}
   */
   readonly location: string;
   /**
   * The client-provided identifier of the membership binding.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding#membership_binding_id DataGoogleGkeHubMembershipBinding#membership_binding_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding#membership_binding_id DataGoogleGkeHubMembershipBinding#membership_binding_id}
   */
   readonly membershipBindingId: string;
   /**
   * Id of the membership
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding#membership_id DataGoogleGkeHubMembershipBinding#membership_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding#membership_id DataGoogleGkeHubMembershipBinding#membership_id}
   */
   readonly membershipId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding#project DataGoogleGkeHubMembershipBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding#project DataGoogleGkeHubMembershipBinding#project}
   */
   readonly project?: string;
 }
@@ -119,7 +114,7 @@ export class DataGoogleGkeHubMembershipBindingStateList extends cdktf.ComplexLis
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding google_gke_hub_membership_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding google_gke_hub_membership_binding}
 */
 export class DataGoogleGkeHubMembershipBinding extends cdktf.TerraformDataSource {
 
@@ -135,7 +130,7 @@ export class DataGoogleGkeHubMembershipBinding extends cdktf.TerraformDataSource
   * Generates CDKTF code for importing a DataGoogleGkeHubMembershipBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleGkeHubMembershipBinding to import
-  * @param importFromId The id of the existing DataGoogleGkeHubMembershipBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleGkeHubMembershipBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleGkeHubMembershipBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -147,7 +142,7 @@ export class DataGoogleGkeHubMembershipBinding extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/gke_hub_membership_binding google_gke_hub_membership_binding} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/gke_hub_membership_binding google_gke_hub_membership_binding} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -158,7 +153,7 @@ export class DataGoogleGkeHubMembershipBinding extends cdktf.TerraformDataSource
       terraformResourceType: 'google_gke_hub_membership_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.42.0',
+        providerVersion: '5.43.0',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,

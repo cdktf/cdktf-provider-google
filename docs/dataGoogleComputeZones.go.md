@@ -4,12 +4,12 @@
 
 ### DataGoogleComputeZones <a name="DataGoogleComputeZones" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones google_compute_zones}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones google_compute_zones}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputezones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputezones"
 
 datagooglecomputezones.NewDataGoogleComputeZones(scope Construct, id *string, config DataGoogleComputeZonesConfig) DataGoogleComputeZones
 ```
@@ -304,7 +304,7 @@ func ResetStatus()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputezones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputezones"
 
 datagooglecomputezones.DataGoogleComputeZones_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputezones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputezones"
 
 datagooglecomputezones.DataGoogleComputeZones_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglecomputezones.DataGoogleComputeZones_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputezones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputezones"
 
 datagooglecomputezones.DataGoogleComputeZones_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ datagooglecomputezones.DataGoogleComputeZones_IsTerraformDataSource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputezones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputezones"
 
 datagooglecomputezones.DataGoogleComputeZones_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -393,7 +393,7 @@ The construct id used in the generated config for the DataGoogleComputeZones to 
 
 The id of the existing DataGoogleComputeZones that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputezones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputezones"
 
 &datagooglecomputezones.DataGoogleComputeZonesConfig {
 	Connection: interface{},
@@ -698,10 +698,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datagooglecomputezo
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.status">Status</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.status">Status</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}. |
 
 ---
 
@@ -783,7 +783,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -798,7 +798,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}.
 
 ---
 
@@ -810,7 +810,7 @@ Region *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}.
 
 ---
 
@@ -822,7 +822,7 @@ Status *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.42.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}.
 
 ---
 
