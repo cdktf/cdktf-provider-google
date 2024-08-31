@@ -4,7 +4,7 @@
 
 ### DataGoogleComputeNetworks <a name="DataGoogleComputeNetworks" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks google_compute_networks}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks google_compute_networks}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer"></a>
 
@@ -39,8 +39,8 @@ DataGoogleComputeNetworks.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#id DataGoogleComputeNetworks#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#project DataGoogleComputeNetworks#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#id DataGoogleComputeNetworks#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworks.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#project DataGoogleComputeNetworks#project}. |
 
 ---
 
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#id DataGoogleComputeNetworks#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#id DataGoogleComputeNetworks#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -119,7 +119,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#project DataGoogleComputeNetworks#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#project DataGoogleComputeNetworks#project}.
 
 ---
 
@@ -456,7 +456,7 @@ The construct id used in the generated config for the DataGoogleComputeNetworks 
 
 The id of the existing DataGoogleComputeNetworks that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -730,8 +730,8 @@ DataGoogleComputeNetworksConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworksConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworksConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworksConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworksConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#id DataGoogleComputeNetworks#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworksConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#project DataGoogleComputeNetworks#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworksConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#id DataGoogleComputeNetworks#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworks.DataGoogleComputeNetworksConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#project DataGoogleComputeNetworks#project}. |
 
 ---
 
@@ -813,7 +813,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#id DataGoogleComputeNetworks#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#id DataGoogleComputeNetworks#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -828,7 +828,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/data-sources/compute_networks#project DataGoogleComputeNetworks#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/compute_networks#project DataGoogleComputeNetworks#project}.
 
 ---
 

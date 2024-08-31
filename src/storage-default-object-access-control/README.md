@@ -1,3 +1,3 @@
 # `google_storage_default_object_access_control`
 
-Refer to the Terraform Registry for docs: [`google_storage_default_object_access_control`](https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/storage_default_object_access_control).
+Refer to the Terraform Registry for docs: [`google_storage_default_object_access_control`](https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/storage_default_object_access_control).

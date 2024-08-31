@@ -4,12 +4,12 @@
 
 ### BigtableAppProfile <a name="BigtableAppProfile" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile google_bigtable_app_profile}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile google_bigtable_app_profile}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.NewBigtableAppProfile(scope Construct, id *string, config BigtableAppProfileConfig) BigtableAppProfile
 ```
@@ -507,7 +507,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.BigtableAppProfile_IsConstruct(x interface{}) *bool
 ```
@@ -539,7 +539,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.BigtableAppProfile_IsTerraformElement(x interface{}) *bool
 ```
@@ -553,7 +553,7 @@ bigtableappprofile.BigtableAppProfile_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.BigtableAppProfile_IsTerraformResource(x interface{}) *bool
 ```
@@ -567,7 +567,7 @@ bigtableappprofile.BigtableAppProfile_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfile.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.BigtableAppProfile_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -596,7 +596,7 @@ The construct id used in the generated config for the BigtableAppProfile to impo
 
 The id of the existing BigtableAppProfile that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1071,7 +1071,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 &bigtableappprofile.BigtableAppProfileConfig {
 	Connection: interface{},
@@ -1082,7 +1082,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	AppProfileId: *string,
-	DataBoostIsolationReadOnly: github.com/cdktf/cdktf-provider-google-go/google/v13.bigtableAppProfile.BigtableAppProfileDataBoostIsolationReadOnly,
+	DataBoostIsolationReadOnly: github.com/cdktf/cdktf-provider-google-go/google.bigtableAppProfile.BigtableAppProfileDataBoostIsolationReadOnly,
 	Description: *string,
 	Id: *string,
 	IgnoreWarnings: interface{},
@@ -1090,9 +1090,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
 	MultiClusterRoutingClusterIds: *[]*string,
 	MultiClusterRoutingUseAny: interface{},
 	Project: *string,
-	SingleClusterRouting: github.com/cdktf/cdktf-provider-google-go/google/v13.bigtableAppProfile.BigtableAppProfileSingleClusterRouting,
-	StandardIsolation: github.com/cdktf/cdktf-provider-google-go/google/v13.bigtableAppProfile.BigtableAppProfileStandardIsolation,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.bigtableAppProfile.BigtableAppProfileTimeouts,
+	SingleClusterRouting: github.com/cdktf/cdktf-provider-google-go/google.bigtableAppProfile.BigtableAppProfileSingleClusterRouting,
+	StandardIsolation: github.com/cdktf/cdktf-provider-google-go/google.bigtableAppProfile.BigtableAppProfileStandardIsolation,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.bigtableAppProfile.BigtableAppProfileTimeouts,
 }
 ```
 
@@ -1110,12 +1110,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.appProfileId">AppProfileId</a></code> | <code>*string</code> | The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.dataBoostIsolationReadOnly">DataBoostIsolationReadOnly</a></code> | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileDataBoostIsolationReadOnly">BigtableAppProfileDataBoostIsolationReadOnly</a></code> | data_boost_isolation_read_only block. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.description">Description</a></code> | <code>*string</code> | Long form description of the use case for this app profile. |
-| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#id BigtableAppProfile#id}. |
+| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#id BigtableAppProfile#id}. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.ignoreWarnings">IgnoreWarnings</a></code> | <code>interface{}</code> | If true, ignore safety checks when deleting/updating the app profile. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.instance">Instance</a></code> | <code>*string</code> | The name of the instance to create the app profile within. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.multiClusterRoutingClusterIds">MultiClusterRoutingClusterIds</a></code> | <code>*[]*string</code> | The set of clusters to route to. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.multiClusterRoutingUseAny">MultiClusterRoutingUseAny</a></code> | <code>interface{}</code> | If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available in the event of transient errors or delays. |
-| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#project BigtableAppProfile#project}. |
+| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#project BigtableAppProfile#project}. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.singleClusterRouting">SingleClusterRouting</a></code> | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileSingleClusterRouting">BigtableAppProfileSingleClusterRouting</a></code> | single_cluster_routing block. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.standardIsolation">StandardIsolation</a></code> | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileStandardIsolation">BigtableAppProfileStandardIsolation</a></code> | standard_isolation block. |
 | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts">BigtableAppProfileTimeouts</a></code> | timeouts block. |
@@ -1202,7 +1202,7 @@ AppProfileId *string
 
 The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#app_profile_id BigtableAppProfile#app_profile_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#app_profile_id BigtableAppProfile#app_profile_id}
 
 ---
 
@@ -1216,7 +1216,7 @@ DataBoostIsolationReadOnly BigtableAppProfileDataBoostIsolationReadOnly
 
 data_boost_isolation_read_only block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#data_boost_isolation_read_only BigtableAppProfile#data_boost_isolation_read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#data_boost_isolation_read_only BigtableAppProfile#data_boost_isolation_read_only}
 
 ---
 
@@ -1230,7 +1230,7 @@ Description *string
 
 Long form description of the use case for this app profile.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#description BigtableAppProfile#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#description BigtableAppProfile#description}
 
 ---
 
@@ -1242,7 +1242,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#id BigtableAppProfile#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#id BigtableAppProfile#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1259,7 +1259,7 @@ IgnoreWarnings interface{}
 
 If true, ignore safety checks when deleting/updating the app profile.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#ignore_warnings BigtableAppProfile#ignore_warnings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#ignore_warnings BigtableAppProfile#ignore_warnings}
 
 ---
 
@@ -1273,7 +1273,7 @@ Instance *string
 
 The name of the instance to create the app profile within.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#instance BigtableAppProfile#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#instance BigtableAppProfile#instance}
 
 ---
 
@@ -1289,7 +1289,7 @@ The set of clusters to route to.
 
 The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#multi_cluster_routing_cluster_ids BigtableAppProfile#multi_cluster_routing_cluster_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#multi_cluster_routing_cluster_ids BigtableAppProfile#multi_cluster_routing_cluster_ids}
 
 ---
 
@@ -1306,7 +1306,7 @@ If true, read/write requests are routed to the nearest cluster in the instance, 
 Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#multi_cluster_routing_use_any BigtableAppProfile#multi_cluster_routing_use_any}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#multi_cluster_routing_use_any BigtableAppProfile#multi_cluster_routing_use_any}
 
 ---
 
@@ -1318,7 +1318,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#project BigtableAppProfile#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#project BigtableAppProfile#project}.
 
 ---
 
@@ -1332,7 +1332,7 @@ SingleClusterRouting BigtableAppProfileSingleClusterRouting
 
 single_cluster_routing block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#single_cluster_routing BigtableAppProfile#single_cluster_routing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#single_cluster_routing BigtableAppProfile#single_cluster_routing}
 
 ---
 
@@ -1346,7 +1346,7 @@ StandardIsolation BigtableAppProfileStandardIsolation
 
 standard_isolation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#standard_isolation BigtableAppProfile#standard_isolation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#standard_isolation BigtableAppProfile#standard_isolation}
 
 ---
 
@@ -1360,7 +1360,7 @@ Timeouts BigtableAppProfileTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#timeouts BigtableAppProfile#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#timeouts BigtableAppProfile#timeouts}
 
 ---
 
@@ -1369,7 +1369,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileDataBoostIsolationReadOnly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 &bigtableappprofile.BigtableAppProfileDataBoostIsolationReadOnly {
 	ComputeBillingOwner: *string,
@@ -1394,7 +1394,7 @@ ComputeBillingOwner *string
 
 The Compute Billing Owner for this Data Boost App Profile. Possible values: ["HOST_PAYS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#compute_billing_owner BigtableAppProfile#compute_billing_owner}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#compute_billing_owner BigtableAppProfile#compute_billing_owner}
 
 ---
 
@@ -1403,7 +1403,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileSingleClusterRouting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 &bigtableappprofile.BigtableAppProfileSingleClusterRouting {
 	ClusterId: *string,
@@ -1430,7 +1430,7 @@ ClusterId *string
 
 The cluster to which read/write requests should be routed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#cluster_id BigtableAppProfile#cluster_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#cluster_id BigtableAppProfile#cluster_id}
 
 ---
 
@@ -1446,7 +1446,7 @@ If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this a
 
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#allow_transactional_writes BigtableAppProfile#allow_transactional_writes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#allow_transactional_writes BigtableAppProfile#allow_transactional_writes}
 
 ---
 
@@ -1455,7 +1455,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileStandardIsolation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 &bigtableappprofile.BigtableAppProfileStandardIsolation {
 	Priority: *string,
@@ -1480,7 +1480,7 @@ Priority *string
 
 The priority of requests sent using this app profile. Possible values: ["PRIORITY_LOW", "PRIORITY_MEDIUM", "PRIORITY_HIGH"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#priority BigtableAppProfile#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#priority BigtableAppProfile#priority}
 
 ---
 
@@ -1489,7 +1489,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 &bigtableappprofile.BigtableAppProfileTimeouts {
 	Create: *string,
@@ -1502,9 +1502,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#create BigtableAppProfile#create}. |
-| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#delete BigtableAppProfile#delete}. |
-| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#update BigtableAppProfile#update}. |
+| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#create BigtableAppProfile#create}. |
+| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#delete BigtableAppProfile#delete}. |
+| <code><a href="#@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#update BigtableAppProfile#update}. |
 
 ---
 
@@ -1516,7 +1516,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#create BigtableAppProfile#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#create BigtableAppProfile#create}.
 
 ---
 
@@ -1528,7 +1528,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#delete BigtableAppProfile#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#delete BigtableAppProfile#delete}.
 
 ---
 
@@ -1540,7 +1540,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/bigtable_app_profile#update BigtableAppProfile#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigtable_app_profile#update BigtableAppProfile#update}.
 
 ---
 
@@ -1551,7 +1551,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileDataBoostIsolationReadOnlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.NewBigtableAppProfileDataBoostIsolationReadOnlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableAppProfileDataBoostIsolationReadOnlyOutputReference
 ```
@@ -1822,7 +1822,7 @@ func InternalValue() BigtableAppProfileDataBoostIsolationReadOnly
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileSingleClusterRoutingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.NewBigtableAppProfileSingleClusterRoutingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableAppProfileSingleClusterRoutingOutputReference
 ```
@@ -2122,7 +2122,7 @@ func InternalValue() BigtableAppProfileSingleClusterRouting
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileStandardIsolationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.NewBigtableAppProfileStandardIsolationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableAppProfileStandardIsolationOutputReference
 ```
@@ -2393,7 +2393,7 @@ func InternalValue() BigtableAppProfileStandardIsolation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableAppProfile.BigtableAppProfileTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/bigtableappprofile"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableappprofile"
 
 bigtableappprofile.NewBigtableAppProfileTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableAppProfileTimeoutsOutputReference
 ```
