@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment
+// https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,7 +18,7 @@ export interface ComputeRegionCommitmentConfig extends cdktf.TerraformMetaArgume
   * If the field is set to true, the commitment will be automatically renewed for either
   * one or three years according to the terms of the existing commitment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#auto_renew ComputeRegionCommitment#auto_renew}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#auto_renew ComputeRegionCommitment#auto_renew}
   */
   readonly autoRenew?: boolean | cdktf.IResolvable;
   /**
@@ -27,17 +27,17 @@ export interface ComputeRegionCommitmentConfig extends cdktf.TerraformMetaArgume
   * specifies commitments composed of software licenses, listed in licenseResources.
   * Note that only MACHINE commitments should have a Type specified. Possible values: ["LICENSE", "MACHINE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#category ComputeRegionCommitment#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#category ComputeRegionCommitment#category}
   */
   readonly category?: string;
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#description ComputeRegionCommitment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#description ComputeRegionCommitment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#id ComputeRegionCommitment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#id ComputeRegionCommitment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -50,24 +50,24 @@ export interface ComputeRegionCommitmentConfig extends cdktf.TerraformMetaArgume
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#name ComputeRegionCommitment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#name ComputeRegionCommitment#name}
   */
   readonly name: string;
   /**
   * The plan for this commitment, which determines duration and discount rate.
   * The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years). Possible values: ["TWELVE_MONTH", "THIRTY_SIX_MONTH"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#plan ComputeRegionCommitment#plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#plan ComputeRegionCommitment#plan}
   */
   readonly plan: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#project ComputeRegionCommitment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#project ComputeRegionCommitment#project}
   */
   readonly project?: string;
   /**
   * URL of the region where this commitment may be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#region ComputeRegionCommitment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#region ComputeRegionCommitment#region}
   */
   readonly region?: string;
   /**
@@ -77,25 +77,25 @@ export interface ComputeRegionCommitmentConfig extends cdktf.TerraformMetaArgume
   * 'GENERAL_PURPOSE_T2D', 'GENERAL_PURPOSE_C3', 'COMPUTE_OPTIMIZED_C2', 'COMPUTE_OPTIMIZED_C2D' and
   * 'GRAPHICS_OPTIMIZED_G2'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#type ComputeRegionCommitment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#type ComputeRegionCommitment#type}
   */
   readonly type?: string;
   /**
   * license_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#license_resource ComputeRegionCommitment#license_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#license_resource ComputeRegionCommitment#license_resource}
   */
   readonly licenseResource?: ComputeRegionCommitmentLicenseResource;
   /**
   * resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#resources ComputeRegionCommitment#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#resources ComputeRegionCommitment#resources}
   */
   readonly resources?: ComputeRegionCommitmentResources[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#timeouts ComputeRegionCommitment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#timeouts ComputeRegionCommitment#timeouts}
   */
   readonly timeouts?: ComputeRegionCommitmentTimeouts;
 }
@@ -103,19 +103,19 @@ export interface ComputeRegionCommitmentLicenseResource {
   /**
   * The number of licenses purchased.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#amount ComputeRegionCommitment#amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#amount ComputeRegionCommitment#amount}
   */
   readonly amount?: string;
   /**
   * Specifies the core range of the instance for which this license applies.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#cores_per_license ComputeRegionCommitment#cores_per_license}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#cores_per_license ComputeRegionCommitment#cores_per_license}
   */
   readonly coresPerLicense?: string;
   /**
   * Any applicable license URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#license ComputeRegionCommitment#license}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#license ComputeRegionCommitment#license}
   */
   readonly license: string;
 }
@@ -256,7 +256,7 @@ export interface ComputeRegionCommitmentResources {
   /**
   * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#accelerator_type ComputeRegionCommitment#accelerator_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#accelerator_type ComputeRegionCommitment#accelerator_type}
   */
   readonly acceleratorType?: string;
   /**
@@ -265,14 +265,14 @@ export interface ComputeRegionCommitmentResources {
   * this must be provided in MB. Memory must be a multiple of 256 MB,
   * with up to 6.5GB of memory per every vCPU.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#amount ComputeRegionCommitment#amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#amount ComputeRegionCommitment#amount}
   */
   readonly amount?: string;
   /**
   * Type of resource for which this commitment applies.
   * Possible values are VCPU, MEMORY, LOCAL_SSD, and ACCELERATOR.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#type ComputeRegionCommitment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#type ComputeRegionCommitment#type}
   */
   readonly type?: string;
 }
@@ -446,11 +446,11 @@ export class ComputeRegionCommitmentResourcesList extends cdktf.ComplexList {
 }
 export interface ComputeRegionCommitmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#create ComputeRegionCommitment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#create ComputeRegionCommitment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#delete ComputeRegionCommitment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#delete ComputeRegionCommitment#delete}
   */
   readonly delete?: string;
 }
@@ -573,7 +573,7 @@ export class ComputeRegionCommitmentTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment google_compute_region_commitment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment google_compute_region_commitment}
 */
 export class ComputeRegionCommitment extends cdktf.TerraformResource {
 
@@ -589,7 +589,7 @@ export class ComputeRegionCommitment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRegionCommitment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRegionCommitment to import
-  * @param importFromId The id of the existing ComputeRegionCommitment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRegionCommitment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRegionCommitment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -601,7 +601,7 @@ export class ComputeRegionCommitment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.0/docs/resources/compute_region_commitment google_compute_region_commitment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_region_commitment google_compute_region_commitment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -612,7 +612,7 @@ export class ComputeRegionCommitment extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_commitment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.43.0',
+        providerVersion: '5.43.1',
         providerVersionConstraint: '~> 5.0'
       },
       provider: config.provider,
