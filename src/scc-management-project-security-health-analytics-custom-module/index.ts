@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/scc_management_project_security_health_analytics_custom_module
 // generated from terraform resource schema
 
