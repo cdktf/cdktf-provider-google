@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJob(scope Construct, id *string, config DataprocJobConfig) DataprocJob
 ```
@@ -626,7 +626,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocJob.DataprocJob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.DataprocJob_IsConstruct(x interface{}) *bool
 ```
@@ -658,7 +658,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocJob.DataprocJob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.DataprocJob_IsTerraformElement(x interface{}) *bool
 ```
@@ -672,7 +672,7 @@ dataprocjob.DataprocJob_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocJob.DataprocJob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.DataprocJob_IsTerraformResource(x interface{}) *bool
 ```
@@ -686,7 +686,7 @@ dataprocjob.DataprocJob_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataprocJob.DataprocJob.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.DataprocJob_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1322,7 +1322,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobConfig {
 	Connection: interface{},
@@ -1332,22 +1332,22 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Placement: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobPlacement,
+	Placement: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobPlacement,
 	ForceDelete: interface{},
-	HadoopConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobHadoopConfig,
-	HiveConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobHiveConfig,
+	HadoopConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobHadoopConfig,
+	HiveConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobHiveConfig,
 	Id: *string,
 	Labels: *map[string]*string,
-	PigConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobPigConfig,
-	PrestoConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobPrestoConfig,
+	PigConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobPigConfig,
+	PrestoConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobPrestoConfig,
 	Project: *string,
-	PysparkConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobPysparkConfig,
-	Reference: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobReference,
+	PysparkConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobPysparkConfig,
+	Reference: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobReference,
 	Region: *string,
-	Scheduling: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobScheduling,
-	SparkConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobSparkConfig,
-	SparksqlConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobSparksqlConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobTimeouts,
+	Scheduling: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobScheduling,
+	SparkConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobSparkConfig,
+	SparksqlConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobSparksqlConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobTimeouts,
 }
 ```
 
@@ -1690,14 +1690,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobHadoopConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobHadoopConfig {
 	ArchiveUris: *[]*string,
 	Args: *[]*string,
 	FileUris: *[]*string,
 	JarFileUris: *[]*string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobHadoopConfigLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobHadoopConfigLoggingConfig,
 	MainClass: *string,
 	MainJarFileUri: *string,
 	Properties: *map[string]*string,
@@ -1842,7 +1842,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobHadoopConfigLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobHadoopConfigLoggingConfig {
 	DriverLogLevels: *map[string]*string,
@@ -1878,7 +1878,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobHiveConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobHiveConfig {
 	ContinueOnFailure: interface{},
@@ -1998,12 +1998,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobPigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobPigConfig {
 	ContinueOnFailure: interface{},
 	JarFileUris: *[]*string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobPigConfigLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobPigConfigLoggingConfig,
 	Properties: *map[string]*string,
 	QueryFileUri: *string,
 	QueryList: *[]*string,
@@ -2134,7 +2134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobPigConfigLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobPigConfigLoggingConfig {
 	DriverLogLevels: *map[string]*string,
@@ -2170,7 +2170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobPlacement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobPlacement {
 	ClusterName: *string,
@@ -2204,12 +2204,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobPrestoConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobPrestoConfig {
 	ClientTags: *[]*string,
 	ContinueOnFailure: interface{},
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobPrestoConfigLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobPrestoConfigLoggingConfig,
 	OutputFormat: *string,
 	Properties: *map[string]*string,
 	QueryFileUri: *string,
@@ -2338,7 +2338,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobPrestoConfigLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobPrestoConfigLoggingConfig {
 	DriverLogLevels: *map[string]*string,
@@ -2374,7 +2374,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobPysparkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobPysparkConfig {
 	MainPythonFileUri: *string,
@@ -2382,7 +2382,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
 	Args: *[]*string,
 	FileUris: *[]*string,
 	JarFileUris: *[]*string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobPysparkConfigLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobPysparkConfigLoggingConfig,
 	Properties: *map[string]*string,
 	PythonFileUris: *[]*string,
 }
@@ -2528,7 +2528,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobPysparkConfigLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobPysparkConfigLoggingConfig {
 	DriverLogLevels: *map[string]*string,
@@ -2564,7 +2564,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobReference {
 	JobId: *string,
@@ -2600,7 +2600,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobScheduling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobScheduling {
 	MaxFailuresPerHour: *f64,
@@ -2650,14 +2650,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobSparkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobSparkConfig {
 	ArchiveUris: *[]*string,
 	Args: *[]*string,
 	FileUris: *[]*string,
 	JarFileUris: *[]*string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobSparkConfigLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobSparkConfigLoggingConfig,
 	MainClass: *string,
 	MainJarFileUri: *string,
 	Properties: *map[string]*string,
@@ -2802,7 +2802,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobSparkConfigLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobSparkConfigLoggingConfig {
 	DriverLogLevels: *map[string]*string,
@@ -2838,11 +2838,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobSparksqlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobSparksqlConfig {
 	JarFileUris: *[]*string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.dataprocJob.DataprocJobSparksqlConfigLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocJob.DataprocJobSparksqlConfigLoggingConfig,
 	Properties: *map[string]*string,
 	QueryFileUri: *string,
 	QueryList: *[]*string,
@@ -2954,7 +2954,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobSparksqlConfigLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobSparksqlConfigLoggingConfig {
 	DriverLogLevels: *map[string]*string,
@@ -2990,7 +2990,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobStatus {
 
@@ -3003,7 +3003,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJob.DataprocJobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 &dataprocjob.DataprocJobTimeouts {
 	Create: *string,
@@ -3051,7 +3051,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobHadoopConfigLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobHadoopConfigLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobHadoopConfigLoggingConfigOutputReference
 ```
@@ -3322,7 +3322,7 @@ func InternalValue() DataprocJobHadoopConfigLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobHadoopConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobHadoopConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobHadoopConfigOutputReference
 ```
@@ -3816,7 +3816,7 @@ func InternalValue() DataprocJobHadoopConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobHiveConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobHiveConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobHiveConfigOutputReference
 ```
@@ -4239,7 +4239,7 @@ func InternalValue() DataprocJobHiveConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobPigConfigLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobPigConfigLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobPigConfigLoggingConfigOutputReference
 ```
@@ -4510,7 +4510,7 @@ func InternalValue() DataprocJobPigConfigLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobPigConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobPigConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobPigConfigOutputReference
 ```
@@ -4975,7 +4975,7 @@ func InternalValue() DataprocJobPigConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobPlacementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobPlacementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobPlacementOutputReference
 ```
@@ -5257,7 +5257,7 @@ func InternalValue() DataprocJobPlacement
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobPrestoConfigLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobPrestoConfigLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobPrestoConfigLoggingConfigOutputReference
 ```
@@ -5528,7 +5528,7 @@ func InternalValue() DataprocJobPrestoConfigLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobPrestoConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobPrestoConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobPrestoConfigOutputReference
 ```
@@ -5993,7 +5993,7 @@ func InternalValue() DataprocJobPrestoConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobPysparkConfigLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobPysparkConfigLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobPysparkConfigLoggingConfigOutputReference
 ```
@@ -6264,7 +6264,7 @@ func InternalValue() DataprocJobPysparkConfigLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobPysparkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobPysparkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobPysparkConfigOutputReference
 ```
@@ -6751,7 +6751,7 @@ func InternalValue() DataprocJobPysparkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobReferenceOutputReference
 ```
@@ -7029,7 +7029,7 @@ func InternalValue() DataprocJobReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobSchedulingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobSchedulingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobSchedulingOutputReference
 ```
@@ -7322,7 +7322,7 @@ func InternalValue() DataprocJobScheduling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobSparkConfigLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobSparkConfigLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobSparkConfigLoggingConfigOutputReference
 ```
@@ -7593,7 +7593,7 @@ func InternalValue() DataprocJobSparkConfigLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobSparkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobSparkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobSparkConfigOutputReference
 ```
@@ -8087,7 +8087,7 @@ func InternalValue() DataprocJobSparkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobSparksqlConfigLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobSparksqlConfigLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobSparksqlConfigLoggingConfigOutputReference
 ```
@@ -8358,7 +8358,7 @@ func InternalValue() DataprocJobSparksqlConfigLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobSparksqlConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobSparksqlConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobSparksqlConfigOutputReference
 ```
@@ -8794,7 +8794,7 @@ func InternalValue() DataprocJobSparksqlConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocJobStatusList
 ```
@@ -8943,7 +8943,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocJobStatusOutputReference
 ```
@@ -9254,7 +9254,7 @@ func InternalValue() DataprocJobStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJob.DataprocJobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/dataprocjob"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjob"
 
 dataprocjob.NewDataprocJobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobTimeoutsOutputReference
 ```
