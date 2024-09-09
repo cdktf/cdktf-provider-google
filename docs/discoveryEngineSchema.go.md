@@ -4,12 +4,12 @@
 
 ### DiscoveryEngineSchema <a name="DiscoveryEngineSchema" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchema"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema google_discovery_engine_schema}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema google_discovery_engine_schema}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchema.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryengineschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/discoveryengineschema"
 
 discoveryengineschema.NewDiscoveryEngineSchema(scope Construct, id *string, config DiscoveryEngineSchemaConfig) DiscoveryEngineSchema
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchema.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryengineschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/discoveryengineschema"
 
 discoveryengineschema.DiscoveryEngineSchema_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchema.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryengineschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/discoveryengineschema"
 
 discoveryengineschema.DiscoveryEngineSchema_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ discoveryengineschema.DiscoveryEngineSchema_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchema.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryengineschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/discoveryengineschema"
 
 discoveryengineschema.DiscoveryEngineSchema_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ discoveryengineschema.DiscoveryEngineSchema_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchema.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryengineschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/discoveryengineschema"
 
 discoveryengineschema.DiscoveryEngineSchema_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -508,7 +508,7 @@ The construct id used in the generated config for the DiscoveryEngineSchema to i
 
 The id of the existing DiscoveryEngineSchema that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryengineschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/discoveryengineschema"
 
 &discoveryengineschema.DiscoveryEngineSchemaConfig {
 	Connection: interface{},
@@ -889,7 +889,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryenginesche
 	Id: *string,
 	JsonSchema: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.discoveryEngineSchema.DiscoveryEngineSchemaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.discoveryEngineSchema.DiscoveryEngineSchemaTimeouts,
 }
 ```
 
@@ -907,9 +907,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryenginesche
 | <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.dataStoreId">DataStoreId</a></code> | <code>*string</code> | The unique id of the data store. |
 | <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.location">Location</a></code> | <code>*string</code> | The geographic location where the data store should reside. The value can only be one of "global", "us" and "eu". |
 | <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.schemaId">SchemaId</a></code> | <code>*string</code> | The unique id of the schema. |
-| <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#id DiscoveryEngineSchema#id}. |
+| <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#id DiscoveryEngineSchema#id}. |
 | <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.jsonSchema">JsonSchema</a></code> | <code>*string</code> | The JSON representation of the schema. |
-| <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#project DiscoveryEngineSchema#project}. |
+| <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#project DiscoveryEngineSchema#project}. |
 | <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaTimeouts">DiscoveryEngineSchemaTimeouts</a></code> | timeouts block. |
 
 ---
@@ -994,7 +994,7 @@ DataStoreId *string
 
 The unique id of the data store.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#data_store_id DiscoveryEngineSchema#data_store_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#data_store_id DiscoveryEngineSchema#data_store_id}
 
 ---
 
@@ -1008,7 +1008,7 @@ Location *string
 
 The geographic location where the data store should reside. The value can only be one of "global", "us" and "eu".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#location DiscoveryEngineSchema#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#location DiscoveryEngineSchema#location}
 
 ---
 
@@ -1022,7 +1022,7 @@ SchemaId *string
 
 The unique id of the schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#schema_id DiscoveryEngineSchema#schema_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#schema_id DiscoveryEngineSchema#schema_id}
 
 ---
 
@@ -1034,7 +1034,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#id DiscoveryEngineSchema#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#id DiscoveryEngineSchema#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1051,7 +1051,7 @@ JsonSchema *string
 
 The JSON representation of the schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#json_schema DiscoveryEngineSchema#json_schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#json_schema DiscoveryEngineSchema#json_schema}
 
 ---
 
@@ -1063,7 +1063,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#project DiscoveryEngineSchema#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#project DiscoveryEngineSchema#project}.
 
 ---
 
@@ -1077,7 +1077,7 @@ Timeouts DiscoveryEngineSchemaTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#timeouts DiscoveryEngineSchema#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#timeouts DiscoveryEngineSchema#timeouts}
 
 ---
 
@@ -1086,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryengineschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/discoveryengineschema"
 
 &discoveryengineschema.DiscoveryEngineSchemaTimeouts {
 	Create: *string,
@@ -1098,8 +1098,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryenginesche
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#create DiscoveryEngineSchema#create}. |
-| <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#delete DiscoveryEngineSchema#delete}. |
+| <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#create DiscoveryEngineSchema#create}. |
+| <code><a href="#@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#delete DiscoveryEngineSchema#delete}. |
 
 ---
 
@@ -1111,7 +1111,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#create DiscoveryEngineSchema#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#create DiscoveryEngineSchema#create}.
 
 ---
 
@@ -1123,7 +1123,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/discovery_engine_schema#delete DiscoveryEngineSchema#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/discovery_engine_schema#delete DiscoveryEngineSchema#delete}.
 
 ---
 
@@ -1134,7 +1134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.discoveryEngineSchema.DiscoveryEngineSchemaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/discoveryengineschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/discoveryengineschema"
 
 discoveryengineschema.NewDiscoveryEngineSchemaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DiscoveryEngineSchemaTimeoutsOutputReference
 ```

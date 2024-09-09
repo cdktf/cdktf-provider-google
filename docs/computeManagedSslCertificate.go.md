@@ -4,12 +4,12 @@
 
 ### ComputeManagedSslCertificate <a name="ComputeManagedSslCertificate" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate google_compute_managed_ssl_certificate}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate google_compute_managed_ssl_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 computemanagedsslcertificate.NewComputeManagedSslCertificate(scope Construct, id *string, config ComputeManagedSslCertificateConfig) ComputeManagedSslCertificate
 ```
@@ -75,7 +75,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.putManaged">PutManaged</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.putTimeouts">PutTimeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.resetCertificateId">ResetCertificateId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.resetDescription">ResetDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.resetManaged">ResetManaged</a></code> | *No description.* |
@@ -398,12 +397,6 @@ func PutTimeouts(value ComputeManagedSslCertificateTimeouts)
 
 ---
 
-##### `ResetCertificateId` <a name="ResetCertificateId" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.resetCertificateId"></a>
-
-```go
-func ResetCertificateId()
-```
-
 ##### `ResetDescription` <a name="ResetDescription" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.resetDescription"></a>
 
 ```go
@@ -460,7 +453,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 computemanagedsslcertificate.ComputeManagedSslCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -492,7 +485,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 computemanagedsslcertificate.ComputeManagedSslCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -506,7 +499,7 @@ computemanagedsslcertificate.ComputeManagedSslCertificate_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 computemanagedsslcertificate.ComputeManagedSslCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -520,7 +513,7 @@ computemanagedsslcertificate.ComputeManagedSslCertificate_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 computemanagedsslcertificate.ComputeManagedSslCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -549,7 +542,7 @@ The construct id used in the generated config for the ComputeManagedSslCertifica
 
 The id of the existing ComputeManagedSslCertificate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -579,13 +572,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.certificateId">CertificateId</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.creationTimestamp">CreationTimestamp</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.expireTime">ExpireTime</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.managed">Managed</a></code> | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateManagedOutputReference">ComputeManagedSslCertificateManagedOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.selfLink">SelfLink</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.subjectAlternativeNames">SubjectAlternativeNames</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeoutsOutputReference">ComputeManagedSslCertificateTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.certificateIdInput">CertificateIdInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.descriptionInput">DescriptionInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.managedInput">ManagedInput</a></code> | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateManaged">ComputeManagedSslCertificateManaged</a></code> | *No description.* |
@@ -593,7 +586,6 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.projectInput">ProjectInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.typeInput">TypeInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.certificateId">CertificateId</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.description">Description</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.name">Name</a></code> | <code>*string</code> | *No description.* |
@@ -744,6 +736,16 @@ func Provisioners() *[]interface{}
 
 ---
 
+##### `CertificateId`<sup>Required</sup> <a name="CertificateId" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.certificateId"></a>
+
+```go
+func CertificateId() *f64
+```
+
+- *Type:* *f64
+
+---
+
 ##### `CreationTimestamp`<sup>Required</sup> <a name="CreationTimestamp" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.creationTimestamp"></a>
 
 ```go
@@ -801,16 +803,6 @@ func Timeouts() ComputeManagedSslCertificateTimeoutsOutputReference
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeoutsOutputReference">ComputeManagedSslCertificateTimeoutsOutputReference</a>
-
----
-
-##### `CertificateIdInput`<sup>Optional</sup> <a name="CertificateIdInput" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.certificateIdInput"></a>
-
-```go
-func CertificateIdInput() *f64
-```
-
-- *Type:* *f64
 
 ---
 
@@ -881,16 +873,6 @@ func TypeInput() *string
 ```
 
 - *Type:* *string
-
----
-
-##### `CertificateId`<sup>Required</sup> <a name="CertificateId" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.property.certificateId"></a>
-
-```go
-func CertificateId() *f64
-```
-
-- *Type:* *f64
 
 ---
 
@@ -969,7 +951,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 &computemanagedsslcertificate.ComputeManagedSslCertificateConfig {
 	Connection: interface{},
@@ -979,13 +961,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslce
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	CertificateId: *f64,
 	Description: *string,
 	Id: *string,
-	Managed: github.com/cdktf/cdktf-provider-google-go/google/v13.computeManagedSslCertificate.ComputeManagedSslCertificateManaged,
+	Managed: github.com/cdktf/cdktf-provider-google-go/google.computeManagedSslCertificate.ComputeManagedSslCertificateManaged,
 	Name: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts,
 	Type: *string,
 }
 ```
@@ -1001,12 +982,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslce
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.certificateId">CertificateId</a></code> | <code>*f64</code> | The unique identifier for the resource. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}. |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.managed">Managed</a></code> | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateManaged">ComputeManagedSslCertificateManaged</a></code> | managed block. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.name">Name</a></code> | <code>*string</code> | Name of the resource. |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}. |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts">ComputeManagedSslCertificateTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.type">Type</a></code> | <code>*string</code> | Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. |
 
@@ -1082,20 +1062,6 @@ Provisioners *[]interface{}
 
 ---
 
-##### `CertificateId`<sup>Optional</sup> <a name="CertificateId" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.certificateId"></a>
-
-```go
-CertificateId *f64
-```
-
-- *Type:* *f64
-
-The unique identifier for the resource.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#certificate_id ComputeManagedSslCertificate#certificate_id}
-
----
-
 ##### `Description`<sup>Optional</sup> <a name="Description" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.description"></a>
 
 ```go
@@ -1106,7 +1072,7 @@ Description *string
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#description ComputeManagedSslCertificate#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#description ComputeManagedSslCertificate#description}
 
 ---
 
@@ -1118,7 +1084,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1135,7 +1101,7 @@ Managed ComputeManagedSslCertificateManaged
 
 managed block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#managed ComputeManagedSslCertificate#managed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#managed ComputeManagedSslCertificate#managed}
 
 ---
 
@@ -1159,7 +1125,7 @@ character, which cannot be a dash.
 
 These are in the same namespace as the managed SSL certificates.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#name ComputeManagedSslCertificate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#name ComputeManagedSslCertificate#name}
 
 ---
 
@@ -1171,7 +1137,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}.
 
 ---
 
@@ -1185,7 +1151,7 @@ Timeouts ComputeManagedSslCertificateTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#timeouts ComputeManagedSslCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#timeouts ComputeManagedSslCertificate#timeouts}
 
 ---
 
@@ -1201,7 +1167,7 @@ Enum field whose value is always 'MANAGED' - used to signal to the API which typ
 
 Default value: "MANAGED" Possible values: ["MANAGED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#type ComputeManagedSslCertificate#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#type ComputeManagedSslCertificate#type}
 
 ---
 
@@ -1210,7 +1176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateManaged.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 &computemanagedsslcertificate.ComputeManagedSslCertificateManaged {
 	Domains: *[]*string,
@@ -1238,7 +1204,7 @@ Domains for which a managed SSL certificate will be valid.
 Currently,
 there can be up to 100 domains in this list.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#domains ComputeManagedSslCertificate#domains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#domains ComputeManagedSslCertificate#domains}
 
 ---
 
@@ -1247,7 +1213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 &computemanagedsslcertificate.ComputeManagedSslCertificateTimeouts {
 	Create: *string,
@@ -1259,8 +1225,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslce
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}. |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}. |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}. |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}. |
 
 ---
 
@@ -1272,7 +1238,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}.
 
 ---
 
@@ -1284,7 +1250,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}.
 
 ---
 
@@ -1295,7 +1261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateManagedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 computemanagedsslcertificate.NewComputeManagedSslCertificateManagedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeManagedSslCertificateManagedOutputReference
 ```
@@ -1566,7 +1532,7 @@ func InternalValue() ComputeManagedSslCertificateManaged
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/computemanagedsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computemanagedsslcertificate"
 
 computemanagedsslcertificate.NewComputeManagedSslCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeManagedSslCertificateTimeoutsOutputReference
 ```
