@@ -4,12 +4,12 @@
 
 ### DataPipelinePipeline <a name="DataPipelinePipeline" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline google_data_pipeline_pipeline}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline google_data_pipeline_pipeline}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipeline(scope Construct, id *string, config DataPipelinePipelineConfig) DataPipelinePipeline
 ```
@@ -480,7 +480,7 @@ func ResetWorkload()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.DataPipelinePipeline_IsConstruct(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.DataPipelinePipeline_IsTerraformElement(x interface{}) *bool
 ```
@@ -526,7 +526,7 @@ datapipelinepipeline.DataPipelinePipeline_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.DataPipelinePipeline_IsTerraformResource(x interface{}) *bool
 ```
@@ -540,7 +540,7 @@ datapipelinepipeline.DataPipelinePipeline_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipeline.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.DataPipelinePipeline_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -569,7 +569,7 @@ The construct id used in the generated config for the DataPipelinePipeline to im
 
 The id of the existing DataPipelinePipeline that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1066,7 +1066,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineConfig {
 	Connection: interface{},
@@ -1084,10 +1084,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipelin
 	PipelineSources: *map[string]*string,
 	Project: *string,
 	Region: *string,
-	ScheduleInfo: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineScheduleInfo,
+	ScheduleInfo: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineScheduleInfo,
 	SchedulerServiceAccountEmail: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineTimeouts,
-	Workload: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineWorkload,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineTimeouts,
+	Workload: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineWorkload,
 }
 ```
 
@@ -1106,9 +1106,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipelin
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.state">State</a></code> | <code>*string</code> | The state of the pipeline. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.type">Type</a></code> | <code>*string</code> | The type of the pipeline. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_). |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.pipelineSources">PipelineSources</a></code> | <code>*map[string]*string</code> | The sources of the pipeline (for example, Dataplex). |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.region">Region</a></code> | <code>*string</code> | A reference to the region. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.scheduleInfo">ScheduleInfo</a></code> | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineScheduleInfo">DataPipelinePipelineScheduleInfo</a></code> | schedule_info block. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineConfig.property.schedulerServiceAccountEmail">SchedulerServiceAccountEmail</a></code> | <code>*string</code> | Optional. |
@@ -1202,7 +1202,7 @@ For example': 'projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID."
 "LOCATION_ID is the canonical ID for the pipeline's location. The list of available locations can be obtained by calling google.cloud.location.Locations.ListLocations. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only available in App Engine regions."
 "PIPELINE_ID is the ID of the pipeline. Must be unique for the selected project and location."
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#name DataPipelinePipeline#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#name DataPipelinePipeline#name}
 
 ---
 
@@ -1219,7 +1219,7 @@ The state of the pipeline.
 When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through pipelines.patch requests.
 https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#state Possible values: ["STATE_UNSPECIFIED", "STATE_RESUMING", "STATE_ACTIVE", "STATE_STOPPING", "STATE_ARCHIVED", "STATE_PAUSED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#state DataPipelinePipeline#state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#state DataPipelinePipeline#state}
 
 ---
 
@@ -1236,7 +1236,7 @@ The type of the pipeline.
 This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
 https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#pipelinetype Possible values: ["PIPELINE_TYPE_UNSPECIFIED", "PIPELINE_TYPE_BATCH", "PIPELINE_TYPE_STREAMING"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#type DataPipelinePipeline#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#type DataPipelinePipeline#type}
 
 ---
 
@@ -1250,7 +1250,7 @@ DisplayName *string
 
 The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#display_name DataPipelinePipeline#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#display_name DataPipelinePipeline#display_name}
 
 ---
 
@@ -1262,7 +1262,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#id DataPipelinePipeline#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1282,7 +1282,7 @@ The sources of the pipeline (for example, Dataplex).
 The keys and values are set by the corresponding sources during pipeline creation.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#pipeline_sources DataPipelinePipeline#pipeline_sources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#pipeline_sources DataPipelinePipeline#pipeline_sources}
 
 ---
 
@@ -1294,7 +1294,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#project DataPipelinePipeline#project}.
 
 ---
 
@@ -1308,7 +1308,7 @@ Region *string
 
 A reference to the region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#region DataPipelinePipeline#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#region DataPipelinePipeline#region}
 
 ---
 
@@ -1322,7 +1322,7 @@ ScheduleInfo DataPipelinePipelineScheduleInfo
 
 schedule_info block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#schedule_info DataPipelinePipeline#schedule_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#schedule_info DataPipelinePipeline#schedule_info}
 
 ---
 
@@ -1338,7 +1338,7 @@ Optional.
 
 A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#scheduler_service_account_email DataPipelinePipeline#scheduler_service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#scheduler_service_account_email DataPipelinePipeline#scheduler_service_account_email}
 
 ---
 
@@ -1352,7 +1352,7 @@ Timeouts DataPipelinePipelineTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#timeouts DataPipelinePipeline#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#timeouts DataPipelinePipeline#timeouts}
 
 ---
 
@@ -1366,7 +1366,7 @@ Workload DataPipelinePipelineWorkload
 
 workload block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#workload DataPipelinePipeline#workload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#workload DataPipelinePipeline#workload}
 
 ---
 
@@ -1375,7 +1375,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineScheduleInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineScheduleInfo {
 	Schedule: *string,
@@ -1402,7 +1402,7 @@ Schedule *string
 
 Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#schedule DataPipelinePipeline#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#schedule DataPipelinePipeline#schedule}
 
 ---
 
@@ -1416,7 +1416,7 @@ TimeZone *string
 
 Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#time_zone DataPipelinePipeline#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#time_zone DataPipelinePipeline#time_zone}
 
 ---
 
@@ -1425,7 +1425,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineTimeouts {
 	Create: *string,
@@ -1438,9 +1438,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipelin
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#create DataPipelinePipeline#create}. |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#delete DataPipelinePipeline#delete}. |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#create DataPipelinePipeline#create}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#delete DataPipelinePipeline#delete}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}. |
 
 ---
 
@@ -1452,7 +1452,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#create DataPipelinePipeline#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#create DataPipelinePipeline#create}.
 
 ---
 
@@ -1464,7 +1464,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#delete DataPipelinePipeline#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#delete DataPipelinePipeline#delete}.
 
 ---
 
@@ -1476,7 +1476,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}.
 
 ---
 
@@ -1485,11 +1485,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkload.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineWorkload {
-	DataflowFlexTemplateRequest: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequest,
-	DataflowLaunchTemplateRequest: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest,
+	DataflowFlexTemplateRequest: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequest,
+	DataflowLaunchTemplateRequest: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest,
 }
 ```
 
@@ -1512,7 +1512,7 @@ DataflowFlexTemplateRequest DataPipelinePipelineWorkloadDataflowFlexTemplateRequ
 
 dataflow_flex_template_request block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#dataflow_flex_template_request DataPipelinePipeline#dataflow_flex_template_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#dataflow_flex_template_request DataPipelinePipeline#dataflow_flex_template_request}
 
 ---
 
@@ -1526,7 +1526,7 @@ DataflowLaunchTemplateRequest DataPipelinePipelineWorkloadDataflowLaunchTemplate
 
 dataflow_launch_template_request block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#dataflow_launch_template_request DataPipelinePipeline#dataflow_launch_template_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#dataflow_launch_template_request DataPipelinePipeline#dataflow_launch_template_request}
 
 ---
 
@@ -1535,10 +1535,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequest {
-	LaunchParameter: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameter,
+	LaunchParameter: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameter,
 	Location: *string,
 	ProjectId: *string,
 	ValidateOnly: interface{},
@@ -1566,7 +1566,7 @@ LaunchParameter DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchPar
 
 launch_parameter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#launch_parameter DataPipelinePipeline#launch_parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#launch_parameter DataPipelinePipeline#launch_parameter}
 
 ---
 
@@ -1580,7 +1580,7 @@ Location *string
 
 The regional endpoint to which to direct the request. For example, us-central1, us-west1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#location DataPipelinePipeline#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#location DataPipelinePipeline#location}
 
 ---
 
@@ -1594,7 +1594,7 @@ ProjectId *string
 
 The ID of the Cloud Platform project that the job belongs to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#project_id DataPipelinePipeline#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#project_id DataPipelinePipeline#project_id}
 
 ---
 
@@ -1608,7 +1608,7 @@ ValidateOnly interface{}
 
 If true, the request is validated but not actually executed. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}
 
 ---
 
@@ -1617,12 +1617,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameter {
 	JobName: *string,
 	ContainerSpecGcsPath: *string,
-	Environment: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterEnvironment,
+	Environment: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterEnvironment,
 	LaunchOptions: *map[string]*string,
 	Parameters: *map[string]*string,
 	TransformNameMappings: *map[string]*string,
@@ -1656,7 +1656,7 @@ The job name to use for the created job.
 
 For an update job request, the job name should be the same as the existing running job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#job_name DataPipelinePipeline#job_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#job_name DataPipelinePipeline#job_name}
 
 ---
 
@@ -1670,7 +1670,7 @@ ContainerSpecGcsPath *string
 
 Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#container_spec_gcs_path DataPipelinePipeline#container_spec_gcs_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#container_spec_gcs_path DataPipelinePipeline#container_spec_gcs_path}
 
 ---
 
@@ -1684,7 +1684,7 @@ Environment DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParamet
 
 environment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#environment DataPipelinePipeline#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#environment DataPipelinePipeline#environment}
 
 ---
 
@@ -1701,7 +1701,7 @@ Launch options for this Flex Template job.
 This is a common set of options across languages and templates. This should not be used to pass job parameters.
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#launch_options DataPipelinePipeline#launch_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#launch_options DataPipelinePipeline#launch_options}
 
 ---
 
@@ -1718,7 +1718,7 @@ Parameters *map[string]*string
 Example: {"numWorkers":"5"}'
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#parameters DataPipelinePipeline#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#parameters DataPipelinePipeline#parameters}
 
 ---
 
@@ -1735,7 +1735,7 @@ TransformNameMappings *map[string]*string
 Example: {"oldTransformName":"newTransformName",...}'
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#transform_name_mappings DataPipelinePipeline#transform_name_mappings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#transform_name_mappings DataPipelinePipeline#transform_name_mappings}
 
 ---
 
@@ -1751,7 +1751,7 @@ Set this to true if you are sending a request to update a running streaming job.
 
 When set, the job name should be the same as the running job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}
 
 ---
 
@@ -1760,7 +1760,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterEnvironment {
 	AdditionalExperiments: *[]*string,
@@ -1815,7 +1815,7 @@ AdditionalExperiments *[]*string
 
 Additional experiment flags for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#additional_experiments DataPipelinePipeline#additional_experiments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#additional_experiments DataPipelinePipeline#additional_experiments}
 
 ---
 
@@ -1833,7 +1833,7 @@ Keys and values should follow the restrictions specified in the labeling restric
 'Example: { "name": "wrench", "mass": "1kg", "count": "3" }.'
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#additional_user_labels DataPipelinePipeline#additional_user_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#additional_user_labels DataPipelinePipeline#additional_user_labels}
 
 ---
 
@@ -1847,7 +1847,7 @@ EnableStreamingEngine interface{}
 
 Whether to enable Streaming Engine for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#enable_streaming_engine DataPipelinePipeline#enable_streaming_engine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#enable_streaming_engine DataPipelinePipeline#enable_streaming_engine}
 
 ---
 
@@ -1861,7 +1861,7 @@ FlexrsGoal *string
 
 Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#FlexResourceSchedulingGoal Possible values: ["FLEXRS_UNSPECIFIED", "FLEXRS_SPEED_OPTIMIZED", "FLEXRS_COST_OPTIMIZED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#flexrs_goal DataPipelinePipeline#flexrs_goal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#flexrs_goal DataPipelinePipeline#flexrs_goal}
 
 ---
 
@@ -1875,7 +1875,7 @@ IpConfiguration *string
 
 Configuration for VM IPs. https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#WorkerIPAddressConfiguration Possible values: ["WORKER_IP_UNSPECIFIED", "WORKER_IP_PUBLIC", "WORKER_IP_PRIVATE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#ip_configuration DataPipelinePipeline#ip_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#ip_configuration DataPipelinePipeline#ip_configuration}
 
 ---
 
@@ -1889,7 +1889,7 @@ KmsKeyName *string
 
 'Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#kms_key_name DataPipelinePipeline#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#kms_key_name DataPipelinePipeline#kms_key_name}
 
 ---
 
@@ -1903,7 +1903,7 @@ MachineType *string
 
 The machine type to use for the job. Defaults to the value from the template if not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#machine_type DataPipelinePipeline#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#machine_type DataPipelinePipeline#machine_type}
 
 ---
 
@@ -1917,7 +1917,7 @@ MaxWorkers *f64
 
 The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#max_workers DataPipelinePipeline#max_workers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#max_workers DataPipelinePipeline#max_workers}
 
 ---
 
@@ -1931,7 +1931,7 @@ Network *string
 
 Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#network DataPipelinePipeline#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#network DataPipelinePipeline#network}
 
 ---
 
@@ -1945,7 +1945,7 @@ NumWorkers *f64
 
 The initial number of Compute Engine instances for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#num_workers DataPipelinePipeline#num_workers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#num_workers DataPipelinePipeline#num_workers}
 
 ---
 
@@ -1959,7 +1959,7 @@ ServiceAccountEmail *string
 
 The email address of the service account to run the job as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#service_account_email DataPipelinePipeline#service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#service_account_email DataPipelinePipeline#service_account_email}
 
 ---
 
@@ -1975,7 +1975,7 @@ Subnetwork to which VMs will be assigned, if desired.
 
 You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#subnetwork DataPipelinePipeline#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#subnetwork DataPipelinePipeline#subnetwork}
 
 ---
 
@@ -1989,7 +1989,7 @@ TempLocation *string
 
 The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with gs://.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#temp_location DataPipelinePipeline#temp_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#temp_location DataPipelinePipeline#temp_location}
 
 ---
 
@@ -2003,7 +2003,7 @@ WorkerRegion *string
 
 The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with workerZone. If neither workerRegion nor workerZone is specified, default to the control plane's region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#worker_region DataPipelinePipeline#worker_region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#worker_region DataPipelinePipeline#worker_region}
 
 ---
 
@@ -2017,7 +2017,7 @@ WorkerZone *string
 
 The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with workerRegion. If neither workerRegion nor workerZone is specified, a zone in the control plane's region is chosen based on available capacity. If both workerZone and zone are set, workerZone takes precedence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#worker_zone DataPipelinePipeline#worker_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#worker_zone DataPipelinePipeline#worker_zone}
 
 ---
 
@@ -2033,7 +2033,7 @@ The Compute Engine availability zone for launching worker instances to run your 
 
 In the future, workerZone will take precedence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#zone DataPipelinePipeline#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#zone DataPipelinePipeline#zone}
 
 ---
 
@@ -2042,12 +2042,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest {
 	ProjectId: *string,
 	GcsPath: *string,
-	LaunchParameters: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters,
+	LaunchParameters: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters,
 	Location: *string,
 	ValidateOnly: interface{},
 }
@@ -2061,7 +2061,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipelin
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.gcsPath">GcsPath</a></code> | <code>*string</code> | A Cloud Storage path to the template from which to create the job. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.launchParameters">LaunchParameters</a></code> | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters">DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters</a></code> | launch_parameters block. |
 | <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.location">Location</a></code> | <code>*string</code> | The regional endpoint to which to direct the request. |
-| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.validateOnly">ValidateOnly</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}. |
+| <code><a href="#@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest.property.validateOnly">ValidateOnly</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}. |
 
 ---
 
@@ -2075,7 +2075,7 @@ ProjectId *string
 
 The ID of the Cloud Platform project that the job belongs to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#project_id DataPipelinePipeline#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#project_id DataPipelinePipeline#project_id}
 
 ---
 
@@ -2091,7 +2091,7 @@ A Cloud Storage path to the template from which to create the job.
 
 Must be a valid Cloud Storage URL, beginning with 'gs://'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#gcs_path DataPipelinePipeline#gcs_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#gcs_path DataPipelinePipeline#gcs_path}
 
 ---
 
@@ -2105,7 +2105,7 @@ LaunchParameters DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunch
 
 launch_parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#launch_parameters DataPipelinePipeline#launch_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#launch_parameters DataPipelinePipeline#launch_parameters}
 
 ---
 
@@ -2119,7 +2119,7 @@ Location *string
 
 The regional endpoint to which to direct the request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#location DataPipelinePipeline#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#location DataPipelinePipeline#location}
 
 ---
 
@@ -2131,7 +2131,7 @@ ValidateOnly interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#validate_only DataPipelinePipeline#validate_only}.
 
 ---
 
@@ -2140,11 +2140,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParameters {
 	JobName: *string,
-	Environment: github.com/cdktf/cdktf-provider-google-go/google/v13.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersEnvironment,
+	Environment: github.com/cdktf/cdktf-provider-google-go/google/v14.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersEnvironment,
 	Parameters: *map[string]*string,
 	TransformNameMapping: *map[string]*string,
 	Update: interface{},
@@ -2173,7 +2173,7 @@ JobName *string
 
 The job name to use for the created job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#job_name DataPipelinePipeline#job_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#job_name DataPipelinePipeline#job_name}
 
 ---
 
@@ -2187,7 +2187,7 @@ Environment DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParam
 
 environment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#environment DataPipelinePipeline#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#environment DataPipelinePipeline#environment}
 
 ---
 
@@ -2203,7 +2203,7 @@ The runtime parameters to pass to the job.
 
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#parameters DataPipelinePipeline#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#parameters DataPipelinePipeline#parameters}
 
 ---
 
@@ -2220,7 +2220,7 @@ Map of transform name prefixes of the job to be replaced to the corresponding na
 Only applicable when updating a pipeline.
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#transform_name_mapping DataPipelinePipeline#transform_name_mapping}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#transform_name_mapping DataPipelinePipeline#transform_name_mapping}
 
 ---
 
@@ -2234,7 +2234,7 @@ Update interface{}
 
 If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#update DataPipelinePipeline#update}
 
 ---
 
@@ -2243,7 +2243,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 &datapipelinepipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersEnvironment {
 	AdditionalExperiments: *[]*string,
@@ -2298,7 +2298,7 @@ AdditionalExperiments *[]*string
 
 Additional experiment flags for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#additional_experiments DataPipelinePipeline#additional_experiments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#additional_experiments DataPipelinePipeline#additional_experiments}
 
 ---
 
@@ -2316,7 +2316,7 @@ Keys and values should follow the restrictions specified in the labeling restric
 'Example: { "name": "wrench", "mass": "1kg", "count": "3" }.'
 'An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#additional_user_labels DataPipelinePipeline#additional_user_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#additional_user_labels DataPipelinePipeline#additional_user_labels}
 
 ---
 
@@ -2330,7 +2330,7 @@ BypassTempDirValidation interface{}
 
 Whether to bypass the safety checks for the job's temporary directory. Use with caution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#bypass_temp_dir_validation DataPipelinePipeline#bypass_temp_dir_validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#bypass_temp_dir_validation DataPipelinePipeline#bypass_temp_dir_validation}
 
 ---
 
@@ -2344,7 +2344,7 @@ EnableStreamingEngine interface{}
 
 Whether to enable Streaming Engine for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#enable_streaming_engine DataPipelinePipeline#enable_streaming_engine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#enable_streaming_engine DataPipelinePipeline#enable_streaming_engine}
 
 ---
 
@@ -2358,7 +2358,7 @@ IpConfiguration *string
 
 Configuration for VM IPs. https://cloud.google.com/dataflow/docs/reference/data-pipelines/rest/v1/projects.locations.pipelines#WorkerIPAddressConfiguration Possible values: ["WORKER_IP_UNSPECIFIED", "WORKER_IP_PUBLIC", "WORKER_IP_PRIVATE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#ip_configuration DataPipelinePipeline#ip_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#ip_configuration DataPipelinePipeline#ip_configuration}
 
 ---
 
@@ -2372,7 +2372,7 @@ KmsKeyName *string
 
 'Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#kms_key_name DataPipelinePipeline#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#kms_key_name DataPipelinePipeline#kms_key_name}
 
 ---
 
@@ -2386,7 +2386,7 @@ MachineType *string
 
 The machine type to use for the job. Defaults to the value from the template if not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#machine_type DataPipelinePipeline#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#machine_type DataPipelinePipeline#machine_type}
 
 ---
 
@@ -2400,7 +2400,7 @@ MaxWorkers *f64
 
 The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#max_workers DataPipelinePipeline#max_workers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#max_workers DataPipelinePipeline#max_workers}
 
 ---
 
@@ -2414,7 +2414,7 @@ Network *string
 
 Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#network DataPipelinePipeline#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#network DataPipelinePipeline#network}
 
 ---
 
@@ -2428,7 +2428,7 @@ NumWorkers *f64
 
 The initial number of Compute Engine instances for the job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#num_workers DataPipelinePipeline#num_workers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#num_workers DataPipelinePipeline#num_workers}
 
 ---
 
@@ -2442,7 +2442,7 @@ ServiceAccountEmail *string
 
 The email address of the service account to run the job as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#service_account_email DataPipelinePipeline#service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#service_account_email DataPipelinePipeline#service_account_email}
 
 ---
 
@@ -2458,7 +2458,7 @@ Subnetwork to which VMs will be assigned, if desired.
 
 You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#subnetwork DataPipelinePipeline#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#subnetwork DataPipelinePipeline#subnetwork}
 
 ---
 
@@ -2472,7 +2472,7 @@ TempLocation *string
 
 The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with gs://.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#temp_location DataPipelinePipeline#temp_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#temp_location DataPipelinePipeline#temp_location}
 
 ---
 
@@ -2486,7 +2486,7 @@ WorkerRegion *string
 
 The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with workerZone. If neither workerRegion nor workerZone is specified, default to the control plane's region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#worker_region DataPipelinePipeline#worker_region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#worker_region DataPipelinePipeline#worker_region}
 
 ---
 
@@ -2500,7 +2500,7 @@ WorkerZone *string
 
 The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with workerRegion. If neither workerRegion nor workerZone is specified, a zone in the control plane's region is chosen based on available capacity. If both workerZone and zone are set, workerZone takes precedence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#worker_zone DataPipelinePipeline#worker_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#worker_zone DataPipelinePipeline#worker_zone}
 
 ---
 
@@ -2516,7 +2516,7 @@ The Compute Engine availability zone for launching worker instances to run your 
 
 In the future, workerZone will take precedence.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/data_pipeline_pipeline#zone DataPipelinePipeline#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/data_pipeline_pipeline#zone DataPipelinePipeline#zone}
 
 ---
 
@@ -2527,7 +2527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineScheduleInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineScheduleInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineScheduleInfoOutputReference
 ```
@@ -2845,7 +2845,7 @@ func InternalValue() DataPipelinePipelineScheduleInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineTimeoutsOutputReference
 ```
@@ -3181,7 +3181,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterEnvironmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterEnvironmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterEnvironmentOutputReference
 ```
@@ -3894,7 +3894,7 @@ func InternalValue() DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaun
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaunchParameterOutputReference
 ```
@@ -4352,7 +4352,7 @@ func InternalValue() DataPipelinePipelineWorkloadDataflowFlexTemplateRequestLaun
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowFlexTemplateRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineWorkloadDataflowFlexTemplateRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineWorkloadDataflowFlexTemplateRequestOutputReference
 ```
@@ -4709,7 +4709,7 @@ func InternalValue() DataPipelinePipelineWorkloadDataflowFlexTemplateRequest
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersEnvironmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersEnvironmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersEnvironmentOutputReference
 ```
@@ -5422,7 +5422,7 @@ func InternalValue() DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLa
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLaunchParametersOutputReference
 ```
@@ -5822,7 +5822,7 @@ func InternalValue() DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestLa
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineWorkloadDataflowLaunchTemplateRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineWorkloadDataflowLaunchTemplateRequestOutputReference
 ```
@@ -6222,7 +6222,7 @@ func InternalValue() DataPipelinePipelineWorkloadDataflowLaunchTemplateRequest
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataPipelinePipeline.DataPipelinePipelineWorkloadOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/datapipelinepipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datapipelinepipeline"
 
 datapipelinepipeline.NewDataPipelinePipelineWorkloadOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataPipelinePipelineWorkloadOutputReference
 ```

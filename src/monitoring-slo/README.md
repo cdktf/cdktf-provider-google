@@ -1,3 +1,3 @@
 # `google_monitoring_slo`
 
-Refer to the Terraform Registry for docs: [`google_monitoring_slo`](https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/monitoring_slo).
+Refer to the Terraform Registry for docs: [`google_monitoring_slo`](https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/monitoring_slo).

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image
+// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,36 +13,36 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleContainerRegistryImageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image#digest DataGoogleContainerRegistryImage#digest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image#digest DataGoogleContainerRegistryImage#digest}
   */
   readonly digest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image#id DataGoogleContainerRegistryImage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image#id DataGoogleContainerRegistryImage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image#name DataGoogleContainerRegistryImage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image#name DataGoogleContainerRegistryImage#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image#project DataGoogleContainerRegistryImage#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image#project DataGoogleContainerRegistryImage#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image#region DataGoogleContainerRegistryImage#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image#region DataGoogleContainerRegistryImage#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image#tag DataGoogleContainerRegistryImage#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image#tag DataGoogleContainerRegistryImage#tag}
   */
   readonly tag?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image google_container_registry_image}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image google_container_registry_image}
 */
 export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource {
 
@@ -58,7 +58,7 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   * Generates CDKTF code for importing a DataGoogleContainerRegistryImage resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleContainerRegistryImage to import
-  * @param importFromId The id of the existing DataGoogleContainerRegistryImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleContainerRegistryImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleContainerRegistryImage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -70,7 +70,7 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/data-sources/container_registry_image google_container_registry_image} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/container_registry_image google_container_registry_image} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -81,8 +81,8 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
       terraformResourceType: 'google_container_registry_image',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.43.1',
-        providerVersionConstraint: '~> 5.0'
+        providerVersion: '6.1.0',
+        providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

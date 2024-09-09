@@ -4,12 +4,12 @@
 
 ### SecretManagerSecretIamPolicy <a name="SecretManagerSecretIamPolicy" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy google_secret_manager_secret_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy google_secret_manager_secret_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.NewSecretManagerSecretIamPolicy(scope Construct, id *string, config SecretManagerSecretIamPolicyConfig) SecretManagerSecretIamPolicy
 ```
@@ -392,7 +392,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -424,7 +424,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -438,7 +438,7 @@ secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -452,7 +452,7 @@ secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/secretmanagersecretiampolicy"
 
 secretmanagersecretiampolicy.SecretManagerSecretIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -481,7 +481,7 @@ The construct id used in the generated config for the SecretManagerSecretIamPoli
 
 The id of the existing SecretManagerSecretIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -780,7 +780,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/secretmanagersecretiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/secretmanagersecretiampolicy"
 
 &secretmanagersecretiampolicy.SecretManagerSecretIamPolicyConfig {
 	Connection: interface{},
@@ -808,10 +808,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/secretmanagersecret
 | <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#policy_data SecretManagerSecretIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.secretId">SecretId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#secret_id SecretManagerSecretIamPolicy#secret_id}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#id SecretManagerSecretIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#project SecretManagerSecretIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#policy_data SecretManagerSecretIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.secretId">SecretId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#secret_id SecretManagerSecretIamPolicy#secret_id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#id SecretManagerSecretIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamPolicy.SecretManagerSecretIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#project SecretManagerSecretIamPolicy#project}. |
 
 ---
 
@@ -893,7 +893,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#policy_data SecretManagerSecretIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#policy_data SecretManagerSecretIamPolicy#policy_data}.
 
 ---
 
@@ -905,7 +905,7 @@ SecretId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#secret_id SecretManagerSecretIamPolicy#secret_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#secret_id SecretManagerSecretIamPolicy#secret_id}.
 
 ---
 
@@ -917,7 +917,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#id SecretManagerSecretIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#id SecretManagerSecretIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -932,7 +932,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/secret_manager_secret_iam_policy#project SecretManagerSecretIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/secret_manager_secret_iam_policy#project SecretManagerSecretIamPolicy#project}.
 
 ---
 

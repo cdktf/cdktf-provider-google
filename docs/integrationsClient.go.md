@@ -4,12 +4,12 @@
 
 ### IntegrationsClient <a name="IntegrationsClient" id="@cdktf/provider-google.integrationsClient.IntegrationsClient"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client google_integrations_client}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client google_integrations_client}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 integrationsclient.NewIntegrationsClient(scope Construct, id *string, config IntegrationsClientConfig) IntegrationsClient
 ```
@@ -77,10 +77,8 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.resetCloudKmsConfig">ResetCloudKmsConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.resetCreateSampleIntegrations">ResetCreateSampleIntegrations</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.resetCreateSampleWorkflows">ResetCreateSampleWorkflows</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.resetProject">ResetProject</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.resetProvisionGmek">ResetProvisionGmek</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.resetRunAsServiceAccount">ResetRunAsServiceAccount</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
@@ -410,12 +408,6 @@ func ResetCloudKmsConfig()
 func ResetCreateSampleIntegrations()
 ```
 
-##### `ResetCreateSampleWorkflows` <a name="ResetCreateSampleWorkflows" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.resetCreateSampleWorkflows"></a>
-
-```go
-func ResetCreateSampleWorkflows()
-```
-
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.resetId"></a>
 
 ```go
@@ -426,12 +418,6 @@ func ResetId()
 
 ```go
 func ResetProject()
-```
-
-##### `ResetProvisionGmek` <a name="ResetProvisionGmek" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.resetProvisionGmek"></a>
-
-```go
-func ResetProvisionGmek()
 ```
 
 ##### `ResetRunAsServiceAccount` <a name="ResetRunAsServiceAccount" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.resetRunAsServiceAccount"></a>
@@ -460,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 integrationsclient.IntegrationsClient_IsConstruct(x interface{}) *bool
 ```
@@ -492,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 integrationsclient.IntegrationsClient_IsTerraformElement(x interface{}) *bool
 ```
@@ -506,7 +492,7 @@ integrationsclient.IntegrationsClient_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 integrationsclient.IntegrationsClient_IsTerraformResource(x interface{}) *bool
 ```
@@ -520,7 +506,7 @@ integrationsclient.IntegrationsClient_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 integrationsclient.IntegrationsClient_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -549,7 +535,7 @@ The construct id used in the generated config for the IntegrationsClient to impo
 
 The id of the existing IntegrationsClient that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -583,19 +569,15 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.4
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeoutsOutputReference">IntegrationsClientTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.cloudKmsConfigInput">CloudKmsConfigInput</a></code> | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientCloudKmsConfig">IntegrationsClientCloudKmsConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.createSampleIntegrationsInput">CreateSampleIntegrationsInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.createSampleWorkflowsInput">CreateSampleWorkflowsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.locationInput">LocationInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.projectInput">ProjectInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.provisionGmekInput">ProvisionGmekInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.runAsServiceAccountInput">RunAsServiceAccountInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.createSampleIntegrations">CreateSampleIntegrations</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.createSampleWorkflows">CreateSampleWorkflows</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.location">Location</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.project">Project</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.provisionGmek">ProvisionGmek</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClient.property.runAsServiceAccount">RunAsServiceAccount</a></code> | <code>*string</code> | *No description.* |
 
 ---
@@ -782,16 +764,6 @@ func CreateSampleIntegrationsInput() interface{}
 
 ---
 
-##### `CreateSampleWorkflowsInput`<sup>Optional</sup> <a name="CreateSampleWorkflowsInput" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.property.createSampleWorkflowsInput"></a>
-
-```go
-func CreateSampleWorkflowsInput() interface{}
-```
-
-- *Type:* interface{}
-
----
-
 ##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.property.idInput"></a>
 
 ```go
@@ -819,16 +791,6 @@ func ProjectInput() *string
 ```
 
 - *Type:* *string
-
----
-
-##### `ProvisionGmekInput`<sup>Optional</sup> <a name="ProvisionGmekInput" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.property.provisionGmekInput"></a>
-
-```go
-func ProvisionGmekInput() interface{}
-```
-
-- *Type:* interface{}
 
 ---
 
@@ -862,16 +824,6 @@ func CreateSampleIntegrations() interface{}
 
 ---
 
-##### `CreateSampleWorkflows`<sup>Required</sup> <a name="CreateSampleWorkflows" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.property.createSampleWorkflows"></a>
-
-```go
-func CreateSampleWorkflows() interface{}
-```
-
-- *Type:* interface{}
-
----
-
 ##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.property.id"></a>
 
 ```go
@@ -899,16 +851,6 @@ func Project() *string
 ```
 
 - *Type:* *string
-
----
-
-##### `ProvisionGmek`<sup>Required</sup> <a name="ProvisionGmek" id="@cdktf/provider-google.integrationsClient.IntegrationsClient.property.provisionGmek"></a>
-
-```go
-func ProvisionGmek() interface{}
-```
-
-- *Type:* interface{}
 
 ---
 
@@ -947,7 +889,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationsClient.IntegrationsClientCloudKmsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 &integrationsclient.IntegrationsClientCloudKmsConfig {
 	Key: *string,
@@ -983,7 +925,7 @@ A Cloud KMS key is a named object containing one or more key versions, along wit
 A key exists on exactly one key ring tied to a
 specific location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#key IntegrationsClient#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#key IntegrationsClient#key}
 
 ---
 
@@ -997,7 +939,7 @@ KmsLocation *string
 
 Location name of the key ring, e.g. "us-west1".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#kms_location IntegrationsClient#kms_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#kms_location IntegrationsClient#kms_location}
 
 ---
 
@@ -1014,7 +956,7 @@ A key ring organizes keys in a specific Google Cloud location and allows you to 
 A key ring's name does not need to be
 unique across a Google Cloud project, but must be unique within a given location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#kms_ring IntegrationsClient#kms_ring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#kms_ring IntegrationsClient#kms_ring}
 
 ---
 
@@ -1032,7 +974,7 @@ A key's version is represented by an integer, starting at 1. To decrypt data
 or verify a signature, you must use the same key version that was used to
 encrypt or sign the data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#key_version IntegrationsClient#key_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#key_version IntegrationsClient#key_version}
 
 ---
 
@@ -1051,7 +993,7 @@ the kms key is stored at the same project as customer's project and ecrypted
 with CMEK, otherwise, the kms key is stored in the tenant project and
 encrypted with GMEK.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#kms_project_id IntegrationsClient#kms_project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#kms_project_id IntegrationsClient#kms_project_id}
 
 ---
 
@@ -1060,7 +1002,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 &integrationsclient.IntegrationsClientConfig {
 	Connection: interface{},
@@ -1071,14 +1013,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Location: *string,
-	CloudKmsConfig: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationsClient.IntegrationsClientCloudKmsConfig,
+	CloudKmsConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.integrationsClient.IntegrationsClientCloudKmsConfig,
 	CreateSampleIntegrations: interface{},
-	CreateSampleWorkflows: interface{},
 	Id: *string,
 	Project: *string,
-	ProvisionGmek: interface{},
 	RunAsServiceAccount: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.integrationsClient.IntegrationsClientTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.integrationsClient.IntegrationsClientTimeouts,
 }
 ```
 
@@ -1096,10 +1036,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.location">Location</a></code> | <code>*string</code> | Location in which client needs to be provisioned. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.cloudKmsConfig">CloudKmsConfig</a></code> | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientCloudKmsConfig">IntegrationsClientCloudKmsConfig</a></code> | cloud_kms_config block. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.createSampleIntegrations">CreateSampleIntegrations</a></code> | <code>interface{}</code> | Indicates if sample integrations should be created along with provisioning. |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.createSampleWorkflows">CreateSampleWorkflows</a></code> | <code>interface{}</code> | Indicates if sample workflow should be created along with provisioning. |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#id IntegrationsClient#id}. |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#project IntegrationsClient#project}. |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.provisionGmek">ProvisionGmek</a></code> | <code>interface{}</code> | Indicates provision with GMEK or CMEK. |
+| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#id IntegrationsClient#id}. |
+| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#project IntegrationsClient#project}. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.runAsServiceAccount">RunAsServiceAccount</a></code> | <code>*string</code> | User input run-as service account, if empty, will bring up a new default service account. |
 | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts">IntegrationsClientTimeouts</a></code> | timeouts block. |
 
@@ -1185,7 +1123,7 @@ Location *string
 
 Location in which client needs to be provisioned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#location IntegrationsClient#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#location IntegrationsClient#location}
 
 ---
 
@@ -1199,7 +1137,7 @@ CloudKmsConfig IntegrationsClientCloudKmsConfig
 
 cloud_kms_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#cloud_kms_config IntegrationsClient#cloud_kms_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#cloud_kms_config IntegrationsClient#cloud_kms_config}
 
 ---
 
@@ -1213,21 +1151,7 @@ CreateSampleIntegrations interface{}
 
 Indicates if sample integrations should be created along with provisioning.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#create_sample_integrations IntegrationsClient#create_sample_integrations}
-
----
-
-##### `CreateSampleWorkflows`<sup>Optional</sup> <a name="CreateSampleWorkflows" id="@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.createSampleWorkflows"></a>
-
-```go
-CreateSampleWorkflows interface{}
-```
-
-- *Type:* interface{}
-
-Indicates if sample workflow should be created along with provisioning.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#create_sample_workflows IntegrationsClient#create_sample_workflows}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#create_sample_integrations IntegrationsClient#create_sample_integrations}
 
 ---
 
@@ -1239,7 +1163,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#id IntegrationsClient#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#id IntegrationsClient#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1254,21 +1178,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#project IntegrationsClient#project}.
-
----
-
-##### `ProvisionGmek`<sup>Optional</sup> <a name="ProvisionGmek" id="@cdktf/provider-google.integrationsClient.IntegrationsClientConfig.property.provisionGmek"></a>
-
-```go
-ProvisionGmek interface{}
-```
-
-- *Type:* interface{}
-
-Indicates provision with GMEK or CMEK.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#provision_gmek IntegrationsClient#provision_gmek}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#project IntegrationsClient#project}.
 
 ---
 
@@ -1282,7 +1192,7 @@ RunAsServiceAccount *string
 
 User input run-as service account, if empty, will bring up a new default service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#run_as_service_account IntegrationsClient#run_as_service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#run_as_service_account IntegrationsClient#run_as_service_account}
 
 ---
 
@@ -1296,7 +1206,7 @@ Timeouts IntegrationsClientTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#timeouts IntegrationsClient#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#timeouts IntegrationsClient#timeouts}
 
 ---
 
@@ -1305,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 &integrationsclient.IntegrationsClientTimeouts {
 	Create: *string,
@@ -1317,8 +1227,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#create IntegrationsClient#create}. |
-| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#delete IntegrationsClient#delete}. |
+| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#create IntegrationsClient#create}. |
+| <code><a href="#@cdktf/provider-google.integrationsClient.IntegrationsClientTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#delete IntegrationsClient#delete}. |
 
 ---
 
@@ -1330,7 +1240,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#create IntegrationsClient#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#create IntegrationsClient#create}.
 
 ---
 
@@ -1342,7 +1252,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/integrations_client#delete IntegrationsClient#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/integrations_client#delete IntegrationsClient#delete}.
 
 ---
 
@@ -1353,7 +1263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationsClient.IntegrationsClientCloudKmsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 integrationsclient.NewIntegrationsClientCloudKmsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationsClientCloudKmsConfigOutputReference
 ```
@@ -1726,7 +1636,7 @@ func InternalValue() IntegrationsClientCloudKmsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.integrationsClient.IntegrationsClientTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/integrationsclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/integrationsclient"
 
 integrationsclient.NewIntegrationsClientTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IntegrationsClientTimeoutsOutputReference
 ```

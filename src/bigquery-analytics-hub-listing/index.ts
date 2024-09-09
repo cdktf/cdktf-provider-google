@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing
+// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,41 +15,41 @@ export interface BigqueryAnalyticsHubListingConfig extends cdktf.TerraformMetaAr
   /**
   * Categories of the listing. Up to two categories are allowed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#categories BigqueryAnalyticsHubListing#categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#categories BigqueryAnalyticsHubListing#categories}
   */
   readonly categories?: string[];
   /**
   * The ID of the data exchange. Must contain only Unicode letters, numbers (0-9), underscores (_). Should not use characters that require URL-escaping, or characters outside of ASCII, spaces.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#data_exchange_id BigqueryAnalyticsHubListing#data_exchange_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#data_exchange_id BigqueryAnalyticsHubListing#data_exchange_id}
   */
   readonly dataExchangeId: string;
   /**
   * Short description of the listing. The description must not contain Unicode non-characters and C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#description BigqueryAnalyticsHubListing#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#description BigqueryAnalyticsHubListing#description}
   */
   readonly description?: string;
   /**
   * Human-readable display name of the listing. The display name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), ampersands (&) and can't start or end with spaces.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#display_name BigqueryAnalyticsHubListing#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#display_name BigqueryAnalyticsHubListing#display_name}
   */
   readonly displayName: string;
   /**
   * Documentation describing the listing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#documentation BigqueryAnalyticsHubListing#documentation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#documentation BigqueryAnalyticsHubListing#documentation}
   */
   readonly documentation?: string;
   /**
   * Base64 encoded image representing the listing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#icon BigqueryAnalyticsHubListing#icon}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#icon BigqueryAnalyticsHubListing#icon}
   */
   readonly icon?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#id BigqueryAnalyticsHubListing#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#id BigqueryAnalyticsHubListing#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -58,69 +58,193 @@ export interface BigqueryAnalyticsHubListingConfig extends cdktf.TerraformMetaAr
   /**
   * The ID of the listing. Must contain only Unicode letters, numbers (0-9), underscores (_). Should not use characters that require URL-escaping, or characters outside of ASCII, spaces.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#listing_id BigqueryAnalyticsHubListing#listing_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#listing_id BigqueryAnalyticsHubListing#listing_id}
   */
   readonly listingId: string;
   /**
   * The name of the location this data exchange listing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#location BigqueryAnalyticsHubListing#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#location BigqueryAnalyticsHubListing#location}
   */
   readonly location: string;
   /**
   * Email or URL of the primary point of contact of the listing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#primary_contact BigqueryAnalyticsHubListing#primary_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#primary_contact BigqueryAnalyticsHubListing#primary_contact}
   */
   readonly primaryContact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#project BigqueryAnalyticsHubListing#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#project BigqueryAnalyticsHubListing#project}
   */
   readonly project?: string;
   /**
   * Email or URL of the request access of the listing. Subscribers can use this reference to request access.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#request_access BigqueryAnalyticsHubListing#request_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#request_access BigqueryAnalyticsHubListing#request_access}
   */
   readonly requestAccess?: string;
   /**
   * bigquery_dataset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#bigquery_dataset BigqueryAnalyticsHubListing#bigquery_dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#bigquery_dataset BigqueryAnalyticsHubListing#bigquery_dataset}
   */
   readonly bigqueryDataset: BigqueryAnalyticsHubListingBigqueryDataset;
   /**
   * data_provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#data_provider BigqueryAnalyticsHubListing#data_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#data_provider BigqueryAnalyticsHubListing#data_provider}
   */
   readonly dataProvider?: BigqueryAnalyticsHubListingDataProvider;
   /**
   * publisher block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#publisher BigqueryAnalyticsHubListing#publisher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#publisher BigqueryAnalyticsHubListing#publisher}
   */
   readonly publisher?: BigqueryAnalyticsHubListingPublisher;
   /**
   * restricted_export_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#restricted_export_config BigqueryAnalyticsHubListing#restricted_export_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#restricted_export_config BigqueryAnalyticsHubListing#restricted_export_config}
   */
   readonly restrictedExportConfig?: BigqueryAnalyticsHubListingRestrictedExportConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#timeouts BigqueryAnalyticsHubListing#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#timeouts BigqueryAnalyticsHubListing#timeouts}
   */
   readonly timeouts?: BigqueryAnalyticsHubListingTimeouts;
+}
+export interface BigqueryAnalyticsHubListingBigqueryDatasetSelectedResources {
+  /**
+  * Format: For table: projects/{projectId}/datasets/{datasetId}/tables/{tableId} Example:"projects/test_project/datasets/test_dataset/tables/test_table"
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#table BigqueryAnalyticsHubListing#table}
+  */
+  readonly table?: string;
+}
+
+export function bigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesToTerraform(struct?: BigqueryAnalyticsHubListingBigqueryDatasetSelectedResources | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    table: cdktf.stringToTerraform(struct!.table),
+  }
+}
+
+
+export function bigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesToHclTerraform(struct?: BigqueryAnalyticsHubListingBigqueryDatasetSelectedResources | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    table: {
+      value: cdktf.stringToHclTerraform(struct!.table),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class BigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BigqueryAnalyticsHubListingBigqueryDatasetSelectedResources | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._table !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.table = this._table;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryAnalyticsHubListingBigqueryDatasetSelectedResources | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._table = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._table = value.table;
+    }
+  }
+
+  // table - computed: false, optional: true, required: false
+  private _table?: string; 
+  public get table() {
+    return this.getStringAttribute('table');
+  }
+  public set table(value: string) {
+    this._table = value;
+  }
+  public resetTable() {
+    this._table = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table;
+  }
+}
+
+export class BigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesList extends cdktf.ComplexList {
+  public internalValue? : BigqueryAnalyticsHubListingBigqueryDatasetSelectedResources[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesOutputReference {
+    return new BigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface BigqueryAnalyticsHubListingBigqueryDataset {
   /**
   * Resource name of the dataset source for this listing. e.g. projects/myproject/datasets/123
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#dataset BigqueryAnalyticsHubListing#dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#dataset BigqueryAnalyticsHubListing#dataset}
   */
   readonly dataset: string;
+  /**
+  * selected_resources block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#selected_resources BigqueryAnalyticsHubListing#selected_resources}
+  */
+  readonly selectedResources?: BigqueryAnalyticsHubListingBigqueryDatasetSelectedResources[] | cdktf.IResolvable;
 }
 
 export function bigqueryAnalyticsHubListingBigqueryDatasetToTerraform(struct?: BigqueryAnalyticsHubListingBigqueryDatasetOutputReference | BigqueryAnalyticsHubListingBigqueryDataset): any {
@@ -130,6 +254,7 @@ export function bigqueryAnalyticsHubListingBigqueryDatasetToTerraform(struct?: B
   }
   return {
     dataset: cdktf.stringToTerraform(struct!.dataset),
+    selected_resources: cdktf.listMapper(bigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesToTerraform, true)(struct!.selectedResources),
   }
 }
 
@@ -145,6 +270,12 @@ export function bigqueryAnalyticsHubListingBigqueryDatasetToHclTerraform(struct?
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    selected_resources: {
+      value: cdktf.listMapperHcl(bigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesToHclTerraform, true)(struct!.selectedResources),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesList",
     },
   };
 
@@ -170,6 +301,10 @@ export class BigqueryAnalyticsHubListingBigqueryDatasetOutputReference extends c
       hasAnyValues = true;
       internalValueResult.dataset = this._dataset;
     }
+    if (this._selectedResources?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selectedResources = this._selectedResources?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -177,10 +312,12 @@ export class BigqueryAnalyticsHubListingBigqueryDatasetOutputReference extends c
     if (value === undefined) {
       this.isEmptyObject = false;
       this._dataset = undefined;
+      this._selectedResources.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._dataset = value.dataset;
+      this._selectedResources.internalValue = value.selectedResources;
     }
   }
 
@@ -196,18 +333,34 @@ export class BigqueryAnalyticsHubListingBigqueryDatasetOutputReference extends c
   public get datasetInput() {
     return this._dataset;
   }
+
+  // selected_resources - computed: false, optional: true, required: false
+  private _selectedResources = new BigqueryAnalyticsHubListingBigqueryDatasetSelectedResourcesList(this, "selected_resources", false);
+  public get selectedResources() {
+    return this._selectedResources;
+  }
+  public putSelectedResources(value: BigqueryAnalyticsHubListingBigqueryDatasetSelectedResources[] | cdktf.IResolvable) {
+    this._selectedResources.internalValue = value;
+  }
+  public resetSelectedResources() {
+    this._selectedResources.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectedResourcesInput() {
+    return this._selectedResources.internalValue;
+  }
 }
 export interface BigqueryAnalyticsHubListingDataProvider {
   /**
   * Name of the data provider.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#name BigqueryAnalyticsHubListing#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#name BigqueryAnalyticsHubListing#name}
   */
   readonly name: string;
   /**
   * Email or URL of the data provider.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#primary_contact BigqueryAnalyticsHubListing#primary_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#primary_contact BigqueryAnalyticsHubListing#primary_contact}
   */
   readonly primaryContact?: string;
 }
@@ -319,13 +472,13 @@ export interface BigqueryAnalyticsHubListingPublisher {
   /**
   * Name of the listing publisher.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#name BigqueryAnalyticsHubListing#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#name BigqueryAnalyticsHubListing#name}
   */
   readonly name: string;
   /**
   * Email or URL of the listing publisher.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#primary_contact BigqueryAnalyticsHubListing#primary_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#primary_contact BigqueryAnalyticsHubListing#primary_contact}
   */
   readonly primaryContact?: string;
 }
@@ -437,13 +590,13 @@ export interface BigqueryAnalyticsHubListingRestrictedExportConfig {
   /**
   * If true, enable restricted export.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#enabled BigqueryAnalyticsHubListing#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#enabled BigqueryAnalyticsHubListing#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * If true, restrict export of query result derived from restricted linked dataset table.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#restrict_query_result BigqueryAnalyticsHubListing#restrict_query_result}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#restrict_query_result BigqueryAnalyticsHubListing#restrict_query_result}
   */
   readonly restrictQueryResult?: boolean | cdktf.IResolvable;
 }
@@ -538,6 +691,11 @@ export class BigqueryAnalyticsHubListingRestrictedExportConfigOutputReference ex
     return this._enabled;
   }
 
+  // restrict_direct_table_access - computed: true, optional: false, required: false
+  public get restrictDirectTableAccess() {
+    return this.getBooleanAttribute('restrict_direct_table_access');
+  }
+
   // restrict_query_result - computed: false, optional: true, required: false
   private _restrictQueryResult?: boolean | cdktf.IResolvable; 
   public get restrictQueryResult() {
@@ -556,15 +714,15 @@ export class BigqueryAnalyticsHubListingRestrictedExportConfigOutputReference ex
 }
 export interface BigqueryAnalyticsHubListingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#create BigqueryAnalyticsHubListing#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#create BigqueryAnalyticsHubListing#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#delete BigqueryAnalyticsHubListing#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#delete BigqueryAnalyticsHubListing#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#update BigqueryAnalyticsHubListing#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#update BigqueryAnalyticsHubListing#update}
   */
   readonly update?: string;
 }
@@ -716,7 +874,7 @@ export class BigqueryAnalyticsHubListingTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing google_bigquery_analytics_hub_listing}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing google_bigquery_analytics_hub_listing}
 */
 export class BigqueryAnalyticsHubListing extends cdktf.TerraformResource {
 
@@ -732,7 +890,7 @@ export class BigqueryAnalyticsHubListing extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigqueryAnalyticsHubListing resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigqueryAnalyticsHubListing to import
-  * @param importFromId The id of the existing BigqueryAnalyticsHubListing that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigqueryAnalyticsHubListing that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigqueryAnalyticsHubListing to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -744,7 +902,7 @@ export class BigqueryAnalyticsHubListing extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_analytics_hub_listing google_bigquery_analytics_hub_listing} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_analytics_hub_listing google_bigquery_analytics_hub_listing} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -755,8 +913,8 @@ export class BigqueryAnalyticsHubListing extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_analytics_hub_listing',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.43.1',
-        providerVersionConstraint: '~> 5.0'
+        providerVersion: '6.1.0',
+        providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

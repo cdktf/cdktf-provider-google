@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config
+// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,35 +19,35 @@ export interface BigqueryDataTransferConfigConfig extends cdktf.TerraformMetaArg
   * just [today-1]. Only valid if the data source supports the feature.
   * Set the value to 0 to use the default value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#data_refresh_window_days BigqueryDataTransferConfig#data_refresh_window_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#data_refresh_window_days BigqueryDataTransferConfig#data_refresh_window_days}
   */
   readonly dataRefreshWindowDays?: number;
   /**
   * The data source id. Cannot be changed once the transfer config is created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#data_source_id BigqueryDataTransferConfig#data_source_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#data_source_id BigqueryDataTransferConfig#data_source_id}
   */
   readonly dataSourceId: string;
   /**
   * The BigQuery target dataset id.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#destination_dataset_id BigqueryDataTransferConfig#destination_dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#destination_dataset_id BigqueryDataTransferConfig#destination_dataset_id}
   */
   readonly destinationDatasetId?: string;
   /**
   * When set to true, no runs are scheduled for a given transfer.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#disabled BigqueryDataTransferConfig#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#disabled BigqueryDataTransferConfig#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The user specified display name for the transfer config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#display_name BigqueryDataTransferConfig#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#display_name BigqueryDataTransferConfig#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#id BigqueryDataTransferConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#id BigqueryDataTransferConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -57,14 +57,14 @@ export interface BigqueryDataTransferConfigConfig extends cdktf.TerraformMetaArg
   * The geographic location where the transfer config should reside.
   * Examples: US, EU, asia-northeast1. The default value is US.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#location BigqueryDataTransferConfig#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#location BigqueryDataTransferConfig#location}
   */
   readonly location?: string;
   /**
   * Pub/Sub topic where notifications will be sent after transfer runs
   * associated with this transfer config finish.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#notification_pubsub_topic BigqueryDataTransferConfig#notification_pubsub_topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#notification_pubsub_topic BigqueryDataTransferConfig#notification_pubsub_topic}
   */
   readonly notificationPubsubTopic?: string;
   /**
@@ -74,11 +74,11 @@ export interface BigqueryDataTransferConfigConfig extends cdktf.TerraformMetaArg
   * 
   * **NOTE** : If you are attempting to update a parameter that cannot be updated (due to api limitations) [please force recreation of the resource](https://www.terraform.io/cli/state/taint#forcing-re-creation-of-resources).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#params BigqueryDataTransferConfig#params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#params BigqueryDataTransferConfig#params}
   */
   readonly params: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#project BigqueryDataTransferConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#project BigqueryDataTransferConfig#project}
   */
   readonly project?: string;
   /**
@@ -92,7 +92,7 @@ export interface BigqueryDataTransferConfigConfig extends cdktf.TerraformMetaArg
   * NOTE: The minimum interval time between recurring transfers depends
   * on the data source; refer to the documentation for your data source.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#schedule BigqueryDataTransferConfig#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#schedule BigqueryDataTransferConfig#schedule}
   */
   readonly schedule?: string;
   /**
@@ -100,31 +100,37 @@ export interface BigqueryDataTransferConfigConfig extends cdktf.TerraformMetaArg
   * be created with this service account credentials. It requires that
   * requesting user calling this API has permissions to act as this service account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#service_account_name BigqueryDataTransferConfig#service_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#service_account_name BigqueryDataTransferConfig#service_account_name}
   */
   readonly serviceAccountName?: string;
   /**
   * email_preferences block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#email_preferences BigqueryDataTransferConfig#email_preferences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#email_preferences BigqueryDataTransferConfig#email_preferences}
   */
   readonly emailPreferences?: BigqueryDataTransferConfigEmailPreferences;
   /**
+  * encryption_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#encryption_configuration BigqueryDataTransferConfig#encryption_configuration}
+  */
+  readonly encryptionConfiguration?: BigqueryDataTransferConfigEncryptionConfiguration;
+  /**
   * schedule_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#schedule_options BigqueryDataTransferConfig#schedule_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#schedule_options BigqueryDataTransferConfig#schedule_options}
   */
   readonly scheduleOptions?: BigqueryDataTransferConfigScheduleOptions;
   /**
   * sensitive_params block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#sensitive_params BigqueryDataTransferConfig#sensitive_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#sensitive_params BigqueryDataTransferConfig#sensitive_params}
   */
   readonly sensitiveParams?: BigqueryDataTransferConfigSensitiveParams;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#timeouts BigqueryDataTransferConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#timeouts BigqueryDataTransferConfig#timeouts}
   */
   readonly timeouts?: BigqueryDataTransferConfigTimeouts;
 }
@@ -132,7 +138,7 @@ export interface BigqueryDataTransferConfigEmailPreferences {
   /**
   * If true, email notifications will be sent on transfer run failures.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#enable_failure_email BigqueryDataTransferConfig#enable_failure_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#enable_failure_email BigqueryDataTransferConfig#enable_failure_email}
   */
   readonly enableFailureEmail: boolean | cdktf.IResolvable;
 }
@@ -211,6 +217,89 @@ export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends c
     return this._enableFailureEmail;
   }
 }
+export interface BigqueryDataTransferConfigEncryptionConfiguration {
+  /**
+  * The name of the KMS key used for encrypting BigQuery data.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#kms_key_name BigqueryDataTransferConfig#kms_key_name}
+  */
+  readonly kmsKeyName: string;
+}
+
+export function bigqueryDataTransferConfigEncryptionConfigurationToTerraform(struct?: BigqueryDataTransferConfigEncryptionConfigurationOutputReference | BigqueryDataTransferConfigEncryptionConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
+
+export function bigqueryDataTransferConfigEncryptionConfigurationToHclTerraform(struct?: BigqueryDataTransferConfigEncryptionConfigurationOutputReference | BigqueryDataTransferConfigEncryptionConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class BigqueryDataTransferConfigEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryDataTransferConfigEncryptionConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDataTransferConfigEncryptionConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeyName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeyName = value.kmsKeyName;
+    }
+  }
+
+  // kms_key_name - computed: false, optional: false, required: true
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
+  }
+}
 export interface BigqueryDataTransferConfigScheduleOptions {
   /**
   * If true, automatic scheduling of data transfer runs for this
@@ -219,7 +308,7 @@ export interface BigqueryDataTransferConfigScheduleOptions {
   * scheduling is disabled, the TransferConfig.schedule field will
   * be ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#disable_auto_scheduling BigqueryDataTransferConfig#disable_auto_scheduling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#disable_auto_scheduling BigqueryDataTransferConfig#disable_auto_scheduling}
   */
   readonly disableAutoScheduling?: boolean | cdktf.IResolvable;
   /**
@@ -228,7 +317,7 @@ export interface BigqueryDataTransferConfigScheduleOptions {
   * moment. The time when a data transfer can be triggered manually is not
   * limited by this option.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#end_time BigqueryDataTransferConfig#end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#end_time BigqueryDataTransferConfig#end_time}
   */
   readonly endTime?: string;
   /**
@@ -238,7 +327,7 @@ export interface BigqueryDataTransferConfigScheduleOptions {
   * moment. The time when a data transfer can be triggered manually is not
   * limited by this option.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#start_time BigqueryDataTransferConfig#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#start_time BigqueryDataTransferConfig#start_time}
   */
   readonly startTime?: string;
 }
@@ -382,7 +471,7 @@ export interface BigqueryDataTransferConfigSensitiveParams {
   /**
   * The Secret Access Key of the AWS account transferring data from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#secret_access_key BigqueryDataTransferConfig#secret_access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#secret_access_key BigqueryDataTransferConfig#secret_access_key}
   */
   readonly secretAccessKey: string;
 }
@@ -463,15 +552,15 @@ export class BigqueryDataTransferConfigSensitiveParamsOutputReference extends cd
 }
 export interface BigqueryDataTransferConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#create BigqueryDataTransferConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#create BigqueryDataTransferConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#delete BigqueryDataTransferConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#delete BigqueryDataTransferConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#update BigqueryDataTransferConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#update BigqueryDataTransferConfig#update}
   */
   readonly update?: string;
 }
@@ -623,7 +712,7 @@ export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config google_bigquery_data_transfer_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config google_bigquery_data_transfer_config}
 */
 export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
 
@@ -639,7 +728,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigqueryDataTransferConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigqueryDataTransferConfig to import
-  * @param importFromId The id of the existing BigqueryDataTransferConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigqueryDataTransferConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigqueryDataTransferConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -651,7 +740,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/bigquery_data_transfer_config google_bigquery_data_transfer_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/bigquery_data_transfer_config google_bigquery_data_transfer_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -662,8 +751,8 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_data_transfer_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.43.1',
-        providerVersionConstraint: '~> 5.0'
+        providerVersion: '6.1.0',
+        providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -686,6 +775,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
     this._schedule = config.schedule;
     this._serviceAccountName = config.serviceAccountName;
     this._emailPreferences.internalValue = config.emailPreferences;
+    this._encryptionConfiguration.internalValue = config.encryptionConfiguration;
     this._scheduleOptions.internalValue = config.scheduleOptions;
     this._sensitiveParams.internalValue = config.sensitiveParams;
     this._timeouts.internalValue = config.timeouts;
@@ -899,6 +989,22 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
     return this._emailPreferences.internalValue;
   }
 
+  // encryption_configuration - computed: false, optional: true, required: false
+  private _encryptionConfiguration = new BigqueryDataTransferConfigEncryptionConfigurationOutputReference(this, "encryption_configuration");
+  public get encryptionConfiguration() {
+    return this._encryptionConfiguration;
+  }
+  public putEncryptionConfiguration(value: BigqueryDataTransferConfigEncryptionConfiguration) {
+    this._encryptionConfiguration.internalValue = value;
+  }
+  public resetEncryptionConfiguration() {
+    this._encryptionConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionConfigurationInput() {
+    return this._encryptionConfiguration.internalValue;
+  }
+
   // schedule_options - computed: false, optional: true, required: false
   private _scheduleOptions = new BigqueryDataTransferConfigScheduleOptionsOutputReference(this, "schedule_options");
   public get scheduleOptions() {
@@ -966,6 +1072,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
       schedule: cdktf.stringToTerraform(this._schedule),
       service_account_name: cdktf.stringToTerraform(this._serviceAccountName),
       email_preferences: bigqueryDataTransferConfigEmailPreferencesToTerraform(this._emailPreferences.internalValue),
+      encryption_configuration: bigqueryDataTransferConfigEncryptionConfigurationToTerraform(this._encryptionConfiguration.internalValue),
       schedule_options: bigqueryDataTransferConfigScheduleOptionsToTerraform(this._scheduleOptions.internalValue),
       sensitive_params: bigqueryDataTransferConfigSensitiveParamsToTerraform(this._sensitiveParams.internalValue),
       timeouts: bigqueryDataTransferConfigTimeoutsToTerraform(this._timeouts.internalValue),
@@ -1051,6 +1158,12 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "BigqueryDataTransferConfigEmailPreferencesList",
+      },
+      encryption_configuration: {
+        value: bigqueryDataTransferConfigEncryptionConfigurationToHclTerraform(this._encryptionConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BigqueryDataTransferConfigEncryptionConfigurationList",
       },
       schedule_options: {
         value: bigqueryDataTransferConfigScheduleOptionsToHclTerraform(this._scheduleOptions.internalValue),

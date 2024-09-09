@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue
+// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface CloudTasksQueueConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#id CloudTasksQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#id CloudTasksQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,47 +22,53 @@ export interface CloudTasksQueueConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location of the queue
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#location CloudTasksQueue#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#location CloudTasksQueue#location}
   */
   readonly location: string;
   /**
   * The queue name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#name CloudTasksQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#name CloudTasksQueue#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#project CloudTasksQueue#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#project CloudTasksQueue#project}
   */
   readonly project?: string;
   /**
   * app_engine_routing_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#app_engine_routing_override CloudTasksQueue#app_engine_routing_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#app_engine_routing_override CloudTasksQueue#app_engine_routing_override}
   */
   readonly appEngineRoutingOverride?: CloudTasksQueueAppEngineRoutingOverride;
   /**
+  * http_target block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#http_target CloudTasksQueue#http_target}
+  */
+  readonly httpTarget?: CloudTasksQueueHttpTarget;
+  /**
   * rate_limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#rate_limits CloudTasksQueue#rate_limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#rate_limits CloudTasksQueue#rate_limits}
   */
   readonly rateLimits?: CloudTasksQueueRateLimits;
   /**
   * retry_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#retry_config CloudTasksQueue#retry_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#retry_config CloudTasksQueue#retry_config}
   */
   readonly retryConfig?: CloudTasksQueueRetryConfig;
   /**
   * stackdriver_logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#stackdriver_logging_config CloudTasksQueue#stackdriver_logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#stackdriver_logging_config CloudTasksQueue#stackdriver_logging_config}
   */
   readonly stackdriverLoggingConfig?: CloudTasksQueueStackdriverLoggingConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#timeouts CloudTasksQueue#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#timeouts CloudTasksQueue#timeouts}
   */
   readonly timeouts?: CloudTasksQueueTimeouts;
 }
@@ -72,7 +78,7 @@ export interface CloudTasksQueueAppEngineRoutingOverride {
   * 
   * By default, the task is sent to an instance which is available when the task is attempted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#instance CloudTasksQueue#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#instance CloudTasksQueue#instance}
   */
   readonly instance?: string;
   /**
@@ -80,7 +86,7 @@ export interface CloudTasksQueueAppEngineRoutingOverride {
   * 
   * By default, the task is sent to the service which is the default service when the task is attempted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#service CloudTasksQueue#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#service CloudTasksQueue#service}
   */
   readonly service?: string;
   /**
@@ -88,7 +94,7 @@ export interface CloudTasksQueueAppEngineRoutingOverride {
   * 
   * By default, the task is sent to the version which is the default version when the task is attempted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#version CloudTasksQueue#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#version CloudTasksQueue#version}
   */
   readonly version?: string;
 }
@@ -233,6 +239,1153 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
     return this._version;
   }
 }
+export interface CloudTasksQueueHttpTargetHeaderOverridesHeader {
+  /**
+  * The Key of the header.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#key CloudTasksQueue#key}
+  */
+  readonly key: string;
+  /**
+  * The Value of the header.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#value CloudTasksQueue#value}
+  */
+  readonly value: string;
+}
+
+export function cloudTasksQueueHttpTargetHeaderOverridesHeaderToTerraform(struct?: CloudTasksQueueHttpTargetHeaderOverridesHeaderOutputReference | CloudTasksQueueHttpTargetHeaderOverridesHeader): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function cloudTasksQueueHttpTargetHeaderOverridesHeaderToHclTerraform(struct?: CloudTasksQueueHttpTargetHeaderOverridesHeaderOutputReference | CloudTasksQueueHttpTargetHeaderOverridesHeader): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudTasksQueueHttpTargetHeaderOverridesHeaderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudTasksQueueHttpTargetHeaderOverridesHeader | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueHttpTargetHeaderOverridesHeader | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+export interface CloudTasksQueueHttpTargetHeaderOverrides {
+  /**
+  * header block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#header CloudTasksQueue#header}
+  */
+  readonly header: CloudTasksQueueHttpTargetHeaderOverridesHeader;
+}
+
+export function cloudTasksQueueHttpTargetHeaderOverridesToTerraform(struct?: CloudTasksQueueHttpTargetHeaderOverrides | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    header: cloudTasksQueueHttpTargetHeaderOverridesHeaderToTerraform(struct!.header),
+  }
+}
+
+
+export function cloudTasksQueueHttpTargetHeaderOverridesToHclTerraform(struct?: CloudTasksQueueHttpTargetHeaderOverrides | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    header: {
+      value: cloudTasksQueueHttpTargetHeaderOverridesHeaderToHclTerraform(struct!.header),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudTasksQueueHttpTargetHeaderOverridesHeaderList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudTasksQueueHttpTargetHeaderOverridesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudTasksQueueHttpTargetHeaderOverrides | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._header?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.header = this._header?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueHttpTargetHeaderOverrides | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._header.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._header.internalValue = value.header;
+    }
+  }
+
+  // header - computed: false, optional: false, required: true
+  private _header = new CloudTasksQueueHttpTargetHeaderOverridesHeaderOutputReference(this, "header");
+  public get header() {
+    return this._header;
+  }
+  public putHeader(value: CloudTasksQueueHttpTargetHeaderOverridesHeader) {
+    this._header.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerInput() {
+    return this._header.internalValue;
+  }
+}
+
+export class CloudTasksQueueHttpTargetHeaderOverridesList extends cdktf.ComplexList {
+  public internalValue? : CloudTasksQueueHttpTargetHeaderOverrides[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudTasksQueueHttpTargetHeaderOverridesOutputReference {
+    return new CloudTasksQueueHttpTargetHeaderOverridesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudTasksQueueHttpTargetOauthToken {
+  /**
+  * OAuth scope to be used for generating OAuth access token.
+  * If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#scope CloudTasksQueue#scope}
+  */
+  readonly scope?: string;
+  /**
+  * Service account email to be used for generating OAuth token.
+  * The service account must be within the same project as the queue.
+  * The caller must have iam.serviceAccounts.actAs permission for the service account.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#service_account_email CloudTasksQueue#service_account_email}
+  */
+  readonly serviceAccountEmail: string;
+}
+
+export function cloudTasksQueueHttpTargetOauthTokenToTerraform(struct?: CloudTasksQueueHttpTargetOauthTokenOutputReference | CloudTasksQueueHttpTargetOauthToken): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    scope: cdktf.stringToTerraform(struct!.scope),
+    service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
+  }
+}
+
+
+export function cloudTasksQueueHttpTargetOauthTokenToHclTerraform(struct?: CloudTasksQueueHttpTargetOauthTokenOutputReference | CloudTasksQueueHttpTargetOauthToken): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    scope: {
+      value: cdktf.stringToHclTerraform(struct!.scope),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_account_email: {
+      value: cdktf.stringToHclTerraform(struct!.serviceAccountEmail),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudTasksQueueHttpTargetOauthTokenOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudTasksQueueHttpTargetOauthToken | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._scope !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scope = this._scope;
+    }
+    if (this._serviceAccountEmail !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccountEmail = this._serviceAccountEmail;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueHttpTargetOauthToken | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._scope = undefined;
+      this._serviceAccountEmail = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._scope = value.scope;
+      this._serviceAccountEmail = value.serviceAccountEmail;
+    }
+  }
+
+  // scope - computed: true, optional: true, required: false
+  private _scope?: string; 
+  public get scope() {
+    return this.getStringAttribute('scope');
+  }
+  public set scope(value: string) {
+    this._scope = value;
+  }
+  public resetScope() {
+    this._scope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope;
+  }
+
+  // service_account_email - computed: false, optional: false, required: true
+  private _serviceAccountEmail?: string; 
+  public get serviceAccountEmail() {
+    return this.getStringAttribute('service_account_email');
+  }
+  public set serviceAccountEmail(value: string) {
+    this._serviceAccountEmail = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountEmailInput() {
+    return this._serviceAccountEmail;
+  }
+}
+export interface CloudTasksQueueHttpTargetOidcToken {
+  /**
+  * Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#audience CloudTasksQueue#audience}
+  */
+  readonly audience?: string;
+  /**
+  * Service account email to be used for generating OIDC token.
+  * The service account must be within the same project as the queue.
+  * The caller must have iam.serviceAccounts.actAs permission for the service account.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#service_account_email CloudTasksQueue#service_account_email}
+  */
+  readonly serviceAccountEmail: string;
+}
+
+export function cloudTasksQueueHttpTargetOidcTokenToTerraform(struct?: CloudTasksQueueHttpTargetOidcTokenOutputReference | CloudTasksQueueHttpTargetOidcToken): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    audience: cdktf.stringToTerraform(struct!.audience),
+    service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
+  }
+}
+
+
+export function cloudTasksQueueHttpTargetOidcTokenToHclTerraform(struct?: CloudTasksQueueHttpTargetOidcTokenOutputReference | CloudTasksQueueHttpTargetOidcToken): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    audience: {
+      value: cdktf.stringToHclTerraform(struct!.audience),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_account_email: {
+      value: cdktf.stringToHclTerraform(struct!.serviceAccountEmail),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudTasksQueueHttpTargetOidcTokenOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudTasksQueueHttpTargetOidcToken | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._audience !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.audience = this._audience;
+    }
+    if (this._serviceAccountEmail !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccountEmail = this._serviceAccountEmail;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueHttpTargetOidcToken | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._audience = undefined;
+      this._serviceAccountEmail = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._audience = value.audience;
+      this._serviceAccountEmail = value.serviceAccountEmail;
+    }
+  }
+
+  // audience - computed: true, optional: true, required: false
+  private _audience?: string; 
+  public get audience() {
+    return this.getStringAttribute('audience');
+  }
+  public set audience(value: string) {
+    this._audience = value;
+  }
+  public resetAudience() {
+    this._audience = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get audienceInput() {
+    return this._audience;
+  }
+
+  // service_account_email - computed: false, optional: false, required: true
+  private _serviceAccountEmail?: string; 
+  public get serviceAccountEmail() {
+    return this.getStringAttribute('service_account_email');
+  }
+  public set serviceAccountEmail(value: string) {
+    this._serviceAccountEmail = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountEmailInput() {
+    return this._serviceAccountEmail;
+  }
+}
+export interface CloudTasksQueueHttpTargetUriOverridePathOverride {
+  /**
+  * The URI path (e.g., /users/1234). Default is an empty string.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#path CloudTasksQueue#path}
+  */
+  readonly path?: string;
+}
+
+export function cloudTasksQueueHttpTargetUriOverridePathOverrideToTerraform(struct?: CloudTasksQueueHttpTargetUriOverridePathOverrideOutputReference | CloudTasksQueueHttpTargetUriOverridePathOverride): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
+
+export function cloudTasksQueueHttpTargetUriOverridePathOverrideToHclTerraform(struct?: CloudTasksQueueHttpTargetUriOverridePathOverrideOutputReference | CloudTasksQueueHttpTargetUriOverridePathOverride): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudTasksQueueHttpTargetUriOverridePathOverrideOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudTasksQueueHttpTargetUriOverridePathOverride | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueHttpTargetUriOverridePathOverride | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._path = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._path = value.path;
+    }
+  }
+
+  // path - computed: true, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+export interface CloudTasksQueueHttpTargetUriOverrideQueryOverride {
+  /**
+  * The query parameters (e.g., qparam1=123&qparam2=456). Default is an empty string.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#query_params CloudTasksQueue#query_params}
+  */
+  readonly queryParams?: string;
+}
+
+export function cloudTasksQueueHttpTargetUriOverrideQueryOverrideToTerraform(struct?: CloudTasksQueueHttpTargetUriOverrideQueryOverrideOutputReference | CloudTasksQueueHttpTargetUriOverrideQueryOverride): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    query_params: cdktf.stringToTerraform(struct!.queryParams),
+  }
+}
+
+
+export function cloudTasksQueueHttpTargetUriOverrideQueryOverrideToHclTerraform(struct?: CloudTasksQueueHttpTargetUriOverrideQueryOverrideOutputReference | CloudTasksQueueHttpTargetUriOverrideQueryOverride): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    query_params: {
+      value: cdktf.stringToHclTerraform(struct!.queryParams),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudTasksQueueHttpTargetUriOverrideQueryOverrideOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudTasksQueueHttpTargetUriOverrideQueryOverride | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._queryParams !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryParams = this._queryParams;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueHttpTargetUriOverrideQueryOverride | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._queryParams = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._queryParams = value.queryParams;
+    }
+  }
+
+  // query_params - computed: true, optional: true, required: false
+  private _queryParams?: string; 
+  public get queryParams() {
+    return this.getStringAttribute('query_params');
+  }
+  public set queryParams(value: string) {
+    this._queryParams = value;
+  }
+  public resetQueryParams() {
+    this._queryParams = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryParamsInput() {
+    return this._queryParams;
+  }
+}
+export interface CloudTasksQueueHttpTargetUriOverride {
+  /**
+  * Host override.
+  * 
+  * When specified, replaces the host part of the task URL.
+  * For example, if the task URL is "https://www.google.com", and host value
+  * is set to "example.net", the overridden URI will be changed to "https://example.net".
+  * Host value cannot be an empty string (INVALID_ARGUMENT).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#host CloudTasksQueue#host}
+  */
+  readonly host?: string;
+  /**
+  * Port override.
+  * 
+  * When specified, replaces the port part of the task URI.
+  * For instance, for a URI http://www.google.com/foo and port=123, the overridden URI becomes http://www.google.com:123/foo.
+  * Note that the port value must be a positive integer.
+  * Setting the port to 0 (Zero) clears the URI port.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#port CloudTasksQueue#port}
+  */
+  readonly port?: string;
+  /**
+  * Scheme override.
+  * 
+  * When specified, the task URI scheme is replaced by the provided value (HTTP or HTTPS). Possible values: ["HTTP", "HTTPS"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#scheme CloudTasksQueue#scheme}
+  */
+  readonly scheme?: string;
+  /**
+  * URI Override Enforce Mode
+  * 
+  * When specified, determines the Target UriOverride mode. If not specified, it defaults to ALWAYS. Possible values: ["ALWAYS", "IF_NOT_EXISTS"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#uri_override_enforce_mode CloudTasksQueue#uri_override_enforce_mode}
+  */
+  readonly uriOverrideEnforceMode?: string;
+  /**
+  * path_override block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#path_override CloudTasksQueue#path_override}
+  */
+  readonly pathOverride?: CloudTasksQueueHttpTargetUriOverridePathOverride;
+  /**
+  * query_override block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#query_override CloudTasksQueue#query_override}
+  */
+  readonly queryOverride?: CloudTasksQueueHttpTargetUriOverrideQueryOverride;
+}
+
+export function cloudTasksQueueHttpTargetUriOverrideToTerraform(struct?: CloudTasksQueueHttpTargetUriOverrideOutputReference | CloudTasksQueueHttpTargetUriOverride): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    host: cdktf.stringToTerraform(struct!.host),
+    port: cdktf.stringToTerraform(struct!.port),
+    scheme: cdktf.stringToTerraform(struct!.scheme),
+    uri_override_enforce_mode: cdktf.stringToTerraform(struct!.uriOverrideEnforceMode),
+    path_override: cloudTasksQueueHttpTargetUriOverridePathOverrideToTerraform(struct!.pathOverride),
+    query_override: cloudTasksQueueHttpTargetUriOverrideQueryOverrideToTerraform(struct!.queryOverride),
+  }
+}
+
+
+export function cloudTasksQueueHttpTargetUriOverrideToHclTerraform(struct?: CloudTasksQueueHttpTargetUriOverrideOutputReference | CloudTasksQueueHttpTargetUriOverride): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host: {
+      value: cdktf.stringToHclTerraform(struct!.host),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.stringToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scheme: {
+      value: cdktf.stringToHclTerraform(struct!.scheme),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    uri_override_enforce_mode: {
+      value: cdktf.stringToHclTerraform(struct!.uriOverrideEnforceMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path_override: {
+      value: cloudTasksQueueHttpTargetUriOverridePathOverrideToHclTerraform(struct!.pathOverride),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudTasksQueueHttpTargetUriOverridePathOverrideList",
+    },
+    query_override: {
+      value: cloudTasksQueueHttpTargetUriOverrideQueryOverrideToHclTerraform(struct!.queryOverride),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudTasksQueueHttpTargetUriOverrideQueryOverrideList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudTasksQueueHttpTargetUriOverrideOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudTasksQueueHttpTargetUriOverride | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._host !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.host = this._host;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._scheme !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheme = this._scheme;
+    }
+    if (this._uriOverrideEnforceMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uriOverrideEnforceMode = this._uriOverrideEnforceMode;
+    }
+    if (this._pathOverride?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pathOverride = this._pathOverride?.internalValue;
+    }
+    if (this._queryOverride?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryOverride = this._queryOverride?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueHttpTargetUriOverride | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._host = undefined;
+      this._port = undefined;
+      this._scheme = undefined;
+      this._uriOverrideEnforceMode = undefined;
+      this._pathOverride.internalValue = undefined;
+      this._queryOverride.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._host = value.host;
+      this._port = value.port;
+      this._scheme = value.scheme;
+      this._uriOverrideEnforceMode = value.uriOverrideEnforceMode;
+      this._pathOverride.internalValue = value.pathOverride;
+      this._queryOverride.internalValue = value.queryOverride;
+    }
+  }
+
+  // host - computed: false, optional: true, required: false
+  private _host?: string; 
+  public get host() {
+    return this.getStringAttribute('host');
+  }
+  public set host(value: string) {
+    this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: string; 
+  public get port() {
+    return this.getStringAttribute('port');
+  }
+  public set port(value: string) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // scheme - computed: true, optional: true, required: false
+  private _scheme?: string; 
+  public get scheme() {
+    return this.getStringAttribute('scheme');
+  }
+  public set scheme(value: string) {
+    this._scheme = value;
+  }
+  public resetScheme() {
+    this._scheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemeInput() {
+    return this._scheme;
+  }
+
+  // uri_override_enforce_mode - computed: true, optional: true, required: false
+  private _uriOverrideEnforceMode?: string; 
+  public get uriOverrideEnforceMode() {
+    return this.getStringAttribute('uri_override_enforce_mode');
+  }
+  public set uriOverrideEnforceMode(value: string) {
+    this._uriOverrideEnforceMode = value;
+  }
+  public resetUriOverrideEnforceMode() {
+    this._uriOverrideEnforceMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriOverrideEnforceModeInput() {
+    return this._uriOverrideEnforceMode;
+  }
+
+  // path_override - computed: false, optional: true, required: false
+  private _pathOverride = new CloudTasksQueueHttpTargetUriOverridePathOverrideOutputReference(this, "path_override");
+  public get pathOverride() {
+    return this._pathOverride;
+  }
+  public putPathOverride(value: CloudTasksQueueHttpTargetUriOverridePathOverride) {
+    this._pathOverride.internalValue = value;
+  }
+  public resetPathOverride() {
+    this._pathOverride.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathOverrideInput() {
+    return this._pathOverride.internalValue;
+  }
+
+  // query_override - computed: false, optional: true, required: false
+  private _queryOverride = new CloudTasksQueueHttpTargetUriOverrideQueryOverrideOutputReference(this, "query_override");
+  public get queryOverride() {
+    return this._queryOverride;
+  }
+  public putQueryOverride(value: CloudTasksQueueHttpTargetUriOverrideQueryOverride) {
+    this._queryOverride.internalValue = value;
+  }
+  public resetQueryOverride() {
+    this._queryOverride.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryOverrideInput() {
+    return this._queryOverride.internalValue;
+  }
+}
+export interface CloudTasksQueueHttpTarget {
+  /**
+  * The HTTP method to use for the request.
+  * 
+  * When specified, it overrides HttpRequest for the task.
+  * Note that if the value is set to GET the body of the task will be ignored at execution time. Possible values: ["HTTP_METHOD_UNSPECIFIED", "POST", "GET", "HEAD", "PUT", "DELETE", "PATCH", "OPTIONS"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#http_method CloudTasksQueue#http_method}
+  */
+  readonly httpMethod?: string;
+  /**
+  * header_overrides block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#header_overrides CloudTasksQueue#header_overrides}
+  */
+  readonly headerOverrides?: CloudTasksQueueHttpTargetHeaderOverrides[] | cdktf.IResolvable;
+  /**
+  * oauth_token block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#oauth_token CloudTasksQueue#oauth_token}
+  */
+  readonly oauthToken?: CloudTasksQueueHttpTargetOauthToken;
+  /**
+  * oidc_token block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#oidc_token CloudTasksQueue#oidc_token}
+  */
+  readonly oidcToken?: CloudTasksQueueHttpTargetOidcToken;
+  /**
+  * uri_override block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#uri_override CloudTasksQueue#uri_override}
+  */
+  readonly uriOverride?: CloudTasksQueueHttpTargetUriOverride;
+}
+
+export function cloudTasksQueueHttpTargetToTerraform(struct?: CloudTasksQueueHttpTargetOutputReference | CloudTasksQueueHttpTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    http_method: cdktf.stringToTerraform(struct!.httpMethod),
+    header_overrides: cdktf.listMapper(cloudTasksQueueHttpTargetHeaderOverridesToTerraform, true)(struct!.headerOverrides),
+    oauth_token: cloudTasksQueueHttpTargetOauthTokenToTerraform(struct!.oauthToken),
+    oidc_token: cloudTasksQueueHttpTargetOidcTokenToTerraform(struct!.oidcToken),
+    uri_override: cloudTasksQueueHttpTargetUriOverrideToTerraform(struct!.uriOverride),
+  }
+}
+
+
+export function cloudTasksQueueHttpTargetToHclTerraform(struct?: CloudTasksQueueHttpTargetOutputReference | CloudTasksQueueHttpTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    http_method: {
+      value: cdktf.stringToHclTerraform(struct!.httpMethod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    header_overrides: {
+      value: cdktf.listMapperHcl(cloudTasksQueueHttpTargetHeaderOverridesToHclTerraform, true)(struct!.headerOverrides),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudTasksQueueHttpTargetHeaderOverridesList",
+    },
+    oauth_token: {
+      value: cloudTasksQueueHttpTargetOauthTokenToHclTerraform(struct!.oauthToken),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudTasksQueueHttpTargetOauthTokenList",
+    },
+    oidc_token: {
+      value: cloudTasksQueueHttpTargetOidcTokenToHclTerraform(struct!.oidcToken),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudTasksQueueHttpTargetOidcTokenList",
+    },
+    uri_override: {
+      value: cloudTasksQueueHttpTargetUriOverrideToHclTerraform(struct!.uriOverride),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudTasksQueueHttpTargetUriOverrideList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudTasksQueueHttpTargetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudTasksQueueHttpTarget | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._httpMethod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpMethod = this._httpMethod;
+    }
+    if (this._headerOverrides?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerOverrides = this._headerOverrides?.internalValue;
+    }
+    if (this._oauthToken?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oauthToken = this._oauthToken?.internalValue;
+    }
+    if (this._oidcToken?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oidcToken = this._oidcToken?.internalValue;
+    }
+    if (this._uriOverride?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uriOverride = this._uriOverride?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueHttpTarget | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._httpMethod = undefined;
+      this._headerOverrides.internalValue = undefined;
+      this._oauthToken.internalValue = undefined;
+      this._oidcToken.internalValue = undefined;
+      this._uriOverride.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._httpMethod = value.httpMethod;
+      this._headerOverrides.internalValue = value.headerOverrides;
+      this._oauthToken.internalValue = value.oauthToken;
+      this._oidcToken.internalValue = value.oidcToken;
+      this._uriOverride.internalValue = value.uriOverride;
+    }
+  }
+
+  // http_method - computed: true, optional: true, required: false
+  private _httpMethod?: string; 
+  public get httpMethod() {
+    return this.getStringAttribute('http_method');
+  }
+  public set httpMethod(value: string) {
+    this._httpMethod = value;
+  }
+  public resetHttpMethod() {
+    this._httpMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpMethodInput() {
+    return this._httpMethod;
+  }
+
+  // header_overrides - computed: false, optional: true, required: false
+  private _headerOverrides = new CloudTasksQueueHttpTargetHeaderOverridesList(this, "header_overrides", false);
+  public get headerOverrides() {
+    return this._headerOverrides;
+  }
+  public putHeaderOverrides(value: CloudTasksQueueHttpTargetHeaderOverrides[] | cdktf.IResolvable) {
+    this._headerOverrides.internalValue = value;
+  }
+  public resetHeaderOverrides() {
+    this._headerOverrides.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerOverridesInput() {
+    return this._headerOverrides.internalValue;
+  }
+
+  // oauth_token - computed: false, optional: true, required: false
+  private _oauthToken = new CloudTasksQueueHttpTargetOauthTokenOutputReference(this, "oauth_token");
+  public get oauthToken() {
+    return this._oauthToken;
+  }
+  public putOauthToken(value: CloudTasksQueueHttpTargetOauthToken) {
+    this._oauthToken.internalValue = value;
+  }
+  public resetOauthToken() {
+    this._oauthToken.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauthTokenInput() {
+    return this._oauthToken.internalValue;
+  }
+
+  // oidc_token - computed: false, optional: true, required: false
+  private _oidcToken = new CloudTasksQueueHttpTargetOidcTokenOutputReference(this, "oidc_token");
+  public get oidcToken() {
+    return this._oidcToken;
+  }
+  public putOidcToken(value: CloudTasksQueueHttpTargetOidcToken) {
+    this._oidcToken.internalValue = value;
+  }
+  public resetOidcToken() {
+    this._oidcToken.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oidcTokenInput() {
+    return this._oidcToken.internalValue;
+  }
+
+  // uri_override - computed: false, optional: true, required: false
+  private _uriOverride = new CloudTasksQueueHttpTargetUriOverrideOutputReference(this, "uri_override");
+  public get uriOverride() {
+    return this._uriOverride;
+  }
+  public putUriOverride(value: CloudTasksQueueHttpTargetUriOverride) {
+    this._uriOverride.internalValue = value;
+  }
+  public resetUriOverride() {
+    this._uriOverride.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriOverrideInput() {
+    return this._uriOverride.internalValue;
+  }
+}
 export interface CloudTasksQueueRateLimits {
   /**
   * The maximum number of concurrent tasks that Cloud Tasks allows to
@@ -240,7 +1393,7 @@ export interface CloudTasksQueueRateLimits {
   * reached, Cloud Tasks stops dispatching tasks until the number of
   * concurrent requests decreases.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#max_concurrent_dispatches CloudTasksQueue#max_concurrent_dispatches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#max_concurrent_dispatches CloudTasksQueue#max_concurrent_dispatches}
   */
   readonly maxConcurrentDispatches?: number;
   /**
@@ -248,7 +1401,7 @@ export interface CloudTasksQueueRateLimits {
   * 
   * If unspecified when the queue is created, Cloud Tasks will pick the default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#max_dispatches_per_second CloudTasksQueue#max_dispatches_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#max_dispatches_per_second CloudTasksQueue#max_dispatches_per_second}
   */
   readonly maxDispatchesPerSecond?: number;
 }
@@ -377,7 +1530,7 @@ export interface CloudTasksQueueRetryConfig {
   * 
   * -1 indicates unlimited attempts.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#max_attempts CloudTasksQueue#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#max_attempts CloudTasksQueue#max_attempts}
   */
   readonly maxAttempts?: number;
   /**
@@ -385,7 +1538,7 @@ export interface CloudTasksQueueRetryConfig {
   * maxBackoff duration after it fails, if the queue's RetryConfig
   * specifies that the task should be retried.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#max_backoff CloudTasksQueue#max_backoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#max_backoff CloudTasksQueue#max_backoff}
   */
   readonly maxBackoff?: string;
   /**
@@ -395,7 +1548,7 @@ export interface CloudTasksQueueRetryConfig {
   * then increases linearly, and finally retries retries at intervals of maxBackoff
   * up to maxAttempts times.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#max_doublings CloudTasksQueue#max_doublings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#max_doublings CloudTasksQueue#max_doublings}
   */
   readonly maxDoublings?: number;
   /**
@@ -407,7 +1560,7 @@ export interface CloudTasksQueueRetryConfig {
   * 
   * If zero, then the task age is unlimited.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#max_retry_duration CloudTasksQueue#max_retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#max_retry_duration CloudTasksQueue#max_retry_duration}
   */
   readonly maxRetryDuration?: string;
   /**
@@ -415,7 +1568,7 @@ export interface CloudTasksQueueRetryConfig {
   * maxBackoff duration after it fails, if the queue's RetryConfig
   * specifies that the task should be retried.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#min_backoff CloudTasksQueue#min_backoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#min_backoff CloudTasksQueue#min_backoff}
   */
   readonly minBackoff?: string;
 }
@@ -619,7 +1772,7 @@ export interface CloudTasksQueueStackdriverLoggingConfig {
   * This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
   * default and means that no operations are logged.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#sampling_ratio CloudTasksQueue#sampling_ratio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#sampling_ratio CloudTasksQueue#sampling_ratio}
   */
   readonly samplingRatio: number;
 }
@@ -700,15 +1853,15 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
 }
 export interface CloudTasksQueueTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#create CloudTasksQueue#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#create CloudTasksQueue#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#delete CloudTasksQueue#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#delete CloudTasksQueue#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#update CloudTasksQueue#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#update CloudTasksQueue#update}
   */
   readonly update?: string;
 }
@@ -860,7 +2013,7 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue google_cloud_tasks_queue}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue google_cloud_tasks_queue}
 */
 export class CloudTasksQueue extends cdktf.TerraformResource {
 
@@ -876,7 +2029,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudTasksQueue resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudTasksQueue to import
-  * @param importFromId The id of the existing CloudTasksQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudTasksQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudTasksQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -888,7 +2041,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/cloud_tasks_queue google_cloud_tasks_queue} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_tasks_queue google_cloud_tasks_queue} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -899,8 +2052,8 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_tasks_queue',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '5.43.1',
-        providerVersionConstraint: '~> 5.0'
+        providerVersion: '6.1.0',
+        providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -915,6 +2068,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._appEngineRoutingOverride.internalValue = config.appEngineRoutingOverride;
+    this._httpTarget.internalValue = config.httpTarget;
     this._rateLimits.internalValue = config.rateLimits;
     this._retryConfig.internalValue = config.retryConfig;
     this._stackdriverLoggingConfig.internalValue = config.stackdriverLoggingConfig;
@@ -1002,6 +2156,22 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
     return this._appEngineRoutingOverride.internalValue;
   }
 
+  // http_target - computed: false, optional: true, required: false
+  private _httpTarget = new CloudTasksQueueHttpTargetOutputReference(this, "http_target");
+  public get httpTarget() {
+    return this._httpTarget;
+  }
+  public putHttpTarget(value: CloudTasksQueueHttpTarget) {
+    this._httpTarget.internalValue = value;
+  }
+  public resetHttpTarget() {
+    this._httpTarget.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpTargetInput() {
+    return this._httpTarget.internalValue;
+  }
+
   // rate_limits - computed: false, optional: true, required: false
   private _rateLimits = new CloudTasksQueueRateLimitsOutputReference(this, "rate_limits");
   public get rateLimits() {
@@ -1077,6 +2247,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       app_engine_routing_override: cloudTasksQueueAppEngineRoutingOverrideToTerraform(this._appEngineRoutingOverride.internalValue),
+      http_target: cloudTasksQueueHttpTargetToTerraform(this._httpTarget.internalValue),
       rate_limits: cloudTasksQueueRateLimitsToTerraform(this._rateLimits.internalValue),
       retry_config: cloudTasksQueueRetryConfigToTerraform(this._retryConfig.internalValue),
       stackdriver_logging_config: cloudTasksQueueStackdriverLoggingConfigToTerraform(this._stackdriverLoggingConfig.internalValue),
@@ -1115,6 +2286,12 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "CloudTasksQueueAppEngineRoutingOverrideList",
+      },
+      http_target: {
+        value: cloudTasksQueueHttpTargetToHclTerraform(this._httpTarget.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudTasksQueueHttpTargetList",
       },
       rate_limits: {
         value: cloudTasksQueueRateLimitsToHclTerraform(this._rateLimits.internalValue),

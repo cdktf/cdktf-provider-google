@@ -4,12 +4,12 @@
 
 ### DocumentAiProcessorDefaultVersion <a name="DocumentAiProcessorDefaultVersion" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersion"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version google_document_ai_processor_default_version}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version google_document_ai_processor_default_version}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessordefaultversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/documentaiprocessordefaultversion"
 
 documentaiprocessordefaultversion.NewDocumentAiProcessorDefaultVersion(scope Construct, id *string, config DocumentAiProcessorDefaultVersionConfig) DocumentAiProcessorDefaultVersion
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessordefaultversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/documentaiprocessordefaultversion"
 
 documentaiprocessordefaultversion.DocumentAiProcessorDefaultVersion_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessordefaultversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/documentaiprocessordefaultversion"
 
 documentaiprocessordefaultversion.DocumentAiProcessorDefaultVersion_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ documentaiprocessordefaultversion.DocumentAiProcessorDefaultVersion_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersion.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessordefaultversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/documentaiprocessordefaultversion"
 
 documentaiprocessordefaultversion.DocumentAiProcessorDefaultVersion_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ documentaiprocessordefaultversion.DocumentAiProcessorDefaultVersion_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersion.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessordefaultversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/documentaiprocessordefaultversion"
 
 documentaiprocessordefaultversion.DocumentAiProcessorDefaultVersion_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the DocumentAiProcessorDefault
 
 The id of the existing DocumentAiProcessorDefaultVersion that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -782,7 +782,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessordefaultversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/documentaiprocessordefaultversion"
 
 &documentaiprocessordefaultversion.DocumentAiProcessorDefaultVersionConfig {
 	Connection: interface{},
@@ -795,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessor
 	Processor: *string,
 	Version: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v13.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeouts,
 }
 ```
 
@@ -812,7 +812,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessor
 | <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionConfig.property.processor">Processor</a></code> | <code>*string</code> | The processor to set the version on. |
 | <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionConfig.property.version">Version</a></code> | <code>*string</code> | The version to set. |
-| <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#id DocumentAiProcessorDefaultVersion#id}. |
+| <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#id DocumentAiProcessorDefaultVersion#id}. |
 | <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeouts">DocumentAiProcessorDefaultVersionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -897,7 +897,7 @@ Processor *string
 
 The processor to set the version on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#processor DocumentAiProcessorDefaultVersion#processor}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#processor DocumentAiProcessorDefaultVersion#processor}
 
 ---
 
@@ -914,7 +914,7 @@ The version to set.
 Using 'stable' or 'rc' will cause the API to return the latest version in that release channel.
 Apply 'lifecycle.ignore_changes' to the 'version' field to suppress this diff.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#version DocumentAiProcessorDefaultVersion#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#version DocumentAiProcessorDefaultVersion#version}
 
 ---
 
@@ -926,7 +926,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#id DocumentAiProcessorDefaultVersion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#id DocumentAiProcessorDefaultVersion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -943,7 +943,7 @@ Timeouts DocumentAiProcessorDefaultVersionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#timeouts DocumentAiProcessorDefaultVersion#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#timeouts DocumentAiProcessorDefaultVersion#timeouts}
 
 ---
 
@@ -952,7 +952,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessordefaultversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/documentaiprocessordefaultversion"
 
 &documentaiprocessordefaultversion.DocumentAiProcessorDefaultVersionTimeouts {
 	Create: *string,
@@ -964,8 +964,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessor
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#create DocumentAiProcessorDefaultVersion#create}. |
-| <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#delete DocumentAiProcessorDefaultVersion#delete}. |
+| <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#create DocumentAiProcessorDefaultVersion#create}. |
+| <code><a href="#@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#delete DocumentAiProcessorDefaultVersion#delete}. |
 
 ---
 
@@ -977,7 +977,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#create DocumentAiProcessorDefaultVersion#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#create DocumentAiProcessorDefaultVersion#create}.
 
 ---
 
@@ -989,7 +989,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/5.43.1/docs/resources/document_ai_processor_default_version#delete DocumentAiProcessorDefaultVersion#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/document_ai_processor_default_version#delete DocumentAiProcessorDefaultVersion#delete}.
 
 ---
 
@@ -1000,7 +1000,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiProcessorDefaultVersion.DocumentAiProcessorDefaultVersionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v13/documentaiprocessordefaultversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/documentaiprocessordefaultversion"
 
 documentaiprocessordefaultversion.NewDocumentAiProcessorDefaultVersionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiProcessorDefaultVersionTimeoutsOutputReference
 ```
