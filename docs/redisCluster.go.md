@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisCluster(scope Construct, id *string, config RedisClusterConfig) RedisCluster
 ```
@@ -501,7 +501,7 @@ func ResetZoneDistributionConfig()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.redisCluster.RedisCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.RedisCluster_IsConstruct(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.redisCluster.RedisCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.RedisCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -547,7 +547,7 @@ rediscluster.RedisCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.redisCluster.RedisCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.RedisCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -561,7 +561,7 @@ rediscluster.RedisCluster_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.redisCluster.RedisCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.RedisCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1186,7 +1186,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterConfig {
 	Connection: interface{},
@@ -1207,9 +1207,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
 	RedisConfigs: *map[string]*string,
 	Region: *string,
 	ReplicaCount: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.redisCluster.RedisClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.redisCluster.RedisClusterTimeouts,
 	TransitEncryptionMode: *string,
-	ZoneDistributionConfig: github.com/cdktf/cdktf-provider-google-go/google.redisCluster.RedisClusterZoneDistributionConfig,
+	ZoneDistributionConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.redisCluster.RedisClusterZoneDistributionConfig,
 }
 ```
 
@@ -1525,7 +1525,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterDiscoveryEndpoints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterDiscoveryEndpoints {
 
@@ -1538,7 +1538,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterDiscoveryEndpointsPscConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterDiscoveryEndpointsPscConfig {
 
@@ -1551,7 +1551,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterPscConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterPscConfigs {
 	Network: *string,
@@ -1585,7 +1585,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterPscConnections.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterPscConnections {
 
@@ -1598,7 +1598,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterStateInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterStateInfo {
 
@@ -1611,7 +1611,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterStateInfoUpdateInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterStateInfoUpdateInfo {
 
@@ -1624,7 +1624,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterTimeouts {
 	Create: *string,
@@ -1684,7 +1684,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisCluster.RedisClusterZoneDistributionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 &rediscluster.RedisClusterZoneDistributionConfig {
 	Mode: *string,
@@ -1739,7 +1739,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterDiscoveryEndpointsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterDiscoveryEndpointsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisClusterDiscoveryEndpointsList
 ```
@@ -1888,7 +1888,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterDiscoveryEndpointsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterDiscoveryEndpointsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisClusterDiscoveryEndpointsOutputReference
 ```
@@ -2188,7 +2188,7 @@ func InternalValue() RedisClusterDiscoveryEndpoints
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterDiscoveryEndpointsPscConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterDiscoveryEndpointsPscConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisClusterDiscoveryEndpointsPscConfigList
 ```
@@ -2337,7 +2337,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterDiscoveryEndpointsPscConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterDiscoveryEndpointsPscConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisClusterDiscoveryEndpointsPscConfigOutputReference
 ```
@@ -2615,7 +2615,7 @@ func InternalValue() RedisClusterDiscoveryEndpointsPscConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterPscConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterPscConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisClusterPscConfigsList
 ```
@@ -2775,7 +2775,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterPscConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterPscConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisClusterPscConfigsOutputReference
 ```
@@ -3064,7 +3064,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterPscConnectionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterPscConnectionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisClusterPscConnectionsList
 ```
@@ -3213,7 +3213,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterPscConnectionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterPscConnectionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisClusterPscConnectionsOutputReference
 ```
@@ -3535,7 +3535,7 @@ func InternalValue() RedisClusterPscConnections
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterStateInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterStateInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisClusterStateInfoList
 ```
@@ -3684,7 +3684,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterStateInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterStateInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisClusterStateInfoOutputReference
 ```
@@ -3962,7 +3962,7 @@ func InternalValue() RedisClusterStateInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterStateInfoUpdateInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterStateInfoUpdateInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisClusterStateInfoUpdateInfoList
 ```
@@ -4111,7 +4111,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterStateInfoUpdateInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterStateInfoUpdateInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisClusterStateInfoUpdateInfoOutputReference
 ```
@@ -4400,7 +4400,7 @@ func InternalValue() RedisClusterStateInfoUpdateInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisClusterTimeoutsOutputReference
 ```
@@ -4736,7 +4736,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisCluster.RedisClusterZoneDistributionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/rediscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/rediscluster"
 
 rediscluster.NewRedisClusterZoneDistributionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisClusterZoneDistributionConfigOutputReference
 ```
