@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain
+// https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,14 +11,14 @@ export interface ActiveDirectoryDomainConfig extends cdktf.TerraformMetaArgument
   * The name of delegated administrator account used to perform Active Directory operations.
   * If not specified, setupadmin will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#admin ActiveDirectoryDomain#admin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#admin ActiveDirectoryDomain#admin}
   */
   readonly admin?: string;
   /**
   * The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
   * If CIDR subnets overlap between networks, domain creation will fail.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#authorized_networks ActiveDirectoryDomain#authorized_networks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#authorized_networks ActiveDirectoryDomain#authorized_networks}
   */
   readonly authorizedNetworks?: string[];
   /**
@@ -34,18 +29,18 @@ export interface ActiveDirectoryDomainConfig extends cdktf.TerraformMetaArgument
   * or 'terraform destroy' that would delete the domain will fail.
   * When the field is set to false, deleting the domain is allowed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#deletion_protection ActiveDirectoryDomain#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#deletion_protection ActiveDirectoryDomain#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions
   * of https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#domain_name ActiveDirectoryDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#domain_name ActiveDirectoryDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#id ActiveDirectoryDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#id ActiveDirectoryDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -57,45 +52,45 @@ export interface ActiveDirectoryDomainConfig extends cdktf.TerraformMetaArgument
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#labels ActiveDirectoryDomain#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#labels ActiveDirectoryDomain#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
   * e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#locations ActiveDirectoryDomain#locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#locations ActiveDirectoryDomain#locations}
   */
   readonly locations: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#project ActiveDirectoryDomain#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#project ActiveDirectoryDomain#project}
   */
   readonly project?: string;
   /**
   * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
   * Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#reserved_ip_range ActiveDirectoryDomain#reserved_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#reserved_ip_range ActiveDirectoryDomain#reserved_ip_range}
   */
   readonly reservedIpRange: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#timeouts ActiveDirectoryDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#timeouts ActiveDirectoryDomain#timeouts}
   */
   readonly timeouts?: ActiveDirectoryDomainTimeouts;
 }
 export interface ActiveDirectoryDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#create ActiveDirectoryDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#create ActiveDirectoryDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#delete ActiveDirectoryDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#delete ActiveDirectoryDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#update ActiveDirectoryDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#update ActiveDirectoryDomain#update}
   */
   readonly update?: string;
 }
@@ -247,7 +242,7 @@ export class ActiveDirectoryDomainTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain google_active_directory_domain}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain google_active_directory_domain}
 */
 export class ActiveDirectoryDomain extends cdktf.TerraformResource {
 
@@ -263,7 +258,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ActiveDirectoryDomain resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ActiveDirectoryDomain to import
-  * @param importFromId The id of the existing ActiveDirectoryDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ActiveDirectoryDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ActiveDirectoryDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -275,7 +270,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/active_directory_domain google_active_directory_domain} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/active_directory_domain google_active_directory_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -286,7 +281,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
       terraformResourceType: 'google_active_directory_domain',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.1.0',
+        providerVersion: '6.2.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/cloud_run_v2_job
+// https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/cloud_run_v2_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudRunV2JobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,17 +17,17 @@ export interface DataGoogleCloudRunV2JobConfig extends cdktf.TerraformMetaArgume
   /**
   * The location of the cloud run job
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/cloud_run_v2_job#location DataGoogleCloudRunV2Job#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/cloud_run_v2_job#location DataGoogleCloudRunV2Job#location}
   */
   readonly location?: string;
   /**
   * Name of the Job.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/cloud_run_v2_job#name DataGoogleCloudRunV2Job#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/cloud_run_v2_job#name DataGoogleCloudRunV2Job#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}
   */
   readonly project?: string;
 }
@@ -988,6 +983,171 @@ export class DataGoogleCloudRunV2JobTemplateTemplateVolumesCloudSqlInstanceList 
     return new DataGoogleCloudRunV2JobTemplateTemplateVolumesCloudSqlInstanceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleCloudRunV2JobTemplateTemplateVolumesGcs {
+}
+
+export function dataGoogleCloudRunV2JobTemplateTemplateVolumesGcsToTerraform(struct?: DataGoogleCloudRunV2JobTemplateTemplateVolumesGcs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleCloudRunV2JobTemplateTemplateVolumesGcsToHclTerraform(struct?: DataGoogleCloudRunV2JobTemplateTemplateVolumesGcs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleCloudRunV2JobTemplateTemplateVolumesGcsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudRunV2JobTemplateTemplateVolumesGcs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudRunV2JobTemplateTemplateVolumesGcs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // bucket - computed: true, optional: false, required: false
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+
+  // read_only - computed: true, optional: false, required: false
+  public get readOnly() {
+    return this.getBooleanAttribute('read_only');
+  }
+}
+
+export class DataGoogleCloudRunV2JobTemplateTemplateVolumesGcsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudRunV2JobTemplateTemplateVolumesGcsOutputReference {
+    return new DataGoogleCloudRunV2JobTemplateTemplateVolumesGcsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleCloudRunV2JobTemplateTemplateVolumesNfs {
+}
+
+export function dataGoogleCloudRunV2JobTemplateTemplateVolumesNfsToTerraform(struct?: DataGoogleCloudRunV2JobTemplateTemplateVolumesNfs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleCloudRunV2JobTemplateTemplateVolumesNfsToHclTerraform(struct?: DataGoogleCloudRunV2JobTemplateTemplateVolumesNfs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleCloudRunV2JobTemplateTemplateVolumesNfsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudRunV2JobTemplateTemplateVolumesNfs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudRunV2JobTemplateTemplateVolumesNfs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // path - computed: true, optional: false, required: false
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+
+  // read_only - computed: true, optional: false, required: false
+  public get readOnly() {
+    return this.getBooleanAttribute('read_only');
+  }
+
+  // server - computed: true, optional: false, required: false
+  public get server() {
+    return this.getStringAttribute('server');
+  }
+}
+
+export class DataGoogleCloudRunV2JobTemplateTemplateVolumesNfsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudRunV2JobTemplateTemplateVolumesNfsOutputReference {
+    return new DataGoogleCloudRunV2JobTemplateTemplateVolumesNfsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleCloudRunV2JobTemplateTemplateVolumesSecretItems {
 }
 
@@ -1216,9 +1376,21 @@ export class DataGoogleCloudRunV2JobTemplateTemplateVolumesOutputReference exten
     return this._cloudSqlInstance;
   }
 
+  // gcs - computed: true, optional: false, required: false
+  private _gcs = new DataGoogleCloudRunV2JobTemplateTemplateVolumesGcsList(this, "gcs", false);
+  public get gcs() {
+    return this._gcs;
+  }
+
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
+  }
+
+  // nfs - computed: true, optional: false, required: false
+  private _nfs = new DataGoogleCloudRunV2JobTemplateTemplateVolumesNfsList(this, "nfs", false);
+  public get nfs() {
+    return this._nfs;
   }
 
   // secret - computed: true, optional: false, required: false
@@ -1740,7 +1912,7 @@ export class DataGoogleCloudRunV2JobTerminalConditionList extends cdktf.ComplexL
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/cloud_run_v2_job google_cloud_run_v2_job}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/cloud_run_v2_job google_cloud_run_v2_job}
 */
 export class DataGoogleCloudRunV2Job extends cdktf.TerraformDataSource {
 
@@ -1756,7 +1928,7 @@ export class DataGoogleCloudRunV2Job extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleCloudRunV2Job resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleCloudRunV2Job to import
-  * @param importFromId The id of the existing DataGoogleCloudRunV2Job that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/cloud_run_v2_job#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleCloudRunV2Job that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/cloud_run_v2_job#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleCloudRunV2Job to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1768,7 +1940,7 @@ export class DataGoogleCloudRunV2Job extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/cloud_run_v2_job google_cloud_run_v2_job} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/cloud_run_v2_job google_cloud_run_v2_job} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1779,7 +1951,7 @@ export class DataGoogleCloudRunV2Job extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloud_run_v2_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.1.0',
+        providerVersion: '6.2.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

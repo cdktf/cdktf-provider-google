@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job
+// https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -23,19 +18,19 @@ export interface CloudRunV2JobConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Arbitrary identifier for the API client.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#client CloudRunV2Job#client}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#client CloudRunV2Job#client}
   */
   readonly client?: string;
   /**
   * Arbitrary version identifier for the API client.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#client_version CloudRunV2Job#client_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#client_version CloudRunV2Job#client_version}
   */
   readonly clientVersion?: string;
   /**
@@ -46,11 +41,11 @@ export interface CloudRunV2JobConfig extends cdktf.TerraformMetaArguments {
   * or 'terraform destroy' that would delete the job will fail.
   * When the field is set to false, deleting the job is allowed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#deletion_protection CloudRunV2Job#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#deletion_protection CloudRunV2Job#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#id CloudRunV2Job#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -66,7 +61,7 @@ export interface CloudRunV2JobConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -75,41 +70,41 @@ export interface CloudRunV2JobConfig extends cdktf.TerraformMetaArguments {
   * 
   * For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: ["UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#launch_stage CloudRunV2Job#launch_stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#launch_stage CloudRunV2Job#launch_stage}
   */
   readonly launchStage?: string;
   /**
   * The location of the cloud run job
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#location CloudRunV2Job#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#location CloudRunV2Job#location}
   */
   readonly location: string;
   /**
   * Name of the Job.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#project CloudRunV2Job#project}
   */
   readonly project?: string;
   /**
   * binary_authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#binary_authorization CloudRunV2Job#binary_authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#binary_authorization CloudRunV2Job#binary_authorization}
   */
   readonly binaryAuthorization?: CloudRunV2JobBinaryAuthorization;
   /**
   * template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
   */
   readonly template: CloudRunV2JobTemplate;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#timeouts CloudRunV2Job#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#timeouts CloudRunV2Job#timeouts}
   */
   readonly timeouts?: CloudRunV2JobTimeouts;
 }
@@ -422,19 +417,19 @@ export interface CloudRunV2JobBinaryAuthorization {
   /**
   * If present, indicates to use Breakglass using this justification. If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#breakglass_justification CloudRunV2Job#breakglass_justification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#breakglass_justification CloudRunV2Job#breakglass_justification}
   */
   readonly breakglassJustification?: string;
   /**
   * The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#policy CloudRunV2Job#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#policy CloudRunV2Job#policy}
   */
   readonly policy?: string;
   /**
   * If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#use_default CloudRunV2Job#use_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#use_default CloudRunV2Job#use_default}
   */
   readonly useDefault?: boolean | cdktf.IResolvable;
 }
@@ -578,13 +573,13 @@ export interface CloudRunV2JobTemplateTemplateContainersEnvValueSourceSecretKeyR
   /**
   * The name of the secret in Cloud Secret Manager. Format: {secretName} if the secret is in the same project. projects/{project}/secrets/{secretName} if the secret is in a different project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
   */
   readonly secret: string;
   /**
   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
   */
   readonly version: string;
 }
@@ -693,7 +688,7 @@ export interface CloudRunV2JobTemplateTemplateContainersEnvValueSource {
   /**
   * secret_key_ref block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#secret_key_ref CloudRunV2Job#secret_key_ref}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#secret_key_ref CloudRunV2Job#secret_key_ref}
   */
   readonly secretKeyRef?: CloudRunV2JobTemplateTemplateContainersEnvValueSourceSecretKeyRef;
 }
@@ -779,19 +774,19 @@ export interface CloudRunV2JobTemplateTemplateContainersEnv {
   /**
   * Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
   */
   readonly name: string;
   /**
   * Literal value of the environment variable. Defaults to "" and the maximum allowed length is 32768 characters. Variable references are not supported in Cloud Run.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#value CloudRunV2Job#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#value CloudRunV2Job#value}
   */
   readonly value?: string;
   /**
   * value_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#value_source CloudRunV2Job#value_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#value_source CloudRunV2Job#value_source}
   */
   readonly valueSource?: CloudRunV2JobTemplateTemplateContainersEnvValueSource;
 }
@@ -964,13 +959,13 @@ export interface CloudRunV2JobTemplateTemplateContainersPorts {
   /**
   * Port number the container listens on. This must be a valid TCP port number, 0 < containerPort < 65536.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#container_port CloudRunV2Job#container_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#container_port CloudRunV2Job#container_port}
   */
   readonly containerPort?: number;
   /**
   * If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
   */
   readonly name?: string;
 }
@@ -1117,7 +1112,7 @@ export interface CloudRunV2JobTemplateTemplateContainersResources {
   /**
   * Only memory and CPU are supported. Use key 'cpu' for CPU limit and 'memory' for memory limit. Note: The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#limits CloudRunV2Job#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#limits CloudRunV2Job#limits}
   */
   readonly limits?: { [key: string]: string };
 }
@@ -1203,13 +1198,13 @@ export interface CloudRunV2JobTemplateTemplateContainersVolumeMounts {
   /**
   * Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#mount_path CloudRunV2Job#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#mount_path CloudRunV2Job#mount_path}
   */
   readonly mountPath: string;
   /**
   * This must match the Name of a Volume.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
   */
   readonly name: string;
 }
@@ -1350,55 +1345,55 @@ export interface CloudRunV2JobTemplateTemplateContainers {
   /**
   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references are not supported in Cloud Run.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#args CloudRunV2Job#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#args CloudRunV2Job#args}
   */
   readonly args?: string[];
   /**
   * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#command CloudRunV2Job#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#command CloudRunV2Job#command}
   */
   readonly command?: string[];
   /**
   * URL of the Container image in Google Container Registry or Google Artifact Registry. More info: https://kubernetes.io/docs/concepts/containers/images
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#image CloudRunV2Job#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#image CloudRunV2Job#image}
   */
   readonly image: string;
   /**
   * Name of the container specified as a DNS_LABEL.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
   */
   readonly name?: string;
   /**
   * Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#working_dir CloudRunV2Job#working_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#working_dir CloudRunV2Job#working_dir}
   */
   readonly workingDir?: string;
   /**
   * env block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#env CloudRunV2Job#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#env CloudRunV2Job#env}
   */
   readonly env?: CloudRunV2JobTemplateTemplateContainersEnv[] | cdktf.IResolvable;
   /**
   * ports block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#ports CloudRunV2Job#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#ports CloudRunV2Job#ports}
   */
   readonly ports?: CloudRunV2JobTemplateTemplateContainersPorts[] | cdktf.IResolvable;
   /**
   * resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#resources CloudRunV2Job#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#resources CloudRunV2Job#resources}
   */
   readonly resources?: CloudRunV2JobTemplateTemplateContainersResources;
   /**
   * volume_mounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#volume_mounts CloudRunV2Job#volume_mounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#volume_mounts CloudRunV2Job#volume_mounts}
   */
   readonly volumeMounts?: CloudRunV2JobTemplateTemplateContainersVolumeMounts[] | cdktf.IResolvable;
 }
@@ -1745,7 +1740,7 @@ export interface CloudRunV2JobTemplateTemplateVolumesCloudSqlInstance {
   /**
   * The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#instances CloudRunV2Job#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#instances CloudRunV2Job#instances}
   */
   readonly instances?: string[];
 }
@@ -1827,23 +1822,294 @@ export class CloudRunV2JobTemplateTemplateVolumesCloudSqlInstanceOutputReference
     return this._instances;
   }
 }
+export interface CloudRunV2JobTemplateTemplateVolumesGcs {
+  /**
+  * Name of the cloud storage bucket to back the volume. The resource service account must have permission to access the bucket.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#bucket CloudRunV2Job#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * If true, mount this volume as read-only in all mounts. If false, mount this volume as read-write.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#read_only CloudRunV2Job#read_only}
+  */
+  readonly readOnly?: boolean | cdktf.IResolvable;
+}
+
+export function cloudRunV2JobTemplateTemplateVolumesGcsToTerraform(struct?: CloudRunV2JobTemplateTemplateVolumesGcsOutputReference | CloudRunV2JobTemplateTemplateVolumesGcs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    bucket: cdktf.stringToTerraform(struct!.bucket),
+    read_only: cdktf.booleanToTerraform(struct!.readOnly),
+  }
+}
+
+
+export function cloudRunV2JobTemplateTemplateVolumesGcsToHclTerraform(struct?: CloudRunV2JobTemplateTemplateVolumesGcsOutputReference | CloudRunV2JobTemplateTemplateVolumesGcs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktf.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read_only: {
+      value: cdktf.booleanToHclTerraform(struct!.readOnly),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudRunV2JobTemplateTemplateVolumesGcsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudRunV2JobTemplateTemplateVolumesGcs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._readOnly !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readOnly = this._readOnly;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunV2JobTemplateTemplateVolumesGcs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bucket = undefined;
+      this._readOnly = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bucket = value.bucket;
+      this._readOnly = value.readOnly;
+    }
+  }
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // read_only - computed: false, optional: true, required: false
+  private _readOnly?: boolean | cdktf.IResolvable; 
+  public get readOnly() {
+    return this.getBooleanAttribute('read_only');
+  }
+  public set readOnly(value: boolean | cdktf.IResolvable) {
+    this._readOnly = value;
+  }
+  public resetReadOnly() {
+    this._readOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readOnlyInput() {
+    return this._readOnly;
+  }
+}
+export interface CloudRunV2JobTemplateTemplateVolumesNfs {
+  /**
+  * Path that is exported by the NFS server.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#path CloudRunV2Job#path}
+  */
+  readonly path?: string;
+  /**
+  * If true, mount this volume as read-only in all mounts.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#read_only CloudRunV2Job#read_only}
+  */
+  readonly readOnly?: boolean | cdktf.IResolvable;
+  /**
+  * Hostname or IP address of the NFS server.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#server CloudRunV2Job#server}
+  */
+  readonly server: string;
+}
+
+export function cloudRunV2JobTemplateTemplateVolumesNfsToTerraform(struct?: CloudRunV2JobTemplateTemplateVolumesNfsOutputReference | CloudRunV2JobTemplateTemplateVolumesNfs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+    read_only: cdktf.booleanToTerraform(struct!.readOnly),
+    server: cdktf.stringToTerraform(struct!.server),
+  }
+}
+
+
+export function cloudRunV2JobTemplateTemplateVolumesNfsToHclTerraform(struct?: CloudRunV2JobTemplateTemplateVolumesNfsOutputReference | CloudRunV2JobTemplateTemplateVolumesNfs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read_only: {
+      value: cdktf.booleanToHclTerraform(struct!.readOnly),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    server: {
+      value: cdktf.stringToHclTerraform(struct!.server),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CloudRunV2JobTemplateTemplateVolumesNfsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudRunV2JobTemplateTemplateVolumesNfs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._readOnly !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readOnly = this._readOnly;
+    }
+    if (this._server !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.server = this._server;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunV2JobTemplateTemplateVolumesNfs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._path = undefined;
+      this._readOnly = undefined;
+      this._server = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._path = value.path;
+      this._readOnly = value.readOnly;
+      this._server = value.server;
+    }
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // read_only - computed: false, optional: true, required: false
+  private _readOnly?: boolean | cdktf.IResolvable; 
+  public get readOnly() {
+    return this.getBooleanAttribute('read_only');
+  }
+  public set readOnly(value: boolean | cdktf.IResolvable) {
+    this._readOnly = value;
+  }
+  public resetReadOnly() {
+    this._readOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readOnlyInput() {
+    return this._readOnly;
+  }
+
+  // server - computed: false, optional: false, required: true
+  private _server?: string; 
+  public get server() {
+    return this.getStringAttribute('server');
+  }
+  public set server(value: string) {
+    this._server = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverInput() {
+    return this._server;
+  }
+}
 export interface CloudRunV2JobTemplateTemplateVolumesSecretItems {
   /**
   * Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume's default mode will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#mode CloudRunV2Job#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#mode CloudRunV2Job#mode}
   */
   readonly mode?: number;
   /**
   * The relative path of the secret in the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#path CloudRunV2Job#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#path CloudRunV2Job#path}
   */
   readonly path: string;
   /**
   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#version CloudRunV2Job#version}
   */
   readonly version: string;
 }
@@ -2013,19 +2279,19 @@ export interface CloudRunV2JobTemplateTemplateVolumesSecret {
   /**
   * Integer representation of mode bits to use on created files by default. Must be a value between 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this setting.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#default_mode CloudRunV2Job#default_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#default_mode CloudRunV2Job#default_mode}
   */
   readonly defaultMode?: number;
   /**
   * The name of the secret in Cloud Secret Manager. Format: {secret} if the secret is in the same project. projects/{project}/secrets/{secret} if the secret is in a different project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
   */
   readonly secret: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#items CloudRunV2Job#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#items CloudRunV2Job#items}
   */
   readonly items?: CloudRunV2JobTemplateTemplateVolumesSecretItems[] | cdktf.IResolvable;
 }
@@ -2166,19 +2432,31 @@ export interface CloudRunV2JobTemplateTemplateVolumes {
   /**
   * Volume's name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#name CloudRunV2Job#name}
   */
   readonly name: string;
   /**
   * cloud_sql_instance block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#cloud_sql_instance CloudRunV2Job#cloud_sql_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#cloud_sql_instance CloudRunV2Job#cloud_sql_instance}
   */
   readonly cloudSqlInstance?: CloudRunV2JobTemplateTemplateVolumesCloudSqlInstance;
   /**
+  * gcs block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#gcs CloudRunV2Job#gcs}
+  */
+  readonly gcs?: CloudRunV2JobTemplateTemplateVolumesGcs;
+  /**
+  * nfs block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#nfs CloudRunV2Job#nfs}
+  */
+  readonly nfs?: CloudRunV2JobTemplateTemplateVolumesNfs;
+  /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#secret CloudRunV2Job#secret}
   */
   readonly secret?: CloudRunV2JobTemplateTemplateVolumesSecret;
 }
@@ -2191,6 +2469,8 @@ export function cloudRunV2JobTemplateTemplateVolumesToTerraform(struct?: CloudRu
   return {
     name: cdktf.stringToTerraform(struct!.name),
     cloud_sql_instance: cloudRunV2JobTemplateTemplateVolumesCloudSqlInstanceToTerraform(struct!.cloudSqlInstance),
+    gcs: cloudRunV2JobTemplateTemplateVolumesGcsToTerraform(struct!.gcs),
+    nfs: cloudRunV2JobTemplateTemplateVolumesNfsToTerraform(struct!.nfs),
     secret: cloudRunV2JobTemplateTemplateVolumesSecretToTerraform(struct!.secret),
   }
 }
@@ -2213,6 +2493,18 @@ export function cloudRunV2JobTemplateTemplateVolumesToHclTerraform(struct?: Clou
       isBlock: true,
       type: "list",
       storageClassType: "CloudRunV2JobTemplateTemplateVolumesCloudSqlInstanceList",
+    },
+    gcs: {
+      value: cloudRunV2JobTemplateTemplateVolumesGcsToHclTerraform(struct!.gcs),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudRunV2JobTemplateTemplateVolumesGcsList",
+    },
+    nfs: {
+      value: cloudRunV2JobTemplateTemplateVolumesNfsToHclTerraform(struct!.nfs),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudRunV2JobTemplateTemplateVolumesNfsList",
     },
     secret: {
       value: cloudRunV2JobTemplateTemplateVolumesSecretToHclTerraform(struct!.secret),
@@ -2254,6 +2546,14 @@ export class CloudRunV2JobTemplateTemplateVolumesOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.cloudSqlInstance = this._cloudSqlInstance?.internalValue;
     }
+    if (this._gcs?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gcs = this._gcs?.internalValue;
+    }
+    if (this._nfs?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nfs = this._nfs?.internalValue;
+    }
     if (this._secret?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.secret = this._secret?.internalValue;
@@ -2267,6 +2567,8 @@ export class CloudRunV2JobTemplateTemplateVolumesOutputReference extends cdktf.C
       this.resolvableValue = undefined;
       this._name = undefined;
       this._cloudSqlInstance.internalValue = undefined;
+      this._gcs.internalValue = undefined;
+      this._nfs.internalValue = undefined;
       this._secret.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -2278,6 +2580,8 @@ export class CloudRunV2JobTemplateTemplateVolumesOutputReference extends cdktf.C
       this.resolvableValue = undefined;
       this._name = value.name;
       this._cloudSqlInstance.internalValue = value.cloudSqlInstance;
+      this._gcs.internalValue = value.gcs;
+      this._nfs.internalValue = value.nfs;
       this._secret.internalValue = value.secret;
     }
   }
@@ -2309,6 +2613,38 @@ export class CloudRunV2JobTemplateTemplateVolumesOutputReference extends cdktf.C
   // Temporarily expose input value. Use with caution.
   public get cloudSqlInstanceInput() {
     return this._cloudSqlInstance.internalValue;
+  }
+
+  // gcs - computed: false, optional: true, required: false
+  private _gcs = new CloudRunV2JobTemplateTemplateVolumesGcsOutputReference(this, "gcs");
+  public get gcs() {
+    return this._gcs;
+  }
+  public putGcs(value: CloudRunV2JobTemplateTemplateVolumesGcs) {
+    this._gcs.internalValue = value;
+  }
+  public resetGcs() {
+    this._gcs.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gcsInput() {
+    return this._gcs.internalValue;
+  }
+
+  // nfs - computed: false, optional: true, required: false
+  private _nfs = new CloudRunV2JobTemplateTemplateVolumesNfsOutputReference(this, "nfs");
+  public get nfs() {
+    return this._nfs;
+  }
+  public putNfs(value: CloudRunV2JobTemplateTemplateVolumesNfs) {
+    this._nfs.internalValue = value;
+  }
+  public resetNfs() {
+    this._nfs.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsInput() {
+    return this._nfs.internalValue;
   }
 
   // secret - computed: false, optional: true, required: false
@@ -2353,7 +2689,7 @@ export interface CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces {
   * network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be
   * looked up from the subnetwork.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#network CloudRunV2Job#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#network CloudRunV2Job#network}
   */
   readonly network?: string;
   /**
@@ -2361,13 +2697,13 @@ export interface CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces {
   * network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
   * subnetwork with the same name with the network will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#subnetwork CloudRunV2Job#subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#subnetwork CloudRunV2Job#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * Network tags applied to this Cloud Run job.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#tags CloudRunV2Job#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#tags CloudRunV2Job#tags}
   */
   readonly tags?: string[];
 }
@@ -2543,19 +2879,19 @@ export interface CloudRunV2JobTemplateTemplateVpcAccess {
   /**
   * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#connector CloudRunV2Job#connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#connector CloudRunV2Job#connector}
   */
   readonly connector?: string;
   /**
   * Traffic VPC egress settings. Possible values: ["ALL_TRAFFIC", "PRIVATE_RANGES_ONLY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#egress CloudRunV2Job#egress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#egress CloudRunV2Job#egress}
   */
   readonly egress?: string;
   /**
   * network_interfaces block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#network_interfaces CloudRunV2Job#network_interfaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#network_interfaces CloudRunV2Job#network_interfaces}
   */
   readonly networkInterfaces?: CloudRunV2JobTemplateTemplateVpcAccessNetworkInterfaces[] | cdktf.IResolvable;
 }
@@ -2699,25 +3035,25 @@ export interface CloudRunV2JobTemplateTemplate {
   /**
   * A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#encryption_key CloudRunV2Job#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#encryption_key CloudRunV2Job#encryption_key}
   */
   readonly encryptionKey?: string;
   /**
   * The execution environment being used to host this Task. Possible values: ["EXECUTION_ENVIRONMENT_GEN1", "EXECUTION_ENVIRONMENT_GEN2"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#execution_environment CloudRunV2Job#execution_environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#execution_environment CloudRunV2Job#execution_environment}
   */
   readonly executionEnvironment?: string;
   /**
   * Number of retries allowed per Task, before marking this Task failed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#max_retries CloudRunV2Job#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#max_retries CloudRunV2Job#max_retries}
   */
   readonly maxRetries?: number;
   /**
   * Email address of the IAM service account associated with the Task of a Job. The service account represents the identity of the running task, and determines what permissions the task has. If not provided, the task will use the project's default service account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#service_account CloudRunV2Job#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#service_account CloudRunV2Job#service_account}
   */
   readonly serviceAccount?: string;
   /**
@@ -2725,25 +3061,25 @@ export interface CloudRunV2JobTemplateTemplate {
   * 
   * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#timeout CloudRunV2Job#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#timeout CloudRunV2Job#timeout}
   */
   readonly timeout?: string;
   /**
   * containers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#containers CloudRunV2Job#containers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#containers CloudRunV2Job#containers}
   */
   readonly containers?: CloudRunV2JobTemplateTemplateContainers[] | cdktf.IResolvable;
   /**
   * volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#volumes CloudRunV2Job#volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#volumes CloudRunV2Job#volumes}
   */
   readonly volumes?: CloudRunV2JobTemplateTemplateVolumes[] | cdktf.IResolvable;
   /**
   * vpc_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#vpc_access CloudRunV2Job#vpc_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#vpc_access CloudRunV2Job#vpc_access}
   */
   readonly vpcAccess?: CloudRunV2JobTemplateTemplateVpcAccess;
 }
@@ -3037,7 +3373,7 @@ export interface CloudRunV2JobTemplate {
   * 
   * This field follows Kubernetes annotations' namespacing, limits, and rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#annotations CloudRunV2Job#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
@@ -3048,25 +3384,25 @@ export interface CloudRunV2JobTemplate {
   * Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
   * All system labels in v1 now have a corresponding field in v2 ExecutionTemplate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#labels CloudRunV2Job#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Specifies the maximum desired number of tasks the execution should run at given time. Must be <= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#parallelism CloudRunV2Job#parallelism}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#parallelism CloudRunV2Job#parallelism}
   */
   readonly parallelism?: number;
   /**
   * Specifies the desired number of tasks the execution should run. Setting to 1 means that parallelism is limited to 1 and the success of that task signals the success of the execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#task_count CloudRunV2Job#task_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#task_count CloudRunV2Job#task_count}
   */
   readonly taskCount?: number;
   /**
   * template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#template CloudRunV2Job#template}
   */
   readonly template: CloudRunV2JobTemplateTemplate;
 }
@@ -3263,15 +3599,15 @@ export class CloudRunV2JobTemplateOutputReference extends cdktf.ComplexObject {
 }
 export interface CloudRunV2JobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#create CloudRunV2Job#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#create CloudRunV2Job#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#delete CloudRunV2Job#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#delete CloudRunV2Job#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#update CloudRunV2Job#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#update CloudRunV2Job#update}
   */
   readonly update?: string;
 }
@@ -3423,7 +3759,7 @@ export class CloudRunV2JobTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job google_cloud_run_v2_job}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job google_cloud_run_v2_job}
 */
 export class CloudRunV2Job extends cdktf.TerraformResource {
 
@@ -3439,7 +3775,7 @@ export class CloudRunV2Job extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudRunV2Job resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudRunV2Job to import
-  * @param importFromId The id of the existing CloudRunV2Job that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudRunV2Job that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudRunV2Job to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -3451,7 +3787,7 @@ export class CloudRunV2Job extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/cloud_run_v2_job google_cloud_run_v2_job} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/cloud_run_v2_job google_cloud_run_v2_job} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3462,7 +3798,7 @@ export class CloudRunV2Job extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_v2_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.1.0',
+        providerVersion: '6.2.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

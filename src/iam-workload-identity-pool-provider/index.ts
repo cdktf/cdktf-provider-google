@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider
+// https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -33,7 +28,7 @@ export interface IamWorkloadIdentityPoolProviderConfig extends cdktf.TerraformMe
   * "'admins' in google.groups"
   * ```
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#attribute_condition IamWorkloadIdentityPoolProvider#attribute_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#attribute_condition IamWorkloadIdentityPoolProvider#attribute_condition}
   */
   readonly attributeCondition?: string;
   /**
@@ -98,37 +93,37 @@ export interface IamWorkloadIdentityPoolProviderConfig extends cdktf.TerraformMe
   *     {"google.subject": "assertion.sub"}
   *     ```
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#attribute_mapping IamWorkloadIdentityPoolProvider#attribute_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#attribute_mapping IamWorkloadIdentityPoolProvider#attribute_mapping}
   */
   readonly attributeMapping?: { [key: string]: string };
   /**
   * A description for the provider. Cannot exceed 256 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#description IamWorkloadIdentityPoolProvider#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#description IamWorkloadIdentityPoolProvider#description}
   */
   readonly description?: string;
   /**
   * Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
   * However, existing tokens still grant access.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#disabled IamWorkloadIdentityPoolProvider#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#disabled IamWorkloadIdentityPoolProvider#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * A display name for the provider. Cannot exceed 32 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#display_name IamWorkloadIdentityPoolProvider#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#display_name IamWorkloadIdentityPoolProvider#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#id IamWorkloadIdentityPoolProvider#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#id IamWorkloadIdentityPoolProvider#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#project IamWorkloadIdentityPoolProvider#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#project IamWorkloadIdentityPoolProvider#project}
   */
   readonly project?: string;
   /**
@@ -136,7 +131,7 @@ export interface IamWorkloadIdentityPoolProviderConfig extends cdktf.TerraformMe
   * value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
   * 'gcp-' is reserved for use by Google, and may not be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#workload_identity_pool_id IamWorkloadIdentityPoolProvider#workload_identity_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#workload_identity_pool_id IamWorkloadIdentityPoolProvider#workload_identity_pool_id}
   */
   readonly workloadIdentityPoolId: string;
   /**
@@ -144,39 +139,45 @@ export interface IamWorkloadIdentityPoolProviderConfig extends cdktf.TerraformMe
   * value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
   * 'gcp-' is reserved for use by Google, and may not be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#workload_identity_pool_provider_id IamWorkloadIdentityPoolProvider#workload_identity_pool_provider_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#workload_identity_pool_provider_id IamWorkloadIdentityPoolProvider#workload_identity_pool_provider_id}
   */
   readonly workloadIdentityPoolProviderId: string;
   /**
   * aws block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#aws IamWorkloadIdentityPoolProvider#aws}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#aws IamWorkloadIdentityPoolProvider#aws}
   */
   readonly aws?: IamWorkloadIdentityPoolProviderAws;
   /**
   * oidc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#oidc IamWorkloadIdentityPoolProvider#oidc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#oidc IamWorkloadIdentityPoolProvider#oidc}
   */
   readonly oidc?: IamWorkloadIdentityPoolProviderOidc;
   /**
   * saml block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#saml IamWorkloadIdentityPoolProvider#saml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#saml IamWorkloadIdentityPoolProvider#saml}
   */
   readonly saml?: IamWorkloadIdentityPoolProviderSaml;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#timeouts IamWorkloadIdentityPoolProvider#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#timeouts IamWorkloadIdentityPoolProvider#timeouts}
   */
   readonly timeouts?: IamWorkloadIdentityPoolProviderTimeouts;
+  /**
+  * x509 block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#x509 IamWorkloadIdentityPoolProvider#x509}
+  */
+  readonly x509?: IamWorkloadIdentityPoolProviderX509;
 }
 export interface IamWorkloadIdentityPoolProviderAws {
   /**
   * The AWS account ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#account_id IamWorkloadIdentityPoolProvider#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#account_id IamWorkloadIdentityPoolProvider#account_id}
   */
   readonly accountId: string;
 }
@@ -270,13 +271,13 @@ export interface IamWorkloadIdentityPoolProviderOidc {
   * https://iam.googleapis.com/projects/<project-number>/locations/<location>/workloadIdentityPools/<pool-id>/providers/<provider-id>
   * ```
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#allowed_audiences IamWorkloadIdentityPoolProvider#allowed_audiences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#allowed_audiences IamWorkloadIdentityPoolProvider#allowed_audiences}
   */
   readonly allowedAudiences?: string[];
   /**
   * The OIDC issuer URL.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#issuer_uri IamWorkloadIdentityPoolProvider#issuer_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#issuer_uri IamWorkloadIdentityPoolProvider#issuer_uri}
   */
   readonly issuerUri: string;
   /**
@@ -304,7 +305,7 @@ export interface IamWorkloadIdentityPoolProviderOidc {
   * }
   * ```
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#jwks_json IamWorkloadIdentityPoolProvider#jwks_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#jwks_json IamWorkloadIdentityPoolProvider#jwks_json}
   */
   readonly jwksJson?: string;
 }
@@ -445,7 +446,7 @@ export interface IamWorkloadIdentityPoolProviderSaml {
   /**
   * SAML Identity provider configuration metadata xml doc.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#idp_metadata_xml IamWorkloadIdentityPoolProvider#idp_metadata_xml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#idp_metadata_xml IamWorkloadIdentityPoolProvider#idp_metadata_xml}
   */
   readonly idpMetadataXml: string;
 }
@@ -526,15 +527,15 @@ export class IamWorkloadIdentityPoolProviderSamlOutputReference extends cdktf.Co
 }
 export interface IamWorkloadIdentityPoolProviderTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#create IamWorkloadIdentityPoolProvider#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#create IamWorkloadIdentityPoolProvider#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#delete IamWorkloadIdentityPoolProvider#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#delete IamWorkloadIdentityPoolProvider#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#update IamWorkloadIdentityPoolProvider#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#update IamWorkloadIdentityPoolProvider#update}
   */
   readonly update?: string;
 }
@@ -684,9 +685,448 @@ export class IamWorkloadIdentityPoolProviderTimeoutsOutputReference extends cdkt
     return this._update;
   }
 }
+export interface IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCas {
+  /**
+  * PEM certificate of the PKI used for validation. Must only contain one
+  * ca certificate(either root or intermediate cert).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#pem_certificate IamWorkloadIdentityPoolProvider#pem_certificate}
+  */
+  readonly pemCertificate?: string;
+}
+
+export function iamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasToTerraform(struct?: IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    pem_certificate: cdktf.stringToTerraform(struct!.pemCertificate),
+  }
+}
+
+
+export function iamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasToHclTerraform(struct?: IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pem_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.pemCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCas | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._pemCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pemCertificate = this._pemCertificate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCas | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._pemCertificate = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._pemCertificate = value.pemCertificate;
+    }
+  }
+
+  // pem_certificate - computed: false, optional: true, required: false
+  private _pemCertificate?: string; 
+  public get pemCertificate() {
+    return this.getStringAttribute('pem_certificate');
+  }
+  public set pemCertificate(value: string) {
+    this._pemCertificate = value;
+  }
+  public resetPemCertificate() {
+    this._pemCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pemCertificateInput() {
+    return this._pemCertificate;
+  }
+}
+
+export class IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasList extends cdktf.ComplexList {
+  public internalValue? : IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCas[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasOutputReference {
+    return new IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchors {
+  /**
+  * PEM certificate of the PKI used for validation. Must only contain one
+  * ca certificate(either root or intermediate cert).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#pem_certificate IamWorkloadIdentityPoolProvider#pem_certificate}
+  */
+  readonly pemCertificate?: string;
+}
+
+export function iamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsToTerraform(struct?: IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    pem_certificate: cdktf.stringToTerraform(struct!.pemCertificate),
+  }
+}
+
+
+export function iamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsToHclTerraform(struct?: IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    pem_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.pemCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._pemCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pemCertificate = this._pemCertificate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._pemCertificate = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._pemCertificate = value.pemCertificate;
+    }
+  }
+
+  // pem_certificate - computed: false, optional: true, required: false
+  private _pemCertificate?: string; 
+  public get pemCertificate() {
+    return this.getStringAttribute('pem_certificate');
+  }
+  public set pemCertificate(value: string) {
+    this._pemCertificate = value;
+  }
+  public resetPemCertificate() {
+    this._pemCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pemCertificateInput() {
+    return this._pemCertificate;
+  }
+}
+
+export class IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsList extends cdktf.ComplexList {
+  public internalValue? : IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsOutputReference {
+    return new IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface IamWorkloadIdentityPoolProviderX509TrustStore {
+  /**
+  * intermediate_cas block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#intermediate_cas IamWorkloadIdentityPoolProvider#intermediate_cas}
+  */
+  readonly intermediateCas?: IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCas[] | cdktf.IResolvable;
+  /**
+  * trust_anchors block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#trust_anchors IamWorkloadIdentityPoolProvider#trust_anchors}
+  */
+  readonly trustAnchors: IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchors[] | cdktf.IResolvable;
+}
+
+export function iamWorkloadIdentityPoolProviderX509TrustStoreToTerraform(struct?: IamWorkloadIdentityPoolProviderX509TrustStoreOutputReference | IamWorkloadIdentityPoolProviderX509TrustStore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    intermediate_cas: cdktf.listMapper(iamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasToTerraform, true)(struct!.intermediateCas),
+    trust_anchors: cdktf.listMapper(iamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsToTerraform, true)(struct!.trustAnchors),
+  }
+}
+
+
+export function iamWorkloadIdentityPoolProviderX509TrustStoreToHclTerraform(struct?: IamWorkloadIdentityPoolProviderX509TrustStoreOutputReference | IamWorkloadIdentityPoolProviderX509TrustStore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    intermediate_cas: {
+      value: cdktf.listMapperHcl(iamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasToHclTerraform, true)(struct!.intermediateCas),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasList",
+    },
+    trust_anchors: {
+      value: cdktf.listMapperHcl(iamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsToHclTerraform, true)(struct!.trustAnchors),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class IamWorkloadIdentityPoolProviderX509TrustStoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IamWorkloadIdentityPoolProviderX509TrustStore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._intermediateCas?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.intermediateCas = this._intermediateCas?.internalValue;
+    }
+    if (this._trustAnchors?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustAnchors = this._trustAnchors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IamWorkloadIdentityPoolProviderX509TrustStore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._intermediateCas.internalValue = undefined;
+      this._trustAnchors.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._intermediateCas.internalValue = value.intermediateCas;
+      this._trustAnchors.internalValue = value.trustAnchors;
+    }
+  }
+
+  // intermediate_cas - computed: false, optional: true, required: false
+  private _intermediateCas = new IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCasList(this, "intermediate_cas", false);
+  public get intermediateCas() {
+    return this._intermediateCas;
+  }
+  public putIntermediateCas(value: IamWorkloadIdentityPoolProviderX509TrustStoreIntermediateCas[] | cdktf.IResolvable) {
+    this._intermediateCas.internalValue = value;
+  }
+  public resetIntermediateCas() {
+    this._intermediateCas.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intermediateCasInput() {
+    return this._intermediateCas.internalValue;
+  }
+
+  // trust_anchors - computed: false, optional: false, required: true
+  private _trustAnchors = new IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchorsList(this, "trust_anchors", false);
+  public get trustAnchors() {
+    return this._trustAnchors;
+  }
+  public putTrustAnchors(value: IamWorkloadIdentityPoolProviderX509TrustStoreTrustAnchors[] | cdktf.IResolvable) {
+    this._trustAnchors.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustAnchorsInput() {
+    return this._trustAnchors.internalValue;
+  }
+}
+export interface IamWorkloadIdentityPoolProviderX509 {
+  /**
+  * trust_store block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#trust_store IamWorkloadIdentityPoolProvider#trust_store}
+  */
+  readonly trustStore: IamWorkloadIdentityPoolProviderX509TrustStore;
+}
+
+export function iamWorkloadIdentityPoolProviderX509ToTerraform(struct?: IamWorkloadIdentityPoolProviderX509OutputReference | IamWorkloadIdentityPoolProviderX509): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    trust_store: iamWorkloadIdentityPoolProviderX509TrustStoreToTerraform(struct!.trustStore),
+  }
+}
+
+
+export function iamWorkloadIdentityPoolProviderX509ToHclTerraform(struct?: IamWorkloadIdentityPoolProviderX509OutputReference | IamWorkloadIdentityPoolProviderX509): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    trust_store: {
+      value: iamWorkloadIdentityPoolProviderX509TrustStoreToHclTerraform(struct!.trustStore),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IamWorkloadIdentityPoolProviderX509TrustStoreList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class IamWorkloadIdentityPoolProviderX509OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IamWorkloadIdentityPoolProviderX509 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._trustStore?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustStore = this._trustStore?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IamWorkloadIdentityPoolProviderX509 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._trustStore.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._trustStore.internalValue = value.trustStore;
+    }
+  }
+
+  // trust_store - computed: false, optional: false, required: true
+  private _trustStore = new IamWorkloadIdentityPoolProviderX509TrustStoreOutputReference(this, "trust_store");
+  public get trustStore() {
+    return this._trustStore;
+  }
+  public putTrustStore(value: IamWorkloadIdentityPoolProviderX509TrustStore) {
+    this._trustStore.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustStoreInput() {
+    return this._trustStore.internalValue;
+  }
+}
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider google_iam_workload_identity_pool_provider}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider google_iam_workload_identity_pool_provider}
 */
 export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
 
@@ -702,7 +1142,7 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IamWorkloadIdentityPoolProvider resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IamWorkloadIdentityPoolProvider to import
-  * @param importFromId The id of the existing IamWorkloadIdentityPoolProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IamWorkloadIdentityPoolProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IamWorkloadIdentityPoolProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -714,7 +1154,7 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/resources/iam_workload_identity_pool_provider google_iam_workload_identity_pool_provider} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/iam_workload_identity_pool_provider google_iam_workload_identity_pool_provider} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -725,7 +1165,7 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_workload_identity_pool_provider',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.1.0',
+        providerVersion: '6.2.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -749,6 +1189,7 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
     this._oidc.internalValue = config.oidc;
     this._saml.internalValue = config.saml;
     this._timeouts.internalValue = config.timeouts;
+    this._x509.internalValue = config.x509;
   }
 
   // ==========
@@ -967,6 +1408,22 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
     return this._timeouts.internalValue;
   }
 
+  // x509 - computed: false, optional: true, required: false
+  private _x509 = new IamWorkloadIdentityPoolProviderX509OutputReference(this, "x509");
+  public get x509() {
+    return this._x509;
+  }
+  public putX509(value: IamWorkloadIdentityPoolProviderX509) {
+    this._x509.internalValue = value;
+  }
+  public resetX509() {
+    this._x509.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get x509Input() {
+    return this._x509.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -986,6 +1443,7 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
       oidc: iamWorkloadIdentityPoolProviderOidcToTerraform(this._oidc.internalValue),
       saml: iamWorkloadIdentityPoolProviderSamlToTerraform(this._saml.internalValue),
       timeouts: iamWorkloadIdentityPoolProviderTimeoutsToTerraform(this._timeouts.internalValue),
+      x509: iamWorkloadIdentityPoolProviderX509ToTerraform(this._x509.internalValue),
     };
   }
 
@@ -1068,6 +1526,12 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
         isBlock: true,
         type: "struct",
         storageClassType: "IamWorkloadIdentityPoolProviderTimeouts",
+      },
+      x509: {
+        value: iamWorkloadIdentityPoolProviderX509ToHclTerraform(this._x509.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IamWorkloadIdentityPoolProviderX509List",
       },
     };
 

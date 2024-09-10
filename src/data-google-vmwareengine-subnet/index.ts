@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/vmwareengine_subnet
+// https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/vmwareengine_subnet
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleVmwareengineSubnetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/vmwareengine_subnet#id DataGoogleVmwareengineSubnet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/vmwareengine_subnet#id DataGoogleVmwareengineSubnet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,7 +18,7 @@ export interface DataGoogleVmwareengineSubnetConfig extends cdktf.TerraformMetaA
   * The ID of the subnet. For userDefined subnets, this name should be in the format of "service-n",
   * where n ranges from 1 to 5.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/vmwareengine_subnet#name DataGoogleVmwareengineSubnet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/vmwareengine_subnet#name DataGoogleVmwareengineSubnet#name}
   */
   readonly name: string;
   /**
@@ -31,7 +26,7 @@ export interface DataGoogleVmwareengineSubnetConfig extends cdktf.TerraformMetaA
   * Resource names are schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
   * For example: projects/my-project/locations/us-west1-a/privateClouds/my-cloud
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/vmwareengine_subnet#parent DataGoogleVmwareengineSubnet#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/vmwareengine_subnet#parent DataGoogleVmwareengineSubnet#parent}
   */
   readonly parent: string;
 }
@@ -117,7 +112,7 @@ export class DataGoogleVmwareengineSubnetDhcpAddressRangesList extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/vmwareengine_subnet google_vmwareengine_subnet}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/vmwareengine_subnet google_vmwareengine_subnet}
 */
 export class DataGoogleVmwareengineSubnet extends cdktf.TerraformDataSource {
 
@@ -133,7 +128,7 @@ export class DataGoogleVmwareengineSubnet extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleVmwareengineSubnet resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleVmwareengineSubnet to import
-  * @param importFromId The id of the existing DataGoogleVmwareengineSubnet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/vmwareengine_subnet#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleVmwareengineSubnet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/vmwareengine_subnet#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleVmwareengineSubnet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -145,7 +140,7 @@ export class DataGoogleVmwareengineSubnet extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.1.0/docs/data-sources/vmwareengine_subnet google_vmwareengine_subnet} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/data-sources/vmwareengine_subnet google_vmwareengine_subnet} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -156,7 +151,7 @@ export class DataGoogleVmwareengineSubnet extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_vmwareengine_subnet',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.1.0',
+        providerVersion: '6.2.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

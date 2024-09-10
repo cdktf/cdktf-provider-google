@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 import * as cdktf from 'cdktf';
 export interface DataGoogleContainerClusterAddonsConfigCloudrunConfig {
 }
@@ -2530,6 +2525,11 @@ export class DataGoogleContainerClusterDnsConfigOutputReference extends cdktf.Co
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // additive_vpc_scope_dns_domain - computed: true, optional: false, required: false
+  public get additiveVpcScopeDnsDomain() {
+    return this.getStringAttribute('additive_vpc_scope_dns_domain');
   }
 
   // cluster_dns - computed: true, optional: false, required: false
@@ -5605,6 +5605,11 @@ export class DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference ex
   // cpu_manager_policy - computed: true, optional: false, required: false
   public get cpuManagerPolicy() {
     return this.getStringAttribute('cpu_manager_policy');
+  }
+
+  // insecure_kubelet_readonly_port_enabled - computed: true, optional: false, required: false
+  public get insecureKubeletReadonlyPortEnabled() {
+    return this.getStringAttribute('insecure_kubelet_readonly_port_enabled');
   }
 
   // pod_pids_limit - computed: true, optional: false, required: false
