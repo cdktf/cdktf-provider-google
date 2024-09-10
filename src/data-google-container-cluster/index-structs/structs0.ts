@@ -2532,6 +2532,11 @@ export class DataGoogleContainerClusterDnsConfigOutputReference extends cdktf.Co
     }
   }
 
+  // additive_vpc_scope_dns_domain - computed: true, optional: false, required: false
+  public get additiveVpcScopeDnsDomain() {
+    return this.getStringAttribute('additive_vpc_scope_dns_domain');
+  }
+
   // cluster_dns - computed: true, optional: false, required: false
   public get clusterDns() {
     return this.getStringAttribute('cluster_dns');
@@ -5605,6 +5610,11 @@ export class DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference ex
   // cpu_manager_policy - computed: true, optional: false, required: false
   public get cpuManagerPolicy() {
     return this.getStringAttribute('cpu_manager_policy');
+  }
+
+  // insecure_kubelet_readonly_port_enabled - computed: true, optional: false, required: false
+  public get insecureKubeletReadonlyPortEnabled() {
+    return this.getStringAttribute('insecure_kubelet_readonly_port_enabled');
   }
 
   // pod_pids_limit - computed: true, optional: false, required: false
