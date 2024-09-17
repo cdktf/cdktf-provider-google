@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.NewDataGoogleApphubDiscoveredService(scope Construct, id *string, config DataGoogleApphubDiscoveredServiceConfig) DataGoogleApphubDiscoveredService
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredService_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredService_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredService_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredService_IsTerraformD
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -678,7 +678,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 &datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredServiceConfig {
 	Connection: interface{},
@@ -839,7 +839,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredServiceServiceProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 &datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredServiceServiceProperties {
 
@@ -852,7 +852,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscove
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredServiceServiceReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 &datagoogleapphubdiscoveredservice.DataGoogleApphubDiscoveredServiceServiceReference {
 
@@ -867,7 +867,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscove
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredServiceServicePropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.NewDataGoogleApphubDiscoveredServiceServicePropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleApphubDiscoveredServiceServicePropertiesList
 ```
@@ -1016,7 +1016,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredServiceServicePropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.NewDataGoogleApphubDiscoveredServiceServicePropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleApphubDiscoveredServiceServicePropertiesOutputReference
 ```
@@ -1316,7 +1316,7 @@ func InternalValue() DataGoogleApphubDiscoveredServiceServiceProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredServiceServiceReferenceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.NewDataGoogleApphubDiscoveredServiceServiceReferenceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleApphubDiscoveredServiceServiceReferenceList
 ```
@@ -1465,7 +1465,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleApphubDiscoveredService.DataGoogleApphubDiscoveredServiceServiceReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleapphubdiscoveredservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleapphubdiscoveredservice"
 
 datagoogleapphubdiscoveredservice.NewDataGoogleApphubDiscoveredServiceServiceReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleApphubDiscoveredServiceServiceReferenceOutputReference
 ```

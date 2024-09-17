@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 notebooksenvironment.NewNotebooksEnvironment(scope Construct, id *string, config NotebooksEnvironmentConfig) NotebooksEnvironment
 ```
@@ -473,7 +473,7 @@ func ResetVmImage()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 notebooksenvironment.NotebooksEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 notebooksenvironment.NotebooksEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ notebooksenvironment.NotebooksEnvironment_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 notebooksenvironment.NotebooksEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ notebooksenvironment.NotebooksEnvironment_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 notebooksenvironment.NotebooksEnvironment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -993,7 +993,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 &notebooksenvironment.NotebooksEnvironmentConfig {
 	Connection: interface{},
@@ -1005,14 +1005,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google.notebooksEnvironment.NotebooksEnvironmentContainerImage,
+	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google/v14.notebooksEnvironment.NotebooksEnvironmentContainerImage,
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
 	PostStartupScript: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.notebooksEnvironment.NotebooksEnvironmentTimeouts,
-	VmImage: github.com/cdktf/cdktf-provider-google-go/google.notebooksEnvironment.NotebooksEnvironmentVmImage,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.notebooksEnvironment.NotebooksEnvironmentTimeouts,
+	VmImage: github.com/cdktf/cdktf-provider-google-go/google/v14.notebooksEnvironment.NotebooksEnvironmentVmImage,
 }
 ```
 
@@ -1256,7 +1256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentContainerImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 &notebooksenvironment.NotebooksEnvironmentContainerImage {
 	Repository: *string,
@@ -1306,7 +1306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 &notebooksenvironment.NotebooksEnvironmentTimeouts {
 	Create: *string,
@@ -1366,7 +1366,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentVmImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 &notebooksenvironment.NotebooksEnvironmentVmImage {
 	Project: *string,
@@ -1434,7 +1434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentContainerImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 notebooksenvironment.NewNotebooksEnvironmentContainerImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksEnvironmentContainerImageOutputReference
 ```
@@ -1734,7 +1734,7 @@ func InternalValue() NotebooksEnvironmentContainerImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 notebooksenvironment.NewNotebooksEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksEnvironmentTimeoutsOutputReference
 ```
@@ -2070,7 +2070,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentVmImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
 
 notebooksenvironment.NewNotebooksEnvironmentVmImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksEnvironmentVmImageOutputReference
 ```
