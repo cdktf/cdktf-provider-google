@@ -378,6 +378,7 @@ The following submodules are available:
 - [dataGoogleBigqueryDatasetIamPolicy](./dataGoogleBigqueryDatasetIamPolicy.go.md)
 - [dataGoogleBigqueryDefaultServiceAccount](./dataGoogleBigqueryDefaultServiceAccount.go.md)
 - [dataGoogleBigqueryTableIamPolicy](./dataGoogleBigqueryTableIamPolicy.go.md)
+- [dataGoogleBigqueryTables](./dataGoogleBigqueryTables.go.md)
 - [dataGoogleBigtableInstanceIamPolicy](./dataGoogleBigtableInstanceIamPolicy.go.md)
 - [dataGoogleBigtableTableIamPolicy](./dataGoogleBigtableTableIamPolicy.go.md)
 - [dataGoogleBillingAccount](./dataGoogleBillingAccount.go.md)

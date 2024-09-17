@@ -4,7 +4,7 @@
 
 ### ComputeImageIamPolicy <a name="ComputeImageIamPolicy" id="@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy google_compute_image_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy google_compute_image_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicy.Initializer"></a>
 
@@ -481,7 +481,7 @@ The construct id used in the generated config for the ComputeImageIamPolicy to i
 
 The id of the existing ComputeImageIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -796,10 +796,10 @@ const computeImageIamPolicyConfig: computeImageIamPolicy.ComputeImageIamPolicyCo
 | <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.image">image</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#image ComputeImageIamPolicy#image}. |
-| <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#policy_data ComputeImageIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#id ComputeImageIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#project ComputeImageIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.image">image</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#image ComputeImageIamPolicy#image}. |
+| <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#policy_data ComputeImageIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#id ComputeImageIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.computeImageIamPolicy.ComputeImageIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#project ComputeImageIamPolicy#project}. |
 
 ---
 
@@ -881,7 +881,7 @@ public readonly image: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#image ComputeImageIamPolicy#image}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#image ComputeImageIamPolicy#image}.
 
 ---
 
@@ -893,7 +893,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#policy_data ComputeImageIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#policy_data ComputeImageIamPolicy#policy_data}.
 
 ---
 
@@ -905,7 +905,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#id ComputeImageIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#id ComputeImageIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -920,7 +920,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/compute_image_iam_policy#project ComputeImageIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_image_iam_policy#project ComputeImageIamPolicy#project}.
 
 ---
 

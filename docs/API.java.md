@@ -378,6 +378,7 @@ The following submodules are available:
 - [dataGoogleBigqueryDatasetIamPolicy](./dataGoogleBigqueryDatasetIamPolicy.java.md)
 - [dataGoogleBigqueryDefaultServiceAccount](./dataGoogleBigqueryDefaultServiceAccount.java.md)
 - [dataGoogleBigqueryTableIamPolicy](./dataGoogleBigqueryTableIamPolicy.java.md)
+- [dataGoogleBigqueryTables](./dataGoogleBigqueryTables.java.md)
 - [dataGoogleBigtableInstanceIamPolicy](./dataGoogleBigtableInstanceIamPolicy.java.md)
 - [dataGoogleBigtableTableIamPolicy](./dataGoogleBigtableTableIamPolicy.java.md)
 - [dataGoogleBillingAccount](./dataGoogleBillingAccount.java.md)

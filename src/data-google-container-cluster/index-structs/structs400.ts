@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 import * as cdktf from 'cdktf';
 import { DataGoogleContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesList,
 DataGoogleContainerClusterNodePoolNodeConfigConfidentialNodesList,
@@ -1153,6 +1148,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
   // spot - computed: true, optional: false, required: false
   public get spot() {
     return this.getBooleanAttribute('spot');
+  }
+
+  // storage_pools - computed: true, optional: false, required: false
+  public get storagePools() {
+    return this.getListAttribute('storage_pools');
   }
 
   // tags - computed: true, optional: false, required: false

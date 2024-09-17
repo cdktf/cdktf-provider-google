@@ -4,12 +4,12 @@
 
 ### DataplexAspectTypeIamPolicy <a name="DataplexAspectTypeIamPolicy" id="@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy google_dataplex_aspect_type_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy google_dataplex_aspect_type_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttypeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttypeiampolicy"
 
 dataplexaspecttypeiampolicy.NewDataplexAspectTypeIamPolicy(scope Construct, id *string, config DataplexAspectTypeIamPolicyConfig) DataplexAspectTypeIamPolicy
 ```
@@ -399,7 +399,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttypeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttypeiampolicy"
 
 dataplexaspecttypeiampolicy.DataplexAspectTypeIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttypeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttypeiampolicy"
 
 dataplexaspecttypeiampolicy.DataplexAspectTypeIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ dataplexaspecttypeiampolicy.DataplexAspectTypeIamPolicy_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttypeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttypeiampolicy"
 
 dataplexaspecttypeiampolicy.DataplexAspectTypeIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ dataplexaspecttypeiampolicy.DataplexAspectTypeIamPolicy_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttypeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttypeiampolicy"
 
 dataplexaspecttypeiampolicy.DataplexAspectTypeIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -488,7 +488,7 @@ The construct id used in the generated config for the DataplexAspectTypeIamPolic
 
 The id of the existing DataplexAspectTypeIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -809,7 +809,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttypeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttypeiampolicy"
 
 &dataplexaspecttypeiampolicy.DataplexAspectTypeIamPolicyConfig {
 	Connection: interface{},
@@ -838,11 +838,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttypei
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.aspectTypeId">AspectTypeId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#aspect_type_id DataplexAspectTypeIamPolicy#aspect_type_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#policy_data DataplexAspectTypeIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#id DataplexAspectTypeIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#location DataplexAspectTypeIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#project DataplexAspectTypeIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.aspectTypeId">AspectTypeId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#aspect_type_id DataplexAspectTypeIamPolicy#aspect_type_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#policy_data DataplexAspectTypeIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#id DataplexAspectTypeIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#location DataplexAspectTypeIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamPolicy.DataplexAspectTypeIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#project DataplexAspectTypeIamPolicy#project}. |
 
 ---
 
@@ -924,7 +924,7 @@ AspectTypeId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#aspect_type_id DataplexAspectTypeIamPolicy#aspect_type_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#aspect_type_id DataplexAspectTypeIamPolicy#aspect_type_id}.
 
 ---
 
@@ -936,7 +936,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#policy_data DataplexAspectTypeIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#policy_data DataplexAspectTypeIamPolicy#policy_data}.
 
 ---
 
@@ -948,7 +948,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#id DataplexAspectTypeIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#id DataplexAspectTypeIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -963,7 +963,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#location DataplexAspectTypeIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#location DataplexAspectTypeIamPolicy#location}.
 
 ---
 
@@ -975,7 +975,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.2.0/docs/resources/dataplex_aspect_type_iam_policy#project DataplexAspectTypeIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/dataplex_aspect_type_iam_policy#project DataplexAspectTypeIamPolicy#project}.
 
 ---
 
