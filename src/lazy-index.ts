@@ -896,6 +896,7 @@ Object.defineProperty(exports, 'dataGoogleBigqueryDataset', { get: function () {
 Object.defineProperty(exports, 'dataGoogleBigqueryDatasetIamPolicy', { get: function () { return require('./data-google-bigquery-dataset-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryDefaultServiceAccount', { get: function () { return require('./data-google-bigquery-default-service-account'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryTableIamPolicy', { get: function () { return require('./data-google-bigquery-table-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleBigqueryTables', { get: function () { return require('./data-google-bigquery-tables'); } });
 Object.defineProperty(exports, 'dataGoogleBigtableInstanceIamPolicy', { get: function () { return require('./data-google-bigtable-instance-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBigtableTableIamPolicy', { get: function () { return require('./data-google-bigtable-table-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBillingAccount', { get: function () { return require('./data-google-billing-account'); } });

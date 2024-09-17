@@ -896,6 +896,7 @@ export * as dataGoogleBigqueryDataset from './data-google-bigquery-dataset';
 export * as dataGoogleBigqueryDatasetIamPolicy from './data-google-bigquery-dataset-iam-policy';
 export * as dataGoogleBigqueryDefaultServiceAccount from './data-google-bigquery-default-service-account';
 export * as dataGoogleBigqueryTableIamPolicy from './data-google-bigquery-table-iam-policy';
+export * as dataGoogleBigqueryTables from './data-google-bigquery-tables';
 export * as dataGoogleBigtableInstanceIamPolicy from './data-google-bigtable-instance-iam-policy';
 export * as dataGoogleBigtableTableIamPolicy from './data-google-bigtable-table-iam-policy';
 export * as dataGoogleBillingAccount from './data-google-billing-account';
