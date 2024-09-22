@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.NewDataplexEntryGroupIamMember(scope Construct, id *string, config DataplexEntryGroupIamMemberConfig) DataplexEntryGroupIamMember
 ```
@@ -419,7 +419,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.DataplexEntryGroupIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
 
 &dataplexentrygroupiammember.DataplexEntryGroupIamMemberCondition {
 	Expression: *string,
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
 
 &dataplexentrygroupiammember.DataplexEntryGroupIamMemberConfig {
 	Connection: interface{},
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiamme
 	EntryGroupId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.NewDataplexEntryGroupIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexEntryGroupIamMemberConditionOutputReference
 ```
