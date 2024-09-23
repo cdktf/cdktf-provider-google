@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueue(scope Construct, id *string, config CloudTasksQueueConfig) CloudTasksQueue
 ```
@@ -519,7 +519,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.CloudTasksQueue_IsConstruct(x interface{}) *bool
 ```
@@ -551,7 +551,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.CloudTasksQueue_IsTerraformElement(x interface{}) *bool
 ```
@@ -565,7 +565,7 @@ cloudtasksqueue.CloudTasksQueue_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.CloudTasksQueue_IsTerraformResource(x interface{}) *bool
 ```
@@ -579,7 +579,7 @@ cloudtasksqueue.CloudTasksQueue_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueue.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.CloudTasksQueue_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1028,7 +1028,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverride.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueAppEngineRoutingOverride {
 	Instance: *string,
@@ -1100,7 +1100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueConfig {
 	Connection: interface{},
@@ -1111,15 +1111,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Location: *string,
-	AppEngineRoutingOverride: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverride,
-	HttpTarget: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueHttpTarget,
+	AppEngineRoutingOverride: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverride,
+	HttpTarget: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueHttpTarget,
 	Id: *string,
 	Name: *string,
 	Project: *string,
-	RateLimits: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueRateLimits,
-	RetryConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueRetryConfig,
-	StackdriverLoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueTimeouts,
+	RateLimits: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueRateLimits,
+	RetryConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueRetryConfig,
+	StackdriverLoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueTimeouts,
 }
 ```
 
@@ -1361,14 +1361,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueHttpTarget {
 	HeaderOverrides: interface{},
 	HttpMethod: *string,
-	OauthToken: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueHttpTargetOauthToken,
-	OidcToken: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueHttpTargetOidcToken,
-	UriOverride: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverride,
+	OauthToken: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueHttpTargetOauthToken,
+	OidcToken: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueHttpTargetOidcToken,
+	UriOverride: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverride,
 }
 ```
 
@@ -1462,10 +1462,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetHeaderOverrides.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueHttpTargetHeaderOverrides {
-	Header: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueHttpTargetHeaderOverridesHeader,
+	Header: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueHttpTargetHeaderOverridesHeader,
 }
 ```
 
@@ -1496,7 +1496,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetHeaderOverridesHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueHttpTargetHeaderOverridesHeader {
 	Key: *string,
@@ -1546,7 +1546,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetOauthToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueHttpTargetOauthToken {
 	ServiceAccountEmail: *string,
@@ -1599,7 +1599,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetOidcToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueHttpTargetOidcToken {
 	ServiceAccountEmail: *string,
@@ -1652,13 +1652,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverride.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueHttpTargetUriOverride {
 	Host: *string,
-	PathOverride: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverridePathOverride,
+	PathOverride: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverridePathOverride,
 	Port: *string,
-	QueryOverride: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverrideQueryOverride,
+	QueryOverride: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverrideQueryOverride,
 	Scheme: *string,
 	UriOverrideEnforceMode: *string,
 }
@@ -1780,7 +1780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverridePathOverride.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueHttpTargetUriOverridePathOverride {
 	Path: *string,
@@ -1814,7 +1814,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverrideQueryOverride.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueHttpTargetUriOverrideQueryOverride {
 	QueryParams: *string,
@@ -1848,7 +1848,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRateLimits.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueRateLimits {
 	MaxConcurrentDispatches: *f64,
@@ -1904,7 +1904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRetryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueRetryConfig {
 	MaxAttempts: *f64,
@@ -2021,7 +2021,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueStackdriverLoggingConfig {
 	SamplingRatio: *f64,
@@ -2058,7 +2058,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 &cloudtasksqueue.CloudTasksQueueTimeouts {
 	Create: *string,
@@ -2120,7 +2120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueAppEngineRoutingOverrideOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueAppEngineRoutingOverrideOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueAppEngineRoutingOverrideOutputReference
 ```
@@ -2467,7 +2467,7 @@ func InternalValue() CloudTasksQueueAppEngineRoutingOverride
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetHeaderOverridesHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetHeaderOverridesHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueHttpTargetHeaderOverridesHeaderOutputReference
 ```
@@ -2760,7 +2760,7 @@ func InternalValue() CloudTasksQueueHttpTargetHeaderOverridesHeader
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetHeaderOverridesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetHeaderOverridesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudTasksQueueHttpTargetHeaderOverridesList
 ```
@@ -2920,7 +2920,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetHeaderOverridesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetHeaderOverridesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudTasksQueueHttpTargetHeaderOverridesOutputReference
 ```
@@ -3222,7 +3222,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetOauthTokenOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetOauthTokenOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueHttpTargetOauthTokenOutputReference
 ```
@@ -3522,7 +3522,7 @@ func InternalValue() CloudTasksQueueHttpTargetOauthToken
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetOidcTokenOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetOidcTokenOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueHttpTargetOidcTokenOutputReference
 ```
@@ -3822,7 +3822,7 @@ func InternalValue() CloudTasksQueueHttpTargetOidcToken
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueHttpTargetOutputReference
 ```
@@ -4268,7 +4268,7 @@ func InternalValue() CloudTasksQueueHttpTarget
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverrideOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetUriOverrideOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueHttpTargetUriOverrideOutputReference
 ```
@@ -4717,7 +4717,7 @@ func InternalValue() CloudTasksQueueHttpTargetUriOverride
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverridePathOverrideOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetUriOverridePathOverrideOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueHttpTargetUriOverridePathOverrideOutputReference
 ```
@@ -4995,7 +4995,7 @@ func InternalValue() CloudTasksQueueHttpTargetUriOverridePathOverride
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueHttpTargetUriOverrideQueryOverrideOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueHttpTargetUriOverrideQueryOverrideOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueHttpTargetUriOverrideQueryOverrideOutputReference
 ```
@@ -5273,7 +5273,7 @@ func InternalValue() CloudTasksQueueHttpTargetUriOverrideQueryOverride
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRateLimitsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueRateLimitsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueRateLimitsOutputReference
 ```
@@ -5591,7 +5591,7 @@ func InternalValue() CloudTasksQueueRateLimits
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueRetryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueRetryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueRetryConfigOutputReference
 ```
@@ -5985,7 +5985,7 @@ func InternalValue() CloudTasksQueueRetryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueStackdriverLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueStackdriverLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueStackdriverLoggingConfigOutputReference
 ```
@@ -6256,7 +6256,7 @@ func InternalValue() CloudTasksQueueStackdriverLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueue.CloudTasksQueueTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudtasksqueue"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueue"
 
 cloudtasksqueue.NewCloudTasksQueueTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueTimeoutsOutputReference
 ```
