@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappattestconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/firebaseappcheckappattestconfig"
 
 firebaseappcheckappattestconfig.NewFirebaseAppCheckAppAttestConfig(scope Construct, id *string, config FirebaseAppCheckAppAttestConfigConfig) FirebaseAppCheckAppAttestConfig
 ```
@@ -419,7 +419,7 @@ func ResetTokenTtl()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappattestconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/firebaseappcheckappattestconfig"
 
 firebaseappcheckappattestconfig.FirebaseAppCheckAppAttestConfig_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappattestconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/firebaseappcheckappattestconfig"
 
 firebaseappcheckappattestconfig.FirebaseAppCheckAppAttestConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ firebaseappcheckappattestconfig.FirebaseAppCheckAppAttestConfig_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappattestconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/firebaseappcheckappattestconfig"
 
 firebaseappcheckappattestconfig.FirebaseAppCheckAppAttestConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ firebaseappcheckappattestconfig.FirebaseAppCheckAppAttestConfig_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappattestconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/firebaseappcheckappattestconfig"
 
 firebaseappcheckappattestconfig.FirebaseAppCheckAppAttestConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -829,7 +829,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappattestconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/firebaseappcheckappattestconfig"
 
 &firebaseappcheckappattestconfig.FirebaseAppCheckAppAttestConfigConfig {
 	Connection: interface{},
@@ -842,7 +842,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappatte
 	AppId: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfigTimeouts,
 	TokenTtl: *string,
 }
 ```
@@ -1014,7 +1014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappattestconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/firebaseappcheckappattestconfig"
 
 &firebaseappcheckappattestconfig.FirebaseAppCheckAppAttestConfigTimeouts {
 	Create: *string,
@@ -1076,7 +1076,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppCheckAppAttestConfig.FirebaseAppCheckAppAttestConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/firebaseappcheckappattestconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/firebaseappcheckappattestconfig"
 
 firebaseappcheckappattestconfig.NewFirebaseAppCheckAppAttestConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirebaseAppCheckAppAttestConfigTimeoutsOutputReference
 ```
