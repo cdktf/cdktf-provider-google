@@ -4,12 +4,12 @@
 
 ### NotebooksEnvironment <a name="NotebooksEnvironment" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment google_notebooks_environment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment google_notebooks_environment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 notebooksenvironment.NewNotebooksEnvironment(scope Construct, id *string, config NotebooksEnvironmentConfig) NotebooksEnvironment
 ```
@@ -473,7 +473,7 @@ func ResetVmImage()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 notebooksenvironment.NotebooksEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 notebooksenvironment.NotebooksEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ notebooksenvironment.NotebooksEnvironment_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 notebooksenvironment.NotebooksEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ notebooksenvironment.NotebooksEnvironment_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 notebooksenvironment.NotebooksEnvironment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -562,7 +562,7 @@ The construct id used in the generated config for the NotebooksEnvironment to im
 
 The id of the existing NotebooksEnvironment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -993,7 +993,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 &notebooksenvironment.NotebooksEnvironmentConfig {
 	Connection: interface{},
@@ -1005,14 +1005,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironmen
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google/v14.notebooksEnvironment.NotebooksEnvironmentContainerImage,
+	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google.notebooksEnvironment.NotebooksEnvironmentContainerImage,
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
 	PostStartupScript: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.notebooksEnvironment.NotebooksEnvironmentTimeouts,
-	VmImage: github.com/cdktf/cdktf-provider-google-go/google/v14.notebooksEnvironment.NotebooksEnvironmentVmImage,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.notebooksEnvironment.NotebooksEnvironmentTimeouts,
+	VmImage: github.com/cdktf/cdktf-provider-google-go/google.notebooksEnvironment.NotebooksEnvironmentVmImage,
 }
 ```
 
@@ -1032,9 +1032,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironmen
 | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.containerImage">ContainerImage</a></code> | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentContainerImage">NotebooksEnvironmentContainerImage</a></code> | container_image block. |
 | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.description">Description</a></code> | <code>*string</code> | A brief description of this environment. |
 | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Display name of this environment for the UI. |
-| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#id NotebooksEnvironment#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#id NotebooksEnvironment#id}. |
 | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.postStartupScript">PostStartupScript</a></code> | <code>*string</code> | Path to a Bash script that automatically runs after a notebook instance fully boots up. |
-| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}. |
 | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts">NotebooksEnvironmentTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentConfig.property.vmImage">VmImage</a></code> | <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentVmImage">NotebooksEnvironmentVmImage</a></code> | vm_image block. |
 
@@ -1120,7 +1120,7 @@ Location *string
 
 A reference to the zone where the machine resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#location NotebooksEnvironment#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#location NotebooksEnvironment#location}
 
 ---
 
@@ -1134,7 +1134,7 @@ Name *string
 
 The name specified for the Environment instance. Format: projects/{project_id}/locations/{location}/environments/{environmentId}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#name NotebooksEnvironment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#name NotebooksEnvironment#name}
 
 ---
 
@@ -1148,7 +1148,7 @@ ContainerImage NotebooksEnvironmentContainerImage
 
 container_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#container_image NotebooksEnvironment#container_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#container_image NotebooksEnvironment#container_image}
 
 ---
 
@@ -1162,7 +1162,7 @@ Description *string
 
 A brief description of this environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#description NotebooksEnvironment#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#description NotebooksEnvironment#description}
 
 ---
 
@@ -1176,7 +1176,7 @@ DisplayName *string
 
 Display name of this environment for the UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#display_name NotebooksEnvironment#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#display_name NotebooksEnvironment#display_name}
 
 ---
 
@@ -1188,7 +1188,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#id NotebooksEnvironment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#id NotebooksEnvironment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1207,7 +1207,7 @@ Path to a Bash script that automatically runs after a notebook instance fully bo
 
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#post_startup_script NotebooksEnvironment#post_startup_script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#post_startup_script NotebooksEnvironment#post_startup_script}
 
 ---
 
@@ -1219,7 +1219,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}.
 
 ---
 
@@ -1233,7 +1233,7 @@ Timeouts NotebooksEnvironmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#timeouts NotebooksEnvironment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#timeouts NotebooksEnvironment#timeouts}
 
 ---
 
@@ -1247,7 +1247,7 @@ VmImage NotebooksEnvironmentVmImage
 
 vm_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#vm_image NotebooksEnvironment#vm_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#vm_image NotebooksEnvironment#vm_image}
 
 ---
 
@@ -1256,7 +1256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentContainerImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 &notebooksenvironment.NotebooksEnvironmentContainerImage {
 	Repository: *string,
@@ -1283,7 +1283,7 @@ Repository *string
 
 The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#repository NotebooksEnvironment#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#repository NotebooksEnvironment#repository}
 
 ---
 
@@ -1297,7 +1297,7 @@ Tag *string
 
 The tag of the container image. If not specified, this defaults to the latest tag.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#tag NotebooksEnvironment#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#tag NotebooksEnvironment#tag}
 
 ---
 
@@ -1306,7 +1306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 &notebooksenvironment.NotebooksEnvironmentTimeouts {
 	Create: *string,
@@ -1319,9 +1319,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironmen
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#create NotebooksEnvironment#create}. |
-| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#delete NotebooksEnvironment#delete}. |
-| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#update NotebooksEnvironment#update}. |
+| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#create NotebooksEnvironment#create}. |
+| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#delete NotebooksEnvironment#delete}. |
+| <code><a href="#@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#update NotebooksEnvironment#update}. |
 
 ---
 
@@ -1333,7 +1333,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#create NotebooksEnvironment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#create NotebooksEnvironment#create}.
 
 ---
 
@@ -1345,7 +1345,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#delete NotebooksEnvironment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#delete NotebooksEnvironment#delete}.
 
 ---
 
@@ -1357,7 +1357,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#update NotebooksEnvironment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#update NotebooksEnvironment#update}.
 
 ---
 
@@ -1366,7 +1366,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentVmImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 &notebooksenvironment.NotebooksEnvironmentVmImage {
 	Project: *string,
@@ -1395,7 +1395,7 @@ Project *string
 
 The name of the Google Cloud project that this VM image belongs to. Format: projects/{project_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}
 
 ---
 
@@ -1409,7 +1409,7 @@ ImageFamily *string
 
 Use this VM image family to find the image; the newest image in this family will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#image_family NotebooksEnvironment#image_family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#image_family NotebooksEnvironment#image_family}
 
 ---
 
@@ -1423,7 +1423,7 @@ ImageName *string
 
 Use VM image name to find the image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/notebooks_environment#image_name NotebooksEnvironment#image_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/notebooks_environment#image_name NotebooksEnvironment#image_name}
 
 ---
 
@@ -1434,7 +1434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentContainerImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 notebooksenvironment.NewNotebooksEnvironmentContainerImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksEnvironmentContainerImageOutputReference
 ```
@@ -1734,7 +1734,7 @@ func InternalValue() NotebooksEnvironmentContainerImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 notebooksenvironment.NewNotebooksEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksEnvironmentTimeoutsOutputReference
 ```
@@ -2070,7 +2070,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksEnvironment.NotebooksEnvironmentVmImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/notebooksenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksenvironment"
 
 notebooksenvironment.NewNotebooksEnvironmentVmImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksEnvironmentVmImageOutputReference
 ```

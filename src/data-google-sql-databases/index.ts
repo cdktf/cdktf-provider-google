@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/data-sources/sql_databases
+// https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/sql_databases
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSqlDatabasesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/data-sources/sql_databases#id DataGoogleSqlDatabases#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/sql_databases#id DataGoogleSqlDatabases#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,13 +17,13 @@ export interface DataGoogleSqlDatabasesConfig extends cdktf.TerraformMetaArgumen
   /**
   * The name of the Cloud SQL database instance in which the database belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/data-sources/sql_databases#instance DataGoogleSqlDatabases#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/sql_databases#instance DataGoogleSqlDatabases#instance}
   */
   readonly instance: string;
   /**
   * Project ID of the project that contains the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/data-sources/sql_databases#project DataGoogleSqlDatabases#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/sql_databases#project DataGoogleSqlDatabases#project}
   */
   readonly project?: string;
 }
@@ -139,7 +134,7 @@ export class DataGoogleSqlDatabasesDatabasesList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/data-sources/sql_databases google_sql_databases}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/sql_databases google_sql_databases}
 */
 export class DataGoogleSqlDatabases extends cdktf.TerraformDataSource {
 
@@ -155,7 +150,7 @@ export class DataGoogleSqlDatabases extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleSqlDatabases resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleSqlDatabases to import
-  * @param importFromId The id of the existing DataGoogleSqlDatabases that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/data-sources/sql_databases#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleSqlDatabases that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/sql_databases#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleSqlDatabases to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -167,7 +162,7 @@ export class DataGoogleSqlDatabases extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/data-sources/sql_databases google_sql_databases} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/sql_databases google_sql_databases} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -178,7 +173,7 @@ export class DataGoogleSqlDatabases extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_databases',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.3.0',
+        providerVersion: '6.4.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
