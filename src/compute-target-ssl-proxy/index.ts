@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy
+// https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +15,7 @@ export interface ComputeTargetSslProxyConfig extends cdktf.TerraformMetaArgument
   /**
   * A reference to the BackendService resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#backend_service ComputeTargetSslProxy#backend_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#backend_service ComputeTargetSslProxy#backend_service}
   */
   readonly backendService: string;
   /**
@@ -23,17 +23,17 @@ export interface ComputeTargetSslProxyConfig extends cdktf.TerraformMetaArgument
   * associated with the given target proxy. This field can only be set for global target proxies.
   * Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#certificate_map ComputeTargetSslProxy#certificate_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#certificate_map ComputeTargetSslProxy#certificate_map}
   */
   readonly certificateMap?: string;
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#description ComputeTargetSslProxy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#description ComputeTargetSslProxy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#id ComputeTargetSslProxy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#id ComputeTargetSslProxy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -48,18 +48,18 @@ export interface ComputeTargetSslProxyConfig extends cdktf.TerraformMetaArgument
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#name ComputeTargetSslProxy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#name ComputeTargetSslProxy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#project ComputeTargetSslProxy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#project ComputeTargetSslProxy#project}
   */
   readonly project?: string;
   /**
   * Specifies the type of proxy header to append before sending data to
   * the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#proxy_header ComputeTargetSslProxy#proxy_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#proxy_header ComputeTargetSslProxy#proxy_header}
   */
   readonly proxyHeader?: string;
   /**
@@ -67,7 +67,7 @@ export interface ComputeTargetSslProxyConfig extends cdktf.TerraformMetaArgument
   * connections between users and the load balancer. At least one
   * SSL certificate must be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#ssl_certificates ComputeTargetSslProxy#ssl_certificates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#ssl_certificates ComputeTargetSslProxy#ssl_certificates}
   */
   readonly sslCertificates?: string[];
   /**
@@ -75,27 +75,27 @@ export interface ComputeTargetSslProxyConfig extends cdktf.TerraformMetaArgument
   * the TargetSslProxy resource. If not set, the TargetSslProxy
   * resource will not have any SSL policy configured.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#ssl_policy ComputeTargetSslProxy#ssl_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#ssl_policy ComputeTargetSslProxy#ssl_policy}
   */
   readonly sslPolicy?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#timeouts ComputeTargetSslProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#timeouts ComputeTargetSslProxy#timeouts}
   */
   readonly timeouts?: ComputeTargetSslProxyTimeouts;
 }
 export interface ComputeTargetSslProxyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#create ComputeTargetSslProxy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#create ComputeTargetSslProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#delete ComputeTargetSslProxy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#delete ComputeTargetSslProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#update ComputeTargetSslProxy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#update ComputeTargetSslProxy#update}
   */
   readonly update?: string;
 }
@@ -247,7 +247,7 @@ export class ComputeTargetSslProxyTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy google_compute_target_ssl_proxy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy google_compute_target_ssl_proxy}
 */
 export class ComputeTargetSslProxy extends cdktf.TerraformResource {
 
@@ -263,7 +263,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeTargetSslProxy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeTargetSslProxy to import
-  * @param importFromId The id of the existing ComputeTargetSslProxy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeTargetSslProxy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeTargetSslProxy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -275,7 +275,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.3.0/docs/resources/compute_target_ssl_proxy google_compute_target_ssl_proxy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_target_ssl_proxy google_compute_target_ssl_proxy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -286,7 +286,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_target_ssl_proxy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.3.0',
+        providerVersion: '6.4.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
