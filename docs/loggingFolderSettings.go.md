@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.NewLoggingFolderSettings(scope Construct, id *string, config LoggingFolderSettingsConfig) LoggingFolderSettings
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.LoggingFolderSettings_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.LoggingFolderSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ loggingfoldersettings.LoggingFolderSettings_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.LoggingFolderSettings_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ loggingfoldersettings.LoggingFolderSettings_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.LoggingFolderSettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -880,7 +880,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 &loggingfoldersettings.LoggingFolderSettingsConfig {
 	Connection: interface{},
@@ -895,7 +895,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettin
 	Id: *string,
 	KmsKeyName: *string,
 	StorageLocation: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.loggingFolderSettings.LoggingFolderSettingsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.loggingFolderSettings.LoggingFolderSettingsTimeouts,
 }
 ```
 
@@ -1081,7 +1081,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 &loggingfoldersettings.LoggingFolderSettingsTimeouts {
 	Create: *string,
@@ -1143,7 +1143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderSettings.LoggingFolderSettingsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/loggingfoldersettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingfoldersettings"
 
 loggingfoldersettings.NewLoggingFolderSettingsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingFolderSettingsTimeoutsOutputReference
 ```
