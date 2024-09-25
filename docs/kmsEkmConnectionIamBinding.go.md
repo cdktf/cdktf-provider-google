@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmsekmconnectioniambinding"
 
 kmsekmconnectioniambinding.NewKmsEkmConnectionIamBinding(scope Construct, id *string, config KmsEkmConnectionIamBindingConfig) KmsEkmConnectionIamBinding
 ```
@@ -419,7 +419,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmsekmconnectioniambinding"
 
 kmsekmconnectioniambinding.KmsEkmConnectionIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmsekmconnectioniambinding"
 
 kmsekmconnectioniambinding.KmsEkmConnectionIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ kmsekmconnectioniambinding.KmsEkmConnectionIamBinding_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmsekmconnectioniambinding"
 
 kmsekmconnectioniambinding.KmsEkmConnectionIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ kmsekmconnectioniambinding.KmsEkmConnectionIamBinding_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmsekmconnectioniambinding"
 
 kmsekmconnectioniambinding.KmsEkmConnectionIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmsekmconnectioniambinding"
 
 &kmsekmconnectioniambinding.KmsEkmConnectionIamBindingCondition {
 	Expression: *string,
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmsekmconnectioniambinding"
 
 &kmsekmconnectioniambinding.KmsEkmConnectionIamBindingConfig {
 	Connection: interface{},
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambind
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsEkmConnectionIamBinding.KmsEkmConnectionIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/kmsekmconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmsekmconnectioniambinding"
 
 kmsekmconnectioniambinding.NewKmsEkmConnectionIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KmsEkmConnectionIamBindingConditionOutputReference
 ```
