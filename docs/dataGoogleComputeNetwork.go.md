@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetwork"
 
 datagooglecomputenetwork.NewDataGoogleComputeNetwork(scope Construct, id *string, config DataGoogleComputeNetworkConfig) DataGoogleComputeNetwork
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetwork"
 
 datagooglecomputenetwork.DataGoogleComputeNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetwork"
 
 datagooglecomputenetwork.DataGoogleComputeNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagooglecomputenetwork.DataGoogleComputeNetwork_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetwork"
 
 datagooglecomputenetwork.DataGoogleComputeNetwork_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglecomputenetwork.DataGoogleComputeNetwork_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetwork"
 
 datagooglecomputenetwork.DataGoogleComputeNetwork_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -678,7 +678,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetwork"
 
 &datagooglecomputenetwork.DataGoogleComputeNetworkConfig {
 	Connection: interface{},

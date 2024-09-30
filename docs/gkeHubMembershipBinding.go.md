@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 gkehubmembershipbinding.NewGkeHubMembershipBinding(scope Construct, id *string, config GkeHubMembershipBindingConfig) GkeHubMembershipBinding
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 gkehubmembershipbinding.GkeHubMembershipBinding_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 gkehubmembershipbinding.GkeHubMembershipBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ gkehubmembershipbinding.GkeHubMembershipBinding_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 gkehubmembershipbinding.GkeHubMembershipBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ gkehubmembershipbinding.GkeHubMembershipBinding_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 gkehubmembershipbinding.GkeHubMembershipBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -972,7 +972,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 &gkehubmembershipbinding.GkeHubMembershipBindingConfig {
 	Connection: interface{},
@@ -989,7 +989,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbin
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.gkeHubMembershipBinding.GkeHubMembershipBindingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gkeHubMembershipBinding.GkeHubMembershipBindingTimeouts,
 }
 ```
 
@@ -1206,7 +1206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingState.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 &gkehubmembershipbinding.GkeHubMembershipBindingState {
 
@@ -1219,7 +1219,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 &gkehubmembershipbinding.GkeHubMembershipBindingTimeouts {
 	Create: *string,
@@ -1281,7 +1281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 gkehubmembershipbinding.NewGkeHubMembershipBindingStateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeHubMembershipBindingStateList
 ```
@@ -1430,7 +1430,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingStateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 gkehubmembershipbinding.NewGkeHubMembershipBindingStateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeHubMembershipBindingStateOutputReference
 ```
@@ -1708,7 +1708,7 @@ func InternalValue() GkeHubMembershipBindingState
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubMembershipBinding.GkeHubMembershipBindingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/gkehubmembershipbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkehubmembershipbinding"
 
 gkehubmembershipbinding.NewGkeHubMembershipBindingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeHubMembershipBindingTimeoutsOutputReference
 ```
