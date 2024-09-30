@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKeyIamPolicy.DataGoogleTagsTagKeyIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeyiampolicy"
 
 datagoogletagstagkeyiampolicy.NewDataGoogleTagsTagKeyIamPolicy(scope Construct, id *string, config DataGoogleTagsTagKeyIamPolicyConfig) DataGoogleTagsTagKeyIamPolicy
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleTagsTagKeyIamPolicy.DataGoogleTagsTagKeyIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeyiampolicy"
 
 datagoogletagstagkeyiampolicy.DataGoogleTagsTagKeyIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleTagsTagKeyIamPolicy.DataGoogleTagsTagKeyIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeyiampolicy"
 
 datagoogletagstagkeyiampolicy.DataGoogleTagsTagKeyIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagoogletagstagkeyiampolicy.DataGoogleTagsTagKeyIamPolicy_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleTagsTagKeyIamPolicy.DataGoogleTagsTagKeyIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeyiampolicy"
 
 datagoogletagstagkeyiampolicy.DataGoogleTagsTagKeyIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagoogletagstagkeyiampolicy.DataGoogleTagsTagKeyIamPolicy_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleTagsTagKeyIamPolicy.DataGoogleTagsTagKeyIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeyiampolicy"
 
 datagoogletagstagkeyiampolicy.DataGoogleTagsTagKeyIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -616,7 +616,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleTagsTagKeyIamPolicy.DataGoogleTagsTagKeyIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeyiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeyiampolicy"
 
 &datagoogletagstagkeyiampolicy.DataGoogleTagsTagKeyIamPolicyConfig {
 	Connection: interface{},
