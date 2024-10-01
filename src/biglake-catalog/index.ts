@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog
+// https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface BiglakeCatalogConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog#id BiglakeCatalog#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog#id BiglakeCatalog#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,34 +17,34 @@ export interface BiglakeCatalogConfig extends cdktf.TerraformMetaArguments {
   /**
   * The geographic location where the Catalog should reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog#location BiglakeCatalog#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog#location BiglakeCatalog#location}
   */
   readonly location: string;
   /**
   * The name of the Catalog. Format:
   * projects/{project_id_or_number}/locations/{locationId}/catalogs/{catalogId}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog#name BiglakeCatalog#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog#name BiglakeCatalog#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog#project BiglakeCatalog#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog#project BiglakeCatalog#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog#timeouts BiglakeCatalog#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog#timeouts BiglakeCatalog#timeouts}
   */
   readonly timeouts?: BiglakeCatalogTimeouts;
 }
 export interface BiglakeCatalogTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog#create BiglakeCatalog#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog#create BiglakeCatalog#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog#delete BiglakeCatalog#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog#delete BiglakeCatalog#delete}
   */
   readonly delete?: string;
 }
@@ -172,7 +167,7 @@ export class BiglakeCatalogTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog google_biglake_catalog}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog google_biglake_catalog}
 */
 export class BiglakeCatalog extends cdktf.TerraformResource {
 
@@ -188,7 +183,7 @@ export class BiglakeCatalog extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BiglakeCatalog resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BiglakeCatalog to import
-  * @param importFromId The id of the existing BiglakeCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BiglakeCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BiglakeCatalog to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -200,7 +195,7 @@ export class BiglakeCatalog extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/biglake_catalog google_biglake_catalog} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/biglake_catalog google_biglake_catalog} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -211,7 +206,7 @@ export class BiglakeCatalog extends cdktf.TerraformResource {
       terraformResourceType: 'google_biglake_catalog',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.4.0',
+        providerVersion: '6.5.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

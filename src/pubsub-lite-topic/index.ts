@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic
+// https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface PubsubLiteTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#id PubsubLiteTopic#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#id PubsubLiteTopic#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,47 +17,47 @@ export interface PubsubLiteTopicConfig extends cdktf.TerraformMetaArguments {
   /**
   * Name of the topic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#name PubsubLiteTopic#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#name PubsubLiteTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#project PubsubLiteTopic#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#project PubsubLiteTopic#project}
   */
   readonly project?: string;
   /**
   * The region of the pubsub lite topic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#region PubsubLiteTopic#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#region PubsubLiteTopic#region}
   */
   readonly region?: string;
   /**
   * The zone of the pubsub lite topic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#zone PubsubLiteTopic#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#zone PubsubLiteTopic#zone}
   */
   readonly zone?: string;
   /**
   * partition_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#partition_config PubsubLiteTopic#partition_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#partition_config PubsubLiteTopic#partition_config}
   */
   readonly partitionConfig?: PubsubLiteTopicPartitionConfig;
   /**
   * reservation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#reservation_config PubsubLiteTopic#reservation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#reservation_config PubsubLiteTopic#reservation_config}
   */
   readonly reservationConfig?: PubsubLiteTopicReservationConfig;
   /**
   * retention_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#retention_config PubsubLiteTopic#retention_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#retention_config PubsubLiteTopic#retention_config}
   */
   readonly retentionConfig?: PubsubLiteTopicRetentionConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#timeouts PubsubLiteTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#timeouts PubsubLiteTopic#timeouts}
   */
   readonly timeouts?: PubsubLiteTopicTimeouts;
 }
@@ -70,13 +65,13 @@ export interface PubsubLiteTopicPartitionConfigCapacity {
   /**
   * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#publish_mib_per_sec PubsubLiteTopic#publish_mib_per_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#publish_mib_per_sec PubsubLiteTopic#publish_mib_per_sec}
   */
   readonly publishMibPerSec: number;
   /**
   * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#subscribe_mib_per_sec PubsubLiteTopic#subscribe_mib_per_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#subscribe_mib_per_sec PubsubLiteTopic#subscribe_mib_per_sec}
   */
   readonly subscribeMibPerSec: number;
 }
@@ -185,13 +180,13 @@ export interface PubsubLiteTopicPartitionConfig {
   /**
   * The number of partitions in the topic. Must be at least 1.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#count PubsubLiteTopic#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#count PubsubLiteTopic#count}
   */
   readonly count: number;
   /**
   * capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#capacity PubsubLiteTopic#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#capacity PubsubLiteTopic#capacity}
   */
   readonly capacity?: PubsubLiteTopicPartitionConfigCapacity;
 }
@@ -303,7 +298,7 @@ export interface PubsubLiteTopicReservationConfig {
   /**
   * The Reservation to use for this topic's throughput capacity.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#throughput_reservation PubsubLiteTopic#throughput_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#throughput_reservation PubsubLiteTopic#throughput_reservation}
   */
   readonly throughputReservation?: string;
 }
@@ -391,7 +386,7 @@ export interface PubsubLiteTopicRetentionConfig {
   * in any of the topic's partitions grows beyond this value, older messages will be
   * dropped to make room for newer ones, regardless of the value of period.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#per_partition_bytes PubsubLiteTopic#per_partition_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#per_partition_bytes PubsubLiteTopic#per_partition_bytes}
   */
   readonly perPartitionBytes: string;
   /**
@@ -400,7 +395,7 @@ export interface PubsubLiteTopicRetentionConfig {
   * duration in seconds with up to nine fractional digits, terminated by 's'.
   * Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#period PubsubLiteTopic#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#period PubsubLiteTopic#period}
   */
   readonly period?: string;
 }
@@ -510,15 +505,15 @@ export class PubsubLiteTopicRetentionConfigOutputReference extends cdktf.Complex
 }
 export interface PubsubLiteTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#create PubsubLiteTopic#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#create PubsubLiteTopic#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#delete PubsubLiteTopic#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#delete PubsubLiteTopic#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#update PubsubLiteTopic#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#update PubsubLiteTopic#update}
   */
   readonly update?: string;
 }
@@ -670,7 +665,7 @@ export class PubsubLiteTopicTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic google_pubsub_lite_topic}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic google_pubsub_lite_topic}
 */
 export class PubsubLiteTopic extends cdktf.TerraformResource {
 
@@ -686,7 +681,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a PubsubLiteTopic resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the PubsubLiteTopic to import
-  * @param importFromId The id of the existing PubsubLiteTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing PubsubLiteTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the PubsubLiteTopic to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -698,7 +693,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/pubsub_lite_topic google_pubsub_lite_topic} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/pubsub_lite_topic google_pubsub_lite_topic} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -709,7 +704,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_lite_topic',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.4.0',
+        providerVersion: '6.5.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
