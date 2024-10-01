@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/composer_environment
+// https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/composer_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/composer_environment#id DataGoogleComposerEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/composer_environment#id DataGoogleComposerEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,19 +22,19 @@ export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMeta
   /**
   * Name of the environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/composer_environment#name DataGoogleComposerEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/composer_environment#name DataGoogleComposerEnvironment#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/composer_environment#project DataGoogleComposerEnvironment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/composer_environment#project DataGoogleComposerEnvironment#project}
   */
   readonly project?: string;
   /**
   * The location or Compute Engine region for the environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/composer_environment#region DataGoogleComposerEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/composer_environment#region DataGoogleComposerEnvironment#region}
   */
   readonly region?: string;
 }
@@ -1082,6 +1082,81 @@ export class DataGoogleComposerEnvironmentConfigRecoveryConfigList extends cdktf
     return new DataGoogleComposerEnvironmentConfigRecoveryConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration {
+}
+
+export function dataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationToTerraform(struct?: DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationToHclTerraform(struct?: DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference {
+    return new DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleComposerEnvironmentConfigSoftwareConfig {
 }
 
@@ -1137,6 +1212,12 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfigOutputReference ex
   private _airflowConfigOverrides = new cdktf.StringMap(this, "airflow_config_overrides");
   public get airflowConfigOverrides() {
     return this._airflowConfigOverrides;
+  }
+
+  // cloud_data_lineage_integration - computed: true, optional: false, required: false
+  private _cloudDataLineageIntegration = new DataGoogleComposerEnvironmentConfigSoftwareConfigCloudDataLineageIntegrationList(this, "cloud_data_lineage_integration", false);
+  public get cloudDataLineageIntegration() {
+    return this._cloudDataLineageIntegration;
   }
 
   // env_variables - computed: true, optional: false, required: false
@@ -2114,7 +2195,7 @@ export class DataGoogleComposerEnvironmentStorageConfigList extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/composer_environment google_composer_environment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/composer_environment google_composer_environment}
 */
 export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
 
@@ -2130,7 +2211,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleComposerEnvironment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComposerEnvironment to import
-  * @param importFromId The id of the existing DataGoogleComposerEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/composer_environment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComposerEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/composer_environment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComposerEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2142,7 +2223,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/data-sources/composer_environment google_composer_environment} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/composer_environment google_composer_environment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2153,7 +2234,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_composer_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.4.0',
+        providerVersion: '6.5.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

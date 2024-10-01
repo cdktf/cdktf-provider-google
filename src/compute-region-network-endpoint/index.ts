@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint
+// https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,11 +17,11 @@ export interface ComputeRegionNetworkEndpointConfig extends cdktf.TerraformMetaA
   * 
   * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#fqdn ComputeRegionNetworkEndpoint#fqdn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#fqdn ComputeRegionNetworkEndpoint#fqdn}
   */
   readonly fqdn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#id ComputeRegionNetworkEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#id ComputeRegionNetworkEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,45 +32,45 @@ export interface ComputeRegionNetworkEndpointConfig extends cdktf.TerraformMetaA
   * 
   * This can only be specified when network_endpoint_type of the NEG is INTERNET_IP_PORT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#ip_address ComputeRegionNetworkEndpoint#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#ip_address ComputeRegionNetworkEndpoint#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * Port number of network endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#port ComputeRegionNetworkEndpoint#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#port ComputeRegionNetworkEndpoint#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#project ComputeRegionNetworkEndpoint#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#project ComputeRegionNetworkEndpoint#project}
   */
   readonly project?: string;
   /**
   * Region where the containing network endpoint group is located.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#region ComputeRegionNetworkEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#region ComputeRegionNetworkEndpoint#region}
   */
   readonly region?: string;
   /**
   * The network endpoint group this endpoint is part of.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#region_network_endpoint_group ComputeRegionNetworkEndpoint#region_network_endpoint_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#region_network_endpoint_group ComputeRegionNetworkEndpoint#region_network_endpoint_group}
   */
   readonly regionNetworkEndpointGroup: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#timeouts ComputeRegionNetworkEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#timeouts ComputeRegionNetworkEndpoint#timeouts}
   */
   readonly timeouts?: ComputeRegionNetworkEndpointTimeouts;
 }
 export interface ComputeRegionNetworkEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#create ComputeRegionNetworkEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#create ComputeRegionNetworkEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#delete ComputeRegionNetworkEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#delete ComputeRegionNetworkEndpoint#delete}
   */
   readonly delete?: string;
 }
@@ -193,7 +193,7 @@ export class ComputeRegionNetworkEndpointTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint google_compute_region_network_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint google_compute_region_network_endpoint}
 */
 export class ComputeRegionNetworkEndpoint extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class ComputeRegionNetworkEndpoint extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRegionNetworkEndpoint resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRegionNetworkEndpoint to import
-  * @param importFromId The id of the existing ComputeRegionNetworkEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRegionNetworkEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRegionNetworkEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -221,7 +221,7 @@ export class ComputeRegionNetworkEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.4.0/docs/resources/compute_region_network_endpoint google_compute_region_network_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/compute_region_network_endpoint google_compute_region_network_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -232,7 +232,7 @@ export class ComputeRegionNetworkEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_network_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.4.0',
+        providerVersion: '6.5.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
