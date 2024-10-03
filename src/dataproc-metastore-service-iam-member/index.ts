@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataproc_metastore_service_iam_member
 // generated from terraform resource schema
 

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.NewDataplexAspectType(scope Construct, id *string, config DataplexAspectTypeConfig) DataplexAspectType
 ```
@@ -454,7 +454,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.DataplexAspectType_IsConstruct(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.DataplexAspectType_IsTerraformElement(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ dataplexaspecttype.DataplexAspectType_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.DataplexAspectType_IsTerraformResource(x interface{}) *bool
 ```
@@ -514,7 +514,7 @@ dataplexaspecttype.DataplexAspectType_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.DataplexAspectType_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1018,7 +1018,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 &dataplexaspecttype.DataplexAspectTypeConfig {
 	Connection: interface{},
@@ -1036,7 +1036,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
 	Location: *string,
 	MetadataTemplate: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.dataplexAspectType.DataplexAspectTypeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataplexAspectType.DataplexAspectTypeTimeouts,
 }
 ```
 
@@ -1266,7 +1266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 &dataplexaspecttype.DataplexAspectTypeTimeouts {
 	Create: *string,
@@ -1328,7 +1328,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.NewDataplexAspectTypeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexAspectTypeTimeoutsOutputReference
 ```
