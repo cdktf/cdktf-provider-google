@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTagTemplateIamPolicy.DataCatalogTagTemplateIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogtagtemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiampolicy"
 
 datacatalogtagtemplateiampolicy.NewDataCatalogTagTemplateIamPolicy(scope Construct, id *string, config DataCatalogTagTemplateIamPolicyConfig) DataCatalogTagTemplateIamPolicy
 ```
@@ -399,7 +399,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogTagTemplateIamPolicy.DataCatalogTagTemplateIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogtagtemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiampolicy"
 
 datacatalogtagtemplateiampolicy.DataCatalogTagTemplateIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogTagTemplateIamPolicy.DataCatalogTagTemplateIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogtagtemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiampolicy"
 
 datacatalogtagtemplateiampolicy.DataCatalogTagTemplateIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ datacatalogtagtemplateiampolicy.DataCatalogTagTemplateIamPolicy_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogTagTemplateIamPolicy.DataCatalogTagTemplateIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogtagtemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiampolicy"
 
 datacatalogtagtemplateiampolicy.DataCatalogTagTemplateIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ datacatalogtagtemplateiampolicy.DataCatalogTagTemplateIamPolicy_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataCatalogTagTemplateIamPolicy.DataCatalogTagTemplateIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogtagtemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiampolicy"
 
 datacatalogtagtemplateiampolicy.DataCatalogTagTemplateIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -809,7 +809,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTagTemplateIamPolicy.DataCatalogTagTemplateIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogtagtemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtagtemplateiampolicy"
 
 &datacatalogtagtemplateiampolicy.DataCatalogTagTemplateIamPolicyConfig {
 	Connection: interface{},
