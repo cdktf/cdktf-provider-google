@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.NewIamDenyPolicy(scope Construct, id *string, config IamDenyPolicyConfig) IamDenyPolicy
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.IamDenyPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.IamDenyPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ iamdenypolicy.IamDenyPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.IamDenyPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ iamdenypolicy.IamDenyPolicy_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.IamDenyPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -857,7 +857,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 &iamdenypolicy.IamDenyPolicyConfig {
 	Connection: interface{},
@@ -872,7 +872,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
 	Rules: interface{},
 	DisplayName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iamDenyPolicy.IamDenyPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.iamDenyPolicy.IamDenyPolicyTimeouts,
 }
 ```
 
@@ -1056,10 +1056,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 &iamdenypolicy.IamDenyPolicyRules {
-	DenyRule: github.com/cdktf/cdktf-provider-google-go/google.iamDenyPolicy.IamDenyPolicyRulesDenyRule,
+	DenyRule: github.com/cdktf/cdktf-provider-google-go/google/v14.iamDenyPolicy.IamDenyPolicyRulesDenyRule,
 	Description: *string,
 }
 ```
@@ -1106,10 +1106,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyRulesDenyRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 &iamdenypolicy.IamDenyPolicyRulesDenyRule {
-	DenialCondition: github.com/cdktf/cdktf-provider-google-go/google.iamDenyPolicy.IamDenyPolicyRulesDenyRuleDenialCondition,
+	DenialCondition: github.com/cdktf/cdktf-provider-google-go/google/v14.iamDenyPolicy.IamDenyPolicyRulesDenyRuleDenialCondition,
 	DeniedPermissions: *[]*string,
 	DeniedPrincipals: *[]*string,
 	ExceptionPermissions: *[]*string,
@@ -1212,7 +1212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyRulesDenyRuleDenialCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 &iamdenypolicy.IamDenyPolicyRulesDenyRuleDenialCondition {
 	Expression: *string,
@@ -1297,7 +1297,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 &iamdenypolicy.IamDenyPolicyTimeouts {
 	Create: *string,
@@ -1359,7 +1359,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyRulesDenyRuleDenialConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.NewIamDenyPolicyRulesDenyRuleDenialConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamDenyPolicyRulesDenyRuleDenialConditionOutputReference
 ```
@@ -1717,7 +1717,7 @@ func InternalValue() IamDenyPolicyRulesDenyRuleDenialCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyRulesDenyRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.NewIamDenyPolicyRulesDenyRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamDenyPolicyRulesDenyRuleOutputReference
 ```
@@ -2124,7 +2124,7 @@ func InternalValue() IamDenyPolicyRulesDenyRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.NewIamDenyPolicyRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IamDenyPolicyRulesList
 ```
@@ -2284,7 +2284,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.NewIamDenyPolicyRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IamDenyPolicyRulesOutputReference
 ```
@@ -2622,7 +2622,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamDenyPolicy.IamDenyPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iamdenypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/iamdenypolicy"
 
 iamdenypolicy.NewIamDenyPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamDenyPolicyTimeoutsOutputReference
 ```
