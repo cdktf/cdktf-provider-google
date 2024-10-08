@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iap_web_backend_service_iam_policy
 // generated from terraform resource schema
 
