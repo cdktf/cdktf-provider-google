@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository
+// https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,13 @@ import * as cdktf from 'cdktf';
 
 export interface SourcerepoRepositoryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}
+  * If set to true, skip repository creation if a repository with the same name already exists.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#create_ignore_already_exists SourcerepoRepository#create_ignore_already_exists}
+  */
+  readonly createIgnoreAlreadyExists?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,23 +29,23 @@ export interface SourcerepoRepositoryConfig extends cdktf.TerraformMetaArguments
   * Resource name of the repository, of the form '{{repo}}'.
   * The repo name may contain slashes. eg, 'name/with/slash'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#name SourcerepoRepository#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#name SourcerepoRepository#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}
   */
   readonly project?: string;
   /**
   * pubsub_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
   */
   readonly pubsubConfigs?: SourcerepoRepositoryPubsubConfigs[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#timeouts SourcerepoRepository#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#timeouts SourcerepoRepository#timeouts}
   */
   readonly timeouts?: SourcerepoRepositoryTimeouts;
 }
@@ -49,7 +55,7 @@ export interface SourcerepoRepositoryPubsubConfigs {
   * - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
   * - JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#message_format SourcerepoRepository#message_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#message_format SourcerepoRepository#message_format}
   */
   readonly messageFormat: string;
   /**
@@ -58,11 +64,11 @@ export interface SourcerepoRepositoryPubsubConfigs {
   * the caller needs to have iam.serviceAccounts.actAs permission on this service account.
   * If unspecified, it defaults to the compute engine default service account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#service_account_email SourcerepoRepository#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#service_account_email SourcerepoRepository#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}
   */
   readonly topic: string;
 }
@@ -230,15 +236,15 @@ export class SourcerepoRepositoryPubsubConfigsList extends cdktf.ComplexList {
 }
 export interface SourcerepoRepositoryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}
   */
   readonly update?: string;
 }
@@ -390,7 +396,7 @@ export class SourcerepoRepositoryTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository google_sourcerepo_repository}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository google_sourcerepo_repository}
 */
 export class SourcerepoRepository extends cdktf.TerraformResource {
 
@@ -406,7 +412,7 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SourcerepoRepository resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SourcerepoRepository to import
-  * @param importFromId The id of the existing SourcerepoRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SourcerepoRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SourcerepoRepository to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -418,7 +424,7 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository google_sourcerepo_repository} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository google_sourcerepo_repository} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -429,7 +435,7 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
       terraformResourceType: 'google_sourcerepo_repository',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.5.0',
+        providerVersion: '6.6.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -440,6 +446,7 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._createIgnoreAlreadyExists = config.createIgnoreAlreadyExists;
     this._id = config.id;
     this._name = config.name;
     this._project = config.project;
@@ -450,6 +457,22 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // create_ignore_already_exists - computed: false, optional: true, required: false
+  private _createIgnoreAlreadyExists?: boolean | cdktf.IResolvable; 
+  public get createIgnoreAlreadyExists() {
+    return this.getBooleanAttribute('create_ignore_already_exists');
+  }
+  public set createIgnoreAlreadyExists(value: boolean | cdktf.IResolvable) {
+    this._createIgnoreAlreadyExists = value;
+  }
+  public resetCreateIgnoreAlreadyExists() {
+    this._createIgnoreAlreadyExists = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createIgnoreAlreadyExistsInput() {
+    return this._createIgnoreAlreadyExists;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -544,6 +567,7 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      create_ignore_already_exists: cdktf.booleanToTerraform(this._createIgnoreAlreadyExists),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
@@ -554,6 +578,12 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      create_ignore_already_exists: {
+        value: cdktf.booleanToHclTerraform(this._createIgnoreAlreadyExists),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
       id: {
         value: cdktf.stringToHclTerraform(this._id),
         isBlock: false,

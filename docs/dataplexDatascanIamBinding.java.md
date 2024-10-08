@@ -4,7 +4,7 @@
 
 ### DataplexDatascanIamBinding <a name="DataplexDatascanIamBinding" id="@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding google_dataplex_datascan_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding google_dataplex_datascan_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer"></a>
 
@@ -44,13 +44,13 @@ DataplexDatascanIamBinding.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.dataScanId">dataScanId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.dataScanId">dataScanId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingCondition">DataplexDatascanIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBinding.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}. |
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#condition DataplexDatascanIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#condition DataplexDatascanIamBinding#condition}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -163,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}.
 
 ---
 
@@ -171,7 +171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}.
 
 ---
 
@@ -639,7 +639,7 @@ The construct id used in the generated config for the DataplexDatascanIamBinding
 
 The id of the existing DataplexDatascanIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1017,9 +1017,9 @@ DataplexDatascanIamBindingCondition.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#expression DataplexDatascanIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#title DataplexDatascanIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#description DataplexDatascanIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#expression DataplexDatascanIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#title DataplexDatascanIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#description DataplexDatascanIamBinding#description}. |
 
 ---
 
@@ -1031,7 +1031,7 @@ public java.lang.String getExpression();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#expression DataplexDatascanIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#expression DataplexDatascanIamBinding#expression}.
 
 ---
 
@@ -1043,7 +1043,7 @@ public java.lang.String getTitle();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#title DataplexDatascanIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#title DataplexDatascanIamBinding#title}.
 
 ---
 
@@ -1055,7 +1055,7 @@ public java.lang.String getDescription();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#description DataplexDatascanIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#description DataplexDatascanIamBinding#description}.
 
 ---
 
@@ -1099,13 +1099,13 @@ DataplexDatascanIamBindingConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.dataScanId">dataScanId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.dataScanId">dataScanId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingCondition">DataplexDatascanIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexDatascanIamBinding.DataplexDatascanIamBindingConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}. |
 
 ---
 
@@ -1187,7 +1187,7 @@ public java.lang.String getDataScanId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}.
 
 ---
 
@@ -1199,7 +1199,7 @@ public java.util.List<java.lang.String> getMembers();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}.
 
 ---
 
@@ -1211,7 +1211,7 @@ public java.lang.String getRole();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}.
 
 ---
 
@@ -1225,7 +1225,7 @@ public DataplexDatascanIamBindingCondition getCondition();
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#condition DataplexDatascanIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#condition DataplexDatascanIamBinding#condition}
 
 ---
 
@@ -1237,7 +1237,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1252,7 +1252,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}.
 
 ---
 
@@ -1264,7 +1264,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}.
 
 ---
 

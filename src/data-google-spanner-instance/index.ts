@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -20,18 +20,18 @@ export interface DataGoogleSpannerInstanceConfig extends cdktf.TerraformMetaArgu
   * In order to obtain a valid list please consult the
   * [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance#config DataGoogleSpannerInstance#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance#config DataGoogleSpannerInstance#config}
   */
   readonly config?: string;
   /**
   * The descriptive name for this instance as it appears in UIs. Must be
   * unique per project and between 4 and 30 characters in length.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance#display_name DataGoogleSpannerInstance#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance#display_name DataGoogleSpannerInstance#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance#id DataGoogleSpannerInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance#id DataGoogleSpannerInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -43,11 +43,11 @@ export interface DataGoogleSpannerInstanceConfig extends cdktf.TerraformMetaArgu
   * in length.
   * If not provided, a random string starting with 'tf-' will be selected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance#name DataGoogleSpannerInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance#name DataGoogleSpannerInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance#project DataGoogleSpannerInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance#project DataGoogleSpannerInstance#project}
   */
   readonly project?: string;
 }
@@ -305,7 +305,7 @@ export class DataGoogleSpannerInstanceAutoscalingConfigList extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance google_spanner_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance google_spanner_instance}
 */
 export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
 
@@ -321,7 +321,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleSpannerInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleSpannerInstance to import
-  * @param importFromId The id of the existing DataGoogleSpannerInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleSpannerInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleSpannerInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -333,7 +333,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/spanner_instance google_spanner_instance} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/spanner_instance google_spanner_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -344,7 +344,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_spanner_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.5.0',
+        providerVersion: '6.6.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -398,6 +398,7 @@ Object.defineProperty(exports, 'dataprocAutoscalingPolicy', { get: function () {
 Object.defineProperty(exports, 'dataprocAutoscalingPolicyIamBinding', { get: function () { return require('./dataproc-autoscaling-policy-iam-binding'); } });
 Object.defineProperty(exports, 'dataprocAutoscalingPolicyIamMember', { get: function () { return require('./dataproc-autoscaling-policy-iam-member'); } });
 Object.defineProperty(exports, 'dataprocAutoscalingPolicyIamPolicy', { get: function () { return require('./dataproc-autoscaling-policy-iam-policy'); } });
+Object.defineProperty(exports, 'dataprocBatch', { get: function () { return require('./dataproc-batch'); } });
 Object.defineProperty(exports, 'dataprocCluster', { get: function () { return require('./dataproc-cluster'); } });
 Object.defineProperty(exports, 'dataprocClusterIamBinding', { get: function () { return require('./dataproc-cluster-iam-binding'); } });
 Object.defineProperty(exports, 'dataprocClusterIamMember', { get: function () { return require('./dataproc-cluster-iam-member'); } });
@@ -540,6 +541,7 @@ Object.defineProperty(exports, 'healthcareHl7V2Store', { get: function () { retu
 Object.defineProperty(exports, 'healthcareHl7V2StoreIamBinding', { get: function () { return require('./healthcare-hl7-v2-store-iam-binding'); } });
 Object.defineProperty(exports, 'healthcareHl7V2StoreIamMember', { get: function () { return require('./healthcare-hl7-v2-store-iam-member'); } });
 Object.defineProperty(exports, 'healthcareHl7V2StoreIamPolicy', { get: function () { return require('./healthcare-hl7-v2-store-iam-policy'); } });
+Object.defineProperty(exports, 'healthcarePipelineJob', { get: function () { return require('./healthcare-pipeline-job'); } });
 Object.defineProperty(exports, 'healthcareWorkspace', { get: function () { return require('./healthcare-workspace'); } });
 Object.defineProperty(exports, 'iamAccessBoundaryPolicy', { get: function () { return require('./iam-access-boundary-policy'); } });
 Object.defineProperty(exports, 'iamDenyPolicy', { get: function () { return require('./iam-deny-policy'); } });
@@ -806,6 +808,7 @@ Object.defineProperty(exports, 'serviceAccountKey', { get: function () { return 
 Object.defineProperty(exports, 'serviceNetworkingConnection', { get: function () { return require('./service-networking-connection'); } });
 Object.defineProperty(exports, 'serviceNetworkingPeeredDnsDomain', { get: function () { return require('./service-networking-peered-dns-domain'); } });
 Object.defineProperty(exports, 'serviceNetworkingVpcServiceControls', { get: function () { return require('./service-networking-vpc-service-controls'); } });
+Object.defineProperty(exports, 'siteVerificationOwner', { get: function () { return require('./site-verification-owner'); } });
 Object.defineProperty(exports, 'siteVerificationWebResource', { get: function () { return require('./site-verification-web-resource'); } });
 Object.defineProperty(exports, 'sourcerepoRepository', { get: function () { return require('./sourcerepo-repository'); } });
 Object.defineProperty(exports, 'sourcerepoRepositoryIamBinding', { get: function () { return require('./sourcerepo-repository-iam-binding'); } });
