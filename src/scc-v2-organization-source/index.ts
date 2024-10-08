@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source
+// https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface SccV2OrganizationSourceConfig extends cdktf.TerraformMetaArgume
   /**
   * The description of the source (max of 1024 characters).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#description SccV2OrganizationSource#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#description SccV2OrganizationSource#description}
   */
   readonly description?: string;
   /**
@@ -25,11 +20,11 @@ export interface SccV2OrganizationSourceConfig extends cdktf.TerraformMetaArgume
   * with a letter or digit, may contain letters, digits, spaces, hyphens,
   * and underscores, and can be no longer than 32 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#display_name SccV2OrganizationSource#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#display_name SccV2OrganizationSource#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#id SccV2OrganizationSource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#id SccV2OrganizationSource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -39,27 +34,27 @@ export interface SccV2OrganizationSourceConfig extends cdktf.TerraformMetaArgume
   * The organization whose Cloud Security Command Center the Source
   * lives in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#organization SccV2OrganizationSource#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#organization SccV2OrganizationSource#organization}
   */
   readonly organization: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#timeouts SccV2OrganizationSource#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#timeouts SccV2OrganizationSource#timeouts}
   */
   readonly timeouts?: SccV2OrganizationSourceTimeouts;
 }
 export interface SccV2OrganizationSourceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#create SccV2OrganizationSource#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#create SccV2OrganizationSource#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#delete SccV2OrganizationSource#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#delete SccV2OrganizationSource#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#update SccV2OrganizationSource#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#update SccV2OrganizationSource#update}
   */
   readonly update?: string;
 }
@@ -211,7 +206,7 @@ export class SccV2OrganizationSourceTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source google_scc_v2_organization_source}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source google_scc_v2_organization_source}
 */
 export class SccV2OrganizationSource extends cdktf.TerraformResource {
 
@@ -227,7 +222,7 @@ export class SccV2OrganizationSource extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SccV2OrganizationSource resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SccV2OrganizationSource to import
-  * @param importFromId The id of the existing SccV2OrganizationSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SccV2OrganizationSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SccV2OrganizationSource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -239,7 +234,7 @@ export class SccV2OrganizationSource extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/scc_v2_organization_source google_scc_v2_organization_source} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/scc_v2_organization_source google_scc_v2_organization_source} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -250,7 +245,7 @@ export class SccV2OrganizationSource extends cdktf.TerraformResource {
       terraformResourceType: 'google_scc_v2_organization_source',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.5.0',
+        providerVersion: '6.6.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

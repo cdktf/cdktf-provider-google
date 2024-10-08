@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/dns_managed_zones
+// https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/dns_managed_zones
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleDnsManagedZonesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/dns_managed_zones#project DataGoogleDnsManagedZones#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/dns_managed_zones#project DataGoogleDnsManagedZones#project}
   */
   readonly project?: string;
 }
@@ -129,7 +124,7 @@ export class DataGoogleDnsManagedZonesManagedZonesList extends cdktf.ComplexList
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/dns_managed_zones google_dns_managed_zones}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/dns_managed_zones google_dns_managed_zones}
 */
 export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
 
@@ -145,7 +140,7 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleDnsManagedZones resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleDnsManagedZones to import
-  * @param importFromId The id of the existing DataGoogleDnsManagedZones that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/dns_managed_zones#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleDnsManagedZones that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/dns_managed_zones#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleDnsManagedZones to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -157,7 +152,7 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/data-sources/dns_managed_zones google_dns_managed_zones} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/data-sources/dns_managed_zones google_dns_managed_zones} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -168,7 +163,7 @@ export class DataGoogleDnsManagedZones extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_dns_managed_zones',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.5.0',
+        providerVersion: '6.6.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

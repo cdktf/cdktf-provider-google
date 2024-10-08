@@ -4,7 +4,7 @@
 
 ### SourcerepoRepository <a name="SourcerepoRepository" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository google_sourcerepo_repository}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository google_sourcerepo_repository}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.Initializer"></a>
 
@@ -75,6 +75,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.putPubsubConfigs">PutPubsubConfigs</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.putTimeouts">PutTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.resetCreateIgnoreAlreadyExists">ResetCreateIgnoreAlreadyExists</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.resetProject">ResetProject</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.resetPubsubConfigs">ResetPubsubConfigs</a></code> | *No description.* |
@@ -394,6 +395,12 @@ private void PutTimeouts(SourcerepoRepositoryTimeouts Value)
 
 ---
 
+##### `ResetCreateIgnoreAlreadyExists` <a name="ResetCreateIgnoreAlreadyExists" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.resetCreateIgnoreAlreadyExists"></a>
+
+```csharp
+private void ResetCreateIgnoreAlreadyExists()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.resetId"></a>
 
 ```csharp
@@ -521,7 +528,7 @@ The construct id used in the generated config for the SourcerepoRepository to im
 
 The id of the existing SourcerepoRepository that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -555,11 +562,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.5
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.size">Size</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeoutsOutputReference">SourcerepoRepositoryTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.url">Url</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.createIgnoreAlreadyExistsInput">CreateIgnoreAlreadyExistsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.pubsubConfigsInput">PubsubConfigsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.createIgnoreAlreadyExists">CreateIgnoreAlreadyExists</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.project">Project</a></code> | <code>string</code> | *No description.* |
@@ -748,6 +757,16 @@ public string Url { get; }
 
 ---
 
+##### `CreateIgnoreAlreadyExistsInput`<sup>Optional</sup> <a name="CreateIgnoreAlreadyExistsInput" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.createIgnoreAlreadyExistsInput"></a>
+
+```csharp
+public object CreateIgnoreAlreadyExistsInput { get; }
+```
+
+- *Type:* object
+
+---
+
 ##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.idInput"></a>
 
 ```csharp
@@ -792,6 +811,16 @@ public object PubsubConfigsInput { get; }
 
 ```csharp
 public object TimeoutsInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `CreateIgnoreAlreadyExists`<sup>Required</sup> <a name="CreateIgnoreAlreadyExists" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepository.property.createIgnoreAlreadyExists"></a>
+
+```csharp
+public object CreateIgnoreAlreadyExists { get; }
 ```
 
 - *Type:* object
@@ -864,6 +893,7 @@ new SourcerepoRepositoryConfig {
     TerraformProvider Provider = null,
     object[] Provisioners = null,
     string Name,
+    object CreateIgnoreAlreadyExists = null,
     string Id = null,
     string Project = null,
     object PubsubConfigs = null,
@@ -883,8 +913,9 @@ new SourcerepoRepositoryConfig {
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.name">Name</a></code> | <code>string</code> | Resource name of the repository, of the form '{{repo}}'. The repo name may contain slashes. eg, 'name/with/slash'. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.createIgnoreAlreadyExists">CreateIgnoreAlreadyExists</a></code> | <code>object</code> | If set to true, skip repository creation if a repository with the same name already exists. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}. |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.pubsubConfigs">PubsubConfigs</a></code> | <code>object</code> | pubsub_configs block. |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts">SourcerepoRepositoryTimeouts</a></code> | timeouts block. |
 
@@ -970,7 +1001,21 @@ public string Name { get; set; }
 
 Resource name of the repository, of the form '{{repo}}'. The repo name may contain slashes. eg, 'name/with/slash'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#name SourcerepoRepository#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#name SourcerepoRepository#name}
+
+---
+
+##### `CreateIgnoreAlreadyExists`<sup>Optional</sup> <a name="CreateIgnoreAlreadyExists" id="@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryConfig.property.createIgnoreAlreadyExists"></a>
+
+```csharp
+public object CreateIgnoreAlreadyExists { get; set; }
+```
+
+- *Type:* object
+
+If set to true, skip repository creation if a repository with the same name already exists.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#create_ignore_already_exists SourcerepoRepository#create_ignore_already_exists}
 
 ---
 
@@ -982,7 +1027,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#id SourcerepoRepository#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -997,7 +1042,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#project SourcerepoRepository#project}.
 
 ---
 
@@ -1011,7 +1056,7 @@ public object PubsubConfigs { get; set; }
 
 pubsub_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
 
 ---
 
@@ -1025,7 +1070,7 @@ public SourcerepoRepositoryTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#timeouts SourcerepoRepository#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#timeouts SourcerepoRepository#timeouts}
 
 ---
 
@@ -1048,7 +1093,7 @@ new SourcerepoRepositoryPubsubConfigs {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs.property.messageFormat">MessageFormat</a></code> | <code>string</code> | The format of the Cloud Pub/Sub messages. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs.property.topic">Topic</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs.property.topic">Topic</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}. |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryPubsubConfigs.property.serviceAccountEmail">ServiceAccountEmail</a></code> | <code>string</code> | Email address of the service account used for publishing Cloud Pub/Sub messages. |
 
 ---
@@ -1066,7 +1111,7 @@ The format of the Cloud Pub/Sub messages.
 * PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 * JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#message_format SourcerepoRepository#message_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#message_format SourcerepoRepository#message_format}
 
 ---
 
@@ -1078,7 +1123,7 @@ public string Topic { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#topic SourcerepoRepository#topic}.
 
 ---
 
@@ -1096,7 +1141,7 @@ This service account needs to be in the same project as the PubsubConfig. When a
 the caller needs to have iam.serviceAccounts.actAs permission on this service account.
 If unspecified, it defaults to the compute engine default service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#service_account_email SourcerepoRepository#service_account_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#service_account_email SourcerepoRepository#service_account_email}
 
 ---
 
@@ -1118,9 +1163,9 @@ new SourcerepoRepositoryTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepository.SourcerepoRepositoryTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}. |
 
 ---
 
@@ -1132,7 +1177,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#create SourcerepoRepository#create}.
 
 ---
 
@@ -1144,7 +1189,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#delete SourcerepoRepository#delete}.
 
 ---
 
@@ -1156,7 +1201,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.5.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/sourcerepo_repository#update SourcerepoRepository#update}.
 
 ---
 
