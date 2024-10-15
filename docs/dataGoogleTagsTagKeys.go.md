@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 datagoogletagstagkeys.NewDataGoogleTagsTagKeys(scope Construct, id *string, config DataGoogleTagsTagKeysConfig) DataGoogleTagsTagKeys
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 datagoogletagstagkeys.DataGoogleTagsTagKeys_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 datagoogletagstagkeys.DataGoogleTagsTagKeys_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagoogletagstagkeys.DataGoogleTagsTagKeys_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 datagoogletagstagkeys.DataGoogleTagsTagKeys_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagoogletagstagkeys.DataGoogleTagsTagKeys_IsTerraformDataSource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeys.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 datagoogletagstagkeys.DataGoogleTagsTagKeys_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -605,7 +605,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 &datagoogletagstagkeys.DataGoogleTagsTagKeysConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 &datagoogletagstagkeys.DataGoogleTagsTagKeysKeys {
 
@@ -753,7 +753,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysKeysList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 datagoogletagstagkeys.NewDataGoogleTagsTagKeysKeysList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleTagsTagKeysKeysList
 ```
@@ -902,7 +902,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKeys.DataGoogleTagsTagKeysKeysOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogletagstagkeys"
 
 datagoogletagstagkeys.NewDataGoogleTagsTagKeysKeysOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleTagsTagKeysKeysOutputReference
 ```
