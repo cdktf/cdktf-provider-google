@@ -1081,6 +1081,7 @@ The following submodules are available:
 - [secretManagerSecretIamMember](./secretManagerSecretIamMember.csharp.md)
 - [secretManagerSecretIamPolicy](./secretManagerSecretIamPolicy.csharp.md)
 - [secretManagerSecretVersion](./secretManagerSecretVersion.csharp.md)
+- [secureSourceManagerBranchRule](./secureSourceManagerBranchRule.csharp.md)
 - [secureSourceManagerInstance](./secureSourceManagerInstance.csharp.md)
 - [secureSourceManagerInstanceIamBinding](./secureSourceManagerInstanceIamBinding.csharp.md)
 - [secureSourceManagerInstanceIamMember](./secureSourceManagerInstanceIamMember.csharp.md)

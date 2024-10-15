@@ -1,3 +1,3 @@
 # `google_notebooks_instance`
 
-Refer to the Terraform Registry for docs: [`google_notebooks_instance`](https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/notebooks_instance).
+Refer to the Terraform Registry for docs: [`google_notebooks_instance`](https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/notebooks_instance).

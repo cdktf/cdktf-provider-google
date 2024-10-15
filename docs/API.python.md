@@ -1081,6 +1081,7 @@ The following submodules are available:
 - [secretManagerSecretIamMember](./secretManagerSecretIamMember.python.md)
 - [secretManagerSecretIamPolicy](./secretManagerSecretIamPolicy.python.md)
 - [secretManagerSecretVersion](./secretManagerSecretVersion.python.md)
+- [secureSourceManagerBranchRule](./secureSourceManagerBranchRule.python.md)
 - [secureSourceManagerInstance](./secureSourceManagerInstance.python.md)
 - [secureSourceManagerInstanceIamBinding](./secureSourceManagerInstanceIamBinding.python.md)
 - [secureSourceManagerInstanceIamMember](./secureSourceManagerInstanceIamMember.python.md)

@@ -4,12 +4,12 @@
 
 ### NetworkServicesLbRouteExtension <a name="NetworkServicesLbRouteExtension" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtension"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension google_network_services_lb_route_extension}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension google_network_services_lb_route_extension}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NewNetworkServicesLbRouteExtension(scope Construct, id *string, config NetworkServicesLbRouteExtensionConfig) NetworkServicesLbRouteExtension
 ```
@@ -439,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtension.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NetworkServicesLbRouteExtension_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtension.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NetworkServicesLbRouteExtension_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ networkserviceslbrouteextension.NetworkServicesLbRouteExtension_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtension.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NetworkServicesLbRouteExtension_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ networkserviceslbrouteextension.NetworkServicesLbRouteExtension_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtension.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NetworkServicesLbRouteExtension_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -528,7 +528,7 @@ The construct id used in the generated config for the NetworkServicesLbRouteExte
 
 The id of the existing NetworkServicesLbRouteExtension that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -970,7 +970,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 &networkserviceslbrouteextension.NetworkServicesLbRouteExtensionConfig {
 	Connection: interface{},
@@ -989,7 +989,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbro
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts,
 }
 ```
 
@@ -1010,9 +1010,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbro
 | <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.location">Location</a></code> | <code>*string</code> | The location of the route extension. |
 | <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.name">Name</a></code> | <code>*string</code> | Name of the LbRouteExtension resource in the following format: projects/{project}/locations/{location}/lbRouteExtensions/{lbRouteExtension}. |
 | <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.description">Description</a></code> | <code>*string</code> | A human-readable description of the resource. |
-| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#id NetworkServicesLbRouteExtension#id}. |
+| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#id NetworkServicesLbRouteExtension#id}. |
 | <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Set of labels associated with the LbRouteExtension resource. |
-| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#project NetworkServicesLbRouteExtension#project}. |
+| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#project NetworkServicesLbRouteExtension#project}. |
 | <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts">NetworkServicesLbRouteExtensionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1097,7 +1097,7 @@ ExtensionChains interface{}
 
 extension_chains block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#extension_chains NetworkServicesLbRouteExtension#extension_chains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#extension_chains NetworkServicesLbRouteExtension#extension_chains}
 
 ---
 
@@ -1113,7 +1113,7 @@ A list of references to the forwarding rules to which this service extension is 
 
 At least one forwarding rule is required. There can be only one LbRouteExtension resource per forwarding rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#forwarding_rules NetworkServicesLbRouteExtension#forwarding_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#forwarding_rules NetworkServicesLbRouteExtension#forwarding_rules}
 
 ---
 
@@ -1130,7 +1130,7 @@ All backend services and forwarding rules referenced by this extension must shar
 For more information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service) and
 [Supported application load balancers](https://cloud.google.com/service-extensions/docs/callouts-overview#supported-lbs). Possible values: ["INTERNAL_MANAGED", "EXTERNAL_MANAGED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#load_balancing_scheme NetworkServicesLbRouteExtension#load_balancing_scheme}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#load_balancing_scheme NetworkServicesLbRouteExtension#load_balancing_scheme}
 
 ---
 
@@ -1144,7 +1144,7 @@ Location *string
 
 The location of the route extension.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#location NetworkServicesLbRouteExtension#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#location NetworkServicesLbRouteExtension#location}
 
 ---
 
@@ -1158,7 +1158,7 @@ Name *string
 
 Name of the LbRouteExtension resource in the following format: projects/{project}/locations/{location}/lbRouteExtensions/{lbRouteExtension}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#name NetworkServicesLbRouteExtension#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#name NetworkServicesLbRouteExtension#name}
 
 ---
 
@@ -1172,7 +1172,7 @@ Description *string
 
 A human-readable description of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#description NetworkServicesLbRouteExtension#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#description NetworkServicesLbRouteExtension#description}
 
 ---
 
@@ -1184,7 +1184,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#id NetworkServicesLbRouteExtension#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#id NetworkServicesLbRouteExtension#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1204,7 +1204,7 @@ Set of labels associated with the LbRouteExtension resource.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#labels NetworkServicesLbRouteExtension#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#labels NetworkServicesLbRouteExtension#labels}
 
 ---
 
@@ -1216,7 +1216,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#project NetworkServicesLbRouteExtension#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#project NetworkServicesLbRouteExtension#project}.
 
 ---
 
@@ -1230,7 +1230,7 @@ Timeouts NetworkServicesLbRouteExtensionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#timeouts NetworkServicesLbRouteExtension#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#timeouts NetworkServicesLbRouteExtension#timeouts}
 
 ---
 
@@ -1239,11 +1239,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChains.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 &networkserviceslbrouteextension.NetworkServicesLbRouteExtensionExtensionChains {
 	Extensions: interface{},
-	MatchCondition: github.com/cdktf/cdktf-provider-google-go/google/v14.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsMatchCondition,
+	MatchCondition: github.com/cdktf/cdktf-provider-google-go/google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsMatchCondition,
 	Name: *string,
 }
 ```
@@ -1268,7 +1268,7 @@ Extensions interface{}
 
 extensions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#extensions NetworkServicesLbRouteExtension#extensions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#extensions NetworkServicesLbRouteExtension#extensions}
 
 ---
 
@@ -1282,7 +1282,7 @@ MatchCondition NetworkServicesLbRouteExtensionExtensionChainsMatchCondition
 
 match_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#match_condition NetworkServicesLbRouteExtension#match_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#match_condition NetworkServicesLbRouteExtension#match_condition}
 
 ---
 
@@ -1301,7 +1301,7 @@ The name must conform with RFC-1034, is restricted to lower-cased letters, numbe
 and can have a maximum length of 63 characters. Additionally, the first character must be a letter
 and the last character must be a letter or a number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#name NetworkServicesLbRouteExtension#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#name NetworkServicesLbRouteExtension#name}
 
 ---
 
@@ -1310,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsExtensions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 &networkserviceslbrouteextension.NetworkServicesLbRouteExtensionExtensionChainsExtensions {
 	Name: *string,
@@ -1350,7 +1350,7 @@ The name must conform with RFC-1034, is restricted to lower-cased letters, numbe
 and can have a maximum length of 63 characters. Additionally, the first character must be a letter
 and the last a letter or a number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#name NetworkServicesLbRouteExtension#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#name NetworkServicesLbRouteExtension#name}
 
 ---
 
@@ -1364,7 +1364,7 @@ Service *string
 
 The reference to the service that runs the extension. Must be a reference to a backend service.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#service NetworkServicesLbRouteExtension#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#service NetworkServicesLbRouteExtension#service}
 
 ---
 
@@ -1378,7 +1378,7 @@ Authority *string
 
 The :authority header in the gRPC request sent from Envoy to the extension service.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#authority NetworkServicesLbRouteExtension#authority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#authority NetworkServicesLbRouteExtension#authority}
 
 ---
 
@@ -1398,7 +1398,7 @@ When set to FALSE: * If response headers have not been delivered to the downstre
 a generic 500 error is returned to the client. The error response can be tailored by
 configuring a custom error response in the load balancer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#fail_open NetworkServicesLbRouteExtension#fail_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#fail_open NetworkServicesLbRouteExtension#fail_open}
 
 ---
 
@@ -1414,7 +1414,7 @@ List of the HTTP headers to forward to the extension (from the client or backend
 
 If omitted, all headers are sent. Each element is a string indicating the header name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#forward_headers NetworkServicesLbRouteExtension#forward_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#forward_headers NetworkServicesLbRouteExtension#forward_headers}
 
 ---
 
@@ -1431,7 +1431,7 @@ Specifies the timeout for each individual message on the stream.
 The timeout must be between 10-1000 milliseconds.
 A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#timeout NetworkServicesLbRouteExtension#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#timeout NetworkServicesLbRouteExtension#timeout}
 
 ---
 
@@ -1440,7 +1440,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsMatchCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 &networkserviceslbrouteextension.NetworkServicesLbRouteExtensionExtensionChainsMatchCondition {
 	CelExpression: *string,
@@ -1465,7 +1465,7 @@ CelExpression *string
 
 A Common Expression Language (CEL) expression that is used to match requests for which the extension chain is executed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#cel_expression NetworkServicesLbRouteExtension#cel_expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#cel_expression NetworkServicesLbRouteExtension#cel_expression}
 
 ---
 
@@ -1474,7 +1474,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 &networkserviceslbrouteextension.NetworkServicesLbRouteExtensionTimeouts {
 	Create: *string,
@@ -1487,9 +1487,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbro
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#create NetworkServicesLbRouteExtension#create}. |
-| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#delete NetworkServicesLbRouteExtension#delete}. |
-| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#update NetworkServicesLbRouteExtension#update}. |
+| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#create NetworkServicesLbRouteExtension#create}. |
+| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#delete NetworkServicesLbRouteExtension#delete}. |
+| <code><a href="#@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#update NetworkServicesLbRouteExtension#update}. |
 
 ---
 
@@ -1501,7 +1501,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#create NetworkServicesLbRouteExtension#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#create NetworkServicesLbRouteExtension#create}.
 
 ---
 
@@ -1513,7 +1513,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#delete NetworkServicesLbRouteExtension#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#delete NetworkServicesLbRouteExtension#delete}.
 
 ---
 
@@ -1525,7 +1525,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/network_services_lb_route_extension#update NetworkServicesLbRouteExtension#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_services_lb_route_extension#update NetworkServicesLbRouteExtension#update}.
 
 ---
 
@@ -1536,7 +1536,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsExtensionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NewNetworkServicesLbRouteExtensionExtensionChainsExtensionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesLbRouteExtensionExtensionChainsExtensionsList
 ```
@@ -1696,7 +1696,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsExtensionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NewNetworkServicesLbRouteExtensionExtensionChainsExtensionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesLbRouteExtensionExtensionChainsExtensionsOutputReference
 ```
@@ -2123,7 +2123,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NewNetworkServicesLbRouteExtensionExtensionChainsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkServicesLbRouteExtensionExtensionChainsList
 ```
@@ -2283,7 +2283,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsMatchConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NewNetworkServicesLbRouteExtensionExtensionChainsMatchConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesLbRouteExtensionExtensionChainsMatchConditionOutputReference
 ```
@@ -2554,7 +2554,7 @@ func InternalValue() NetworkServicesLbRouteExtensionExtensionChainsMatchConditio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionExtensionChainsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NewNetworkServicesLbRouteExtensionExtensionChainsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkServicesLbRouteExtensionExtensionChainsOutputReference
 ```
@@ -2913,7 +2913,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesLbRouteExtension.NetworkServicesLbRouteExtensionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkserviceslbrouteextension"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkserviceslbrouteextension"
 
 networkserviceslbrouteextension.NewNetworkServicesLbRouteExtensionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesLbRouteExtensionTimeoutsOutputReference
 ```

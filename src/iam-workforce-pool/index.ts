@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool
+// https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,24 +10,24 @@ export interface IamWorkforcePoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * A user-specified description of the pool. Cannot exceed 256 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#description IamWorkforcePool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#description IamWorkforcePool#description}
   */
   readonly description?: string;
   /**
   * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens,
   * or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#disabled IamWorkforcePool#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#disabled IamWorkforcePool#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#display_name IamWorkforcePool#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#display_name IamWorkforcePool#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#id IamWorkforcePool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#id IamWorkforcePool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -41,13 +36,13 @@ export interface IamWorkforcePoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location for the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#location IamWorkforcePool#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#location IamWorkforcePool#location}
   */
   readonly location: string;
   /**
   * Immutable. The resource name of the parent. Format: 'organizations/{org-id}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#parent IamWorkforcePool#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#parent IamWorkforcePool#parent}
   */
   readonly parent: string;
   /**
@@ -57,7 +52,7 @@ export interface IamWorkforcePoolConfig extends cdktf.TerraformMetaArguments {
   * If 'sessionDuration' is not configured, minted credentials have a default duration of one hour (3600s).
   * A duration in seconds with up to nine fractional digits, ending with ''s''. Example: "'3.5s'".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#session_duration IamWorkforcePool#session_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#session_duration IamWorkforcePool#session_duration}
   */
   readonly sessionDuration?: string;
   /**
@@ -65,19 +60,19 @@ export interface IamWorkforcePoolConfig extends cdktf.TerraformMetaArguments {
   * digits, or hyphens. It must start with a letter, and cannot have a trailing hyphen.
   * The prefix 'gcp-' is reserved for use by Google, and may not be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#workforce_pool_id IamWorkforcePool#workforce_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#workforce_pool_id IamWorkforcePool#workforce_pool_id}
   */
   readonly workforcePoolId: string;
   /**
   * access_restrictions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#access_restrictions IamWorkforcePool#access_restrictions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#access_restrictions IamWorkforcePool#access_restrictions}
   */
   readonly accessRestrictions?: IamWorkforcePoolAccessRestrictions;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#timeouts IamWorkforcePool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#timeouts IamWorkforcePool#timeouts}
   */
   readonly timeouts?: IamWorkforcePoolTimeouts;
 }
@@ -86,7 +81,7 @@ export interface IamWorkforcePoolAccessRestrictionsAllowedServices {
   * Domain name of the service.
   * Example: console.cloud.google
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#domain IamWorkforcePool#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#domain IamWorkforcePool#domain}
   */
   readonly domain?: string;
 }
@@ -205,13 +200,13 @@ export interface IamWorkforcePoolAccessRestrictions {
   * Disable programmatic sign-in by disabling token issue via the Security Token API endpoint.
   * See [Security Token Service API](https://cloud.google.com/iam/docs/reference/sts/rest).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#disable_programmatic_signin IamWorkforcePool#disable_programmatic_signin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#disable_programmatic_signin IamWorkforcePool#disable_programmatic_signin}
   */
   readonly disableProgrammaticSignin?: boolean | cdktf.IResolvable;
   /**
   * allowed_services block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#allowed_services IamWorkforcePool#allowed_services}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#allowed_services IamWorkforcePool#allowed_services}
   */
   readonly allowedServices?: IamWorkforcePoolAccessRestrictionsAllowedServices[] | cdktf.IResolvable;
 }
@@ -324,15 +319,15 @@ export class IamWorkforcePoolAccessRestrictionsOutputReference extends cdktf.Com
 }
 export interface IamWorkforcePoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#create IamWorkforcePool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#create IamWorkforcePool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#delete IamWorkforcePool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#delete IamWorkforcePool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#update IamWorkforcePool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#update IamWorkforcePool#update}
   */
   readonly update?: string;
 }
@@ -484,7 +479,7 @@ export class IamWorkforcePoolTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool google_iam_workforce_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool google_iam_workforce_pool}
 */
 export class IamWorkforcePool extends cdktf.TerraformResource {
 
@@ -500,7 +495,7 @@ export class IamWorkforcePool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IamWorkforcePool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IamWorkforcePool to import
-  * @param importFromId The id of the existing IamWorkforcePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IamWorkforcePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IamWorkforcePool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -512,7 +507,7 @@ export class IamWorkforcePool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/iam_workforce_pool google_iam_workforce_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/iam_workforce_pool google_iam_workforce_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -523,7 +518,7 @@ export class IamWorkforcePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_workforce_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.6.0',
+        providerVersion: '6.7.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

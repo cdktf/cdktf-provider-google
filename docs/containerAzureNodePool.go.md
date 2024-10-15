@@ -4,12 +4,12 @@
 
 ### ContainerAzureNodePool <a name="ContainerAzureNodePool" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool google_container_azure_node_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool google_container_azure_node_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePool(scope Construct, id *string, config ContainerAzureNodePoolConfig) ContainerAzureNodePool
 ```
@@ -485,7 +485,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.ContainerAzureNodePool_IsConstruct(x interface{}) *bool
 ```
@@ -517,7 +517,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.ContainerAzureNodePool_IsTerraformElement(x interface{}) *bool
 ```
@@ -531,7 +531,7 @@ containerazurenodepool.ContainerAzureNodePool_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.ContainerAzureNodePool_IsTerraformResource(x interface{}) *bool
 ```
@@ -545,7 +545,7 @@ containerazurenodepool.ContainerAzureNodePool_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.ContainerAzureNodePool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -574,7 +574,7 @@ The construct id used in the generated config for the ContainerAzureNodePool to 
 
 The id of the existing ContainerAzureNodePool that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1159,7 +1159,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolAutoscaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolAutoscaling {
 	MaxNodeCount: *f64,
@@ -1186,7 +1186,7 @@ MaxNodeCount *f64
 
 Maximum number of nodes in the node pool. Must be >= min_node_count.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#max_node_count ContainerAzureNodePool#max_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#max_node_count ContainerAzureNodePool#max_node_count}
 
 ---
 
@@ -1200,7 +1200,7 @@ MinNodeCount *f64
 
 Minimum number of nodes in the node pool. Must be >= 1 and <= max_node_count.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#min_node_count ContainerAzureNodePool#min_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#min_node_count ContainerAzureNodePool#min_node_count}
 
 ---
 
@@ -1209,7 +1209,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfig {
 	Connection: interface{},
@@ -1219,20 +1219,20 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodep
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Autoscaling: github.com/cdktf/cdktf-provider-google-go/google/v14.containerAzureNodePool.ContainerAzureNodePoolAutoscaling,
+	Autoscaling: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolAutoscaling,
 	Cluster: *string,
-	Config: github.com/cdktf/cdktf-provider-google-go/google/v14.containerAzureNodePool.ContainerAzureNodePoolConfigA,
+	Config: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolConfigA,
 	Location: *string,
-	MaxPodsConstraint: github.com/cdktf/cdktf-provider-google-go/google/v14.containerAzureNodePool.ContainerAzureNodePoolMaxPodsConstraint,
+	MaxPodsConstraint: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolMaxPodsConstraint,
 	Name: *string,
 	SubnetId: *string,
 	Version: *string,
 	Annotations: *map[string]*string,
 	AzureAvailabilityZone: *string,
 	Id: *string,
-	Management: github.com/cdktf/cdktf-provider-google-go/google/v14.containerAzureNodePool.ContainerAzureNodePoolManagement,
+	Management: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolManagement,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.containerAzureNodePool.ContainerAzureNodePoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolTimeouts,
 }
 ```
 
@@ -1257,7 +1257,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodep
 | <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.property.version">Version</a></code> | <code>*string</code> | The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool. |
 | <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.property.annotations">Annotations</a></code> | <code>*map[string]*string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.property.azureAvailabilityZone">AzureAvailabilityZone</a></code> | <code>*string</code> | Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`. |
-| <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#id ContainerAzureNodePool#id}. |
+| <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#id ContainerAzureNodePool#id}. |
 | <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.property.management">Management</a></code> | <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolManagement">ContainerAzureNodePoolManagement</a></code> | management block. |
 | <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.property.project">Project</a></code> | <code>*string</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts">ContainerAzureNodePoolTimeouts</a></code> | timeouts block. |
@@ -1344,7 +1344,7 @@ Autoscaling ContainerAzureNodePoolAutoscaling
 
 autoscaling block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#autoscaling ContainerAzureNodePool#autoscaling}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#autoscaling ContainerAzureNodePool#autoscaling}
 
 ---
 
@@ -1358,7 +1358,7 @@ Cluster *string
 
 The azureCluster for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#cluster ContainerAzureNodePool#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#cluster ContainerAzureNodePool#cluster}
 
 ---
 
@@ -1372,7 +1372,7 @@ Config ContainerAzureNodePoolConfigA
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#config ContainerAzureNodePool#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#config ContainerAzureNodePool#config}
 
 ---
 
@@ -1386,7 +1386,7 @@ Location *string
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#location ContainerAzureNodePool#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#location ContainerAzureNodePool#location}
 
 ---
 
@@ -1400,7 +1400,7 @@ MaxPodsConstraint ContainerAzureNodePoolMaxPodsConstraint
 
 max_pods_constraint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#max_pods_constraint ContainerAzureNodePool#max_pods_constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#max_pods_constraint ContainerAzureNodePool#max_pods_constraint}
 
 ---
 
@@ -1414,7 +1414,7 @@ Name *string
 
 The name of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#name ContainerAzureNodePool#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#name ContainerAzureNodePool#name}
 
 ---
 
@@ -1430,7 +1430,7 @@ The ARM ID of the subnet where the node pool VMs run.
 
 Make sure it's a subnet under the virtual network in the cluster configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#subnet_id ContainerAzureNodePool#subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#subnet_id ContainerAzureNodePool#subnet_id}
 
 ---
 
@@ -1444,7 +1444,7 @@ Version *string
 
 The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#version ContainerAzureNodePool#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#version ContainerAzureNodePool#version}
 
 ---
 
@@ -1463,7 +1463,7 @@ Annotations on the node pool. This field has the same restrictions as Kubernetes
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field `effective_annotations` for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#annotations ContainerAzureNodePool#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#annotations ContainerAzureNodePool#annotations}
 
 ---
 
@@ -1477,7 +1477,7 @@ AzureAvailabilityZone *string
 
 Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#azure_availability_zone ContainerAzureNodePool#azure_availability_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#azure_availability_zone ContainerAzureNodePool#azure_availability_zone}
 
 ---
 
@@ -1489,7 +1489,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#id ContainerAzureNodePool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#id ContainerAzureNodePool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1506,7 +1506,7 @@ Management ContainerAzureNodePoolManagement
 
 management block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#management ContainerAzureNodePool#management}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#management ContainerAzureNodePool#management}
 
 ---
 
@@ -1520,7 +1520,7 @@ Project *string
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#project ContainerAzureNodePool#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#project ContainerAzureNodePool#project}
 
 ---
 
@@ -1534,7 +1534,7 @@ Timeouts ContainerAzureNodePoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#timeouts ContainerAzureNodePool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#timeouts ContainerAzureNodePool#timeouts}
 
 ---
 
@@ -1543,13 +1543,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfigA {
-	SshConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.containerAzureNodePool.ContainerAzureNodePoolConfigSshConfig,
+	SshConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolConfigSshConfig,
 	Labels: *map[string]*string,
-	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.containerAzureNodePool.ContainerAzureNodePoolConfigProxyConfig,
-	RootVolume: github.com/cdktf/cdktf-provider-google-go/google/v14.containerAzureNodePool.ContainerAzureNodePoolConfigRootVolume,
+	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolConfigProxyConfig,
+	RootVolume: github.com/cdktf/cdktf-provider-google-go/google.containerAzureNodePool.ContainerAzureNodePoolConfigRootVolume,
 	Tags: *map[string]*string,
 	VmSize: *string,
 }
@@ -1578,7 +1578,7 @@ SshConfig ContainerAzureNodePoolConfigSshConfig
 
 ssh_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#ssh_config ContainerAzureNodePool#ssh_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#ssh_config ContainerAzureNodePool#ssh_config}
 
 ---
 
@@ -1594,7 +1594,7 @@ Optional.
 
 The initial labels assigned to nodes of this node pool. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#labels ContainerAzureNodePool#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#labels ContainerAzureNodePool#labels}
 
 ---
 
@@ -1608,7 +1608,7 @@ ProxyConfig ContainerAzureNodePoolConfigProxyConfig
 
 proxy_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#proxy_config ContainerAzureNodePool#proxy_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#proxy_config ContainerAzureNodePool#proxy_config}
 
 ---
 
@@ -1622,7 +1622,7 @@ RootVolume ContainerAzureNodePoolConfigRootVolume
 
 root_volume block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#root_volume ContainerAzureNodePool#root_volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#root_volume ContainerAzureNodePool#root_volume}
 
 ---
 
@@ -1638,7 +1638,7 @@ Optional.
 
 A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#tags ContainerAzureNodePool#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#tags ContainerAzureNodePool#tags}
 
 ---
 
@@ -1652,7 +1652,7 @@ VmSize *string
 
 Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#vm_size ContainerAzureNodePool#vm_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#vm_size ContainerAzureNodePool#vm_size}
 
 ---
 
@@ -1661,7 +1661,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigProxyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfigProxyConfig {
 	ResourceGroupId: *string,
@@ -1688,7 +1688,7 @@ ResourceGroupId *string
 
 The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#resource_group_id ContainerAzureNodePool#resource_group_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#resource_group_id ContainerAzureNodePool#resource_group_id}
 
 ---
 
@@ -1702,7 +1702,7 @@ SecretId *string
 
 The URL the of the proxy setting secret with its version. Secret ids are formatted as `https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#secret_id ContainerAzureNodePool#secret_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#secret_id ContainerAzureNodePool#secret_id}
 
 ---
 
@@ -1711,7 +1711,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigRootVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfigRootVolume {
 	SizeGib: *f64,
@@ -1738,7 +1738,7 @@ Optional.
 
 The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#size_gib ContainerAzureNodePool#size_gib}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#size_gib ContainerAzureNodePool#size_gib}
 
 ---
 
@@ -1747,7 +1747,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigSshConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolConfigSshConfig {
 	AuthorizedKey: *string,
@@ -1774,7 +1774,7 @@ The SSH public key data for VMs managed by Anthos.
 
 This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#authorized_key ContainerAzureNodePool#authorized_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#authorized_key ContainerAzureNodePool#authorized_key}
 
 ---
 
@@ -1783,7 +1783,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolManagement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolManagement {
 	AutoRepair: interface{},
@@ -1808,7 +1808,7 @@ AutoRepair interface{}
 
 Optional. Whether or not the nodes will be automatically repaired.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#auto_repair ContainerAzureNodePool#auto_repair}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#auto_repair ContainerAzureNodePool#auto_repair}
 
 ---
 
@@ -1817,7 +1817,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolMaxPodsConstraint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolMaxPodsConstraint {
 	MaxPodsPerNode: *f64,
@@ -1842,7 +1842,7 @@ MaxPodsPerNode *f64
 
 The maximum number of pods to schedule on a single node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#max_pods_per_node ContainerAzureNodePool#max_pods_per_node}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#max_pods_per_node ContainerAzureNodePool#max_pods_per_node}
 
 ---
 
@@ -1851,7 +1851,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 &containerazurenodepool.ContainerAzureNodePoolTimeouts {
 	Create: *string,
@@ -1864,9 +1864,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodep
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#create ContainerAzureNodePool#create}. |
-| <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#delete ContainerAzureNodePool#delete}. |
-| <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#update ContainerAzureNodePool#update}. |
+| <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#create ContainerAzureNodePool#create}. |
+| <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#delete ContainerAzureNodePool#delete}. |
+| <code><a href="#@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#update ContainerAzureNodePool#update}. |
 
 ---
 
@@ -1878,7 +1878,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#create ContainerAzureNodePool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#create ContainerAzureNodePool#create}.
 
 ---
 
@@ -1890,7 +1890,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#delete ContainerAzureNodePool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#delete ContainerAzureNodePool#delete}.
 
 ---
 
@@ -1902,7 +1902,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/container_azure_node_pool#update ContainerAzureNodePool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/container_azure_node_pool#update ContainerAzureNodePool#update}.
 
 ---
 
@@ -1913,7 +1913,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolAutoscalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolAutoscalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolAutoscalingOutputReference
 ```
@@ -2206,7 +2206,7 @@ func InternalValue() ContainerAzureNodePoolAutoscaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolConfigAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolConfigAOutputReference
 ```
@@ -2661,7 +2661,7 @@ func InternalValue() ContainerAzureNodePoolConfigA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigProxyConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolConfigProxyConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolConfigProxyConfigOutputReference
 ```
@@ -2954,7 +2954,7 @@ func InternalValue() ContainerAzureNodePoolConfigProxyConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigRootVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolConfigRootVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolConfigRootVolumeOutputReference
 ```
@@ -3232,7 +3232,7 @@ func InternalValue() ContainerAzureNodePoolConfigRootVolume
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolConfigSshConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolConfigSshConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolConfigSshConfigOutputReference
 ```
@@ -3503,7 +3503,7 @@ func InternalValue() ContainerAzureNodePoolConfigSshConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolManagementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolManagementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolManagementOutputReference
 ```
@@ -3781,7 +3781,7 @@ func InternalValue() ContainerAzureNodePoolManagement
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolMaxPodsConstraintOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolMaxPodsConstraintOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolMaxPodsConstraintOutputReference
 ```
@@ -4052,7 +4052,7 @@ func InternalValue() ContainerAzureNodePoolMaxPodsConstraint
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureNodePool.ContainerAzureNodePoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/containerazurenodepool"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerazurenodepool"
 
 containerazurenodepool.NewContainerAzureNodePoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAzureNodePoolTimeoutsOutputReference
 ```
