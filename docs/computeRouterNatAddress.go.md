@@ -4,7 +4,7 @@
 
 ### ComputeRouterNatAddress <a name="ComputeRouterNatAddress" id="@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddress"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address google_compute_router_nat_address}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address google_compute_router_nat_address}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddress.Initializer"></a>
 
@@ -515,7 +515,7 @@ The construct id used in the generated config for the ComputeRouterNatAddress to
 
 The id of the existing ComputeRouterNatAddress that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -927,8 +927,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouternatadd
 | <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.router">Router</a></code> | <code>*string</code> | The name of the Cloud Router in which the referenced NAT service is configured. |
 | <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.routerNat">RouterNat</a></code> | <code>*string</code> | The name of the Nat service in which this address will be configured. |
 | <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.drainNatIps">DrainNatIps</a></code> | <code>*[]*string</code> | A list of URLs of the IP resources to be drained. |
-| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#id ComputeRouterNatAddress#id}. |
-| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#project ComputeRouterNatAddress#project}. |
+| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#id ComputeRouterNatAddress#id}. |
+| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#project ComputeRouterNatAddress#project}. |
 | <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.region">Region</a></code> | <code>*string</code> | Region where the NAT service reside. |
 | <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressTimeouts">ComputeRouterNatAddressTimeouts</a></code> | timeouts block. |
 
@@ -1017,7 +1017,7 @@ Self-links of NAT IPs to be used in a Nat service.
 Only valid if the referenced RouterNat
 natIpAllocateOption is set to MANUAL_ONLY.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#nat_ips ComputeRouterNatAddress#nat_ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#nat_ips ComputeRouterNatAddress#nat_ips}
 
 ---
 
@@ -1031,7 +1031,7 @@ Router *string
 
 The name of the Cloud Router in which the referenced NAT service is configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#router ComputeRouterNatAddress#router}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#router ComputeRouterNatAddress#router}
 
 ---
 
@@ -1045,7 +1045,7 @@ RouterNat *string
 
 The name of the Nat service in which this address will be configured.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#router_nat ComputeRouterNatAddress#router_nat}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#router_nat ComputeRouterNatAddress#router_nat}
 
 ---
 
@@ -1062,7 +1062,7 @@ A list of URLs of the IP resources to be drained.
 These IPs must be
 valid static external IPs that have been assigned to the NAT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#drain_nat_ips ComputeRouterNatAddress#drain_nat_ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#drain_nat_ips ComputeRouterNatAddress#drain_nat_ips}
 
 ---
 
@@ -1074,7 +1074,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#id ComputeRouterNatAddress#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#id ComputeRouterNatAddress#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1089,7 +1089,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#project ComputeRouterNatAddress#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#project ComputeRouterNatAddress#project}.
 
 ---
 
@@ -1103,7 +1103,7 @@ Region *string
 
 Region where the NAT service reside.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#region ComputeRouterNatAddress#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#region ComputeRouterNatAddress#region}
 
 ---
 
@@ -1117,7 +1117,7 @@ Timeouts ComputeRouterNatAddressTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#timeouts ComputeRouterNatAddress#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#timeouts ComputeRouterNatAddress#timeouts}
 
 ---
 
@@ -1139,9 +1139,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouternatadd
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#create ComputeRouterNatAddress#create}. |
-| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#delete ComputeRouterNatAddress#delete}. |
-| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#update ComputeRouterNatAddress#update}. |
+| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#create ComputeRouterNatAddress#create}. |
+| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#delete ComputeRouterNatAddress#delete}. |
+| <code><a href="#@cdktf/provider-google.computeRouterNatAddress.ComputeRouterNatAddressTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#update ComputeRouterNatAddress#update}. |
 
 ---
 
@@ -1153,7 +1153,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#create ComputeRouterNatAddress#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#create ComputeRouterNatAddress#create}.
 
 ---
 
@@ -1165,7 +1165,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#delete ComputeRouterNatAddress#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#delete ComputeRouterNatAddress#delete}.
 
 ---
 
@@ -1177,7 +1177,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/compute_router_nat_address#update ComputeRouterNatAddress#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/compute_router_nat_address#update ComputeRouterNatAddress#update}.
 
 ---
 

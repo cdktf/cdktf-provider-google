@@ -4,7 +4,7 @@
 
 ### KmsEkmConnectionIamMember <a name="KmsEkmConnectionIamMember" id="@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member google_kms_ekm_connection_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member google_kms_ekm_connection_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer"></a>
 
@@ -42,13 +42,13 @@ kmsEkmConnectionIamMember.KmsEkmConnectionIamMember(
 | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#member KmsEkmConnectionIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#name KmsEkmConnectionIamMember#name}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#role KmsEkmConnectionIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#member KmsEkmConnectionIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#name KmsEkmConnectionIamMember#name}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#role KmsEkmConnectionIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition">KmsEkmConnectionIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#id KmsEkmConnectionIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#location KmsEkmConnectionIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#project KmsEkmConnectionIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#id KmsEkmConnectionIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#location KmsEkmConnectionIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#project KmsEkmConnectionIamMember#project}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#member KmsEkmConnectionIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#member KmsEkmConnectionIamMember#member}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#name KmsEkmConnectionIamMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#name KmsEkmConnectionIamMember#name}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#role KmsEkmConnectionIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#role KmsEkmConnectionIamMember#role}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#condition KmsEkmConnectionIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#condition KmsEkmConnectionIamMember#condition}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#id KmsEkmConnectionIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#id KmsEkmConnectionIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -161,7 +161,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#location KmsEkmConnectionIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#location KmsEkmConnectionIamMember#location}.
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#project KmsEkmConnectionIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#project KmsEkmConnectionIamMember#project}.
 
 ---
 
@@ -547,7 +547,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#expression KmsEkmConnectionIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#expression KmsEkmConnectionIamMember#expression}.
 
 ---
 
@@ -555,7 +555,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#title KmsEkmConnectionIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#title KmsEkmConnectionIamMember#title}.
 
 ---
 
@@ -563,7 +563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#description KmsEkmConnectionIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#description KmsEkmConnectionIamMember#description}.
 
 ---
 
@@ -705,7 +705,7 @@ The construct id used in the generated config for the KmsEkmConnectionIamMember 
 
 The id of the existing KmsEkmConnectionIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1083,9 +1083,9 @@ kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#expression KmsEkmConnectionIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#title KmsEkmConnectionIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#description KmsEkmConnectionIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#expression KmsEkmConnectionIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#title KmsEkmConnectionIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#description KmsEkmConnectionIamMember#description}. |
 
 ---
 
@@ -1097,7 +1097,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#expression KmsEkmConnectionIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#expression KmsEkmConnectionIamMember#expression}.
 
 ---
 
@@ -1109,7 +1109,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#title KmsEkmConnectionIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#title KmsEkmConnectionIamMember#title}.
 
 ---
 
@@ -1121,7 +1121,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#description KmsEkmConnectionIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#description KmsEkmConnectionIamMember#description}.
 
 ---
 
@@ -1161,13 +1161,13 @@ kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig(
 | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#member KmsEkmConnectionIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#name KmsEkmConnectionIamMember#name}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#role KmsEkmConnectionIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#member KmsEkmConnectionIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#name KmsEkmConnectionIamMember#name}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#role KmsEkmConnectionIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberCondition">KmsEkmConnectionIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#id KmsEkmConnectionIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#location KmsEkmConnectionIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#project KmsEkmConnectionIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#id KmsEkmConnectionIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#location KmsEkmConnectionIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.kmsEkmConnectionIamMember.KmsEkmConnectionIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#project KmsEkmConnectionIamMember#project}. |
 
 ---
 
@@ -1249,7 +1249,7 @@ member: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#member KmsEkmConnectionIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#member KmsEkmConnectionIamMember#member}.
 
 ---
 
@@ -1261,7 +1261,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#name KmsEkmConnectionIamMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#name KmsEkmConnectionIamMember#name}.
 
 ---
 
@@ -1273,7 +1273,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#role KmsEkmConnectionIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#role KmsEkmConnectionIamMember#role}.
 
 ---
 
@@ -1287,7 +1287,7 @@ condition: KmsEkmConnectionIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#condition KmsEkmConnectionIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#condition KmsEkmConnectionIamMember#condition}
 
 ---
 
@@ -1299,7 +1299,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#id KmsEkmConnectionIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#id KmsEkmConnectionIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1314,7 +1314,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#location KmsEkmConnectionIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#location KmsEkmConnectionIamMember#location}.
 
 ---
 
@@ -1326,7 +1326,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/kms_ekm_connection_iam_member#project KmsEkmConnectionIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/kms_ekm_connection_iam_member#project KmsEkmConnectionIamMember#project}.
 
 ---
 

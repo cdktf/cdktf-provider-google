@@ -1081,6 +1081,7 @@ The following submodules are available:
 - [secretManagerSecretIamMember](./secretManagerSecretIamMember.go.md)
 - [secretManagerSecretIamPolicy](./secretManagerSecretIamPolicy.go.md)
 - [secretManagerSecretVersion](./secretManagerSecretVersion.go.md)
+- [secureSourceManagerBranchRule](./secureSourceManagerBranchRule.go.md)
 - [secureSourceManagerInstance](./secureSourceManagerInstance.go.md)
 - [secureSourceManagerInstanceIamBinding](./secureSourceManagerInstanceIamBinding.go.md)
 - [secureSourceManagerInstanceIamMember](./secureSourceManagerInstanceIamMember.go.md)

@@ -790,6 +790,7 @@ Object.defineProperty(exports, 'secretManagerSecretIamBinding', { get: function 
 Object.defineProperty(exports, 'secretManagerSecretIamMember', { get: function () { return require('./secret-manager-secret-iam-member'); } });
 Object.defineProperty(exports, 'secretManagerSecretIamPolicy', { get: function () { return require('./secret-manager-secret-iam-policy'); } });
 Object.defineProperty(exports, 'secretManagerSecretVersion', { get: function () { return require('./secret-manager-secret-version'); } });
+Object.defineProperty(exports, 'secureSourceManagerBranchRule', { get: function () { return require('./secure-source-manager-branch-rule'); } });
 Object.defineProperty(exports, 'secureSourceManagerInstance', { get: function () { return require('./secure-source-manager-instance'); } });
 Object.defineProperty(exports, 'secureSourceManagerInstanceIamBinding', { get: function () { return require('./secure-source-manager-instance-iam-binding'); } });
 Object.defineProperty(exports, 'secureSourceManagerInstanceIamMember', { get: function () { return require('./secure-source-manager-instance-iam-member'); } });

@@ -790,6 +790,7 @@ export * as secretManagerSecretIamBinding from './secret-manager-secret-iam-bind
 export * as secretManagerSecretIamMember from './secret-manager-secret-iam-member';
 export * as secretManagerSecretIamPolicy from './secret-manager-secret-iam-policy';
 export * as secretManagerSecretVersion from './secret-manager-secret-version';
+export * as secureSourceManagerBranchRule from './secure-source-manager-branch-rule';
 export * as secureSourceManagerInstance from './secure-source-manager-instance';
 export * as secureSourceManagerInstanceIamBinding from './secure-source-manager-instance-iam-binding';
 export * as secureSourceManagerInstanceIamMember from './secure-source-manager-instance-iam-member';

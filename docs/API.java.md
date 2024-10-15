@@ -1081,6 +1081,7 @@ The following submodules are available:
 - [secretManagerSecretIamMember](./secretManagerSecretIamMember.java.md)
 - [secretManagerSecretIamPolicy](./secretManagerSecretIamPolicy.java.md)
 - [secretManagerSecretVersion](./secretManagerSecretVersion.java.md)
+- [secureSourceManagerBranchRule](./secureSourceManagerBranchRule.java.md)
 - [secureSourceManagerInstance](./secureSourceManagerInstance.java.md)
 - [secureSourceManagerInstanceIamBinding](./secureSourceManagerInstanceIamBinding.java.md)
 - [secureSourceManagerInstanceIamMember](./secureSourceManagerInstanceIamMember.java.md)

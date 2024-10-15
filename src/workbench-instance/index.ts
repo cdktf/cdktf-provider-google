@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface WorkbenchInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Desired state of the Workbench Instance. Set this field to 'ACTIVE' to start the Instance, and 'STOPPED' to stop the Instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#desired_state WorkbenchInstance#desired_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#desired_state WorkbenchInstance#desired_state}
   */
   readonly desiredState?: string;
   /**
   * Optional. If true, the workbench instance will not register with the proxy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#disable_proxy_access WorkbenchInstance#disable_proxy_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#disable_proxy_access WorkbenchInstance#disable_proxy_access}
   */
   readonly disableProxyAccess?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#id WorkbenchInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#id WorkbenchInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,7 +34,7 @@ export interface WorkbenchInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Required. User-defined unique ID of this instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#instance_id WorkbenchInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#instance_id WorkbenchInstance#instance_id}
   */
   readonly instanceId?: string;
   /**
@@ -42,7 +42,7 @@ export interface WorkbenchInstanceConfig extends cdktf.TerraformMetaArguments {
   * 'alias@example.com' Currently supports one owner only. If not specified, all of
   * the service account users of your VM instance''s service account can use the instance.'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#instance_owners WorkbenchInstance#instance_owners}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#instance_owners WorkbenchInstance#instance_owners}
   */
   readonly instanceOwners?: string[];
   /**
@@ -53,35 +53,35 @@ export interface WorkbenchInstanceConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#labels WorkbenchInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#labels WorkbenchInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Part of 'parent'. See documentation of 'projectsId'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#location WorkbenchInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#location WorkbenchInstance#location}
   */
   readonly location: string;
   /**
   * The name of this workbench instance. Format: 'projects/{project_id}/locations/{location}/instances/{instance_id}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
   */
   readonly project?: string;
   /**
   * gce_setup block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#gce_setup WorkbenchInstance#gce_setup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#gce_setup WorkbenchInstance#gce_setup}
   */
   readonly gceSetup?: WorkbenchInstanceGceSetup;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#timeouts WorkbenchInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#timeouts WorkbenchInstance#timeouts}
   */
   readonly timeouts?: WorkbenchInstanceTimeouts;
 }
@@ -274,13 +274,13 @@ export interface WorkbenchInstanceGceSetupAcceleratorConfigs {
   /**
   * Optional. Count of cores of this accelerator.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#core_count WorkbenchInstance#core_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#core_count WorkbenchInstance#core_count}
   */
   readonly coreCount?: string;
   /**
   * Optional. Type of this accelerator. Possible values: ["NVIDIA_TESLA_P100", "NVIDIA_TESLA_V100", "NVIDIA_TESLA_P4", "NVIDIA_TESLA_T4", "NVIDIA_TESLA_A100", "NVIDIA_A100_80GB", "NVIDIA_L4", "NVIDIA_TESLA_T4_VWS", "NVIDIA_TESLA_P100_VWS", "NVIDIA_TESLA_P4_VWS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#type WorkbenchInstance#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#type WorkbenchInstance#type}
   */
   readonly type?: string;
 }
@@ -428,7 +428,7 @@ export interface WorkbenchInstanceGceSetupBootDisk {
   * Optional. Input only. Disk encryption method used on the boot and
   * data disks, defaults to GMEK. Possible values: ["GMEK", "CMEK"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
   */
   readonly diskEncryption?: string;
   /**
@@ -436,13 +436,13 @@ export interface WorkbenchInstanceGceSetupBootDisk {
   * up to a maximum of 64000 GB (64 TB). If not specified, this defaults to the
   * recommended value of 150GB.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
   */
   readonly diskSizeGb?: string;
   /**
   * Optional. Indicates the type of the disk. Possible values: ["PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
   */
   readonly diskType?: string;
   /**
@@ -450,7 +450,7 @@ export interface WorkbenchInstanceGceSetupBootDisk {
   * applicable if disk_encryption is CMEK. Format: 'projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}'
   * Learn more about using your own encryption keys.'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -624,13 +624,13 @@ export interface WorkbenchInstanceGceSetupContainerImage {
   * The path to the container image repository.
   * For example: gcr.io/{project_id}/{imageName}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#repository WorkbenchInstance#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#repository WorkbenchInstance#repository}
   */
   readonly repository: string;
   /**
   * The tag of the container image. If not specified, this defaults to the latest tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#tag WorkbenchInstance#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#tag WorkbenchInstance#tag}
   */
   readonly tag?: string;
 }
@@ -743,7 +743,7 @@ export interface WorkbenchInstanceGceSetupDataDisks {
   * Optional. Input only. Disk encryption method used on the boot
   * and data disks, defaults to GMEK. Possible values: ["GMEK", "CMEK"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
   */
   readonly diskEncryption?: string;
   /**
@@ -751,13 +751,13 @@ export interface WorkbenchInstanceGceSetupDataDisks {
   * up to a maximum of 64000 GB (64 TB). If not specified, this defaults to
   * 100.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
   */
   readonly diskSizeGb?: string;
   /**
   * Optional. Input only. Indicates the type of the disk. Possible values: ["PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
   */
   readonly diskType?: string;
   /**
@@ -765,7 +765,7 @@ export interface WorkbenchInstanceGceSetupDataDisks {
   * only applicable if disk_encryption is CMEK. Format: 'projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}'
   * Learn more about using your own encryption keys.'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -942,7 +942,7 @@ export interface WorkbenchInstanceGceSetupNetworkInterfacesAccessConfigs {
   * specify a static external IP address, it must live in the same region as
   * the zone of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#external_ip WorkbenchInstance#external_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#external_ip WorkbenchInstance#external_ip}
   */
   readonly externalIp: string;
 }
@@ -1057,26 +1057,26 @@ export interface WorkbenchInstanceGceSetupNetworkInterfaces {
   /**
   * Optional. The name of the VPC that this VM instance is in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#network WorkbenchInstance#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#network WorkbenchInstance#network}
   */
   readonly network?: string;
   /**
   * Optional. The type of vNIC to be used on this interface. This
   * may be gVNIC or VirtioNet. Possible values: ["VIRTIO_NET", "GVNIC"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#nic_type WorkbenchInstance#nic_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#nic_type WorkbenchInstance#nic_type}
   */
   readonly nicType?: string;
   /**
   * Optional. The name of the subnet that this VM instance is in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#subnet WorkbenchInstance#subnet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#subnet WorkbenchInstance#subnet}
   */
   readonly subnet?: string;
   /**
   * access_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#access_configs WorkbenchInstance#access_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#access_configs WorkbenchInstance#access_configs}
   */
   readonly accessConfigs?: WorkbenchInstanceGceSetupNetworkInterfacesAccessConfigs[] | cdktf.IResolvable;
 }
@@ -1281,7 +1281,7 @@ export interface WorkbenchInstanceGceSetupServiceAccounts {
   /**
   * Optional. Email address of the service account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#email WorkbenchInstance#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#email WorkbenchInstance#email}
   */
   readonly email?: string;
 }
@@ -1408,7 +1408,7 @@ export interface WorkbenchInstanceGceSetupShieldedInstanceConfig {
   * This baseline is initially derived from the implicitly trusted boot image
   * when the VM instance is created. Enabled by default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#enable_integrity_monitoring WorkbenchInstance#enable_integrity_monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#enable_integrity_monitoring WorkbenchInstance#enable_integrity_monitoring}
   */
   readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
@@ -1417,14 +1417,14 @@ export interface WorkbenchInstanceGceSetupShieldedInstanceConfig {
   * the digital signature of all boot components, and halting the boot process
   * if signature verification fails. Disabled by default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#enable_secure_boot WorkbenchInstance#enable_secure_boot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#enable_secure_boot WorkbenchInstance#enable_secure_boot}
   */
   readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Optional. Defines whether the VM instance has the vTPM enabled.
   * Enabled by default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#enable_vtpm WorkbenchInstance#enable_vtpm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#enable_vtpm WorkbenchInstance#enable_vtpm}
   */
   readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
@@ -1569,20 +1569,20 @@ export interface WorkbenchInstanceGceSetupVmImage {
   * Optional. Use this VM image family to find the image; the newest
   * image in this family will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#family WorkbenchInstance#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#family WorkbenchInstance#family}
   */
   readonly family?: string;
   /**
   * Optional. Use VM image name to find the image.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
   */
   readonly name?: string;
   /**
   * The name of the Google Cloud project that this VM image belongs to.
   * Format: {project_id}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
   */
   readonly project?: string;
 }
@@ -1726,81 +1726,81 @@ export interface WorkbenchInstanceGceSetup {
   /**
   * Optional. If true, no external IP will be assigned to this VM instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#disable_public_ip WorkbenchInstance#disable_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#disable_public_ip WorkbenchInstance#disable_public_ip}
   */
   readonly disablePublicIp?: boolean | cdktf.IResolvable;
   /**
   * Optional. Flag to enable ip forwarding or not, default false/off.
   * https://cloud.google.com/vpc/docs/using-routes#canipforward
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#enable_ip_forwarding WorkbenchInstance#enable_ip_forwarding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#enable_ip_forwarding WorkbenchInstance#enable_ip_forwarding}
   */
   readonly enableIpForwarding?: boolean | cdktf.IResolvable;
   /**
   * Optional. The machine type of the VM instance. https://cloud.google.com/compute/docs/machine-resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#machine_type WorkbenchInstance#machine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#machine_type WorkbenchInstance#machine_type}
   */
   readonly machineType?: string;
   /**
   * Optional. Custom metadata to apply to this instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#metadata WorkbenchInstance#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#metadata WorkbenchInstance#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
   * Optional. The Compute Engine tags to add to instance (see [Tagging
   * instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#tags WorkbenchInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#tags WorkbenchInstance#tags}
   */
   readonly tags?: string[];
   /**
   * accelerator_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#accelerator_configs WorkbenchInstance#accelerator_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#accelerator_configs WorkbenchInstance#accelerator_configs}
   */
   readonly acceleratorConfigs?: WorkbenchInstanceGceSetupAcceleratorConfigs[] | cdktf.IResolvable;
   /**
   * boot_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#boot_disk WorkbenchInstance#boot_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#boot_disk WorkbenchInstance#boot_disk}
   */
   readonly bootDisk?: WorkbenchInstanceGceSetupBootDisk;
   /**
   * container_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#container_image WorkbenchInstance#container_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#container_image WorkbenchInstance#container_image}
   */
   readonly containerImage?: WorkbenchInstanceGceSetupContainerImage;
   /**
   * data_disks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#data_disks WorkbenchInstance#data_disks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#data_disks WorkbenchInstance#data_disks}
   */
   readonly dataDisks?: WorkbenchInstanceGceSetupDataDisks;
   /**
   * network_interfaces block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#network_interfaces WorkbenchInstance#network_interfaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#network_interfaces WorkbenchInstance#network_interfaces}
   */
   readonly networkInterfaces?: WorkbenchInstanceGceSetupNetworkInterfaces[] | cdktf.IResolvable;
   /**
   * service_accounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#service_accounts WorkbenchInstance#service_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#service_accounts WorkbenchInstance#service_accounts}
   */
   readonly serviceAccounts?: WorkbenchInstanceGceSetupServiceAccounts[] | cdktf.IResolvable;
   /**
   * shielded_instance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#shielded_instance_config WorkbenchInstance#shielded_instance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#shielded_instance_config WorkbenchInstance#shielded_instance_config}
   */
   readonly shieldedInstanceConfig?: WorkbenchInstanceGceSetupShieldedInstanceConfig;
   /**
   * vm_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#vm_image WorkbenchInstance#vm_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#vm_image WorkbenchInstance#vm_image}
   */
   readonly vmImage?: WorkbenchInstanceGceSetupVmImage;
 }
@@ -2232,15 +2232,15 @@ export class WorkbenchInstanceGceSetupOutputReference extends cdktf.ComplexObjec
 }
 export interface WorkbenchInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#create WorkbenchInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#create WorkbenchInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#update WorkbenchInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#update WorkbenchInstance#update}
   */
   readonly update?: string;
 }
@@ -2392,7 +2392,7 @@ export class WorkbenchInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance google_workbench_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance google_workbench_instance}
 */
 export class WorkbenchInstance extends cdktf.TerraformResource {
 
@@ -2408,7 +2408,7 @@ export class WorkbenchInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a WorkbenchInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the WorkbenchInstance to import
-  * @param importFromId The id of the existing WorkbenchInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing WorkbenchInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the WorkbenchInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2420,7 +2420,7 @@ export class WorkbenchInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/workbench_instance google_workbench_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/workbench_instance google_workbench_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2431,7 +2431,7 @@ export class WorkbenchInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_workbench_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.6.0',
+        providerVersion: '6.7.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

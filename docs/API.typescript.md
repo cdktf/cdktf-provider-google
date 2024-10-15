@@ -1081,6 +1081,7 @@ The following submodules are available:
 - [secretManagerSecretIamMember](./secretManagerSecretIamMember.typescript.md)
 - [secretManagerSecretIamPolicy](./secretManagerSecretIamPolicy.typescript.md)
 - [secretManagerSecretVersion](./secretManagerSecretVersion.typescript.md)
+- [secureSourceManagerBranchRule](./secureSourceManagerBranchRule.typescript.md)
 - [secureSourceManagerInstance](./secureSourceManagerInstance.typescript.md)
 - [secureSourceManagerInstanceIamBinding](./secureSourceManagerInstanceIamBinding.typescript.md)
 - [secureSourceManagerInstanceIamMember](./secureSourceManagerInstanceIamMember.typescript.md)

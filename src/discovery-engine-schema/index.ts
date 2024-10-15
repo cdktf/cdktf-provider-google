@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema
+// https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface DiscoveryEngineSchemaConfig extends cdktf.TerraformMetaArgument
   /**
   * The unique id of the data store.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#data_store_id DiscoveryEngineSchema#data_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#data_store_id DiscoveryEngineSchema#data_store_id}
   */
   readonly dataStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#id DiscoveryEngineSchema#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#id DiscoveryEngineSchema#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,40 +28,40 @@ export interface DiscoveryEngineSchemaConfig extends cdktf.TerraformMetaArgument
   /**
   * The JSON representation of the schema.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#json_schema DiscoveryEngineSchema#json_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#json_schema DiscoveryEngineSchema#json_schema}
   */
   readonly jsonSchema?: string;
   /**
   * The geographic location where the data store should reside. The value can
   * only be one of "global", "us" and "eu".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#location DiscoveryEngineSchema#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#location DiscoveryEngineSchema#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#project DiscoveryEngineSchema#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#project DiscoveryEngineSchema#project}
   */
   readonly project?: string;
   /**
   * The unique id of the schema.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#schema_id DiscoveryEngineSchema#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#schema_id DiscoveryEngineSchema#schema_id}
   */
   readonly schemaId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#timeouts DiscoveryEngineSchema#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#timeouts DiscoveryEngineSchema#timeouts}
   */
   readonly timeouts?: DiscoveryEngineSchemaTimeouts;
 }
 export interface DiscoveryEngineSchemaTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#create DiscoveryEngineSchema#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#create DiscoveryEngineSchema#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#delete DiscoveryEngineSchema#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#delete DiscoveryEngineSchema#delete}
   */
   readonly delete?: string;
 }
@@ -184,7 +184,7 @@ export class DiscoveryEngineSchemaTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema google_discovery_engine_schema}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema google_discovery_engine_schema}
 */
 export class DiscoveryEngineSchema extends cdktf.TerraformResource {
 
@@ -200,7 +200,7 @@ export class DiscoveryEngineSchema extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DiscoveryEngineSchema resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DiscoveryEngineSchema to import
-  * @param importFromId The id of the existing DiscoveryEngineSchema that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DiscoveryEngineSchema that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DiscoveryEngineSchema to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -212,7 +212,7 @@ export class DiscoveryEngineSchema extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.6.0/docs/resources/discovery_engine_schema google_discovery_engine_schema} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/discovery_engine_schema google_discovery_engine_schema} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -223,7 +223,7 @@ export class DiscoveryEngineSchema extends cdktf.TerraformResource {
       terraformResourceType: 'google_discovery_engine_schema',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.6.0',
+        providerVersion: '6.7.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
