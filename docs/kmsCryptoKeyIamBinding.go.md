@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiambinding"
 
 kmscryptokeyiambinding.NewKmsCryptoKeyIamBinding(scope Construct, id *string, config KmsCryptoKeyIamBindingConfig) KmsCryptoKeyIamBinding
 ```
@@ -405,7 +405,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiambinding"
 
 kmscryptokeyiambinding.KmsCryptoKeyIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiambinding"
 
 kmscryptokeyiambinding.KmsCryptoKeyIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ kmscryptokeyiambinding.KmsCryptoKeyIamBinding_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiambinding"
 
 kmscryptokeyiambinding.KmsCryptoKeyIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ kmscryptokeyiambinding.KmsCryptoKeyIamBinding_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiambinding"
 
 kmscryptokeyiambinding.KmsCryptoKeyIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -815,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiambinding"
 
 &kmscryptokeyiambinding.KmsCryptoKeyIamBindingCondition {
 	Expression: *string,
@@ -875,7 +875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiambinding"
 
 &kmscryptokeyiambinding.KmsCryptoKeyIamBindingConfig {
 	Connection: interface{},
@@ -888,7 +888,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambind
 	CryptoKeyId: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -1054,7 +1054,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsCryptoKeyIamBinding.KmsCryptoKeyIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmscryptokeyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiambinding"
 
 kmscryptokeyiambinding.NewKmsCryptoKeyIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KmsCryptoKeyIamBindingConditionOutputReference
 ```

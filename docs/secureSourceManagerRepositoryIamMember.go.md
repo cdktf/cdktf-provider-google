@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerrepositoryiammember"
 
 securesourcemanagerrepositoryiammember.NewSecureSourceManagerRepositoryIamMember(scope Construct, id *string, config SecureSourceManagerRepositoryIamMemberConfig) SecureSourceManagerRepositoryIamMember
 ```
@@ -419,7 +419,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerrepositoryiammember"
 
 securesourcemanagerrepositoryiammember.SecureSourceManagerRepositoryIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerrepositoryiammember"
 
 securesourcemanagerrepositoryiammember.SecureSourceManagerRepositoryIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ securesourcemanagerrepositoryiammember.SecureSourceManagerRepositoryIamMember_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerrepositoryiammember"
 
 securesourcemanagerrepositoryiammember.SecureSourceManagerRepositoryIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ securesourcemanagerrepositoryiammember.SecureSourceManagerRepositoryIamMember_Is
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerrepositoryiammember"
 
 securesourcemanagerrepositoryiammember.SecureSourceManagerRepositoryIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerrepositoryiammember"
 
 &securesourcemanagerrepositoryiammember.SecureSourceManagerRepositoryIamMemberCondition {
 	Expression: *string,
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerrepositoryiammember"
 
 &securesourcemanagerrepositoryiammember.SecureSourceManagerRepositoryIamMemberConfig {
 	Connection: interface{},
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanager
 	Member: *string,
 	RepositoryId: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerrepositoryiammember"
 
 securesourcemanagerrepositoryiammember.NewSecureSourceManagerRepositoryIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecureSourceManagerRepositoryIamMemberConditionOutputReference
 ```
