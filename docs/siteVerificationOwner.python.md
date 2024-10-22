@@ -4,7 +4,7 @@
 
 ### SiteVerificationOwner <a name="SiteVerificationOwner" id="@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwner"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner google_site_verification_owner}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner google_site_verification_owner}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwner.Initializer"></a>
 
@@ -41,7 +41,7 @@ siteVerificationOwner.SiteVerificationOwner(
 | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwner.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwner.Initializer.parameter.email">email</a></code> | <code>str</code> | The email address of the owner. |
 | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwner.Initializer.parameter.webResourceId">web_resource_id</a></code> | <code>str</code> | The id of the Web Resource to add this owner to, in the form "webResource/<web-resource-id>". |
-| <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwner.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#id SiteVerificationOwner#id}. |
+| <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwner.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#id SiteVerificationOwner#id}. |
 | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwner.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerTimeouts">SiteVerificationOwnerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 The email address of the owner.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#email SiteVerificationOwner#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#email SiteVerificationOwner#email}
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The id of the Web Resource to add this owner to, in the form "webResource/<web-resource-id>".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#web_resource_id SiteVerificationOwner#web_resource_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#web_resource_id SiteVerificationOwner#web_resource_id}
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#id SiteVerificationOwner#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#id SiteVerificationOwner#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#timeouts SiteVerificationOwner#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#timeouts SiteVerificationOwner#timeouts}
 
 ---
 
@@ -518,7 +518,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#create SiteVerificationOwner#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#create SiteVerificationOwner#create}.
 
 ---
 
@@ -526,7 +526,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#delete SiteVerificationOwner#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#delete SiteVerificationOwner#delete}.
 
 ---
 
@@ -656,7 +656,7 @@ The construct id used in the generated config for the SiteVerificationOwner to i
 
 The id of the existing SiteVerificationOwner that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -974,7 +974,7 @@ siteVerificationOwner.SiteVerificationOwnerConfig(
 | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerConfig.property.email">email</a></code> | <code>str</code> | The email address of the owner. |
 | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerConfig.property.webResourceId">web_resource_id</a></code> | <code>str</code> | The id of the Web Resource to add this owner to, in the form "webResource/<web-resource-id>". |
-| <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#id SiteVerificationOwner#id}. |
+| <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#id SiteVerificationOwner#id}. |
 | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerTimeouts">SiteVerificationOwnerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1059,7 +1059,7 @@ email: str
 
 The email address of the owner.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#email SiteVerificationOwner#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#email SiteVerificationOwner#email}
 
 ---
 
@@ -1073,7 +1073,7 @@ web_resource_id: str
 
 The id of the Web Resource to add this owner to, in the form "webResource/<web-resource-id>".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#web_resource_id SiteVerificationOwner#web_resource_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#web_resource_id SiteVerificationOwner#web_resource_id}
 
 ---
 
@@ -1085,7 +1085,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#id SiteVerificationOwner#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#id SiteVerificationOwner#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1102,7 +1102,7 @@ timeouts: SiteVerificationOwnerTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#timeouts SiteVerificationOwner#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#timeouts SiteVerificationOwner#timeouts}
 
 ---
 
@@ -1123,8 +1123,8 @@ siteVerificationOwner.SiteVerificationOwnerTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#create SiteVerificationOwner#create}. |
-| <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#delete SiteVerificationOwner#delete}. |
+| <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#create SiteVerificationOwner#create}. |
+| <code><a href="#@cdktf/provider-google.siteVerificationOwner.SiteVerificationOwnerTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#delete SiteVerificationOwner#delete}. |
 
 ---
 
@@ -1136,7 +1136,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#create SiteVerificationOwner#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#create SiteVerificationOwner#create}.
 
 ---
 
@@ -1148,7 +1148,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/site_verification_owner#delete SiteVerificationOwner#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/site_verification_owner#delete SiteVerificationOwner#delete}.
 
 ---
 

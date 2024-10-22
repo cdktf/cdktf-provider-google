@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module
+// https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,23 +19,23 @@ export interface SccFolderCustomModuleConfig extends cdktf.TerraformMetaArgument
   * 128 characters, start with a lowercase letter, and contain alphanumeric
   * characters or underscores only.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#display_name SccFolderCustomModule#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#display_name SccFolderCustomModule#display_name}
   */
   readonly displayName: string;
   /**
   * The enablement state of the custom module. Possible values: ["ENABLED", "DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#enablement_state SccFolderCustomModule#enablement_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#enablement_state SccFolderCustomModule#enablement_state}
   */
   readonly enablementState: string;
   /**
   * Numerical ID of the parent folder.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#folder SccFolderCustomModule#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#folder SccFolderCustomModule#folder}
   */
   readonly folder: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#id SccFolderCustomModule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#id SccFolderCustomModule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -44,13 +44,13 @@ export interface SccFolderCustomModuleConfig extends cdktf.TerraformMetaArgument
   /**
   * custom_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#custom_config SccFolderCustomModule#custom_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#custom_config SccFolderCustomModule#custom_config}
   */
   readonly customConfig: SccFolderCustomModuleCustomConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#timeouts SccFolderCustomModule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#timeouts SccFolderCustomModule#timeouts}
   */
   readonly timeouts?: SccFolderCustomModuleTimeouts;
 }
@@ -59,27 +59,27 @@ export interface SccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExp
   * Description of the expression. This is a longer text which describes the
   * expression, e.g. when hovered over it in a UI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#description SccFolderCustomModule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#description SccFolderCustomModule#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#expression SccFolderCustomModule#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#expression SccFolderCustomModule#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a
   * file name and a position in the file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#location SccFolderCustomModule#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#location SccFolderCustomModule#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose. This can
   * be used e.g. in UIs which allow to enter the expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#title SccFolderCustomModule#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#title SccFolderCustomModule#title}
   */
   readonly title?: string;
 }
@@ -249,13 +249,13 @@ export interface SccFolderCustomModuleCustomConfigCustomOutputProperties {
   /**
   * Name of the property for the custom output.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#name SccFolderCustomModule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#name SccFolderCustomModule#name}
   */
   readonly name?: string;
   /**
   * value_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#value_expression SccFolderCustomModule#value_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#value_expression SccFolderCustomModule#value_expression}
   */
   readonly valueExpression?: SccFolderCustomModuleCustomConfigCustomOutputPropertiesValueExpression;
 }
@@ -402,7 +402,7 @@ export interface SccFolderCustomModuleCustomConfigCustomOutput {
   /**
   * properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#properties SccFolderCustomModule#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#properties SccFolderCustomModule#properties}
   */
   readonly properties?: SccFolderCustomModuleCustomConfigCustomOutputProperties[] | cdktf.IResolvable;
 }
@@ -489,27 +489,27 @@ export interface SccFolderCustomModuleCustomConfigPredicate {
   * Description of the expression. This is a longer text which describes the
   * expression, e.g. when hovered over it in a UI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#description SccFolderCustomModule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#description SccFolderCustomModule#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#expression SccFolderCustomModule#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#expression SccFolderCustomModule#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a
   * file name and a position in the file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#location SccFolderCustomModule#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#location SccFolderCustomModule#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose. This can
   * be used e.g. in UIs which allow to enter the expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#title SccFolderCustomModule#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#title SccFolderCustomModule#title}
   */
   readonly title?: string;
 }
@@ -679,7 +679,7 @@ export interface SccFolderCustomModuleCustomConfigResourceSelector {
   /**
   * The resource types to run the detector on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#resource_types SccFolderCustomModule#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#resource_types SccFolderCustomModule#resource_types}
   */
   readonly resourceTypes: string[];
 }
@@ -764,7 +764,7 @@ export interface SccFolderCustomModuleCustomConfig {
   * module detects. This explanation is returned with each finding instance to
   * help investigators understand the detected issue. The text must be enclosed in quotation marks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#description SccFolderCustomModule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#description SccFolderCustomModule#description}
   */
   readonly description?: string;
   /**
@@ -772,31 +772,31 @@ export interface SccFolderCustomModuleCustomConfig {
   * the detected issue. This explanation is returned with each finding generated by
   * this module in the nextSteps property of the finding JSON.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#recommendation SccFolderCustomModule#recommendation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#recommendation SccFolderCustomModule#recommendation}
   */
   readonly recommendation: string;
   /**
   * The severity to assign to findings generated by the module. Possible values: ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#severity SccFolderCustomModule#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#severity SccFolderCustomModule#severity}
   */
   readonly severity: string;
   /**
   * custom_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#custom_output SccFolderCustomModule#custom_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#custom_output SccFolderCustomModule#custom_output}
   */
   readonly customOutput?: SccFolderCustomModuleCustomConfigCustomOutput;
   /**
   * predicate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#predicate SccFolderCustomModule#predicate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#predicate SccFolderCustomModule#predicate}
   */
   readonly predicate: SccFolderCustomModuleCustomConfigPredicate;
   /**
   * resource_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#resource_selector SccFolderCustomModule#resource_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#resource_selector SccFolderCustomModule#resource_selector}
   */
   readonly resourceSelector: SccFolderCustomModuleCustomConfigResourceSelector;
 }
@@ -1013,15 +1013,15 @@ export class SccFolderCustomModuleCustomConfigOutputReference extends cdktf.Comp
 }
 export interface SccFolderCustomModuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#create SccFolderCustomModule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#create SccFolderCustomModule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#delete SccFolderCustomModule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#delete SccFolderCustomModule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#update SccFolderCustomModule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#update SccFolderCustomModule#update}
   */
   readonly update?: string;
 }
@@ -1173,7 +1173,7 @@ export class SccFolderCustomModuleTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module google_scc_folder_custom_module}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module google_scc_folder_custom_module}
 */
 export class SccFolderCustomModule extends cdktf.TerraformResource {
 
@@ -1189,7 +1189,7 @@ export class SccFolderCustomModule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SccFolderCustomModule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SccFolderCustomModule to import
-  * @param importFromId The id of the existing SccFolderCustomModule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SccFolderCustomModule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SccFolderCustomModule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1201,7 +1201,7 @@ export class SccFolderCustomModule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/scc_folder_custom_module google_scc_folder_custom_module} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/scc_folder_custom_module google_scc_folder_custom_module} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1212,7 +1212,7 @@ export class SccFolderCustomModule extends cdktf.TerraformResource {
       terraformResourceType: 'google_scc_folder_custom_module',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.7.0',
+        providerVersion: '6.8.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

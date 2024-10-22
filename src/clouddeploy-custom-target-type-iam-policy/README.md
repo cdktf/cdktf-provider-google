@@ -1,3 +1,3 @@
 # `google_clouddeploy_custom_target_type_iam_policy`
 
-Refer to the Terraform Registry for docs: [`google_clouddeploy_custom_target_type_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/clouddeploy_custom_target_type_iam_policy).
+Refer to the Terraform Registry for docs: [`google_clouddeploy_custom_target_type_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/clouddeploy_custom_target_type_iam_policy).

@@ -692,6 +692,9 @@ Object.defineProperty(exports, 'notebooksRuntime', { get: function () { return r
 Object.defineProperty(exports, 'notebooksRuntimeIamBinding', { get: function () { return require('./notebooks-runtime-iam-binding'); } });
 Object.defineProperty(exports, 'notebooksRuntimeIamMember', { get: function () { return require('./notebooks-runtime-iam-member'); } });
 Object.defineProperty(exports, 'notebooksRuntimeIamPolicy', { get: function () { return require('./notebooks-runtime-iam-policy'); } });
+Object.defineProperty(exports, 'oracleDatabaseAutonomousDatabase', { get: function () { return require('./oracle-database-autonomous-database'); } });
+Object.defineProperty(exports, 'oracleDatabaseCloudExadataInfrastructure', { get: function () { return require('./oracle-database-cloud-exadata-infrastructure'); } });
+Object.defineProperty(exports, 'oracleDatabaseCloudVmCluster', { get: function () { return require('./oracle-database-cloud-vm-cluster'); } });
 Object.defineProperty(exports, 'orgPolicyCustomConstraint', { get: function () { return require('./org-policy-custom-constraint'); } });
 Object.defineProperty(exports, 'orgPolicyPolicy', { get: function () { return require('./org-policy-policy'); } });
 Object.defineProperty(exports, 'organizationAccessApprovalSettings', { get: function () { return require('./organization-access-approval-settings'); } });
@@ -861,6 +864,8 @@ Object.defineProperty(exports, 'tagsTagValueIamBinding', { get: function () { re
 Object.defineProperty(exports, 'tagsTagValueIamMember', { get: function () { return require('./tags-tag-value-iam-member'); } });
 Object.defineProperty(exports, 'tagsTagValueIamPolicy', { get: function () { return require('./tags-tag-value-iam-policy'); } });
 Object.defineProperty(exports, 'tpuNode', { get: function () { return require('./tpu-node'); } });
+Object.defineProperty(exports, 'transcoderJob', { get: function () { return require('./transcoder-job'); } });
+Object.defineProperty(exports, 'transcoderJobTemplate', { get: function () { return require('./transcoder-job-template'); } });
 Object.defineProperty(exports, 'vertexAiDataset', { get: function () { return require('./vertex-ai-dataset'); } });
 Object.defineProperty(exports, 'vertexAiDeploymentResourcePool', { get: function () { return require('./vertex-ai-deployment-resource-pool'); } });
 Object.defineProperty(exports, 'vertexAiEndpoint', { get: function () { return require('./vertex-ai-endpoint'); } });
@@ -1097,6 +1102,10 @@ Object.defineProperty(exports, 'dataGoogleNetblockIpRanges', { get: function () 
 Object.defineProperty(exports, 'dataGoogleNetworkSecurityAddressGroupIamPolicy', { get: function () { return require('./data-google-network-security-address-group-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleNotebooksInstanceIamPolicy', { get: function () { return require('./data-google-notebooks-instance-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleNotebooksRuntimeIamPolicy', { get: function () { return require('./data-google-notebooks-runtime-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleOracleDatabaseCloudExadataInfrastructure', { get: function () { return require('./data-google-oracle-database-cloud-exadata-infrastructure'); } });
+Object.defineProperty(exports, 'dataGoogleOracleDatabaseCloudVmCluster', { get: function () { return require('./data-google-oracle-database-cloud-vm-cluster'); } });
+Object.defineProperty(exports, 'dataGoogleOracleDatabaseDbNodes', { get: function () { return require('./data-google-oracle-database-db-nodes'); } });
+Object.defineProperty(exports, 'dataGoogleOracleDatabaseDbServers', { get: function () { return require('./data-google-oracle-database-db-servers'); } });
 Object.defineProperty(exports, 'dataGoogleOrganization', { get: function () { return require('./data-google-organization'); } });
 Object.defineProperty(exports, 'dataGoogleOrganizationIamPolicy', { get: function () { return require('./data-google-organization-iam-policy'); } });
 Object.defineProperty(exports, 'dataGooglePrivatecaCaPoolIamPolicy', { get: function () { return require('./data-google-privateca-ca-pool-iam-policy'); } });

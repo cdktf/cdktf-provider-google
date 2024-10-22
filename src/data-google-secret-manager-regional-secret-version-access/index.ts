@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access
+// https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,32 +13,36 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSecretManagerRegionalSecretVersionAccessConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access#id DataGoogleSecretManagerRegionalSecretVersionAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access#id DataGoogleSecretManagerRegionalSecretVersionAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access#location DataGoogleSecretManagerRegionalSecretVersionAccess#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access#is_secret_data_base64 DataGoogleSecretManagerRegionalSecretVersionAccess#is_secret_data_base64}
+  */
+  readonly isSecretDataBase64?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access#location DataGoogleSecretManagerRegionalSecretVersionAccess#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access#project DataGoogleSecretManagerRegionalSecretVersionAccess#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access#project DataGoogleSecretManagerRegionalSecretVersionAccess#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access#secret DataGoogleSecretManagerRegionalSecretVersionAccess#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access#secret DataGoogleSecretManagerRegionalSecretVersionAccess#secret}
   */
   readonly secret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access#version DataGoogleSecretManagerRegionalSecretVersionAccess#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access#version DataGoogleSecretManagerRegionalSecretVersionAccess#version}
   */
   readonly version?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access google_secret_manager_regional_secret_version_access}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access google_secret_manager_regional_secret_version_access}
 */
 export class DataGoogleSecretManagerRegionalSecretVersionAccess extends cdktf.TerraformDataSource {
 
@@ -54,7 +58,7 @@ export class DataGoogleSecretManagerRegionalSecretVersionAccess extends cdktf.Te
   * Generates CDKTF code for importing a DataGoogleSecretManagerRegionalSecretVersionAccess resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleSecretManagerRegionalSecretVersionAccess to import
-  * @param importFromId The id of the existing DataGoogleSecretManagerRegionalSecretVersionAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleSecretManagerRegionalSecretVersionAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleSecretManagerRegionalSecretVersionAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -66,7 +70,7 @@ export class DataGoogleSecretManagerRegionalSecretVersionAccess extends cdktf.Te
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/data-sources/secret_manager_regional_secret_version_access google_secret_manager_regional_secret_version_access} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/secret_manager_regional_secret_version_access google_secret_manager_regional_secret_version_access} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -77,7 +81,7 @@ export class DataGoogleSecretManagerRegionalSecretVersionAccess extends cdktf.Te
       terraformResourceType: 'google_secret_manager_regional_secret_version_access',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.7.0',
+        providerVersion: '6.8.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -89,6 +93,7 @@ export class DataGoogleSecretManagerRegionalSecretVersionAccess extends cdktf.Te
       forEach: config.forEach
     });
     this._id = config.id;
+    this._isSecretDataBase64 = config.isSecretDataBase64;
     this._location = config.location;
     this._project = config.project;
     this._secret = config.secret;
@@ -113,6 +118,22 @@ export class DataGoogleSecretManagerRegionalSecretVersionAccess extends cdktf.Te
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // is_secret_data_base64 - computed: false, optional: true, required: false
+  private _isSecretDataBase64?: boolean | cdktf.IResolvable; 
+  public get isSecretDataBase64() {
+    return this.getBooleanAttribute('is_secret_data_base64');
+  }
+  public set isSecretDataBase64(value: boolean | cdktf.IResolvable) {
+    this._isSecretDataBase64 = value;
+  }
+  public resetIsSecretDataBase64() {
+    this._isSecretDataBase64 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isSecretDataBase64Input() {
+    return this._isSecretDataBase64;
   }
 
   // location - computed: true, optional: true, required: false
@@ -193,6 +214,7 @@ export class DataGoogleSecretManagerRegionalSecretVersionAccess extends cdktf.Te
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      is_secret_data_base64: cdktf.booleanToTerraform(this._isSecretDataBase64),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       secret: cdktf.stringToTerraform(this._secret),
@@ -207,6 +229,12 @@ export class DataGoogleSecretManagerRegionalSecretVersionAccess extends cdktf.Te
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      is_secret_data_base64: {
+        value: cdktf.booleanToHclTerraform(this._isSecretDataBase64),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       location: {
         value: cdktf.stringToHclTerraform(this._location),

@@ -4,7 +4,7 @@
 
 ### ApigeeEnvironmentKeyvaluemapsEntries <a name="ApigeeEnvironmentKeyvaluemapsEntries" id="@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries google_apigee_environment_keyvaluemaps_entries}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries google_apigee_environment_keyvaluemaps_entries}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries.Initializer"></a>
 
@@ -43,7 +43,7 @@ apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries(
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries.Initializer.parameter.envKeyvaluemapId">env_keyvaluemap_id</a></code> | <code>str</code> | The Apigee environment keyvalumaps Id associated with the Apigee environment, in the format 'organizations/{{org_name}}/environments/{{env_name}}/keyvaluemaps/{{keyvaluemap_name}}'. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries.Initializer.parameter.name">name</a></code> | <code>str</code> | Required. Resource URI that can be used to identify the scope of the key value map entries. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries.Initializer.parameter.value">value</a></code> | <code>str</code> | Required. Data or payload that is being retrieved and associated with the unique key. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntries.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesTimeouts">ApigeeEnvironmentKeyvaluemapsEntriesTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 The Apigee environment keyvalumaps Id associated with the Apigee environment, in the format 'organizations/{{org_name}}/environments/{{env_name}}/keyvaluemaps/{{keyvaluemap_name}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#env_keyvaluemap_id ApigeeEnvironmentKeyvaluemapsEntries#env_keyvaluemap_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#env_keyvaluemap_id ApigeeEnvironmentKeyvaluemapsEntries#env_keyvaluemap_id}
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Required. Resource URI that can be used to identify the scope of the key value map entries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#name ApigeeEnvironmentKeyvaluemapsEntries#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#name ApigeeEnvironmentKeyvaluemapsEntries#name}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Required. Data or payload that is being retrieved and associated with the unique key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#value ApigeeEnvironmentKeyvaluemapsEntries#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#value ApigeeEnvironmentKeyvaluemapsEntries#value}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -155,7 +155,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#timeouts ApigeeEnvironmentKeyvaluemapsEntries#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#timeouts ApigeeEnvironmentKeyvaluemapsEntries#timeouts}
 
 ---
 
@@ -530,7 +530,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#create ApigeeEnvironmentKeyvaluemapsEntries#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#create ApigeeEnvironmentKeyvaluemapsEntries#create}.
 
 ---
 
@@ -538,7 +538,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#delete ApigeeEnvironmentKeyvaluemapsEntries#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#delete ApigeeEnvironmentKeyvaluemapsEntries#delete}.
 
 ---
 
@@ -668,7 +668,7 @@ The construct id used in the generated config for the ApigeeEnvironmentKeyvaluem
 
 The id of the existing ApigeeEnvironmentKeyvaluemapsEntries that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1010,7 +1010,7 @@ apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesConfig(
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesConfig.property.envKeyvaluemapId">env_keyvaluemap_id</a></code> | <code>str</code> | The Apigee environment keyvalumaps Id associated with the Apigee environment, in the format 'organizations/{{org_name}}/environments/{{env_name}}/keyvaluemaps/{{keyvaluemap_name}}'. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesConfig.property.name">name</a></code> | <code>str</code> | Required. Resource URI that can be used to identify the scope of the key value map entries. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesConfig.property.value">value</a></code> | <code>str</code> | Required. Data or payload that is being retrieved and associated with the unique key. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesTimeouts">ApigeeEnvironmentKeyvaluemapsEntriesTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1095,7 +1095,7 @@ env_keyvaluemap_id: str
 
 The Apigee environment keyvalumaps Id associated with the Apigee environment, in the format 'organizations/{{org_name}}/environments/{{env_name}}/keyvaluemaps/{{keyvaluemap_name}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#env_keyvaluemap_id ApigeeEnvironmentKeyvaluemapsEntries#env_keyvaluemap_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#env_keyvaluemap_id ApigeeEnvironmentKeyvaluemapsEntries#env_keyvaluemap_id}
 
 ---
 
@@ -1109,7 +1109,7 @@ name: str
 
 Required. Resource URI that can be used to identify the scope of the key value map entries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#name ApigeeEnvironmentKeyvaluemapsEntries#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#name ApigeeEnvironmentKeyvaluemapsEntries#name}
 
 ---
 
@@ -1123,7 +1123,7 @@ value: str
 
 Required. Data or payload that is being retrieved and associated with the unique key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#value ApigeeEnvironmentKeyvaluemapsEntries#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#value ApigeeEnvironmentKeyvaluemapsEntries#value}
 
 ---
 
@@ -1135,7 +1135,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1152,7 +1152,7 @@ timeouts: ApigeeEnvironmentKeyvaluemapsEntriesTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#timeouts ApigeeEnvironmentKeyvaluemapsEntries#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#timeouts ApigeeEnvironmentKeyvaluemapsEntries#timeouts}
 
 ---
 
@@ -1173,8 +1173,8 @@ apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesTimeout
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#create ApigeeEnvironmentKeyvaluemapsEntries#create}. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#delete ApigeeEnvironmentKeyvaluemapsEntries#delete}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#create ApigeeEnvironmentKeyvaluemapsEntries#create}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentKeyvaluemapsEntries.ApigeeEnvironmentKeyvaluemapsEntriesTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#delete ApigeeEnvironmentKeyvaluemapsEntries#delete}. |
 
 ---
 
@@ -1186,7 +1186,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#create ApigeeEnvironmentKeyvaluemapsEntries#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#create ApigeeEnvironmentKeyvaluemapsEntries#create}.
 
 ---
 
@@ -1198,7 +1198,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/apigee_environment_keyvaluemaps_entries#delete ApigeeEnvironmentKeyvaluemapsEntries#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/apigee_environment_keyvaluemaps_entries#delete ApigeeEnvironmentKeyvaluemapsEntries#delete}.
 
 ---
 

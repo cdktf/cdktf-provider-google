@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke
+// https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface NetworkConnectivitySpokeConfig extends cdktf.TerraformMetaArgum
   /**
   * An optional description of the spoke.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#description NetworkConnectivitySpoke#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#description NetworkConnectivitySpoke#description}
   */
   readonly description?: string;
   /**
   * Immutable. The URI of the hub that this spoke is attached to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#hub NetworkConnectivitySpoke#hub}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#hub NetworkConnectivitySpoke#hub}
   */
   readonly hub: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#id NetworkConnectivitySpoke#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#id NetworkConnectivitySpoke#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,53 +37,59 @@ export interface NetworkConnectivitySpokeConfig extends cdktf.TerraformMetaArgum
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#labels NetworkConnectivitySpoke#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#labels NetworkConnectivitySpoke#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#location NetworkConnectivitySpoke#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#location NetworkConnectivitySpoke#location}
   */
   readonly location: string;
   /**
   * Immutable. The name of the spoke. Spoke names must be unique.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#name NetworkConnectivitySpoke#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#name NetworkConnectivitySpoke#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#project NetworkConnectivitySpoke#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#project NetworkConnectivitySpoke#project}
   */
   readonly project?: string;
   /**
   * linked_interconnect_attachments block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#linked_interconnect_attachments NetworkConnectivitySpoke#linked_interconnect_attachments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#linked_interconnect_attachments NetworkConnectivitySpoke#linked_interconnect_attachments}
   */
   readonly linkedInterconnectAttachments?: NetworkConnectivitySpokeLinkedInterconnectAttachments;
   /**
+  * linked_producer_vpc_network block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#linked_producer_vpc_network NetworkConnectivitySpoke#linked_producer_vpc_network}
+  */
+  readonly linkedProducerVpcNetwork?: NetworkConnectivitySpokeLinkedProducerVpcNetwork;
+  /**
   * linked_router_appliance_instances block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#linked_router_appliance_instances NetworkConnectivitySpoke#linked_router_appliance_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#linked_router_appliance_instances NetworkConnectivitySpoke#linked_router_appliance_instances}
   */
   readonly linkedRouterApplianceInstances?: NetworkConnectivitySpokeLinkedRouterApplianceInstances;
   /**
   * linked_vpc_network block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#linked_vpc_network NetworkConnectivitySpoke#linked_vpc_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#linked_vpc_network NetworkConnectivitySpoke#linked_vpc_network}
   */
   readonly linkedVpcNetwork?: NetworkConnectivitySpokeLinkedVpcNetwork;
   /**
   * linked_vpn_tunnels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#linked_vpn_tunnels NetworkConnectivitySpoke#linked_vpn_tunnels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#linked_vpn_tunnels NetworkConnectivitySpoke#linked_vpn_tunnels}
   */
   readonly linkedVpnTunnels?: NetworkConnectivitySpokeLinkedVpnTunnels;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#timeouts NetworkConnectivitySpoke#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#timeouts NetworkConnectivitySpoke#timeouts}
   */
   readonly timeouts?: NetworkConnectivitySpokeTimeouts;
 }
@@ -92,19 +98,19 @@ export interface NetworkConnectivitySpokeLinkedInterconnectAttachments {
   * IP ranges allowed to be included during import from hub (does not control transit connectivity).
   * The only allowed value for now is "ALL_IPV4_RANGES".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#include_import_ranges NetworkConnectivitySpoke#include_import_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#include_import_ranges NetworkConnectivitySpoke#include_import_ranges}
   */
   readonly includeImportRanges?: string[];
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * The URIs of linked interconnect attachment resources
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
   */
   readonly uris: string[];
 }
@@ -238,17 +244,207 @@ export class NetworkConnectivitySpokeLinkedInterconnectAttachmentsOutputReferenc
     return this._uris;
   }
 }
+export interface NetworkConnectivitySpokeLinkedProducerVpcNetwork {
+  /**
+  * IP ranges encompassing the subnets to be excluded from peering.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#exclude_export_ranges NetworkConnectivitySpoke#exclude_export_ranges}
+  */
+  readonly excludeExportRanges?: string[];
+  /**
+  * IP ranges allowed to be included from peering.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#include_export_ranges NetworkConnectivitySpoke#include_export_ranges}
+  */
+  readonly includeExportRanges?: string[];
+  /**
+  * The URI of the Service Consumer VPC that the Producer VPC is peered with.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#network NetworkConnectivitySpoke#network}
+  */
+  readonly network: string;
+  /**
+  * The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#peering NetworkConnectivitySpoke#peering}
+  */
+  readonly peering: string;
+}
+
+export function networkConnectivitySpokeLinkedProducerVpcNetworkToTerraform(struct?: NetworkConnectivitySpokeLinkedProducerVpcNetworkOutputReference | NetworkConnectivitySpokeLinkedProducerVpcNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    exclude_export_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeExportRanges),
+    include_export_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includeExportRanges),
+    network: cdktf.stringToTerraform(struct!.network),
+    peering: cdktf.stringToTerraform(struct!.peering),
+  }
+}
+
+
+export function networkConnectivitySpokeLinkedProducerVpcNetworkToHclTerraform(struct?: NetworkConnectivitySpokeLinkedProducerVpcNetworkOutputReference | NetworkConnectivitySpokeLinkedProducerVpcNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    exclude_export_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludeExportRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    include_export_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.includeExportRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    network: {
+      value: cdktf.stringToHclTerraform(struct!.network),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    peering: {
+      value: cdktf.stringToHclTerraform(struct!.peering),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NetworkConnectivitySpokeLinkedProducerVpcNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkConnectivitySpokeLinkedProducerVpcNetwork | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._excludeExportRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeExportRanges = this._excludeExportRanges;
+    }
+    if (this._includeExportRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeExportRanges = this._includeExportRanges;
+    }
+    if (this._network !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network;
+    }
+    if (this._peering !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.peering = this._peering;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectivitySpokeLinkedProducerVpcNetwork | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._excludeExportRanges = undefined;
+      this._includeExportRanges = undefined;
+      this._network = undefined;
+      this._peering = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._excludeExportRanges = value.excludeExportRanges;
+      this._includeExportRanges = value.includeExportRanges;
+      this._network = value.network;
+      this._peering = value.peering;
+    }
+  }
+
+  // exclude_export_ranges - computed: false, optional: true, required: false
+  private _excludeExportRanges?: string[]; 
+  public get excludeExportRanges() {
+    return this.getListAttribute('exclude_export_ranges');
+  }
+  public set excludeExportRanges(value: string[]) {
+    this._excludeExportRanges = value;
+  }
+  public resetExcludeExportRanges() {
+    this._excludeExportRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeExportRangesInput() {
+    return this._excludeExportRanges;
+  }
+
+  // include_export_ranges - computed: false, optional: true, required: false
+  private _includeExportRanges?: string[]; 
+  public get includeExportRanges() {
+    return this.getListAttribute('include_export_ranges');
+  }
+  public set includeExportRanges(value: string[]) {
+    this._includeExportRanges = value;
+  }
+  public resetIncludeExportRanges() {
+    this._includeExportRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeExportRangesInput() {
+    return this._includeExportRanges;
+  }
+
+  // network - computed: false, optional: false, required: true
+  private _network?: string; 
+  public get network() {
+    return this.getStringAttribute('network');
+  }
+  public set network(value: string) {
+    this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network;
+  }
+
+  // peering - computed: false, optional: false, required: true
+  private _peering?: string; 
+  public get peering() {
+    return this.getStringAttribute('peering');
+  }
+  public set peering(value: string) {
+    this._peering = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peeringInput() {
+    return this._peering;
+  }
+
+  // producer_network - computed: true, optional: false, required: false
+  public get producerNetwork() {
+    return this.getStringAttribute('producer_network');
+  }
+}
 export interface NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances {
   /**
   * The IP address on the VM to use for peering.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#ip_address NetworkConnectivitySpoke#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#ip_address NetworkConnectivitySpoke#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * The URI of the virtual machine resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#virtual_machine NetworkConnectivitySpoke#virtual_machine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#virtual_machine NetworkConnectivitySpoke#virtual_machine}
   */
   readonly virtualMachine?: string;
 }
@@ -396,19 +592,19 @@ export interface NetworkConnectivitySpokeLinkedRouterApplianceInstances {
   * IP ranges allowed to be included during import from hub (does not control transit connectivity).
   * The only allowed value for now is "ALL_IPV4_RANGES".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#include_import_ranges NetworkConnectivitySpoke#include_import_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#include_import_ranges NetworkConnectivitySpoke#include_import_ranges}
   */
   readonly includeImportRanges?: string[];
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * instances block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#instances NetworkConnectivitySpoke#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#instances NetworkConnectivitySpoke#instances}
   */
   readonly instances: NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances[] | cdktf.IResolvable;
 }
@@ -546,19 +742,19 @@ export interface NetworkConnectivitySpokeLinkedVpcNetwork {
   /**
   * IP ranges encompassing the subnets to be excluded from peering.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#exclude_export_ranges NetworkConnectivitySpoke#exclude_export_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#exclude_export_ranges NetworkConnectivitySpoke#exclude_export_ranges}
   */
   readonly excludeExportRanges?: string[];
   /**
   * IP ranges allowed to be included from peering.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#include_export_ranges NetworkConnectivitySpoke#include_export_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#include_export_ranges NetworkConnectivitySpoke#include_export_ranges}
   */
   readonly includeExportRanges?: string[];
   /**
   * The URI of the VPC network resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#uri NetworkConnectivitySpoke#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#uri NetworkConnectivitySpoke#uri}
   */
   readonly uri: string;
 }
@@ -700,19 +896,19 @@ export interface NetworkConnectivitySpokeLinkedVpnTunnels {
   * IP ranges allowed to be included during import from hub (does not control transit connectivity).
   * The only allowed value for now is "ALL_IPV4_RANGES".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#include_import_ranges NetworkConnectivitySpoke#include_import_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#include_import_ranges NetworkConnectivitySpoke#include_import_ranges}
   */
   readonly includeImportRanges?: string[];
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * The URIs of linked VPN tunnel resources.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
   */
   readonly uris: string[];
 }
@@ -848,15 +1044,15 @@ export class NetworkConnectivitySpokeLinkedVpnTunnelsOutputReference extends cdk
 }
 export interface NetworkConnectivitySpokeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#create NetworkConnectivitySpoke#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#create NetworkConnectivitySpoke#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#delete NetworkConnectivitySpoke#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#delete NetworkConnectivitySpoke#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#update NetworkConnectivitySpoke#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#update NetworkConnectivitySpoke#update}
   */
   readonly update?: string;
 }
@@ -1008,7 +1204,7 @@ export class NetworkConnectivitySpokeTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke google_network_connectivity_spoke}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke google_network_connectivity_spoke}
 */
 export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
 
@@ -1024,7 +1220,7 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkConnectivitySpoke resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkConnectivitySpoke to import
-  * @param importFromId The id of the existing NetworkConnectivitySpoke that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkConnectivitySpoke that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkConnectivitySpoke to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1036,7 +1232,7 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/network_connectivity_spoke google_network_connectivity_spoke} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/network_connectivity_spoke google_network_connectivity_spoke} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1047,7 +1243,7 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_connectivity_spoke',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.7.0',
+        providerVersion: '6.8.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1066,6 +1262,7 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._linkedInterconnectAttachments.internalValue = config.linkedInterconnectAttachments;
+    this._linkedProducerVpcNetwork.internalValue = config.linkedProducerVpcNetwork;
     this._linkedRouterApplianceInstances.internalValue = config.linkedRouterApplianceInstances;
     this._linkedVpcNetwork.internalValue = config.linkedVpcNetwork;
     this._linkedVpnTunnels.internalValue = config.linkedVpnTunnels;
@@ -1227,6 +1424,22 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
     return this._linkedInterconnectAttachments.internalValue;
   }
 
+  // linked_producer_vpc_network - computed: false, optional: true, required: false
+  private _linkedProducerVpcNetwork = new NetworkConnectivitySpokeLinkedProducerVpcNetworkOutputReference(this, "linked_producer_vpc_network");
+  public get linkedProducerVpcNetwork() {
+    return this._linkedProducerVpcNetwork;
+  }
+  public putLinkedProducerVpcNetwork(value: NetworkConnectivitySpokeLinkedProducerVpcNetwork) {
+    this._linkedProducerVpcNetwork.internalValue = value;
+  }
+  public resetLinkedProducerVpcNetwork() {
+    this._linkedProducerVpcNetwork.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedProducerVpcNetworkInput() {
+    return this._linkedProducerVpcNetwork.internalValue;
+  }
+
   // linked_router_appliance_instances - computed: false, optional: true, required: false
   private _linkedRouterApplianceInstances = new NetworkConnectivitySpokeLinkedRouterApplianceInstancesOutputReference(this, "linked_router_appliance_instances");
   public get linkedRouterApplianceInstances() {
@@ -1305,6 +1518,7 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       linked_interconnect_attachments: networkConnectivitySpokeLinkedInterconnectAttachmentsToTerraform(this._linkedInterconnectAttachments.internalValue),
+      linked_producer_vpc_network: networkConnectivitySpokeLinkedProducerVpcNetworkToTerraform(this._linkedProducerVpcNetwork.internalValue),
       linked_router_appliance_instances: networkConnectivitySpokeLinkedRouterApplianceInstancesToTerraform(this._linkedRouterApplianceInstances.internalValue),
       linked_vpc_network: networkConnectivitySpokeLinkedVpcNetworkToTerraform(this._linkedVpcNetwork.internalValue),
       linked_vpn_tunnels: networkConnectivitySpokeLinkedVpnTunnelsToTerraform(this._linkedVpnTunnels.internalValue),
@@ -1361,6 +1575,12 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "NetworkConnectivitySpokeLinkedInterconnectAttachmentsList",
+      },
+      linked_producer_vpc_network: {
+        value: networkConnectivitySpokeLinkedProducerVpcNetworkToHclTerraform(this._linkedProducerVpcNetwork.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkConnectivitySpokeLinkedProducerVpcNetworkList",
       },
       linked_router_appliance_instances: {
         value: networkConnectivitySpokeLinkedRouterApplianceInstancesToHclTerraform(this._linkedRouterApplianceInstances.internalValue),
