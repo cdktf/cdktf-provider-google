@@ -4,12 +4,12 @@
 
 ### HealthcareHl7V2Store <a name="HealthcareHl7V2Store" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store google_healthcare_hl7_v2_store}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store google_healthcare_hl7_v2_store}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2Store(scope Construct, id *string, config HealthcareHl7V2StoreConfig) HealthcareHl7V2Store
 ```
@@ -479,7 +479,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.HealthcareHl7V2Store_IsConstruct(x interface{}) *bool
 ```
@@ -511,7 +511,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.HealthcareHl7V2Store_IsTerraformElement(x interface{}) *bool
 ```
@@ -525,7 +525,7 @@ healthcarehl7v2store.HealthcareHl7V2Store_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.HealthcareHl7V2Store_IsTerraformResource(x interface{}) *bool
 ```
@@ -539,7 +539,7 @@ healthcarehl7v2store.HealthcareHl7V2Store_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2Store.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.HealthcareHl7V2Store_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -568,7 +568,7 @@ The construct id used in the generated config for the HealthcareHl7V2Store to im
 
 The id of the existing HealthcareHl7V2Store that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -999,7 +999,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreConfig {
 	Connection: interface{},
@@ -1013,11 +1013,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2stor
 	Name: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	NotificationConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig,
+	NotificationConfig: github.com/cdktf/cdktf-provider-google-go/google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig,
 	NotificationConfigs: interface{},
-	ParserConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig,
+	ParserConfig: github.com/cdktf/cdktf-provider-google-go/google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig,
 	RejectDuplicateMessage: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts,
 }
 ```
 
@@ -1034,7 +1034,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2stor
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.dataset">Dataset</a></code> | <code>*string</code> | Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.name">Name</a></code> | <code>*string</code> | The resource name for the Hl7V2Store. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User-supplied key-value pairs used to organize HL7v2 stores. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.notificationConfig">NotificationConfig</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig">HealthcareHl7V2StoreNotificationConfig</a></code> | notification_config block. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreConfig.property.notificationConfigs">NotificationConfigs</a></code> | <code>interface{}</code> | notification_configs block. |
@@ -1124,7 +1124,7 @@ Dataset *string
 
 Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#dataset HealthcareHl7V2Store#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#dataset HealthcareHl7V2Store#dataset}
 
 ---
 
@@ -1140,7 +1140,7 @@ The resource name for the Hl7V2Store.
 
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#name HealthcareHl7V2Store#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#name HealthcareHl7V2Store#name}
 
 ---
 
@@ -1152,7 +1152,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1183,7 +1183,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#labels HealthcareHl7V2Store#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#labels HealthcareHl7V2Store#labels}
 
 ---
 
@@ -1197,7 +1197,7 @@ NotificationConfig HealthcareHl7V2StoreNotificationConfig
 
 notification_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#notification_config HealthcareHl7V2Store#notification_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#notification_config HealthcareHl7V2Store#notification_config}
 
 ---
 
@@ -1211,7 +1211,7 @@ NotificationConfigs interface{}
 
 notification_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#notification_configs HealthcareHl7V2Store#notification_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#notification_configs HealthcareHl7V2Store#notification_configs}
 
 ---
 
@@ -1225,7 +1225,7 @@ ParserConfig HealthcareHl7V2StoreParserConfig
 
 parser_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#parser_config HealthcareHl7V2Store#parser_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#parser_config HealthcareHl7V2Store#parser_config}
 
 ---
 
@@ -1239,7 +1239,7 @@ RejectDuplicateMessage interface{}
 
 Determines whether duplicate messages are allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#reject_duplicate_message HealthcareHl7V2Store#reject_duplicate_message}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#reject_duplicate_message HealthcareHl7V2Store#reject_duplicate_message}
 
 ---
 
@@ -1253,7 +1253,7 @@ Timeouts HealthcareHl7V2StoreTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#timeouts HealthcareHl7V2Store#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#timeouts HealthcareHl7V2Store#timeouts}
 
 ---
 
@@ -1262,7 +1262,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreNotificationConfig {
 	PubsubTopic: *string,
@@ -1294,7 +1294,7 @@ was published. Notifications are only sent if the topic is non-empty. Topic name
 project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
 
 ---
 
@@ -1303,7 +1303,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreNotificationConfigs {
 	PubsubTopic: *string,
@@ -1339,7 +1339,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 
 If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#pubsub_topic HealthcareHl7V2Store#pubsub_topic}
 
 ---
 
@@ -1362,7 +1362,7 @@ Fields/functions available for filtering are:
 * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
 * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#filter HealthcareHl7V2Store#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#filter HealthcareHl7V2Store#filter}
 
 ---
 
@@ -1371,7 +1371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreParserConfig {
 	AllowNullHeader: interface{},
@@ -1402,7 +1402,7 @@ AllowNullHeader interface{}
 
 Determines whether messages with no header are allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#allow_null_header HealthcareHl7V2Store#allow_null_header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#allow_null_header HealthcareHl7V2Store#allow_null_header}
 
 ---
 
@@ -1416,7 +1416,7 @@ Schema *string
 
 JSON encoded string for schemas used to parse messages in this store if schematized parsing is desired.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#schema HealthcareHl7V2Store#schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#schema HealthcareHl7V2Store#schema}
 
 ---
 
@@ -1432,7 +1432,7 @@ Byte(s) to be used as the segment terminator. If this is unset, '\r' will be use
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#segment_terminator HealthcareHl7V2Store#segment_terminator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#segment_terminator HealthcareHl7V2Store#segment_terminator}
 
 ---
 
@@ -1448,7 +1448,7 @@ The version of the unschematized parser to be used when a custom 'schema' is not
 
 Default value: "V1" Possible values: ["V1", "V2", "V3"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#version HealthcareHl7V2Store#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#version HealthcareHl7V2Store#version}
 
 ---
 
@@ -1457,7 +1457,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 &healthcarehl7v2store.HealthcareHl7V2StoreTimeouts {
 	Create: *string,
@@ -1470,9 +1470,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2stor
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#create HealthcareHl7V2Store#create}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#delete HealthcareHl7V2Store#delete}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#update HealthcareHl7V2Store#update}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#create HealthcareHl7V2Store#create}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#delete HealthcareHl7V2Store#delete}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#update HealthcareHl7V2Store#update}. |
 
 ---
 
@@ -1484,7 +1484,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#create HealthcareHl7V2Store#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#create HealthcareHl7V2Store#create}.
 
 ---
 
@@ -1496,7 +1496,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#delete HealthcareHl7V2Store#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#delete HealthcareHl7V2Store#delete}.
 
 ---
 
@@ -1508,7 +1508,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/healthcare_hl7_v2_store#update HealthcareHl7V2Store#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/healthcare_hl7_v2_store#update HealthcareHl7V2Store#update}.
 
 ---
 
@@ -1519,7 +1519,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreNotificationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareHl7V2StoreNotificationConfigOutputReference
 ```
@@ -1790,7 +1790,7 @@ func InternalValue() HealthcareHl7V2StoreNotificationConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreNotificationConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HealthcareHl7V2StoreNotificationConfigsList
 ```
@@ -1950,7 +1950,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreNotificationConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreNotificationConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HealthcareHl7V2StoreNotificationConfigsOutputReference
 ```
@@ -2268,7 +2268,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreParserConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreParserConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareHl7V2StoreParserConfigOutputReference
 ```
@@ -2633,7 +2633,7 @@ func InternalValue() HealthcareHl7V2StoreParserConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2Store.HealthcareHl7V2StoreTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcarehl7v2store"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2store"
 
 healthcarehl7v2store.NewHealthcareHl7V2StoreTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareHl7V2StoreTimeoutsOutputReference
 ```

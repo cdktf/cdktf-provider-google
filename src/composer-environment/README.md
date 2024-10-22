@@ -1,3 +1,3 @@
 # `google_composer_environment`
 
-Refer to the Terraform Registry for docs: [`google_composer_environment`](https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/composer_environment).
+Refer to the Terraform Registry for docs: [`google_composer_environment`](https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/composer_environment).

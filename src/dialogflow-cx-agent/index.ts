@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent
+// https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,42 +10,42 @@ export interface DialogflowCxAgentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#avatar_uri DialogflowCxAgent#avatar_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#avatar_uri DialogflowCxAgent#avatar_uri}
   */
   readonly avatarUri?: string;
   /**
   * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language)
   * for a list of the currently supported language codes. This field cannot be updated after creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#default_language_code DialogflowCxAgent#default_language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#default_language_code DialogflowCxAgent#default_language_code}
   */
   readonly defaultLanguageCode: string;
   /**
   * The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#description DialogflowCxAgent#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#description DialogflowCxAgent#description}
   */
   readonly description?: string;
   /**
   * The human-readable name of the agent, unique within the location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#display_name DialogflowCxAgent#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#display_name DialogflowCxAgent#display_name}
   */
   readonly displayName: string;
   /**
   * Indicates if automatic spell correction is enabled in detect intent requests.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#enable_spell_correction DialogflowCxAgent#enable_spell_correction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#enable_spell_correction DialogflowCxAgent#enable_spell_correction}
   */
   readonly enableSpellCorrection?: boolean | cdktf.IResolvable;
   /**
   * Determines whether this agent should log conversation queries.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#enable_stackdriver_logging DialogflowCxAgent#enable_stackdriver_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#enable_stackdriver_logging DialogflowCxAgent#enable_stackdriver_logging}
   */
   readonly enableStackdriverLogging?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#id DialogflowCxAgent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#id DialogflowCxAgent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -63,60 +58,60 @@ export interface DialogflowCxAgentConfig extends cdktf.TerraformMetaArguments {
   *  This is a one time step but at the moment you can only [configure location settings](https://cloud.google.com/dialogflow/cx/docs/concept/region#location-settings) via the Dialogflow CX console.
   *  Another options is to use global location so you don't need to manually configure location settings.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#location DialogflowCxAgent#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#location DialogflowCxAgent#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#project DialogflowCxAgent#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#project DialogflowCxAgent#project}
   */
   readonly project?: string;
   /**
   * Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#security_settings DialogflowCxAgent#security_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#security_settings DialogflowCxAgent#security_settings}
   */
   readonly securitySettings?: string;
   /**
   * The list of all languages supported by this agent (except for the default_language_code).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#supported_language_codes DialogflowCxAgent#supported_language_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#supported_language_codes DialogflowCxAgent#supported_language_codes}
   */
   readonly supportedLanguageCodes?: string[];
   /**
   * The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
   * Europe/Paris.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#time_zone DialogflowCxAgent#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#time_zone DialogflowCxAgent#time_zone}
   */
   readonly timeZone: string;
   /**
   * advanced_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#advanced_settings DialogflowCxAgent#advanced_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#advanced_settings DialogflowCxAgent#advanced_settings}
   */
   readonly advancedSettings?: DialogflowCxAgentAdvancedSettings;
   /**
   * git_integration_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#git_integration_settings DialogflowCxAgent#git_integration_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#git_integration_settings DialogflowCxAgent#git_integration_settings}
   */
   readonly gitIntegrationSettings?: DialogflowCxAgentGitIntegrationSettings;
   /**
   * speech_to_text_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#speech_to_text_settings DialogflowCxAgent#speech_to_text_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#speech_to_text_settings DialogflowCxAgent#speech_to_text_settings}
   */
   readonly speechToTextSettings?: DialogflowCxAgentSpeechToTextSettings;
   /**
   * text_to_speech_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#text_to_speech_settings DialogflowCxAgent#text_to_speech_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#text_to_speech_settings DialogflowCxAgent#text_to_speech_settings}
   */
   readonly textToSpeechSettings?: DialogflowCxAgentTextToSpeechSettings;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#timeouts DialogflowCxAgent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#timeouts DialogflowCxAgent#timeouts}
   */
   readonly timeouts?: DialogflowCxAgentTimeouts;
 }
@@ -125,7 +120,7 @@ export interface DialogflowCxAgentAdvancedSettingsAudioExportGcsDestination {
   * The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation.
   * Format: gs://bucket/object-name-or-prefix
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#uri DialogflowCxAgent#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#uri DialogflowCxAgent#uri}
   */
   readonly uri?: string;
 }
@@ -211,19 +206,19 @@ export interface DialogflowCxAgentAdvancedSettingsDtmfSettings {
   /**
   * If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#enabled DialogflowCxAgent#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#enabled DialogflowCxAgent#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The digit that terminates a DTMF digit sequence.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#finish_digit DialogflowCxAgent#finish_digit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#finish_digit DialogflowCxAgent#finish_digit}
   */
   readonly finishDigit?: string;
   /**
   * Max length of DTMF digits.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#max_digits DialogflowCxAgent#max_digits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#max_digits DialogflowCxAgent#max_digits}
   */
   readonly maxDigits?: number;
 }
@@ -363,19 +358,380 @@ export class DialogflowCxAgentAdvancedSettingsDtmfSettingsOutputReference extend
     return this._maxDigits;
   }
 }
+export interface DialogflowCxAgentAdvancedSettingsLoggingSettings {
+  /**
+  * Enables consent-based end-user input redaction, if true, a pre-defined session parameter **$session.params.conversation-redaction** will be used to determine if the utterance should be redacted.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#enable_consent_based_redaction DialogflowCxAgent#enable_consent_based_redaction}
+  */
+  readonly enableConsentBasedRedaction?: boolean | cdktf.IResolvable;
+  /**
+  * Enables DF Interaction logging.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#enable_interaction_logging DialogflowCxAgent#enable_interaction_logging}
+  */
+  readonly enableInteractionLogging?: boolean | cdktf.IResolvable;
+  /**
+  * Enables Google Cloud Logging.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#enable_stackdriver_logging DialogflowCxAgent#enable_stackdriver_logging}
+  */
+  readonly enableStackdriverLogging?: boolean | cdktf.IResolvable;
+}
+
+export function dialogflowCxAgentAdvancedSettingsLoggingSettingsToTerraform(struct?: DialogflowCxAgentAdvancedSettingsLoggingSettingsOutputReference | DialogflowCxAgentAdvancedSettingsLoggingSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_consent_based_redaction: cdktf.booleanToTerraform(struct!.enableConsentBasedRedaction),
+    enable_interaction_logging: cdktf.booleanToTerraform(struct!.enableInteractionLogging),
+    enable_stackdriver_logging: cdktf.booleanToTerraform(struct!.enableStackdriverLogging),
+  }
+}
+
+
+export function dialogflowCxAgentAdvancedSettingsLoggingSettingsToHclTerraform(struct?: DialogflowCxAgentAdvancedSettingsLoggingSettingsOutputReference | DialogflowCxAgentAdvancedSettingsLoggingSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_consent_based_redaction: {
+      value: cdktf.booleanToHclTerraform(struct!.enableConsentBasedRedaction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_interaction_logging: {
+      value: cdktf.booleanToHclTerraform(struct!.enableInteractionLogging),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_stackdriver_logging: {
+      value: cdktf.booleanToHclTerraform(struct!.enableStackdriverLogging),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxAgentAdvancedSettingsLoggingSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxAgentAdvancedSettingsLoggingSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableConsentBasedRedaction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableConsentBasedRedaction = this._enableConsentBasedRedaction;
+    }
+    if (this._enableInteractionLogging !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableInteractionLogging = this._enableInteractionLogging;
+    }
+    if (this._enableStackdriverLogging !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableStackdriverLogging = this._enableStackdriverLogging;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxAgentAdvancedSettingsLoggingSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableConsentBasedRedaction = undefined;
+      this._enableInteractionLogging = undefined;
+      this._enableStackdriverLogging = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableConsentBasedRedaction = value.enableConsentBasedRedaction;
+      this._enableInteractionLogging = value.enableInteractionLogging;
+      this._enableStackdriverLogging = value.enableStackdriverLogging;
+    }
+  }
+
+  // enable_consent_based_redaction - computed: false, optional: true, required: false
+  private _enableConsentBasedRedaction?: boolean | cdktf.IResolvable; 
+  public get enableConsentBasedRedaction() {
+    return this.getBooleanAttribute('enable_consent_based_redaction');
+  }
+  public set enableConsentBasedRedaction(value: boolean | cdktf.IResolvable) {
+    this._enableConsentBasedRedaction = value;
+  }
+  public resetEnableConsentBasedRedaction() {
+    this._enableConsentBasedRedaction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableConsentBasedRedactionInput() {
+    return this._enableConsentBasedRedaction;
+  }
+
+  // enable_interaction_logging - computed: false, optional: true, required: false
+  private _enableInteractionLogging?: boolean | cdktf.IResolvable; 
+  public get enableInteractionLogging() {
+    return this.getBooleanAttribute('enable_interaction_logging');
+  }
+  public set enableInteractionLogging(value: boolean | cdktf.IResolvable) {
+    this._enableInteractionLogging = value;
+  }
+  public resetEnableInteractionLogging() {
+    this._enableInteractionLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableInteractionLoggingInput() {
+    return this._enableInteractionLogging;
+  }
+
+  // enable_stackdriver_logging - computed: false, optional: true, required: false
+  private _enableStackdriverLogging?: boolean | cdktf.IResolvable; 
+  public get enableStackdriverLogging() {
+    return this.getBooleanAttribute('enable_stackdriver_logging');
+  }
+  public set enableStackdriverLogging(value: boolean | cdktf.IResolvable) {
+    this._enableStackdriverLogging = value;
+  }
+  public resetEnableStackdriverLogging() {
+    this._enableStackdriverLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableStackdriverLoggingInput() {
+    return this._enableStackdriverLogging;
+  }
+}
+export interface DialogflowCxAgentAdvancedSettingsSpeechSettings {
+  /**
+  * Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#endpointer_sensitivity DialogflowCxAgent#endpointer_sensitivity}
+  */
+  readonly endpointerSensitivity?: number;
+  /**
+  * Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected for requests from its corresponding language. For more information, see [Speech models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
+  * An object containing a list of **"key": value** pairs. Example: **{ "name": "wrench", "mass": "1.3kg", "count": "3" }**.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#models DialogflowCxAgent#models}
+  */
+  readonly models?: { [key: string]: string };
+  /**
+  * Timeout before detecting no speech.
+  * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#no_speech_timeout DialogflowCxAgent#no_speech_timeout}
+  */
+  readonly noSpeechTimeout?: string;
+  /**
+  * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#use_timeout_based_endpointing DialogflowCxAgent#use_timeout_based_endpointing}
+  */
+  readonly useTimeoutBasedEndpointing?: boolean | cdktf.IResolvable;
+}
+
+export function dialogflowCxAgentAdvancedSettingsSpeechSettingsToTerraform(struct?: DialogflowCxAgentAdvancedSettingsSpeechSettingsOutputReference | DialogflowCxAgentAdvancedSettingsSpeechSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    endpointer_sensitivity: cdktf.numberToTerraform(struct!.endpointerSensitivity),
+    models: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.models),
+    no_speech_timeout: cdktf.stringToTerraform(struct!.noSpeechTimeout),
+    use_timeout_based_endpointing: cdktf.booleanToTerraform(struct!.useTimeoutBasedEndpointing),
+  }
+}
+
+
+export function dialogflowCxAgentAdvancedSettingsSpeechSettingsToHclTerraform(struct?: DialogflowCxAgentAdvancedSettingsSpeechSettingsOutputReference | DialogflowCxAgentAdvancedSettingsSpeechSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    endpointer_sensitivity: {
+      value: cdktf.numberToHclTerraform(struct!.endpointerSensitivity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    models: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.models),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    no_speech_timeout: {
+      value: cdktf.stringToHclTerraform(struct!.noSpeechTimeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_timeout_based_endpointing: {
+      value: cdktf.booleanToHclTerraform(struct!.useTimeoutBasedEndpointing),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxAgentAdvancedSettingsSpeechSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxAgentAdvancedSettingsSpeechSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endpointerSensitivity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpointerSensitivity = this._endpointerSensitivity;
+    }
+    if (this._models !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.models = this._models;
+    }
+    if (this._noSpeechTimeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.noSpeechTimeout = this._noSpeechTimeout;
+    }
+    if (this._useTimeoutBasedEndpointing !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useTimeoutBasedEndpointing = this._useTimeoutBasedEndpointing;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxAgentAdvancedSettingsSpeechSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._endpointerSensitivity = undefined;
+      this._models = undefined;
+      this._noSpeechTimeout = undefined;
+      this._useTimeoutBasedEndpointing = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._endpointerSensitivity = value.endpointerSensitivity;
+      this._models = value.models;
+      this._noSpeechTimeout = value.noSpeechTimeout;
+      this._useTimeoutBasedEndpointing = value.useTimeoutBasedEndpointing;
+    }
+  }
+
+  // endpointer_sensitivity - computed: false, optional: true, required: false
+  private _endpointerSensitivity?: number; 
+  public get endpointerSensitivity() {
+    return this.getNumberAttribute('endpointer_sensitivity');
+  }
+  public set endpointerSensitivity(value: number) {
+    this._endpointerSensitivity = value;
+  }
+  public resetEndpointerSensitivity() {
+    this._endpointerSensitivity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointerSensitivityInput() {
+    return this._endpointerSensitivity;
+  }
+
+  // models - computed: false, optional: true, required: false
+  private _models?: { [key: string]: string }; 
+  public get models() {
+    return this.getStringMapAttribute('models');
+  }
+  public set models(value: { [key: string]: string }) {
+    this._models = value;
+  }
+  public resetModels() {
+    this._models = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelsInput() {
+    return this._models;
+  }
+
+  // no_speech_timeout - computed: false, optional: true, required: false
+  private _noSpeechTimeout?: string; 
+  public get noSpeechTimeout() {
+    return this.getStringAttribute('no_speech_timeout');
+  }
+  public set noSpeechTimeout(value: string) {
+    this._noSpeechTimeout = value;
+  }
+  public resetNoSpeechTimeout() {
+    this._noSpeechTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noSpeechTimeoutInput() {
+    return this._noSpeechTimeout;
+  }
+
+  // use_timeout_based_endpointing - computed: false, optional: true, required: false
+  private _useTimeoutBasedEndpointing?: boolean | cdktf.IResolvable; 
+  public get useTimeoutBasedEndpointing() {
+    return this.getBooleanAttribute('use_timeout_based_endpointing');
+  }
+  public set useTimeoutBasedEndpointing(value: boolean | cdktf.IResolvable) {
+    this._useTimeoutBasedEndpointing = value;
+  }
+  public resetUseTimeoutBasedEndpointing() {
+    this._useTimeoutBasedEndpointing = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useTimeoutBasedEndpointingInput() {
+    return this._useTimeoutBasedEndpointing;
+  }
+}
 export interface DialogflowCxAgentAdvancedSettings {
   /**
   * audio_export_gcs_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#audio_export_gcs_destination DialogflowCxAgent#audio_export_gcs_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#audio_export_gcs_destination DialogflowCxAgent#audio_export_gcs_destination}
   */
   readonly audioExportGcsDestination?: DialogflowCxAgentAdvancedSettingsAudioExportGcsDestination;
   /**
   * dtmf_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#dtmf_settings DialogflowCxAgent#dtmf_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#dtmf_settings DialogflowCxAgent#dtmf_settings}
   */
   readonly dtmfSettings?: DialogflowCxAgentAdvancedSettingsDtmfSettings;
+  /**
+  * logging_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#logging_settings DialogflowCxAgent#logging_settings}
+  */
+  readonly loggingSettings?: DialogflowCxAgentAdvancedSettingsLoggingSettings;
+  /**
+  * speech_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#speech_settings DialogflowCxAgent#speech_settings}
+  */
+  readonly speechSettings?: DialogflowCxAgentAdvancedSettingsSpeechSettings;
 }
 
 export function dialogflowCxAgentAdvancedSettingsToTerraform(struct?: DialogflowCxAgentAdvancedSettingsOutputReference | DialogflowCxAgentAdvancedSettings): any {
@@ -386,6 +742,8 @@ export function dialogflowCxAgentAdvancedSettingsToTerraform(struct?: Dialogflow
   return {
     audio_export_gcs_destination: dialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationToTerraform(struct!.audioExportGcsDestination),
     dtmf_settings: dialogflowCxAgentAdvancedSettingsDtmfSettingsToTerraform(struct!.dtmfSettings),
+    logging_settings: dialogflowCxAgentAdvancedSettingsLoggingSettingsToTerraform(struct!.loggingSettings),
+    speech_settings: dialogflowCxAgentAdvancedSettingsSpeechSettingsToTerraform(struct!.speechSettings),
   }
 }
 
@@ -407,6 +765,18 @@ export function dialogflowCxAgentAdvancedSettingsToHclTerraform(struct?: Dialogf
       isBlock: true,
       type: "list",
       storageClassType: "DialogflowCxAgentAdvancedSettingsDtmfSettingsList",
+    },
+    logging_settings: {
+      value: dialogflowCxAgentAdvancedSettingsLoggingSettingsToHclTerraform(struct!.loggingSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxAgentAdvancedSettingsLoggingSettingsList",
+    },
+    speech_settings: {
+      value: dialogflowCxAgentAdvancedSettingsSpeechSettingsToHclTerraform(struct!.speechSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxAgentAdvancedSettingsSpeechSettingsList",
     },
   };
 
@@ -436,6 +806,14 @@ export class DialogflowCxAgentAdvancedSettingsOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.dtmfSettings = this._dtmfSettings?.internalValue;
     }
+    if (this._loggingSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loggingSettings = this._loggingSettings?.internalValue;
+    }
+    if (this._speechSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.speechSettings = this._speechSettings?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -444,11 +822,15 @@ export class DialogflowCxAgentAdvancedSettingsOutputReference extends cdktf.Comp
       this.isEmptyObject = false;
       this._audioExportGcsDestination.internalValue = undefined;
       this._dtmfSettings.internalValue = undefined;
+      this._loggingSettings.internalValue = undefined;
+      this._speechSettings.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._audioExportGcsDestination.internalValue = value.audioExportGcsDestination;
       this._dtmfSettings.internalValue = value.dtmfSettings;
+      this._loggingSettings.internalValue = value.loggingSettings;
+      this._speechSettings.internalValue = value.speechSettings;
     }
   }
 
@@ -483,36 +865,68 @@ export class DialogflowCxAgentAdvancedSettingsOutputReference extends cdktf.Comp
   public get dtmfSettingsInput() {
     return this._dtmfSettings.internalValue;
   }
+
+  // logging_settings - computed: false, optional: true, required: false
+  private _loggingSettings = new DialogflowCxAgentAdvancedSettingsLoggingSettingsOutputReference(this, "logging_settings");
+  public get loggingSettings() {
+    return this._loggingSettings;
+  }
+  public putLoggingSettings(value: DialogflowCxAgentAdvancedSettingsLoggingSettings) {
+    this._loggingSettings.internalValue = value;
+  }
+  public resetLoggingSettings() {
+    this._loggingSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingSettingsInput() {
+    return this._loggingSettings.internalValue;
+  }
+
+  // speech_settings - computed: false, optional: true, required: false
+  private _speechSettings = new DialogflowCxAgentAdvancedSettingsSpeechSettingsOutputReference(this, "speech_settings");
+  public get speechSettings() {
+    return this._speechSettings;
+  }
+  public putSpeechSettings(value: DialogflowCxAgentAdvancedSettingsSpeechSettings) {
+    this._speechSettings.internalValue = value;
+  }
+  public resetSpeechSettings() {
+    this._speechSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get speechSettingsInput() {
+    return this._speechSettings.internalValue;
+  }
 }
 export interface DialogflowCxAgentGitIntegrationSettingsGithubSettings {
   /**
   * The access token used to authenticate the access to the GitHub repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#access_token DialogflowCxAgent#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#access_token DialogflowCxAgent#access_token}
   */
   readonly accessToken?: string;
   /**
   * A list of branches configured to be used from Dialogflow.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#branches DialogflowCxAgent#branches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#branches DialogflowCxAgent#branches}
   */
   readonly branches?: string[];
   /**
   * The unique repository display name for the GitHub repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#display_name DialogflowCxAgent#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#display_name DialogflowCxAgent#display_name}
   */
   readonly displayName?: string;
   /**
   * The GitHub repository URI related to the agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#repository_uri DialogflowCxAgent#repository_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#repository_uri DialogflowCxAgent#repository_uri}
   */
   readonly repositoryUri?: string;
   /**
   * The branch of the GitHub repository tracked for this agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#tracking_branch DialogflowCxAgent#tracking_branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#tracking_branch DialogflowCxAgent#tracking_branch}
   */
   readonly trackingBranch?: string;
 }
@@ -714,7 +1128,7 @@ export interface DialogflowCxAgentGitIntegrationSettings {
   /**
   * github_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#github_settings DialogflowCxAgent#github_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#github_settings DialogflowCxAgent#github_settings}
   */
   readonly githubSettings?: DialogflowCxAgentGitIntegrationSettingsGithubSettings;
 }
@@ -800,7 +1214,7 @@ export interface DialogflowCxAgentSpeechToTextSettings {
   /**
   * Whether to use speech adaptation for speech recognition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#enable_speech_adaptation DialogflowCxAgent#enable_speech_adaptation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#enable_speech_adaptation DialogflowCxAgent#enable_speech_adaptation}
   */
   readonly enableSpeechAdaptation?: boolean | cdktf.IResolvable;
 }
@@ -889,7 +1303,7 @@ export interface DialogflowCxAgentTextToSpeechSettings {
   * * The phone gateway synthesize configuration set via Agent.text_to_speech_settings.
   * * How speech is synthesized when invoking session APIs. 'Agent.text_to_speech_settings' only applies if 'OutputAudioConfig.synthesize_speech_config' is not specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#synthesize_speech_configs DialogflowCxAgent#synthesize_speech_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#synthesize_speech_configs DialogflowCxAgent#synthesize_speech_configs}
   */
   readonly synthesizeSpeechConfigs?: string;
 }
@@ -973,15 +1387,15 @@ export class DialogflowCxAgentTextToSpeechSettingsOutputReference extends cdktf.
 }
 export interface DialogflowCxAgentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#create DialogflowCxAgent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#create DialogflowCxAgent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#delete DialogflowCxAgent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#delete DialogflowCxAgent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#update DialogflowCxAgent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#update DialogflowCxAgent#update}
   */
   readonly update?: string;
 }
@@ -1133,7 +1547,7 @@ export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent google_dialogflow_cx_agent}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent google_dialogflow_cx_agent}
 */
 export class DialogflowCxAgent extends cdktf.TerraformResource {
 
@@ -1149,7 +1563,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DialogflowCxAgent resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DialogflowCxAgent to import
-  * @param importFromId The id of the existing DialogflowCxAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DialogflowCxAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DialogflowCxAgent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1161,7 +1575,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dialogflow_cx_agent google_dialogflow_cx_agent} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dialogflow_cx_agent google_dialogflow_cx_agent} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1172,7 +1586,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_agent',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.7.0',
+        providerVersion: '6.8.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

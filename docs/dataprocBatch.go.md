@@ -4,12 +4,12 @@
 
 ### DataprocBatch <a name="DataprocBatch" id="@cdktf/provider-google.dataprocBatch.DataprocBatch"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch google_dataproc_batch}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch google_dataproc_batch}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatch(scope Construct, id *string, config DataprocBatchConfig) DataprocBatch
 ```
@@ -553,7 +553,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.DataprocBatch_IsConstruct(x interface{}) *bool
 ```
@@ -585,7 +585,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.DataprocBatch_IsTerraformElement(x interface{}) *bool
 ```
@@ -599,7 +599,7 @@ dataprocbatch.DataprocBatch_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.DataprocBatch_IsTerraformResource(x interface{}) *bool
 ```
@@ -613,7 +613,7 @@ dataprocbatch.DataprocBatch_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.DataprocBatch_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -642,7 +642,7 @@ The construct id used in the generated config for the DataprocBatch to import.
 
 The id of the existing DataprocBatch that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1238,7 +1238,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchConfig {
 	Connection: interface{},
@@ -1249,17 +1249,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	BatchId: *string,
-	EnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchEnvironmentConfig,
+	EnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchEnvironmentConfig,
 	Id: *string,
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	PysparkBatch: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchPysparkBatch,
-	RuntimeConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchRuntimeConfig,
-	SparkBatch: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchSparkBatch,
-	SparkRBatch: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchSparkRBatch,
-	SparkSqlBatch: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchSparkSqlBatch,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchTimeouts,
+	PysparkBatch: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchPysparkBatch,
+	RuntimeConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchRuntimeConfig,
+	SparkBatch: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchSparkBatch,
+	SparkRBatch: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchSparkRBatch,
+	SparkSqlBatch: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchSparkSqlBatch,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchTimeouts,
 }
 ```
 
@@ -1276,10 +1276,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.batchId">BatchId</a></code> | <code>*string</code> | The ID to use for the batch, which will become the final component of the batch's resource name. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.environmentConfig">EnvironmentConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfig">DataprocBatchEnvironmentConfig</a></code> | environment_config block. |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#id DataprocBatch#id}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#id DataprocBatch#id}. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The labels to associate with this batch. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.location">Location</a></code> | <code>*string</code> | The location in which the batch will be created in. |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#project DataprocBatch#project}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#project DataprocBatch#project}. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.pysparkBatch">PysparkBatch</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchPysparkBatch">DataprocBatchPysparkBatch</a></code> | pyspark_batch block. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.runtimeConfig">RuntimeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeConfig">DataprocBatchRuntimeConfig</a></code> | runtime_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.sparkBatch">SparkBatch</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchSparkBatch">DataprocBatchSparkBatch</a></code> | spark_batch block. |
@@ -1371,7 +1371,7 @@ The ID to use for the batch, which will become the final component of the batch'
 
 This value must be 4-63 characters. Valid characters are /[a-z][0-9]-/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#batch_id DataprocBatch#batch_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#batch_id DataprocBatch#batch_id}
 
 ---
 
@@ -1385,7 +1385,7 @@ EnvironmentConfig DataprocBatchEnvironmentConfig
 
 environment_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#environment_config DataprocBatch#environment_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#environment_config DataprocBatch#environment_config}
 
 ---
 
@@ -1397,7 +1397,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#id DataprocBatch#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#id DataprocBatch#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1417,7 +1417,7 @@ The labels to associate with this batch.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#labels DataprocBatch#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#labels DataprocBatch#labels}
 
 ---
 
@@ -1431,7 +1431,7 @@ Location *string
 
 The location in which the batch will be created in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#location DataprocBatch#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#location DataprocBatch#location}
 
 ---
 
@@ -1443,7 +1443,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#project DataprocBatch#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#project DataprocBatch#project}.
 
 ---
 
@@ -1457,7 +1457,7 @@ PysparkBatch DataprocBatchPysparkBatch
 
 pyspark_batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#pyspark_batch DataprocBatch#pyspark_batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#pyspark_batch DataprocBatch#pyspark_batch}
 
 ---
 
@@ -1471,7 +1471,7 @@ RuntimeConfig DataprocBatchRuntimeConfig
 
 runtime_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#runtime_config DataprocBatch#runtime_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#runtime_config DataprocBatch#runtime_config}
 
 ---
 
@@ -1485,7 +1485,7 @@ SparkBatch DataprocBatchSparkBatch
 
 spark_batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#spark_batch DataprocBatch#spark_batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#spark_batch DataprocBatch#spark_batch}
 
 ---
 
@@ -1499,7 +1499,7 @@ SparkRBatch DataprocBatchSparkRBatch
 
 spark_r_batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#spark_r_batch DataprocBatch#spark_r_batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#spark_r_batch DataprocBatch#spark_r_batch}
 
 ---
 
@@ -1513,7 +1513,7 @@ SparkSqlBatch DataprocBatchSparkSqlBatch
 
 spark_sql_batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#spark_sql_batch DataprocBatch#spark_sql_batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#spark_sql_batch DataprocBatch#spark_sql_batch}
 
 ---
 
@@ -1527,7 +1527,7 @@ Timeouts DataprocBatchTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#timeouts DataprocBatch#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#timeouts DataprocBatch#timeouts}
 
 ---
 
@@ -1536,11 +1536,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchEnvironmentConfig {
-	ExecutionConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig,
-	PeripheralsConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfig,
+	ExecutionConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig,
+	PeripheralsConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfig,
 }
 ```
 
@@ -1563,7 +1563,7 @@ ExecutionConfig DataprocBatchEnvironmentConfigExecutionConfig
 
 execution_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#execution_config DataprocBatch#execution_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#execution_config DataprocBatch#execution_config}
 
 ---
 
@@ -1577,7 +1577,7 @@ PeripheralsConfig DataprocBatchEnvironmentConfigPeripheralsConfig
 
 peripherals_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#peripherals_config DataprocBatch#peripherals_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#peripherals_config DataprocBatch#peripherals_config}
 
 ---
 
@@ -1586,7 +1586,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchEnvironmentConfigExecutionConfig {
 	KmsKey: *string,
@@ -1623,7 +1623,7 @@ KmsKey *string
 
 The Cloud KMS key to use for encryption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#kms_key DataprocBatch#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#kms_key DataprocBatch#kms_key}
 
 ---
 
@@ -1637,7 +1637,7 @@ NetworkTags *[]*string
 
 Tags used for network traffic control.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#network_tags DataprocBatch#network_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#network_tags DataprocBatch#network_tags}
 
 ---
 
@@ -1651,7 +1651,7 @@ NetworkUri *string
 
 Network configuration for workload execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#network_uri DataprocBatch#network_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#network_uri DataprocBatch#network_uri}
 
 ---
 
@@ -1665,7 +1665,7 @@ ServiceAccount *string
 
 Service account that used to execute workload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#service_account DataprocBatch#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#service_account DataprocBatch#service_account}
 
 ---
 
@@ -1684,7 +1684,7 @@ Cloud Dataproc will determine a Cloud Storage location according to the region w
 and then create and manage project-level, per-location staging and temporary buckets.
 This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#staging_bucket DataprocBatch#staging_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#staging_bucket DataprocBatch#staging_bucket}
 
 ---
 
@@ -1698,7 +1698,7 @@ SubnetworkUri *string
 
 Subnetwork configuration for workload execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#subnetwork_uri DataprocBatch#subnetwork_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#subnetwork_uri DataprocBatch#subnetwork_uri}
 
 ---
 
@@ -1720,7 +1720,7 @@ Minimum value is 10 minutes; maximum value is 14 days. If both ttl and idleTtl a
 the conditions are treated as OR conditions: the workload will be terminated when it has been idle for idleTtl or
 when ttl has been exceeded, whichever occurs first.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#ttl DataprocBatch#ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#ttl DataprocBatch#ttl}
 
 ---
 
@@ -1729,11 +1729,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchEnvironmentConfigPeripheralsConfig {
 	MetastoreService: *string,
-	SparkHistoryServerConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig,
+	SparkHistoryServerConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig,
 }
 ```
 
@@ -1756,7 +1756,7 @@ MetastoreService *string
 
 Resource name of an existing Dataproc Metastore service.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#metastore_service DataprocBatch#metastore_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#metastore_service DataprocBatch#metastore_service}
 
 ---
 
@@ -1770,7 +1770,7 @@ SparkHistoryServerConfig DataprocBatchEnvironmentConfigPeripheralsConfigSparkHis
 
 spark_history_server_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#spark_history_server_config DataprocBatch#spark_history_server_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#spark_history_server_config DataprocBatch#spark_history_server_config}
 
 ---
 
@@ -1779,7 +1779,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig {
 	DataprocCluster: *string,
@@ -1804,7 +1804,7 @@ DataprocCluster *string
 
 Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#dataproc_cluster DataprocBatch#dataproc_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#dataproc_cluster DataprocBatch#dataproc_cluster}
 
 ---
 
@@ -1813,7 +1813,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchPysparkBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchPysparkBatch {
 	ArchiveUris: *[]*string,
@@ -1850,7 +1850,7 @@ HCFS URIs of archives to be extracted into the working directory of each executo
 
 Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
 
 ---
 
@@ -1867,7 +1867,7 @@ The arguments to pass to the driver.
 Do not include arguments that can be set as batch
 properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#args DataprocBatch#args}
 
 ---
 
@@ -1881,7 +1881,7 @@ FileUris *[]*string
 
 HCFS URIs of files to be placed in the working directory of each executor.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
 
 ---
 
@@ -1895,7 +1895,7 @@ JarFileUris *[]*string
 
 HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
 
 ---
 
@@ -1909,7 +1909,7 @@ MainPythonFileUri *string
 
 The HCFS URI of the main Python file to use as the Spark driver. Must be a .py file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#main_python_file_uri DataprocBatch#main_python_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#main_python_file_uri DataprocBatch#main_python_file_uri}
 
 ---
 
@@ -1923,7 +1923,7 @@ PythonFileUris *[]*string
 
 HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#python_file_uris DataprocBatch#python_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#python_file_uris DataprocBatch#python_file_uris}
 
 ---
 
@@ -1932,7 +1932,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeConfig {
 	ContainerImage: *string,
@@ -1961,7 +1961,7 @@ ContainerImage *string
 
 Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#container_image DataprocBatch#container_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#container_image DataprocBatch#container_image}
 
 ---
 
@@ -1975,7 +1975,7 @@ Properties *map[string]*string
 
 A mapping of property names to values, which are used to configure workload execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#properties DataprocBatch#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#properties DataprocBatch#properties}
 
 ---
 
@@ -1989,7 +1989,7 @@ Version *string
 
 Version of the batch runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#version DataprocBatch#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#version DataprocBatch#version}
 
 ---
 
@@ -1998,7 +1998,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeInfo {
 
@@ -2011,7 +2011,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoApproximateUsage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeInfoApproximateUsage {
 
@@ -2024,7 +2024,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoCurrentUsage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeInfoCurrentUsage {
 
@@ -2037,7 +2037,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchSparkBatch {
 	ArchiveUris: *[]*string,
@@ -2074,7 +2074,7 @@ HCFS URIs of archives to be extracted into the working directory of each executo
 
 Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
 
 ---
 
@@ -2091,7 +2091,7 @@ The arguments to pass to the driver.
 Do not include arguments that can be set as batch
 properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#args DataprocBatch#args}
 
 ---
 
@@ -2105,7 +2105,7 @@ FileUris *[]*string
 
 HCFS URIs of files to be placed in the working directory of each executor.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
 
 ---
 
@@ -2119,7 +2119,7 @@ JarFileUris *[]*string
 
 HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
 
 ---
 
@@ -2136,7 +2136,7 @@ The name of the driver main class.
 The jar file that contains the class must be in the
 classpath or specified in jarFileUris.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#main_class DataprocBatch#main_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#main_class DataprocBatch#main_class}
 
 ---
 
@@ -2150,7 +2150,7 @@ MainJarFileUri *string
 
 The HCFS URI of the jar file that contains the main class.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#main_jar_file_uri DataprocBatch#main_jar_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#main_jar_file_uri DataprocBatch#main_jar_file_uri}
 
 ---
 
@@ -2159,7 +2159,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkRBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchSparkRBatch {
 	ArchiveUris: *[]*string,
@@ -2192,7 +2192,7 @@ HCFS URIs of archives to be extracted into the working directory of each executo
 
 Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
 
 ---
 
@@ -2209,7 +2209,7 @@ The arguments to pass to the driver.
 Do not include arguments that can be set as batch
 properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#args DataprocBatch#args}
 
 ---
 
@@ -2223,7 +2223,7 @@ FileUris *[]*string
 
 HCFS URIs of files to be placed in the working directory of each executor.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
 
 ---
 
@@ -2239,7 +2239,7 @@ The HCFS URI of the main R file to use as the driver.
 
 Must be a .R or .r file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#main_r_file_uri DataprocBatch#main_r_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#main_r_file_uri DataprocBatch#main_r_file_uri}
 
 ---
 
@@ -2248,7 +2248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkSqlBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchSparkSqlBatch {
 	JarFileUris: *[]*string,
@@ -2277,7 +2277,7 @@ JarFileUris *[]*string
 
 HCFS URIs of jar files to be added to the Spark CLASSPATH.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
 
 ---
 
@@ -2291,7 +2291,7 @@ QueryFileUri *string
 
 The HCFS URI of the script that contains Spark SQL queries to execute.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#query_file_uri DataprocBatch#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#query_file_uri DataprocBatch#query_file_uri}
 
 ---
 
@@ -2305,7 +2305,7 @@ QueryVariables *map[string]*string
 
 Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#query_variables DataprocBatch#query_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#query_variables DataprocBatch#query_variables}
 
 ---
 
@@ -2314,7 +2314,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchStateHistory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchStateHistory {
 
@@ -2327,7 +2327,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 &dataprocbatch.DataprocBatchTimeouts {
 	Create: *string,
@@ -2340,9 +2340,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#create DataprocBatch#create}. |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}. |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#update DataprocBatch#update}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#create DataprocBatch#create}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#update DataprocBatch#update}. |
 
 ---
 
@@ -2354,7 +2354,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#create DataprocBatch#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#create DataprocBatch#create}.
 
 ---
 
@@ -2366,7 +2366,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}.
 
 ---
 
@@ -2378,7 +2378,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataproc_batch#update DataprocBatch#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataproc_batch#update DataprocBatch#update}.
 
 ---
 
@@ -2389,7 +2389,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchEnvironmentConfigExecutionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchEnvironmentConfigExecutionConfigOutputReference
 ```
@@ -2841,7 +2841,7 @@ func InternalValue() DataprocBatchEnvironmentConfigExecutionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchEnvironmentConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchEnvironmentConfigOutputReference
 ```
@@ -3174,7 +3174,7 @@ func InternalValue() DataprocBatchEnvironmentConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchEnvironmentConfigPeripheralsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchEnvironmentConfigPeripheralsConfigOutputReference
 ```
@@ -3494,7 +3494,7 @@ func InternalValue() DataprocBatchEnvironmentConfigPeripheralsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfigOutputReference
 ```
@@ -3772,7 +3772,7 @@ func InternalValue() DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistory
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchPysparkBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchPysparkBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchPysparkBatchOutputReference
 ```
@@ -4195,7 +4195,7 @@ func InternalValue() DataprocBatchPysparkBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchRuntimeConfigOutputReference
 ```
@@ -4542,7 +4542,7 @@ func InternalValue() DataprocBatchRuntimeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoApproximateUsageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoApproximateUsageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocBatchRuntimeInfoApproximateUsageList
 ```
@@ -4691,7 +4691,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoApproximateUsageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoApproximateUsageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocBatchRuntimeInfoApproximateUsageOutputReference
 ```
@@ -5002,7 +5002,7 @@ func InternalValue() DataprocBatchRuntimeInfoApproximateUsage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoCurrentUsageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoCurrentUsageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocBatchRuntimeInfoCurrentUsageList
 ```
@@ -5151,7 +5151,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoCurrentUsageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoCurrentUsageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocBatchRuntimeInfoCurrentUsageOutputReference
 ```
@@ -5495,7 +5495,7 @@ func InternalValue() DataprocBatchRuntimeInfoCurrentUsage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocBatchRuntimeInfoList
 ```
@@ -5644,7 +5644,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocBatchRuntimeInfoOutputReference
 ```
@@ -5966,7 +5966,7 @@ func InternalValue() DataprocBatchRuntimeInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchSparkBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchSparkBatchOutputReference
 ```
@@ -6389,7 +6389,7 @@ func InternalValue() DataprocBatchSparkBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkRBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchSparkRBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchSparkRBatchOutputReference
 ```
@@ -6754,7 +6754,7 @@ func InternalValue() DataprocBatchSparkRBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkSqlBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchSparkSqlBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchSparkSqlBatchOutputReference
 ```
@@ -7090,7 +7090,7 @@ func InternalValue() DataprocBatchSparkSqlBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchStateHistoryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchStateHistoryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocBatchStateHistoryList
 ```
@@ -7239,7 +7239,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchStateHistoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchStateHistoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocBatchStateHistoryOutputReference
 ```
@@ -7539,7 +7539,7 @@ func InternalValue() DataprocBatchStateHistory
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchTimeoutsOutputReference
 ```

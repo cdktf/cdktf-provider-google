@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface DataplexDatascanIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#data_scan_id DataplexDatascanIamBinding#data_scan_id}
   */
   readonly dataScanId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#id DataplexDatascanIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#location DataplexDatascanIamBinding#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#members DataplexDatascanIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#project DataplexDatascanIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#role DataplexDatascanIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#condition DataplexDatascanIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#condition DataplexDatascanIamBinding#condition}
   */
   readonly condition?: DataplexDatascanIamBindingCondition;
 }
 export interface DataplexDatascanIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#description DataplexDatascanIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#description DataplexDatascanIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#expression DataplexDatascanIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#expression DataplexDatascanIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#title DataplexDatascanIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#title DataplexDatascanIamBinding#title}
   */
   readonly title: string;
 }
@@ -192,7 +187,7 @@ export class DataplexDatascanIamBindingConditionOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding google_dataplex_datascan_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding google_dataplex_datascan_iam_binding}
 */
 export class DataplexDatascanIamBinding extends cdktf.TerraformResource {
 
@@ -208,7 +203,7 @@ export class DataplexDatascanIamBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataplexDatascanIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataplexDatascanIamBinding to import
-  * @param importFromId The id of the existing DataplexDatascanIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataplexDatascanIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataplexDatascanIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +215,7 @@ export class DataplexDatascanIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.7.0/docs/resources/dataplex_datascan_iam_binding google_dataplex_datascan_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_datascan_iam_binding google_dataplex_datascan_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +226,7 @@ export class DataplexDatascanIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_datascan_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.7.0',
+        providerVersion: '6.8.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
