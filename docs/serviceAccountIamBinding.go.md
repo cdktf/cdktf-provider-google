@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceAccountIamBinding.ServiceAccountIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiambinding"
 
 serviceaccountiambinding.NewServiceAccountIamBinding(scope Construct, id *string, config ServiceAccountIamBindingConfig) ServiceAccountIamBinding
 ```
@@ -405,7 +405,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.serviceAccountIamBinding.ServiceAccountIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiambinding"
 
 serviceaccountiambinding.ServiceAccountIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.serviceAccountIamBinding.ServiceAccountIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiambinding"
 
 serviceaccountiambinding.ServiceAccountIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ serviceaccountiambinding.ServiceAccountIamBinding_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.serviceAccountIamBinding.ServiceAccountIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiambinding"
 
 serviceaccountiambinding.ServiceAccountIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ serviceaccountiambinding.ServiceAccountIamBinding_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.serviceAccountIamBinding.ServiceAccountIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiambinding"
 
 serviceaccountiambinding.ServiceAccountIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -815,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.serviceAccountIamBinding.ServiceAccountIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiambinding"
 
 &serviceaccountiambinding.ServiceAccountIamBindingCondition {
 	Expression: *string,
@@ -875,7 +875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.serviceAccountIamBinding.ServiceAccountIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiambinding"
 
 &serviceaccountiambinding.ServiceAccountIamBindingConfig {
 	Connection: interface{},
@@ -888,7 +888,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambindin
 	Members: *[]*string,
 	Role: *string,
 	ServiceAccountId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.serviceAccountIamBinding.ServiceAccountIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.serviceAccountIamBinding.ServiceAccountIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -1054,7 +1054,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceAccountIamBinding.ServiceAccountIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiambinding"
 
 serviceaccountiambinding.NewServiceAccountIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceAccountIamBindingConditionOutputReference
 ```
