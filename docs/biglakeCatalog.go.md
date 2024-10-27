@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.biglakeCatalog.BiglakeCatalog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakecatalog"
 
 biglakecatalog.NewBiglakeCatalog(scope Construct, id *string, config BiglakeCatalogConfig) BiglakeCatalog
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.biglakeCatalog.BiglakeCatalog.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakecatalog"
 
 biglakecatalog.BiglakeCatalog_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.biglakeCatalog.BiglakeCatalog.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakecatalog"
 
 biglakecatalog.BiglakeCatalog_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ biglakecatalog.BiglakeCatalog_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.biglakeCatalog.BiglakeCatalog.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakecatalog"
 
 biglakecatalog.BiglakeCatalog_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ biglakecatalog.BiglakeCatalog_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.biglakeCatalog.BiglakeCatalog.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakecatalog"
 
 biglakecatalog.BiglakeCatalog_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -855,7 +855,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.biglakeCatalog.BiglakeCatalogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakecatalog"
 
 &biglakecatalog.BiglakeCatalogConfig {
 	Connection: interface{},
@@ -869,7 +869,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
 	Name: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.biglakeCatalog.BiglakeCatalogTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.biglakeCatalog.BiglakeCatalogTimeouts,
 }
 ```
 
@@ -1036,7 +1036,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.biglakeCatalog.BiglakeCatalogTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakecatalog"
 
 &biglakecatalog.BiglakeCatalogTimeouts {
 	Create: *string,
@@ -1084,7 +1084,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.biglakeCatalog.BiglakeCatalogTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/biglakecatalog"
+import "github.com/cdktf/cdktf-provider-google-go/google/biglakecatalog"
 
 biglakecatalog.NewBiglakeCatalogTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BiglakeCatalogTimeoutsOutputReference
 ```

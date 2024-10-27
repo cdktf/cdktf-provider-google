@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiambinding"
 
 computesnapshotiambinding.NewComputeSnapshotIamBinding(scope Construct, id *string, config ComputeSnapshotIamBindingConfig) ComputeSnapshotIamBinding
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiambinding"
 
 computesnapshotiambinding.ComputeSnapshotIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiambinding"
 
 computesnapshotiambinding.ComputeSnapshotIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ computesnapshotiambinding.ComputeSnapshotIamBinding_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiambinding"
 
 computesnapshotiambinding.ComputeSnapshotIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ computesnapshotiambinding.ComputeSnapshotIamBinding_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiambinding"
 
 computesnapshotiambinding.ComputeSnapshotIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -844,7 +844,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiambinding"
 
 &computesnapshotiambinding.ComputeSnapshotIamBindingCondition {
 	Expression: *string,
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiambinding"
 
 &computesnapshotiambinding.ComputeSnapshotIamBindingConfig {
 	Connection: interface{},
@@ -917,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiamb
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computesnapshotiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshotiambinding"
 
 computesnapshotiambinding.NewComputeSnapshotIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSnapshotIamBindingConditionOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglekmsekmconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmsekmconnectioniampolicy"
 
 datagooglekmsekmconnectioniampolicy.NewDataGoogleKmsEkmConnectionIamPolicy(scope Construct, id *string, config DataGoogleKmsEkmConnectionIamPolicyConfig) DataGoogleKmsEkmConnectionIamPolicy
 ```
@@ -297,7 +297,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglekmsekmconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmsekmconnectioniampolicy"
 
 datagooglekmsekmconnectioniampolicy.DataGoogleKmsEkmConnectionIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglekmsekmconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmsekmconnectioniampolicy"
 
 datagooglekmsekmconnectioniampolicy.DataGoogleKmsEkmConnectionIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglekmsekmconnectioniampolicy.DataGoogleKmsEkmConnectionIamPolicy_IsTerraf
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglekmsekmconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmsekmconnectioniampolicy"
 
 datagooglekmsekmconnectioniampolicy.DataGoogleKmsEkmConnectionIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglekmsekmconnectioniampolicy.DataGoogleKmsEkmConnectionIamPolicy_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglekmsekmconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmsekmconnectioniampolicy"
 
 datagooglekmsekmconnectioniampolicy.DataGoogleKmsEkmConnectionIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -674,7 +674,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglekmsekmconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmsekmconnectioniampolicy"
 
 &datagooglekmsekmconnectioniampolicy.DataGoogleKmsEkmConnectionIamPolicyConfig {
 	Connection: interface{},

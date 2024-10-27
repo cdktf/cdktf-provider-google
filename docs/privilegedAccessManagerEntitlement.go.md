@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlement(scope Construct, id *string, config PrivilegedAccessManagerEntitlementConfig) PrivilegedAccessManagerEntitlement
 ```
@@ -484,7 +484,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlement.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlement_IsConstruct(x interface{}) *bool
 ```
@@ -516,7 +516,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlement.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlement_IsTerraformElement(x interface{}) *bool
 ```
@@ -530,7 +530,7 @@ privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlement_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlement.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlement_IsTerraformResource(x interface{}) *bool
 ```
@@ -544,7 +544,7 @@ privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlement_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlement.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlement_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1070,7 +1070,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementAdditionalNotificationTargets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementAdditionalNotificationTargets {
 	AdminEmailRecipients: *[]*string,
@@ -1120,10 +1120,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementApprovalWorkflow {
-	ManualApprovals: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovals,
+	ManualApprovals: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovals,
 }
 ```
 
@@ -1154,7 +1154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovals.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovals {
 	Steps: interface{},
@@ -1204,10 +1204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsSteps.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsSteps {
-	Approvers: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsApprovers,
+	Approvers: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsApprovers,
 	ApprovalsNeeded: *f64,
 	ApproverEmailRecipients: *[]*string,
 }
@@ -1274,7 +1274,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsApprovers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsApprovers {
 	Principals: *[]*string,
@@ -1310,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementConfig {
 	Connection: interface{},
@@ -1325,12 +1325,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessman
 	Location: *string,
 	MaxRequestDuration: *string,
 	Parent: *string,
-	PrivilegedAccess: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccess,
-	RequesterJustificationConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfig,
-	AdditionalNotificationTargets: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementAdditionalNotificationTargets,
-	ApprovalWorkflow: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflow,
+	PrivilegedAccess: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccess,
+	RequesterJustificationConfig: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfig,
+	AdditionalNotificationTargets: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementAdditionalNotificationTargets,
+	ApprovalWorkflow: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflow,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementTimeouts,
 }
 ```
 
@@ -1596,7 +1596,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementEligibleUsers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementEligibleUsers {
 	Principals: *[]*string,
@@ -1632,10 +1632,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementPrivilegedAccess {
-	GcpIamAccess: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccess,
+	GcpIamAccess: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccess,
 }
 ```
 
@@ -1666,7 +1666,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccess {
 	Resource: *string,
@@ -1732,7 +1732,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessRoleBindings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessRoleBindings {
 	Role: *string,
@@ -1785,11 +1785,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfig {
-	NotMandatory: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigNotMandatory,
-	Unstructured: github.com/cdktf/cdktf-provider-google-go/google/v14.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigUnstructured,
+	NotMandatory: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigNotMandatory,
+	Unstructured: github.com/cdktf/cdktf-provider-google-go/google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigUnstructured,
 }
 ```
 
@@ -1835,7 +1835,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigNotMandatory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigNotMandatory {
 
@@ -1848,7 +1848,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessman
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigUnstructured.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigUnstructured {
 
@@ -1861,7 +1861,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessman
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 &privilegedaccessmanagerentitlement.PrivilegedAccessManagerEntitlementTimeouts {
 	Create: *string,
@@ -1923,7 +1923,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementAdditionalNotificationTargetsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementAdditionalNotificationTargetsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementAdditionalNotificationTargetsOutputReference
 ```
@@ -2230,7 +2230,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementAdditionalNotificationTar
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsOutputReference
 ```
@@ -2543,7 +2543,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementApprovalWorkflowManualApp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsApproversOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsApproversOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsApproversOutputReference
 ```
@@ -2814,7 +2814,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementApprovalWorkflowManualApp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsList
 ```
@@ -2974,7 +2974,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PrivilegedAccessManagerEntitlementApprovalWorkflowManualApprovalsStepsOutputReference
 ```
@@ -3334,7 +3334,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementApprovalWorkflowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementApprovalWorkflowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementApprovalWorkflowOutputReference
 ```
@@ -3618,7 +3618,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementApprovalWorkflow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementEligibleUsersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementEligibleUsersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PrivilegedAccessManagerEntitlementEligibleUsersList
 ```
@@ -3778,7 +3778,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementEligibleUsersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementEligibleUsersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PrivilegedAccessManagerEntitlementEligibleUsersOutputReference
 ```
@@ -4067,7 +4067,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessOutputReference
 ```
@@ -4395,7 +4395,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAcc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessRoleBindingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessRoleBindingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessRoleBindingsList
 ```
@@ -4555,7 +4555,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessRoleBindingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessRoleBindingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PrivilegedAccessManagerEntitlementPrivilegedAccessGcpIamAccessRoleBindingsOutputReference
 ```
@@ -4873,7 +4873,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementPrivilegedAccessOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementPrivilegedAccessOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementPrivilegedAccessOutputReference
 ```
@@ -5157,7 +5157,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementPrivilegedAccess
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigNotMandatoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementRequesterJustificationConfigNotMandatoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementRequesterJustificationConfigNotMandatoryOutputReference
 ```
@@ -5406,7 +5406,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementRequesterJustificationCon
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementRequesterJustificationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementRequesterJustificationConfigOutputReference
 ```
@@ -5739,7 +5739,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementRequesterJustificationCon
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementRequesterJustificationConfigUnstructuredOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementRequesterJustificationConfigUnstructuredOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementRequesterJustificationConfigUnstructuredOutputReference
 ```
@@ -5988,7 +5988,7 @@ func InternalValue() PrivilegedAccessManagerEntitlementRequesterJustificationCon
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privilegedAccessManagerEntitlement.PrivilegedAccessManagerEntitlementTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/privilegedaccessmanagerentitlement"
+import "github.com/cdktf/cdktf-provider-google-go/google/privilegedaccessmanagerentitlement"
 
 privilegedaccessmanagerentitlement.NewPrivilegedAccessManagerEntitlementTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivilegedAccessManagerEntitlementTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersionAccess.DataGoogleSecretManagerRegionalSecretVersionAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversionaccess"
 
 datagooglesecretmanagerregionalsecretversionaccess.NewDataGoogleSecretManagerRegionalSecretVersionAccess(scope Construct, id *string, config DataGoogleSecretManagerRegionalSecretVersionAccessConfig) DataGoogleSecretManagerRegionalSecretVersionAccess
 ```
@@ -311,7 +311,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersionAccess.DataGoogleSecretManagerRegionalSecretVersionAccess.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversionaccess"
 
 datagooglesecretmanagerregionalsecretversionaccess.DataGoogleSecretManagerRegionalSecretVersionAccess_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersionAccess.DataGoogleSecretManagerRegionalSecretVersionAccess.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversionaccess"
 
 datagooglesecretmanagerregionalsecretversionaccess.DataGoogleSecretManagerRegionalSecretVersionAccess_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglesecretmanagerregionalsecretversionaccess.DataGoogleSecretManagerRegion
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersionAccess.DataGoogleSecretManagerRegionalSecretVersionAccess.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversionaccess"
 
 datagooglesecretmanagerregionalsecretversionaccess.DataGoogleSecretManagerRegionalSecretVersionAccess_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ datagooglesecretmanagerregionalsecretversionaccess.DataGoogleSecretManagerRegion
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersionAccess.DataGoogleSecretManagerRegionalSecretVersionAccess.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversionaccess"
 
 datagooglesecretmanagerregionalsecretversionaccess.DataGoogleSecretManagerRegionalSecretVersionAccess_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersionAccess.DataGoogleSecretManagerRegionalSecretVersionAccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversionaccess"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversionaccess"
 
 &datagooglesecretmanagerregionalsecretversionaccess.DataGoogleSecretManagerRegionalSecretVersionAccessConfig {
 	Connection: interface{},

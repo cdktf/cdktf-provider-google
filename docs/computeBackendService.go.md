@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendService(scope Construct, id *string, config ComputeBackendServiceConfig) ComputeBackendService
 ```
@@ -738,7 +738,7 @@ func ResetTimeoutSec()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.ComputeBackendService_IsConstruct(x interface{}) *bool
 ```
@@ -770,7 +770,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.ComputeBackendService_IsTerraformElement(x interface{}) *bool
 ```
@@ -784,7 +784,7 @@ computebackendservice.ComputeBackendService_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.ComputeBackendService_IsTerraformResource(x interface{}) *bool
 ```
@@ -798,7 +798,7 @@ computebackendservice.ComputeBackendService_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeBackendService.ComputeBackendService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.ComputeBackendService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1775,7 +1775,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackend.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceBackend {
 	Group: *string,
@@ -2029,11 +2029,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceCdnPolicy {
 	BypassCacheOnRequestHeaders: interface{},
-	CacheKeyPolicy: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy,
+	CacheKeyPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy,
 	CacheMode: *string,
 	ClientTtl: *f64,
 	DefaultTtl: *f64,
@@ -2219,7 +2219,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeaders {
 	HeaderName: *string,
@@ -2253,7 +2253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceCdnPolicyCacheKeyPolicy {
 	IncludeHost: interface{},
@@ -2399,7 +2399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceCdnPolicyNegativeCachingPolicy {
 	Code: *f64,
@@ -2455,7 +2455,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCircuitBreakers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceCircuitBreakers {
 	MaxConnections: *f64,
@@ -2558,7 +2558,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceConfig {
 	Connection: interface{},
@@ -2571,34 +2571,34 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservi
 	Name: *string,
 	AffinityCookieTtlSec: *f64,
 	Backend: interface{},
-	CdnPolicy: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceCdnPolicy,
-	CircuitBreakers: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceCircuitBreakers,
+	CdnPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceCdnPolicy,
+	CircuitBreakers: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceCircuitBreakers,
 	CompressionMode: *string,
 	ConnectionDrainingTimeoutSec: *f64,
-	ConsistentHash: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceConsistentHash,
+	ConsistentHash: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceConsistentHash,
 	CustomRequestHeaders: *[]*string,
 	CustomResponseHeaders: *[]*string,
 	Description: *string,
 	EdgeSecurityPolicy: *string,
 	EnableCdn: interface{},
 	HealthChecks: *[]*string,
-	Iap: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceIap,
+	Iap: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceIap,
 	Id: *string,
 	IpAddressSelectionPolicy: *string,
 	LoadBalancingScheme: *string,
 	LocalityLbPolicies: interface{},
 	LocalityLbPolicy: *string,
-	LogConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceLogConfig,
-	OutlierDetection: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceOutlierDetection,
+	LogConfig: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceLogConfig,
+	OutlierDetection: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceOutlierDetection,
 	PortName: *string,
 	Project: *string,
 	Protocol: *string,
 	SecurityPolicy: *string,
-	SecuritySettings: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceSecuritySettings,
+	SecuritySettings: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceSecuritySettings,
 	ServiceLbPolicy: *string,
 	SessionAffinity: *string,
-	StrongSessionAffinityCookie: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookie,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceTimeouts,
+	StrongSessionAffinityCookie: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookie,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceTimeouts,
 	TimeoutSec: *f64,
 }
 ```
@@ -3263,10 +3263,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConsistentHash.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceConsistentHash {
-	HttpCookie: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceConsistentHashHttpCookie,
+	HttpCookie: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceConsistentHashHttpCookie,
 	HttpHeaderName: *string,
 	MinimumRingSize: *f64,
 }
@@ -3337,12 +3337,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConsistentHashHttpCookie.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceConsistentHashHttpCookie {
 	Name: *string,
 	Path: *string,
-	Ttl: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceConsistentHashHttpCookieTtl,
+	Ttl: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceConsistentHashHttpCookieTtl,
 }
 ```
 
@@ -3403,7 +3403,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConsistentHashHttpCookieTtl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceConsistentHashHttpCookieTtl {
 	Seconds: *f64,
@@ -3457,7 +3457,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceIap.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceIap {
 	Enabled: interface{},
@@ -3523,11 +3523,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPolicies.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceLocalityLbPolicies {
-	CustomPolicy: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceLocalityLbPoliciesCustomPolicy,
-	Policy: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceLocalityLbPoliciesPolicy,
+	CustomPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesCustomPolicy,
+	Policy: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesPolicy,
 }
 ```
 
@@ -3573,7 +3573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesCustomPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceLocalityLbPoliciesCustomPolicy {
 	Name: *string,
@@ -3631,7 +3631,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceLocalityLbPoliciesPolicy {
 	Name: *string,
@@ -3696,7 +3696,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceLogConfig {
 	Enable: interface{},
@@ -3751,16 +3751,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceOutlierDetection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceOutlierDetection {
-	BaseEjectionTime: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceOutlierDetectionBaseEjectionTime,
+	BaseEjectionTime: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceOutlierDetectionBaseEjectionTime,
 	ConsecutiveErrors: *f64,
 	ConsecutiveGatewayFailure: *f64,
 	EnforcingConsecutiveErrors: *f64,
 	EnforcingConsecutiveGatewayFailure: *f64,
 	EnforcingSuccessRate: *f64,
-	Interval: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceOutlierDetectionInterval,
+	Interval: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceOutlierDetectionInterval,
 	MaxEjectionPercent: *f64,
 	SuccessRateMinimumHosts: *f64,
 	SuccessRateRequestVolume: *f64,
@@ -3974,7 +3974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceOutlierDetectionBaseEjectionTime.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceOutlierDetectionBaseEjectionTime {
 	Seconds: *f64,
@@ -4028,7 +4028,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceOutlierDetectionInterval.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceOutlierDetectionInterval {
 	Seconds: *f64,
@@ -4082,10 +4082,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceSecuritySettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceSecuritySettings {
-	AwsV4Authentication: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceSecuritySettingsAwsV4Authentication,
+	AwsV4Authentication: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceSecuritySettingsAwsV4Authentication,
 	ClientTlsPolicy: *string,
 	SubjectAltNames: *[]*string,
 }
@@ -4154,7 +4154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceSecuritySettingsAwsV4Authentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceSecuritySettingsAwsV4Authentication {
 	AccessKey: *string,
@@ -4243,12 +4243,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookie.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceStrongSessionAffinityCookie {
 	Name: *string,
 	Path: *string,
-	Ttl: github.com/cdktf/cdktf-provider-google-go/google/v14.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookieTtl,
+	Ttl: github.com/cdktf/cdktf-provider-google-go/google.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookieTtl,
 }
 ```
 
@@ -4309,7 +4309,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookieTtl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceStrongSessionAffinityCookieTtl {
 	Seconds: *f64,
@@ -4363,7 +4363,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 &computebackendservice.ComputeBackendServiceTimeouts {
 	Create: *string,
@@ -4425,7 +4425,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceBackendList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeBackendServiceBackendList
 ```
@@ -4585,7 +4585,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceBackendOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceBackendOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeBackendServiceBackendOutputReference
 ```
@@ -5164,7 +5164,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersList
 ```
@@ -5324,7 +5324,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeBackendServiceCdnPolicyBypassCacheOnRequestHeadersOutputReference
 ```
@@ -5613,7 +5613,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference
 ```
@@ -6065,7 +6065,7 @@ func InternalValue() ComputeBackendServiceCdnPolicyCacheKeyPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceCdnPolicyNegativeCachingPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeBackendServiceCdnPolicyNegativeCachingPolicyList
 ```
@@ -6225,7 +6225,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeBackendServiceCdnPolicyNegativeCachingPolicyOutputReference
 ```
@@ -6550,7 +6550,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCdnPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceCdnPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceCdnPolicyOutputReference
 ```
@@ -7128,7 +7128,7 @@ func InternalValue() ComputeBackendServiceCdnPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceCircuitBreakersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceCircuitBreakersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceCircuitBreakersOutputReference
 ```
@@ -7522,7 +7522,7 @@ func InternalValue() ComputeBackendServiceCircuitBreakers
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConsistentHashHttpCookieOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceConsistentHashHttpCookieOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceConsistentHashHttpCookieOutputReference
 ```
@@ -7871,7 +7871,7 @@ func InternalValue() ComputeBackendServiceConsistentHashHttpCookie
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceConsistentHashHttpCookieTtlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference
 ```
@@ -8171,7 +8171,7 @@ func InternalValue() ComputeBackendServiceConsistentHashHttpCookieTtl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceConsistentHashOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceConsistentHashOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceConsistentHashOutputReference
 ```
@@ -8520,7 +8520,7 @@ func InternalValue() ComputeBackendServiceConsistentHash
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceIapOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceIapOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceIapOutputReference
 ```
@@ -8860,7 +8860,7 @@ func InternalValue() ComputeBackendServiceIap
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesCustomPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceLocalityLbPoliciesCustomPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceLocalityLbPoliciesCustomPolicyOutputReference
 ```
@@ -9160,7 +9160,7 @@ func InternalValue() ComputeBackendServiceLocalityLbPoliciesCustomPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceLocalityLbPoliciesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeBackendServiceLocalityLbPoliciesList
 ```
@@ -9320,7 +9320,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceLocalityLbPoliciesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeBackendServiceLocalityLbPoliciesOutputReference
 ```
@@ -9671,7 +9671,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLocalityLbPoliciesPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceLocalityLbPoliciesPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceLocalityLbPoliciesPolicyOutputReference
 ```
@@ -9942,7 +9942,7 @@ func InternalValue() ComputeBackendServiceLocalityLbPoliciesPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceLogConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceLogConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceLogConfigOutputReference
 ```
@@ -10249,7 +10249,7 @@ func InternalValue() ComputeBackendServiceLogConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference
 ```
@@ -10549,7 +10549,7 @@ func InternalValue() ComputeBackendServiceOutlierDetectionBaseEjectionTime
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceOutlierDetectionIntervalOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceOutlierDetectionIntervalOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceOutlierDetectionIntervalOutputReference
 ```
@@ -10849,7 +10849,7 @@ func InternalValue() ComputeBackendServiceOutlierDetectionInterval
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceOutlierDetectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceOutlierDetectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceOutlierDetectionOutputReference
 ```
@@ -11443,7 +11443,7 @@ func InternalValue() ComputeBackendServiceOutlierDetection
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceSecuritySettingsAwsV4AuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceSecuritySettingsAwsV4AuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceSecuritySettingsAwsV4AuthenticationOutputReference
 ```
@@ -11808,7 +11808,7 @@ func InternalValue() ComputeBackendServiceSecuritySettingsAwsV4Authentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceSecuritySettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceSecuritySettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceSecuritySettingsOutputReference
 ```
@@ -12157,7 +12157,7 @@ func InternalValue() ComputeBackendServiceSecuritySettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookieOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceStrongSessionAffinityCookieOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceStrongSessionAffinityCookieOutputReference
 ```
@@ -12506,7 +12506,7 @@ func InternalValue() ComputeBackendServiceStrongSessionAffinityCookie
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceStrongSessionAffinityCookieTtlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceStrongSessionAffinityCookieTtlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceStrongSessionAffinityCookieTtlOutputReference
 ```
@@ -12806,7 +12806,7 @@ func InternalValue() ComputeBackendServiceStrongSessionAffinityCookieTtl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendService.ComputeBackendServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computebackendservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservice"
 
 computebackendservice.NewComputeBackendServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceTimeoutsOutputReference
 ```

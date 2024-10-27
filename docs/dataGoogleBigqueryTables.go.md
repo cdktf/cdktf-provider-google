@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTables.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 datagooglebigquerytables.NewDataGoogleBigqueryTables(scope Construct, id *string, config DataGoogleBigqueryTablesConfig) DataGoogleBigqueryTables
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTables.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 datagooglebigquerytables.DataGoogleBigqueryTables_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTables.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 datagooglebigquerytables.DataGoogleBigqueryTables_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagooglebigquerytables.DataGoogleBigqueryTables_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTables.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 datagooglebigquerytables.DataGoogleBigqueryTables_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglebigquerytables.DataGoogleBigqueryTables_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTables.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 datagooglebigquerytables.DataGoogleBigqueryTables_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -634,7 +634,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTablesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 &datagooglebigquerytables.DataGoogleBigqueryTablesConfig {
 	Connection: interface{},
@@ -787,7 +787,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTablesTables.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 &datagooglebigquerytables.DataGoogleBigqueryTablesTables {
 
@@ -802,7 +802,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigqueryt
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTablesTablesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 datagooglebigquerytables.NewDataGoogleBigqueryTablesTablesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleBigqueryTablesTablesList
 ```
@@ -951,7 +951,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryTables.DataGoogleBigqueryTablesTablesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebigquerytables"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebigquerytables"
 
 datagooglebigquerytables.NewDataGoogleBigqueryTablesTablesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleBigqueryTablesTablesOutputReference
 ```

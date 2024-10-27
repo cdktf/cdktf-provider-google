@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.NewDataGoogleComputeRegions(scope Construct, id *string, config DataGoogleComputeRegionsConfig) DataGoogleComputeRegions
 ```
@@ -297,7 +297,7 @@ func ResetStatus()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.DataGoogleComputeRegions_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.DataGoogleComputeRegions_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglecomputeregions.DataGoogleComputeRegions_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.DataGoogleComputeRegions_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglecomputeregions.DataGoogleComputeRegions_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegions.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 datagooglecomputeregions.DataGoogleComputeRegions_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -641,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRegions.DataGoogleComputeRegionsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputeregions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeregions"
 
 &datagooglecomputeregions.DataGoogleComputeRegionsConfig {
 	Connection: interface{},
