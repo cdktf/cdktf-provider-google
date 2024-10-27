@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.NewDataGoogleVmwareengineNetworkPolicy(scope Construct, id *string, config DataGoogleVmwareengineNetworkPolicyConfig) DataGoogleVmwareengineNetworkPolicy
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicy_IsTerraf
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicy_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -744,7 +744,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 &datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicyConfig {
 	Connection: interface{},
@@ -912,7 +912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicyExternalIp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 &datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicyExternalIp {
 
@@ -925,7 +925,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginen
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicyInternetAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 &datagooglevmwareenginenetworkpolicy.DataGoogleVmwareengineNetworkPolicyInternetAccess {
 
@@ -940,7 +940,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginen
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicyExternalIpList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.NewDataGoogleVmwareengineNetworkPolicyExternalIpList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleVmwareengineNetworkPolicyExternalIpList
 ```
@@ -1089,7 +1089,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicyExternalIpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.NewDataGoogleVmwareengineNetworkPolicyExternalIpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleVmwareengineNetworkPolicyExternalIpOutputReference
 ```
@@ -1378,7 +1378,7 @@ func InternalValue() DataGoogleVmwareengineNetworkPolicyExternalIp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicyInternetAccessList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.NewDataGoogleVmwareengineNetworkPolicyInternetAccessList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleVmwareengineNetworkPolicyInternetAccessList
 ```
@@ -1527,7 +1527,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVmwareengineNetworkPolicy.DataGoogleVmwareengineNetworkPolicyInternetAccessOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglevmwareenginenetworkpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglevmwareenginenetworkpolicy"
 
 datagooglevmwareenginenetworkpolicy.NewDataGoogleVmwareengineNetworkPolicyInternetAccessOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleVmwareengineNetworkPolicyInternetAccessOutputReference
 ```

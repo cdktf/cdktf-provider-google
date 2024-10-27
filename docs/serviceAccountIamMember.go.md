@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
 
 serviceaccountiammember.NewServiceAccountIamMember(scope Construct, id *string, config ServiceAccountIamMemberConfig) ServiceAccountIamMember
 ```
@@ -405,7 +405,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
 
 serviceaccountiammember.ServiceAccountIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
 
 serviceaccountiammember.ServiceAccountIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ serviceaccountiammember.ServiceAccountIamMember_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
 
 serviceaccountiammember.ServiceAccountIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ serviceaccountiammember.ServiceAccountIamMember_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
 
 serviceaccountiammember.ServiceAccountIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -815,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
 
 &serviceaccountiammember.ServiceAccountIamMemberCondition {
 	Expression: *string,
@@ -875,7 +875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
 
 &serviceaccountiammember.ServiceAccountIamMemberConfig {
 	Connection: interface{},
@@ -888,7 +888,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember
 	Member: *string,
 	Role: *string,
 	ServiceAccountId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.serviceAccountIamMember.ServiceAccountIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.serviceAccountIamMember.ServiceAccountIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -1054,7 +1054,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/serviceaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
 
 serviceaccountiammember.NewServiceAccountIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceAccountIamMemberConditionOutputReference
 ```
