@@ -4,12 +4,12 @@
 
 ### IapClient <a name="IapClient" id="@cdktf/provider-google.iapClient.IapClient"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client google_iap_client}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client google_iap_client}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapClient.IapClient.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapclient"
 
 iapclient.NewIapClient(scope Construct, id *string, config IapClientConfig) IapClient
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapClient.IapClient.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapclient"
 
 iapclient.IapClient_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapClient.IapClient.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapclient"
 
 iapclient.IapClient_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ iapclient.IapClient_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapClient.IapClient.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapclient"
 
 iapclient.IapClient_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ iapclient.IapClient_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.iapClient.IapClient.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapclient"
 
 iapclient.IapClient_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the IapClient to import.
 
 The id of the existing IapClient that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -804,7 +804,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapClient.IapClientConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapclient"
 
 &iapclient.IapClientConfig {
 	Connection: interface{},
@@ -817,7 +817,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
 	Brand: *string,
 	DisplayName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.iapClient.IapClientTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iapClient.IapClientTimeouts,
 }
 ```
 
@@ -834,7 +834,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
 | <code><a href="#@cdktf/provider-google.iapClient.IapClientConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClientConfig.property.brand">Brand</a></code> | <code>*string</code> | Identifier of the brand to which this client is attached to. The format is 'projects/{project_number}/brands/{brand_id}'. |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClientConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Human-friendly name given to the OAuth client. |
-| <code><a href="#@cdktf/provider-google.iapClient.IapClientConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#id IapClient#id}. |
+| <code><a href="#@cdktf/provider-google.iapClient.IapClientConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#id IapClient#id}. |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClientConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a></code> | timeouts block. |
 
 ---
@@ -919,7 +919,7 @@ Brand *string
 
 Identifier of the brand to which this client is attached to. The format is 'projects/{project_number}/brands/{brand_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#brand IapClient#brand}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#brand IapClient#brand}
 
 ---
 
@@ -933,7 +933,7 @@ DisplayName *string
 
 Human-friendly name given to the OAuth client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#display_name IapClient#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#display_name IapClient#display_name}
 
 ---
 
@@ -945,7 +945,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#id IapClient#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#id IapClient#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -962,7 +962,7 @@ Timeouts IapClientTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#timeouts IapClient#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#timeouts IapClient#timeouts}
 
 ---
 
@@ -971,7 +971,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapClient.IapClientTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapclient"
 
 &iapclient.IapClientTimeouts {
 	Create: *string,
@@ -983,8 +983,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#create IapClient#create}. |
-| <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#delete IapClient#delete}. |
+| <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#create IapClient#create}. |
+| <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#delete IapClient#delete}. |
 
 ---
 
@@ -996,7 +996,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#create IapClient#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#create IapClient#create}.
 
 ---
 
@@ -1008,7 +1008,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/iap_client#delete IapClient#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/iap_client#delete IapClient#delete}.
 
 ---
 
@@ -1019,7 +1019,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapClient.IapClientTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/iapclient"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapclient"
 
 iapclient.NewIapClientTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapClientTimeoutsOutputReference
 ```

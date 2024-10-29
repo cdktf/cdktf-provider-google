@@ -1,3 +1,3 @@
 # `google_logging_billing_account_exclusion`
 
-Refer to the Terraform Registry for docs: [`google_logging_billing_account_exclusion`](https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/logging_billing_account_exclusion).
+Refer to the Terraform Registry for docs: [`google_logging_billing_account_exclusion`](https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_billing_account_exclusion).

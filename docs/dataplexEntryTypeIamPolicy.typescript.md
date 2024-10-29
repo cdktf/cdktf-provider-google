@@ -4,7 +4,7 @@
 
 ### DataplexEntryTypeIamPolicy <a name="DataplexEntryTypeIamPolicy" id="@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy google_dataplex_entry_type_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy google_dataplex_entry_type_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicy.Initializer"></a>
 
@@ -488,7 +488,7 @@ The construct id used in the generated config for the DataplexEntryTypeIamPolicy
 
 The id of the existing DataplexEntryTypeIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -825,11 +825,11 @@ const dataplexEntryTypeIamPolicyConfig: dataplexEntryTypeIamPolicy.DataplexEntry
 | <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.entryTypeId">entryTypeId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#entry_type_id DataplexEntryTypeIamPolicy#entry_type_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#policy_data DataplexEntryTypeIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#id DataplexEntryTypeIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#location DataplexEntryTypeIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#project DataplexEntryTypeIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.entryTypeId">entryTypeId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#entry_type_id DataplexEntryTypeIamPolicy#entry_type_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#policy_data DataplexEntryTypeIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#id DataplexEntryTypeIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#location DataplexEntryTypeIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryTypeIamPolicy.DataplexEntryTypeIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#project DataplexEntryTypeIamPolicy#project}. |
 
 ---
 
@@ -911,7 +911,7 @@ public readonly entryTypeId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#entry_type_id DataplexEntryTypeIamPolicy#entry_type_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#entry_type_id DataplexEntryTypeIamPolicy#entry_type_id}.
 
 ---
 
@@ -923,7 +923,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#policy_data DataplexEntryTypeIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#policy_data DataplexEntryTypeIamPolicy#policy_data}.
 
 ---
 
@@ -935,7 +935,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#id DataplexEntryTypeIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#id DataplexEntryTypeIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -950,7 +950,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#location DataplexEntryTypeIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#location DataplexEntryTypeIamPolicy#location}.
 
 ---
 
@@ -962,7 +962,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type_iam_policy#project DataplexEntryTypeIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type_iam_policy#project DataplexEntryTypeIamPolicy#project}.
 
 ---
 
