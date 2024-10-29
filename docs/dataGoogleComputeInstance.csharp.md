@@ -4,7 +4,7 @@
 
 ### DataGoogleComputeInstance <a name="DataGoogleComputeInstance" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance google_compute_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance google_compute_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.Initializer"></a>
 
@@ -400,7 +400,7 @@ The construct id used in the generated config for the DataGoogleComputeInstance 
 
 The id of the existing DataGoogleComputeInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -435,6 +435,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.canIpForward">CanIpForward</a></code> | <code>HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.confidentialInstanceConfig">ConfidentialInstanceConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfidentialInstanceConfigList">DataGoogleComputeInstanceConfidentialInstanceConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.cpuPlatform">CpuPlatform</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.creationTimestamp">CreationTimestamp</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.currentStatus">CurrentStatus</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.deletionProtection">DeletionProtection</a></code> | <code>HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.description">Description</a></code> | <code>string</code> | *No description.* |
@@ -444,6 +445,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.guestAccelerator">GuestAccelerator</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceGuestAcceleratorList">DataGoogleComputeInstanceGuestAcceleratorList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.hostname">Hostname</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.instanceId">InstanceId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.keyRevocationActionType">KeyRevocationActionType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.labelFingerprint">LabelFingerprint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.labels">Labels</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.machineType">MachineType</a></code> | <code>string</code> | *No description.* |
@@ -668,6 +670,16 @@ public string CpuPlatform { get; }
 
 ---
 
+##### `CreationTimestamp`<sup>Required</sup> <a name="CreationTimestamp" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.creationTimestamp"></a>
+
+```csharp
+public string CreationTimestamp { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `CurrentStatus`<sup>Required</sup> <a name="CurrentStatus" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.currentStatus"></a>
 
 ```csharp
@@ -752,6 +764,16 @@ public string Hostname { get; }
 
 ```csharp
 public string InstanceId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `KeyRevocationActionType`<sup>Required</sup> <a name="KeyRevocationActionType" id="@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstance.property.keyRevocationActionType"></a>
+
+```csharp
+public string KeyRevocationActionType { get; }
 ```
 
 - *Type:* string
@@ -1167,7 +1189,7 @@ new DataGoogleComputeInstanceConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance#id DataGoogleComputeInstance#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance#id DataGoogleComputeInstance#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.property.name">Name</a></code> | <code>string</code> | The name of the instance. One of name or self_link must be provided. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.property.project">Project</a></code> | <code>string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstance.DataGoogleComputeInstanceConfig.property.selfLink">SelfLink</a></code> | <code>string</code> | The URI of the created resource. |
@@ -1253,7 +1275,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance#id DataGoogleComputeInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance#id DataGoogleComputeInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1270,7 +1292,7 @@ public string Name { get; set; }
 
 The name of the instance. One of name or self_link must be provided.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance#name DataGoogleComputeInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance#name DataGoogleComputeInstance#name}
 
 ---
 
@@ -1286,7 +1308,7 @@ The ID of the project in which the resource belongs.
 
 If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance#project DataGoogleComputeInstance#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance#project DataGoogleComputeInstance#project}
 
 ---
 
@@ -1300,7 +1322,7 @@ public string SelfLink { get; set; }
 
 The URI of the created resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance#self_link DataGoogleComputeInstance#self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance#self_link DataGoogleComputeInstance#self_link}
 
 ---
 
@@ -1316,7 +1338,7 @@ The zone of the instance.
 
 If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance#zone DataGoogleComputeInstance#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance#zone DataGoogleComputeInstance#zone}
 
 ---
 

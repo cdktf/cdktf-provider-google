@@ -1,3 +1,3 @@
 # `google_firestore_index`
 
-Refer to the Terraform Registry for docs: [`google_firestore_index`](https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/firestore_index).
+Refer to the Terraform Registry for docs: [`google_firestore_index`](https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/firestore_index).

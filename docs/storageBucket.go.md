@@ -4,7 +4,7 @@
 
 ### StorageBucket <a name="StorageBucket" id="@cdktf/provider-google.storageBucket.StorageBucket"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket google_storage_bucket}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket google_storage_bucket}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucket.StorageBucket.Initializer"></a>
 
@@ -77,6 +77,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putCors">PutCors</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putCustomPlacementConfig">PutCustomPlacementConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putEncryption">PutEncryption</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putHierarchicalNamespace">PutHierarchicalNamespace</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putLifecycleRule">PutLifecycleRule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putLogging">PutLogging</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putRetentionPolicy">PutRetentionPolicy</a></code> | *No description.* |
@@ -91,6 +92,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetEnableObjectRetention">ResetEnableObjectRetention</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetEncryption">ResetEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetForceDestroy">ResetForceDestroy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetHierarchicalNamespace">ResetHierarchicalNamespace</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetLabels">ResetLabels</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetLifecycleRule">ResetLifecycleRule</a></code> | *No description.* |
@@ -445,6 +447,18 @@ func PutEncryption(value StorageBucketEncryption)
 
 ---
 
+##### `PutHierarchicalNamespace` <a name="PutHierarchicalNamespace" id="@cdktf/provider-google.storageBucket.StorageBucket.putHierarchicalNamespace"></a>
+
+```go
+func PutHierarchicalNamespace(value StorageBucketHierarchicalNamespace)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.storageBucket.StorageBucket.putHierarchicalNamespace.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a>
+
+---
+
 ##### `PutLifecycleRule` <a name="PutLifecycleRule" id="@cdktf/provider-google.storageBucket.StorageBucket.putLifecycleRule"></a>
 
 ```go
@@ -569,6 +583,12 @@ func ResetEncryption()
 
 ```go
 func ResetForceDestroy()
+```
+
+##### `ResetHierarchicalNamespace` <a name="ResetHierarchicalNamespace" id="@cdktf/provider-google.storageBucket.StorageBucket.resetHierarchicalNamespace"></a>
+
+```go
+func ResetHierarchicalNamespace()
 ```
 
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.storageBucket.StorageBucket.resetId"></a>
@@ -764,7 +784,7 @@ The construct id used in the generated config for the StorageBucket to import.
 
 The id of the existing StorageBucket that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -799,6 +819,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.customPlacementConfig">CustomPlacementConfig</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketCustomPlacementConfigOutputReference">StorageBucketCustomPlacementConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.effectiveLabels">EffectiveLabels</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.encryption">Encryption</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketEncryptionOutputReference">StorageBucketEncryptionOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.hierarchicalNamespace">HierarchicalNamespace</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference">StorageBucketHierarchicalNamespaceOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.lifecycleRule">LifecycleRule</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleList">StorageBucketLifecycleRuleList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.logging">Logging</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLoggingOutputReference">StorageBucketLoggingOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.projectNumber">ProjectNumber</a></code> | <code>*f64</code> | *No description.* |
@@ -817,6 +838,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.enableObjectRetentionInput">EnableObjectRetentionInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.encryptionInput">EncryptionInput</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketEncryption">StorageBucketEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.forceDestroyInput">ForceDestroyInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.hierarchicalNamespaceInput">HierarchicalNamespaceInput</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.labelsInput">LabelsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.lifecycleRuleInput">LifecycleRuleInput</a></code> | <code>interface{}</code> | *No description.* |
@@ -1042,6 +1064,16 @@ func Encryption() StorageBucketEncryptionOutputReference
 
 ---
 
+##### `HierarchicalNamespace`<sup>Required</sup> <a name="HierarchicalNamespace" id="@cdktf/provider-google.storageBucket.StorageBucket.property.hierarchicalNamespace"></a>
+
+```go
+func HierarchicalNamespace() StorageBucketHierarchicalNamespaceOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference">StorageBucketHierarchicalNamespaceOutputReference</a>
+
+---
+
 ##### `LifecycleRule`<sup>Required</sup> <a name="LifecycleRule" id="@cdktf/provider-google.storageBucket.StorageBucket.property.lifecycleRule"></a>
 
 ```go
@@ -1219,6 +1251,16 @@ func ForceDestroyInput() interface{}
 ```
 
 - *Type:* interface{}
+
+---
+
+##### `HierarchicalNamespaceInput`<sup>Optional</sup> <a name="HierarchicalNamespaceInput" id="@cdktf/provider-google.storageBucket.StorageBucket.property.hierarchicalNamespaceInput"></a>
+
+```go
+func HierarchicalNamespaceInput() StorageBucketHierarchicalNamespace
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a>
 
 ---
 
@@ -1574,7 +1616,7 @@ Enabled interface{}
 
 While set to true, autoclass automatically transitions objects in your bucket to appropriate storage classes based on each object's access pattern.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
 
 ---
 
@@ -1590,7 +1632,7 @@ The storage class that objects in the bucket eventually transition to if they ar
 
 Supported values include: NEARLINE, ARCHIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#terminal_storage_class StorageBucket#terminal_storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#terminal_storage_class StorageBucket#terminal_storage_class}
 
 ---
 
@@ -1618,6 +1660,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/storagebucket"
 	EnableObjectRetention: interface{},
 	Encryption: github.com/cdktf/cdktf-provider-google-go/google/v14.storageBucket.StorageBucketEncryption,
 	ForceDestroy: interface{},
+	HierarchicalNamespace: github.com/cdktf/cdktf-provider-google-go/google/v14.storageBucket.StorageBucketHierarchicalNamespace,
 	Id: *string,
 	Labels: *map[string]*string,
 	LifecycleRule: interface{},
@@ -1656,7 +1699,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/storagebucket"
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.enableObjectRetention">EnableObjectRetention</a></code> | <code>interface{}</code> | Enables each object in the bucket to have its own retention policy, which prevents deletion until stored for a specific length of time. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.encryption">Encryption</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketEncryption">StorageBucketEncryption</a></code> | encryption block. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.forceDestroy">ForceDestroy</a></code> | <code>interface{}</code> | When deleting a bucket, this boolean option will delete all contained objects. |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#id StorageBucket#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.hierarchicalNamespace">HierarchicalNamespace</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a></code> | hierarchical_namespace block. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#id StorageBucket#id}. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | A set of key/value label pairs to assign to the bucket. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.lifecycleRule">LifecycleRule</a></code> | <code>interface{}</code> | lifecycle_rule block. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.logging">Logging</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLogging">StorageBucketLogging</a></code> | logging block. |
@@ -1754,7 +1798,7 @@ Location *string
 
 The Google Cloud Storage location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#location StorageBucket#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#location StorageBucket#location}
 
 ---
 
@@ -1768,7 +1812,7 @@ Name *string
 
 The name of the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#name StorageBucket#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#name StorageBucket#name}
 
 ---
 
@@ -1782,7 +1826,7 @@ Autoclass StorageBucketAutoclass
 
 autoclass block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#autoclass StorageBucket#autoclass}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#autoclass StorageBucket#autoclass}
 
 ---
 
@@ -1796,7 +1840,7 @@ Cors interface{}
 
 cors block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#cors StorageBucket#cors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#cors StorageBucket#cors}
 
 ---
 
@@ -1810,7 +1854,7 @@ CustomPlacementConfig StorageBucketCustomPlacementConfig
 
 custom_placement_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
 
 ---
 
@@ -1824,7 +1868,7 @@ DefaultEventBasedHold interface{}
 
 Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
 
 ---
 
@@ -1838,7 +1882,7 @@ EnableObjectRetention interface{}
 
 Enables each object in the bucket to have its own retention policy, which prevents deletion until stored for a specific length of time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#enable_object_retention StorageBucket#enable_object_retention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#enable_object_retention StorageBucket#enable_object_retention}
 
 ---
 
@@ -1852,7 +1896,7 @@ Encryption StorageBucketEncryption
 
 encryption block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#encryption StorageBucket#encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#encryption StorageBucket#encryption}
 
 ---
 
@@ -1868,7 +1912,21 @@ When deleting a bucket, this boolean option will delete all contained objects.
 
 If you try to delete a bucket that contains objects, Terraform will fail that run.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#force_destroy StorageBucket#force_destroy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#force_destroy StorageBucket#force_destroy}
+
+---
+
+##### `HierarchicalNamespace`<sup>Optional</sup> <a name="HierarchicalNamespace" id="@cdktf/provider-google.storageBucket.StorageBucketConfig.property.hierarchicalNamespace"></a>
+
+```go
+HierarchicalNamespace StorageBucketHierarchicalNamespace
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a>
+
+hierarchical_namespace block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#hierarchical_namespace StorageBucket#hierarchical_namespace}
 
 ---
 
@@ -1880,7 +1938,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#id StorageBucket#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#id StorageBucket#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1897,7 +1955,7 @@ Labels *map[string]*string
 
 A set of key/value label pairs to assign to the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#labels StorageBucket#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#labels StorageBucket#labels}
 
 ---
 
@@ -1911,7 +1969,7 @@ LifecycleRule interface{}
 
 lifecycle_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
 
 ---
 
@@ -1925,7 +1983,7 @@ Logging StorageBucketLogging
 
 logging block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#logging StorageBucket#logging}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#logging StorageBucket#logging}
 
 ---
 
@@ -1941,7 +1999,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#project StorageBucket#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#project StorageBucket#project}
 
 ---
 
@@ -1955,7 +2013,7 @@ PublicAccessPrevention *string
 
 Prevents public access to a bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
 
 ---
 
@@ -1969,7 +2027,7 @@ RequesterPays interface{}
 
 Enables Requester Pays on a storage bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#requester_pays StorageBucket#requester_pays}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#requester_pays StorageBucket#requester_pays}
 
 ---
 
@@ -1983,7 +2041,7 @@ RetentionPolicy StorageBucketRetentionPolicy
 
 retention_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#retention_policy StorageBucket#retention_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#retention_policy StorageBucket#retention_policy}
 
 ---
 
@@ -1999,7 +2057,7 @@ Specifies the RPO setting of bucket.
 
 If set 'ASYNC_TURBO', The Turbo Replication will be enabled for the dual-region bucket. Value 'DEFAULT' will set RPO setting to default. Turbo Replication is only for buckets in dual-regions.See the docs for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#rpo StorageBucket#rpo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#rpo StorageBucket#rpo}
 
 ---
 
@@ -2013,7 +2071,7 @@ SoftDeletePolicy StorageBucketSoftDeletePolicy
 
 soft_delete_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#soft_delete_policy StorageBucket#soft_delete_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#soft_delete_policy StorageBucket#soft_delete_policy}
 
 ---
 
@@ -2027,7 +2085,7 @@ StorageClass *string
 
 The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
 
 ---
 
@@ -2041,7 +2099,7 @@ Timeouts StorageBucketTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#timeouts StorageBucket#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#timeouts StorageBucket#timeouts}
 
 ---
 
@@ -2055,7 +2113,7 @@ UniformBucketLevelAccess interface{}
 
 Enables uniform bucket-level access on a bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
 
 ---
 
@@ -2069,7 +2127,7 @@ Versioning StorageBucketVersioning
 
 versioning block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#versioning StorageBucket#versioning}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#versioning StorageBucket#versioning}
 
 ---
 
@@ -2083,7 +2141,7 @@ Website StorageBucketWebsite
 
 website block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#website StorageBucket#website}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#website StorageBucket#website}
 
 ---
 
@@ -2123,7 +2181,7 @@ MaxAgeSeconds *f64
 
 The value, in seconds, to return in the Access-Control-Max-Age header used in preflight responses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#max_age_seconds StorageBucket#max_age_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#max_age_seconds StorageBucket#max_age_seconds}
 
 ---
 
@@ -2137,7 +2195,7 @@ Method *[]*string
 
 The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#method StorageBucket#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#method StorageBucket#method}
 
 ---
 
@@ -2153,7 +2211,7 @@ The list of Origins eligible to receive CORS response headers.
 
 Note: "*" is permitted in the list of origins, and means "any Origin".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#origin StorageBucket#origin}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#origin StorageBucket#origin}
 
 ---
 
@@ -2167,7 +2225,7 @@ ResponseHeader *[]*string
 
 The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#response_header StorageBucket#response_header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#response_header StorageBucket#response_header}
 
 ---
 
@@ -2203,7 +2261,7 @@ The list of individual regions that comprise a dual-region bucket.
 
 See the docs for a list of acceptable regions. Note: If any of the data_locations changes, it will recreate the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#data_locations StorageBucket#data_locations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#data_locations StorageBucket#data_locations}
 
 ---
 
@@ -2239,7 +2297,41 @@ A Cloud KMS key that will be used to encrypt objects inserted into this bucket, 
 
 You must pay attention to whether the crypto key is available in the location that this bucket is created in. See the docs for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#default_kms_key_name StorageBucket#default_kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#default_kms_key_name StorageBucket#default_kms_key_name}
+
+---
+
+### StorageBucketHierarchicalNamespace <a name="StorageBucketHierarchicalNamespace" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/storagebucket"
+
+&storagebucket.StorageBucketHierarchicalNamespace {
+	Enabled: interface{},
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace.property.enabled">Enabled</a></code> | <code>interface{}</code> | Set this enabled flag to true when folders with logical files structure. Default value is false. |
+
+---
+
+##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace.property.enabled"></a>
+
+```go
+Enabled interface{}
+```
+
+- *Type:* interface{}
+
+Set this enabled flag to true when folders with logical files structure. Default value is false.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
 
 ---
 
@@ -2275,7 +2367,7 @@ Action StorageBucketLifecycleRuleAction
 
 action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#action StorageBucket#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#action StorageBucket#action}
 
 ---
 
@@ -2289,7 +2381,7 @@ Condition StorageBucketLifecycleRuleCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#condition StorageBucket#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#condition StorageBucket#condition}
 
 ---
 
@@ -2325,7 +2417,7 @@ Type *string
 
 The type of the action of this Lifecycle Rule. Supported values include: Delete, SetStorageClass and AbortIncompleteMultipartUpload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#type StorageBucket#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#type StorageBucket#type}
 
 ---
 
@@ -2339,7 +2431,7 @@ StorageClass *string
 
 The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
 
 ---
 
@@ -2401,7 +2493,7 @@ Age *f64
 
 Minimum age of an object in days to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#age StorageBucket#age}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#age StorageBucket#age}
 
 ---
 
@@ -2415,7 +2507,7 @@ CreatedBefore *string
 
 Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#created_before StorageBucket#created_before}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#created_before StorageBucket#created_before}
 
 ---
 
@@ -2429,7 +2521,7 @@ CustomTimeBefore *string
 
 Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#custom_time_before StorageBucket#custom_time_before}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#custom_time_before StorageBucket#custom_time_before}
 
 ---
 
@@ -2443,7 +2535,7 @@ DaysSinceCustomTime *f64
 
 Number of days elapsed since the user-specified timestamp set on an object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#days_since_custom_time StorageBucket#days_since_custom_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#days_since_custom_time StorageBucket#days_since_custom_time}
 
 ---
 
@@ -2457,7 +2549,7 @@ DaysSinceNoncurrentTime *f64
 
 Number of days elapsed since the noncurrent timestamp of an object. This 										condition is relevant only for versioned objects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
 
 ---
 
@@ -2471,7 +2563,7 @@ MatchesPrefix *[]*string
 
 One or more matching name prefixes to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#matches_prefix StorageBucket#matches_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#matches_prefix StorageBucket#matches_prefix}
 
 ---
 
@@ -2485,7 +2577,7 @@ MatchesStorageClass *[]*string
 
 Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
 
 ---
 
@@ -2499,7 +2591,7 @@ MatchesSuffix *[]*string
 
 One or more matching name suffixes to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#matches_suffix StorageBucket#matches_suffix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#matches_suffix StorageBucket#matches_suffix}
 
 ---
 
@@ -2513,7 +2605,7 @@ NoncurrentTimeBefore *string
 
 Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#noncurrent_time_before StorageBucket#noncurrent_time_before}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#noncurrent_time_before StorageBucket#noncurrent_time_before}
 
 ---
 
@@ -2527,7 +2619,7 @@ NumNewerVersions *f64
 
 Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#num_newer_versions StorageBucket#num_newer_versions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#num_newer_versions StorageBucket#num_newer_versions}
 
 ---
 
@@ -2543,7 +2635,7 @@ While set true, age value will be sent in the request even for zero value of the
 
 This field is only useful for setting 0 value to the age field. It can be used alone or together with age.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#send_age_if_zero StorageBucket#send_age_if_zero}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#send_age_if_zero StorageBucket#send_age_if_zero}
 
 ---
 
@@ -2559,7 +2651,7 @@ While set true, days_since_custom_time value will be sent in the request even fo
 
 This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#send_days_since_custom_time_if_zero StorageBucket#send_days_since_custom_time_if_zero}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#send_days_since_custom_time_if_zero StorageBucket#send_days_since_custom_time_if_zero}
 
 ---
 
@@ -2575,7 +2667,7 @@ While set true, days_since_noncurrent_time value will be sent in the request eve
 
 This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#send_days_since_noncurrent_time_if_zero StorageBucket#send_days_since_noncurrent_time_if_zero}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#send_days_since_noncurrent_time_if_zero StorageBucket#send_days_since_noncurrent_time_if_zero}
 
 ---
 
@@ -2591,7 +2683,7 @@ While set true, num_newer_versions value will be sent in the request even for ze
 
 This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#send_num_newer_versions_if_zero StorageBucket#send_num_newer_versions_if_zero}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#send_num_newer_versions_if_zero StorageBucket#send_num_newer_versions_if_zero}
 
 ---
 
@@ -2605,7 +2697,7 @@ WithState *string
 
 Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#with_state StorageBucket#with_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#with_state StorageBucket#with_state}
 
 ---
 
@@ -2641,7 +2733,7 @@ LogBucket *string
 
 The bucket that will receive log objects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#log_bucket StorageBucket#log_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#log_bucket StorageBucket#log_bucket}
 
 ---
 
@@ -2657,7 +2749,7 @@ The object prefix for log objects.
 
 If it's not provided, by default Google Cloud Storage sets this to this bucket's name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#log_object_prefix StorageBucket#log_object_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#log_object_prefix StorageBucket#log_object_prefix}
 
 ---
 
@@ -2695,7 +2787,7 @@ The period of time, in seconds, that objects in the bucket must be retained and 
 
 The value must be less than 3,155,760,000 seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#retention_period StorageBucket#retention_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#retention_period StorageBucket#retention_period}
 
 ---
 
@@ -2711,7 +2803,7 @@ If set to true, the bucket will be locked and permanently restrict edits to the 
 
 Caution: Locking a bucket is an irreversible action.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#is_locked StorageBucket#is_locked}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#is_locked StorageBucket#is_locked}
 
 ---
 
@@ -2747,7 +2839,7 @@ The duration in seconds that soft-deleted objects in the bucket will be retained
 
 Default value is 604800.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#retention_duration_seconds StorageBucket#retention_duration_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#retention_duration_seconds StorageBucket#retention_duration_seconds}
 
 ---
 
@@ -2769,9 +2861,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/storagebucket"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#create StorageBucket#create}. |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#read StorageBucket#read}. |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#update StorageBucket#update}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#create StorageBucket#create}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#read StorageBucket#read}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#update StorageBucket#update}. |
 
 ---
 
@@ -2783,7 +2875,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#create StorageBucket#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#create StorageBucket#create}.
 
 ---
 
@@ -2795,7 +2887,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#read StorageBucket#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#read StorageBucket#read}.
 
 ---
 
@@ -2807,7 +2899,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#update StorageBucket#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#update StorageBucket#update}.
 
 ---
 
@@ -2841,7 +2933,7 @@ Enabled interface{}
 
 While set to true, versioning is fully enabled for this bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
 
 ---
 
@@ -2877,7 +2969,7 @@ MainPageSuffix *string
 
 Behaves as the bucket's directory index where missing objects are treated as potential directories.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#main_page_suffix StorageBucket#main_page_suffix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#main_page_suffix StorageBucket#main_page_suffix}
 
 ---
 
@@ -2891,7 +2983,7 @@ NotFoundPage *string
 
 The custom object to return when a requested resource is not found.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/storage_bucket#not_found_page StorageBucket#not_found_page}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/storage_bucket#not_found_page StorageBucket#not_found_page}
 
 ---
 
@@ -4278,6 +4370,277 @@ func InternalValue() StorageBucketEncryption
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketEncryption">StorageBucketEncryption</a>
+
+---
+
+
+### StorageBucketHierarchicalNamespaceOutputReference <a name="StorageBucketHierarchicalNamespaceOutputReference" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/storagebucket"
+
+storagebucket.NewStorageBucketHierarchicalNamespaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageBucketHierarchicalNamespaceOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.enabledInput">EnabledInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.enabled">Enabled</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `EnabledInput`<sup>Optional</sup> <a name="EnabledInput" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.enabledInput"></a>
+
+```go
+func EnabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.enabled"></a>
+
+```go
+func Enabled() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() StorageBucketHierarchicalNamespace
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a>
 
 ---
 

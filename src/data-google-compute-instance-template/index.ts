@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template
+// https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +13,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template#filter DataGoogleComputeInstanceTemplate#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template#filter DataGoogleComputeInstanceTemplate#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template#id DataGoogleComputeInstanceTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template#id DataGoogleComputeInstanceTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template#most_recent DataGoogleComputeInstanceTemplate#most_recent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template#most_recent DataGoogleComputeInstanceTemplate#most_recent}
   */
   readonly mostRecent?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template#name DataGoogleComputeInstanceTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template#name DataGoogleComputeInstanceTemplate#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template#project DataGoogleComputeInstanceTemplate#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template#project DataGoogleComputeInstanceTemplate#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template#self_link_unique DataGoogleComputeInstanceTemplate#self_link_unique}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template#self_link_unique DataGoogleComputeInstanceTemplate#self_link_unique}
   */
   readonly selfLinkUnique?: string;
 }
@@ -1949,7 +1949,7 @@ export class DataGoogleComputeInstanceTemplateShieldedInstanceConfigList extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template google_compute_instance_template}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template google_compute_instance_template}
 */
 export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource {
 
@@ -1965,7 +1965,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   * Generates CDKTF code for importing a DataGoogleComputeInstanceTemplate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeInstanceTemplate to import
-  * @param importFromId The id of the existing DataGoogleComputeInstanceTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeInstanceTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeInstanceTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1977,7 +1977,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/data-sources/compute_instance_template google_compute_instance_template} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/compute_instance_template google_compute_instance_template} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1988,7 +1988,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.8.0',
+        providerVersion: '6.9.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -2026,6 +2026,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   private _confidentialInstanceConfig = new DataGoogleComputeInstanceTemplateConfidentialInstanceConfigList(this, "confidential_instance_config", false);
   public get confidentialInstanceConfig() {
     return this._confidentialInstanceConfig;
+  }
+
+  // creation_timestamp - computed: true, optional: false, required: false
+  public get creationTimestamp() {
+    return this.getStringAttribute('creation_timestamp');
   }
 
   // description - computed: true, optional: false, required: false
@@ -2086,6 +2091,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   // instance_description - computed: true, optional: false, required: false
   public get instanceDescription() {
     return this.getStringAttribute('instance_description');
+  }
+
+  // key_revocation_action_type - computed: true, optional: false, required: false
+  public get keyRevocationActionType() {
+    return this.getStringAttribute('key_revocation_action_type');
   }
 
   // labels - computed: true, optional: false, required: false

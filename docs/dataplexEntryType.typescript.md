@@ -4,7 +4,7 @@
 
 ### DataplexEntryType <a name="DataplexEntryType" id="@cdktf/provider-google.dataplexEntryType.DataplexEntryType"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type google_dataplex_entry_type}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type google_dataplex_entry_type}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexEntryType.DataplexEntryType.Initializer"></a>
 
@@ -577,7 +577,7 @@ The construct id used in the generated config for the DataplexEntryType to impor
 
 The id of the existing DataplexEntryType that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1126,11 +1126,11 @@ const dataplexEntryTypeConfig: dataplexEntryType.DataplexEntryTypeConfig = { ...
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.description">description</a></code> | <code>string</code> | Description of the EntryType. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.displayName">displayName</a></code> | <code>string</code> | User friendly display name. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.entryTypeId">entryTypeId</a></code> | <code>string</code> | The entry type id of the entry type. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#id DataplexEntryType#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#id DataplexEntryType#id}. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | User-defined labels for the EntryType. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.location">location</a></code> | <code>string</code> | The location where entry type will be created in. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.platform">platform</a></code> | <code>string</code> | The platform that Entries of this type belongs to. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#project DataplexEntryType#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#project DataplexEntryType#project}. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.requiredAspects">requiredAspects</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeRequiredAspects">DataplexEntryTypeRequiredAspects</a>[]</code> | required_aspects block. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.systemAttribute">systemAttribute</a></code> | <code>string</code> | The system that Entries of this type belongs to. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeTimeouts">DataplexEntryTypeTimeouts</a></code> | timeouts block. |
@@ -1218,7 +1218,7 @@ public readonly description: string;
 
 Description of the EntryType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#description DataplexEntryType#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#description DataplexEntryType#description}
 
 ---
 
@@ -1232,7 +1232,7 @@ public readonly displayName: string;
 
 User friendly display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#display_name DataplexEntryType#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#display_name DataplexEntryType#display_name}
 
 ---
 
@@ -1246,7 +1246,7 @@ public readonly entryTypeId: string;
 
 The entry type id of the entry type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#entry_type_id DataplexEntryType#entry_type_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#entry_type_id DataplexEntryType#entry_type_id}
 
 ---
 
@@ -1258,7 +1258,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#id DataplexEntryType#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#id DataplexEntryType#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1278,7 +1278,7 @@ User-defined labels for the EntryType.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#labels DataplexEntryType#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#labels DataplexEntryType#labels}
 
 ---
 
@@ -1292,7 +1292,7 @@ public readonly location: string;
 
 The location where entry type will be created in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#location DataplexEntryType#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#location DataplexEntryType#location}
 
 ---
 
@@ -1306,7 +1306,7 @@ public readonly platform: string;
 
 The platform that Entries of this type belongs to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#platform DataplexEntryType#platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#platform DataplexEntryType#platform}
 
 ---
 
@@ -1318,7 +1318,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#project DataplexEntryType#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#project DataplexEntryType#project}.
 
 ---
 
@@ -1332,7 +1332,7 @@ public readonly requiredAspects: IResolvable | DataplexEntryTypeRequiredAspects[
 
 required_aspects block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#required_aspects DataplexEntryType#required_aspects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#required_aspects DataplexEntryType#required_aspects}
 
 ---
 
@@ -1346,7 +1346,7 @@ public readonly systemAttribute: string;
 
 The system that Entries of this type belongs to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#system DataplexEntryType#system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#system DataplexEntryType#system}
 
 ---
 
@@ -1360,7 +1360,7 @@ public readonly timeouts: DataplexEntryTypeTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#timeouts DataplexEntryType#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#timeouts DataplexEntryType#timeouts}
 
 ---
 
@@ -1374,7 +1374,7 @@ public readonly typeAliases: string[];
 
 Indicates the class this Entry Type belongs to, for example, TABLE, DATABASE, MODEL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#type_aliases DataplexEntryType#type_aliases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#type_aliases DataplexEntryType#type_aliases}
 
 ---
 
@@ -1406,7 +1406,7 @@ public readonly type: string;
 
 Required aspect type for the entry type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#type DataplexEntryType#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#type DataplexEntryType#type}
 
 ---
 
@@ -1424,9 +1424,9 @@ const dataplexEntryTypeTimeouts: dataplexEntryType.DataplexEntryTypeTimeouts = {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#create DataplexEntryType#create}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#delete DataplexEntryType#delete}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#update DataplexEntryType#update}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#create DataplexEntryType#create}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#delete DataplexEntryType#delete}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryType.DataplexEntryTypeTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#update DataplexEntryType#update}. |
 
 ---
 
@@ -1438,7 +1438,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#create DataplexEntryType#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#create DataplexEntryType#create}.
 
 ---
 
@@ -1450,7 +1450,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#delete DataplexEntryType#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#delete DataplexEntryType#delete}.
 
 ---
 
@@ -1462,7 +1462,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/dataplex_entry_type#update DataplexEntryType#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/dataplex_entry_type#update DataplexEntryType#update}.
 
 ---
 

@@ -1,3 +1,3 @@
 # `google_vmwareengine_network_policy`
 
-Refer to the Terraform Registry for docs: [`google_vmwareengine_network_policy`](https://registry.terraform.io/providers/hashicorp/google/6.8.0/docs/resources/vmwareengine_network_policy).
+Refer to the Terraform Registry for docs: [`google_vmwareengine_network_policy`](https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/vmwareengine_network_policy).
