@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshubdataexchangeiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshubdataexchangeiammember"
 
 bigqueryanalyticshubdataexchangeiammember.NewBigqueryAnalyticsHubDataExchangeIamMember(scope Construct, id *string, config BigqueryAnalyticsHubDataExchangeIamMemberConfig) BigqueryAnalyticsHubDataExchangeIamMember
 ```
@@ -419,7 +419,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshubdataexchangeiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshubdataexchangeiammember"
 
 bigqueryanalyticshubdataexchangeiammember.BigqueryAnalyticsHubDataExchangeIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshubdataexchangeiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshubdataexchangeiammember"
 
 bigqueryanalyticshubdataexchangeiammember.BigqueryAnalyticsHubDataExchangeIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ bigqueryanalyticshubdataexchangeiammember.BigqueryAnalyticsHubDataExchangeIamMem
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshubdataexchangeiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshubdataexchangeiammember"
 
 bigqueryanalyticshubdataexchangeiammember.BigqueryAnalyticsHubDataExchangeIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ bigqueryanalyticshubdataexchangeiammember.BigqueryAnalyticsHubDataExchangeIamMem
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshubdataexchangeiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshubdataexchangeiammember"
 
 bigqueryanalyticshubdataexchangeiammember.BigqueryAnalyticsHubDataExchangeIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshubdataexchangeiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshubdataexchangeiammember"
 
 &bigqueryanalyticshubdataexchangeiammember.BigqueryAnalyticsHubDataExchangeIamMemberCondition {
 	Expression: *string,
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshubdataexchangeiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshubdataexchangeiammember"
 
 &bigqueryanalyticshubdataexchangeiammember.BigqueryAnalyticsHubDataExchangeIamMemberConfig {
 	Connection: interface{},
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshu
 	DataExchangeId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchangeIamMember.BigqueryAnalyticsHubDataExchangeIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryanalyticshubdataexchangeiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshubdataexchangeiammember"
 
 bigqueryanalyticshubdataexchangeiammember.NewBigqueryAnalyticsHubDataExchangeIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryAnalyticsHubDataExchangeIamMemberConditionOutputReference
 ```

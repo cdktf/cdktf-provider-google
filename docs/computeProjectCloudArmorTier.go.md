@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTier.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloudarmortier"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectcloudarmortier"
 
 computeprojectcloudarmortier.NewComputeProjectCloudArmorTier(scope Construct, id *string, config ComputeProjectCloudArmorTierConfig) ComputeProjectCloudArmorTier
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTier.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloudarmortier"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectcloudarmortier"
 
 computeprojectcloudarmortier.ComputeProjectCloudArmorTier_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTier.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloudarmortier"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectcloudarmortier"
 
 computeprojectcloudarmortier.ComputeProjectCloudArmorTier_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ computeprojectcloudarmortier.ComputeProjectCloudArmorTier_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTier.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloudarmortier"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectcloudarmortier"
 
 computeprojectcloudarmortier.ComputeProjectCloudArmorTier_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ computeprojectcloudarmortier.ComputeProjectCloudArmorTier_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTier.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloudarmortier"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectcloudarmortier"
 
 computeprojectcloudarmortier.ComputeProjectCloudArmorTier_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -789,7 +789,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTierConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloudarmortier"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectcloudarmortier"
 
 &computeprojectcloudarmortier.ComputeProjectCloudArmorTierConfig {
 	Connection: interface{},
@@ -802,7 +802,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloud
 	CloudArmorTier: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeProjectCloudArmorTier.ComputeProjectCloudArmorTierTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTierTimeouts,
 }
 ```
 
@@ -954,7 +954,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTierTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloudarmortier"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectcloudarmortier"
 
 &computeprojectcloudarmortier.ComputeProjectCloudArmorTierTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeProjectCloudArmorTier.ComputeProjectCloudArmorTierTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeprojectcloudarmortier"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectcloudarmortier"
 
 computeprojectcloudarmortier.NewComputeProjectCloudArmorTierTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeProjectCloudArmorTierTimeoutsOutputReference
 ```

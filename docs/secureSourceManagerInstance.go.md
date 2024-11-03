@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.NewSecureSourceManagerInstance(scope Construct, id *string, config SecureSourceManagerInstanceConfig) SecureSourceManagerInstance
 ```
@@ -446,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.SecureSourceManagerInstance_IsConstruct(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.SecureSourceManagerInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ securesourcemanagerinstance.SecureSourceManagerInstance_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.SecureSourceManagerInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ securesourcemanagerinstance.SecureSourceManagerInstance_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.SecureSourceManagerInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -999,7 +999,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 &securesourcemanagerinstance.SecureSourceManagerInstanceConfig {
 	Connection: interface{},
@@ -1014,9 +1014,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanager
 	Id: *string,
 	KmsKey: *string,
 	Labels: *map[string]*string,
-	PrivateConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.secureSourceManagerInstance.SecureSourceManagerInstancePrivateConfig,
+	PrivateConfig: github.com/cdktf/cdktf-provider-google-go/google.secureSourceManagerInstance.SecureSourceManagerInstancePrivateConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.secureSourceManagerInstance.SecureSourceManagerInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.secureSourceManagerInstance.SecureSourceManagerInstanceTimeouts,
 }
 ```
 
@@ -1233,7 +1233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstanceHostConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 &securesourcemanagerinstance.SecureSourceManagerInstanceHostConfig {
 
@@ -1246,7 +1246,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanager
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstancePrivateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 &securesourcemanagerinstance.SecureSourceManagerInstancePrivateConfig {
 	CaPool: *string,
@@ -1296,7 +1296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 &securesourcemanagerinstance.SecureSourceManagerInstanceTimeouts {
 	Create: *string,
@@ -1358,7 +1358,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstanceHostConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.NewSecureSourceManagerInstanceHostConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SecureSourceManagerInstanceHostConfigList
 ```
@@ -1507,7 +1507,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstanceHostConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.NewSecureSourceManagerInstanceHostConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SecureSourceManagerInstanceHostConfigOutputReference
 ```
@@ -1818,7 +1818,7 @@ func InternalValue() SecureSourceManagerInstanceHostConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstancePrivateConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.NewSecureSourceManagerInstancePrivateConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecureSourceManagerInstancePrivateConfigOutputReference
 ```
@@ -2133,7 +2133,7 @@ func InternalValue() SecureSourceManagerInstancePrivateConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerInstance.SecureSourceManagerInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/securesourcemanagerinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/securesourcemanagerinstance"
 
 securesourcemanagerinstance.NewSecureSourceManagerInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecureSourceManagerInstanceTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.NewDataGoogleComputeMachineTypes(scope Construct, id *string, config DataGoogleComputeMachineTypesConfig) DataGoogleComputeMachineTypes
 ```
@@ -304,7 +304,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypes.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.DataGoogleComputeMachineTypes_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypes.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.DataGoogleComputeMachineTypes_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglecomputemachinetypes.DataGoogleComputeMachineTypes_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypes.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.DataGoogleComputeMachineTypes_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ datagooglecomputemachinetypes.DataGoogleComputeMachineTypes_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypes.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.DataGoogleComputeMachineTypes_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 &datagooglecomputemachinetypes.DataGoogleComputeMachineTypesConfig {
 	Connection: interface{},
@@ -835,7 +835,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 &datagooglecomputemachinetypes.DataGoogleComputeMachineTypesMachineTypes {
 
@@ -848,7 +848,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputema
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypesAccelerators.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 &datagooglecomputemachinetypes.DataGoogleComputeMachineTypesMachineTypesAccelerators {
 
@@ -861,7 +861,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputema
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypesDeprecated.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 &datagooglecomputemachinetypes.DataGoogleComputeMachineTypesMachineTypesDeprecated {
 
@@ -876,7 +876,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputema
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypesAcceleratorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.NewDataGoogleComputeMachineTypesMachineTypesAcceleratorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeMachineTypesMachineTypesAcceleratorsList
 ```
@@ -1025,7 +1025,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypesAcceleratorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.NewDataGoogleComputeMachineTypesMachineTypesAcceleratorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeMachineTypesMachineTypesAcceleratorsOutputReference
 ```
@@ -1314,7 +1314,7 @@ func InternalValue() DataGoogleComputeMachineTypesMachineTypesAccelerators
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypesDeprecatedList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.NewDataGoogleComputeMachineTypesMachineTypesDeprecatedList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeMachineTypesMachineTypesDeprecatedList
 ```
@@ -1463,7 +1463,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypesDeprecatedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.NewDataGoogleComputeMachineTypesMachineTypesDeprecatedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeMachineTypesMachineTypesDeprecatedOutputReference
 ```
@@ -1752,7 +1752,7 @@ func InternalValue() DataGoogleComputeMachineTypesMachineTypesDeprecated
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.NewDataGoogleComputeMachineTypesMachineTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeMachineTypesMachineTypesList
 ```
@@ -1901,7 +1901,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeMachineTypes.DataGoogleComputeMachineTypesMachineTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputemachinetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputemachinetypes"
 
 datagooglecomputemachinetypes.NewDataGoogleComputeMachineTypesMachineTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeMachineTypesMachineTypesOutputReference
 ```
