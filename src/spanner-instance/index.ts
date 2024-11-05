@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -20,31 +20,31 @@ export interface SpannerInstanceConfig extends cdktf.TerraformMetaArguments {
   * In order to obtain a valid list please consult the
   * [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#config SpannerInstance#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#config SpannerInstance#config}
   */
   readonly config: string;
   /**
   * The descriptive name for this instance as it appears in UIs. Must be
   * unique per project and between 4 and 30 characters in length.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#display_name SpannerInstance#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#display_name SpannerInstance#display_name}
   */
   readonly displayName: string;
   /**
   * The edition selected for this instance. Different editions provide different capabilities at different price points. Possible values: ["EDITION_UNSPECIFIED", "STANDARD", "ENTERPRISE", "ENTERPRISE_PLUS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#edition SpannerInstance#edition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#edition SpannerInstance#edition}
   */
   readonly edition?: string;
   /**
   * When deleting a spanner instance, this boolean option will delete all backups of this instance.
   * This must be set to true if you created a backup manually in the console.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#force_destroy SpannerInstance#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#force_destroy SpannerInstance#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#id SpannerInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#id SpannerInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -58,7 +58,7 @@ export interface SpannerInstanceConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#labels SpannerInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#labels SpannerInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -67,46 +67,474 @@ export interface SpannerInstanceConfig extends cdktf.TerraformMetaArguments {
   * in length.
   * If not provided, a random string starting with 'tf-' will be selected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#name SpannerInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#name SpannerInstance#name}
   */
   readonly name?: string;
   /**
   * The number of nodes allocated to this instance. Exactly one of either node_count or processing_units
   * must be present in terraform.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#num_nodes SpannerInstance#num_nodes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#num_nodes SpannerInstance#num_nodes}
   */
   readonly numNodes?: number;
   /**
   * The number of processing units allocated to this instance. Exactly one of processing_units
   * or node_count must be present in terraform.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#processing_units SpannerInstance#processing_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#processing_units SpannerInstance#processing_units}
   */
   readonly processingUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#project SpannerInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#project SpannerInstance#project}
   */
   readonly project?: string;
   /**
   * autoscaling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#autoscaling_config SpannerInstance#autoscaling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#autoscaling_config SpannerInstance#autoscaling_config}
   */
   readonly autoscalingConfig?: SpannerInstanceAutoscalingConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#timeouts SpannerInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#timeouts SpannerInstance#timeouts}
   */
   readonly timeouts?: SpannerInstanceTimeouts;
+}
+export interface SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits {
+  /**
+  * The maximum number of nodes for this specific replica.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#max_nodes SpannerInstance#max_nodes}
+  */
+  readonly maxNodes: number;
+  /**
+  * The minimum number of nodes for this specific replica.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#min_nodes SpannerInstance#min_nodes}
+  */
+  readonly minNodes: number;
+}
+
+export function spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsToTerraform(struct?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsOutputReference | SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_nodes: cdktf.numberToTerraform(struct!.maxNodes),
+    min_nodes: cdktf.numberToTerraform(struct!.minNodes),
+  }
+}
+
+
+export function spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsToHclTerraform(struct?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsOutputReference | SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_nodes: {
+      value: cdktf.numberToHclTerraform(struct!.maxNodes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_nodes: {
+      value: cdktf.numberToHclTerraform(struct!.minNodes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxNodes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxNodes = this._maxNodes;
+    }
+    if (this._minNodes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minNodes = this._minNodes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxNodes = undefined;
+      this._minNodes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxNodes = value.maxNodes;
+      this._minNodes = value.minNodes;
+    }
+  }
+
+  // max_nodes - computed: false, optional: false, required: true
+  private _maxNodes?: number; 
+  public get maxNodes() {
+    return this.getNumberAttribute('max_nodes');
+  }
+  public set maxNodes(value: number) {
+    this._maxNodes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxNodesInput() {
+    return this._maxNodes;
+  }
+
+  // min_nodes - computed: false, optional: false, required: true
+  private _minNodes?: number; 
+  public get minNodes() {
+    return this.getNumberAttribute('min_nodes');
+  }
+  public set minNodes(value: number) {
+    this._minNodes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minNodesInput() {
+    return this._minNodes;
+  }
+}
+export interface SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverrides {
+  /**
+  * autoscaling_limits block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#autoscaling_limits SpannerInstance#autoscaling_limits}
+  */
+  readonly autoscalingLimits: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits;
+}
+
+export function spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesToTerraform(struct?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesOutputReference | SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverrides): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    autoscaling_limits: spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsToTerraform(struct!.autoscalingLimits),
+  }
+}
+
+
+export function spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesToHclTerraform(struct?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesOutputReference | SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverrides): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    autoscaling_limits: {
+      value: spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsToHclTerraform(struct!.autoscalingLimits),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverrides | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoscalingLimits?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoscalingLimits = this._autoscalingLimits?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverrides | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._autoscalingLimits.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._autoscalingLimits.internalValue = value.autoscalingLimits;
+    }
+  }
+
+  // autoscaling_limits - computed: false, optional: false, required: true
+  private _autoscalingLimits = new SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimitsOutputReference(this, "autoscaling_limits");
+  public get autoscalingLimits() {
+    return this._autoscalingLimits;
+  }
+  public putAutoscalingLimits(value: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits) {
+    this._autoscalingLimits.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscalingLimitsInput() {
+    return this._autoscalingLimits.internalValue;
+  }
+}
+export interface SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection {
+  /**
+  * The location of the replica to apply asymmetric autoscaling options.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#location SpannerInstance#location}
+  */
+  readonly location: string;
+}
+
+export function spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionToTerraform(struct?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionOutputReference | SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    location: cdktf.stringToTerraform(struct!.location),
+  }
+}
+
+
+export function spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionToHclTerraform(struct?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionOutputReference | SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._location !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._location = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._location = value.location;
+    }
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
+  }
+}
+export interface SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptions {
+  /**
+  * overrides block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#overrides SpannerInstance#overrides}
+  */
+  readonly overrides: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverrides;
+  /**
+  * replica_selection block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#replica_selection SpannerInstance#replica_selection}
+  */
+  readonly replicaSelection: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection;
+}
+
+export function spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsToTerraform(struct?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    overrides: spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesToTerraform(struct!.overrides),
+    replica_selection: spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionToTerraform(struct!.replicaSelection),
+  }
+}
+
+
+export function spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsToHclTerraform(struct?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    overrides: {
+      value: spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesToHclTerraform(struct!.overrides),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesList",
+    },
+    replica_selection: {
+      value: spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionToHclTerraform(struct!.replicaSelection),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._overrides?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.overrides = this._overrides?.internalValue;
+    }
+    if (this._replicaSelection?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicaSelection = this._replicaSelection?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._overrides.internalValue = undefined;
+      this._replicaSelection.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._overrides.internalValue = value.overrides;
+      this._replicaSelection.internalValue = value.replicaSelection;
+    }
+  }
+
+  // overrides - computed: false, optional: false, required: true
+  private _overrides = new SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverridesOutputReference(this, "overrides");
+  public get overrides() {
+    return this._overrides;
+  }
+  public putOverrides(value: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOverrides) {
+    this._overrides.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overridesInput() {
+    return this._overrides.internalValue;
+  }
+
+  // replica_selection - computed: false, optional: false, required: true
+  private _replicaSelection = new SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelectionOutputReference(this, "replica_selection");
+  public get replicaSelection() {
+    return this._replicaSelection;
+  }
+  public putReplicaSelection(value: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection) {
+    this._replicaSelection.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaSelectionInput() {
+    return this._replicaSelection.internalValue;
+  }
+}
+
+export class SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsList extends cdktf.ComplexList {
+  public internalValue? : SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOutputReference {
+    return new SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface SpannerInstanceAutoscalingConfigAutoscalingLimits {
   /**
   * Specifies maximum number of nodes allocated to the instance. If set, this number
   * should be greater than or equal to min_nodes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#max_nodes SpannerInstance#max_nodes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#max_nodes SpannerInstance#max_nodes}
   */
   readonly maxNodes?: number;
   /**
@@ -114,21 +542,21 @@ export interface SpannerInstanceAutoscalingConfigAutoscalingLimits {
   * If set, this number should be multiples of 1000 and be greater than or equal to
   * min_processing_units.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#max_processing_units SpannerInstance#max_processing_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#max_processing_units SpannerInstance#max_processing_units}
   */
   readonly maxProcessingUnits?: number;
   /**
   * Specifies number of nodes allocated to the instance. If set, this number
   * should be greater than or equal to 1.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#min_nodes SpannerInstance#min_nodes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#min_nodes SpannerInstance#min_nodes}
   */
   readonly minNodes?: number;
   /**
   * Specifies minimum number of processing units allocated to the instance.
   * If set, this number should be multiples of 1000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#min_processing_units SpannerInstance#min_processing_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#min_processing_units SpannerInstance#min_processing_units}
   */
   readonly minProcessingUnits?: number;
 }
@@ -303,7 +731,7 @@ export interface SpannerInstanceAutoscalingConfigAutoscalingTargets {
   * should be trying to achieve for the instance.
   * This number is on a scale from 0 (no utilization) to 100 (full utilization)..
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#high_priority_cpu_utilization_percent SpannerInstance#high_priority_cpu_utilization_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#high_priority_cpu_utilization_percent SpannerInstance#high_priority_cpu_utilization_percent}
   */
   readonly highPriorityCpuUtilizationPercent?: number;
   /**
@@ -311,7 +739,7 @@ export interface SpannerInstanceAutoscalingConfigAutoscalingTargets {
   * should be trying to achieve for the instance.
   * This number is on a scale from 0 (no utilization) to 100 (full utilization).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#storage_utilization_percent SpannerInstance#storage_utilization_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#storage_utilization_percent SpannerInstance#storage_utilization_percent}
   */
   readonly storageUtilizationPercent?: number;
 }
@@ -424,15 +852,21 @@ export class SpannerInstanceAutoscalingConfigAutoscalingTargetsOutputReference e
 }
 export interface SpannerInstanceAutoscalingConfig {
   /**
+  * asymmetric_autoscaling_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#asymmetric_autoscaling_options SpannerInstance#asymmetric_autoscaling_options}
+  */
+  readonly asymmetricAutoscalingOptions?: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptions[] | cdktf.IResolvable;
+  /**
   * autoscaling_limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#autoscaling_limits SpannerInstance#autoscaling_limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#autoscaling_limits SpannerInstance#autoscaling_limits}
   */
   readonly autoscalingLimits?: SpannerInstanceAutoscalingConfigAutoscalingLimits;
   /**
   * autoscaling_targets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#autoscaling_targets SpannerInstance#autoscaling_targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#autoscaling_targets SpannerInstance#autoscaling_targets}
   */
   readonly autoscalingTargets?: SpannerInstanceAutoscalingConfigAutoscalingTargets;
 }
@@ -443,6 +877,7 @@ export function spannerInstanceAutoscalingConfigToTerraform(struct?: SpannerInst
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    asymmetric_autoscaling_options: cdktf.listMapper(spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsToTerraform, true)(struct!.asymmetricAutoscalingOptions),
     autoscaling_limits: spannerInstanceAutoscalingConfigAutoscalingLimitsToTerraform(struct!.autoscalingLimits),
     autoscaling_targets: spannerInstanceAutoscalingConfigAutoscalingTargetsToTerraform(struct!.autoscalingTargets),
   }
@@ -455,6 +890,12 @@ export function spannerInstanceAutoscalingConfigToHclTerraform(struct?: SpannerI
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    asymmetric_autoscaling_options: {
+      value: cdktf.listMapperHcl(spannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsToHclTerraform, true)(struct!.asymmetricAutoscalingOptions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsList",
+    },
     autoscaling_limits: {
       value: spannerInstanceAutoscalingConfigAutoscalingLimitsToHclTerraform(struct!.autoscalingLimits),
       isBlock: true,
@@ -487,6 +928,10 @@ export class SpannerInstanceAutoscalingConfigOutputReference extends cdktf.Compl
   public get internalValue(): SpannerInstanceAutoscalingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._asymmetricAutoscalingOptions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.asymmetricAutoscalingOptions = this._asymmetricAutoscalingOptions?.internalValue;
+    }
     if (this._autoscalingLimits?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoscalingLimits = this._autoscalingLimits?.internalValue;
@@ -501,14 +946,32 @@ export class SpannerInstanceAutoscalingConfigOutputReference extends cdktf.Compl
   public set internalValue(value: SpannerInstanceAutoscalingConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._asymmetricAutoscalingOptions.internalValue = undefined;
       this._autoscalingLimits.internalValue = undefined;
       this._autoscalingTargets.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._asymmetricAutoscalingOptions.internalValue = value.asymmetricAutoscalingOptions;
       this._autoscalingLimits.internalValue = value.autoscalingLimits;
       this._autoscalingTargets.internalValue = value.autoscalingTargets;
     }
+  }
+
+  // asymmetric_autoscaling_options - computed: false, optional: true, required: false
+  private _asymmetricAutoscalingOptions = new SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptionsList(this, "asymmetric_autoscaling_options", false);
+  public get asymmetricAutoscalingOptions() {
+    return this._asymmetricAutoscalingOptions;
+  }
+  public putAsymmetricAutoscalingOptions(value: SpannerInstanceAutoscalingConfigAsymmetricAutoscalingOptions[] | cdktf.IResolvable) {
+    this._asymmetricAutoscalingOptions.internalValue = value;
+  }
+  public resetAsymmetricAutoscalingOptions() {
+    this._asymmetricAutoscalingOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get asymmetricAutoscalingOptionsInput() {
+    return this._asymmetricAutoscalingOptions.internalValue;
   }
 
   // autoscaling_limits - computed: false, optional: true, required: false
@@ -545,15 +1008,15 @@ export class SpannerInstanceAutoscalingConfigOutputReference extends cdktf.Compl
 }
 export interface SpannerInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#create SpannerInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#create SpannerInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#delete SpannerInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#delete SpannerInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#update SpannerInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#update SpannerInstance#update}
   */
   readonly update?: string;
 }
@@ -705,7 +1168,7 @@ export class SpannerInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance google_spanner_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance google_spanner_instance}
 */
 export class SpannerInstance extends cdktf.TerraformResource {
 
@@ -721,7 +1184,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SpannerInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SpannerInstance to import
-  * @param importFromId The id of the existing SpannerInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SpannerInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SpannerInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -733,7 +1196,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/spanner_instance google_spanner_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/spanner_instance google_spanner_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -744,7 +1207,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.9.0',
+        providerVersion: '6.10.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -559,6 +559,7 @@ export * as iapAppEngineVersionIamMember from './iap-app-engine-version-iam-memb
 export * as iapAppEngineVersionIamPolicy from './iap-app-engine-version-iam-policy';
 export * as iapBrand from './iap-brand';
 export * as iapClient from './iap-client';
+export * as iapSettings from './iap-settings';
 export * as iapTunnelDestGroup from './iap-tunnel-dest-group';
 export * as iapTunnelDestGroupIamBinding from './iap-tunnel-dest-group-iam-binding';
 export * as iapTunnelDestGroupIamMember from './iap-tunnel-dest-group-iam-member';
@@ -978,6 +979,7 @@ export * as dataGoogleComputeImageIamPolicy from './data-google-compute-image-ia
 export * as dataGoogleComputeInstance from './data-google-compute-instance';
 export * as dataGoogleComputeInstanceGroup from './data-google-compute-instance-group';
 export * as dataGoogleComputeInstanceGroupManager from './data-google-compute-instance-group-manager';
+export * as dataGoogleComputeInstanceGuestAttributes from './data-google-compute-instance-guest-attributes';
 export * as dataGoogleComputeInstanceIamPolicy from './data-google-compute-instance-iam-policy';
 export * as dataGoogleComputeInstanceSerialPort from './data-google-compute-instance-serial-port';
 export * as dataGoogleComputeInstanceTemplate from './data-google-compute-instance-template';
@@ -1150,6 +1152,7 @@ export * as dataGoogleServiceAccountIamPolicy from './data-google-service-accoun
 export * as dataGoogleServiceAccountIdToken from './data-google-service-account-id-token';
 export * as dataGoogleServiceAccountJwt from './data-google-service-account-jwt';
 export * as dataGoogleServiceAccountKey from './data-google-service-account-key';
+export * as dataGoogleServiceAccounts from './data-google-service-accounts';
 export * as dataGoogleServiceNetworkingPeeredDnsDomain from './data-google-service-networking-peered-dns-domain';
 export * as dataGoogleSiteVerificationToken from './data-google-site-verification-token';
 export * as dataGoogleSourcerepoRepository from './data-google-sourcerepo-repository';

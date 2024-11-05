@@ -4,7 +4,7 @@
 
 ### PubsubSchemaIamBinding <a name="PubsubSchemaIamBinding" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding google_pubsub_schema_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding google_pubsub_schema_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBinding.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the PubsubSchemaIamBinding to 
 
 The id of the existing PubsubSchemaIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -857,9 +857,9 @@ new PubsubSchemaIamBindingCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#expression PubsubSchemaIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#title PubsubSchemaIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#description PubsubSchemaIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#expression PubsubSchemaIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#title PubsubSchemaIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#description PubsubSchemaIamBinding#description}. |
 
 ---
 
@@ -871,7 +871,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#expression PubsubSchemaIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#expression PubsubSchemaIamBinding#expression}.
 
 ---
 
@@ -883,7 +883,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#title PubsubSchemaIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#title PubsubSchemaIamBinding#title}.
 
 ---
 
@@ -895,7 +895,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#description PubsubSchemaIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#description PubsubSchemaIamBinding#description}.
 
 ---
 
@@ -934,12 +934,12 @@ new PubsubSchemaIamBindingConfig {
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#members PubsubSchemaIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#role PubsubSchemaIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.schema">Schema</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#schema PubsubSchemaIamBinding#schema}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#members PubsubSchemaIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#role PubsubSchemaIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.schema">Schema</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#schema PubsubSchemaIamBinding#schema}. |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingCondition">PubsubSchemaIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#id PubsubSchemaIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#project PubsubSchemaIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#id PubsubSchemaIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamBinding.PubsubSchemaIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#project PubsubSchemaIamBinding#project}. |
 
 ---
 
@@ -1021,7 +1021,7 @@ public string[] Members { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#members PubsubSchemaIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#members PubsubSchemaIamBinding#members}.
 
 ---
 
@@ -1033,7 +1033,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#role PubsubSchemaIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#role PubsubSchemaIamBinding#role}.
 
 ---
 
@@ -1045,7 +1045,7 @@ public string Schema { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#schema PubsubSchemaIamBinding#schema}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#schema PubsubSchemaIamBinding#schema}.
 
 ---
 
@@ -1059,7 +1059,7 @@ public PubsubSchemaIamBindingCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#condition PubsubSchemaIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#condition PubsubSchemaIamBinding#condition}
 
 ---
 
@@ -1071,7 +1071,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#id PubsubSchemaIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#id PubsubSchemaIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1086,7 +1086,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/pubsub_schema_iam_binding#project PubsubSchemaIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/pubsub_schema_iam_binding#project PubsubSchemaIamBinding#project}.
 
 ---
 

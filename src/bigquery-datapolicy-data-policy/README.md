@@ -1,3 +1,3 @@
 # `google_bigquery_datapolicy_data_policy`
 
-Refer to the Terraform Registry for docs: [`google_bigquery_datapolicy_data_policy`](https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/bigquery_datapolicy_data_policy).
+Refer to the Terraform Registry for docs: [`google_bigquery_datapolicy_data_policy`](https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/bigquery_datapolicy_data_policy).

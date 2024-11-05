@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/monitoring_app_engine_service
+// https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/monitoring_app_engine_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleMonitoringAppEngineServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/monitoring_app_engine_service#id DataGoogleMonitoringAppEngineService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/monitoring_app_engine_service#id DataGoogleMonitoringAppEngineService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface DataGoogleMonitoringAppEngineServiceConfig extends cdktf.Terraf
   * Corresponds to the 'moduleId' resource label for a 'gae_app'
   * monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae_app)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/monitoring_app_engine_service#module_id DataGoogleMonitoringAppEngineService#module_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/monitoring_app_engine_service#module_id DataGoogleMonitoringAppEngineService#module_id}
   */
   readonly moduleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/monitoring_app_engine_service#project DataGoogleMonitoringAppEngineService#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/monitoring_app_engine_service#project DataGoogleMonitoringAppEngineService#project}
   */
   readonly project?: string;
 }
@@ -109,7 +109,7 @@ export class DataGoogleMonitoringAppEngineServiceTelemetryList extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/monitoring_app_engine_service google_monitoring_app_engine_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/monitoring_app_engine_service google_monitoring_app_engine_service}
 */
 export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSource {
 
@@ -125,7 +125,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
   * Generates CDKTF code for importing a DataGoogleMonitoringAppEngineService resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleMonitoringAppEngineService to import
-  * @param importFromId The id of the existing DataGoogleMonitoringAppEngineService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/monitoring_app_engine_service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleMonitoringAppEngineService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/monitoring_app_engine_service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleMonitoringAppEngineService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -137,7 +137,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/monitoring_app_engine_service google_monitoring_app_engine_service} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/monitoring_app_engine_service google_monitoring_app_engine_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -148,7 +148,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
       terraformResourceType: 'google_monitoring_app_engine_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.9.0',
+        providerVersion: '6.10.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

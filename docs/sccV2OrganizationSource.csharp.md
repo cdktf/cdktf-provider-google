@@ -4,7 +4,7 @@
 
 ### SccV2OrganizationSource <a name="SccV2OrganizationSource" id="@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSource"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source google_scc_v2_organization_source}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source google_scc_v2_organization_source}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSource.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the SccV2OrganizationSource to
 
 The id of the existing SccV2OrganizationSource that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -854,7 +854,7 @@ new SccV2OrganizationSourceConfig {
 | <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceConfig.property.displayName">DisplayName</a></code> | <code>string</code> | The source’s display name. |
 | <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceConfig.property.organization">Organization</a></code> | <code>string</code> | The organization whose Cloud Security Command Center the Source lives in. |
 | <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceConfig.property.description">Description</a></code> | <code>string</code> | The description of the source (max of 1024 characters). |
-| <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#id SccV2OrganizationSource#id}. |
+| <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#id SccV2OrganizationSource#id}. |
 | <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceTimeouts">SccV2OrganizationSourceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -945,7 +945,7 @@ can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#display_name SccV2OrganizationSource#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#display_name SccV2OrganizationSource#display_name}
 
 ---
 
@@ -959,7 +959,7 @@ public string Organization { get; set; }
 
 The organization whose Cloud Security Command Center the Source lives in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#organization SccV2OrganizationSource#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#organization SccV2OrganizationSource#organization}
 
 ---
 
@@ -973,7 +973,7 @@ public string Description { get; set; }
 
 The description of the source (max of 1024 characters).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#description SccV2OrganizationSource#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#description SccV2OrganizationSource#description}
 
 ---
 
@@ -985,7 +985,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#id SccV2OrganizationSource#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#id SccV2OrganizationSource#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1002,7 +1002,7 @@ public SccV2OrganizationSourceTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#timeouts SccV2OrganizationSource#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#timeouts SccV2OrganizationSource#timeouts}
 
 ---
 
@@ -1024,9 +1024,9 @@ new SccV2OrganizationSourceTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#create SccV2OrganizationSource#create}. |
-| <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#delete SccV2OrganizationSource#delete}. |
-| <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#update SccV2OrganizationSource#update}. |
+| <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#create SccV2OrganizationSource#create}. |
+| <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#delete SccV2OrganizationSource#delete}. |
+| <code><a href="#@cdktf/provider-google.sccV2OrganizationSource.SccV2OrganizationSourceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#update SccV2OrganizationSource#update}. |
 
 ---
 
@@ -1038,7 +1038,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#create SccV2OrganizationSource#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#create SccV2OrganizationSource#create}.
 
 ---
 
@@ -1050,7 +1050,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#delete SccV2OrganizationSource#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#delete SccV2OrganizationSource#delete}.
 
 ---
 
@@ -1062,7 +1062,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/scc_v2_organization_source#update SccV2OrganizationSource#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/scc_v2_organization_source#update SccV2OrganizationSource#update}.
 
 ---
 

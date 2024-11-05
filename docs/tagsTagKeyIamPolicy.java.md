@@ -4,7 +4,7 @@
 
 ### TagsTagKeyIamPolicy <a name="TagsTagKeyIamPolicy" id="@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy google_tags_tag_key_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy google_tags_tag_key_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer"></a>
 
@@ -40,9 +40,9 @@ TagsTagKeyIamPolicy.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#policy_data TagsTagKeyIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.tagKey">tagKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#tag_key TagsTagKeyIamPolicy#tag_key}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#id TagsTagKeyIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#policy_data TagsTagKeyIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.tagKey">tagKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#tag_key TagsTagKeyIamPolicy#tag_key}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#id TagsTagKeyIamPolicy#id}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#policy_data TagsTagKeyIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#policy_data TagsTagKeyIamPolicy#policy_data}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#tag_key TagsTagKeyIamPolicy#tag_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#tag_key TagsTagKeyIamPolicy#tag_key}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#id TagsTagKeyIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#id TagsTagKeyIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -563,7 +563,7 @@ The construct id used in the generated config for the TagsTagKeyIamPolicy to imp
 
 The id of the existing TagsTagKeyIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -871,9 +871,9 @@ TagsTagKeyIamPolicyConfig.builder()
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#policy_data TagsTagKeyIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.tagKey">tagKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#tag_key TagsTagKeyIamPolicy#tag_key}. |
-| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#id TagsTagKeyIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#policy_data TagsTagKeyIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.tagKey">tagKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#tag_key TagsTagKeyIamPolicy#tag_key}. |
+| <code><a href="#@cdktf/provider-google.tagsTagKeyIamPolicy.TagsTagKeyIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#id TagsTagKeyIamPolicy#id}. |
 
 ---
 
@@ -955,7 +955,7 @@ public java.lang.String getPolicyData();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#policy_data TagsTagKeyIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#policy_data TagsTagKeyIamPolicy#policy_data}.
 
 ---
 
@@ -967,7 +967,7 @@ public java.lang.String getTagKey();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#tag_key TagsTagKeyIamPolicy#tag_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#tag_key TagsTagKeyIamPolicy#tag_key}.
 
 ---
 
@@ -979,7 +979,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/tags_tag_key_iam_policy#id TagsTagKeyIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/tags_tag_key_iam_policy#id TagsTagKeyIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
