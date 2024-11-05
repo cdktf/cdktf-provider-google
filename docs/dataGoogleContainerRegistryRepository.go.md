@@ -4,12 +4,12 @@
 
 ### DataGoogleContainerRegistryRepository <a name="DataGoogleContainerRegistryRepository" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/container_registry_repository google_container_registry_repository}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/container_registry_repository google_container_registry_repository}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecontainerregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryrepository"
 
 datagooglecontainerregistryrepository.NewDataGoogleContainerRegistryRepository(scope Construct, id *string, config DataGoogleContainerRegistryRepositoryConfig) DataGoogleContainerRegistryRepository
 ```
@@ -297,7 +297,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecontainerregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryrepository"
 
 datagooglecontainerregistryrepository.DataGoogleContainerRegistryRepository_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecontainerregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryrepository"
 
 datagooglecontainerregistryrepository.DataGoogleContainerRegistryRepository_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglecontainerregistryrepository.DataGoogleContainerRegistryRepository_IsTe
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecontainerregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryrepository"
 
 datagooglecontainerregistryrepository.DataGoogleContainerRegistryRepository_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglecontainerregistryrepository.DataGoogleContainerRegistryRepository_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecontainerregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryrepository"
 
 datagooglecontainerregistryrepository.DataGoogleContainerRegistryRepository_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleContainerRegistr
 
 The id of the existing DataGoogleContainerRegistryRepository that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/container_registry_repository#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/container_registry_repository#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -641,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecontainerregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerregistryrepository"
 
 &datagooglecontainerregistryrepository.DataGoogleContainerRegistryRepositoryConfig {
 	Connection: interface{},
@@ -668,9 +668,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecontainer
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
 
 ---
 
@@ -752,7 +752,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -767,7 +767,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
 
 ---
 
@@ -779,7 +779,7 @@ Region *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
 
 ---
 

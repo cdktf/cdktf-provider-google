@@ -4,12 +4,12 @@
 
 ### LoggingLogScope <a name="LoggingLogScope" id="@cdktf/provider-google.loggingLogScope.LoggingLogScope"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope google_logging_log_scope}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope google_logging_log_scope}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogScope.LoggingLogScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogscope"
 
 logginglogscope.NewLoggingLogScope(scope Construct, id *string, config LoggingLogScopeConfig) LoggingLogScope
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingLogScope.LoggingLogScope.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogscope"
 
 logginglogscope.LoggingLogScope_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingLogScope.LoggingLogScope.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogscope"
 
 logginglogscope.LoggingLogScope_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ logginglogscope.LoggingLogScope_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingLogScope.LoggingLogScope.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogscope"
 
 logginglogscope.LoggingLogScope_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ logginglogscope.LoggingLogScope_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingLogScope.LoggingLogScope.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogscope"
 
 logginglogscope.LoggingLogScope_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -515,7 +515,7 @@ The construct id used in the generated config for the LoggingLogScope to import.
 
 The id of the existing LoggingLogScope that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -891,7 +891,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogscope"
 
 &logginglogscope.LoggingLogScopeConfig {
 	Connection: interface{},
@@ -907,7 +907,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
 	Id: *string,
 	Location: *string,
 	Parent: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.loggingLogScope.LoggingLogScopeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.loggingLogScope.LoggingLogScopeTimeouts,
 }
 ```
 
@@ -925,7 +925,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.name">Name</a></code> | <code>*string</code> | The resource name of the log scope. For example: \'projects/my-project/locations/global/logScopes/my-log-scope\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.resourceNames">ResourceNames</a></code> | <code>*[]*string</code> | Names of one or more parent resources : *  \'projects/[PROJECT_ID]\' May alternatively be one or more views : * \'projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]\' A log scope can include a maximum of 50 projects and a maximum of 100 resources in total. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.description">Description</a></code> | <code>*string</code> | Describes this log scopes. |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#id LoggingLogScope#id}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#id LoggingLogScope#id}. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.location">Location</a></code> | <code>*string</code> | The location of the resource. The only supported location is global so far. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.parent">Parent</a></code> | <code>*string</code> | The parent of the resource. |
 | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts">LoggingLogScopeTimeouts</a></code> | timeouts block. |
@@ -1012,7 +1012,7 @@ Name *string
 
 The resource name of the log scope. For example: \'projects/my-project/locations/global/logScopes/my-log-scope\'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#name LoggingLogScope#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#name LoggingLogScope#name}
 
 ---
 
@@ -1026,7 +1026,7 @@ ResourceNames *[]*string
 
 Names of one or more parent resources : *  \'projects/[PROJECT_ID]\' May alternatively be one or more views : * \'projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]\' A log scope can include a maximum of 50 projects and a maximum of 100 resources in total.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#resource_names LoggingLogScope#resource_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#resource_names LoggingLogScope#resource_names}
 
 ---
 
@@ -1040,7 +1040,7 @@ Description *string
 
 Describes this log scopes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#description LoggingLogScope#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#description LoggingLogScope#description}
 
 ---
 
@@ -1052,7 +1052,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#id LoggingLogScope#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#id LoggingLogScope#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1069,7 +1069,7 @@ Location *string
 
 The location of the resource. The only supported location is global so far.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#location LoggingLogScope#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#location LoggingLogScope#location}
 
 ---
 
@@ -1083,7 +1083,7 @@ Parent *string
 
 The parent of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#parent LoggingLogScope#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#parent LoggingLogScope#parent}
 
 ---
 
@@ -1097,7 +1097,7 @@ Timeouts LoggingLogScopeTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#timeouts LoggingLogScope#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#timeouts LoggingLogScope#timeouts}
 
 ---
 
@@ -1106,7 +1106,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogscope"
 
 &logginglogscope.LoggingLogScopeTimeouts {
 	Create: *string,
@@ -1119,9 +1119,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#create LoggingLogScope#create}. |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}. |
-| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#update LoggingLogScope#update}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#create LoggingLogScope#create}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}. |
+| <code><a href="#@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#update LoggingLogScope#update}. |
 
 ---
 
@@ -1133,7 +1133,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#create LoggingLogScope#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#create LoggingLogScope#create}.
 
 ---
 
@@ -1145,7 +1145,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#delete LoggingLogScope#delete}.
 
 ---
 
@@ -1157,7 +1157,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/logging_log_scope#update LoggingLogScope#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/logging_log_scope#update LoggingLogScope#update}.
 
 ---
 
@@ -1168,7 +1168,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogScope.LoggingLogScopeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogscope"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogscope"
 
 logginglogscope.NewLoggingLogScopeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingLogScopeTimeoutsOutputReference
 ```

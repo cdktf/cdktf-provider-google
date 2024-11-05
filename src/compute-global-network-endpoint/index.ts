@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint
+// https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,17 +11,17 @@ export interface ComputeGlobalNetworkEndpointConfig extends cdktf.TerraformMetaA
   * Fully qualified domain name of network endpoint.
   * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#fqdn ComputeGlobalNetworkEndpoint#fqdn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#fqdn ComputeGlobalNetworkEndpoint#fqdn}
   */
   readonly fqdn?: string;
   /**
   * The global network endpoint group this endpoint is part of.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#global_network_endpoint_group ComputeGlobalNetworkEndpoint#global_network_endpoint_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#global_network_endpoint_group ComputeGlobalNetworkEndpoint#global_network_endpoint_group}
   */
   readonly globalNetworkEndpointGroup: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#id ComputeGlobalNetworkEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#id ComputeGlobalNetworkEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -35,33 +30,33 @@ export interface ComputeGlobalNetworkEndpointConfig extends cdktf.TerraformMetaA
   /**
   * IPv4 address external endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#ip_address ComputeGlobalNetworkEndpoint#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#ip_address ComputeGlobalNetworkEndpoint#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * Port number of the external endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#port ComputeGlobalNetworkEndpoint#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#port ComputeGlobalNetworkEndpoint#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#project ComputeGlobalNetworkEndpoint#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#project ComputeGlobalNetworkEndpoint#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#timeouts ComputeGlobalNetworkEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#timeouts ComputeGlobalNetworkEndpoint#timeouts}
   */
   readonly timeouts?: ComputeGlobalNetworkEndpointTimeouts;
 }
 export interface ComputeGlobalNetworkEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#create ComputeGlobalNetworkEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#create ComputeGlobalNetworkEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#delete ComputeGlobalNetworkEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#delete ComputeGlobalNetworkEndpoint#delete}
   */
   readonly delete?: string;
 }
@@ -184,7 +179,7 @@ export class ComputeGlobalNetworkEndpointTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint google_compute_global_network_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint google_compute_global_network_endpoint}
 */
 export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
 
@@ -200,7 +195,7 @@ export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeGlobalNetworkEndpoint resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeGlobalNetworkEndpoint to import
-  * @param importFromId The id of the existing ComputeGlobalNetworkEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeGlobalNetworkEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeGlobalNetworkEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -212,7 +207,7 @@ export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_global_network_endpoint google_compute_global_network_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_global_network_endpoint google_compute_global_network_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -223,7 +218,7 @@ export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_global_network_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.9.0',
+        providerVersion: '6.10.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -4,12 +4,12 @@
 
 ### ComputeInstanceSettings <a name="ComputeInstanceSettings" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings google_compute_instance_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings google_compute_instance_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 computeinstancesettings.NewComputeInstanceSettings(scope Construct, id *string, config ComputeInstanceSettingsConfig) ComputeInstanceSettings
 ```
@@ -432,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 computeinstancesettings.ComputeInstanceSettings_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 computeinstancesettings.ComputeInstanceSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ computeinstancesettings.ComputeInstanceSettings_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettings.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 computeinstancesettings.ComputeInstanceSettings_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ computeinstancesettings.ComputeInstanceSettings_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettings.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 computeinstancesettings.ComputeInstanceSettings_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -521,7 +521,7 @@ The construct id used in the generated config for the ComputeInstanceSettings to
 
 The id of the existing ComputeInstanceSettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -842,7 +842,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 &computeinstancesettings.ComputeInstanceSettingsConfig {
 	Connection: interface{},
@@ -854,9 +854,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesett
 	Provisioners: *[]interface{},
 	Zone: *string,
 	Id: *string,
-	Metadata: github.com/cdktf/cdktf-provider-google-go/google/v14.computeInstanceSettings.ComputeInstanceSettingsMetadata,
+	Metadata: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceSettings.ComputeInstanceSettingsMetadata,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeInstanceSettings.ComputeInstanceSettingsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceSettings.ComputeInstanceSettingsTimeouts,
 }
 ```
 
@@ -872,9 +872,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesett
 | <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.zone">Zone</a></code> | <code>*string</code> | A reference to the zone where the machine resides. |
-| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#id ComputeInstanceSettings#id}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#id ComputeInstanceSettings#id}. |
 | <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.metadata">Metadata</a></code> | <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsMetadata">ComputeInstanceSettingsMetadata</a></code> | metadata block. |
-| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#project ComputeInstanceSettings#project}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#project ComputeInstanceSettings#project}. |
 | <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeouts">ComputeInstanceSettingsTimeouts</a></code> | timeouts block. |
 
 ---
@@ -959,7 +959,7 @@ Zone *string
 
 A reference to the zone where the machine resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#zone ComputeInstanceSettings#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#zone ComputeInstanceSettings#zone}
 
 ---
 
@@ -971,7 +971,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#id ComputeInstanceSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#id ComputeInstanceSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -988,7 +988,7 @@ Metadata ComputeInstanceSettingsMetadata
 
 metadata block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#metadata ComputeInstanceSettings#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#metadata ComputeInstanceSettings#metadata}
 
 ---
 
@@ -1000,7 +1000,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#project ComputeInstanceSettings#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#project ComputeInstanceSettings#project}.
 
 ---
 
@@ -1014,7 +1014,7 @@ Timeouts ComputeInstanceSettingsTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#timeouts ComputeInstanceSettings#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#timeouts ComputeInstanceSettings#timeouts}
 
 ---
 
@@ -1023,7 +1023,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 &computeinstancesettings.ComputeInstanceSettingsMetadata {
 	Items: *map[string]*string,
@@ -1048,7 +1048,7 @@ Items *map[string]*string
 
 A metadata key/value items map. The total size of all keys and values must be less than 512KB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#items ComputeInstanceSettings#items}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#items ComputeInstanceSettings#items}
 
 ---
 
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 &computeinstancesettings.ComputeInstanceSettingsTimeouts {
 	Create: *string,
@@ -1070,9 +1070,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesett
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#create ComputeInstanceSettings#create}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#delete ComputeInstanceSettings#delete}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#update ComputeInstanceSettings#update}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#create ComputeInstanceSettings#create}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#delete ComputeInstanceSettings#delete}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#update ComputeInstanceSettings#update}. |
 
 ---
 
@@ -1084,7 +1084,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#create ComputeInstanceSettings#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#create ComputeInstanceSettings#create}.
 
 ---
 
@@ -1096,7 +1096,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#delete ComputeInstanceSettings#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#delete ComputeInstanceSettings#delete}.
 
 ---
 
@@ -1108,7 +1108,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/compute_instance_settings#update ComputeInstanceSettings#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_instance_settings#update ComputeInstanceSettings#update}.
 
 ---
 
@@ -1119,7 +1119,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 computeinstancesettings.NewComputeInstanceSettingsMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceSettingsMetadataOutputReference
 ```
@@ -1397,7 +1397,7 @@ func InternalValue() ComputeInstanceSettingsMetadata
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceSettings.ComputeInstanceSettingsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancesettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancesettings"
 
 computeinstancesettings.NewComputeInstanceSettingsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceSettingsTimeoutsOutputReference
 ```

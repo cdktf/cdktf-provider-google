@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry
+// https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,30 +10,30 @@ export interface DataCatalogEntryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Entry description, which can consist of several sentences or paragraphs that describe entry contents.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#description DataCatalogEntry#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#description DataCatalogEntry#description}
   */
   readonly description?: string;
   /**
   * Display information such as title and description. A short name to identify the entry,
   * for example, "Analytics Data - Jan 2011".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#display_name DataCatalogEntry#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#display_name DataCatalogEntry#display_name}
   */
   readonly displayName?: string;
   /**
   * The name of the entry group this entry is in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#entry_group DataCatalogEntry#entry_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#entry_group DataCatalogEntry#entry_group}
   */
   readonly entryGroup: string;
   /**
   * The id of the entry to create.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#entry_id DataCatalogEntry#entry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#entry_id DataCatalogEntry#entry_id}
   */
   readonly entryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#id DataCatalogEntry#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#id DataCatalogEntry#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -52,7 +47,7 @@ export interface DataCatalogEntryConfig extends cdktf.TerraformMetaArguments {
   * Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
   * this field is optional and defaults to an empty string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#linked_resource DataCatalogEntry#linked_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#linked_resource DataCatalogEntry#linked_resource}
   */
   readonly linkedResource?: string;
   /**
@@ -61,14 +56,14 @@ export interface DataCatalogEntryConfig extends cdktf.TerraformMetaArguments {
   * https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
   * for what fields this schema can contain.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#schema DataCatalogEntry#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#schema DataCatalogEntry#schema}
   */
   readonly schema?: string;
   /**
   * The type of the entry. Only used for Entries with types in the EntryType enum.
   * Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values: ["FILESET"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#type DataCatalogEntry#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#type DataCatalogEntry#type}
   */
   readonly type?: string;
   /**
@@ -76,7 +71,7 @@ export interface DataCatalogEntryConfig extends cdktf.TerraformMetaArguments {
   * userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
   * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#user_specified_system DataCatalogEntry#user_specified_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#user_specified_system DataCatalogEntry#user_specified_system}
   */
   readonly userSpecifiedSystem?: string;
   /**
@@ -86,19 +81,19 @@ export interface DataCatalogEntryConfig extends cdktf.TerraformMetaArguments {
   * userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
   * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#user_specified_type DataCatalogEntry#user_specified_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#user_specified_type DataCatalogEntry#user_specified_type}
   */
   readonly userSpecifiedType?: string;
   /**
   * gcs_fileset_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#gcs_fileset_spec DataCatalogEntry#gcs_fileset_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#gcs_fileset_spec DataCatalogEntry#gcs_fileset_spec}
   */
   readonly gcsFilesetSpec?: DataCatalogEntryGcsFilesetSpec;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#timeouts DataCatalogEntry#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#timeouts DataCatalogEntry#timeouts}
   */
   readonly timeouts?: DataCatalogEntryTimeouts;
 }
@@ -519,7 +514,7 @@ export interface DataCatalogEntryGcsFilesetSpec {
   * * gs://bucket_name/a/* /b: matches all files in bucket_name that match a/* /b pattern, such as a/c/b, a/d/b
   * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#file_patterns DataCatalogEntry#file_patterns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#file_patterns DataCatalogEntry#file_patterns}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -608,15 +603,15 @@ export class DataCatalogEntryGcsFilesetSpecOutputReference extends cdktf.Complex
 }
 export interface DataCatalogEntryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#create DataCatalogEntry#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#create DataCatalogEntry#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#delete DataCatalogEntry#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#delete DataCatalogEntry#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#update DataCatalogEntry#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#update DataCatalogEntry#update}
   */
   readonly update?: string;
 }
@@ -768,7 +763,7 @@ export class DataCatalogEntryTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry google_data_catalog_entry}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry google_data_catalog_entry}
 */
 export class DataCatalogEntry extends cdktf.TerraformResource {
 
@@ -784,7 +779,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataCatalogEntry resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataCatalogEntry to import
-  * @param importFromId The id of the existing DataCatalogEntry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataCatalogEntry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataCatalogEntry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -796,7 +791,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.9.0/docs/resources/data_catalog_entry google_data_catalog_entry} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/data_catalog_entry google_data_catalog_entry} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -807,7 +802,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_entry',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.9.0',
+        providerVersion: '6.10.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
