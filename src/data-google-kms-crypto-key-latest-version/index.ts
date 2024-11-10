@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/data-sources/kms_crypto_key_latest_version
 // generated from terraform resource schema
 
