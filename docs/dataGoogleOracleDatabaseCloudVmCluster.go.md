@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.NewDataGoogleOracleDatabaseCloudVmCluster(scope Construct, id *string, config DataGoogleOracleDatabaseCloudVmClusterConfig) DataGoogleOracleDatabaseCloudVmCluster
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmCluster_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmCluster_Is
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmCluster.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmCluster_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmCluster_Is
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -777,7 +777,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 &datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmClusterConfig {
 	Connection: interface{},
@@ -947,7 +947,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 &datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmClusterProperties {
 
@@ -960,7 +960,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabas
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnosticsDataCollectionOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 &datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnosticsDataCollectionOptions {
 
@@ -973,7 +973,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabas
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesTimeZone.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 &datagoogleoracledatabasecloudvmcluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesTimeZone {
 
@@ -988,7 +988,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabas
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnosticsDataCollectionOptionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.NewDataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnosticsDataCollectionOptionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnosticsDataCollectionOptionsList
 ```
@@ -1137,7 +1137,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnosticsDataCollectionOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.NewDataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnosticsDataCollectionOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnosticsDataCollectionOptionsOutputReference
 ```
@@ -1437,7 +1437,7 @@ func InternalValue() DataGoogleOracleDatabaseCloudVmClusterPropertiesDiagnostics
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.NewDataGoogleOracleDatabaseCloudVmClusterPropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleOracleDatabaseCloudVmClusterPropertiesList
 ```
@@ -1586,7 +1586,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.NewDataGoogleOracleDatabaseCloudVmClusterPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleOracleDatabaseCloudVmClusterPropertiesOutputReference
 ```
@@ -2205,7 +2205,7 @@ func InternalValue() DataGoogleOracleDatabaseCloudVmClusterProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesTimeZoneList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.NewDataGoogleOracleDatabaseCloudVmClusterPropertiesTimeZoneList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleOracleDatabaseCloudVmClusterPropertiesTimeZoneList
 ```
@@ -2354,7 +2354,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseCloudVmCluster.DataGoogleOracleDatabaseCloudVmClusterPropertiesTimeZoneOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasecloudvmcluster"
 
 datagoogleoracledatabasecloudvmcluster.NewDataGoogleOracleDatabaseCloudVmClusterPropertiesTimeZoneOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleOracleDatabaseCloudVmClusterPropertiesTimeZoneOutputReference
 ```
