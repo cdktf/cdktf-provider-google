@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface ComputeSecurityPolicyConfig extends cdktf.TerraformMetaArgument
   /**
   * An optional description of this security policy. Max size is 2048.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#id ComputeSecurityPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,49 +23,49 @@ export interface ComputeSecurityPolicyConfig extends cdktf.TerraformMetaArgument
   /**
   * The name of the security policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#name ComputeSecurityPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#name ComputeSecurityPolicy#name}
   */
   readonly name: string;
   /**
   * The project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#project ComputeSecurityPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#project ComputeSecurityPolicy#project}
   */
   readonly project?: string;
   /**
   * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
   */
   readonly type?: string;
   /**
   * adaptive_protection_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#adaptive_protection_config ComputeSecurityPolicy#adaptive_protection_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#adaptive_protection_config ComputeSecurityPolicy#adaptive_protection_config}
   */
   readonly adaptiveProtectionConfig?: ComputeSecurityPolicyAdaptiveProtectionConfig;
   /**
   * advanced_options_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#advanced_options_config ComputeSecurityPolicy#advanced_options_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#advanced_options_config ComputeSecurityPolicy#advanced_options_config}
   */
   readonly advancedOptionsConfig?: ComputeSecurityPolicyAdvancedOptionsConfig;
   /**
   * recaptcha_options_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#recaptcha_options_config ComputeSecurityPolicy#recaptcha_options_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#recaptcha_options_config ComputeSecurityPolicy#recaptcha_options_config}
   */
   readonly recaptchaOptionsConfig?: ComputeSecurityPolicyRecaptchaOptionsConfig;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#rule ComputeSecurityPolicy#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#rule ComputeSecurityPolicy#rule}
   */
   readonly rule?: ComputeSecurityPolicyRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#timeouts ComputeSecurityPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#timeouts ComputeSecurityPolicy#timeouts}
   */
   readonly timeouts?: ComputeSecurityPolicyTimeouts;
 }
@@ -78,13 +73,13 @@ export interface ComputeSecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseC
   /**
   * If set to true, enables CAAP for L7 DDoS detection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#enable ComputeSecurityPolicy#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#enable ComputeSecurityPolicy#enable}
   */
   readonly enable?: boolean | cdktf.IResolvable;
   /**
   * Rule visibility. Supported values include: "STANDARD", "PREMIUM".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#rule_visibility ComputeSecurityPolicy#rule_visibility}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#rule_visibility ComputeSecurityPolicy#rule_visibility}
   */
   readonly ruleVisibility?: string;
 }
@@ -199,7 +194,7 @@ export interface ComputeSecurityPolicyAdaptiveProtectionConfig {
   /**
   * layer_7_ddos_defense_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#layer_7_ddos_defense_config ComputeSecurityPolicy#layer_7_ddos_defense_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#layer_7_ddos_defense_config ComputeSecurityPolicy#layer_7_ddos_defense_config}
   */
   readonly layer7DdosDefenseConfig?: ComputeSecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig;
 }
@@ -285,7 +280,7 @@ export interface ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig {
   /**
   * A list of custom Content-Type header values to apply the JSON parsing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#content_types ComputeSecurityPolicy#content_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#content_types ComputeSecurityPolicy#content_types}
   */
   readonly contentTypes: string[];
 }
@@ -368,25 +363,25 @@ export interface ComputeSecurityPolicyAdvancedOptionsConfig {
   /**
   * JSON body parsing. Supported values include: "DISABLED", "STANDARD".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#json_parsing ComputeSecurityPolicy#json_parsing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#json_parsing ComputeSecurityPolicy#json_parsing}
   */
   readonly jsonParsing?: string;
   /**
   * Logging level. Supported values include: "NORMAL", "VERBOSE".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#log_level ComputeSecurityPolicy#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#log_level ComputeSecurityPolicy#log_level}
   */
   readonly logLevel?: string;
   /**
   * An optional list of case-insensitive request header names to use for resolving the callers client IP address.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#user_ip_request_headers ComputeSecurityPolicy#user_ip_request_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#user_ip_request_headers ComputeSecurityPolicy#user_ip_request_headers}
   */
   readonly userIpRequestHeaders?: string[];
   /**
   * json_custom_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#json_custom_config ComputeSecurityPolicy#json_custom_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#json_custom_config ComputeSecurityPolicy#json_custom_config}
   */
   readonly jsonCustomConfig?: ComputeSecurityPolicyAdvancedOptionsConfigJsonCustomConfig;
 }
@@ -559,7 +554,7 @@ export interface ComputeSecurityPolicyRecaptchaOptionsConfig {
   /**
   * A field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#redirect_site_key ComputeSecurityPolicy#redirect_site_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#redirect_site_key ComputeSecurityPolicy#redirect_site_key}
   */
   readonly redirectSiteKey: string;
 }
@@ -642,13 +637,13 @@ export interface ComputeSecurityPolicyRuleHeaderActionRequestHeadersToAdds {
   /**
   * The name of the header to set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#header_name ComputeSecurityPolicy#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#header_name ComputeSecurityPolicy#header_name}
   */
   readonly headerName: string;
   /**
   * The value to set the named header to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#header_value ComputeSecurityPolicy#header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#header_value ComputeSecurityPolicy#header_value}
   */
   readonly headerValue?: string;
 }
@@ -792,7 +787,7 @@ export interface ComputeSecurityPolicyRuleHeaderAction {
   /**
   * request_headers_to_adds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#request_headers_to_adds ComputeSecurityPolicy#request_headers_to_adds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#request_headers_to_adds ComputeSecurityPolicy#request_headers_to_adds}
   */
   readonly requestHeadersToAdds: ComputeSecurityPolicyRuleHeaderActionRequestHeadersToAdds[] | cdktf.IResolvable;
 }
@@ -875,7 +870,7 @@ export interface ComputeSecurityPolicyRuleMatchConfig {
   /**
   * Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '*' matches all IPs (can be used to override the default behavior).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#src_ip_ranges ComputeSecurityPolicy#src_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#src_ip_ranges ComputeSecurityPolicy#src_ip_ranges}
   */
   readonly srcIpRanges: string[];
 }
@@ -958,7 +953,7 @@ export interface ComputeSecurityPolicyRuleMatchExpr {
   /**
   * Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#expression ComputeSecurityPolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#expression ComputeSecurityPolicy#expression}
   */
   readonly expression: string;
 }
@@ -1041,13 +1036,13 @@ export interface ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptions {
   /**
   * A list of site keys to be used during the validation of reCAPTCHA action-tokens. The provided site keys need to be created from reCAPTCHA API under the same project where the security policy is created
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#action_token_site_keys ComputeSecurityPolicy#action_token_site_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#action_token_site_keys ComputeSecurityPolicy#action_token_site_keys}
   */
   readonly actionTokenSiteKeys?: string[];
   /**
   * A list of site keys to be used during the validation of reCAPTCHA session-tokens. The provided site keys need to be created from reCAPTCHA API under the same project where the security policy is created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#session_token_site_keys ComputeSecurityPolicy#session_token_site_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#session_token_site_keys ComputeSecurityPolicy#session_token_site_keys}
   */
   readonly sessionTokenSiteKeys?: string[];
 }
@@ -1162,7 +1157,7 @@ export interface ComputeSecurityPolicyRuleMatchExprOptions {
   /**
   * recaptcha_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#recaptcha_options ComputeSecurityPolicy#recaptcha_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#recaptcha_options ComputeSecurityPolicy#recaptcha_options}
   */
   readonly recaptchaOptions: ComputeSecurityPolicyRuleMatchExprOptionsRecaptchaOptions;
 }
@@ -1245,25 +1240,25 @@ export interface ComputeSecurityPolicyRuleMatch {
   /**
   * Predefined rule expression. If this field is specified, config must also be specified. Available options:   SRC_IPS_V1: Must specify the corresponding src_ip_ranges field in config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#versioned_expr ComputeSecurityPolicy#versioned_expr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#versioned_expr ComputeSecurityPolicy#versioned_expr}
   */
   readonly versionedExpr?: string;
   /**
   * config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#config ComputeSecurityPolicy#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#config ComputeSecurityPolicy#config}
   */
   readonly config?: ComputeSecurityPolicyRuleMatchConfig;
   /**
   * expr block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#expr ComputeSecurityPolicy#expr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#expr ComputeSecurityPolicy#expr}
   */
   readonly expr?: ComputeSecurityPolicyRuleMatchExpr;
   /**
   * expr_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#expr_options ComputeSecurityPolicy#expr_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#expr_options ComputeSecurityPolicy#expr_options}
   */
   readonly exprOptions?: ComputeSecurityPolicyRuleMatchExprOptions;
 }
@@ -1432,17 +1427,993 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
     return this._exprOptions.internalValue;
   }
 }
+export interface ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie {
+  /**
+  * You can specify an exact match or a partial match by using a field operator and a field value. Available options: EQUALS: The operator matches if the field value equals the specified value. STARTS_WITH: The operator matches if the field value starts with the specified value. ENDS_WITH: The operator matches if the field value ends with the specified value. CONTAINS: The operator matches if the field value contains the specified value. EQUALS_ANY: The operator matches if the field value is any value.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#operator ComputeSecurityPolicy#operator}
+  */
+  readonly operator: string;
+  /**
+  * A request field matching the specified value will be excluded from inspection during preconfigured WAF evaluation. The field value must be given if the field operator is not EQUALS_ANY, and cannot be given if the field operator is EQUALS_ANY.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#value ComputeSecurityPolicy#value}
+  */
+  readonly value?: string;
+}
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieToTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieToHclTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._operator = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._operator = value.operator;
+      this._value = value.value;
+    }
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieList extends cdktf.ComplexList {
+  public internalValue? : ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieOutputReference {
+    return new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader {
+  /**
+  * You can specify an exact match or a partial match by using a field operator and a field value. Available options: EQUALS: The operator matches if the field value equals the specified value. STARTS_WITH: The operator matches if the field value starts with the specified value. ENDS_WITH: The operator matches if the field value ends with the specified value. CONTAINS: The operator matches if the field value contains the specified value. EQUALS_ANY: The operator matches if the field value is any value.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#operator ComputeSecurityPolicy#operator}
+  */
+  readonly operator: string;
+  /**
+  * A request field matching the specified value will be excluded from inspection during preconfigured WAF evaluation. The field value must be given if the field operator is not EQUALS_ANY, and cannot be given if the field operator is EQUALS_ANY.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#value ComputeSecurityPolicy#value}
+  */
+  readonly value?: string;
+}
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderToTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderToHclTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._operator = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._operator = value.operator;
+      this._value = value.value;
+    }
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderList extends cdktf.ComplexList {
+  public internalValue? : ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderOutputReference {
+    return new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam {
+  /**
+  * You can specify an exact match or a partial match by using a field operator and a field value. Available options: EQUALS: The operator matches if the field value equals the specified value. STARTS_WITH: The operator matches if the field value starts with the specified value. ENDS_WITH: The operator matches if the field value ends with the specified value. CONTAINS: The operator matches if the field value contains the specified value. EQUALS_ANY: The operator matches if the field value is any value.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#operator ComputeSecurityPolicy#operator}
+  */
+  readonly operator: string;
+  /**
+  * A request field matching the specified value will be excluded from inspection during preconfigured WAF evaluation. The field value must be given if the field operator is not EQUALS_ANY, and cannot be given if the field operator is EQUALS_ANY.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#value ComputeSecurityPolicy#value}
+  */
+  readonly value?: string;
+}
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamToTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamToHclTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._operator = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._operator = value.operator;
+      this._value = value.value;
+    }
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamList extends cdktf.ComplexList {
+  public internalValue? : ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamOutputReference {
+    return new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri {
+  /**
+  * You can specify an exact match or a partial match by using a field operator and a field value. Available options: EQUALS: The operator matches if the field value equals the specified value. STARTS_WITH: The operator matches if the field value starts with the specified value. ENDS_WITH: The operator matches if the field value ends with the specified value. CONTAINS: The operator matches if the field value contains the specified value. EQUALS_ANY: The operator matches if the field value is any value.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#operator ComputeSecurityPolicy#operator}
+  */
+  readonly operator: string;
+  /**
+  * A request field matching the specified value will be excluded from inspection during preconfigured WAF evaluation. The field value must be given if the field operator is not EQUALS_ANY, and cannot be given if the field operator is EQUALS_ANY.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#value ComputeSecurityPolicy#value}
+  */
+  readonly value?: string;
+}
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriToTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriToHclTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._operator = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._operator = value.operator;
+      this._value = value.value;
+    }
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriList extends cdktf.ComplexList {
+  public internalValue? : ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriOutputReference {
+    return new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion {
+  /**
+  * A list of target rule IDs under the WAF rule set to apply the preconfigured WAF exclusion. If omitted, it refers to all the rule IDs under the WAF rule set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#target_rule_ids ComputeSecurityPolicy#target_rule_ids}
+  */
+  readonly targetRuleIds?: string[];
+  /**
+  * Target WAF rule set to apply the preconfigured WAF exclusion.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#target_rule_set ComputeSecurityPolicy#target_rule_set}
+  */
+  readonly targetRuleSet: string;
+  /**
+  * request_cookie block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#request_cookie ComputeSecurityPolicy#request_cookie}
+  */
+  readonly requestCookie?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie[] | cdktf.IResolvable;
+  /**
+  * request_header block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#request_header ComputeSecurityPolicy#request_header}
+  */
+  readonly requestHeader?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader[] | cdktf.IResolvable;
+  /**
+  * request_query_param block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#request_query_param ComputeSecurityPolicy#request_query_param}
+  */
+  readonly requestQueryParam?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam[] | cdktf.IResolvable;
+  /**
+  * request_uri block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#request_uri ComputeSecurityPolicy#request_uri}
+  */
+  readonly requestUri?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri[] | cdktf.IResolvable;
+}
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionToTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    target_rule_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.targetRuleIds),
+    target_rule_set: cdktf.stringToTerraform(struct!.targetRuleSet),
+    request_cookie: cdktf.listMapper(computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieToTerraform, true)(struct!.requestCookie),
+    request_header: cdktf.listMapper(computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderToTerraform, true)(struct!.requestHeader),
+    request_query_param: cdktf.listMapper(computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamToTerraform, true)(struct!.requestQueryParam),
+    request_uri: cdktf.listMapper(computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriToTerraform, true)(struct!.requestUri),
+  }
+}
+
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigExclusionToHclTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    target_rule_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.targetRuleIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    target_rule_set: {
+      value: cdktf.stringToHclTerraform(struct!.targetRuleSet),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request_cookie: {
+      value: cdktf.listMapperHcl(computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieToHclTerraform, true)(struct!.requestCookie),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieList",
+    },
+    request_header: {
+      value: cdktf.listMapperHcl(computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderToHclTerraform, true)(struct!.requestHeader),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderList",
+    },
+    request_query_param: {
+      value: cdktf.listMapperHcl(computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamToHclTerraform, true)(struct!.requestQueryParam),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamList",
+    },
+    request_uri: {
+      value: cdktf.listMapperHcl(computeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriToHclTerraform, true)(struct!.requestUri),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._targetRuleIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetRuleIds = this._targetRuleIds;
+    }
+    if (this._targetRuleSet !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetRuleSet = this._targetRuleSet;
+    }
+    if (this._requestCookie?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestCookie = this._requestCookie?.internalValue;
+    }
+    if (this._requestHeader?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestHeader = this._requestHeader?.internalValue;
+    }
+    if (this._requestQueryParam?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestQueryParam = this._requestQueryParam?.internalValue;
+    }
+    if (this._requestUri?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestUri = this._requestUri?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._targetRuleIds = undefined;
+      this._targetRuleSet = undefined;
+      this._requestCookie.internalValue = undefined;
+      this._requestHeader.internalValue = undefined;
+      this._requestQueryParam.internalValue = undefined;
+      this._requestUri.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._targetRuleIds = value.targetRuleIds;
+      this._targetRuleSet = value.targetRuleSet;
+      this._requestCookie.internalValue = value.requestCookie;
+      this._requestHeader.internalValue = value.requestHeader;
+      this._requestQueryParam.internalValue = value.requestQueryParam;
+      this._requestUri.internalValue = value.requestUri;
+    }
+  }
+
+  // target_rule_ids - computed: false, optional: true, required: false
+  private _targetRuleIds?: string[]; 
+  public get targetRuleIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('target_rule_ids'));
+  }
+  public set targetRuleIds(value: string[]) {
+    this._targetRuleIds = value;
+  }
+  public resetTargetRuleIds() {
+    this._targetRuleIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetRuleIdsInput() {
+    return this._targetRuleIds;
+  }
+
+  // target_rule_set - computed: false, optional: false, required: true
+  private _targetRuleSet?: string; 
+  public get targetRuleSet() {
+    return this.getStringAttribute('target_rule_set');
+  }
+  public set targetRuleSet(value: string) {
+    this._targetRuleSet = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetRuleSetInput() {
+    return this._targetRuleSet;
+  }
+
+  // request_cookie - computed: false, optional: true, required: false
+  private _requestCookie = new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookieList(this, "request_cookie", false);
+  public get requestCookie() {
+    return this._requestCookie;
+  }
+  public putRequestCookie(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie[] | cdktf.IResolvable) {
+    this._requestCookie.internalValue = value;
+  }
+  public resetRequestCookie() {
+    this._requestCookie.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestCookieInput() {
+    return this._requestCookie.internalValue;
+  }
+
+  // request_header - computed: false, optional: true, required: false
+  private _requestHeader = new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeaderList(this, "request_header", false);
+  public get requestHeader() {
+    return this._requestHeader;
+  }
+  public putRequestHeader(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader[] | cdktf.IResolvable) {
+    this._requestHeader.internalValue = value;
+  }
+  public resetRequestHeader() {
+    this._requestHeader.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeaderInput() {
+    return this._requestHeader.internalValue;
+  }
+
+  // request_query_param - computed: false, optional: true, required: false
+  private _requestQueryParam = new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParamList(this, "request_query_param", false);
+  public get requestQueryParam() {
+    return this._requestQueryParam;
+  }
+  public putRequestQueryParam(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam[] | cdktf.IResolvable) {
+    this._requestQueryParam.internalValue = value;
+  }
+  public resetRequestQueryParam() {
+    this._requestQueryParam.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestQueryParamInput() {
+    return this._requestQueryParam.internalValue;
+  }
+
+  // request_uri - computed: false, optional: true, required: false
+  private _requestUri = new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUriList(this, "request_uri", false);
+  public get requestUri() {
+    return this._requestUri;
+  }
+  public putRequestUri(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri[] | cdktf.IResolvable) {
+    this._requestUri.internalValue = value;
+  }
+  public resetRequestUri() {
+    this._requestUri.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestUriInput() {
+    return this._requestUri.internalValue;
+  }
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionList extends cdktf.ComplexList {
+  public internalValue? : ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionOutputReference {
+    return new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeSecurityPolicyRulePreconfiguredWafConfig {
+  /**
+  * exclusion block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#exclusion ComputeSecurityPolicy#exclusion}
+  */
+  readonly exclusion?: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion[] | cdktf.IResolvable;
+}
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigToTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigOutputReference | ComputeSecurityPolicyRulePreconfiguredWafConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    exclusion: cdktf.listMapper(computeSecurityPolicyRulePreconfiguredWafConfigExclusionToTerraform, true)(struct!.exclusion),
+  }
+}
+
+
+export function computeSecurityPolicyRulePreconfiguredWafConfigToHclTerraform(struct?: ComputeSecurityPolicyRulePreconfiguredWafConfigOutputReference | ComputeSecurityPolicyRulePreconfiguredWafConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    exclusion: {
+      value: cdktf.listMapperHcl(computeSecurityPolicyRulePreconfiguredWafConfigExclusionToHclTerraform, true)(struct!.exclusion),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeSecurityPolicyRulePreconfiguredWafConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeSecurityPolicyRulePreconfiguredWafConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exclusion?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exclusion = this._exclusion?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeSecurityPolicyRulePreconfiguredWafConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._exclusion.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._exclusion.internalValue = value.exclusion;
+    }
+  }
+
+  // exclusion - computed: false, optional: true, required: false
+  private _exclusion = new ComputeSecurityPolicyRulePreconfiguredWafConfigExclusionList(this, "exclusion", false);
+  public get exclusion() {
+    return this._exclusion;
+  }
+  public putExclusion(value: ComputeSecurityPolicyRulePreconfiguredWafConfigExclusion[] | cdktf.IResolvable) {
+    this._exclusion.internalValue = value;
+  }
+  public resetExclusion() {
+    this._exclusion.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exclusionInput() {
+    return this._exclusion.internalValue;
+  }
+}
 export interface ComputeSecurityPolicyRuleRateLimitOptionsBanThreshold {
   /**
   * Number of HTTP(S) requests for calculating the threshold.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
   */
   readonly count: number;
   /**
   * Interval over which the threshold is computed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
   */
   readonly intervalSec: number;
 }
@@ -1551,13 +2522,13 @@ export interface ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptions 
   /**
   * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
   */
   readonly target?: string;
   /**
   * Type of the redirect action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
   */
   readonly type: string;
 }
@@ -1669,13 +2640,13 @@ export interface ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThreshold {
   /**
   * Number of HTTP(S) requests for calculating the threshold.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#count ComputeSecurityPolicy#count}
   */
   readonly count: number;
   /**
   * Interval over which the threshold is computed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#interval_sec ComputeSecurityPolicy#interval_sec}
   */
   readonly intervalSec: number;
 }
@@ -1784,49 +2755,49 @@ export interface ComputeSecurityPolicyRuleRateLimitOptions {
   /**
   * Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#ban_duration_sec ComputeSecurityPolicy#ban_duration_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#ban_duration_sec ComputeSecurityPolicy#ban_duration_sec}
   */
   readonly banDurationSec?: number;
   /**
   * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#conform_action ComputeSecurityPolicy#conform_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#conform_action ComputeSecurityPolicy#conform_action}
   */
   readonly conformAction: string;
   /**
   * Determines the key to enforce the rateLimitThreshold on
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#enforce_on_key ComputeSecurityPolicy#enforce_on_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#enforce_on_key ComputeSecurityPolicy#enforce_on_key}
   */
   readonly enforceOnKey?: string;
   /**
   * Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#enforce_on_key_name ComputeSecurityPolicy#enforce_on_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#enforce_on_key_name ComputeSecurityPolicy#enforce_on_key_name}
   */
   readonly enforceOnKeyName?: string;
   /**
   * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502, and "redirect" where the redirect parameters come from exceedRedirectOptions below.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#exceed_action ComputeSecurityPolicy#exceed_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#exceed_action ComputeSecurityPolicy#exceed_action}
   */
   readonly exceedAction: string;
   /**
   * ban_threshold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#ban_threshold ComputeSecurityPolicy#ban_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#ban_threshold ComputeSecurityPolicy#ban_threshold}
   */
   readonly banThreshold?: ComputeSecurityPolicyRuleRateLimitOptionsBanThreshold;
   /**
   * exceed_redirect_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#exceed_redirect_options ComputeSecurityPolicy#exceed_redirect_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#exceed_redirect_options ComputeSecurityPolicy#exceed_redirect_options}
   */
   readonly exceedRedirectOptions?: ComputeSecurityPolicyRuleRateLimitOptionsExceedRedirectOptions;
   /**
   * rate_limit_threshold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#rate_limit_threshold ComputeSecurityPolicy#rate_limit_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#rate_limit_threshold ComputeSecurityPolicy#rate_limit_threshold}
   */
   readonly rateLimitThreshold: ComputeSecurityPolicyRuleRateLimitOptionsRateLimitThreshold;
 }
@@ -2106,13 +3077,13 @@ export interface ComputeSecurityPolicyRuleRedirectOptions {
   /**
   * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#target ComputeSecurityPolicy#target}
   */
   readonly target?: string;
   /**
   * Type of the redirect action. Available options: EXTERNAL_302: Must specify the corresponding target field in config. GOOGLE_RECAPTCHA: Cannot specify target field in config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#type ComputeSecurityPolicy#type}
   */
   readonly type: string;
 }
@@ -2224,49 +3195,55 @@ export interface ComputeSecurityPolicyRule {
   /**
   * Action to take when match matches the request.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#action ComputeSecurityPolicy#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#action ComputeSecurityPolicy#action}
   */
   readonly action: string;
   /**
   * An optional description of this rule. Max size is 64.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#description ComputeSecurityPolicy#description}
   */
   readonly description?: string;
   /**
   * When set to true, the action specified above is not enforced. Stackdriver logs for requests that trigger a preview action are annotated as such.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#preview ComputeSecurityPolicy#preview}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#preview ComputeSecurityPolicy#preview}
   */
   readonly preview?: boolean | cdktf.IResolvable;
   /**
   * An unique positive integer indicating the priority of evaluation for a rule. Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#priority ComputeSecurityPolicy#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#priority ComputeSecurityPolicy#priority}
   */
   readonly priority: number;
   /**
   * header_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#header_action ComputeSecurityPolicy#header_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#header_action ComputeSecurityPolicy#header_action}
   */
   readonly headerAction?: ComputeSecurityPolicyRuleHeaderAction;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#match ComputeSecurityPolicy#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#match ComputeSecurityPolicy#match}
   */
   readonly match: ComputeSecurityPolicyRuleMatch;
   /**
+  * preconfigured_waf_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#preconfigured_waf_config ComputeSecurityPolicy#preconfigured_waf_config}
+  */
+  readonly preconfiguredWafConfig?: ComputeSecurityPolicyRulePreconfiguredWafConfig;
+  /**
   * rate_limit_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#rate_limit_options ComputeSecurityPolicy#rate_limit_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#rate_limit_options ComputeSecurityPolicy#rate_limit_options}
   */
   readonly rateLimitOptions?: ComputeSecurityPolicyRuleRateLimitOptions;
   /**
   * redirect_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#redirect_options ComputeSecurityPolicy#redirect_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#redirect_options ComputeSecurityPolicy#redirect_options}
   */
   readonly redirectOptions?: ComputeSecurityPolicyRuleRedirectOptions;
 }
@@ -2283,6 +3260,7 @@ export function computeSecurityPolicyRuleToTerraform(struct?: ComputeSecurityPol
     priority: cdktf.numberToTerraform(struct!.priority),
     header_action: computeSecurityPolicyRuleHeaderActionToTerraform(struct!.headerAction),
     match: computeSecurityPolicyRuleMatchToTerraform(struct!.match),
+    preconfigured_waf_config: computeSecurityPolicyRulePreconfiguredWafConfigToTerraform(struct!.preconfiguredWafConfig),
     rate_limit_options: computeSecurityPolicyRuleRateLimitOptionsToTerraform(struct!.rateLimitOptions),
     redirect_options: computeSecurityPolicyRuleRedirectOptionsToTerraform(struct!.redirectOptions),
   }
@@ -2330,6 +3308,12 @@ export function computeSecurityPolicyRuleToHclTerraform(struct?: ComputeSecurity
       isBlock: true,
       type: "list",
       storageClassType: "ComputeSecurityPolicyRuleMatchList",
+    },
+    preconfigured_waf_config: {
+      value: computeSecurityPolicyRulePreconfiguredWafConfigToHclTerraform(struct!.preconfiguredWafConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeSecurityPolicyRulePreconfiguredWafConfigList",
     },
     rate_limit_options: {
       value: computeSecurityPolicyRuleRateLimitOptionsToHclTerraform(struct!.rateLimitOptions),
@@ -2393,6 +3377,10 @@ export class ComputeSecurityPolicyRuleOutputReference extends cdktf.ComplexObjec
       hasAnyValues = true;
       internalValueResult.match = this._match?.internalValue;
     }
+    if (this._preconfiguredWafConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preconfiguredWafConfig = this._preconfiguredWafConfig?.internalValue;
+    }
     if (this._rateLimitOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.rateLimitOptions = this._rateLimitOptions?.internalValue;
@@ -2414,6 +3402,7 @@ export class ComputeSecurityPolicyRuleOutputReference extends cdktf.ComplexObjec
       this._priority = undefined;
       this._headerAction.internalValue = undefined;
       this._match.internalValue = undefined;
+      this._preconfiguredWafConfig.internalValue = undefined;
       this._rateLimitOptions.internalValue = undefined;
       this._redirectOptions.internalValue = undefined;
     }
@@ -2430,6 +3419,7 @@ export class ComputeSecurityPolicyRuleOutputReference extends cdktf.ComplexObjec
       this._priority = value.priority;
       this._headerAction.internalValue = value.headerAction;
       this._match.internalValue = value.match;
+      this._preconfiguredWafConfig.internalValue = value.preconfiguredWafConfig;
       this._rateLimitOptions.internalValue = value.rateLimitOptions;
       this._redirectOptions.internalValue = value.redirectOptions;
     }
@@ -2522,6 +3512,22 @@ export class ComputeSecurityPolicyRuleOutputReference extends cdktf.ComplexObjec
     return this._match.internalValue;
   }
 
+  // preconfigured_waf_config - computed: false, optional: true, required: false
+  private _preconfiguredWafConfig = new ComputeSecurityPolicyRulePreconfiguredWafConfigOutputReference(this, "preconfigured_waf_config");
+  public get preconfiguredWafConfig() {
+    return this._preconfiguredWafConfig;
+  }
+  public putPreconfiguredWafConfig(value: ComputeSecurityPolicyRulePreconfiguredWafConfig) {
+    this._preconfiguredWafConfig.internalValue = value;
+  }
+  public resetPreconfiguredWafConfig() {
+    this._preconfiguredWafConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preconfiguredWafConfigInput() {
+    return this._preconfiguredWafConfig.internalValue;
+  }
+
   // rate_limit_options - computed: false, optional: true, required: false
   private _rateLimitOptions = new ComputeSecurityPolicyRuleRateLimitOptionsOutputReference(this, "rate_limit_options");
   public get rateLimitOptions() {
@@ -2576,15 +3582,15 @@ export class ComputeSecurityPolicyRuleList extends cdktf.ComplexList {
 }
 export interface ComputeSecurityPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#create ComputeSecurityPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#create ComputeSecurityPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#delete ComputeSecurityPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#delete ComputeSecurityPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#update ComputeSecurityPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#update ComputeSecurityPolicy#update}
   */
   readonly update?: string;
 }
@@ -2736,7 +3742,7 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy google_compute_security_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy google_compute_security_policy}
 */
 export class ComputeSecurityPolicy extends cdktf.TerraformResource {
 
@@ -2752,7 +3758,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeSecurityPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeSecurityPolicy to import
-  * @param importFromId The id of the existing ComputeSecurityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeSecurityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeSecurityPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2764,7 +3770,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/compute_security_policy google_compute_security_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/compute_security_policy google_compute_security_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2775,7 +3781,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_security_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.10.0',
+        providerVersion: '6.11.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

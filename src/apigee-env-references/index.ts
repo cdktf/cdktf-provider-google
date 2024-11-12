@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references
+// https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,18 +10,18 @@ export interface ApigeeEnvReferencesConfig extends cdktf.TerraformMetaArguments 
   /**
   * Optional. A human-readable description of this reference.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#description ApigeeEnvReferences#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#description ApigeeEnvReferences#description}
   */
   readonly description?: string;
   /**
   * The Apigee environment group associated with the Apigee environment,
   * in the format 'organizations/{{org_name}}/environments/{{env_name}}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#env_id ApigeeEnvReferences#env_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#env_id ApigeeEnvReferences#env_id}
   */
   readonly envId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#id ApigeeEnvReferences#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#id ApigeeEnvReferences#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -35,37 +30,41 @@ export interface ApigeeEnvReferencesConfig extends cdktf.TerraformMetaArguments 
   /**
   * Required. The resource id of this reference. Values must match the regular expression [\w\s-.]+.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#name ApigeeEnvReferences#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#name ApigeeEnvReferences#name}
   */
   readonly name: string;
   /**
   * Required. The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resourceType.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#refers ApigeeEnvReferences#refers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#refers ApigeeEnvReferences#refers}
   */
   readonly refers: string;
   /**
   * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#resource_type ApigeeEnvReferences#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#resource_type ApigeeEnvReferences#resource_type}
   */
   readonly resourceType: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#timeouts ApigeeEnvReferences#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#timeouts ApigeeEnvReferences#timeouts}
   */
   readonly timeouts?: ApigeeEnvReferencesTimeouts;
 }
 export interface ApigeeEnvReferencesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#create ApigeeEnvReferences#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#create ApigeeEnvReferences#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#delete ApigeeEnvReferences#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#delete ApigeeEnvReferences#delete}
   */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#update ApigeeEnvReferences#update}
+  */
+  readonly update?: string;
 }
 
 export function apigeeEnvReferencesTimeoutsToTerraform(struct?: ApigeeEnvReferencesTimeouts | cdktf.IResolvable): any {
@@ -76,6 +75,7 @@ export function apigeeEnvReferencesTimeoutsToTerraform(struct?: ApigeeEnvReferen
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -94,6 +94,12 @@ export function apigeeEnvReferencesTimeoutsToHclTerraform(struct?: ApigeeEnvRefe
     },
     delete: {
       value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -130,6 +136,10 @@ export class ApigeeEnvReferencesTimeoutsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -139,6 +149,7 @@ export class ApigeeEnvReferencesTimeoutsOutputReference extends cdktf.ComplexObj
       this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
+      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -149,6 +160,7 @@ export class ApigeeEnvReferencesTimeoutsOutputReference extends cdktf.ComplexObj
       this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
+      this._update = value.update;
     }
   }
 
@@ -183,10 +195,26 @@ export class ApigeeEnvReferencesTimeoutsOutputReference extends cdktf.ComplexObj
   public get deleteInput() {
     return this._delete;
   }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references google_apigee_env_references}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references google_apigee_env_references}
 */
 export class ApigeeEnvReferences extends cdktf.TerraformResource {
 
@@ -202,7 +230,7 @@ export class ApigeeEnvReferences extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeEnvReferences resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeEnvReferences to import
-  * @param importFromId The id of the existing ApigeeEnvReferences that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeEnvReferences that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeEnvReferences to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -214,7 +242,7 @@ export class ApigeeEnvReferences extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apigee_env_references google_apigee_env_references} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_env_references google_apigee_env_references} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -225,7 +253,7 @@ export class ApigeeEnvReferences extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_env_references',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.10.0',
+        providerVersion: '6.11.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

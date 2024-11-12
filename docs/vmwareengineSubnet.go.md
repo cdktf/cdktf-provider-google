@@ -4,12 +4,12 @@
 
 ### VmwareengineSubnet <a name="VmwareengineSubnet" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet google_vmwareengine_subnet}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet google_vmwareengine_subnet}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.NewVmwareengineSubnet(scope Construct, id *string, config VmwareengineSubnetConfig) VmwareengineSubnet
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.VmwareengineSubnet_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.VmwareengineSubnet_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ vmwareenginesubnet.VmwareengineSubnet_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.VmwareengineSubnet_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ vmwareenginesubnet.VmwareengineSubnet_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnet.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.VmwareengineSubnet_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the VmwareengineSubnet to impo
 
 The id of the existing VmwareengineSubnet that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -914,7 +914,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 &vmwareenginesubnet.VmwareengineSubnetConfig {
 	Connection: interface{},
@@ -928,7 +928,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
 	Name: *string,
 	Parent: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.vmwareengineSubnet.VmwareengineSubnetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineSubnet.VmwareengineSubnetTimeouts,
 }
 ```
 
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
 | <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetConfig.property.ipCidrRange">IpCidrRange</a></code> | <code>*string</code> | The IP address range of the subnet in CIDR format. |
 | <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetConfig.property.name">Name</a></code> | <code>*string</code> | The ID of the subnet. |
 | <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetConfig.property.parent">Parent</a></code> | <code>*string</code> | The resource name of the private cloud to create a new subnet in. |
-| <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#id VmwareengineSubnet#id}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#id VmwareengineSubnet#id}. |
 | <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts">VmwareengineSubnetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1031,7 +1031,7 @@ IpCidrRange *string
 
 The IP address range of the subnet in CIDR format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#ip_cidr_range VmwareengineSubnet#ip_cidr_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#ip_cidr_range VmwareengineSubnet#ip_cidr_range}
 
 ---
 
@@ -1048,7 +1048,7 @@ The ID of the subnet.
 For userDefined subnets, this name should be in the format of "service-n",
 where n ranges from 1 to 5.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#name VmwareengineSubnet#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#name VmwareengineSubnet#name}
 
 ---
 
@@ -1065,7 +1065,7 @@ The resource name of the private cloud to create a new subnet in.
 Resource names are schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
 For example: projects/my-project/locations/us-west1-a/privateClouds/my-cloud
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#parent VmwareengineSubnet#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#parent VmwareengineSubnet#parent}
 
 ---
 
@@ -1077,7 +1077,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#id VmwareengineSubnet#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#id VmwareengineSubnet#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1094,7 +1094,7 @@ Timeouts VmwareengineSubnetTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#timeouts VmwareengineSubnet#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#timeouts VmwareengineSubnet#timeouts}
 
 ---
 
@@ -1103,7 +1103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetDhcpAddressRanges.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 &vmwareenginesubnet.VmwareengineSubnetDhcpAddressRanges {
 
@@ -1116,7 +1116,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 &vmwareenginesubnet.VmwareengineSubnetTimeouts {
 	Create: *string,
@@ -1129,9 +1129,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#create VmwareengineSubnet#create}. |
-| <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#delete VmwareengineSubnet#delete}. |
-| <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#update VmwareengineSubnet#update}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#create VmwareengineSubnet#create}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#delete VmwareengineSubnet#delete}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#update VmwareengineSubnet#update}. |
 
 ---
 
@@ -1143,7 +1143,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#create VmwareengineSubnet#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#create VmwareengineSubnet#create}.
 
 ---
 
@@ -1155,7 +1155,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#delete VmwareengineSubnet#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#delete VmwareengineSubnet#delete}.
 
 ---
 
@@ -1167,7 +1167,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_subnet#update VmwareengineSubnet#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_subnet#update VmwareengineSubnet#update}.
 
 ---
 
@@ -1178,7 +1178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetDhcpAddressRangesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.NewVmwareengineSubnetDhcpAddressRangesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareengineSubnetDhcpAddressRangesList
 ```
@@ -1327,7 +1327,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetDhcpAddressRangesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.NewVmwareengineSubnetDhcpAddressRangesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareengineSubnetDhcpAddressRangesOutputReference
 ```
@@ -1616,7 +1616,7 @@ func InternalValue() VmwareengineSubnetDhcpAddressRanges
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineSubnet.VmwareengineSubnetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginesubnet"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginesubnet"
 
 vmwareenginesubnet.NewVmwareengineSubnetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineSubnetTimeoutsOutputReference
 ```

@@ -4,12 +4,12 @@
 
 ### VmwareengineCluster <a name="VmwareengineCluster" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster google_vmwareengine_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster google_vmwareengine_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineCluster(scope Construct, id *string, config VmwareengineClusterConfig) VmwareengineCluster
 ```
@@ -445,7 +445,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.VmwareengineCluster_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +477,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.VmwareengineCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ vmwareenginecluster.VmwareengineCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.VmwareengineCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ vmwareenginecluster.VmwareengineCluster_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.VmwareengineCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -534,7 +534,7 @@ The construct id used in the generated config for the VmwareengineCluster to imp
 
 The id of the existing VmwareengineCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -899,7 +899,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterAutoscalingSettings {
 	AutoscalingPolicies: interface{},
@@ -930,7 +930,7 @@ AutoscalingPolicies interface{}
 
 autoscaling_policies block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#autoscaling_policies VmwareengineCluster#autoscaling_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#autoscaling_policies VmwareengineCluster#autoscaling_policies}
 
 ---
 
@@ -949,7 +949,7 @@ Minimum cool down period is 30m.
 Cool down period must be in whole minutes (for example, 30m, 31m, 50m).
 Mandatory for successful addition of autoscaling settings in cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#cool_down_period VmwareengineCluster#cool_down_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#cool_down_period VmwareengineCluster#cool_down_period}
 
 ---
 
@@ -963,7 +963,7 @@ MaxClusterNodeCount *f64
 
 Maximum number of nodes of any type in a cluster. Mandatory for successful addition of autoscaling settings in cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#max_cluster_node_count VmwareengineCluster#max_cluster_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#max_cluster_node_count VmwareengineCluster#max_cluster_node_count}
 
 ---
 
@@ -977,7 +977,7 @@ MinClusterNodeCount *f64
 
 Minimum number of nodes of any type in a cluster. Mandatory for successful addition of autoscaling settings in cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#min_cluster_node_count VmwareengineCluster#min_cluster_node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#min_cluster_node_count VmwareengineCluster#min_cluster_node_count}
 
 ---
 
@@ -986,15 +986,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPolicies.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterAutoscalingSettingsAutoscalingPolicies {
 	AutoscalePolicyId: *string,
 	NodeTypeId: *string,
 	ScaleOutSize: *f64,
-	ConsumedMemoryThresholds: github.com/cdktf/cdktf-provider-google-go/google/v14.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds,
-	CpuThresholds: github.com/cdktf/cdktf-provider-google-go/google/v14.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholds,
-	StorageThresholds: github.com/cdktf/cdktf-provider-google-go/google/v14.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholds,
+	ConsumedMemoryThresholds: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds,
+	CpuThresholds: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholds,
+	StorageThresholds: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholds,
 }
 ```
 
@@ -1002,7 +1002,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPolicies.property.autoscalePolicyId">AutoscalePolicyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#autoscale_policy_id VmwareengineCluster#autoscale_policy_id}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPolicies.property.autoscalePolicyId">AutoscalePolicyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#autoscale_policy_id VmwareengineCluster#autoscale_policy_id}. |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPolicies.property.nodeTypeId">NodeTypeId</a></code> | <code>*string</code> | The canonical identifier of the node type to add or remove. |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPolicies.property.scaleOutSize">ScaleOutSize</a></code> | <code>*f64</code> | Number of nodes to add to a cluster during a scale-out operation. Must be divisible by 2 for stretched clusters. |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPolicies.property.consumedMemoryThresholds">ConsumedMemoryThresholds</a></code> | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds">VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds</a></code> | consumed_memory_thresholds block. |
@@ -1019,7 +1019,7 @@ AutoscalePolicyId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#autoscale_policy_id VmwareengineCluster#autoscale_policy_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#autoscale_policy_id VmwareengineCluster#autoscale_policy_id}.
 
 ---
 
@@ -1033,7 +1033,7 @@ NodeTypeId *string
 
 The canonical identifier of the node type to add or remove.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#node_type_id VmwareengineCluster#node_type_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#node_type_id VmwareengineCluster#node_type_id}
 
 ---
 
@@ -1047,7 +1047,7 @@ ScaleOutSize *f64
 
 Number of nodes to add to a cluster during a scale-out operation. Must be divisible by 2 for stretched clusters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#scale_out_size VmwareengineCluster#scale_out_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#scale_out_size VmwareengineCluster#scale_out_size}
 
 ---
 
@@ -1061,7 +1061,7 @@ ConsumedMemoryThresholds VmwareengineClusterAutoscalingSettingsAutoscalingPolici
 
 consumed_memory_thresholds block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#consumed_memory_thresholds VmwareengineCluster#consumed_memory_thresholds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#consumed_memory_thresholds VmwareengineCluster#consumed_memory_thresholds}
 
 ---
 
@@ -1075,7 +1075,7 @@ CpuThresholds VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCpuThresh
 
 cpu_thresholds block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#cpu_thresholds VmwareengineCluster#cpu_thresholds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#cpu_thresholds VmwareengineCluster#cpu_thresholds}
 
 ---
 
@@ -1089,7 +1089,7 @@ StorageThresholds VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesStora
 
 storage_thresholds block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#storage_thresholds VmwareengineCluster#storage_thresholds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#storage_thresholds VmwareengineCluster#storage_thresholds}
 
 ---
 
@@ -1098,7 +1098,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds {
 	ScaleIn: *f64,
@@ -1125,7 +1125,7 @@ ScaleIn *f64
 
 The utilization triggering the scale-in operation in percent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#scale_in VmwareengineCluster#scale_in}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#scale_in VmwareengineCluster#scale_in}
 
 ---
 
@@ -1139,7 +1139,7 @@ ScaleOut *f64
 
 The utilization triggering the scale-out operation in percent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#scale_out VmwareengineCluster#scale_out}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#scale_out VmwareengineCluster#scale_out}
 
 ---
 
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholds.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholds {
 	ScaleIn: *f64,
@@ -1175,7 +1175,7 @@ ScaleIn *f64
 
 The utilization triggering the scale-in operation in percent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#scale_in VmwareengineCluster#scale_in}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#scale_in VmwareengineCluster#scale_in}
 
 ---
 
@@ -1189,7 +1189,7 @@ ScaleOut *f64
 
 The utilization triggering the scale-out operation in percent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#scale_out VmwareengineCluster#scale_out}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#scale_out VmwareengineCluster#scale_out}
 
 ---
 
@@ -1198,7 +1198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholds.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholds {
 	ScaleIn: *f64,
@@ -1225,7 +1225,7 @@ ScaleIn *f64
 
 The utilization triggering the scale-in operation in percent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#scale_in VmwareengineCluster#scale_in}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#scale_in VmwareengineCluster#scale_in}
 
 ---
 
@@ -1239,7 +1239,7 @@ ScaleOut *f64
 
 The utilization triggering the scale-out operation in percent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#scale_out VmwareengineCluster#scale_out}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#scale_out VmwareengineCluster#scale_out}
 
 ---
 
@@ -1248,7 +1248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterConfig {
 	Connection: interface{},
@@ -1260,10 +1260,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster
 	Provisioners: *[]interface{},
 	Name: *string,
 	Parent: *string,
-	AutoscalingSettings: github.com/cdktf/cdktf-provider-google-go/google/v14.vmwareengineCluster.VmwareengineClusterAutoscalingSettings,
+	AutoscalingSettings: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineCluster.VmwareengineClusterAutoscalingSettings,
 	Id: *string,
 	NodeTypeConfigs: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.vmwareengineCluster.VmwareengineClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vmwareengineCluster.VmwareengineClusterTimeouts,
 }
 ```
 
@@ -1281,7 +1281,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.property.name">Name</a></code> | <code>*string</code> | The ID of the Cluster. |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.property.parent">Parent</a></code> | <code>*string</code> | The resource name of the private cloud to create a new cluster in. |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.property.autoscalingSettings">AutoscalingSettings</a></code> | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettings">VmwareengineClusterAutoscalingSettings</a></code> | autoscaling_settings block. |
-| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#id VmwareengineCluster#id}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#id VmwareengineCluster#id}. |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.property.nodeTypeConfigs">NodeTypeConfigs</a></code> | <code>interface{}</code> | node_type_configs block. |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts">VmwareengineClusterTimeouts</a></code> | timeouts block. |
 
@@ -1367,7 +1367,7 @@ Name *string
 
 The ID of the Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#name VmwareengineCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#name VmwareengineCluster#name}
 
 ---
 
@@ -1384,7 +1384,7 @@ The resource name of the private cloud to create a new cluster in.
 Resource names are schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
 For example: projects/my-project/locations/us-west1-a/privateClouds/my-cloud
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#parent VmwareengineCluster#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#parent VmwareengineCluster#parent}
 
 ---
 
@@ -1398,7 +1398,7 @@ AutoscalingSettings VmwareengineClusterAutoscalingSettings
 
 autoscaling_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#autoscaling_settings VmwareengineCluster#autoscaling_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#autoscaling_settings VmwareengineCluster#autoscaling_settings}
 
 ---
 
@@ -1410,7 +1410,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#id VmwareengineCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#id VmwareengineCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1427,7 +1427,7 @@ NodeTypeConfigs interface{}
 
 node_type_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#node_type_configs VmwareengineCluster#node_type_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#node_type_configs VmwareengineCluster#node_type_configs}
 
 ---
 
@@ -1441,7 +1441,7 @@ Timeouts VmwareengineClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#timeouts VmwareengineCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#timeouts VmwareengineCluster#timeouts}
 
 ---
 
@@ -1450,7 +1450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterNodeTypeConfigs {
 	NodeCount: *f64,
@@ -1464,7 +1464,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigs.property.nodeCount">NodeCount</a></code> | <code>*f64</code> | The number of nodes of this type in the cluster. |
-| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigs.property.nodeTypeId">NodeTypeId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#node_type_id VmwareengineCluster#node_type_id}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigs.property.nodeTypeId">NodeTypeId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#node_type_id VmwareengineCluster#node_type_id}. |
 | <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigs.property.customCoreCount">CustomCoreCount</a></code> | <code>*f64</code> | Customized number of cores available to each node of the type. |
 
 ---
@@ -1479,7 +1479,7 @@ NodeCount *f64
 
 The number of nodes of this type in the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#node_count VmwareengineCluster#node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#node_count VmwareengineCluster#node_count}
 
 ---
 
@@ -1491,7 +1491,7 @@ NodeTypeId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#node_type_id VmwareengineCluster#node_type_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#node_type_id VmwareengineCluster#node_type_id}.
 
 ---
 
@@ -1509,7 +1509,7 @@ This number must always be one of 'nodeType.availableCustomCoreCounts'.
 If zero is provided max value from 'nodeType.availableCustomCoreCounts' will be used.
 Once the customer is created then corecount cannot be changed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#custom_core_count VmwareengineCluster#custom_core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#custom_core_count VmwareengineCluster#custom_core_count}
 
 ---
 
@@ -1518,7 +1518,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 &vmwareenginecluster.VmwareengineClusterTimeouts {
 	Create: *string,
@@ -1531,9 +1531,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#create VmwareengineCluster#create}. |
-| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#delete VmwareengineCluster#delete}. |
-| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#update VmwareengineCluster#update}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#create VmwareengineCluster#create}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#delete VmwareengineCluster#delete}. |
+| <code><a href="#@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#update VmwareengineCluster#update}. |
 
 ---
 
@@ -1545,7 +1545,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#create VmwareengineCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#create VmwareengineCluster#create}.
 
 ---
 
@@ -1557,7 +1557,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#delete VmwareengineCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#delete VmwareengineCluster#delete}.
 
 ---
 
@@ -1569,7 +1569,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/vmwareengine_cluster#update VmwareengineCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/vmwareengine_cluster#update VmwareengineCluster#update}.
 
 ---
 
@@ -1580,7 +1580,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholdsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholdsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholdsOutputReference
 ```
@@ -1873,7 +1873,7 @@ func InternalValue() VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholdsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholdsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholdsOutputReference
 ```
@@ -2166,7 +2166,7 @@ func InternalValue() VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesCp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterAutoscalingSettingsAutoscalingPoliciesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesList
 ```
@@ -2326,7 +2326,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterAutoscalingSettingsAutoscalingPoliciesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesOutputReference
 ```
@@ -2785,7 +2785,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholdsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholdsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholdsOutputReference
 ```
@@ -3078,7 +3078,7 @@ func InternalValue() VmwareengineClusterAutoscalingSettingsAutoscalingPoliciesSt
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterAutoscalingSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterAutoscalingSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineClusterAutoscalingSettingsOutputReference
 ```
@@ -3449,7 +3449,7 @@ func InternalValue() VmwareengineClusterAutoscalingSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterNodeTypeConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VmwareengineClusterNodeTypeConfigsList
 ```
@@ -3609,7 +3609,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterNodeTypeConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterNodeTypeConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VmwareengineClusterNodeTypeConfigsOutputReference
 ```
@@ -3949,7 +3949,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vmwareengineCluster.VmwareengineClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/vmwareenginecluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/vmwareenginecluster"
 
 vmwareenginecluster.NewVmwareengineClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareengineClusterTimeoutsOutputReference
 ```

@@ -4,12 +4,12 @@
 
 ### ApphubServiceProjectAttachment <a name="ApphubServiceProjectAttachment" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment google_apphub_service_project_attachment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment google_apphub_service_project_attachment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojectattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/apphubserviceprojectattachment"
 
 apphubserviceprojectattachment.NewApphubServiceProjectAttachment(scope Construct, id *string, config ApphubServiceProjectAttachmentConfig) ApphubServiceProjectAttachment
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojectattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/apphubserviceprojectattachment"
 
 apphubserviceprojectattachment.ApphubServiceProjectAttachment_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojectattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/apphubserviceprojectattachment"
 
 apphubserviceprojectattachment.ApphubServiceProjectAttachment_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ apphubserviceprojectattachment.ApphubServiceProjectAttachment_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojectattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/apphubserviceprojectattachment"
 
 apphubserviceprojectattachment.ApphubServiceProjectAttachment_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ apphubserviceprojectattachment.ApphubServiceProjectAttachment_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojectattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/apphubserviceprojectattachment"
 
 apphubserviceprojectattachment.ApphubServiceProjectAttachment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -508,7 +508,7 @@ The construct id used in the generated config for the ApphubServiceProjectAttach
 
 The id of the existing ApphubServiceProjectAttachment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -862,7 +862,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojectattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/apphubserviceprojectattachment"
 
 &apphubserviceprojectattachment.ApphubServiceProjectAttachmentConfig {
 	Connection: interface{},
@@ -876,7 +876,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojec
 	Id: *string,
 	Project: *string,
 	ServiceProject: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeouts,
 }
 ```
 
@@ -892,8 +892,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojec
 | <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.serviceProjectAttachmentId">ServiceProjectAttachmentId</a></code> | <code>*string</code> | Required. |
-| <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#id ApphubServiceProjectAttachment#id}. |
-| <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#project ApphubServiceProjectAttachment#project}. |
+| <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#id ApphubServiceProjectAttachment#id}. |
+| <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#project ApphubServiceProjectAttachment#project}. |
 | <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.serviceProject">ServiceProject</a></code> | <code>*string</code> | "Immutable. |
 | <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeouts">ApphubServiceProjectAttachmentTimeouts</a></code> | timeouts block. |
 
@@ -981,7 +981,7 @@ Required.
 
 The service project attachment identifier must contain the project_id of the service project specified in the service_project_attachment.service_project field. Hint: "projects/{project_id}"
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#service_project_attachment_id ApphubServiceProjectAttachment#service_project_attachment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#service_project_attachment_id ApphubServiceProjectAttachment#service_project_attachment_id}
 
 ---
 
@@ -993,7 +993,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#id ApphubServiceProjectAttachment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#id ApphubServiceProjectAttachment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1008,7 +1008,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#project ApphubServiceProjectAttachment#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#project ApphubServiceProjectAttachment#project}.
 
 ---
 
@@ -1026,7 +1026,7 @@ Service project name in the format: "projects/abc"
 or "projects/123". As input, project name with either project id or number
 are accepted. As output, this field will contain project number."
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#service_project ApphubServiceProjectAttachment#service_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#service_project ApphubServiceProjectAttachment#service_project}
 
 ---
 
@@ -1040,7 +1040,7 @@ Timeouts ApphubServiceProjectAttachmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#timeouts ApphubServiceProjectAttachment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#timeouts ApphubServiceProjectAttachment#timeouts}
 
 ---
 
@@ -1049,7 +1049,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojectattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/apphubserviceprojectattachment"
 
 &apphubserviceprojectattachment.ApphubServiceProjectAttachmentTimeouts {
 	Create: *string,
@@ -1061,8 +1061,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojec
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#create ApphubServiceProjectAttachment#create}. |
-| <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#delete ApphubServiceProjectAttachment#delete}. |
+| <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#create ApphubServiceProjectAttachment#create}. |
+| <code><a href="#@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#delete ApphubServiceProjectAttachment#delete}. |
 
 ---
 
@@ -1074,7 +1074,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#create ApphubServiceProjectAttachment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#create ApphubServiceProjectAttachment#create}.
 
 ---
 
@@ -1086,7 +1086,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.10.0/docs/resources/apphub_service_project_attachment#delete ApphubServiceProjectAttachment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apphub_service_project_attachment#delete ApphubServiceProjectAttachment#delete}.
 
 ---
 
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apphubServiceProjectAttachment.ApphubServiceProjectAttachmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apphubserviceprojectattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/apphubserviceprojectattachment"
 
 apphubserviceprojectattachment.NewApphubServiceProjectAttachmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApphubServiceProjectAttachmentTimeoutsOutputReference
 ```
