@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_management_organization_event_threat_detection_custom_module
 // generated from terraform resource schema
 
