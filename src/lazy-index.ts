@@ -30,6 +30,7 @@ Object.defineProperty(exports, 'alloydbCluster', { get: function () { return req
 Object.defineProperty(exports, 'alloydbInstance', { get: function () { return require('./alloydb-instance'); } });
 Object.defineProperty(exports, 'alloydbUser', { get: function () { return require('./alloydb-user'); } });
 Object.defineProperty(exports, 'apigeeAddonsConfig', { get: function () { return require('./apigee-addons-config'); } });
+Object.defineProperty(exports, 'apigeeApi', { get: function () { return require('./apigee-api'); } });
 Object.defineProperty(exports, 'apigeeAppGroup', { get: function () { return require('./apigee-app-group'); } });
 Object.defineProperty(exports, 'apigeeDeveloper', { get: function () { return require('./apigee-developer'); } });
 Object.defineProperty(exports, 'apigeeEndpointAttachment', { get: function () { return require('./apigee-endpoint-attachment'); } });
@@ -405,6 +406,8 @@ Object.defineProperty(exports, 'dataprocCluster', { get: function () { return re
 Object.defineProperty(exports, 'dataprocClusterIamBinding', { get: function () { return require('./dataproc-cluster-iam-binding'); } });
 Object.defineProperty(exports, 'dataprocClusterIamMember', { get: function () { return require('./dataproc-cluster-iam-member'); } });
 Object.defineProperty(exports, 'dataprocClusterIamPolicy', { get: function () { return require('./dataproc-cluster-iam-policy'); } });
+Object.defineProperty(exports, 'dataprocGdcApplicationEnvironment', { get: function () { return require('./dataproc-gdc-application-environment'); } });
+Object.defineProperty(exports, 'dataprocGdcServiceInstance', { get: function () { return require('./dataproc-gdc-service-instance'); } });
 Object.defineProperty(exports, 'dataprocJob', { get: function () { return require('./dataproc-job'); } });
 Object.defineProperty(exports, 'dataprocJobIamBinding', { get: function () { return require('./dataproc-job-iam-binding'); } });
 Object.defineProperty(exports, 'dataprocJobIamMember', { get: function () { return require('./dataproc-job-iam-member'); } });
@@ -636,6 +639,7 @@ Object.defineProperty(exports, 'loggingProjectExclusion', { get: function () { r
 Object.defineProperty(exports, 'loggingProjectSink', { get: function () { return require('./logging-project-sink'); } });
 Object.defineProperty(exports, 'lookerInstance', { get: function () { return require('./looker-instance'); } });
 Object.defineProperty(exports, 'memcacheInstance', { get: function () { return require('./memcache-instance'); } });
+Object.defineProperty(exports, 'memorystoreInstance', { get: function () { return require('./memorystore-instance'); } });
 Object.defineProperty(exports, 'migrationCenterGroup', { get: function () { return require('./migration-center-group'); } });
 Object.defineProperty(exports, 'migrationCenterPreferenceSet', { get: function () { return require('./migration-center-preference-set'); } });
 Object.defineProperty(exports, 'mlEngineModel', { get: function () { return require('./ml-engine-model'); } });
@@ -1157,6 +1161,7 @@ Object.defineProperty(exports, 'dataGoogleServiceNetworkingPeeredDnsDomain', { g
 Object.defineProperty(exports, 'dataGoogleSiteVerificationToken', { get: function () { return require('./data-google-site-verification-token'); } });
 Object.defineProperty(exports, 'dataGoogleSourcerepoRepository', { get: function () { return require('./data-google-sourcerepo-repository'); } });
 Object.defineProperty(exports, 'dataGoogleSourcerepoRepositoryIamPolicy', { get: function () { return require('./data-google-sourcerepo-repository-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleSpannerDatabase', { get: function () { return require('./data-google-spanner-database'); } });
 Object.defineProperty(exports, 'dataGoogleSpannerDatabaseIamPolicy', { get: function () { return require('./data-google-spanner-database-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleSpannerInstance', { get: function () { return require('./data-google-spanner-instance'); } });
 Object.defineProperty(exports, 'dataGoogleSpannerInstanceIamPolicy', { get: function () { return require('./data-google-spanner-instance-iam-policy'); } });
