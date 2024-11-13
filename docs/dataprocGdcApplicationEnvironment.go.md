@@ -4,12 +4,12 @@
 
 ### DataprocGdcApplicationEnvironment <a name="DataprocGdcApplicationEnvironment" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment google_dataproc_gdc_application_environment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment google_dataproc_gdc_application_environment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.NewDataprocGdcApplicationEnvironment(scope Construct, id *string, config DataprocGdcApplicationEnvironmentConfig) DataprocGdcApplicationEnvironment
 ```
@@ -467,7 +467,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -527,7 +527,7 @@ dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -556,7 +556,7 @@ The construct id used in the generated config for the DataprocGdcApplicationEnvi
 
 The id of the existing DataprocGdcApplicationEnvironment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1075,7 +1075,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 &dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironmentConfig {
 	Connection: interface{},
@@ -1094,8 +1094,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicat
 	Labels: *map[string]*string,
 	Namespace: *string,
 	Project: *string,
-	SparkApplicationEnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts,
+	SparkApplicationEnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts,
 }
 ```
 
@@ -1115,10 +1115,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicat
 | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.annotations">Annotations</a></code> | <code>*map[string]*string</code> | The annotations to associate with this application environment. |
 | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.applicationEnvironmentId">ApplicationEnvironmentId</a></code> | <code>*string</code> | The id of the application environment. |
 | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | User-provided human-readable name to be used in user interfaces. |
-| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#id DataprocGdcApplicationEnvironment#id}. |
+| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#id DataprocGdcApplicationEnvironment#id}. |
 | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The labels to associate with this application environment. Labels may be used for filtering and billing tracking. |
 | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.namespace">Namespace</a></code> | <code>*string</code> | The name of the namespace in which to create this ApplicationEnvironment. This namespace must already exist in the cluster. |
-| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#project DataprocGdcApplicationEnvironment#project}. |
+| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#project DataprocGdcApplicationEnvironment#project}. |
 | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.sparkApplicationEnvironmentConfig">SparkApplicationEnvironmentConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig">DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig</a></code> | spark_application_environment_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts">DataprocGdcApplicationEnvironmentTimeouts</a></code> | timeouts block. |
 
@@ -1204,7 +1204,7 @@ Location *string
 
 The location of the application environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#location DataprocGdcApplicationEnvironment#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#location DataprocGdcApplicationEnvironment#location}
 
 ---
 
@@ -1218,7 +1218,7 @@ Serviceinstance *string
 
 The id of the service instance to which this application environment belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#serviceinstance DataprocGdcApplicationEnvironment#serviceinstance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#serviceinstance DataprocGdcApplicationEnvironment#serviceinstance}
 
 ---
 
@@ -1237,7 +1237,7 @@ Annotations may be used to store client information, but are not used by the ser
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#annotations DataprocGdcApplicationEnvironment#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#annotations DataprocGdcApplicationEnvironment#annotations}
 
 ---
 
@@ -1251,7 +1251,7 @@ ApplicationEnvironmentId *string
 
 The id of the application environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#application_environment_id DataprocGdcApplicationEnvironment#application_environment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#application_environment_id DataprocGdcApplicationEnvironment#application_environment_id}
 
 ---
 
@@ -1265,7 +1265,7 @@ DisplayName *string
 
 User-provided human-readable name to be used in user interfaces.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#display_name DataprocGdcApplicationEnvironment#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#display_name DataprocGdcApplicationEnvironment#display_name}
 
 ---
 
@@ -1277,7 +1277,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#id DataprocGdcApplicationEnvironment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#id DataprocGdcApplicationEnvironment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1297,7 +1297,7 @@ The labels to associate with this application environment. Labels may be used fo
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#labels DataprocGdcApplicationEnvironment#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#labels DataprocGdcApplicationEnvironment#labels}
 
 ---
 
@@ -1311,7 +1311,7 @@ Namespace *string
 
 The name of the namespace in which to create this ApplicationEnvironment. This namespace must already exist in the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#namespace DataprocGdcApplicationEnvironment#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#namespace DataprocGdcApplicationEnvironment#namespace}
 
 ---
 
@@ -1323,7 +1323,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#project DataprocGdcApplicationEnvironment#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#project DataprocGdcApplicationEnvironment#project}.
 
 ---
 
@@ -1337,7 +1337,7 @@ SparkApplicationEnvironmentConfig DataprocGdcApplicationEnvironmentSparkApplicat
 
 spark_application_environment_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#spark_application_environment_config DataprocGdcApplicationEnvironment#spark_application_environment_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#spark_application_environment_config DataprocGdcApplicationEnvironment#spark_application_environment_config}
 
 ---
 
@@ -1351,7 +1351,7 @@ Timeouts DataprocGdcApplicationEnvironmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#timeouts DataprocGdcApplicationEnvironment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#timeouts DataprocGdcApplicationEnvironment#timeouts}
 
 ---
 
@@ -1360,7 +1360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 &dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig {
 	DefaultProperties: *map[string]*string,
@@ -1389,7 +1389,7 @@ A map of default Spark properties to apply to workloads in this application envi
 
 These defaults may be overridden by per-application properties.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#default_properties DataprocGdcApplicationEnvironment#default_properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#default_properties DataprocGdcApplicationEnvironment#default_properties}
 
 ---
 
@@ -1403,7 +1403,7 @@ DefaultVersion *string
 
 The default Dataproc version to use for applications submitted to this application environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#default_version DataprocGdcApplicationEnvironment#default_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#default_version DataprocGdcApplicationEnvironment#default_version}
 
 ---
 
@@ -1412,7 +1412,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 &dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironmentTimeouts {
 	Create: *string,
@@ -1425,9 +1425,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicat
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#create DataprocGdcApplicationEnvironment#create}. |
-| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#delete DataprocGdcApplicationEnvironment#delete}. |
-| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#update DataprocGdcApplicationEnvironment#update}. |
+| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#create DataprocGdcApplicationEnvironment#create}. |
+| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#delete DataprocGdcApplicationEnvironment#delete}. |
+| <code><a href="#@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#update DataprocGdcApplicationEnvironment#update}. |
 
 ---
 
@@ -1439,7 +1439,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#create DataprocGdcApplicationEnvironment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#create DataprocGdcApplicationEnvironment#create}.
 
 ---
 
@@ -1451,7 +1451,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#delete DataprocGdcApplicationEnvironment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#delete DataprocGdcApplicationEnvironment#delete}.
 
 ---
 
@@ -1463,7 +1463,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/dataproc_gdc_application_environment#update DataprocGdcApplicationEnvironment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataproc_gdc_application_environment#update DataprocGdcApplicationEnvironment#update}.
 
 ---
 
@@ -1474,7 +1474,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.NewDataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfigOutputReference
 ```
@@ -1781,7 +1781,7 @@ func InternalValue() DataprocGdcApplicationEnvironmentSparkApplicationEnvironmen
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.NewDataprocGdcApplicationEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocGdcApplicationEnvironmentTimeoutsOutputReference
 ```

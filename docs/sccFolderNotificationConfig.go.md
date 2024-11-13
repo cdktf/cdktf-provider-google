@@ -4,12 +4,12 @@
 
 ### SccFolderNotificationConfig <a name="SccFolderNotificationConfig" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config google_scc_folder_notification_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config google_scc_folder_notification_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 sccfoldernotificationconfig.NewSccFolderNotificationConfig(scope Construct, id *string, config SccFolderNotificationConfigConfig) SccFolderNotificationConfig
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 sccfoldernotificationconfig.SccFolderNotificationConfig_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 sccfoldernotificationconfig.SccFolderNotificationConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ sccfoldernotificationconfig.SccFolderNotificationConfig_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 sccfoldernotificationconfig.SccFolderNotificationConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ sccfoldernotificationconfig.SccFolderNotificationConfig_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 sccfoldernotificationconfig.SccFolderNotificationConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -514,7 +514,7 @@ The construct id used in the generated config for the SccFolderNotificationConfi
 
 The id of the existing SccFolderNotificationConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -890,7 +890,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 &sccfoldernotificationconfig.SccFolderNotificationConfigConfig {
 	Connection: interface{},
@@ -903,10 +903,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificati
 	ConfigId: *string,
 	Folder: *string,
 	PubsubTopic: *string,
-	StreamingConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.sccFolderNotificationConfig.SccFolderNotificationConfigStreamingConfig,
+	StreamingConfig: github.com/cdktf/cdktf-provider-google-go/google.sccFolderNotificationConfig.SccFolderNotificationConfigStreamingConfig,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts,
 }
 ```
 
@@ -926,7 +926,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificati
 | <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigConfig.property.pubsubTopic">PubsubTopic</a></code> | <code>*string</code> | The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]". |
 | <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigConfig.property.streamingConfig">StreamingConfig</a></code> | <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigStreamingConfig">SccFolderNotificationConfigStreamingConfig</a></code> | streaming_config block. |
 | <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigConfig.property.description">Description</a></code> | <code>*string</code> | The description of the notification config (max of 1024 characters). |
-| <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#id SccFolderNotificationConfig#id}. |
+| <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#id SccFolderNotificationConfig#id}. |
 | <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts">SccFolderNotificationConfigTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1011,7 +1011,7 @@ ConfigId *string
 
 This must be unique within the organization.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#config_id SccFolderNotificationConfig#config_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#config_id SccFolderNotificationConfig#config_id}
 
 ---
 
@@ -1025,7 +1025,7 @@ Folder *string
 
 Numerical ID of the parent folder.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#folder SccFolderNotificationConfig#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#folder SccFolderNotificationConfig#folder}
 
 ---
 
@@ -1039,7 +1039,7 @@ PubsubTopic *string
 
 The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#pubsub_topic SccFolderNotificationConfig#pubsub_topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#pubsub_topic SccFolderNotificationConfig#pubsub_topic}
 
 ---
 
@@ -1053,7 +1053,7 @@ StreamingConfig SccFolderNotificationConfigStreamingConfig
 
 streaming_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#streaming_config SccFolderNotificationConfig#streaming_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#streaming_config SccFolderNotificationConfig#streaming_config}
 
 ---
 
@@ -1067,7 +1067,7 @@ Description *string
 
 The description of the notification config (max of 1024 characters).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#description SccFolderNotificationConfig#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#description SccFolderNotificationConfig#description}
 
 ---
 
@@ -1079,7 +1079,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#id SccFolderNotificationConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#id SccFolderNotificationConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1096,7 +1096,7 @@ Timeouts SccFolderNotificationConfigTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#timeouts SccFolderNotificationConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#timeouts SccFolderNotificationConfig#timeouts}
 
 ---
 
@@ -1105,7 +1105,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigStreamingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 &sccfoldernotificationconfig.SccFolderNotificationConfigStreamingConfig {
 	Filter: *string,
@@ -1155,7 +1155,7 @@ See
 [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
 for information on how to write a filter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#filter SccFolderNotificationConfig#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#filter SccFolderNotificationConfig#filter}
 
 ---
 
@@ -1164,7 +1164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 &sccfoldernotificationconfig.SccFolderNotificationConfigTimeouts {
 	Create: *string,
@@ -1177,9 +1177,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificati
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#create SccFolderNotificationConfig#create}. |
-| <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#delete SccFolderNotificationConfig#delete}. |
-| <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#update SccFolderNotificationConfig#update}. |
+| <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#create SccFolderNotificationConfig#create}. |
+| <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#delete SccFolderNotificationConfig#delete}. |
+| <code><a href="#@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#update SccFolderNotificationConfig#update}. |
 
 ---
 
@@ -1191,7 +1191,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#create SccFolderNotificationConfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#create SccFolderNotificationConfig#create}.
 
 ---
 
@@ -1203,7 +1203,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#delete SccFolderNotificationConfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#delete SccFolderNotificationConfig#delete}.
 
 ---
 
@@ -1215,7 +1215,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/scc_folder_notification_config#update SccFolderNotificationConfig#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/scc_folder_notification_config#update SccFolderNotificationConfig#update}.
 
 ---
 
@@ -1226,7 +1226,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigStreamingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 sccfoldernotificationconfig.NewSccFolderNotificationConfigStreamingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccFolderNotificationConfigStreamingConfigOutputReference
 ```
@@ -1497,7 +1497,7 @@ func InternalValue() SccFolderNotificationConfigStreamingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccFolderNotificationConfig.SccFolderNotificationConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/sccfoldernotificationconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccfoldernotificationconfig"
 
 sccfoldernotificationconfig.NewSccFolderNotificationConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccFolderNotificationConfigTimeoutsOutputReference
 ```

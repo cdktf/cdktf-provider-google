@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule
+// https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,18 +10,18 @@ export interface FirestoreBackupScheduleConfig extends cdktf.TerraformMetaArgume
   /**
   * The Firestore database id. Defaults to '"(default)"'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#database FirestoreBackupSchedule#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#database FirestoreBackupSchedule#database}
   */
   readonly database?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#id FirestoreBackupSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#id FirestoreBackupSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#project FirestoreBackupSchedule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#project FirestoreBackupSchedule#project}
   */
   readonly project?: string;
   /**
@@ -35,25 +30,25 @@ export interface FirestoreBackupScheduleConfig extends cdktf.TerraformMetaArgume
   * 
   * You can set this to a value up to 14 weeks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#retention FirestoreBackupSchedule#retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#retention FirestoreBackupSchedule#retention}
   */
   readonly retention: string;
   /**
   * daily_recurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#daily_recurrence FirestoreBackupSchedule#daily_recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#daily_recurrence FirestoreBackupSchedule#daily_recurrence}
   */
   readonly dailyRecurrence?: FirestoreBackupScheduleDailyRecurrence;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#timeouts FirestoreBackupSchedule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#timeouts FirestoreBackupSchedule#timeouts}
   */
   readonly timeouts?: FirestoreBackupScheduleTimeouts;
   /**
   * weekly_recurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#weekly_recurrence FirestoreBackupSchedule#weekly_recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#weekly_recurrence FirestoreBackupSchedule#weekly_recurrence}
   */
   readonly weeklyRecurrence?: FirestoreBackupScheduleWeeklyRecurrence;
 }
@@ -108,15 +103,15 @@ export class FirestoreBackupScheduleDailyRecurrenceOutputReference extends cdktf
 }
 export interface FirestoreBackupScheduleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#create FirestoreBackupSchedule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#create FirestoreBackupSchedule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#delete FirestoreBackupSchedule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#delete FirestoreBackupSchedule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#update FirestoreBackupSchedule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#update FirestoreBackupSchedule#update}
   */
   readonly update?: string;
 }
@@ -270,7 +265,7 @@ export interface FirestoreBackupScheduleWeeklyRecurrence {
   /**
   * The day of week to run. Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#day FirestoreBackupSchedule#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#day FirestoreBackupSchedule#day}
   */
   readonly day?: string;
 }
@@ -354,7 +349,7 @@ export class FirestoreBackupScheduleWeeklyRecurrenceOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule google_firestore_backup_schedule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule google_firestore_backup_schedule}
 */
 export class FirestoreBackupSchedule extends cdktf.TerraformResource {
 
@@ -370,7 +365,7 @@ export class FirestoreBackupSchedule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FirestoreBackupSchedule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FirestoreBackupSchedule to import
-  * @param importFromId The id of the existing FirestoreBackupSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FirestoreBackupSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FirestoreBackupSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -382,7 +377,7 @@ export class FirestoreBackupSchedule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/firestore_backup_schedule google_firestore_backup_schedule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/firestore_backup_schedule google_firestore_backup_schedule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -393,7 +388,7 @@ export class FirestoreBackupSchedule extends cdktf.TerraformResource {
       terraformResourceType: 'google_firestore_backup_schedule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.11.0',
+        providerVersion: '6.11.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
