@@ -4,7 +4,7 @@
 
 ### ApigeeEnvironmentIamBinding <a name="ApigeeEnvironmentIamBinding" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding google_apigee_environment_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding google_apigee_environment_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBinding.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the ApigeeEnvironmentIamBindin
 
 The id of the existing ApigeeEnvironmentIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -850,9 +850,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentia
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#expression ApigeeEnvironmentIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#title ApigeeEnvironmentIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#description ApigeeEnvironmentIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#expression ApigeeEnvironmentIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#title ApigeeEnvironmentIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#description ApigeeEnvironmentIamBinding#description}. |
 
 ---
 
@@ -864,7 +864,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#expression ApigeeEnvironmentIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#expression ApigeeEnvironmentIamBinding#expression}.
 
 ---
 
@@ -876,7 +876,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#title ApigeeEnvironmentIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#title ApigeeEnvironmentIamBinding#title}.
 
 ---
 
@@ -888,7 +888,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#description ApigeeEnvironmentIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#description ApigeeEnvironmentIamBinding#description}.
 
 ---
 
@@ -927,12 +927,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentia
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.envId">EnvId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#env_id ApigeeEnvironmentIamBinding#env_id}. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#members ApigeeEnvironmentIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.orgId">OrgId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#org_id ApigeeEnvironmentIamBinding#org_id}. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#role ApigeeEnvironmentIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.envId">EnvId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#env_id ApigeeEnvironmentIamBinding#env_id}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#members ApigeeEnvironmentIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.orgId">OrgId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#org_id ApigeeEnvironmentIamBinding#org_id}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#role ApigeeEnvironmentIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition">ApigeeEnvironmentIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#id ApigeeEnvironmentIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#id ApigeeEnvironmentIamBinding#id}. |
 
 ---
 
@@ -1014,7 +1014,7 @@ EnvId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#env_id ApigeeEnvironmentIamBinding#env_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#env_id ApigeeEnvironmentIamBinding#env_id}.
 
 ---
 
@@ -1026,7 +1026,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#members ApigeeEnvironmentIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#members ApigeeEnvironmentIamBinding#members}.
 
 ---
 
@@ -1038,7 +1038,7 @@ OrgId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#org_id ApigeeEnvironmentIamBinding#org_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#org_id ApigeeEnvironmentIamBinding#org_id}.
 
 ---
 
@@ -1050,7 +1050,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#role ApigeeEnvironmentIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#role ApigeeEnvironmentIamBinding#role}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Condition ApigeeEnvironmentIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#condition ApigeeEnvironmentIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#condition ApigeeEnvironmentIamBinding#condition}
 
 ---
 
@@ -1076,7 +1076,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.0/docs/resources/apigee_environment_iam_binding#id ApigeeEnvironmentIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/apigee_environment_iam_binding#id ApigeeEnvironmentIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
