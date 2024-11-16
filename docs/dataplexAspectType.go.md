@@ -4,12 +4,12 @@
 
 ### DataplexAspectType <a name="DataplexAspectType" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type google_dataplex_aspect_type}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type google_dataplex_aspect_type}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.NewDataplexAspectType(scope Construct, id *string, config DataplexAspectTypeConfig) DataplexAspectType
 ```
@@ -454,7 +454,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.DataplexAspectType_IsConstruct(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.DataplexAspectType_IsTerraformElement(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ dataplexaspecttype.DataplexAspectType_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.DataplexAspectType_IsTerraformResource(x interface{}) *bool
 ```
@@ -514,7 +514,7 @@ dataplexaspecttype.DataplexAspectType_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectType.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.DataplexAspectType_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -543,7 +543,7 @@ The construct id used in the generated config for the DataplexAspectType to impo
 
 The id of the existing DataplexAspectType that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1018,7 +1018,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 &dataplexaspecttype.DataplexAspectTypeConfig {
 	Connection: interface{},
@@ -1036,7 +1036,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
 	Location: *string,
 	MetadataTemplate: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.dataplexAspectType.DataplexAspectTypeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataplexAspectType.DataplexAspectTypeTimeouts,
 }
 ```
 
@@ -1054,11 +1054,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
 | <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.aspectTypeId">AspectTypeId</a></code> | <code>*string</code> | The aspect type id of the aspect type. |
 | <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.description">Description</a></code> | <code>*string</code> | Description of the AspectType. |
 | <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | User friendly display name. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#id DataplexAspectType#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#id DataplexAspectType#id}. |
 | <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User-defined labels for the AspectType. |
 | <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.location">Location</a></code> | <code>*string</code> | The location where aspect type will be created in. |
 | <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.metadataTemplate">MetadataTemplate</a></code> | <code>*string</code> | MetadataTemplate of the Aspect. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#project DataplexAspectType#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#project DataplexAspectType#project}. |
 | <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts">DataplexAspectTypeTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1143,7 +1143,7 @@ AspectTypeId *string
 
 The aspect type id of the aspect type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#aspect_type_id DataplexAspectType#aspect_type_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#aspect_type_id DataplexAspectType#aspect_type_id}
 
 ---
 
@@ -1157,7 +1157,7 @@ Description *string
 
 Description of the AspectType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#description DataplexAspectType#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#description DataplexAspectType#description}
 
 ---
 
@@ -1171,7 +1171,7 @@ DisplayName *string
 
 User friendly display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#display_name DataplexAspectType#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#display_name DataplexAspectType#display_name}
 
 ---
 
@@ -1183,7 +1183,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#id DataplexAspectType#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#id DataplexAspectType#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1203,7 +1203,7 @@ User-defined labels for the AspectType.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#labels DataplexAspectType#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#labels DataplexAspectType#labels}
 
 ---
 
@@ -1217,7 +1217,7 @@ Location *string
 
 The location where aspect type will be created in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#location DataplexAspectType#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#location DataplexAspectType#location}
 
 ---
 
@@ -1231,7 +1231,7 @@ MetadataTemplate *string
 
 MetadataTemplate of the Aspect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#metadata_template DataplexAspectType#metadata_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#metadata_template DataplexAspectType#metadata_template}
 
 ---
 
@@ -1243,7 +1243,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#project DataplexAspectType#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#project DataplexAspectType#project}.
 
 ---
 
@@ -1257,7 +1257,7 @@ Timeouts DataplexAspectTypeTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#timeouts DataplexAspectType#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#timeouts DataplexAspectType#timeouts}
 
 ---
 
@@ -1266,7 +1266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 &dataplexaspecttype.DataplexAspectTypeTimeouts {
 	Create: *string,
@@ -1279,9 +1279,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#create DataplexAspectType#create}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#delete DataplexAspectType#delete}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#update DataplexAspectType#update}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#create DataplexAspectType#create}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#delete DataplexAspectType#delete}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#update DataplexAspectType#update}. |
 
 ---
 
@@ -1293,7 +1293,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#create DataplexAspectType#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#create DataplexAspectType#create}.
 
 ---
 
@@ -1305,7 +1305,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#delete DataplexAspectType#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#delete DataplexAspectType#delete}.
 
 ---
 
@@ -1317,7 +1317,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/dataplex_aspect_type#update DataplexAspectType#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_aspect_type#update DataplexAspectType#update}.
 
 ---
 
@@ -1328,7 +1328,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexAspectType.DataplexAspectTypeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexaspecttype"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexaspecttype"
 
 dataplexaspecttype.NewDataplexAspectTypeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexAspectTypeTimeoutsOutputReference
 ```

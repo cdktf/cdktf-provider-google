@@ -4,12 +4,12 @@
 
 ### CloudQuotasQuotaPreference <a name="CloudQuotasQuotaPreference" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreference"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference google_cloud_quotas_quota_preference}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference google_cloud_quotas_quota_preference}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 cloudquotasquotapreference.NewCloudQuotasQuotaPreference(scope Construct, id *string, config CloudQuotasQuotaPreferenceConfig) CloudQuotasQuotaPreference
 ```
@@ -474,7 +474,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreference.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 cloudquotasquotapreference.CloudQuotasQuotaPreference_IsConstruct(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreference.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 cloudquotasquotapreference.CloudQuotasQuotaPreference_IsTerraformElement(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ cloudquotasquotapreference.CloudQuotasQuotaPreference_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreference.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 cloudquotasquotapreference.CloudQuotasQuotaPreference_IsTerraformResource(x interface{}) *bool
 ```
@@ -534,7 +534,7 @@ cloudquotasquotapreference.CloudQuotasQuotaPreference_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreference.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 cloudquotasquotapreference.CloudQuotasQuotaPreference_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -563,7 +563,7 @@ The construct id used in the generated config for the CloudQuotasQuotaPreference
 
 The id of the existing CloudQuotasQuotaPreference that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1049,7 +1049,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 &cloudquotasquotapreference.CloudQuotasQuotaPreferenceConfig {
 	Connection: interface{},
@@ -1059,7 +1059,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapre
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	QuotaConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceQuotaConfig,
+	QuotaConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceQuotaConfig,
 	ContactEmail: *string,
 	Dimensions: *map[string]*string,
 	Id: *string,
@@ -1069,7 +1069,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapre
 	Parent: *string,
 	QuotaId: *string,
 	Service: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts,
 }
 ```
 
@@ -1087,7 +1087,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapre
 | <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.property.quotaConfig">QuotaConfig</a></code> | <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceQuotaConfig">CloudQuotasQuotaPreferenceQuotaConfig</a></code> | quota_config block. |
 | <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.property.contactEmail">ContactEmail</a></code> | <code>*string</code> | An email address that can be used for quota related communication between the Google Cloud and the user in case the Google Cloud needs further information to make a decision on whether the user preferred quota can be granted. |
 | <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.property.dimensions">Dimensions</a></code> | <code>*map[string]*string</code> | The dimensions that this quota preference applies to. |
-| <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#id CloudQuotasQuotaPreference#id}. |
+| <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#id CloudQuotasQuotaPreference#id}. |
 | <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.property.ignoreSafetyChecks">IgnoreSafetyChecks</a></code> | <code>*string</code> | The list of quota safety checks to be ignored. Default value: "QUOTA_SAFETY_CHECK_UNSPECIFIED" Possible values: ["QUOTA_SAFETY_CHECK_UNSPECIFIED", "QUOTA_DECREASE_BELOW_USAGE", "QUOTA_DECREASE_PERCENTAGE_TOO_HIGH"]. |
 | <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.property.justification">Justification</a></code> | <code>*string</code> | The reason / justification for this quota preference. |
 | <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceConfig.property.name">Name</a></code> | <code>*string</code> | The resource name of the quota preference. Required except in the CREATE requests. |
@@ -1178,7 +1178,7 @@ QuotaConfig CloudQuotasQuotaPreferenceQuotaConfig
 
 quota_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#quota_config CloudQuotasQuotaPreference#quota_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#quota_config CloudQuotasQuotaPreference#quota_config}
 
 ---
 
@@ -1194,7 +1194,7 @@ An email address that can be used for quota related communication between the Go
 
 The Google account for the email address must have quota update permission for the project, folder or organization this quota preference is for.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#contact_email CloudQuotasQuotaPreference#contact_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#contact_email CloudQuotasQuotaPreference#contact_email}
 
 ---
 
@@ -1214,7 +1214,7 @@ NOTE: QuotaPreferences can only be applied across all values of "user" and "reso
 
 Example: '{"provider": "Foo Inc"}' where "provider" is a service specific dimension.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#dimensions CloudQuotasQuotaPreference#dimensions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#dimensions CloudQuotasQuotaPreference#dimensions}
 
 ---
 
@@ -1226,7 +1226,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#id CloudQuotasQuotaPreference#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#id CloudQuotasQuotaPreference#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1243,7 +1243,7 @@ IgnoreSafetyChecks *string
 
 The list of quota safety checks to be ignored. Default value: "QUOTA_SAFETY_CHECK_UNSPECIFIED" Possible values: ["QUOTA_SAFETY_CHECK_UNSPECIFIED", "QUOTA_DECREASE_BELOW_USAGE", "QUOTA_DECREASE_PERCENTAGE_TOO_HIGH"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#ignore_safety_checks CloudQuotasQuotaPreference#ignore_safety_checks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#ignore_safety_checks CloudQuotasQuotaPreference#ignore_safety_checks}
 
 ---
 
@@ -1257,7 +1257,7 @@ Justification *string
 
 The reason / justification for this quota preference.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#justification CloudQuotasQuotaPreference#justification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#justification CloudQuotasQuotaPreference#justification}
 
 ---
 
@@ -1271,7 +1271,7 @@ Name *string
 
 The resource name of the quota preference. Required except in the CREATE requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#name CloudQuotasQuotaPreference#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#name CloudQuotasQuotaPreference#name}
 
 ---
 
@@ -1287,7 +1287,7 @@ The parent of the quota preference.
 
 Allowed parents are "projects/[project-id / number]" or "folders/[folder-id / number]" or "organizations/[org-id / number]".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#parent CloudQuotasQuotaPreference#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#parent CloudQuotasQuotaPreference#parent}
 
 ---
 
@@ -1304,7 +1304,7 @@ The id of the quota to which the quota preference is applied.
 A quota id is unique in the service.
 Example: 'CPUS-per-project-region'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#quota_id CloudQuotasQuotaPreference#quota_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#quota_id CloudQuotasQuotaPreference#quota_id}
 
 ---
 
@@ -1318,7 +1318,7 @@ Service *string
 
 The name of the service to which the quota preference is applied.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#service CloudQuotasQuotaPreference#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#service CloudQuotasQuotaPreference#service}
 
 ---
 
@@ -1332,7 +1332,7 @@ Timeouts CloudQuotasQuotaPreferenceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#timeouts CloudQuotasQuotaPreference#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#timeouts CloudQuotasQuotaPreference#timeouts}
 
 ---
 
@@ -1341,7 +1341,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceQuotaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 &cloudquotasquotapreference.CloudQuotasQuotaPreferenceQuotaConfig {
 	PreferredValue: *string,
@@ -1370,7 +1370,7 @@ The preferred value.
 
 Must be greater than or equal to -1. If set to -1, it means the value is "unlimited".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#preferred_value CloudQuotasQuotaPreference#preferred_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#preferred_value CloudQuotasQuotaPreference#preferred_value}
 
 ---
 
@@ -1388,7 +1388,7 @@ Do not put PII or other sensitive information here. See https://google.aip.dev/1
 
 An object containing a list of "key: value" pairs. Example: '{ "name": "wrench", "mass": "1.3kg", "count": "3" }'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#annotations CloudQuotasQuotaPreference#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#annotations CloudQuotasQuotaPreference#annotations}
 
 ---
 
@@ -1397,7 +1397,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 &cloudquotasquotapreference.CloudQuotasQuotaPreferenceTimeouts {
 	Create: *string,
@@ -1410,9 +1410,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapre
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#create CloudQuotasQuotaPreference#create}. |
-| <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#delete CloudQuotasQuotaPreference#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#update CloudQuotasQuotaPreference#update}. |
+| <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#create CloudQuotasQuotaPreference#create}. |
+| <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#delete CloudQuotasQuotaPreference#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#update CloudQuotasQuotaPreference#update}. |
 
 ---
 
@@ -1424,7 +1424,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#create CloudQuotasQuotaPreference#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#create CloudQuotasQuotaPreference#create}.
 
 ---
 
@@ -1436,7 +1436,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#delete CloudQuotasQuotaPreference#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#delete CloudQuotasQuotaPreference#delete}.
 
 ---
 
@@ -1448,7 +1448,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/cloud_quotas_quota_preference#update CloudQuotasQuotaPreference#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/cloud_quotas_quota_preference#update CloudQuotasQuotaPreference#update}.
 
 ---
 
@@ -1459,7 +1459,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceQuotaConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 cloudquotasquotapreference.NewCloudQuotasQuotaPreferenceQuotaConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudQuotasQuotaPreferenceQuotaConfigOutputReference
 ```
@@ -1803,7 +1803,7 @@ func InternalValue() CloudQuotasQuotaPreferenceQuotaConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudQuotasQuotaPreference.CloudQuotasQuotaPreferenceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/cloudquotasquotapreference"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudquotasquotapreference"
 
 cloudquotasquotapreference.NewCloudQuotasQuotaPreferenceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudQuotasQuotaPreferenceTimeoutsOutputReference
 ```

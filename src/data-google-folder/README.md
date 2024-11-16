@@ -1,3 +1,3 @@
 # `data_google_folder`
 
-Refer to the Terraform Registry for docs: [`data_google_folder`](https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/data-sources/folder).
+Refer to the Terraform Registry for docs: [`data_google_folder`](https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/data-sources/folder).
