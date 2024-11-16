@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ComputeResourcePolicyConfig extends cdktf.TerraformMetaArgument
   /**
   * An optional description of this resource. Provide this property when you create the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#description ComputeResourcePolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#description ComputeResourcePolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#id ComputeResourcePolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#id ComputeResourcePolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,47 +34,47 @@ export interface ComputeResourcePolicyConfig extends cdktf.TerraformMetaArgument
   * must be a dash, lowercase letter, or digit, except the last character,
   * which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#name ComputeResourcePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#name ComputeResourcePolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#project ComputeResourcePolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#project ComputeResourcePolicy#project}
   */
   readonly project?: string;
   /**
   * Region where resource policy resides.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#region ComputeResourcePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#region ComputeResourcePolicy#region}
   */
   readonly region?: string;
   /**
   * disk_consistency_group_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#disk_consistency_group_policy ComputeResourcePolicy#disk_consistency_group_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#disk_consistency_group_policy ComputeResourcePolicy#disk_consistency_group_policy}
   */
   readonly diskConsistencyGroupPolicy?: ComputeResourcePolicyDiskConsistencyGroupPolicy;
   /**
   * group_placement_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#group_placement_policy ComputeResourcePolicy#group_placement_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#group_placement_policy ComputeResourcePolicy#group_placement_policy}
   */
   readonly groupPlacementPolicy?: ComputeResourcePolicyGroupPlacementPolicy;
   /**
   * instance_schedule_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#instance_schedule_policy ComputeResourcePolicy#instance_schedule_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#instance_schedule_policy ComputeResourcePolicy#instance_schedule_policy}
   */
   readonly instanceSchedulePolicy?: ComputeResourcePolicyInstanceSchedulePolicy;
   /**
   * snapshot_schedule_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#snapshot_schedule_policy ComputeResourcePolicy#snapshot_schedule_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#snapshot_schedule_policy ComputeResourcePolicy#snapshot_schedule_policy}
   */
   readonly snapshotSchedulePolicy?: ComputeResourcePolicySnapshotSchedulePolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#timeouts ComputeResourcePolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#timeouts ComputeResourcePolicy#timeouts}
   */
   readonly timeouts?: ComputeResourcePolicyTimeouts;
 }
@@ -82,7 +82,7 @@ export interface ComputeResourcePolicyDiskConsistencyGroupPolicy {
   /**
   * Enable disk consistency on the resource policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#enabled ComputeResourcePolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#enabled ComputeResourcePolicy#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -166,7 +166,7 @@ export interface ComputeResourcePolicyGroupPlacementPolicy {
   * The number of availability domains instances will be spread across. If two instances are in different
   * availability domain, they will not be put in the same low latency network
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#availability_domain_count ComputeResourcePolicy#availability_domain_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#availability_domain_count ComputeResourcePolicy#availability_domain_count}
   */
   readonly availabilityDomainCount?: number;
   /**
@@ -175,7 +175,7 @@ export interface ComputeResourcePolicyGroupPlacementPolicy {
   * with a COLLOCATED policy, then exactly 'vm_count' instances must be created at the same time with the resource policy
   * attached. Possible values: ["COLLOCATED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#collocation ComputeResourcePolicy#collocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#collocation ComputeResourcePolicy#collocation}
   */
   readonly collocation?: string;
   /**
@@ -183,7 +183,7 @@ export interface ComputeResourcePolicyGroupPlacementPolicy {
   * unless you use a compact policy and you want your policy to work only if it contains this
   * exact number of VMs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#vm_count ComputeResourcePolicy#vm_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#vm_count ComputeResourcePolicy#vm_count}
   */
   readonly vmCount?: number;
 }
@@ -327,7 +327,7 @@ export interface ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule {
   /**
   * Specifies the frequency for the operation, using the unix-cron format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#schedule ComputeResourcePolicy#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#schedule ComputeResourcePolicy#schedule}
   */
   readonly schedule: string;
 }
@@ -410,7 +410,7 @@ export interface ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule {
   /**
   * Specifies the frequency for the operation, using the unix-cron format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#schedule ComputeResourcePolicy#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#schedule ComputeResourcePolicy#schedule}
   */
   readonly schedule: string;
 }
@@ -493,32 +493,32 @@ export interface ComputeResourcePolicyInstanceSchedulePolicy {
   /**
   * The expiration time of the schedule. The timestamp is an RFC3339 string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#expiration_time ComputeResourcePolicy#expiration_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#expiration_time ComputeResourcePolicy#expiration_time}
   */
   readonly expirationTime?: string;
   /**
   * The start time of the schedule. The timestamp is an RFC3339 string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#start_time ComputeResourcePolicy#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#start_time ComputeResourcePolicy#start_time}
   */
   readonly startTime?: string;
   /**
   * Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
   * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#time_zone ComputeResourcePolicy#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#time_zone ComputeResourcePolicy#time_zone}
   */
   readonly timeZone: string;
   /**
   * vm_start_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#vm_start_schedule ComputeResourcePolicy#vm_start_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#vm_start_schedule ComputeResourcePolicy#vm_start_schedule}
   */
   readonly vmStartSchedule?: ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule;
   /**
   * vm_stop_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#vm_stop_schedule ComputeResourcePolicy#vm_stop_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#vm_stop_schedule ComputeResourcePolicy#vm_stop_schedule}
   */
   readonly vmStopSchedule?: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule;
 }
@@ -717,14 +717,14 @@ export interface ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy {
   /**
   * Maximum age of the snapshot that is allowed to be kept.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#max_retention_days ComputeResourcePolicy#max_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#max_retention_days ComputeResourcePolicy#max_retention_days}
   */
   readonly maxRetentionDays: number;
   /**
   * Specifies the behavior to apply to scheduled snapshots when
   * the source disk is deleted. Default value: "KEEP_AUTO_SNAPSHOTS" Possible values: ["KEEP_AUTO_SNAPSHOTS", "APPLY_RETENTION_POLICY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#on_source_disk_delete ComputeResourcePolicy#on_source_disk_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#on_source_disk_delete ComputeResourcePolicy#on_source_disk_delete}
   */
   readonly onSourceDiskDelete?: string;
 }
@@ -836,7 +836,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedul
   /**
   * Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle. Days in cycle for snapshot schedule policy must be 1.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#days_in_cycle ComputeResourcePolicy#days_in_cycle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#days_in_cycle ComputeResourcePolicy#days_in_cycle}
   */
   readonly daysInCycle: number;
   /**
@@ -844,7 +844,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedul
   * 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example,
   * both 13:00-5 and 08:00 are valid.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#start_time ComputeResourcePolicy#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#start_time ComputeResourcePolicy#start_time}
   */
   readonly startTime: string;
 }
@@ -953,7 +953,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedu
   /**
   * The number of hours between snapshots.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#hours_in_cycle ComputeResourcePolicy#hours_in_cycle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#hours_in_cycle ComputeResourcePolicy#hours_in_cycle}
   */
   readonly hoursInCycle: number;
   /**
@@ -961,7 +961,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedu
   * It must be in an hourly format "HH:MM",
   * where HH : [00-23] and MM : [00] GMT. eg: 21:00
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#start_time ComputeResourcePolicy#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#start_time ComputeResourcePolicy#start_time}
   */
   readonly startTime: string;
 }
@@ -1070,14 +1070,14 @@ export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedu
   /**
   * The day of the week to create the snapshot. e.g. MONDAY Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#day ComputeResourcePolicy#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#day ComputeResourcePolicy#day}
   */
   readonly day: string;
   /**
   * Time within the window to start the operations.
   * It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#start_time ComputeResourcePolicy#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#start_time ComputeResourcePolicy#start_time}
   */
   readonly startTime: string;
 }
@@ -1218,7 +1218,7 @@ export interface ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedu
   /**
   * day_of_weeks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#day_of_weeks ComputeResourcePolicy#day_of_weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#day_of_weeks ComputeResourcePolicy#day_of_weeks}
   */
   readonly dayOfWeeks: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks[] | cdktf.IResolvable;
 }
@@ -1301,19 +1301,19 @@ export interface ComputeResourcePolicySnapshotSchedulePolicySchedule {
   /**
   * daily_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#daily_schedule ComputeResourcePolicy#daily_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#daily_schedule ComputeResourcePolicy#daily_schedule}
   */
   readonly dailySchedule?: ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule;
   /**
   * hourly_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#hourly_schedule ComputeResourcePolicy#hourly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#hourly_schedule ComputeResourcePolicy#hourly_schedule}
   */
   readonly hourlySchedule?: ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule;
   /**
   * weekly_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#weekly_schedule ComputeResourcePolicy#weekly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#weekly_schedule ComputeResourcePolicy#weekly_schedule}
   */
   readonly weeklySchedule?: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule;
 }
@@ -1459,26 +1459,26 @@ export interface ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties {
   * specified name. The chain name must be 1-63 characters long and comply
   * with RFC1035.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#chain_name ComputeResourcePolicy#chain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#chain_name ComputeResourcePolicy#chain_name}
   */
   readonly chainName?: string;
   /**
   * Whether to perform a 'guest aware' snapshot.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#guest_flush ComputeResourcePolicy#guest_flush}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#guest_flush ComputeResourcePolicy#guest_flush}
   */
   readonly guestFlush?: boolean | cdktf.IResolvable;
   /**
   * A set of key-value pairs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#labels ComputeResourcePolicy#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#labels ComputeResourcePolicy#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Cloud Storage bucket location to store the auto snapshot
   * (regional or multi-regional)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#storage_locations ComputeResourcePolicy#storage_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#storage_locations ComputeResourcePolicy#storage_locations}
   */
   readonly storageLocations?: string[];
 }
@@ -1651,19 +1651,19 @@ export interface ComputeResourcePolicySnapshotSchedulePolicy {
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#retention_policy ComputeResourcePolicy#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#retention_policy ComputeResourcePolicy#retention_policy}
   */
   readonly retentionPolicy?: ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#schedule ComputeResourcePolicy#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#schedule ComputeResourcePolicy#schedule}
   */
   readonly schedule: ComputeResourcePolicySnapshotSchedulePolicySchedule;
   /**
   * snapshot_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#snapshot_properties ComputeResourcePolicy#snapshot_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#snapshot_properties ComputeResourcePolicy#snapshot_properties}
   */
   readonly snapshotProperties?: ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties;
 }
@@ -1802,15 +1802,15 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
 }
 export interface ComputeResourcePolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#create ComputeResourcePolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#create ComputeResourcePolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#delete ComputeResourcePolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#delete ComputeResourcePolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#update ComputeResourcePolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#update ComputeResourcePolicy#update}
   */
   readonly update?: string;
 }
@@ -1962,7 +1962,7 @@ export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy google_compute_resource_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy google_compute_resource_policy}
 */
 export class ComputeResourcePolicy extends cdktf.TerraformResource {
 
@@ -1978,7 +1978,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeResourcePolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeResourcePolicy to import
-  * @param importFromId The id of the existing ComputeResourcePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeResourcePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeResourcePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1990,7 +1990,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/compute_resource_policy google_compute_resource_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_resource_policy google_compute_resource_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2001,7 +2001,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_resource_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.11.1',
+        providerVersion: '6.11.2',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

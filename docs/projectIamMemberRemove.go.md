@@ -4,7 +4,7 @@
 
 ### ProjectIamMemberRemove <a name="ProjectIamMemberRemove" id="@cdktf/provider-google.projectIamMemberRemove.ProjectIamMemberRemove"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/project_iam_member_remove google_project_iam_member_remove}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/project_iam_member_remove google_project_iam_member_remove}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectIamMemberRemove.ProjectIamMemberRemove.Initializer"></a>
 
@@ -474,7 +474,7 @@ The construct id used in the generated config for the ProjectIamMemberRemove to 
 
 The id of the existing ProjectIamMemberRemove that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/project_iam_member_remove#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/project_iam_member_remove#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -793,7 +793,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/projectiammemberrem
 | <code><a href="#@cdktf/provider-google.projectIamMemberRemove.ProjectIamMemberRemoveConfig.property.member">Member</a></code> | <code>*string</code> | The IAM principal that should not have the target role. |
 | <code><a href="#@cdktf/provider-google.projectIamMemberRemove.ProjectIamMemberRemoveConfig.property.project">Project</a></code> | <code>*string</code> | The project id of the target project. |
 | <code><a href="#@cdktf/provider-google.projectIamMemberRemove.ProjectIamMemberRemoveConfig.property.role">Role</a></code> | <code>*string</code> | The target role that should be removed. |
-| <code><a href="#@cdktf/provider-google.projectIamMemberRemove.ProjectIamMemberRemoveConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/project_iam_member_remove#id ProjectIamMemberRemove#id}. |
+| <code><a href="#@cdktf/provider-google.projectIamMemberRemove.ProjectIamMemberRemoveConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/project_iam_member_remove#id ProjectIamMemberRemove#id}. |
 
 ---
 
@@ -877,7 +877,7 @@ Member *string
 
 The IAM principal that should not have the target role.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/project_iam_member_remove#member ProjectIamMemberRemove#member}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/project_iam_member_remove#member ProjectIamMemberRemove#member}
 
 ---
 
@@ -891,7 +891,7 @@ Project *string
 
 The project id of the target project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/project_iam_member_remove#project ProjectIamMemberRemove#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/project_iam_member_remove#project ProjectIamMemberRemove#project}
 
 ---
 
@@ -905,7 +905,7 @@ Role *string
 
 The target role that should be removed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/project_iam_member_remove#role ProjectIamMemberRemove#role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/project_iam_member_remove#role ProjectIamMemberRemove#role}
 
 ---
 
@@ -917,7 +917,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.1/docs/resources/project_iam_member_remove#id ProjectIamMemberRemove#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/project_iam_member_remove#id ProjectIamMemberRemove#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
