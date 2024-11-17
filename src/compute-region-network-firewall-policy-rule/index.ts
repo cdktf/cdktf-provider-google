@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_region_network_firewall_policy_rule
 // generated from terraform resource schema
 
