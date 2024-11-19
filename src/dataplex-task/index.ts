@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task
+// https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface DataplexTaskConfig extends cdktf.TerraformMetaArguments {
   /**
   * User-provided description of the task.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#description DataplexTask#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#description DataplexTask#description}
   */
   readonly description?: string;
   /**
   * User friendly display name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#display_name DataplexTask#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#display_name DataplexTask#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#id DataplexTask#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#id DataplexTask#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -38,59 +38,59 @@ export interface DataplexTaskConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#labels DataplexTask#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#labels DataplexTask#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The lake in which the task will be created in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#lake DataplexTask#lake}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#lake DataplexTask#lake}
   */
   readonly lake?: string;
   /**
   * The location in which the task will be created in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#location DataplexTask#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#location DataplexTask#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#project DataplexTask#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#project DataplexTask#project}
   */
   readonly project?: string;
   /**
   * The task Id of the task.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#task_id DataplexTask#task_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#task_id DataplexTask#task_id}
   */
   readonly taskId?: string;
   /**
   * execution_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#execution_spec DataplexTask#execution_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#execution_spec DataplexTask#execution_spec}
   */
   readonly executionSpec: DataplexTaskExecutionSpec;
   /**
   * notebook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#notebook DataplexTask#notebook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#notebook DataplexTask#notebook}
   */
   readonly notebook?: DataplexTaskNotebook;
   /**
   * spark block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#spark DataplexTask#spark}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#spark DataplexTask#spark}
   */
   readonly spark?: DataplexTaskSpark;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#timeouts DataplexTask#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#timeouts DataplexTask#timeouts}
   */
   readonly timeouts?: DataplexTaskTimeouts;
   /**
   * trigger_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#trigger_spec DataplexTask#trigger_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#trigger_spec DataplexTask#trigger_spec}
   */
   readonly triggerSpec: DataplexTaskTriggerSpec;
 }
@@ -294,31 +294,31 @@ export interface DataplexTaskExecutionSpec {
   /**
   * The arguments to pass to the task. The args can use placeholders of the format ${placeholder} as part of key/value string. These will be interpolated before passing the args to the driver. Currently supported placeholders: - ${taskId} - ${job_time} To pass positional args, set the key as TASK_ARGS. The value should be a comma-separated string of all the positional arguments. To use a delimiter other than comma, refer to https://cloud.google.com/sdk/gcloud/reference/topic/escaping. In case of other keys being present in the args, then TASK_ARGS will be passed as the last argument. An object containing a list of 'key': value pairs. Example: { 'name': 'wrench', 'mass': '1.3kg', 'count': '3' }.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#args DataplexTask#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#args DataplexTask#args}
   */
   readonly args?: { [key: string]: string };
   /**
   * The Cloud KMS key to use for encryption, of the form: projects/{project_number}/locations/{locationId}/keyRings/{key-ring-name}/cryptoKeys/{key-name}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#kms_key DataplexTask#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#kms_key DataplexTask#kms_key}
   */
   readonly kmsKey?: string;
   /**
   * The maximum duration after which the job execution is expired. A duration in seconds with up to nine fractional digits, ending with 's'. Example: '3.5s'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#max_job_execution_lifetime DataplexTask#max_job_execution_lifetime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#max_job_execution_lifetime DataplexTask#max_job_execution_lifetime}
   */
   readonly maxJobExecutionLifetime?: string;
   /**
   * The project in which jobs are run. By default, the project containing the Lake is used. If a project is provided, the ExecutionSpec.service_account must belong to this project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#project DataplexTask#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#project DataplexTask#project}
   */
   readonly project?: string;
   /**
   * Service account to use to execute a task. If not provided, the default Compute service account for the project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#service_account DataplexTask#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#service_account DataplexTask#service_account}
   */
   readonly serviceAccount: string;
 }
@@ -517,13 +517,13 @@ export interface DataplexTaskNotebookInfrastructureSpecBatch {
   /**
   * Total number of job executors. Executor Count should be between 2 and 100. [Default=2]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#executors_count DataplexTask#executors_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#executors_count DataplexTask#executors_count}
   */
   readonly executorsCount?: number;
   /**
   * Max configurable executors. If maxExecutorsCount > executorsCount, then auto-scaling is enabled. Max Executor Count should be between 2 and 1000. [Default=1000]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#max_executors_count DataplexTask#max_executors_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#max_executors_count DataplexTask#max_executors_count}
   */
   readonly maxExecutorsCount?: number;
 }
@@ -638,25 +638,25 @@ export interface DataplexTaskNotebookInfrastructureSpecContainerImage {
   /**
   * Container image to use.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#image DataplexTask#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#image DataplexTask#image}
   */
   readonly image?: string;
   /**
   * A list of Java JARS to add to the classpath. Valid input includes Cloud Storage URIs to Jar binaries. For example, gs://bucket-name/my/path/to/file.jar
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#java_jars DataplexTask#java_jars}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#java_jars DataplexTask#java_jars}
   */
   readonly javaJars?: string[];
   /**
   * Override to common configuration of open source components installed on the Dataproc cluster. The properties to set on daemon config files. Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. For more information, see Cluster properties.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#properties DataplexTask#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#properties DataplexTask#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
   * A list of python packages to be installed. Valid formats include Cloud Storage URI to a PIP installable library. For example, gs://bucket-name/my/path/to/lib.tar.gz
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#python_packages DataplexTask#python_packages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#python_packages DataplexTask#python_packages}
   */
   readonly pythonPackages?: string[];
 }
@@ -829,19 +829,19 @@ export interface DataplexTaskNotebookInfrastructureSpecVpcNetwork {
   /**
   * The Cloud VPC network in which the job is run. By default, the Cloud VPC network named Default within the project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#network DataplexTask#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#network DataplexTask#network}
   */
   readonly network?: string;
   /**
   * List of network tags to apply to the job.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#network_tags DataplexTask#network_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#network_tags DataplexTask#network_tags}
   */
   readonly networkTags?: string[];
   /**
   * The Cloud VPC sub-network in which the job is run.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#sub_network DataplexTask#sub_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#sub_network DataplexTask#sub_network}
   */
   readonly subNetwork?: string;
 }
@@ -985,19 +985,19 @@ export interface DataplexTaskNotebookInfrastructureSpec {
   /**
   * batch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#batch DataplexTask#batch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#batch DataplexTask#batch}
   */
   readonly batch?: DataplexTaskNotebookInfrastructureSpecBatch;
   /**
   * container_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#container_image DataplexTask#container_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#container_image DataplexTask#container_image}
   */
   readonly containerImage?: DataplexTaskNotebookInfrastructureSpecContainerImage;
   /**
   * vpc_network block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#vpc_network DataplexTask#vpc_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#vpc_network DataplexTask#vpc_network}
   */
   readonly vpcNetwork?: DataplexTaskNotebookInfrastructureSpecVpcNetwork;
 }
@@ -1141,25 +1141,25 @@ export interface DataplexTaskNotebook {
   /**
   * Cloud Storage URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#archive_uris DataplexTask#archive_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#archive_uris DataplexTask#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
   * Cloud Storage URIs of files to be placed in the working directory of each executor.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#file_uris DataplexTask#file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#file_uris DataplexTask#file_uris}
   */
   readonly fileUris?: string[];
   /**
   * Path to input notebook. This can be the Cloud Storage URI of the notebook file or the path to a Notebook Content. The execution args are accessible as environment variables (TASK_key=value).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#notebook DataplexTask#notebook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#notebook DataplexTask#notebook}
   */
   readonly notebook: string;
   /**
   * infrastructure_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#infrastructure_spec DataplexTask#infrastructure_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#infrastructure_spec DataplexTask#infrastructure_spec}
   */
   readonly infrastructureSpec?: DataplexTaskNotebookInfrastructureSpec;
 }
@@ -1329,13 +1329,13 @@ export interface DataplexTaskSparkInfrastructureSpecBatch {
   /**
   * Total number of job executors. Executor Count should be between 2 and 100. [Default=2]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#executors_count DataplexTask#executors_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#executors_count DataplexTask#executors_count}
   */
   readonly executorsCount?: number;
   /**
   * Max configurable executors. If maxExecutorsCount > executorsCount, then auto-scaling is enabled. Max Executor Count should be between 2 and 1000. [Default=1000]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#max_executors_count DataplexTask#max_executors_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#max_executors_count DataplexTask#max_executors_count}
   */
   readonly maxExecutorsCount?: number;
 }
@@ -1450,25 +1450,25 @@ export interface DataplexTaskSparkInfrastructureSpecContainerImage {
   /**
   * Container image to use.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#image DataplexTask#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#image DataplexTask#image}
   */
   readonly image?: string;
   /**
   * A list of Java JARS to add to the classpath. Valid input includes Cloud Storage URIs to Jar binaries. For example, gs://bucket-name/my/path/to/file.jar
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#java_jars DataplexTask#java_jars}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#java_jars DataplexTask#java_jars}
   */
   readonly javaJars?: string[];
   /**
   * Override to common configuration of open source components installed on the Dataproc cluster. The properties to set on daemon config files. Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. For more information, see Cluster properties.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#properties DataplexTask#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#properties DataplexTask#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
   * A list of python packages to be installed. Valid formats include Cloud Storage URI to a PIP installable library. For example, gs://bucket-name/my/path/to/lib.tar.gz
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#python_packages DataplexTask#python_packages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#python_packages DataplexTask#python_packages}
   */
   readonly pythonPackages?: string[];
 }
@@ -1641,19 +1641,19 @@ export interface DataplexTaskSparkInfrastructureSpecVpcNetwork {
   /**
   * The Cloud VPC network in which the job is run. By default, the Cloud VPC network named Default within the project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#network DataplexTask#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#network DataplexTask#network}
   */
   readonly network?: string;
   /**
   * List of network tags to apply to the job.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#network_tags DataplexTask#network_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#network_tags DataplexTask#network_tags}
   */
   readonly networkTags?: string[];
   /**
   * The Cloud VPC sub-network in which the job is run.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#sub_network DataplexTask#sub_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#sub_network DataplexTask#sub_network}
   */
   readonly subNetwork?: string;
 }
@@ -1797,19 +1797,19 @@ export interface DataplexTaskSparkInfrastructureSpec {
   /**
   * batch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#batch DataplexTask#batch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#batch DataplexTask#batch}
   */
   readonly batch?: DataplexTaskSparkInfrastructureSpecBatch;
   /**
   * container_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#container_image DataplexTask#container_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#container_image DataplexTask#container_image}
   */
   readonly containerImage?: DataplexTaskSparkInfrastructureSpecContainerImage;
   /**
   * vpc_network block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#vpc_network DataplexTask#vpc_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#vpc_network DataplexTask#vpc_network}
   */
   readonly vpcNetwork?: DataplexTaskSparkInfrastructureSpecVpcNetwork;
 }
@@ -1953,49 +1953,49 @@ export interface DataplexTaskSpark {
   /**
   * Cloud Storage URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#archive_uris DataplexTask#archive_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#archive_uris DataplexTask#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
   * Cloud Storage URIs of files to be placed in the working directory of each executor.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#file_uris DataplexTask#file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#file_uris DataplexTask#file_uris}
   */
   readonly fileUris?: string[];
   /**
   * The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in jar_file_uris. The execution args are passed in as a sequence of named process arguments (--key=value).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#main_class DataplexTask#main_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#main_class DataplexTask#main_class}
   */
   readonly mainClass?: string;
   /**
   * The Cloud Storage URI of the jar file that contains the main class. The execution args are passed in as a sequence of named process arguments (--key=value).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#main_jar_file_uri DataplexTask#main_jar_file_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#main_jar_file_uri DataplexTask#main_jar_file_uri}
   */
   readonly mainJarFileUri?: string;
   /**
   * The Gcloud Storage URI of the main Python file to use as the driver. Must be a .py file. The execution args are passed in as a sequence of named process arguments (--key=value).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#python_script_file DataplexTask#python_script_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#python_script_file DataplexTask#python_script_file}
   */
   readonly pythonScriptFile?: string;
   /**
   * The query text. The execution args are used to declare a set of script variables (set key='value';).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#sql_script DataplexTask#sql_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#sql_script DataplexTask#sql_script}
   */
   readonly sqlScript?: string;
   /**
   * A reference to a query file. This can be the Cloud Storage URI of the query file or it can the path to a SqlScript Content. The execution args are used to declare a set of script variables (set key='value';).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#sql_script_file DataplexTask#sql_script_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#sql_script_file DataplexTask#sql_script_file}
   */
   readonly sqlScriptFile?: string;
   /**
   * infrastructure_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#infrastructure_spec DataplexTask#infrastructure_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#infrastructure_spec DataplexTask#infrastructure_spec}
   */
   readonly infrastructureSpec?: DataplexTaskSparkInfrastructureSpec;
 }
@@ -2282,15 +2282,15 @@ export class DataplexTaskSparkOutputReference extends cdktf.ComplexObject {
 }
 export interface DataplexTaskTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#create DataplexTask#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#create DataplexTask#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#delete DataplexTask#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#delete DataplexTask#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#update DataplexTask#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#update DataplexTask#update}
   */
   readonly update?: string;
 }
@@ -2444,31 +2444,31 @@ export interface DataplexTaskTriggerSpec {
   /**
   * Prevent the task from executing. This does not cancel already running tasks. It is intended to temporarily disable RECURRING tasks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#disabled DataplexTask#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#disabled DataplexTask#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Number of retry attempts before aborting. Set to zero to never attempt to retry a failed task.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#max_retries DataplexTask#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#max_retries DataplexTask#max_retries}
   */
   readonly maxRetries?: number;
   /**
   * Cron schedule (https://en.wikipedia.org/wiki/Cron) for running tasks periodically. To explicitly set a timezone to the cron tab, apply a prefix in the cron tab: 'CRON_TZ=${IANA_TIME_ZONE}' or 'TZ=${IANA_TIME_ZONE}'. The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example, CRON_TZ=America/New_York 1 * * * *, or TZ=America/New_York 1 * * * *. This field is required for RECURRING tasks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#schedule DataplexTask#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#schedule DataplexTask#schedule}
   */
   readonly schedule?: string;
   /**
   * The first run of the task will be after this time. If not specified, the task will run shortly after being submitted if ON_DEMAND and based on the schedule if RECURRING.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#start_time DataplexTask#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#start_time DataplexTask#start_time}
   */
   readonly startTime?: string;
   /**
   * Trigger type of the user-specified Task Possible values: ["ON_DEMAND", "RECURRING"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#type DataplexTask#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#type DataplexTask#type}
   */
   readonly type: string;
 }
@@ -2665,7 +2665,7 @@ export class DataplexTaskTriggerSpecOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task google_dataplex_task}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task google_dataplex_task}
 */
 export class DataplexTask extends cdktf.TerraformResource {
 
@@ -2681,7 +2681,7 @@ export class DataplexTask extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataplexTask resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataplexTask to import
-  * @param importFromId The id of the existing DataplexTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataplexTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataplexTask to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2693,7 +2693,7 @@ export class DataplexTask extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/dataplex_task google_dataplex_task} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/dataplex_task google_dataplex_task} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2704,7 +2704,7 @@ export class DataplexTask extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_task',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.11.2',
+        providerVersion: '6.12.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

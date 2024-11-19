@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface IamAccessBoundaryPolicyConfig extends cdktf.TerraformMetaArgume
   /**
   * The display name of the rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#display_name IamAccessBoundaryPolicy#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#display_name IamAccessBoundaryPolicy#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#id IamAccessBoundaryPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#id IamAccessBoundaryPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,25 +28,25 @@ export interface IamAccessBoundaryPolicyConfig extends cdktf.TerraformMetaArgume
   /**
   * The name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#name IamAccessBoundaryPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#name IamAccessBoundaryPolicy#name}
   */
   readonly name: string;
   /**
   * The attachment point is identified by its URL-encoded full resource name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#parent IamAccessBoundaryPolicy#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#parent IamAccessBoundaryPolicy#parent}
   */
   readonly parent: string;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#rules IamAccessBoundaryPolicy#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#rules IamAccessBoundaryPolicy#rules}
   */
   readonly rules: IamAccessBoundaryPolicyRules[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#timeouts IamAccessBoundaryPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#timeouts IamAccessBoundaryPolicy#timeouts}
   */
   readonly timeouts?: IamAccessBoundaryPolicyTimeouts;
 }
@@ -55,27 +55,27 @@ export interface IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityCondi
   * Description of the expression. This is a longer text which describes the expression,
   * e.g. when hovered over it in a UI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#description IamAccessBoundaryPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#description IamAccessBoundaryPolicy#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#expression IamAccessBoundaryPolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#expression IamAccessBoundaryPolicy#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting,
   * e.g. a file name and a position in the file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#location IamAccessBoundaryPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#location IamAccessBoundaryPolicy#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   * This can be used e.g. in UIs which allow to enter the expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#title IamAccessBoundaryPolicy#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#title IamAccessBoundaryPolicy#title}
   */
   readonly title?: string;
 }
@@ -245,19 +245,19 @@ export interface IamAccessBoundaryPolicyRulesAccessBoundaryRule {
   /**
   * A list of permissions that may be allowed for use on the specified resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#available_permissions IamAccessBoundaryPolicy#available_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#available_permissions IamAccessBoundaryPolicy#available_permissions}
   */
   readonly availablePermissions?: string[];
   /**
   * The full resource name of a Google Cloud resource entity.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#available_resource IamAccessBoundaryPolicy#available_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#available_resource IamAccessBoundaryPolicy#available_resource}
   */
   readonly availableResource?: string;
   /**
   * availability_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#availability_condition IamAccessBoundaryPolicy#availability_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#availability_condition IamAccessBoundaryPolicy#availability_condition}
   */
   readonly availabilityCondition?: IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityCondition;
 }
@@ -401,13 +401,13 @@ export interface IamAccessBoundaryPolicyRules {
   /**
   * The description of the rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#description IamAccessBoundaryPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#description IamAccessBoundaryPolicy#description}
   */
   readonly description?: string;
   /**
   * access_boundary_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#access_boundary_rule IamAccessBoundaryPolicy#access_boundary_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#access_boundary_rule IamAccessBoundaryPolicy#access_boundary_rule}
   */
   readonly accessBoundaryRule?: IamAccessBoundaryPolicyRulesAccessBoundaryRule;
 }
@@ -552,15 +552,15 @@ export class IamAccessBoundaryPolicyRulesList extends cdktf.ComplexList {
 }
 export interface IamAccessBoundaryPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#create IamAccessBoundaryPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#create IamAccessBoundaryPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#delete IamAccessBoundaryPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#delete IamAccessBoundaryPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#update IamAccessBoundaryPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#update IamAccessBoundaryPolicy#update}
   */
   readonly update?: string;
 }
@@ -712,7 +712,7 @@ export class IamAccessBoundaryPolicyTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy google_iam_access_boundary_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy google_iam_access_boundary_policy}
 */
 export class IamAccessBoundaryPolicy extends cdktf.TerraformResource {
 
@@ -728,7 +728,7 @@ export class IamAccessBoundaryPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IamAccessBoundaryPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IamAccessBoundaryPolicy to import
-  * @param importFromId The id of the existing IamAccessBoundaryPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IamAccessBoundaryPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IamAccessBoundaryPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -740,7 +740,7 @@ export class IamAccessBoundaryPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/iam_access_boundary_policy google_iam_access_boundary_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/iam_access_boundary_policy google_iam_access_boundary_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -751,7 +751,7 @@ export class IamAccessBoundaryPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_access_boundary_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.11.2',
+        providerVersion: '6.12.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

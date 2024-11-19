@@ -408,6 +408,7 @@ Object.defineProperty(exports, 'dataprocClusterIamMember', { get: function () { 
 Object.defineProperty(exports, 'dataprocClusterIamPolicy', { get: function () { return require('./dataproc-cluster-iam-policy'); } });
 Object.defineProperty(exports, 'dataprocGdcApplicationEnvironment', { get: function () { return require('./dataproc-gdc-application-environment'); } });
 Object.defineProperty(exports, 'dataprocGdcServiceInstance', { get: function () { return require('./dataproc-gdc-service-instance'); } });
+Object.defineProperty(exports, 'dataprocGdcSparkApplication', { get: function () { return require('./dataproc-gdc-spark-application'); } });
 Object.defineProperty(exports, 'dataprocJob', { get: function () { return require('./dataproc-job'); } });
 Object.defineProperty(exports, 'dataprocJobIamBinding', { get: function () { return require('./dataproc-job-iam-binding'); } });
 Object.defineProperty(exports, 'dataprocJobIamMember', { get: function () { return require('./dataproc-job-iam-member'); } });
@@ -638,6 +639,8 @@ Object.defineProperty(exports, 'loggingProjectBucketConfig', { get: function () 
 Object.defineProperty(exports, 'loggingProjectExclusion', { get: function () { return require('./logging-project-exclusion'); } });
 Object.defineProperty(exports, 'loggingProjectSink', { get: function () { return require('./logging-project-sink'); } });
 Object.defineProperty(exports, 'lookerInstance', { get: function () { return require('./looker-instance'); } });
+Object.defineProperty(exports, 'managedKafkaCluster', { get: function () { return require('./managed-kafka-cluster'); } });
+Object.defineProperty(exports, 'managedKafkaTopic', { get: function () { return require('./managed-kafka-topic'); } });
 Object.defineProperty(exports, 'memcacheInstance', { get: function () { return require('./memcache-instance'); } });
 Object.defineProperty(exports, 'memorystoreInstance', { get: function () { return require('./memorystore-instance'); } });
 Object.defineProperty(exports, 'migrationCenterGroup', { get: function () { return require('./migration-center-group'); } });
@@ -905,6 +908,7 @@ Object.defineProperty(exports, 'workflowsWorkflow', { get: function () { return 
 Object.defineProperty(exports, 'dataGoogleAccessApprovalFolderServiceAccount', { get: function () { return require('./data-google-access-approval-folder-service-account'); } });
 Object.defineProperty(exports, 'dataGoogleAccessApprovalOrganizationServiceAccount', { get: function () { return require('./data-google-access-approval-organization-service-account'); } });
 Object.defineProperty(exports, 'dataGoogleAccessApprovalProjectServiceAccount', { get: function () { return require('./data-google-access-approval-project-service-account'); } });
+Object.defineProperty(exports, 'dataGoogleAccessContextManagerAccessPolicy', { get: function () { return require('./data-google-access-context-manager-access-policy'); } });
 Object.defineProperty(exports, 'dataGoogleAccessContextManagerAccessPolicyIamPolicy', { get: function () { return require('./data-google-access-context-manager-access-policy-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleActiveFolder', { get: function () { return require('./data-google-active-folder'); } });
 Object.defineProperty(exports, 'dataGoogleAlloydbLocations', { get: function () { return require('./data-google-alloydb-locations'); } });
