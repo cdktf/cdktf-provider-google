@@ -4,12 +4,12 @@
 
 ### LoggingLogViewIamMember <a name="LoggingLogViewIamMember" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member google_logging_log_view_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member google_logging_log_view_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiammember"
 
 logginglogviewiammember.NewLoggingLogViewIamMember(scope Construct, id *string, config LoggingLogViewIamMemberConfig) LoggingLogViewIamMember
 ```
@@ -412,7 +412,7 @@ func ResetLocation()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiammember"
 
 logginglogviewiammember.LoggingLogViewIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiammember"
 
 logginglogviewiammember.LoggingLogViewIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ logginglogviewiammember.LoggingLogViewIamMember_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiammember"
 
 logginglogviewiammember.LoggingLogViewIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ logginglogviewiammember.LoggingLogViewIamMember_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiammember"
 
 logginglogviewiammember.LoggingLogViewIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the LoggingLogViewIamMember to
 
 The id of the existing LoggingLogViewIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -888,7 +888,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiammember"
 
 &logginglogviewiammember.LoggingLogViewIamMemberCondition {
 	Expression: *string,
@@ -901,9 +901,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiamme
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#expression LoggingLogViewIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#title LoggingLogViewIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#description LoggingLogViewIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#expression LoggingLogViewIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#title LoggingLogViewIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#description LoggingLogViewIamMember#description}. |
 
 ---
 
@@ -915,7 +915,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#expression LoggingLogViewIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#expression LoggingLogViewIamMember#expression}.
 
 ---
 
@@ -927,7 +927,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#title LoggingLogViewIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#title LoggingLogViewIamMember#title}.
 
 ---
 
@@ -939,7 +939,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#description LoggingLogViewIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#description LoggingLogViewIamMember#description}.
 
 ---
 
@@ -948,7 +948,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiammember"
 
 &logginglogviewiammember.LoggingLogViewIamMemberConfig {
 	Connection: interface{},
@@ -963,7 +963,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiamme
 	Name: *string,
 	Parent: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.loggingLogViewIamMember.LoggingLogViewIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition,
 	Id: *string,
 	Location: *string,
 }
@@ -980,14 +980,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiamme
 | <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.bucket">Bucket</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#bucket LoggingLogViewIamMember#bucket}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#member LoggingLogViewIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#name LoggingLogViewIamMember#name}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.parent">Parent</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#parent LoggingLogViewIamMember#parent}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#role LoggingLogViewIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.bucket">Bucket</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#bucket LoggingLogViewIamMember#bucket}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#member LoggingLogViewIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#name LoggingLogViewIamMember#name}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.parent">Parent</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#parent LoggingLogViewIamMember#parent}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#role LoggingLogViewIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberCondition">LoggingLogViewIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#id LoggingLogViewIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#location LoggingLogViewIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#id LoggingLogViewIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#location LoggingLogViewIamMember#location}. |
 
 ---
 
@@ -1069,7 +1069,7 @@ Bucket *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#bucket LoggingLogViewIamMember#bucket}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#bucket LoggingLogViewIamMember#bucket}.
 
 ---
 
@@ -1081,7 +1081,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#member LoggingLogViewIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#member LoggingLogViewIamMember#member}.
 
 ---
 
@@ -1093,7 +1093,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#name LoggingLogViewIamMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#name LoggingLogViewIamMember#name}.
 
 ---
 
@@ -1105,7 +1105,7 @@ Parent *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#parent LoggingLogViewIamMember#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#parent LoggingLogViewIamMember#parent}.
 
 ---
 
@@ -1117,7 +1117,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#role LoggingLogViewIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#role LoggingLogViewIamMember#role}.
 
 ---
 
@@ -1131,7 +1131,7 @@ Condition LoggingLogViewIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#condition LoggingLogViewIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#condition LoggingLogViewIamMember#condition}
 
 ---
 
@@ -1143,7 +1143,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#id LoggingLogViewIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#id LoggingLogViewIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1158,7 +1158,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/logging_log_view_iam_member#location LoggingLogViewIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/logging_log_view_iam_member#location LoggingLogViewIamMember#location}.
 
 ---
 
@@ -1169,7 +1169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogViewIamMember.LoggingLogViewIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiammember"
 
 logginglogviewiammember.NewLoggingLogViewIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingLogViewIamMemberConditionOutputReference
 ```

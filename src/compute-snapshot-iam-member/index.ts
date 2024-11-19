@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeSnapshotIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#id ComputeSnapshotIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#id ComputeSnapshotIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#member ComputeSnapshotIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#member ComputeSnapshotIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#name ComputeSnapshotIamMember#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#name ComputeSnapshotIamMember#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#project ComputeSnapshotIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#project ComputeSnapshotIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#role ComputeSnapshotIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#role ComputeSnapshotIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#condition ComputeSnapshotIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#condition ComputeSnapshotIamMember#condition}
   */
   readonly condition?: ComputeSnapshotIamMemberCondition;
 }
 export interface ComputeSnapshotIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#description ComputeSnapshotIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#description ComputeSnapshotIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#expression ComputeSnapshotIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#expression ComputeSnapshotIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#title ComputeSnapshotIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#title ComputeSnapshotIamMember#title}
   */
   readonly title: string;
 }
@@ -188,7 +183,7 @@ export class ComputeSnapshotIamMemberConditionOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member google_compute_snapshot_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member google_compute_snapshot_iam_member}
 */
 export class ComputeSnapshotIamMember extends cdktf.TerraformResource {
 
@@ -204,7 +199,7 @@ export class ComputeSnapshotIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeSnapshotIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeSnapshotIamMember to import
-  * @param importFromId The id of the existing ComputeSnapshotIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeSnapshotIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeSnapshotIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -216,7 +211,7 @@ export class ComputeSnapshotIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.11.2/docs/resources/compute_snapshot_iam_member google_compute_snapshot_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/compute_snapshot_iam_member google_compute_snapshot_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -227,7 +222,7 @@ export class ComputeSnapshotIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_snapshot_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.11.2',
+        providerVersion: '6.12.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
