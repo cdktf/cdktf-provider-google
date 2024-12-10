@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings
+// https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,17 +17,17 @@ export interface FolderAccessApprovalSettingsConfig extends cdktf.TerraformMetaA
   * Empty active_key_version indicates that a Google-managed key should be used for signing.
   * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#active_key_version FolderAccessApprovalSettings#active_key_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#active_key_version FolderAccessApprovalSettings#active_key_version}
   */
   readonly activeKeyVersion?: string;
   /**
   * ID of the folder of the access approval settings.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#folder_id FolderAccessApprovalSettings#folder_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#folder_id FolderAccessApprovalSettings#folder_id}
   */
   readonly folderId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#id FolderAccessApprovalSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#id FolderAccessApprovalSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -38,19 +38,19 @@ export interface FolderAccessApprovalSettingsConfig extends cdktf.TerraformMetaA
   * Notifications relating to a resource will be sent to all emails in the settings of ancestor
   * resources of that resource. A maximum of 50 email addresses are allowed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#notification_emails FolderAccessApprovalSettings#notification_emails}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#notification_emails FolderAccessApprovalSettings#notification_emails}
   */
   readonly notificationEmails?: string[];
   /**
   * enrolled_services block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#enrolled_services FolderAccessApprovalSettings#enrolled_services}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#enrolled_services FolderAccessApprovalSettings#enrolled_services}
   */
   readonly enrolledServices: FolderAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#timeouts FolderAccessApprovalSettings#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#timeouts FolderAccessApprovalSettings#timeouts}
   */
   readonly timeouts?: FolderAccessApprovalSettingsTimeouts;
 }
@@ -81,13 +81,13 @@ export interface FolderAccessApprovalSettingsEnrolledServices {
   *   * pubsub.googleapis.com
   *   * storage.googleapis.com
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#cloud_product FolderAccessApprovalSettings#cloud_product}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#cloud_product FolderAccessApprovalSettings#cloud_product}
   */
   readonly cloudProduct: string;
   /**
   * The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#enrollment_level FolderAccessApprovalSettings#enrollment_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#enrollment_level FolderAccessApprovalSettings#enrollment_level}
   */
   readonly enrollmentLevel?: string;
 }
@@ -229,15 +229,15 @@ export class FolderAccessApprovalSettingsEnrolledServicesList extends cdktf.Comp
 }
 export interface FolderAccessApprovalSettingsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#create FolderAccessApprovalSettings#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#create FolderAccessApprovalSettings#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#delete FolderAccessApprovalSettings#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#delete FolderAccessApprovalSettings#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#update FolderAccessApprovalSettings#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#update FolderAccessApprovalSettings#update}
   */
   readonly update?: string;
 }
@@ -389,7 +389,7 @@ export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings google_folder_access_approval_settings}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings google_folder_access_approval_settings}
 */
 export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
 
@@ -405,7 +405,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FolderAccessApprovalSettings resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FolderAccessApprovalSettings to import
-  * @param importFromId The id of the existing FolderAccessApprovalSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FolderAccessApprovalSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FolderAccessApprovalSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -417,7 +417,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/folder_access_approval_settings google_folder_access_approval_settings} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/folder_access_approval_settings google_folder_access_approval_settings} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -428,7 +428,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
       terraformResourceType: 'google_folder_access_approval_settings',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.12.0',
+        providerVersion: '6.13.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
