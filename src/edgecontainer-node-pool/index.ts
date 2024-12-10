@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool
+// https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface EdgecontainerNodePoolConfig extends cdktf.TerraformMetaArgument
   /**
   * The name of the target Distributed Cloud Edge Cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#cluster EdgecontainerNodePool#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#cluster EdgecontainerNodePool#cluster}
   */
   readonly cluster: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#id EdgecontainerNodePool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#id EdgecontainerNodePool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,13 +26,13 @@ export interface EdgecontainerNodePoolConfig extends cdktf.TerraformMetaArgument
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#labels EdgecontainerNodePool#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#labels EdgecontainerNodePool#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#location EdgecontainerNodePool#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#location EdgecontainerNodePool#location}
   */
   readonly location: string;
   /**
@@ -45,47 +40,47 @@ export interface EdgecontainerNodePoolConfig extends cdktf.TerraformMetaArgument
   * The filtering language accepts strings like "name=<name>", and is
   * documented in more detail in [AIP-160](https://google.aip.dev/160).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#machine_filter EdgecontainerNodePool#machine_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#machine_filter EdgecontainerNodePool#machine_filter}
   */
   readonly machineFilter?: string;
   /**
   * The resource name of the node pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#name EdgecontainerNodePool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#name EdgecontainerNodePool#name}
   */
   readonly name: string;
   /**
   * The number of nodes in the pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#node_count EdgecontainerNodePool#node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#node_count EdgecontainerNodePool#node_count}
   */
   readonly nodeCount: number;
   /**
   * Name of the Google Distributed Cloud Edge zone where this node pool will be created. For example: 'us-central1-edge-customer-a'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#node_location EdgecontainerNodePool#node_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#node_location EdgecontainerNodePool#node_location}
   */
   readonly nodeLocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#project EdgecontainerNodePool#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#project EdgecontainerNodePool#project}
   */
   readonly project?: string;
   /**
   * local_disk_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#local_disk_encryption EdgecontainerNodePool#local_disk_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#local_disk_encryption EdgecontainerNodePool#local_disk_encryption}
   */
   readonly localDiskEncryption?: EdgecontainerNodePoolLocalDiskEncryption;
   /**
   * node_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#node_config EdgecontainerNodePool#node_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#node_config EdgecontainerNodePool#node_config}
   */
   readonly nodeConfig?: EdgecontainerNodePoolNodeConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#timeouts EdgecontainerNodePool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#timeouts EdgecontainerNodePool#timeouts}
   */
   readonly timeouts?: EdgecontainerNodePoolTimeouts;
 }
@@ -94,7 +89,7 @@ export interface EdgecontainerNodePoolLocalDiskEncryption {
   * The Cloud KMS CryptoKey e.g. projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} to use for protecting node local disks.
   * If not specified, a Google-managed key will be used instead.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#kms_key EdgecontainerNodePool#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#kms_key EdgecontainerNodePool#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -190,7 +185,7 @@ export interface EdgecontainerNodePoolNodeConfig {
   /**
   * "The Kubernetes node labels"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#labels EdgecontainerNodePool#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#labels EdgecontainerNodePool#labels}
   */
   readonly labels?: { [key: string]: string };
 }
@@ -274,15 +269,15 @@ export class EdgecontainerNodePoolNodeConfigOutputReference extends cdktf.Comple
 }
 export interface EdgecontainerNodePoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#create EdgecontainerNodePool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#create EdgecontainerNodePool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#delete EdgecontainerNodePool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#delete EdgecontainerNodePool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#update EdgecontainerNodePool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#update EdgecontainerNodePool#update}
   */
   readonly update?: string;
 }
@@ -434,7 +429,7 @@ export class EdgecontainerNodePoolTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool google_edgecontainer_node_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool google_edgecontainer_node_pool}
 */
 export class EdgecontainerNodePool extends cdktf.TerraformResource {
 
@@ -450,7 +445,7 @@ export class EdgecontainerNodePool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a EdgecontainerNodePool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the EdgecontainerNodePool to import
-  * @param importFromId The id of the existing EdgecontainerNodePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing EdgecontainerNodePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the EdgecontainerNodePool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -462,7 +457,7 @@ export class EdgecontainerNodePool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/edgecontainer_node_pool google_edgecontainer_node_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/edgecontainer_node_pool google_edgecontainer_node_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -473,7 +468,7 @@ export class EdgecontainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_edgecontainer_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.12.0',
+        providerVersion: '6.13.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

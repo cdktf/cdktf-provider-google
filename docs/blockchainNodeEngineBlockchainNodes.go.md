@@ -4,12 +4,12 @@
 
 ### BlockchainNodeEngineBlockchainNodes <a name="BlockchainNodeEngineBlockchainNodes" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodes"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes google_blockchain_node_engine_blockchain_nodes}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes google_blockchain_node_engine_blockchain_nodes}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodes(scope Construct, id *string, config BlockchainNodeEngineBlockchainNodesConfig) BlockchainNodeEngineBlockchainNodes
 ```
@@ -446,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodes.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodes_IsConstruct(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodes.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodes_IsTerraformElement(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodes_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodes.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodes_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodes_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodes.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodes_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -535,7 +535,7 @@ The construct id used in the generated config for the BlockchainNodeEngineBlockc
 
 The id of the existing BlockchainNodeEngineBlockchainNodes that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -977,7 +977,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 &blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodesConfig {
 	Connection: interface{},
@@ -990,11 +990,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengin
 	BlockchainNodeId: *string,
 	Location: *string,
 	BlockchainType: *string,
-	EthereumDetails: github.com/cdktf/cdktf-provider-google-go/google/v14.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetails,
+	EthereumDetails: github.com/cdktf/cdktf-provider-google-go/google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetails,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts,
 }
 ```
 
@@ -1013,9 +1013,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengin
 | <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.location">Location</a></code> | <code>*string</code> | Location of Blockchain Node being created. |
 | <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.blockchainType">BlockchainType</a></code> | <code>*string</code> | User-provided key-value pairs Possible values: ["ETHEREUM"]. |
 | <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.ethereumDetails">EthereumDetails</a></code> | <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetails">BlockchainNodeEngineBlockchainNodesEthereumDetails</a></code> | ethereum_details block. |
-| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#id BlockchainNodeEngineBlockchainNodes#id}. |
+| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#id BlockchainNodeEngineBlockchainNodes#id}. |
 | <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User-provided key-value pairs. |
-| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#project BlockchainNodeEngineBlockchainNodes#project}. |
+| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#project BlockchainNodeEngineBlockchainNodes#project}. |
 | <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts">BlockchainNodeEngineBlockchainNodesTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1100,7 +1100,7 @@ BlockchainNodeId *string
 
 ID of the requesting object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#blockchain_node_id BlockchainNodeEngineBlockchainNodes#blockchain_node_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#blockchain_node_id BlockchainNodeEngineBlockchainNodes#blockchain_node_id}
 
 ---
 
@@ -1114,7 +1114,7 @@ Location *string
 
 Location of Blockchain Node being created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#location BlockchainNodeEngineBlockchainNodes#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#location BlockchainNodeEngineBlockchainNodes#location}
 
 ---
 
@@ -1128,7 +1128,7 @@ BlockchainType *string
 
 User-provided key-value pairs Possible values: ["ETHEREUM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#blockchain_type BlockchainNodeEngineBlockchainNodes#blockchain_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#blockchain_type BlockchainNodeEngineBlockchainNodes#blockchain_type}
 
 ---
 
@@ -1142,7 +1142,7 @@ EthereumDetails BlockchainNodeEngineBlockchainNodesEthereumDetails
 
 ethereum_details block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#ethereum_details BlockchainNodeEngineBlockchainNodes#ethereum_details}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#ethereum_details BlockchainNodeEngineBlockchainNodes#ethereum_details}
 
 ---
 
@@ -1154,7 +1154,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#id BlockchainNodeEngineBlockchainNodes#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#id BlockchainNodeEngineBlockchainNodes#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1174,7 +1174,7 @@ User-provided key-value pairs.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#labels BlockchainNodeEngineBlockchainNodes#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#labels BlockchainNodeEngineBlockchainNodes#labels}
 
 ---
 
@@ -1186,7 +1186,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#project BlockchainNodeEngineBlockchainNodes#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#project BlockchainNodeEngineBlockchainNodes#project}.
 
 ---
 
@@ -1200,7 +1200,7 @@ Timeouts BlockchainNodeEngineBlockchainNodesTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#timeouts BlockchainNodeEngineBlockchainNodes#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#timeouts BlockchainNodeEngineBlockchainNodes#timeouts}
 
 ---
 
@@ -1209,7 +1209,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConnectionInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 &blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodesConnectionInfo {
 
@@ -1222,7 +1222,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConnectionInfoEndpointInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 &blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodesConnectionInfoEndpointInfo {
 
@@ -1235,17 +1235,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetails.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 &blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodesEthereumDetails {
 	ApiEnableAdmin: interface{},
 	ApiEnableDebug: interface{},
 	ConsensusClient: *string,
 	ExecutionClient: *string,
-	FetchhDetails: github.com/cdktf/cdktf-provider-google-go/google/v14.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetails,
+	FetchhDetails: github.com/cdktf/cdktf-provider-google-go/google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetails,
 	Network: *string,
 	NodeType: *string,
-	ValidatorConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsValidatorConfig,
+	ValidatorConfig: github.com/cdktf/cdktf-provider-google-go/google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsValidatorConfig,
 }
 ```
 
@@ -1274,7 +1274,7 @@ ApiEnableAdmin interface{}
 
 Enables JSON-RPC access to functions in the admin namespace. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#api_enable_admin BlockchainNodeEngineBlockchainNodes#api_enable_admin}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#api_enable_admin BlockchainNodeEngineBlockchainNodes#api_enable_admin}
 
 ---
 
@@ -1288,7 +1288,7 @@ ApiEnableDebug interface{}
 
 Enables JSON-RPC access to functions in the debug namespace. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#api_enable_debug BlockchainNodeEngineBlockchainNodes#api_enable_debug}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#api_enable_debug BlockchainNodeEngineBlockchainNodes#api_enable_debug}
 
 ---
 
@@ -1302,7 +1302,7 @@ ConsensusClient *string
 
 The consensus client Possible values: ["CONSENSUS_CLIENT_UNSPECIFIED", "LIGHTHOUSE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#consensus_client BlockchainNodeEngineBlockchainNodes#consensus_client}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#consensus_client BlockchainNodeEngineBlockchainNodes#consensus_client}
 
 ---
 
@@ -1316,7 +1316,7 @@ ExecutionClient *string
 
 The execution client Possible values: ["EXECUTION_CLIENT_UNSPECIFIED", "GETH", "ERIGON"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#execution_client BlockchainNodeEngineBlockchainNodes#execution_client}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#execution_client BlockchainNodeEngineBlockchainNodes#execution_client}
 
 ---
 
@@ -1330,7 +1330,7 @@ FetchhDetails BlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetails
 
 geth_details block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#geth_details BlockchainNodeEngineBlockchainNodes#geth_details}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#geth_details BlockchainNodeEngineBlockchainNodes#geth_details}
 
 ---
 
@@ -1344,7 +1344,7 @@ Network *string
 
 The Ethereum environment being accessed. Possible values: ["MAINNET", "TESTNET_GOERLI_PRATER", "TESTNET_SEPOLIA"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#network BlockchainNodeEngineBlockchainNodes#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#network BlockchainNodeEngineBlockchainNodes#network}
 
 ---
 
@@ -1358,7 +1358,7 @@ NodeType *string
 
 The type of Ethereum node. Possible values: ["LIGHT", "FULL", "ARCHIVE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#node_type BlockchainNodeEngineBlockchainNodes#node_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#node_type BlockchainNodeEngineBlockchainNodes#node_type}
 
 ---
 
@@ -1372,7 +1372,7 @@ ValidatorConfig BlockchainNodeEngineBlockchainNodesEthereumDetailsValidatorConfi
 
 validator_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#validator_config BlockchainNodeEngineBlockchainNodes#validator_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#validator_config BlockchainNodeEngineBlockchainNodes#validator_config}
 
 ---
 
@@ -1381,7 +1381,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsAdditionalEndpoints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 &blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsAdditionalEndpoints {
 
@@ -1394,7 +1394,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetails.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 &blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetails {
 	GarbageCollectionMode: *string,
@@ -1419,7 +1419,7 @@ GarbageCollectionMode *string
 
 Blockchain garbage collection modes. Only applicable when NodeType is FULL or ARCHIVE. Possible values: ["FULL", "ARCHIVE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#garbage_collection_mode BlockchainNodeEngineBlockchainNodes#garbage_collection_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#garbage_collection_mode BlockchainNodeEngineBlockchainNodes#garbage_collection_mode}
 
 ---
 
@@ -1428,7 +1428,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsValidatorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 &blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsValidatorConfig {
 	MevRelayUrls: *[]*string,
@@ -1455,7 +1455,7 @@ URLs for MEV-relay services to use for block building.
 
 When set, a managed MEV-boost service is configured on the beacon client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#mev_relay_urls BlockchainNodeEngineBlockchainNodes#mev_relay_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#mev_relay_urls BlockchainNodeEngineBlockchainNodes#mev_relay_urls}
 
 ---
 
@@ -1464,7 +1464,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 &blockchainnodeengineblockchainnodes.BlockchainNodeEngineBlockchainNodesTimeouts {
 	Create: *string,
@@ -1477,9 +1477,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengin
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#create BlockchainNodeEngineBlockchainNodes#create}. |
-| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#delete BlockchainNodeEngineBlockchainNodes#delete}. |
-| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#update BlockchainNodeEngineBlockchainNodes#update}. |
+| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#create BlockchainNodeEngineBlockchainNodes#create}. |
+| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#delete BlockchainNodeEngineBlockchainNodes#delete}. |
+| <code><a href="#@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#update BlockchainNodeEngineBlockchainNodes#update}. |
 
 ---
 
@@ -1491,7 +1491,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#create BlockchainNodeEngineBlockchainNodes#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#create BlockchainNodeEngineBlockchainNodes#create}.
 
 ---
 
@@ -1503,7 +1503,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#delete BlockchainNodeEngineBlockchainNodes#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#delete BlockchainNodeEngineBlockchainNodes#delete}.
 
 ---
 
@@ -1515,7 +1515,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/resources/blockchain_node_engine_blockchain_nodes#update BlockchainNodeEngineBlockchainNodes#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/blockchain_node_engine_blockchain_nodes#update BlockchainNodeEngineBlockchainNodes#update}.
 
 ---
 
@@ -1526,7 +1526,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConnectionInfoEndpointInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesConnectionInfoEndpointInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BlockchainNodeEngineBlockchainNodesConnectionInfoEndpointInfoList
 ```
@@ -1675,7 +1675,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConnectionInfoEndpointInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesConnectionInfoEndpointInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BlockchainNodeEngineBlockchainNodesConnectionInfoEndpointInfoOutputReference
 ```
@@ -1964,7 +1964,7 @@ func InternalValue() BlockchainNodeEngineBlockchainNodesConnectionInfoEndpointIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConnectionInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesConnectionInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BlockchainNodeEngineBlockchainNodesConnectionInfoList
 ```
@@ -2113,7 +2113,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesConnectionInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesConnectionInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BlockchainNodeEngineBlockchainNodesConnectionInfoOutputReference
 ```
@@ -2402,7 +2402,7 @@ func InternalValue() BlockchainNodeEngineBlockchainNodesConnectionInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsAdditionalEndpointsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesEthereumDetailsAdditionalEndpointsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BlockchainNodeEngineBlockchainNodesEthereumDetailsAdditionalEndpointsList
 ```
@@ -2551,7 +2551,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsAdditionalEndpointsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesEthereumDetailsAdditionalEndpointsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BlockchainNodeEngineBlockchainNodesEthereumDetailsAdditionalEndpointsOutputReference
 ```
@@ -2851,7 +2851,7 @@ func InternalValue() BlockchainNodeEngineBlockchainNodesEthereumDetailsAdditiona
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetailsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetailsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetailsOutputReference
 ```
@@ -3129,7 +3129,7 @@ func InternalValue() BlockchainNodeEngineBlockchainNodesEthereumDetailsGethDetai
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesEthereumDetailsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BlockchainNodeEngineBlockchainNodesEthereumDetailsOutputReference
 ```
@@ -3647,7 +3647,7 @@ func InternalValue() BlockchainNodeEngineBlockchainNodesEthereumDetails
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesEthereumDetailsValidatorConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesEthereumDetailsValidatorConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BlockchainNodeEngineBlockchainNodesEthereumDetailsValidatorConfigOutputReference
 ```
@@ -3925,7 +3925,7 @@ func InternalValue() BlockchainNodeEngineBlockchainNodesEthereumDetailsValidator
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.blockchainNodeEngineBlockchainNodes.BlockchainNodeEngineBlockchainNodesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/blockchainnodeengineblockchainnodes"
+import "github.com/cdktf/cdktf-provider-google-go/google/blockchainnodeengineblockchainnodes"
 
 blockchainnodeengineblockchainnodes.NewBlockchainNodeEngineBlockchainNodesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BlockchainNodeEngineBlockchainNodesTimeoutsOutputReference
 ```

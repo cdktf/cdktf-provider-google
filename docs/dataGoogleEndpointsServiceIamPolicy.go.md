@@ -4,12 +4,12 @@
 
 ### DataGoogleEndpointsServiceIamPolicy <a name="DataGoogleEndpointsServiceIamPolicy" id="@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/endpoints_service_iam_policy google_endpoints_service_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/endpoints_service_iam_policy google_endpoints_service_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleendpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleendpointsserviceiampolicy"
 
 datagoogleendpointsserviceiampolicy.NewDataGoogleEndpointsServiceIamPolicy(scope Construct, id *string, config DataGoogleEndpointsServiceIamPolicyConfig) DataGoogleEndpointsServiceIamPolicy
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleendpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleendpointsserviceiampolicy"
 
 datagoogleendpointsserviceiampolicy.DataGoogleEndpointsServiceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleendpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleendpointsserviceiampolicy"
 
 datagoogleendpointsserviceiampolicy.DataGoogleEndpointsServiceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagoogleendpointsserviceiampolicy.DataGoogleEndpointsServiceIamPolicy_IsTerraf
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleendpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleendpointsserviceiampolicy"
 
 datagoogleendpointsserviceiampolicy.DataGoogleEndpointsServiceIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagoogleendpointsserviceiampolicy.DataGoogleEndpointsServiceIamPolicy_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleendpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleendpointsserviceiampolicy"
 
 datagoogleendpointsserviceiampolicy.DataGoogleEndpointsServiceIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -372,7 +372,7 @@ The construct id used in the generated config for the DataGoogleEndpointsService
 
 The id of the existing DataGoogleEndpointsServiceIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/endpoints_service_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/endpoints_service_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -616,7 +616,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleendpointsserviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleendpointsserviceiampolicy"
 
 &datagoogleendpointsserviceiampolicy.DataGoogleEndpointsServiceIamPolicyConfig {
 	Connection: interface{},
@@ -642,8 +642,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleendpoints
 | <code><a href="#@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicyConfig.property.serviceName">ServiceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/endpoints_service_iam_policy#service_name DataGoogleEndpointsServiceIamPolicy#service_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/endpoints_service_iam_policy#id DataGoogleEndpointsServiceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicyConfig.property.serviceName">ServiceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/endpoints_service_iam_policy#service_name DataGoogleEndpointsServiceIamPolicy#service_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleEndpointsServiceIamPolicy.DataGoogleEndpointsServiceIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/endpoints_service_iam_policy#id DataGoogleEndpointsServiceIamPolicy#id}. |
 
 ---
 
@@ -725,7 +725,7 @@ ServiceName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/endpoints_service_iam_policy#service_name DataGoogleEndpointsServiceIamPolicy#service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/endpoints_service_iam_policy#service_name DataGoogleEndpointsServiceIamPolicy#service_name}.
 
 ---
 
@@ -737,7 +737,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/endpoints_service_iam_policy#id DataGoogleEndpointsServiceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/endpoints_service_iam_policy#id DataGoogleEndpointsServiceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

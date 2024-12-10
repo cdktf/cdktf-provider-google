@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group
+// https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeRegionNetworkEndpointGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group#id DataGoogleComputeRegionNetworkEndpointGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group#id DataGoogleComputeRegionNetworkEndpointGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,21 +23,21 @@ export interface DataGoogleComputeRegionNetworkEndpointGroupConfig extends cdktf
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group#name DataGoogleComputeRegionNetworkEndpointGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group#name DataGoogleComputeRegionNetworkEndpointGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group#project DataGoogleComputeRegionNetworkEndpointGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group#project DataGoogleComputeRegionNetworkEndpointGroup#project}
   */
   readonly project?: string;
   /**
   * A reference to the region where the regional NEGs reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group#region DataGoogleComputeRegionNetworkEndpointGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group#region DataGoogleComputeRegionNetworkEndpointGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group#self_link DataGoogleComputeRegionNetworkEndpointGroup#self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group#self_link DataGoogleComputeRegionNetworkEndpointGroup#self_link}
   */
   readonly selfLink?: string;
 }
@@ -296,9 +291,84 @@ export class DataGoogleComputeRegionNetworkEndpointGroupCloudRunList extends cdk
     return new DataGoogleComputeRegionNetworkEndpointGroupCloudRunOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleComputeRegionNetworkEndpointGroupPscData {
+}
+
+export function dataGoogleComputeRegionNetworkEndpointGroupPscDataToTerraform(struct?: DataGoogleComputeRegionNetworkEndpointGroupPscData): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleComputeRegionNetworkEndpointGroupPscDataToHclTerraform(struct?: DataGoogleComputeRegionNetworkEndpointGroupPscData): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleComputeRegionNetworkEndpointGroupPscDataOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeRegionNetworkEndpointGroupPscData | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeRegionNetworkEndpointGroupPscData | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // producer_port - computed: true, optional: false, required: false
+  public get producerPort() {
+    return this.getStringAttribute('producer_port');
+  }
+}
+
+export class DataGoogleComputeRegionNetworkEndpointGroupPscDataList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeRegionNetworkEndpointGroupPscDataOutputReference {
+    return new DataGoogleComputeRegionNetworkEndpointGroupPscDataOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group google_compute_region_network_endpoint_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group google_compute_region_network_endpoint_group}
 */
 export class DataGoogleComputeRegionNetworkEndpointGroup extends cdktf.TerraformDataSource {
 
@@ -314,7 +384,7 @@ export class DataGoogleComputeRegionNetworkEndpointGroup extends cdktf.Terraform
   * Generates CDKTF code for importing a DataGoogleComputeRegionNetworkEndpointGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeRegionNetworkEndpointGroup to import
-  * @param importFromId The id of the existing DataGoogleComputeRegionNetworkEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeRegionNetworkEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeRegionNetworkEndpointGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -326,7 +396,7 @@ export class DataGoogleComputeRegionNetworkEndpointGroup extends cdktf.Terraform
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/compute_region_network_endpoint_group google_compute_region_network_endpoint_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_region_network_endpoint_group google_compute_region_network_endpoint_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -337,7 +407,7 @@ export class DataGoogleComputeRegionNetworkEndpointGroup extends cdktf.Terraform
       terraformResourceType: 'google_compute_region_network_endpoint_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.12.0',
+        providerVersion: '6.13.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -438,6 +508,12 @@ export class DataGoogleComputeRegionNetworkEndpointGroup extends cdktf.Terraform
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project;
+  }
+
+  // psc_data - computed: true, optional: false, required: false
+  private _pscData = new DataGoogleComputeRegionNetworkEndpointGroupPscDataList(this, "psc_data", false);
+  public get pscData() {
+    return this._pscData;
   }
 
   // psc_target_service - computed: true, optional: false, required: false

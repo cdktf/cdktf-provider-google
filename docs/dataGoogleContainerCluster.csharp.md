@@ -4,7 +4,7 @@
 
 ### DataGoogleContainerCluster <a name="DataGoogleContainerCluster" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster google_container_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster google_container_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer"></a>
 
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleContainerCluster
 
 The id of the existing DataGoogleContainerCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -442,6 +442,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.enableShieldedNodes">EnableShieldedNodes</a></code> | <code>HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.enableTpu">EnableTpu</a></code> | <code>HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.endpoint">Endpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.enterpriseConfig">EnterpriseConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList">DataGoogleContainerClusterEnterpriseConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.fleet">Fleet</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterFleetList">DataGoogleContainerClusterFleetList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.gatewayApiConfig">GatewayApiConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterGatewayApiConfigList">DataGoogleContainerClusterGatewayApiConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.identityServiceConfig">IdentityServiceConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIdentityServiceConfigList">DataGoogleContainerClusterIdentityServiceConfigList</a></code> | *No description.* |
@@ -896,6 +897,16 @@ public string Endpoint { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `EnterpriseConfig`<sup>Required</sup> <a name="EnterpriseConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.enterpriseConfig"></a>
+
+```csharp
+public DataGoogleContainerClusterEnterpriseConfigList EnterpriseConfig { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList">DataGoogleContainerClusterEnterpriseConfigList</a>
 
 ---
 
@@ -1837,7 +1848,7 @@ new DataGoogleContainerClusterConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.name">Name</a></code> | <code>string</code> | The name of the cluster, unique within the project and location. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.location">Location</a></code> | <code>string</code> | The location (region or zone) in which the cluster master will be created, as well as the default node location. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.project">Project</a></code> | <code>string</code> | The ID of the project in which the resource belongs. |
 
@@ -1923,7 +1934,7 @@ public string Name { get; set; }
 
 The name of the cluster, unique within the project and location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
 
 ---
 
@@ -1935,7 +1946,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1954,7 +1965,7 @@ The location (region or zone) in which the cluster master will be created, as we
 
 If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
 
 ---
 
@@ -1970,7 +1981,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
 
 ---
 
@@ -2060,6 +2071,19 @@ new DataGoogleContainerClusterDnsConfig {
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataGoogleContainerClusterEnableK8SBetaApis {
+
+};
+```
+
+
+### DataGoogleContainerClusterEnterpriseConfig <a name="DataGoogleContainerClusterEnterpriseConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfig.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new DataGoogleContainerClusterEnterpriseConfig {
 
 };
 ```
@@ -2710,6 +2734,19 @@ new DataGoogleContainerClusterNodePool {
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataGoogleContainerClusterNodePoolAutoConfig {
+
+};
+```
+
+
+### DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig <a name="DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig {
 
 };
 ```
@@ -18970,6 +19007,444 @@ public DataGoogleContainerClusterEnableK8SBetaApis InternalValue { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnableK8SBetaApis">DataGoogleContainerClusterEnableK8SBetaApis</a>
+
+---
+
+
+### DataGoogleContainerClusterEnterpriseConfigList <a name="DataGoogleContainerClusterEnterpriseConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new DataGoogleContainerClusterEnterpriseConfigList(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.allWithMapKey"></a>
+
+```csharp
+private DynamicListTerraformIterator AllWithMapKey(string MapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `MapKeyAttributeName`<sup>Required</sup> <a name="MapKeyAttributeName" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* string
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.get"></a>
+
+```csharp
+private DataGoogleContainerClusterEnterpriseConfigOutputReference Get(double Index)
+```
+
+###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.get.parameter.index"></a>
+
+- *Type:* double
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+
+### DataGoogleContainerClusterEnterpriseConfigOutputReference <a name="DataGoogleContainerClusterEnterpriseConfigOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new DataGoogleContainerClusterEnterpriseConfigOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* double
+
+the index of this item in the list.
+
+---
+
+##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.clusterTier">ClusterTier</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.desiredTier">DesiredTier</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfig">DataGoogleContainerClusterEnterpriseConfig</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClusterTier`<sup>Required</sup> <a name="ClusterTier" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.clusterTier"></a>
+
+```csharp
+public string ClusterTier { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `DesiredTier`<sup>Required</sup> <a name="DesiredTier" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.desiredTier"></a>
+
+```csharp
+public string DesiredTier { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.internalValue"></a>
+
+```csharp
+public DataGoogleContainerClusterEnterpriseConfig InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfig">DataGoogleContainerClusterEnterpriseConfig</a>
 
 ---
 
@@ -36946,6 +37421,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.linuxNodeConfig">LinuxNodeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLinuxNodeConfigList">DataGoogleContainerClusterNodeConfigLinuxNodeConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.localNvmeSsdBlockConfig">LocalNvmeSsdBlockConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList">DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.localSsdCount">LocalSsdCount</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.localSsdEncryptionMode">LocalSsdEncryptionMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.loggingVariant">LoggingVariant</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.machineType">MachineType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.metadata">Metadata</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
@@ -37190,6 +37666,16 @@ public double LocalSsdCount { get; }
 ```
 
 - *Type:* double
+
+---
+
+##### `LocalSsdEncryptionMode`<sup>Required</sup> <a name="LocalSsdEncryptionMode" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.localSsdEncryptionMode"></a>
+
+```csharp
+public string LocalSsdEncryptionMode { get; }
+```
+
+- *Type:* string
 
 ---
 
@@ -40471,6 +40957,433 @@ public DataGoogleContainerClusterNodeConfigWorkloadMetadataConfig InternalValue 
 ---
 
 
+### DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList <a name="DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.allWithMapKey"></a>
+
+```csharp
+private DynamicListTerraformIterator AllWithMapKey(string MapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `MapKeyAttributeName`<sup>Required</sup> <a name="MapKeyAttributeName" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* string
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.get"></a>
+
+```csharp
+private DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference Get(double Index)
+```
+
+###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.get.parameter.index"></a>
+
+- *Type:* double
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+
+### DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference <a name="DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* double
+
+the index of this item in the list.
+
+---
+
+##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.cgroupMode">CgroupMode</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig">DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `CgroupMode`<sup>Required</sup> <a name="CgroupMode" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.cgroupMode"></a>
+
+```csharp
+public string CgroupMode { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.internalValue"></a>
+
+```csharp
+public DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig">DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig</a>
+
+---
+
+
 ### DataGoogleContainerClusterNodePoolAutoConfigList <a name="DataGoogleContainerClusterNodePoolAutoConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer"></a>
@@ -41702,6 +42615,7 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.linuxNodeConfig">LinuxNodeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList">DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.networkTags">NetworkTags</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList">DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.nodeKubeletConfig">NodeKubeletConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNodeKubeletConfigList">DataGoogleContainerClusterNodePoolAutoConfigNodeKubeletConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.resourceManagerTags">ResourceManagerTags</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
@@ -41730,6 +42644,16 @@ public string Fqn { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `LinuxNodeConfig`<sup>Required</sup> <a name="LinuxNodeConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.linuxNodeConfig"></a>
+
+```csharp
+public DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList LinuxNodeConfig { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList">DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList</a>
 
 ---
 
@@ -56818,6 +57742,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.linuxNodeConfig">LinuxNodeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList">DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.localNvmeSsdBlockConfig">LocalNvmeSsdBlockConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList">DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.localSsdCount">LocalSsdCount</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.localSsdEncryptionMode">LocalSsdEncryptionMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.loggingVariant">LoggingVariant</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.machineType">MachineType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.metadata">Metadata</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
@@ -57062,6 +57987,16 @@ public double LocalSsdCount { get; }
 ```
 
 - *Type:* double
+
+---
+
+##### `LocalSsdEncryptionMode`<sup>Required</sup> <a name="LocalSsdEncryptionMode" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.localSsdEncryptionMode"></a>
+
+```csharp
+public string LocalSsdEncryptionMode { get; }
+```
+
+- *Type:* string
 
 ---
 

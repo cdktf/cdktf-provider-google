@@ -4,7 +4,7 @@
 
 ### DataGoogleContainerCluster <a name="DataGoogleContainerCluster" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster google_container_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster google_container_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer"></a>
 
@@ -42,7 +42,7 @@ DataGoogleContainerCluster.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The name of the cluster, unique within the project and location. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | The location (region or zone) in which the cluster master will be created, as well as the default node location. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | The ID of the project in which the resource belongs. |
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the cluster, unique within the project and location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -137,7 +137,7 @@ The location (region or zone) in which the cluster master will be created, as we
 
 If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
 
 ---
 
@@ -149,7 +149,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
 
 ---
 
@@ -493,7 +493,7 @@ The construct id used in the generated config for the DataGoogleContainerCluster
 
 The id of the existing DataGoogleContainerCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -549,6 +549,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.enableShieldedNodes">enableShieldedNodes</a></code> | <code>com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.enableTpu">enableTpu</a></code> | <code>com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.endpoint">endpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.enterpriseConfig">enterpriseConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList">DataGoogleContainerClusterEnterpriseConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.fleet">fleet</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterFleetList">DataGoogleContainerClusterFleetList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.gatewayApiConfig">gatewayApiConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterGatewayApiConfigList">DataGoogleContainerClusterGatewayApiConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.identityServiceConfig">identityServiceConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterIdentityServiceConfigList">DataGoogleContainerClusterIdentityServiceConfigList</a></code> | *No description.* |
@@ -1003,6 +1004,16 @@ public java.lang.String getEndpoint();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `enterpriseConfig`<sup>Required</sup> <a name="enterpriseConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.property.enterpriseConfig"></a>
+
+```java
+public DataGoogleContainerClusterEnterpriseConfigList getEnterpriseConfig();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList">DataGoogleContainerClusterEnterpriseConfigList</a>
 
 ---
 
@@ -1920,7 +1931,7 @@ DataGoogleContainerClusterConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.name">name</a></code> | <code>java.lang.String</code> | The name of the cluster, unique within the project and location. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.location">location</a></code> | <code>java.lang.String</code> | The location (region or zone) in which the cluster master will be created, as well as the default node location. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.project">project</a></code> | <code>java.lang.String</code> | The ID of the project in which the resource belongs. |
 
@@ -2006,7 +2017,7 @@ public java.lang.String getName();
 
 The name of the cluster, unique within the project and location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
 
 ---
 
@@ -2018,7 +2029,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2037,7 +2048,7 @@ The location (region or zone) in which the cluster master will be created, as we
 
 If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
 
 ---
 
@@ -2053,7 +2064,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
 
 ---
 
@@ -2137,6 +2148,18 @@ DataGoogleContainerClusterDnsConfig.builder()
 import com.hashicorp.cdktf.providers.google.data_google_container_cluster.DataGoogleContainerClusterEnableK8SBetaApis;
 
 DataGoogleContainerClusterEnableK8SBetaApis.builder()
+    .build();
+```
+
+
+### DataGoogleContainerClusterEnterpriseConfig <a name="DataGoogleContainerClusterEnterpriseConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfig.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_container_cluster.DataGoogleContainerClusterEnterpriseConfig;
+
+DataGoogleContainerClusterEnterpriseConfig.builder()
     .build();
 ```
 
@@ -2737,6 +2760,18 @@ DataGoogleContainerClusterNodePool.builder()
 import com.hashicorp.cdktf.providers.google.data_google_container_cluster.DataGoogleContainerClusterNodePoolAutoConfig;
 
 DataGoogleContainerClusterNodePoolAutoConfig.builder()
+    .build();
+```
+
+
+### DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig <a name="DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_container_cluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig;
+
+DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig.builder()
     .build();
 ```
 
@@ -18934,6 +18969,444 @@ public DataGoogleContainerClusterEnableK8SBetaApis getInternalValue();
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnableK8SBetaApis">DataGoogleContainerClusterEnableK8SBetaApis</a>
+
+---
+
+
+### DataGoogleContainerClusterEnterpriseConfigList <a name="DataGoogleContainerClusterEnterpriseConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_container_cluster.DataGoogleContainerClusterEnterpriseConfigList;
+
+new DataGoogleContainerClusterEnterpriseConfigList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.get"></a>
+
+```java
+public DataGoogleContainerClusterEnterpriseConfigOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+
+### DataGoogleContainerClusterEnterpriseConfigOutputReference <a name="DataGoogleContainerClusterEnterpriseConfigOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_container_cluster.DataGoogleContainerClusterEnterpriseConfigOutputReference;
+
+new DataGoogleContainerClusterEnterpriseConfigOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.clusterTier">clusterTier</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.desiredTier">desiredTier</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfig">DataGoogleContainerClusterEnterpriseConfig</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `clusterTier`<sup>Required</sup> <a name="clusterTier" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.clusterTier"></a>
+
+```java
+public java.lang.String getClusterTier();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `desiredTier`<sup>Required</sup> <a name="desiredTier" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.desiredTier"></a>
+
+```java
+public java.lang.String getDesiredTier();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfigOutputReference.property.internalValue"></a>
+
+```java
+public DataGoogleContainerClusterEnterpriseConfig getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterEnterpriseConfig">DataGoogleContainerClusterEnterpriseConfig</a>
 
 ---
 
@@ -36910,6 +37383,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.linuxNodeConfig">linuxNodeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLinuxNodeConfigList">DataGoogleContainerClusterNodeConfigLinuxNodeConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.localNvmeSsdBlockConfig">localNvmeSsdBlockConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList">DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.localSsdCount">localSsdCount</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.localSsdEncryptionMode">localSsdEncryptionMode</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.loggingVariant">loggingVariant</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.machineType">machineType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.metadata">metadata</a></code> | <code>com.hashicorp.cdktf.StringMap</code> | *No description.* |
@@ -37154,6 +37628,16 @@ public java.lang.Number getLocalSsdCount();
 ```
 
 - *Type:* java.lang.Number
+
+---
+
+##### `localSsdEncryptionMode`<sup>Required</sup> <a name="localSsdEncryptionMode" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigOutputReference.property.localSsdEncryptionMode"></a>
+
+```java
+public java.lang.String getLocalSsdEncryptionMode();
+```
+
+- *Type:* java.lang.String
 
 ---
 
@@ -40435,6 +40919,433 @@ public DataGoogleContainerClusterNodeConfigWorkloadMetadataConfig getInternalVal
 ---
 
 
+### DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList <a name="DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_container_cluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList;
+
+new DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.get"></a>
+
+```java
+public DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+
+### DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference <a name="DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_container_cluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference;
+
+new DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.cgroupMode">cgroupMode</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig">DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `cgroupMode`<sup>Required</sup> <a name="cgroupMode" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.cgroupMode"></a>
+
+```java
+public java.lang.String getCgroupMode();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigOutputReference.property.internalValue"></a>
+
+```java
+public DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig">DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfig</a>
+
+---
+
+
 ### DataGoogleContainerClusterNodePoolAutoConfigList <a name="DataGoogleContainerClusterNodePoolAutoConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigList.Initializer"></a>
@@ -41666,6 +42577,7 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.linuxNodeConfig">linuxNodeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList">DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.networkTags">networkTags</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList">DataGoogleContainerClusterNodePoolAutoConfigNetworkTagsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.nodeKubeletConfig">nodeKubeletConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigNodeKubeletConfigList">DataGoogleContainerClusterNodePoolAutoConfigNodeKubeletConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.resourceManagerTags">resourceManagerTags</a></code> | <code>com.hashicorp.cdktf.StringMap</code> | *No description.* |
@@ -41694,6 +42606,16 @@ public java.lang.String getFqn();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `linuxNodeConfig`<sup>Required</sup> <a name="linuxNodeConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigOutputReference.property.linuxNodeConfig"></a>
+
+```java
+public DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList getLinuxNodeConfig();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList">DataGoogleContainerClusterNodePoolAutoConfigLinuxNodeConfigList</a>
 
 ---
 
@@ -56782,6 +57704,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.linuxNodeConfig">linuxNodeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList">DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.localNvmeSsdBlockConfig">localNvmeSsdBlockConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList">DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.localSsdCount">localSsdCount</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.localSsdEncryptionMode">localSsdEncryptionMode</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.loggingVariant">loggingVariant</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.machineType">machineType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.metadata">metadata</a></code> | <code>com.hashicorp.cdktf.StringMap</code> | *No description.* |
@@ -57026,6 +57949,16 @@ public java.lang.Number getLocalSsdCount();
 ```
 
 - *Type:* java.lang.Number
+
+---
+
+##### `localSsdEncryptionMode`<sup>Required</sup> <a name="localSsdEncryptionMode" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigOutputReference.property.localSsdEncryptionMode"></a>
+
+```java
+public java.lang.String getLocalSsdEncryptionMode();
+```
+
+- *Type:* java.lang.String
 
 ---
 

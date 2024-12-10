@@ -4,12 +4,12 @@
 
 ### DataGoogleSpannerDatabase <a name="DataGoogleSpannerDatabase" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/spanner_database google_spanner_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/spanner_database google_spanner_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 datagooglespannerdatabase.NewDataGoogleSpannerDatabase(scope Construct, id *string, config DataGoogleSpannerDatabaseConfig) DataGoogleSpannerDatabase
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 datagooglespannerdatabase.DataGoogleSpannerDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 datagooglespannerdatabase.DataGoogleSpannerDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagooglespannerdatabase.DataGoogleSpannerDatabase_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 datagooglespannerdatabase.DataGoogleSpannerDatabase_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglespannerdatabase.DataGoogleSpannerDatabase_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 datagooglespannerdatabase.DataGoogleSpannerDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleSpannerDatabase 
 
 The id of the existing DataGoogleSpannerDatabase that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/spanner_database#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/spanner_database#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -722,7 +722,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 &datagooglespannerdatabase.DataGoogleSpannerDatabaseConfig {
 	Connection: interface{},
@@ -752,8 +752,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerda
 | <code><a href="#@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.property.instance">Instance</a></code> | <code>*string</code> | The instance to create the database on. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.property.name">Name</a></code> | <code>*string</code> | A unique identifier for the database, which cannot be changed after the instance is created. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/spanner_database#id DataGoogleSpannerDatabase#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/spanner_database#project DataGoogleSpannerDatabase#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/spanner_database#id DataGoogleSpannerDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/spanner_database#project DataGoogleSpannerDatabase#project}. |
 
 ---
 
@@ -837,7 +837,7 @@ Instance *string
 
 The instance to create the database on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/spanner_database#instance DataGoogleSpannerDatabase#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/spanner_database#instance DataGoogleSpannerDatabase#instance}
 
 ---
 
@@ -853,7 +853,7 @@ A unique identifier for the database, which cannot be changed after the instance
 
 Values are of the form '[a-z][-_a-z0-9]*[a-z0-9]'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/spanner_database#name DataGoogleSpannerDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/spanner_database#name DataGoogleSpannerDatabase#name}
 
 ---
 
@@ -865,7 +865,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/spanner_database#id DataGoogleSpannerDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/spanner_database#id DataGoogleSpannerDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -880,7 +880,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.12.0/docs/data-sources/spanner_database#project DataGoogleSpannerDatabase#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/spanner_database#project DataGoogleSpannerDatabase#project}.
 
 ---
 
@@ -889,7 +889,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseEncryptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 &datagooglespannerdatabase.DataGoogleSpannerDatabaseEncryptionConfig {
 
@@ -904,7 +904,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerda
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseEncryptionConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 datagooglespannerdatabase.NewDataGoogleSpannerDatabaseEncryptionConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSpannerDatabaseEncryptionConfigList
 ```
@@ -1053,7 +1053,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseEncryptionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglespannerdatabase"
 
 datagooglespannerdatabase.NewDataGoogleSpannerDatabaseEncryptionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSpannerDatabaseEncryptionConfigOutputReference
 ```
