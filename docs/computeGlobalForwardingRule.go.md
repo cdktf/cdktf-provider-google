@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.NewComputeGlobalForwardingRule(scope Construct, id *string, config ComputeGlobalForwardingRuleConfig) ComputeGlobalForwardingRule
 ```
@@ -529,7 +529,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.ComputeGlobalForwardingRule_IsConstruct(x interface{}) *bool
 ```
@@ -561,7 +561,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.ComputeGlobalForwardingRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -575,7 +575,7 @@ computeglobalforwardingrule.ComputeGlobalForwardingRule_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.ComputeGlobalForwardingRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -589,7 +589,7 @@ computeglobalforwardingrule.ComputeGlobalForwardingRule_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.ComputeGlobalForwardingRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1302,7 +1302,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 &computeglobalforwardingrule.ComputeGlobalForwardingRuleConfig {
 	Connection: interface{},
@@ -1326,10 +1326,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwarding
 	NoAutomateDnsZone: interface{},
 	PortRange: *string,
 	Project: *string,
-	ServiceDirectoryRegistrations: github.com/cdktf/cdktf-provider-google-go/google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleServiceDirectoryRegistrations,
+	ServiceDirectoryRegistrations: github.com/cdktf/cdktf-provider-google-go/google/v14.computeGlobalForwardingRule.ComputeGlobalForwardingRuleServiceDirectoryRegistrations,
 	SourceIpRanges: *[]*string,
 	Subnetwork: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts,
 }
 ```
 
@@ -1801,7 +1801,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFilters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 &computeglobalforwardingrule.ComputeGlobalForwardingRuleMetadataFilters {
 	FilterLabels: interface{},
@@ -1856,7 +1856,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 &computeglobalforwardingrule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabels {
 	Name: *string,
@@ -1906,7 +1906,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleServiceDirectoryRegistrations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 &computeglobalforwardingrule.ComputeGlobalForwardingRuleServiceDirectoryRegistrations {
 	Namespace: *string,
@@ -1960,7 +1960,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 &computeglobalforwardingrule.ComputeGlobalForwardingRuleTimeouts {
 	Create: *string,
@@ -2022,7 +2022,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.NewComputeGlobalForwardingRuleMetadataFiltersFilterLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeGlobalForwardingRuleMetadataFiltersFilterLabelsList
 ```
@@ -2182,7 +2182,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.NewComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference
 ```
@@ -2493,7 +2493,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.NewComputeGlobalForwardingRuleMetadataFiltersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeGlobalForwardingRuleMetadataFiltersList
 ```
@@ -2653,7 +2653,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.NewComputeGlobalForwardingRuleMetadataFiltersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeGlobalForwardingRuleMetadataFiltersOutputReference
 ```
@@ -2977,7 +2977,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleServiceDirectoryRegistrationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.NewComputeGlobalForwardingRuleServiceDirectoryRegistrationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeGlobalForwardingRuleServiceDirectoryRegistrationsOutputReference
 ```
@@ -3284,7 +3284,7 @@ func InternalValue() ComputeGlobalForwardingRuleServiceDirectoryRegistrations
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeglobalforwardingrule"
 
 computeglobalforwardingrule.NewComputeGlobalForwardingRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeGlobalForwardingRuleTimeoutsOutputReference
 ```
