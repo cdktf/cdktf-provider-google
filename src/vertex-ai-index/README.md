@@ -1,3 +1,3 @@
 # `google_vertex_ai_index`
 
-Refer to the Terraform Registry for docs: [`google_vertex_ai_index`](https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/vertex_ai_index).
+Refer to the Terraform Registry for docs: [`google_vertex_ai_index`](https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/vertex_ai_index).

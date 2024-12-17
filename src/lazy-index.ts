@@ -684,6 +684,7 @@ Object.defineProperty(exports, 'networkSecurityAddressGroup', { get: function ()
 Object.defineProperty(exports, 'networkSecurityAddressGroupIamBinding', { get: function () { return require('./network-security-address-group-iam-binding'); } });
 Object.defineProperty(exports, 'networkSecurityAddressGroupIamMember', { get: function () { return require('./network-security-address-group-iam-member'); } });
 Object.defineProperty(exports, 'networkSecurityAddressGroupIamPolicy', { get: function () { return require('./network-security-address-group-iam-policy'); } });
+Object.defineProperty(exports, 'networkSecurityAuthzPolicy', { get: function () { return require('./network-security-authz-policy'); } });
 Object.defineProperty(exports, 'networkSecurityClientTlsPolicy', { get: function () { return require('./network-security-client-tls-policy'); } });
 Object.defineProperty(exports, 'networkSecurityFirewallEndpoint', { get: function () { return require('./network-security-firewall-endpoint'); } });
 Object.defineProperty(exports, 'networkSecurityFirewallEndpointAssociation', { get: function () { return require('./network-security-firewall-endpoint-association'); } });
@@ -694,6 +695,7 @@ Object.defineProperty(exports, 'networkSecuritySecurityProfileGroup', { get: fun
 Object.defineProperty(exports, 'networkSecurityServerTlsPolicy', { get: function () { return require('./network-security-server-tls-policy'); } });
 Object.defineProperty(exports, 'networkSecurityTlsInspectionPolicy', { get: function () { return require('./network-security-tls-inspection-policy'); } });
 Object.defineProperty(exports, 'networkSecurityUrlLists', { get: function () { return require('./network-security-url-lists'); } });
+Object.defineProperty(exports, 'networkServicesAuthzExtension', { get: function () { return require('./network-services-authz-extension'); } });
 Object.defineProperty(exports, 'networkServicesEdgeCacheKeyset', { get: function () { return require('./network-services-edge-cache-keyset'); } });
 Object.defineProperty(exports, 'networkServicesEdgeCacheOrigin', { get: function () { return require('./network-services-edge-cache-origin'); } });
 Object.defineProperty(exports, 'networkServicesEdgeCacheService', { get: function () { return require('./network-services-edge-cache-service'); } });
