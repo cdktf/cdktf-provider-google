@@ -4,7 +4,7 @@
 
 ### DataGoogleComputeGlobalForwardingRule <a name="DataGoogleComputeGlobalForwardingRule" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.Initializer"></a>
 
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleComputeGlobalFor
 
 The id of the existing DataGoogleComputeGlobalForwardingRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_global_forwarding_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/compute_global_forwarding_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -419,6 +419,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.loadBalancingScheme">loadBalancingScheme</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.metadataFilters">metadataFilters</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleMetadataFiltersList">DataGoogleComputeGlobalForwardingRuleMetadataFiltersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.network">network</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.networkTier">networkTier</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.noAutomateDnsZone">noAutomateDnsZone</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.portRange">portRange</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.pscConnectionId">pscConnectionId</a></code> | <code>string</code> | *No description.* |
@@ -680,6 +681,16 @@ public readonly network: string;
 
 ---
 
+##### `networkTier`<sup>Required</sup> <a name="networkTier" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.networkTier"></a>
+
+```typescript
+public readonly networkTier: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `noAutomateDnsZone`<sup>Required</sup> <a name="noAutomateDnsZone" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.property.noAutomateDnsZone"></a>
 
 ```typescript
@@ -882,8 +893,8 @@ const dataGoogleComputeGlobalForwardingRuleConfig: dataGoogleComputeGlobalForwar
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.name">name</a></code> | <code>string</code> | Name of the resource; |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}. |
 
 ---
 
@@ -981,7 +992,7 @@ For Private Service Connect forwarding rules that forward traffic to Google
 APIs, the forwarding rule name must be a 1-20 characters string with
 lowercase letters and numbers and must start with a letter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_global_forwarding_rule#name DataGoogleComputeGlobalForwardingRule#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/compute_global_forwarding_rule#name DataGoogleComputeGlobalForwardingRule#name}
 
 ---
 
@@ -993,7 +1004,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1008,7 +1019,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}.
 
 ---
 

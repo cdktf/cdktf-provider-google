@@ -4,7 +4,7 @@
 
 ### ApigeeEndpointAttachment <a name="ApigeeEndpointAttachment" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment google_apigee_endpoint_attachment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment google_apigee_endpoint_attachment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachment.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the ApigeeEndpointAttachment t
 
 The id of the existing ApigeeEndpointAttachment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -879,7 +879,7 @@ const apigeeEndpointAttachmentConfig: apigeeEndpointAttachment.ApigeeEndpointAtt
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.location">location</a></code> | <code>string</code> | Location of the endpoint attachment. |
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.orgId">orgId</a></code> | <code>string</code> | The Apigee Organization associated with the Apigee instance, in the format 'organizations/{{org_name}}'. |
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.serviceAttachment">serviceAttachment</a></code> | <code>string</code> | Format: projects/* /regions/* /serviceAttachments/*. |
-| <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#id ApigeeEndpointAttachment#id}. |
+| <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#id ApigeeEndpointAttachment#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts">ApigeeEndpointAttachmentTimeouts</a></code> | timeouts block. |
 
 ---
@@ -964,7 +964,7 @@ public readonly endpointAttachmentId: string;
 
 ID of the endpoint attachment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#endpoint_attachment_id ApigeeEndpointAttachment#endpoint_attachment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#endpoint_attachment_id ApigeeEndpointAttachment#endpoint_attachment_id}
 
 ---
 
@@ -978,7 +978,7 @@ public readonly location: string;
 
 Location of the endpoint attachment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#location ApigeeEndpointAttachment#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#location ApigeeEndpointAttachment#location}
 
 ---
 
@@ -992,7 +992,7 @@ public readonly orgId: string;
 
 The Apigee Organization associated with the Apigee instance, in the format 'organizations/{{org_name}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#org_id ApigeeEndpointAttachment#org_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#org_id ApigeeEndpointAttachment#org_id}
 
 ---
 
@@ -1006,7 +1006,7 @@ public readonly serviceAttachment: string;
 
 Format: projects/* /regions/* /serviceAttachments/*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#service_attachment ApigeeEndpointAttachment#service_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#service_attachment ApigeeEndpointAttachment#service_attachment}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -1020,7 +1020,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#id ApigeeEndpointAttachment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#id ApigeeEndpointAttachment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1037,7 +1037,7 @@ public readonly timeouts: ApigeeEndpointAttachmentTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#timeouts ApigeeEndpointAttachment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#timeouts ApigeeEndpointAttachment#timeouts}
 
 ---
 
@@ -1055,8 +1055,8 @@ const apigeeEndpointAttachmentTimeouts: apigeeEndpointAttachment.ApigeeEndpointA
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#create ApigeeEndpointAttachment#create}. |
-| <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#delete ApigeeEndpointAttachment#delete}. |
+| <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#create ApigeeEndpointAttachment#create}. |
+| <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#delete ApigeeEndpointAttachment#delete}. |
 
 ---
 
@@ -1068,7 +1068,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#create ApigeeEndpointAttachment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#create ApigeeEndpointAttachment#create}.
 
 ---
 
@@ -1080,7 +1080,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/apigee_endpoint_attachment#delete ApigeeEndpointAttachment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_endpoint_attachment#delete ApigeeEndpointAttachment#delete}.
 
 ---
 

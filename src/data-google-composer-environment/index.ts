@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_environment
+// https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_environment#id DataGoogleComposerEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_environment#id DataGoogleComposerEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,19 +17,19 @@ export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMeta
   /**
   * Name of the environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_environment#name DataGoogleComposerEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_environment#name DataGoogleComposerEnvironment#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_environment#project DataGoogleComposerEnvironment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_environment#project DataGoogleComposerEnvironment#project}
   */
   readonly project?: string;
   /**
   * The location or Compute Engine region for the environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_environment#region DataGoogleComposerEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_environment#region DataGoogleComposerEnvironment#region}
   */
   readonly region?: string;
 }
@@ -2316,7 +2311,7 @@ export class DataGoogleComposerEnvironmentStorageConfigList extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_environment google_composer_environment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_environment google_composer_environment}
 */
 export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
 
@@ -2332,7 +2327,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleComposerEnvironment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComposerEnvironment to import
-  * @param importFromId The id of the existing DataGoogleComposerEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_environment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComposerEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_environment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComposerEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2344,7 +2339,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_environment google_composer_environment} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_environment google_composer_environment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2355,7 +2350,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_composer_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.13.0',
+        providerVersion: '6.14.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

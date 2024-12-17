@@ -1,3 +1,3 @@
 # `google_document_ai_processor`
 
-Refer to the Terraform Registry for docs: [`google_document_ai_processor`](https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/document_ai_processor).
+Refer to the Terraform Registry for docs: [`google_document_ai_processor`](https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/document_ai_processor).

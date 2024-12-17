@@ -4,12 +4,12 @@
 
 ### AssuredWorkloadsWorkload <a name="AssuredWorkloadsWorkload" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload google_assured_workloads_workload}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload google_assured_workloads_workload}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkload(scope Construct, id *string, config AssuredWorkloadsWorkloadConfig) AssuredWorkloadsWorkload
 ```
@@ -534,7 +534,7 @@ func ResetWorkloadOptions()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.AssuredWorkloadsWorkload_IsConstruct(x interface{}) *bool
 ```
@@ -566,7 +566,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.AssuredWorkloadsWorkload_IsTerraformElement(x interface{}) *bool
 ```
@@ -580,7 +580,7 @@ assuredworkloadsworkload.AssuredWorkloadsWorkload_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.AssuredWorkloadsWorkload_IsTerraformResource(x interface{}) *bool
 ```
@@ -594,7 +594,7 @@ assuredworkloadsworkload.AssuredWorkloadsWorkload_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkload.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.AssuredWorkloadsWorkload_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -623,7 +623,7 @@ The construct id used in the generated config for the AssuredWorkloadsWorkload t
 
 The id of the existing AssuredWorkloadsWorkload that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1307,7 +1307,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadComplianceStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadComplianceStatus {
 
@@ -1320,7 +1320,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadswor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadConfig {
 	Connection: interface{},
@@ -1337,16 +1337,16 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadswor
 	BillingAccount: *string,
 	EnableSovereignControls: interface{},
 	Id: *string,
-	KmsSettings: github.com/cdktf/cdktf-provider-google-go/google/v14.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettings,
+	KmsSettings: github.com/cdktf/cdktf-provider-google-go/google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettings,
 	Labels: *map[string]*string,
 	Partner: *string,
-	PartnerPermissions: github.com/cdktf/cdktf-provider-google-go/google/v14.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadPartnerPermissions,
+	PartnerPermissions: github.com/cdktf/cdktf-provider-google-go/google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadPartnerPermissions,
 	PartnerServicesBillingAccount: *string,
 	ProvisionedResourcesParent: *string,
 	ResourceSettings: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts,
 	ViolationNotificationsEnabled: interface{},
-	WorkloadOptions: github.com/cdktf/cdktf-provider-google-go/google/v14.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadWorkloadOptions,
+	WorkloadOptions: github.com/cdktf/cdktf-provider-google-go/google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadWorkloadOptions,
 }
 ```
 
@@ -1367,7 +1367,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadswor
 | <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.property.organization">Organization</a></code> | <code>*string</code> | The organization for the resource. |
 | <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.property.billingAccount">BillingAccount</a></code> | <code>*string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.property.enableSovereignControls">EnableSovereignControls</a></code> | <code>interface{}</code> | Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers. |
-| <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#id AssuredWorkloadsWorkload#id}. |
+| <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#id AssuredWorkloadsWorkload#id}. |
 | <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.property.kmsSettings">KmsSettings</a></code> | <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettings">AssuredWorkloadsWorkloadKmsSettings</a></code> | kms_settings block. |
 | <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Optional. Labels applied to the workload. |
 | <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadConfig.property.partner">Partner</a></code> | <code>*string</code> | Optional. Partner regime associated with this workload. Possible values: PARTNER_UNSPECIFIED, LOCAL_CONTROLS_BY_S3NS, SOVEREIGN_CONTROLS_BY_T_SYSTEMS, SOVEREIGN_CONTROLS_BY_SIA_MINSAIT, SOVEREIGN_CONTROLS_BY_PSN, SOVEREIGN_CONTROLS_BY_CNTXT, SOVEREIGN_CONTROLS_BY_CNTXT_NO_EKM. |
@@ -1463,7 +1463,7 @@ Required.
 
 Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS, HIPAA, HITRUST, EU_REGIONS_AND_SUPPORT, CA_REGIONS_AND_SUPPORT, ITAR, AU_REGIONS_AND_US_SUPPORT, ASSURED_WORKLOADS_FOR_PARTNERS, ISR_REGIONS, ISR_REGIONS_AND_SUPPORT, CA_PROTECTED_B, IL5, IL2, JP_REGIONS_AND_SUPPORT, KSA_REGIONS_AND_SUPPORT_WITH_SOVEREIGNTY_CONTROLS, REGIONAL_CONTROLS, HEALTHCARE_AND_LIFE_SCIENCES_CONTROLS, HEALTHCARE_AND_LIFE_SCIENCES_CONTROLS_WITH_US_SUPPORT, IRS_1075
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#compliance_regime AssuredWorkloadsWorkload#compliance_regime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#compliance_regime AssuredWorkloadsWorkload#compliance_regime}
 
 ---
 
@@ -1479,7 +1479,7 @@ Required.
 
 The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#display_name AssuredWorkloadsWorkload#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#display_name AssuredWorkloadsWorkload#display_name}
 
 ---
 
@@ -1493,7 +1493,7 @@ Location *string
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#location AssuredWorkloadsWorkload#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#location AssuredWorkloadsWorkload#location}
 
 ---
 
@@ -1507,7 +1507,7 @@ Organization *string
 
 The organization for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#organization AssuredWorkloadsWorkload#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#organization AssuredWorkloadsWorkload#organization}
 
 ---
 
@@ -1523,7 +1523,7 @@ Optional.
 
 Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#billing_account AssuredWorkloadsWorkload#billing_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#billing_account AssuredWorkloadsWorkload#billing_account}
 
 ---
 
@@ -1537,7 +1537,7 @@ EnableSovereignControls interface{}
 
 Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#enable_sovereign_controls AssuredWorkloadsWorkload#enable_sovereign_controls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#enable_sovereign_controls AssuredWorkloadsWorkload#enable_sovereign_controls}
 
 ---
 
@@ -1549,7 +1549,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#id AssuredWorkloadsWorkload#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#id AssuredWorkloadsWorkload#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1566,7 +1566,7 @@ KmsSettings AssuredWorkloadsWorkloadKmsSettings
 
 kms_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#kms_settings AssuredWorkloadsWorkload#kms_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#kms_settings AssuredWorkloadsWorkload#kms_settings}
 
 ---
 
@@ -1583,7 +1583,7 @@ Optional. Labels applied to the workload.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field `effective_labels` for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#labels AssuredWorkloadsWorkload#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#labels AssuredWorkloadsWorkload#labels}
 
 ---
 
@@ -1597,7 +1597,7 @@ Partner *string
 
 Optional. Partner regime associated with this workload. Possible values: PARTNER_UNSPECIFIED, LOCAL_CONTROLS_BY_S3NS, SOVEREIGN_CONTROLS_BY_T_SYSTEMS, SOVEREIGN_CONTROLS_BY_SIA_MINSAIT, SOVEREIGN_CONTROLS_BY_PSN, SOVEREIGN_CONTROLS_BY_CNTXT, SOVEREIGN_CONTROLS_BY_CNTXT_NO_EKM.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#partner AssuredWorkloadsWorkload#partner}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#partner AssuredWorkloadsWorkload#partner}
 
 ---
 
@@ -1611,7 +1611,7 @@ PartnerPermissions AssuredWorkloadsWorkloadPartnerPermissions
 
 partner_permissions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#partner_permissions AssuredWorkloadsWorkload#partner_permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#partner_permissions AssuredWorkloadsWorkload#partner_permissions}
 
 ---
 
@@ -1627,7 +1627,7 @@ Optional.
 
 Input only. Billing account necessary for purchasing services from Sovereign Partners. This field is required for creating SIA/PSN/CNTXT partner workloads. The caller should have 'billing.resourceAssociations.create' IAM permission on this billing-account. The format of this string is billingAccounts/AAAAAA-BBBBBB-CCCCCC.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#partner_services_billing_account AssuredWorkloadsWorkload#partner_services_billing_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#partner_services_billing_account AssuredWorkloadsWorkload#partner_services_billing_account}
 
 ---
 
@@ -1643,7 +1643,7 @@ Input only.
 
 The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#provisioned_resources_parent AssuredWorkloadsWorkload#provisioned_resources_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#provisioned_resources_parent AssuredWorkloadsWorkload#provisioned_resources_parent}
 
 ---
 
@@ -1657,7 +1657,7 @@ ResourceSettings interface{}
 
 resource_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#resource_settings AssuredWorkloadsWorkload#resource_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#resource_settings AssuredWorkloadsWorkload#resource_settings}
 
 ---
 
@@ -1671,7 +1671,7 @@ Timeouts AssuredWorkloadsWorkloadTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#timeouts AssuredWorkloadsWorkload#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#timeouts AssuredWorkloadsWorkload#timeouts}
 
 ---
 
@@ -1687,7 +1687,7 @@ Optional.
 
 Indicates whether the e-mail notification for a violation is enabled for a workload. This value will be by default True, and if not present will be considered as true. This should only be updated via updateWorkload call. Any Changes to this field during the createWorkload call will not be honored. This will always be true while creating the workload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#violation_notifications_enabled AssuredWorkloadsWorkload#violation_notifications_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#violation_notifications_enabled AssuredWorkloadsWorkload#violation_notifications_enabled}
 
 ---
 
@@ -1701,7 +1701,7 @@ WorkloadOptions AssuredWorkloadsWorkloadWorkloadOptions
 
 workload_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#workload_options AssuredWorkloadsWorkload#workload_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#workload_options AssuredWorkloadsWorkload#workload_options}
 
 ---
 
@@ -1710,7 +1710,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadEkmProvisioningResponse.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadEkmProvisioningResponse {
 
@@ -1723,7 +1723,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadswor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadKmsSettings {
 	NextRotationTime: *string,
@@ -1752,7 +1752,7 @@ Required.
 
 Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#next_rotation_time AssuredWorkloadsWorkload#next_rotation_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#next_rotation_time AssuredWorkloadsWorkload#next_rotation_time}
 
 ---
 
@@ -1768,7 +1768,7 @@ Required.
 
 Input only. Immutable. will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#rotation_period AssuredWorkloadsWorkload#rotation_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#rotation_period AssuredWorkloadsWorkload#rotation_period}
 
 ---
 
@@ -1777,7 +1777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadPartnerPermissions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadPartnerPermissions {
 	AssuredWorkloadsMonitoring: interface{},
@@ -1806,7 +1806,7 @@ AssuredWorkloadsMonitoring interface{}
 
 Optional. Allow partner to view violation alerts.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#assured_workloads_monitoring AssuredWorkloadsWorkload#assured_workloads_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#assured_workloads_monitoring AssuredWorkloadsWorkload#assured_workloads_monitoring}
 
 ---
 
@@ -1820,7 +1820,7 @@ DataLogsViewer interface{}
 
 Allow the partner to view inspectability logs and monitoring violations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#data_logs_viewer AssuredWorkloadsWorkload#data_logs_viewer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#data_logs_viewer AssuredWorkloadsWorkload#data_logs_viewer}
 
 ---
 
@@ -1834,7 +1834,7 @@ ServiceAccessApprover interface{}
 
 Optional. Allow partner to view access approval logs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#service_access_approver AssuredWorkloadsWorkload#service_access_approver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#service_access_approver AssuredWorkloadsWorkload#service_access_approver}
 
 ---
 
@@ -1843,7 +1843,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadResources {
 
@@ -1856,7 +1856,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadswor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourceSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadResourceSettings {
 	DisplayName: *string,
@@ -1885,7 +1885,7 @@ DisplayName *string
 
 User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#display_name AssuredWorkloadsWorkload#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#display_name AssuredWorkloadsWorkload#display_name}
 
 ---
 
@@ -1901,7 +1901,7 @@ Resource identifier.
 
 For a project this represents projectId. If the project is already taken, the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder, don't set this value as folder_id is assigned by Google.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#resource_id AssuredWorkloadsWorkload#resource_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#resource_id AssuredWorkloadsWorkload#resource_id}
 
 ---
 
@@ -1917,7 +1917,7 @@ Indicates the type of resource.
 
 This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#resource_type AssuredWorkloadsWorkload#resource_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#resource_type AssuredWorkloadsWorkload#resource_type}
 
 ---
 
@@ -1926,7 +1926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadSaaEnrollmentResponse.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadSaaEnrollmentResponse {
 
@@ -1939,7 +1939,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadswor
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadTimeouts {
 	Create: *string,
@@ -1952,9 +1952,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadswor
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#create AssuredWorkloadsWorkload#create}. |
-| <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#delete AssuredWorkloadsWorkload#delete}. |
-| <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#update AssuredWorkloadsWorkload#update}. |
+| <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#create AssuredWorkloadsWorkload#create}. |
+| <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#delete AssuredWorkloadsWorkload#delete}. |
+| <code><a href="#@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#update AssuredWorkloadsWorkload#update}. |
 
 ---
 
@@ -1966,7 +1966,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#create AssuredWorkloadsWorkload#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#create AssuredWorkloadsWorkload#create}.
 
 ---
 
@@ -1978,7 +1978,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#delete AssuredWorkloadsWorkload#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#delete AssuredWorkloadsWorkload#delete}.
 
 ---
 
@@ -1990,7 +1990,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#update AssuredWorkloadsWorkload#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#update AssuredWorkloadsWorkload#update}.
 
 ---
 
@@ -1999,7 +1999,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadWorkloadOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 &assuredworkloadsworkload.AssuredWorkloadsWorkloadWorkloadOptions {
 	KajEnrollmentType: *string,
@@ -2026,7 +2026,7 @@ Indicates type of KAJ enrollment for the workload.
 
 Currently, only specifiying KEY_ACCESS_TRANSPARENCY_OFF is implemented to not enroll in KAT-level KAJ enrollment for Regional Controls workloads. Possible values: KAJ_ENROLLMENT_TYPE_UNSPECIFIED, FULL_KAJ, EKM_ONLY, KEY_ACCESS_TRANSPARENCY_OFF
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/assured_workloads_workload#kaj_enrollment_type AssuredWorkloadsWorkload#kaj_enrollment_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/assured_workloads_workload#kaj_enrollment_type AssuredWorkloadsWorkload#kaj_enrollment_type}
 
 ---
 
@@ -2037,7 +2037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadComplianceStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadComplianceStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadComplianceStatusList
 ```
@@ -2186,7 +2186,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadComplianceStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadComplianceStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadComplianceStatusOutputReference
 ```
@@ -2475,7 +2475,7 @@ func InternalValue() AssuredWorkloadsWorkloadComplianceStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadEkmProvisioningResponseList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadEkmProvisioningResponseList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadEkmProvisioningResponseList
 ```
@@ -2624,7 +2624,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadEkmProvisioningResponseOutputReference
 ```
@@ -2924,7 +2924,7 @@ func InternalValue() AssuredWorkloadsWorkloadEkmProvisioningResponse
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadKmsSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadKmsSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AssuredWorkloadsWorkloadKmsSettingsOutputReference
 ```
@@ -3217,7 +3217,7 @@ func InternalValue() AssuredWorkloadsWorkloadKmsSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadPartnerPermissionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadPartnerPermissionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AssuredWorkloadsWorkloadPartnerPermissionsOutputReference
 ```
@@ -3553,7 +3553,7 @@ func InternalValue() AssuredWorkloadsWorkloadPartnerPermissions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourceSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadResourceSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadResourceSettingsList
 ```
@@ -3713,7 +3713,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourceSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadResourceSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadResourceSettingsOutputReference
 ```
@@ -4067,7 +4067,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadResourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadResourcesList
 ```
@@ -4216,7 +4216,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadResourcesOutputReference
 ```
@@ -4505,7 +4505,7 @@ func InternalValue() AssuredWorkloadsWorkloadResources
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadSaaEnrollmentResponseList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadSaaEnrollmentResponseList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AssuredWorkloadsWorkloadSaaEnrollmentResponseList
 ```
@@ -4654,7 +4654,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AssuredWorkloadsWorkloadSaaEnrollmentResponseOutputReference
 ```
@@ -4943,7 +4943,7 @@ func InternalValue() AssuredWorkloadsWorkloadSaaEnrollmentResponse
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AssuredWorkloadsWorkloadTimeoutsOutputReference
 ```
@@ -5279,7 +5279,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.assuredWorkloadsWorkload.AssuredWorkloadsWorkloadWorkloadOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/assuredworkloadsworkload"
+import "github.com/cdktf/cdktf-provider-google-go/google/assuredworkloadsworkload"
 
 assuredworkloadsworkload.NewAssuredWorkloadsWorkloadWorkloadOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AssuredWorkloadsWorkloadWorkloadOptionsOutputReference
 ```

@@ -4,12 +4,12 @@
 
 ### DataGoogleComposerUserWorkloadsConfigMap <a name="DataGoogleComposerUserWorkloadsConfigMap" id="@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMap"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map google_composer_user_workloads_config_map}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map google_composer_user_workloads_config_map}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMap.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomposeruserworkloadsconfigmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomposeruserworkloadsconfigmap"
 
 datagooglecomposeruserworkloadsconfigmap.NewDataGoogleComposerUserWorkloadsConfigMap(scope Construct, id *string, config DataGoogleComposerUserWorkloadsConfigMapConfig) DataGoogleComposerUserWorkloadsConfigMap
 ```
@@ -297,7 +297,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMap.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomposeruserworkloadsconfigmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomposeruserworkloadsconfigmap"
 
 datagooglecomposeruserworkloadsconfigmap.DataGoogleComposerUserWorkloadsConfigMap_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMap.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomposeruserworkloadsconfigmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomposeruserworkloadsconfigmap"
 
 datagooglecomposeruserworkloadsconfigmap.DataGoogleComposerUserWorkloadsConfigMap_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglecomposeruserworkloadsconfigmap.DataGoogleComposerUserWorkloadsConfigMa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMap.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomposeruserworkloadsconfigmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomposeruserworkloadsconfigmap"
 
 datagooglecomposeruserworkloadsconfigmap.DataGoogleComposerUserWorkloadsConfigMap_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglecomposeruserworkloadsconfigmap.DataGoogleComposerUserWorkloadsConfigMa
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMap.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomposeruserworkloadsconfigmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomposeruserworkloadsconfigmap"
 
 datagooglecomposeruserworkloadsconfigmap.DataGoogleComposerUserWorkloadsConfigMap_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleComposerUserWork
 
 The id of the existing DataGoogleComposerUserWorkloadsConfigMap that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -685,7 +685,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomposeruserworkloadsconfigmap"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomposeruserworkloadsconfigmap"
 
 &datagooglecomposeruserworkloadsconfigmap.DataGoogleComposerUserWorkloadsConfigMapConfig {
 	Connection: interface{},
@@ -716,8 +716,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomposeru
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.property.environment">Environment</a></code> | <code>*string</code> | Environment where the Kubernetes ConfigMap will be stored and used. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.property.name">Name</a></code> | <code>*string</code> | Name of the Kubernetes ConfigMap. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map#id DataGoogleComposerUserWorkloadsConfigMap#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map#project DataGoogleComposerUserWorkloadsConfigMap#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map#id DataGoogleComposerUserWorkloadsConfigMap#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map#project DataGoogleComposerUserWorkloadsConfigMap#project}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerUserWorkloadsConfigMap.DataGoogleComposerUserWorkloadsConfigMapConfig.property.region">Region</a></code> | <code>*string</code> | The location or Compute Engine region for the environment. |
 
 ---
@@ -802,7 +802,7 @@ Environment *string
 
 Environment where the Kubernetes ConfigMap will be stored and used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map#environment DataGoogleComposerUserWorkloadsConfigMap#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map#environment DataGoogleComposerUserWorkloadsConfigMap#environment}
 
 ---
 
@@ -816,7 +816,7 @@ Name *string
 
 Name of the Kubernetes ConfigMap.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map#name DataGoogleComposerUserWorkloadsConfigMap#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map#name DataGoogleComposerUserWorkloadsConfigMap#name}
 
 ---
 
@@ -828,7 +828,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map#id DataGoogleComposerUserWorkloadsConfigMap#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map#id DataGoogleComposerUserWorkloadsConfigMap#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -843,7 +843,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map#project DataGoogleComposerUserWorkloadsConfigMap#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map#project DataGoogleComposerUserWorkloadsConfigMap#project}.
 
 ---
 
@@ -857,7 +857,7 @@ Region *string
 
 The location or Compute Engine region for the environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/data-sources/composer_user_workloads_config_map#region DataGoogleComposerUserWorkloadsConfigMap#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/data-sources/composer_user_workloads_config_map#region DataGoogleComposerUserWorkloadsConfigMap#region}
 
 ---
 

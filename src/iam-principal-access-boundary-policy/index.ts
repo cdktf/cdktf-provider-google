@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -20,17 +15,17 @@ export interface IamPrincipalAccessBoundaryPolicyConfig extends cdktf.TerraformM
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#annotations IamPrincipalAccessBoundaryPolicy#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#annotations IamPrincipalAccessBoundaryPolicy#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * The description of the principal access boundary policy. Must be less than or equal to 63 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#display_name IamPrincipalAccessBoundaryPolicy#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#display_name IamPrincipalAccessBoundaryPolicy#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#id IamPrincipalAccessBoundaryPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#id IamPrincipalAccessBoundaryPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -39,32 +34,32 @@ export interface IamPrincipalAccessBoundaryPolicyConfig extends cdktf.TerraformM
   /**
   * The location the principal access boundary policy is in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#location IamPrincipalAccessBoundaryPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#location IamPrincipalAccessBoundaryPolicy#location}
   */
   readonly location: string;
   /**
   * The parent organization of the principal access boundary policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#organization IamPrincipalAccessBoundaryPolicy#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#organization IamPrincipalAccessBoundaryPolicy#organization}
   */
   readonly organization: string;
   /**
   * The ID to use to create the principal access boundary policy.
   * This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, hyphens, or dots. Pattern, /a-z{2,62}/.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#principal_access_boundary_policy_id IamPrincipalAccessBoundaryPolicy#principal_access_boundary_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#principal_access_boundary_policy_id IamPrincipalAccessBoundaryPolicy#principal_access_boundary_policy_id}
   */
   readonly principalAccessBoundaryPolicyId: string;
   /**
   * details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#details IamPrincipalAccessBoundaryPolicy#details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#details IamPrincipalAccessBoundaryPolicy#details}
   */
   readonly details?: IamPrincipalAccessBoundaryPolicyDetails;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#timeouts IamPrincipalAccessBoundaryPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#timeouts IamPrincipalAccessBoundaryPolicy#timeouts}
   */
   readonly timeouts?: IamPrincipalAccessBoundaryPolicyTimeouts;
 }
@@ -72,14 +67,14 @@ export interface IamPrincipalAccessBoundaryPolicyDetailsRules {
   /**
   * The description of the principal access boundary policy rule. Must be less than or equal to 256 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#description IamPrincipalAccessBoundaryPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#description IamPrincipalAccessBoundaryPolicy#description}
   */
   readonly description?: string;
   /**
   * The access relationship of principals to the resources in this rule.
   * Possible values: ALLOW
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#effect IamPrincipalAccessBoundaryPolicy#effect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#effect IamPrincipalAccessBoundaryPolicy#effect}
   */
   readonly effect: string;
   /**
@@ -92,7 +87,7 @@ export interface IamPrincipalAccessBoundaryPolicyDetailsRules {
   * * Projects, such as '//cloudresourcemanager.googleapis.com/projects/123'
   * or '//cloudresourcemanager.googleapis.com/projects/my-project-id'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#resources IamPrincipalAccessBoundaryPolicy#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#resources IamPrincipalAccessBoundaryPolicy#resources}
   */
   readonly resources: string[];
 }
@@ -265,13 +260,13 @@ export interface IamPrincipalAccessBoundaryPolicyDetails {
   * PAB policy version will be set to the current latest version, and this version
   * won't get updated when new versions are released.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#enforcement_version IamPrincipalAccessBoundaryPolicy#enforcement_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#enforcement_version IamPrincipalAccessBoundaryPolicy#enforcement_version}
   */
   readonly enforcementVersion?: string;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#rules IamPrincipalAccessBoundaryPolicy#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#rules IamPrincipalAccessBoundaryPolicy#rules}
   */
   readonly rules: IamPrincipalAccessBoundaryPolicyDetailsRules[] | cdktf.IResolvable;
 }
@@ -381,15 +376,15 @@ export class IamPrincipalAccessBoundaryPolicyDetailsOutputReference extends cdkt
 }
 export interface IamPrincipalAccessBoundaryPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#create IamPrincipalAccessBoundaryPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#create IamPrincipalAccessBoundaryPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#delete IamPrincipalAccessBoundaryPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#delete IamPrincipalAccessBoundaryPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#update IamPrincipalAccessBoundaryPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#update IamPrincipalAccessBoundaryPolicy#update}
   */
   readonly update?: string;
 }
@@ -541,7 +536,7 @@ export class IamPrincipalAccessBoundaryPolicyTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy google_iam_principal_access_boundary_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy google_iam_principal_access_boundary_policy}
 */
 export class IamPrincipalAccessBoundaryPolicy extends cdktf.TerraformResource {
 
@@ -557,7 +552,7 @@ export class IamPrincipalAccessBoundaryPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IamPrincipalAccessBoundaryPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IamPrincipalAccessBoundaryPolicy to import
-  * @param importFromId The id of the existing IamPrincipalAccessBoundaryPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IamPrincipalAccessBoundaryPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IamPrincipalAccessBoundaryPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -569,7 +564,7 @@ export class IamPrincipalAccessBoundaryPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.13.0/docs/resources/iam_principal_access_boundary_policy google_iam_principal_access_boundary_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/iam_principal_access_boundary_policy google_iam_principal_access_boundary_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -580,7 +575,7 @@ export class IamPrincipalAccessBoundaryPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_principal_access_boundary_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.13.0',
+        providerVersion: '6.14.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
