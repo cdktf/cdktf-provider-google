@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field
+// https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,48 +10,48 @@ export interface FirestoreFieldConfig extends cdktf.TerraformMetaArguments {
   /**
   * The id of the collection group to configure.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#collection FirestoreField#collection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#collection FirestoreField#collection}
   */
   readonly collection: string;
   /**
   * The Firestore database id. Defaults to '"(default)"'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#database FirestoreField#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#database FirestoreField#database}
   */
   readonly database?: string;
   /**
   * The id of the field to configure.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#field FirestoreField#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#field FirestoreField#field}
   */
   readonly field: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#id FirestoreField#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#id FirestoreField#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#project FirestoreField#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#project FirestoreField#project}
   */
   readonly project?: string;
   /**
   * index_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#index_config FirestoreField#index_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#index_config FirestoreField#index_config}
   */
   readonly indexConfig?: FirestoreFieldIndexConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#timeouts FirestoreField#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#timeouts FirestoreField#timeouts}
   */
   readonly timeouts?: FirestoreFieldTimeouts;
   /**
   * ttl_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#ttl_config FirestoreField#ttl_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#ttl_config FirestoreField#ttl_config}
   */
   readonly ttlConfig?: FirestoreFieldTtlConfig;
 }
@@ -65,14 +60,14 @@ export interface FirestoreFieldIndexConfigIndexes {
   * Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can
   * be specified. Possible values: ["CONTAINS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#array_config FirestoreField#array_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#array_config FirestoreField#array_config}
   */
   readonly arrayConfig?: string;
   /**
   * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=, !=.
   * Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#order FirestoreField#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#order FirestoreField#order}
   */
   readonly order?: string;
   /**
@@ -80,7 +75,7 @@ export interface FirestoreFieldIndexConfigIndexes {
   * the collection at query time. Collection group scope allows queries across all
   * collections with the same id. Default value: "COLLECTION" Possible values: ["COLLECTION", "COLLECTION_GROUP"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#query_scope FirestoreField#query_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#query_scope FirestoreField#query_scope}
   */
   readonly queryScope?: string;
 }
@@ -256,7 +251,7 @@ export interface FirestoreFieldIndexConfig {
   /**
   * indexes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#indexes FirestoreField#indexes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#indexes FirestoreField#indexes}
   */
   readonly indexes?: FirestoreFieldIndexConfigIndexes[] | cdktf.IResolvable;
 }
@@ -340,15 +335,15 @@ export class FirestoreFieldIndexConfigOutputReference extends cdktf.ComplexObjec
 }
 export interface FirestoreFieldTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#create FirestoreField#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#create FirestoreField#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#delete FirestoreField#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#delete FirestoreField#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#update FirestoreField#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#update FirestoreField#update}
   */
   readonly update?: string;
 }
@@ -554,7 +549,7 @@ export class FirestoreFieldTtlConfigOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field google_firestore_field}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field google_firestore_field}
 */
 export class FirestoreField extends cdktf.TerraformResource {
 
@@ -570,7 +565,7 @@ export class FirestoreField extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FirestoreField resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FirestoreField to import
-  * @param importFromId The id of the existing FirestoreField that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FirestoreField that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FirestoreField to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -582,7 +577,7 @@ export class FirestoreField extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/firestore_field google_firestore_field} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/firestore_field google_firestore_field} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -593,7 +588,7 @@ export class FirestoreField extends cdktf.TerraformResource {
       terraformResourceType: 'google_firestore_field',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.14.0',
+        providerVersion: '6.14.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

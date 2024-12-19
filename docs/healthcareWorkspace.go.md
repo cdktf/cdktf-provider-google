@@ -4,12 +4,12 @@
 
 ### HealthcareWorkspace <a name="HealthcareWorkspace" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace google_healthcare_workspace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace google_healthcare_workspace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 healthcareworkspace.NewHealthcareWorkspace(scope Construct, id *string, config HealthcareWorkspaceConfig) HealthcareWorkspace
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 healthcareworkspace.HealthcareWorkspace_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 healthcareworkspace.HealthcareWorkspace_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ healthcareworkspace.HealthcareWorkspace_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspace.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 healthcareworkspace.HealthcareWorkspace_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ healthcareworkspace.HealthcareWorkspace_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspace.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 healthcareworkspace.HealthcareWorkspace_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -514,7 +514,7 @@ The construct id used in the generated config for the HealthcareWorkspace to imp
 
 The id of the existing HealthcareWorkspace that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -868,7 +868,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 &healthcareworkspace.HealthcareWorkspaceConfig {
 	Connection: interface{},
@@ -880,10 +880,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace
 	Provisioners: *[]interface{},
 	Dataset: *string,
 	Name: *string,
-	Settings: github.com/cdktf/cdktf-provider-google-go/google/v14.healthcareWorkspace.HealthcareWorkspaceSettings,
+	Settings: github.com/cdktf/cdktf-provider-google-go/google.healthcareWorkspace.HealthcareWorkspaceSettings,
 	Id: *string,
 	Labels: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.healthcareWorkspace.HealthcareWorkspaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.healthcareWorkspace.HealthcareWorkspaceTimeouts,
 }
 ```
 
@@ -901,7 +901,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace
 | <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceConfig.property.dataset">Dataset</a></code> | <code>*string</code> | Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'. |
 | <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceConfig.property.name">Name</a></code> | <code>*string</code> | The name of the workspace, in the format 'projects/{projectId}/locations/{location}/datasets/{datasetId}/dataMapperWorkspaces/{workspaceId}'. |
 | <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceConfig.property.settings">Settings</a></code> | <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceSettings">HealthcareWorkspaceSettings</a></code> | settings block. |
-| <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#id HealthcareWorkspace#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#id HealthcareWorkspace#id}. |
 | <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The user labels. |
 | <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeouts">HealthcareWorkspaceTimeouts</a></code> | timeouts block. |
 
@@ -987,7 +987,7 @@ Dataset *string
 
 Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#dataset HealthcareWorkspace#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#dataset HealthcareWorkspace#dataset}
 
 ---
 
@@ -1001,7 +1001,7 @@ Name *string
 
 The name of the workspace, in the format 'projects/{projectId}/locations/{location}/datasets/{datasetId}/dataMapperWorkspaces/{workspaceId}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#name HealthcareWorkspace#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#name HealthcareWorkspace#name}
 
 ---
 
@@ -1015,7 +1015,7 @@ Settings HealthcareWorkspaceSettings
 
 settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#settings HealthcareWorkspace#settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#settings HealthcareWorkspace#settings}
 
 ---
 
@@ -1027,7 +1027,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#id HealthcareWorkspace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#id HealthcareWorkspace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1049,7 +1049,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#labels HealthcareWorkspace#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#labels HealthcareWorkspace#labels}
 
 ---
 
@@ -1063,7 +1063,7 @@ Timeouts HealthcareWorkspaceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#timeouts HealthcareWorkspace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#timeouts HealthcareWorkspace#timeouts}
 
 ---
 
@@ -1072,7 +1072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 &healthcareworkspace.HealthcareWorkspaceSettings {
 	DataProjectIds: *[]*string,
@@ -1097,7 +1097,7 @@ DataProjectIds *[]*string
 
 Project IDs for data projects hosted in a workspace.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#data_project_ids HealthcareWorkspace#data_project_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#data_project_ids HealthcareWorkspace#data_project_ids}
 
 ---
 
@@ -1106,7 +1106,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 &healthcareworkspace.HealthcareWorkspaceTimeouts {
 	Create: *string,
@@ -1119,9 +1119,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#create HealthcareWorkspace#create}. |
-| <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#delete HealthcareWorkspace#delete}. |
-| <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#update HealthcareWorkspace#update}. |
+| <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#create HealthcareWorkspace#create}. |
+| <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#delete HealthcareWorkspace#delete}. |
+| <code><a href="#@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#update HealthcareWorkspace#update}. |
 
 ---
 
@@ -1133,7 +1133,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#create HealthcareWorkspace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#create HealthcareWorkspace#create}.
 
 ---
 
@@ -1145,7 +1145,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#delete HealthcareWorkspace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#delete HealthcareWorkspace#delete}.
 
 ---
 
@@ -1157,7 +1157,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/healthcare_workspace#update HealthcareWorkspace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/healthcare_workspace#update HealthcareWorkspace#update}.
 
 ---
 
@@ -1168,7 +1168,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 healthcareworkspace.NewHealthcareWorkspaceSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareWorkspaceSettingsOutputReference
 ```
@@ -1439,7 +1439,7 @@ func InternalValue() HealthcareWorkspaceSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareWorkspace.HealthcareWorkspaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/healthcareworkspace"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcareworkspace"
 
 healthcareworkspace.NewHealthcareWorkspaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareWorkspaceTimeoutsOutputReference
 ```

@@ -4,12 +4,12 @@
 
 ### KmsSecretCiphertext <a name="KmsSecretCiphertext" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertext"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext google_kms_secret_ciphertext}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext google_kms_secret_ciphertext}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmssecretciphertext"
 
 kmssecretciphertext.NewKmsSecretCiphertext(scope Construct, id *string, config KmsSecretCiphertextConfig) KmsSecretCiphertext
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertext.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmssecretciphertext"
 
 kmssecretciphertext.KmsSecretCiphertext_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertext.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmssecretciphertext"
 
 kmssecretciphertext.KmsSecretCiphertext_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ kmssecretciphertext.KmsSecretCiphertext_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertext.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmssecretciphertext"
 
 kmssecretciphertext.KmsSecretCiphertext_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ kmssecretciphertext.KmsSecretCiphertext_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertext.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmssecretciphertext"
 
 kmssecretciphertext.KmsSecretCiphertext_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the KmsSecretCiphertext to imp
 
 The id of the existing KmsSecretCiphertext that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -822,7 +822,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmssecretciphertext"
 
 &kmssecretciphertext.KmsSecretCiphertextConfig {
 	Connection: interface{},
@@ -836,7 +836,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext
 	Plaintext: *string,
 	AdditionalAuthenticatedData: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.kmsSecretCiphertext.KmsSecretCiphertextTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts,
 }
 ```
 
@@ -854,7 +854,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext
 | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.cryptoKey">CryptoKey</a></code> | <code>*string</code> | The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''. |
 | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.plaintext">Plaintext</a></code> | <code>*string</code> | The plaintext to be encrypted. |
 | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.additionalAuthenticatedData">AdditionalAuthenticatedData</a></code> | <code>*string</code> | The additional authenticated data used for integrity checks during encryption and decryption. |
-| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#id KmsSecretCiphertext#id}. |
+| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#id KmsSecretCiphertext#id}. |
 | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts">KmsSecretCiphertextTimeouts</a></code> | timeouts block. |
 
 ---
@@ -939,7 +939,7 @@ CryptoKey *string
 
 The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#crypto_key KmsSecretCiphertext#crypto_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#crypto_key KmsSecretCiphertext#crypto_key}
 
 ---
 
@@ -953,7 +953,7 @@ Plaintext *string
 
 The plaintext to be encrypted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#plaintext KmsSecretCiphertext#plaintext}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#plaintext KmsSecretCiphertext#plaintext}
 
 ---
 
@@ -967,7 +967,7 @@ AdditionalAuthenticatedData *string
 
 The additional authenticated data used for integrity checks during encryption and decryption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#additional_authenticated_data KmsSecretCiphertext#additional_authenticated_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#additional_authenticated_data KmsSecretCiphertext#additional_authenticated_data}
 
 ---
 
@@ -979,7 +979,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#id KmsSecretCiphertext#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#id KmsSecretCiphertext#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -996,7 +996,7 @@ Timeouts KmsSecretCiphertextTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#timeouts KmsSecretCiphertext#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#timeouts KmsSecretCiphertext#timeouts}
 
 ---
 
@@ -1005,7 +1005,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmssecretciphertext"
 
 &kmssecretciphertext.KmsSecretCiphertextTimeouts {
 	Create: *string,
@@ -1017,8 +1017,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#create KmsSecretCiphertext#create}. |
-| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#delete KmsSecretCiphertext#delete}. |
+| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#create KmsSecretCiphertext#create}. |
+| <code><a href="#@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#delete KmsSecretCiphertext#delete}. |
 
 ---
 
@@ -1030,7 +1030,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#create KmsSecretCiphertext#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#create KmsSecretCiphertext#create}.
 
 ---
 
@@ -1042,7 +1042,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/kms_secret_ciphertext#delete KmsSecretCiphertext#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/kms_secret_ciphertext#delete KmsSecretCiphertext#delete}.
 
 ---
 
@@ -1053,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsSecretCiphertext.KmsSecretCiphertextTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/kmssecretciphertext"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmssecretciphertext"
 
 kmssecretciphertext.NewKmsSecretCiphertextTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KmsSecretCiphertextTimeoutsOutputReference
 ```

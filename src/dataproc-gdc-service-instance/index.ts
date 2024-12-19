@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface DataprocGdcServiceInstanceConfig extends cdktf.TerraformMetaArg
   /**
   * User-provided human-readable name to be used in user interfaces.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#display_name DataprocGdcServiceInstance#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#display_name DataprocGdcServiceInstance#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#id DataprocGdcServiceInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#id DataprocGdcServiceInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,47 +26,47 @@ export interface DataprocGdcServiceInstanceConfig extends cdktf.TerraformMetaArg
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#labels DataprocGdcServiceInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#labels DataprocGdcServiceInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Location of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#location DataprocGdcServiceInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#location DataprocGdcServiceInstance#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#project DataprocGdcServiceInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#project DataprocGdcServiceInstance#project}
   */
   readonly project?: string;
   /**
   * Requested service account to associate with ServiceInstance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#service_account DataprocGdcServiceInstance#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#service_account DataprocGdcServiceInstance#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * Id of the service instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#service_instance_id DataprocGdcServiceInstance#service_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#service_instance_id DataprocGdcServiceInstance#service_instance_id}
   */
   readonly serviceInstanceId: string;
   /**
   * gdce_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#gdce_cluster DataprocGdcServiceInstance#gdce_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#gdce_cluster DataprocGdcServiceInstance#gdce_cluster}
   */
   readonly gdceCluster?: DataprocGdcServiceInstanceGdceCluster;
   /**
   * spark_service_instance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#spark_service_instance_config DataprocGdcServiceInstance#spark_service_instance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#spark_service_instance_config DataprocGdcServiceInstance#spark_service_instance_config}
   */
   readonly sparkServiceInstanceConfig?: DataprocGdcServiceInstanceSparkServiceInstanceConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#timeouts DataprocGdcServiceInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#timeouts DataprocGdcServiceInstance#timeouts}
   */
   readonly timeouts?: DataprocGdcServiceInstanceTimeouts;
 }
@@ -79,7 +74,7 @@ export interface DataprocGdcServiceInstanceGdceCluster {
   /**
   * Gdce cluster resource id.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#gdce_cluster DataprocGdcServiceInstance#gdce_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#gdce_cluster DataprocGdcServiceInstance#gdce_cluster}
   */
   readonly gdceCluster: string;
 }
@@ -209,15 +204,15 @@ export class DataprocGdcServiceInstanceSparkServiceInstanceConfigOutputReference
 }
 export interface DataprocGdcServiceInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#create DataprocGdcServiceInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#create DataprocGdcServiceInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#delete DataprocGdcServiceInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#delete DataprocGdcServiceInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#update DataprocGdcServiceInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#update DataprocGdcServiceInstance#update}
   */
   readonly update?: string;
 }
@@ -369,7 +364,7 @@ export class DataprocGdcServiceInstanceTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance google_dataproc_gdc_service_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance google_dataproc_gdc_service_instance}
 */
 export class DataprocGdcServiceInstance extends cdktf.TerraformResource {
 
@@ -385,7 +380,7 @@ export class DataprocGdcServiceInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataprocGdcServiceInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataprocGdcServiceInstance to import
-  * @param importFromId The id of the existing DataprocGdcServiceInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataprocGdcServiceInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataprocGdcServiceInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -397,7 +392,7 @@ export class DataprocGdcServiceInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/dataproc_gdc_service_instance google_dataproc_gdc_service_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/dataproc_gdc_service_instance google_dataproc_gdc_service_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -408,7 +403,7 @@ export class DataprocGdcServiceInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_gdc_service_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.14.0',
+        providerVersion: '6.14.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

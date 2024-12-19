@@ -4,12 +4,12 @@
 
 ### DataCatalogPolicyTagIamPolicy <a name="DataCatalogPolicyTagIamPolicy" id="@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/data_catalog_policy_tag_iam_policy google_data_catalog_policy_tag_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/data_catalog_policy_tag_iam_policy google_data_catalog_policy_tag_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogpolicytagiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogpolicytagiampolicy"
 
 datacatalogpolicytagiampolicy.NewDataCatalogPolicyTagIamPolicy(scope Construct, id *string, config DataCatalogPolicyTagIamPolicyConfig) DataCatalogPolicyTagIamPolicy
 ```
@@ -385,7 +385,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogpolicytagiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogpolicytagiampolicy"
 
 datacatalogpolicytagiampolicy.DataCatalogPolicyTagIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -417,7 +417,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogpolicytagiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogpolicytagiampolicy"
 
 datacatalogpolicytagiampolicy.DataCatalogPolicyTagIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ datacatalogpolicytagiampolicy.DataCatalogPolicyTagIamPolicy_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogpolicytagiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogpolicytagiampolicy"
 
 datacatalogpolicytagiampolicy.DataCatalogPolicyTagIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ datacatalogpolicytagiampolicy.DataCatalogPolicyTagIamPolicy_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogpolicytagiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogpolicytagiampolicy"
 
 datacatalogpolicytagiampolicy.DataCatalogPolicyTagIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -474,7 +474,7 @@ The construct id used in the generated config for the DataCatalogPolicyTagIamPol
 
 The id of the existing DataCatalogPolicyTagIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/data_catalog_policy_tag_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/data_catalog_policy_tag_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -751,7 +751,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogpolicytagiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogpolicytagiampolicy"
 
 &datacatalogpolicytagiampolicy.DataCatalogPolicyTagIamPolicyConfig {
 	Connection: interface{},
@@ -778,9 +778,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datacatalogpolicyta
 | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/data_catalog_policy_tag_iam_policy#policy_data DataCatalogPolicyTagIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.policyTag">PolicyTag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/data_catalog_policy_tag_iam_policy#policy_tag DataCatalogPolicyTagIamPolicy#policy_tag}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/data_catalog_policy_tag_iam_policy#id DataCatalogPolicyTagIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/data_catalog_policy_tag_iam_policy#policy_data DataCatalogPolicyTagIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.policyTag">PolicyTag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/data_catalog_policy_tag_iam_policy#policy_tag DataCatalogPolicyTagIamPolicy#policy_tag}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTagIamPolicy.DataCatalogPolicyTagIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/data_catalog_policy_tag_iam_policy#id DataCatalogPolicyTagIamPolicy#id}. |
 
 ---
 
@@ -862,7 +862,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/data_catalog_policy_tag_iam_policy#policy_data DataCatalogPolicyTagIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/data_catalog_policy_tag_iam_policy#policy_data DataCatalogPolicyTagIamPolicy#policy_data}.
 
 ---
 
@@ -874,7 +874,7 @@ PolicyTag *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/data_catalog_policy_tag_iam_policy#policy_tag DataCatalogPolicyTagIamPolicy#policy_tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/data_catalog_policy_tag_iam_policy#policy_tag DataCatalogPolicyTagIamPolicy#policy_tag}.
 
 ---
 
@@ -886,7 +886,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/data_catalog_policy_tag_iam_policy#id DataCatalogPolicyTagIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/data_catalog_policy_tag_iam_policy#id DataCatalogPolicyTagIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
