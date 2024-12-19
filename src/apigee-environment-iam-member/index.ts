@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface ApigeeEnvironmentIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#env_id ApigeeEnvironmentIamMember#env_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#env_id ApigeeEnvironmentIamMember#env_id}
   */
   readonly envId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#id ApigeeEnvironmentIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#id ApigeeEnvironmentIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#member ApigeeEnvironmentIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#member ApigeeEnvironmentIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#org_id ApigeeEnvironmentIamMember#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#org_id ApigeeEnvironmentIamMember#org_id}
   */
   readonly orgId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#role ApigeeEnvironmentIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#role ApigeeEnvironmentIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#condition ApigeeEnvironmentIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#condition ApigeeEnvironmentIamMember#condition}
   */
   readonly condition?: ApigeeEnvironmentIamMemberCondition;
 }
 export interface ApigeeEnvironmentIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#description ApigeeEnvironmentIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#description ApigeeEnvironmentIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#expression ApigeeEnvironmentIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#expression ApigeeEnvironmentIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#title ApigeeEnvironmentIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#title ApigeeEnvironmentIamMember#title}
   */
   readonly title: string;
 }
@@ -188,7 +188,7 @@ export class ApigeeEnvironmentIamMemberConditionOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member google_apigee_environment_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member google_apigee_environment_iam_member}
 */
 export class ApigeeEnvironmentIamMember extends cdktf.TerraformResource {
 
@@ -204,7 +204,7 @@ export class ApigeeEnvironmentIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeEnvironmentIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeEnvironmentIamMember to import
-  * @param importFromId The id of the existing ApigeeEnvironmentIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeEnvironmentIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeEnvironmentIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -216,7 +216,7 @@ export class ApigeeEnvironmentIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/apigee_environment_iam_member google_apigee_environment_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_iam_member google_apigee_environment_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -227,7 +227,7 @@ export class ApigeeEnvironmentIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_environment_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.14.0',
+        providerVersion: '6.14.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

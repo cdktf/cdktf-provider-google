@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment
+// https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,18 +15,18 @@ export interface OsConfigPatchDeploymentConfig extends cdktf.TerraformMetaArgume
   /**
   * Description of the patch deployment. Length of the description is limited to 1024 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#description OsConfigPatchDeployment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#description OsConfigPatchDeployment#description}
   */
   readonly description?: string;
   /**
   * Duration of the patch. After the duration ends, the patch times out.
   * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#duration OsConfigPatchDeployment#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#duration OsConfigPatchDeployment#duration}
   */
   readonly duration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#id OsConfigPatchDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#id OsConfigPatchDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,47 +40,47 @@ export interface OsConfigPatchDeploymentConfig extends cdktf.TerraformMetaArgume
   * * Must end with a number or a letter.
   * * Must be unique within the project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#patch_deployment_id OsConfigPatchDeployment#patch_deployment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#patch_deployment_id OsConfigPatchDeployment#patch_deployment_id}
   */
   readonly patchDeploymentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#project OsConfigPatchDeployment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#project OsConfigPatchDeployment#project}
   */
   readonly project?: string;
   /**
   * instance_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#instance_filter OsConfigPatchDeployment#instance_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#instance_filter OsConfigPatchDeployment#instance_filter}
   */
   readonly instanceFilter: OsConfigPatchDeploymentInstanceFilter;
   /**
   * one_time_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#one_time_schedule OsConfigPatchDeployment#one_time_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#one_time_schedule OsConfigPatchDeployment#one_time_schedule}
   */
   readonly oneTimeSchedule?: OsConfigPatchDeploymentOneTimeSchedule;
   /**
   * patch_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#patch_config OsConfigPatchDeployment#patch_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#patch_config OsConfigPatchDeployment#patch_config}
   */
   readonly patchConfig?: OsConfigPatchDeploymentPatchConfig;
   /**
   * recurring_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#recurring_schedule OsConfigPatchDeployment#recurring_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#recurring_schedule OsConfigPatchDeployment#recurring_schedule}
   */
   readonly recurringSchedule?: OsConfigPatchDeploymentRecurringSchedule;
   /**
   * rollout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#rollout OsConfigPatchDeployment#rollout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#rollout OsConfigPatchDeployment#rollout}
   */
   readonly rollout?: OsConfigPatchDeploymentRollout;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#timeouts OsConfigPatchDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#timeouts OsConfigPatchDeployment#timeouts}
   */
   readonly timeouts?: OsConfigPatchDeploymentTimeouts;
 }
@@ -88,7 +88,7 @@ export interface OsConfigPatchDeploymentInstanceFilterGroupLabels {
   /**
   * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#labels OsConfigPatchDeployment#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#labels OsConfigPatchDeployment#labels}
   */
   readonly labels: { [key: string]: string };
 }
@@ -203,14 +203,14 @@ export interface OsConfigPatchDeploymentInstanceFilter {
   /**
   * Target all VM instances in the project. If true, no other criteria is permitted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#all OsConfigPatchDeployment#all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#all OsConfigPatchDeployment#all}
   */
   readonly all?: boolean | cdktf.IResolvable;
   /**
   * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
   * VMs when targeting configs, for example prefix="prod-".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#instance_name_prefixes OsConfigPatchDeployment#instance_name_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#instance_name_prefixes OsConfigPatchDeployment#instance_name_prefixes}
   */
   readonly instanceNamePrefixes?: string[];
   /**
@@ -218,19 +218,19 @@ export interface OsConfigPatchDeploymentInstanceFilter {
   * 'projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}', or
   * 'https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#instances OsConfigPatchDeployment#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#instances OsConfigPatchDeployment#instances}
   */
   readonly instances?: string[];
   /**
   * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#zones OsConfigPatchDeployment#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#zones OsConfigPatchDeployment#zones}
   */
   readonly zones?: string[];
   /**
   * group_labels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#group_labels OsConfigPatchDeployment#group_labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#group_labels OsConfigPatchDeployment#group_labels}
   */
   readonly groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | cdktf.IResolvable;
 }
@@ -433,7 +433,7 @@ export interface OsConfigPatchDeploymentOneTimeSchedule {
   * The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
   * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#execute_time OsConfigPatchDeployment#execute_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#execute_time OsConfigPatchDeployment#execute_time}
   */
   readonly executeTime: string;
 }
@@ -516,7 +516,7 @@ export interface OsConfigPatchDeploymentPatchConfigApt {
   /**
   * List of packages to exclude from update. These packages will be excluded.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#excludes OsConfigPatchDeployment#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#excludes OsConfigPatchDeployment#excludes}
   */
   readonly excludes?: string[];
   /**
@@ -524,13 +524,13 @@ export interface OsConfigPatchDeploymentPatchConfigApt {
   * If these packages are not installed, they will be ignored. This field cannot be specified with
   * any other patch configuration fields.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#exclusive_packages OsConfigPatchDeployment#exclusive_packages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#exclusive_packages OsConfigPatchDeployment#exclusive_packages}
   */
   readonly exclusivePackages?: string[];
   /**
   * By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead. Possible values: ["DIST", "UPGRADE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#type OsConfigPatchDeployment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#type OsConfigPatchDeployment#type}
   */
   readonly type?: string;
 }
@@ -674,7 +674,7 @@ export interface OsConfigPatchDeploymentPatchConfigGoo {
   /**
   * goo update settings. Use this setting to override the default goo patch rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#enabled OsConfigPatchDeployment#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#enabled OsConfigPatchDeployment#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -757,19 +757,19 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGc
   /**
   * Bucket of the Cloud Storage object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#bucket OsConfigPatchDeployment#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#bucket OsConfigPatchDeployment#bucket}
   */
   readonly bucket: string;
   /**
   * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#generation_number OsConfigPatchDeployment#generation_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#generation_number OsConfigPatchDeployment#generation_number}
   */
   readonly generationNumber: string;
   /**
   * Name of the Cloud Storage object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#object OsConfigPatchDeployment#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#object OsConfigPatchDeployment#object}
   */
   readonly object: string;
 }
@@ -904,26 +904,26 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
   /**
   * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#allowed_success_codes OsConfigPatchDeployment#allowed_success_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#allowed_success_codes OsConfigPatchDeployment#allowed_success_codes}
   */
   readonly allowedSuccessCodes?: number[];
   /**
   * The script interpreter to use to run the script. If no interpreter is specified the script will
   * be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
   */
   readonly interpreter?: string;
   /**
   * An absolute path to the executable on the VM.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#local_path OsConfigPatchDeployment#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#local_path OsConfigPatchDeployment#local_path}
   */
   readonly localPath?: string;
   /**
   * gcs_object block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#gcs_object OsConfigPatchDeployment#gcs_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#gcs_object OsConfigPatchDeployment#gcs_object}
   */
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject;
 }
@@ -1096,19 +1096,19 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig
   /**
   * Bucket of the Cloud Storage object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#bucket OsConfigPatchDeployment#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#bucket OsConfigPatchDeployment#bucket}
   */
   readonly bucket: string;
   /**
   * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#generation_number OsConfigPatchDeployment#generation_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#generation_number OsConfigPatchDeployment#generation_number}
   */
   readonly generationNumber: string;
   /**
   * Name of the Cloud Storage object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#object OsConfigPatchDeployment#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#object OsConfigPatchDeployment#object}
   */
   readonly object: string;
 }
@@ -1243,26 +1243,26 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig
   /**
   * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#allowed_success_codes OsConfigPatchDeployment#allowed_success_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#allowed_success_codes OsConfigPatchDeployment#allowed_success_codes}
   */
   readonly allowedSuccessCodes?: number[];
   /**
   * The script interpreter to use to run the script. If no interpreter is specified the script will
   * be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
   */
   readonly interpreter?: string;
   /**
   * An absolute path to the executable on the VM.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#local_path OsConfigPatchDeployment#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#local_path OsConfigPatchDeployment#local_path}
   */
   readonly localPath?: string;
   /**
   * gcs_object block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#gcs_object OsConfigPatchDeployment#gcs_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#gcs_object OsConfigPatchDeployment#gcs_object}
   */
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject;
 }
@@ -1435,13 +1435,13 @@ export interface OsConfigPatchDeploymentPatchConfigPostStep {
   /**
   * linux_exec_step_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#linux_exec_step_config OsConfigPatchDeployment#linux_exec_step_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#linux_exec_step_config OsConfigPatchDeployment#linux_exec_step_config}
   */
   readonly linuxExecStepConfig?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig;
   /**
   * windows_exec_step_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#windows_exec_step_config OsConfigPatchDeployment#windows_exec_step_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#windows_exec_step_config OsConfigPatchDeployment#windows_exec_step_config}
   */
   readonly windowsExecStepConfig?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig;
 }
@@ -1556,19 +1556,19 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcs
   /**
   * Bucket of the Cloud Storage object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#bucket OsConfigPatchDeployment#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#bucket OsConfigPatchDeployment#bucket}
   */
   readonly bucket: string;
   /**
   * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#generation_number OsConfigPatchDeployment#generation_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#generation_number OsConfigPatchDeployment#generation_number}
   */
   readonly generationNumber: string;
   /**
   * Name of the Cloud Storage object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#object OsConfigPatchDeployment#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#object OsConfigPatchDeployment#object}
   */
   readonly object: string;
 }
@@ -1703,26 +1703,26 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
   /**
   * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#allowed_success_codes OsConfigPatchDeployment#allowed_success_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#allowed_success_codes OsConfigPatchDeployment#allowed_success_codes}
   */
   readonly allowedSuccessCodes?: number[];
   /**
   * The script interpreter to use to run the script. If no interpreter is specified the script will
   * be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
   */
   readonly interpreter?: string;
   /**
   * An absolute path to the executable on the VM.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#local_path OsConfigPatchDeployment#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#local_path OsConfigPatchDeployment#local_path}
   */
   readonly localPath?: string;
   /**
   * gcs_object block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#gcs_object OsConfigPatchDeployment#gcs_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#gcs_object OsConfigPatchDeployment#gcs_object}
   */
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject;
 }
@@ -1895,19 +1895,19 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigG
   /**
   * Bucket of the Cloud Storage object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#bucket OsConfigPatchDeployment#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#bucket OsConfigPatchDeployment#bucket}
   */
   readonly bucket: string;
   /**
   * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#generation_number OsConfigPatchDeployment#generation_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#generation_number OsConfigPatchDeployment#generation_number}
   */
   readonly generationNumber: string;
   /**
   * Name of the Cloud Storage object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#object OsConfigPatchDeployment#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#object OsConfigPatchDeployment#object}
   */
   readonly object: string;
 }
@@ -2042,26 +2042,26 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig 
   /**
   * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#allowed_success_codes OsConfigPatchDeployment#allowed_success_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#allowed_success_codes OsConfigPatchDeployment#allowed_success_codes}
   */
   readonly allowedSuccessCodes?: number[];
   /**
   * The script interpreter to use to run the script. If no interpreter is specified the script will
   * be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: ["SHELL", "POWERSHELL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#interpreter OsConfigPatchDeployment#interpreter}
   */
   readonly interpreter?: string;
   /**
   * An absolute path to the executable on the VM.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#local_path OsConfigPatchDeployment#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#local_path OsConfigPatchDeployment#local_path}
   */
   readonly localPath?: string;
   /**
   * gcs_object block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#gcs_object OsConfigPatchDeployment#gcs_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#gcs_object OsConfigPatchDeployment#gcs_object}
   */
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject;
 }
@@ -2234,13 +2234,13 @@ export interface OsConfigPatchDeploymentPatchConfigPreStep {
   /**
   * linux_exec_step_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#linux_exec_step_config OsConfigPatchDeployment#linux_exec_step_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#linux_exec_step_config OsConfigPatchDeployment#linux_exec_step_config}
   */
   readonly linuxExecStepConfig?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig;
   /**
   * windows_exec_step_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#windows_exec_step_config OsConfigPatchDeployment#windows_exec_step_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#windows_exec_step_config OsConfigPatchDeployment#windows_exec_step_config}
   */
   readonly windowsExecStepConfig?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig;
 }
@@ -2355,20 +2355,20 @@ export interface OsConfigPatchDeploymentPatchConfigWindowsUpdate {
   /**
   * Only apply updates of these windows update classifications. If empty, all updates are applied. Possible values: ["CRITICAL", "SECURITY", "DEFINITION", "DRIVER", "FEATURE_PACK", "SERVICE_PACK", "TOOL", "UPDATE_ROLLUP", "UPDATE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#classifications OsConfigPatchDeployment#classifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#classifications OsConfigPatchDeployment#classifications}
   */
   readonly classifications?: string[];
   /**
   * List of KBs to exclude from update.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#excludes OsConfigPatchDeployment#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#excludes OsConfigPatchDeployment#excludes}
   */
   readonly excludes?: string[];
   /**
   * An exclusive list of kbs to be updated. These are the only patches that will be updated.
   * This field must not be used with other patch configurations.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#exclusive_patches OsConfigPatchDeployment#exclusive_patches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#exclusive_patches OsConfigPatchDeployment#exclusive_patches}
   */
   readonly exclusivePatches?: string[];
 }
@@ -2512,7 +2512,7 @@ export interface OsConfigPatchDeploymentPatchConfigYum {
   /**
   * List of packages to exclude from update. These packages will be excluded.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#excludes OsConfigPatchDeployment#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#excludes OsConfigPatchDeployment#excludes}
   */
   readonly excludes?: string[];
   /**
@@ -2520,19 +2520,19 @@ export interface OsConfigPatchDeploymentPatchConfigYum {
   * If these packages are not installed, they will be ignored. This field cannot be specified with
   * any other patch configuration fields.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#exclusive_packages OsConfigPatchDeployment#exclusive_packages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#exclusive_packages OsConfigPatchDeployment#exclusive_packages}
   */
   readonly exclusivePackages?: string[];
   /**
   * Will cause patch to run yum update-minimal instead.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#minimal OsConfigPatchDeployment#minimal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#minimal OsConfigPatchDeployment#minimal}
   */
   readonly minimal?: boolean | cdktf.IResolvable;
   /**
   * Adds the --security flag to yum update. Not supported on all platforms.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#security OsConfigPatchDeployment#security}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#security OsConfigPatchDeployment#security}
   */
   readonly security?: boolean | cdktf.IResolvable;
 }
@@ -2705,38 +2705,38 @@ export interface OsConfigPatchDeploymentPatchConfigZypper {
   /**
   * Install only patches with these categories. Common categories include security, recommended, and feature.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#categories OsConfigPatchDeployment#categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#categories OsConfigPatchDeployment#categories}
   */
   readonly categories?: string[];
   /**
   * List of packages to exclude from update.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#excludes OsConfigPatchDeployment#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#excludes OsConfigPatchDeployment#excludes}
   */
   readonly excludes?: string[];
   /**
   * An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command.
   * This field must not be used with any other patch configuration fields.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#exclusive_patches OsConfigPatchDeployment#exclusive_patches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#exclusive_patches OsConfigPatchDeployment#exclusive_patches}
   */
   readonly exclusivePatches?: string[];
   /**
   * Install only patches with these severities. Common severities include critical, important, moderate, and low.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#severities OsConfigPatchDeployment#severities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#severities OsConfigPatchDeployment#severities}
   */
   readonly severities?: string[];
   /**
   * Adds the --with-optional flag to zypper patch.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#with_optional OsConfigPatchDeployment#with_optional}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#with_optional OsConfigPatchDeployment#with_optional}
   */
   readonly withOptional?: boolean | cdktf.IResolvable;
   /**
   * Adds the --with-update flag, to zypper patch.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#with_update OsConfigPatchDeployment#with_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#with_update OsConfigPatchDeployment#with_update}
   */
   readonly withUpdate?: boolean | cdktf.IResolvable;
 }
@@ -2967,55 +2967,55 @@ export interface OsConfigPatchDeploymentPatchConfig {
   /**
   * Allows the patch job to run on Managed instance groups (MIGs).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#mig_instances_allowed OsConfigPatchDeployment#mig_instances_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#mig_instances_allowed OsConfigPatchDeployment#mig_instances_allowed}
   */
   readonly migInstancesAllowed?: boolean | cdktf.IResolvable;
   /**
   * Post-patch reboot settings. Possible values: ["DEFAULT", "ALWAYS", "NEVER"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#reboot_config OsConfigPatchDeployment#reboot_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#reboot_config OsConfigPatchDeployment#reboot_config}
   */
   readonly rebootConfig?: string;
   /**
   * apt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#apt OsConfigPatchDeployment#apt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#apt OsConfigPatchDeployment#apt}
   */
   readonly apt?: OsConfigPatchDeploymentPatchConfigApt;
   /**
   * goo block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#goo OsConfigPatchDeployment#goo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#goo OsConfigPatchDeployment#goo}
   */
   readonly goo?: OsConfigPatchDeploymentPatchConfigGoo;
   /**
   * post_step block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#post_step OsConfigPatchDeployment#post_step}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#post_step OsConfigPatchDeployment#post_step}
   */
   readonly postStep?: OsConfigPatchDeploymentPatchConfigPostStep;
   /**
   * pre_step block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#pre_step OsConfigPatchDeployment#pre_step}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#pre_step OsConfigPatchDeployment#pre_step}
   */
   readonly preStep?: OsConfigPatchDeploymentPatchConfigPreStep;
   /**
   * windows_update block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#windows_update OsConfigPatchDeployment#windows_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#windows_update OsConfigPatchDeployment#windows_update}
   */
   readonly windowsUpdate?: OsConfigPatchDeploymentPatchConfigWindowsUpdate;
   /**
   * yum block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#yum OsConfigPatchDeployment#yum}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#yum OsConfigPatchDeployment#yum}
   */
   readonly yum?: OsConfigPatchDeploymentPatchConfigYum;
   /**
   * zypper block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#zypper OsConfigPatchDeployment#zypper}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#zypper OsConfigPatchDeployment#zypper}
   */
   readonly zypper?: OsConfigPatchDeploymentPatchConfigZypper;
 }
@@ -3333,19 +3333,19 @@ export interface OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
   /**
   * A day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#day_of_week OsConfigPatchDeployment#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#day_of_week OsConfigPatchDeployment#day_of_week}
   */
   readonly dayOfWeek: string;
   /**
   * Represents the number of days before or after the given week day of month that the patch deployment is scheduled for.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#day_offset OsConfigPatchDeployment#day_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#day_offset OsConfigPatchDeployment#day_offset}
   */
   readonly dayOffset?: number;
   /**
   * Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#week_ordinal OsConfigPatchDeployment#week_ordinal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#week_ordinal OsConfigPatchDeployment#week_ordinal}
   */
   readonly weekOrdinal: number;
 }
@@ -3485,13 +3485,13 @@ export interface OsConfigPatchDeploymentRecurringScheduleMonthly {
   * Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
   * will not run in February, April, June, etc.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#month_day OsConfigPatchDeployment#month_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#month_day OsConfigPatchDeployment#month_day}
   */
   readonly monthDay?: number;
   /**
   * week_day_of_month block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#week_day_of_month OsConfigPatchDeployment#week_day_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#week_day_of_month OsConfigPatchDeployment#week_day_of_month}
   */
   readonly weekDayOfMonth?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth;
 }
@@ -3607,25 +3607,25 @@ export interface OsConfigPatchDeploymentRecurringScheduleTimeOfDay {
   * Hours of day in 24 hour format. Should be from 0 to 23.
   * An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#hours OsConfigPatchDeployment#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#hours OsConfigPatchDeployment#hours}
   */
   readonly hours?: number;
   /**
   * Minutes of hour of day. Must be from 0 to 59.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#minutes OsConfigPatchDeployment#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#minutes OsConfigPatchDeployment#minutes}
   */
   readonly minutes?: number;
   /**
   * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#nanos OsConfigPatchDeployment#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#nanos OsConfigPatchDeployment#nanos}
   */
   readonly nanos?: number;
   /**
   * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#seconds OsConfigPatchDeployment#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#seconds OsConfigPatchDeployment#seconds}
   */
   readonly seconds?: number;
 }
@@ -3798,7 +3798,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleTimeZone {
   /**
   * IANA Time Zone Database time zone, e.g. "America/New_York".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#id OsConfigPatchDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#id OsConfigPatchDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -3807,7 +3807,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleTimeZone {
   /**
   * IANA Time Zone Database version number, e.g. "2019a".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#version OsConfigPatchDeployment#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#version OsConfigPatchDeployment#version}
   */
   readonly version?: string;
 }
@@ -3919,7 +3919,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleWeekly {
   /**
   * IANA Time Zone Database time zone, e.g. "America/New_York". Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#day_of_week OsConfigPatchDeployment#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#day_of_week OsConfigPatchDeployment#day_of_week}
   */
   readonly dayOfWeek: string;
 }
@@ -4003,38 +4003,38 @@ export interface OsConfigPatchDeploymentRecurringSchedule {
   * The end time at which a recurring patch deployment schedule is no longer active.
   * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#end_time OsConfigPatchDeployment#end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#end_time OsConfigPatchDeployment#end_time}
   */
   readonly endTime?: string;
   /**
   * The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
   * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#start_time OsConfigPatchDeployment#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#start_time OsConfigPatchDeployment#start_time}
   */
   readonly startTime?: string;
   /**
   * monthly block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#monthly OsConfigPatchDeployment#monthly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#monthly OsConfigPatchDeployment#monthly}
   */
   readonly monthly?: OsConfigPatchDeploymentRecurringScheduleMonthly;
   /**
   * time_of_day block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#time_of_day OsConfigPatchDeployment#time_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#time_of_day OsConfigPatchDeployment#time_of_day}
   */
   readonly timeOfDay: OsConfigPatchDeploymentRecurringScheduleTimeOfDay;
   /**
   * time_zone block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#time_zone OsConfigPatchDeployment#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#time_zone OsConfigPatchDeployment#time_zone}
   */
   readonly timeZone: OsConfigPatchDeploymentRecurringScheduleTimeZone;
   /**
   * weekly block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#weekly OsConfigPatchDeployment#weekly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#weekly OsConfigPatchDeployment#weekly}
   */
   readonly weekly?: OsConfigPatchDeploymentRecurringScheduleWeekly;
 }
@@ -4269,13 +4269,13 @@ export interface OsConfigPatchDeploymentRolloutDisruptionBudget {
   /**
   * Specifies a fixed value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#fixed OsConfigPatchDeployment#fixed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#fixed OsConfigPatchDeployment#fixed}
   */
   readonly fixed?: number;
   /**
   * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#percentage OsConfigPatchDeployment#percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#percentage OsConfigPatchDeployment#percentage}
   */
   readonly percentage?: number;
 }
@@ -4390,13 +4390,13 @@ export interface OsConfigPatchDeploymentRollout {
   /**
   * Mode of the patch rollout. Possible values: ["ZONE_BY_ZONE", "CONCURRENT_ZONES"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#mode OsConfigPatchDeployment#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#mode OsConfigPatchDeployment#mode}
   */
   readonly mode: string;
   /**
   * disruption_budget block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#disruption_budget OsConfigPatchDeployment#disruption_budget}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#disruption_budget OsConfigPatchDeployment#disruption_budget}
   */
   readonly disruptionBudget: OsConfigPatchDeploymentRolloutDisruptionBudget;
 }
@@ -4503,11 +4503,11 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
 }
 export interface OsConfigPatchDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#create OsConfigPatchDeployment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#create OsConfigPatchDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#delete OsConfigPatchDeployment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#delete OsConfigPatchDeployment#delete}
   */
   readonly delete?: string;
 }
@@ -4630,7 +4630,7 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment google_os_config_patch_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment google_os_config_patch_deployment}
 */
 export class OsConfigPatchDeployment extends cdktf.TerraformResource {
 
@@ -4646,7 +4646,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a OsConfigPatchDeployment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the OsConfigPatchDeployment to import
-  * @param importFromId The id of the existing OsConfigPatchDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing OsConfigPatchDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the OsConfigPatchDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -4658,7 +4658,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.0/docs/resources/os_config_patch_deployment google_os_config_patch_deployment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/os_config_patch_deployment google_os_config_patch_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4669,7 +4669,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'google_os_config_patch_deployment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.14.0',
+        providerVersion: '6.14.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
