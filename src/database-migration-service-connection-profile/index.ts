@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/database_migration_service_connection_profile
 // generated from terraform resource schema
 
