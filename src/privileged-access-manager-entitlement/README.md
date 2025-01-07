@@ -1,3 +1,3 @@
 # `google_privileged_access_manager_entitlement`
 
-Refer to the Terraform Registry for docs: [`google_privileged_access_manager_entitlement`](https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/privileged_access_manager_entitlement).
+Refer to the Terraform Registry for docs: [`google_privileged_access_manager_entitlement`](https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/privileged_access_manager_entitlement).

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries
+// https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +11,11 @@ export interface ApigeeEnvironmentKeyvaluemapsEntriesConfig extends cdktf.Terraf
   * The Apigee environment keyvalumaps Id associated with the Apigee environment,
   * in the format 'organizations/{{org_name}}/environments/{{env_name}}/keyvaluemaps/{{keyvaluemap_name}}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries#env_keyvaluemap_id ApigeeEnvironmentKeyvaluemapsEntries#env_keyvaluemap_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries#env_keyvaluemap_id ApigeeEnvironmentKeyvaluemapsEntries#env_keyvaluemap_id}
   */
   readonly envKeyvaluemapId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries#id ApigeeEnvironmentKeyvaluemapsEntries#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,29 +24,29 @@ export interface ApigeeEnvironmentKeyvaluemapsEntriesConfig extends cdktf.Terraf
   /**
   * Required. Resource URI that can be used to identify the scope of the key value map entries.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries#name ApigeeEnvironmentKeyvaluemapsEntries#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries#name ApigeeEnvironmentKeyvaluemapsEntries#name}
   */
   readonly name: string;
   /**
   * Required. Data or payload that is being retrieved and associated with the unique key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries#value ApigeeEnvironmentKeyvaluemapsEntries#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries#value ApigeeEnvironmentKeyvaluemapsEntries#value}
   */
   readonly value: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries#timeouts ApigeeEnvironmentKeyvaluemapsEntries#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries#timeouts ApigeeEnvironmentKeyvaluemapsEntries#timeouts}
   */
   readonly timeouts?: ApigeeEnvironmentKeyvaluemapsEntriesTimeouts;
 }
 export interface ApigeeEnvironmentKeyvaluemapsEntriesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries#create ApigeeEnvironmentKeyvaluemapsEntries#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries#create ApigeeEnvironmentKeyvaluemapsEntries#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries#delete ApigeeEnvironmentKeyvaluemapsEntries#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries#delete ApigeeEnvironmentKeyvaluemapsEntries#delete}
   */
   readonly delete?: string;
 }
@@ -174,7 +169,7 @@ export class ApigeeEnvironmentKeyvaluemapsEntriesTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries google_apigee_environment_keyvaluemaps_entries}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries google_apigee_environment_keyvaluemaps_entries}
 */
 export class ApigeeEnvironmentKeyvaluemapsEntries extends cdktf.TerraformResource {
 
@@ -190,7 +185,7 @@ export class ApigeeEnvironmentKeyvaluemapsEntries extends cdktf.TerraformResourc
   * Generates CDKTF code for importing a ApigeeEnvironmentKeyvaluemapsEntries resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeEnvironmentKeyvaluemapsEntries to import
-  * @param importFromId The id of the existing ApigeeEnvironmentKeyvaluemapsEntries that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeEnvironmentKeyvaluemapsEntries that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeEnvironmentKeyvaluemapsEntries to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -202,7 +197,7 @@ export class ApigeeEnvironmentKeyvaluemapsEntries extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/apigee_environment_keyvaluemaps_entries google_apigee_environment_keyvaluemaps_entries} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/apigee_environment_keyvaluemaps_entries google_apigee_environment_keyvaluemaps_entries} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -213,7 +208,7 @@ export class ApigeeEnvironmentKeyvaluemapsEntries extends cdktf.TerraformResourc
       terraformResourceType: 'google_apigee_environment_keyvaluemaps_entries',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.14.1',
+        providerVersion: '6.15.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

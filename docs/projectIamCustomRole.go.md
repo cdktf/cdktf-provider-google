@@ -4,12 +4,12 @@
 
 ### ProjectIamCustomRole <a name="ProjectIamCustomRole" id="@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRole"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role google_project_iam_custom_role}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role google_project_iam_custom_role}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRole.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/projectiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiamcustomrole"
 
 projectiamcustomrole.NewProjectIamCustomRole(scope Construct, id *string, config ProjectIamCustomRoleConfig) ProjectIamCustomRole
 ```
@@ -406,7 +406,7 @@ func ResetStage()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRole.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/projectiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiamcustomrole"
 
 projectiamcustomrole.ProjectIamCustomRole_IsConstruct(x interface{}) *bool
 ```
@@ -438,7 +438,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRole.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/projectiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiamcustomrole"
 
 projectiamcustomrole.ProjectIamCustomRole_IsTerraformElement(x interface{}) *bool
 ```
@@ -452,7 +452,7 @@ projectiamcustomrole.ProjectIamCustomRole_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRole.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/projectiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiamcustomrole"
 
 projectiamcustomrole.ProjectIamCustomRole_IsTerraformResource(x interface{}) *bool
 ```
@@ -466,7 +466,7 @@ projectiamcustomrole.ProjectIamCustomRole_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRole.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/projectiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiamcustomrole"
 
 projectiamcustomrole.ProjectIamCustomRole_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -495,7 +495,7 @@ The construct id used in the generated config for the ProjectIamCustomRole to im
 
 The id of the existing ProjectIamCustomRole that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -871,7 +871,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRoleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/projectiamcustomrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiamcustomrole"
 
 &projectiamcustomrole.ProjectIamCustomRoleConfig {
 	Connection: interface{},
@@ -906,7 +906,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/projectiamcustomrol
 | <code><a href="#@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRoleConfig.property.roleId">RoleId</a></code> | <code>*string</code> | The camel case role id to use for this role. Cannot contain - characters. |
 | <code><a href="#@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRoleConfig.property.title">Title</a></code> | <code>*string</code> | A human-readable title for the role. |
 | <code><a href="#@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRoleConfig.property.description">Description</a></code> | <code>*string</code> | A human-readable description for the role. |
-| <code><a href="#@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRoleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#id ProjectIamCustomRole#id}. |
+| <code><a href="#@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRoleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#id ProjectIamCustomRole#id}. |
 | <code><a href="#@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRoleConfig.property.project">Project</a></code> | <code>*string</code> | The project that the service account will be created in. Defaults to the provider project configuration. |
 | <code><a href="#@cdktf/provider-google.projectIamCustomRole.ProjectIamCustomRoleConfig.property.stage">Stage</a></code> | <code>*string</code> | The current launch stage of the role. Defaults to GA. |
 
@@ -994,7 +994,7 @@ The names of the permissions this role grants when bound in an IAM policy.
 
 At least one permission must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#permissions ProjectIamCustomRole#permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#permissions ProjectIamCustomRole#permissions}
 
 ---
 
@@ -1008,7 +1008,7 @@ RoleId *string
 
 The camel case role id to use for this role. Cannot contain - characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#role_id ProjectIamCustomRole#role_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#role_id ProjectIamCustomRole#role_id}
 
 ---
 
@@ -1022,7 +1022,7 @@ Title *string
 
 A human-readable title for the role.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#title ProjectIamCustomRole#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#title ProjectIamCustomRole#title}
 
 ---
 
@@ -1036,7 +1036,7 @@ Description *string
 
 A human-readable description for the role.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#description ProjectIamCustomRole#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#description ProjectIamCustomRole#description}
 
 ---
 
@@ -1048,7 +1048,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#id ProjectIamCustomRole#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#id ProjectIamCustomRole#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1065,7 +1065,7 @@ Project *string
 
 The project that the service account will be created in. Defaults to the provider project configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#project ProjectIamCustomRole#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#project ProjectIamCustomRole#project}
 
 ---
 
@@ -1079,7 +1079,7 @@ Stage *string
 
 The current launch stage of the role. Defaults to GA.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/project_iam_custom_role#stage ProjectIamCustomRole#stage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/project_iam_custom_role#stage ProjectIamCustomRole#stage}
 
 ---
 
