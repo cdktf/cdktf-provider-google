@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettypeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploycustomtargettypeiambinding"
 
 clouddeploycustomtargettypeiambinding.NewClouddeployCustomTargetTypeIamBinding(scope Construct, id *string, config ClouddeployCustomTargetTypeIamBindingConfig) ClouddeployCustomTargetTypeIamBinding
 ```
@@ -419,7 +419,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettypeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploycustomtargettypeiambinding"
 
 clouddeploycustomtargettypeiambinding.ClouddeployCustomTargetTypeIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettypeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploycustomtargettypeiambinding"
 
 clouddeploycustomtargettypeiambinding.ClouddeployCustomTargetTypeIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ clouddeploycustomtargettypeiambinding.ClouddeployCustomTargetTypeIamBinding_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettypeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploycustomtargettypeiambinding"
 
 clouddeploycustomtargettypeiambinding.ClouddeployCustomTargetTypeIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ clouddeploycustomtargettypeiambinding.ClouddeployCustomTargetTypeIamBinding_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettypeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploycustomtargettypeiambinding"
 
 clouddeploycustomtargettypeiambinding.ClouddeployCustomTargetTypeIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettypeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploycustomtargettypeiambinding"
 
 &clouddeploycustomtargettypeiambinding.ClouddeployCustomTargetTypeIamBindingCondition {
 	Expression: *string,
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettypeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploycustomtargettypeiambinding"
 
 &clouddeploycustomtargettypeiambinding.ClouddeployCustomTargetTypeIamBindingConfig {
 	Connection: interface{},
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtarget
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployCustomTargetTypeIamBinding.ClouddeployCustomTargetTypeIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploycustomtargettypeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploycustomtargettypeiambinding"
 
 clouddeploycustomtargettypeiambinding.NewClouddeployCustomTargetTypeIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployCustomTargetTypeIamBindingConditionOutputReference
 ```
