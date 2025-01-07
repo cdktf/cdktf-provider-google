@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster
+// https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -24,20 +24,20 @@ export interface ContainerAttachedClusterConfig extends cdktf.TerraformMetaArgum
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#annotations ContainerAttachedCluster#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#annotations ContainerAttachedCluster#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Policy to determine what flags to send on delete. Possible values: DELETE, DELETE_IGNORE_ERRORS
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#deletion_policy ContainerAttachedCluster#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#deletion_policy ContainerAttachedCluster#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * A human readable description of this attached cluster. Cannot be longer
   * than 255 UTF-8 encoded bytes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#description ContainerAttachedCluster#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#description ContainerAttachedCluster#description}
   */
   readonly description?: string;
   /**
@@ -45,11 +45,11 @@ export interface ContainerAttachedClusterConfig extends cdktf.TerraformMetaArgum
   * "eks", "aks", "generic". The generic distribution provides the ability to register
   * or migrate any CNCF conformant cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#distribution ContainerAttachedCluster#distribution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#distribution ContainerAttachedCluster#distribution}
   */
   readonly distribution: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#id ContainerAttachedCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#id ContainerAttachedCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -58,77 +58,77 @@ export interface ContainerAttachedClusterConfig extends cdktf.TerraformMetaArgum
   /**
   * The location for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#location ContainerAttachedCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#location ContainerAttachedCluster#location}
   */
   readonly location: string;
   /**
   * The name of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
   */
   readonly name: string;
   /**
   * The platform version for the cluster (e.g. '1.23.0-gke.1').
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#platform_version ContainerAttachedCluster#platform_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#platform_version ContainerAttachedCluster#platform_version}
   */
   readonly platformVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}
   */
   readonly project?: string;
   /**
   * authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#authorization ContainerAttachedCluster#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#authorization ContainerAttachedCluster#authorization}
   */
   readonly authorization?: ContainerAttachedClusterAuthorization;
   /**
   * binary_authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#binary_authorization ContainerAttachedCluster#binary_authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#binary_authorization ContainerAttachedCluster#binary_authorization}
   */
   readonly binaryAuthorization?: ContainerAttachedClusterBinaryAuthorization;
   /**
   * fleet block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#fleet ContainerAttachedCluster#fleet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#fleet ContainerAttachedCluster#fleet}
   */
   readonly fleet: ContainerAttachedClusterFleet;
   /**
   * logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#logging_config ContainerAttachedCluster#logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#logging_config ContainerAttachedCluster#logging_config}
   */
   readonly loggingConfig?: ContainerAttachedClusterLoggingConfig;
   /**
   * monitoring_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#monitoring_config ContainerAttachedCluster#monitoring_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#monitoring_config ContainerAttachedCluster#monitoring_config}
   */
   readonly monitoringConfig?: ContainerAttachedClusterMonitoringConfig;
   /**
   * oidc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#oidc_config ContainerAttachedCluster#oidc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#oidc_config ContainerAttachedCluster#oidc_config}
   */
   readonly oidcConfig: ContainerAttachedClusterOidcConfig;
   /**
   * proxy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#proxy_config ContainerAttachedCluster#proxy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#proxy_config ContainerAttachedCluster#proxy_config}
   */
   readonly proxyConfig?: ContainerAttachedClusterProxyConfig;
   /**
   * security_posture_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#security_posture_config ContainerAttachedCluster#security_posture_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#security_posture_config ContainerAttachedCluster#security_posture_config}
   */
   readonly securityPostureConfig?: ContainerAttachedClusterSecurityPostureConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#timeouts ContainerAttachedCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#timeouts ContainerAttachedCluster#timeouts}
   */
   readonly timeouts?: ContainerAttachedClusterTimeouts;
 }
@@ -301,7 +301,7 @@ export interface ContainerAttachedClusterAuthorization {
   * For more info on RBAC, see
   * https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#admin_groups ContainerAttachedCluster#admin_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#admin_groups ContainerAttachedCluster#admin_groups}
   */
   readonly adminGroups?: string[];
   /**
@@ -312,7 +312,7 @@ export interface ContainerAttachedClusterAuthorization {
   * For more info on RBAC, see
   * https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#admin_users ContainerAttachedCluster#admin_users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#admin_users ContainerAttachedCluster#admin_users}
   */
   readonly adminUsers?: string[];
 }
@@ -427,7 +427,7 @@ export interface ContainerAttachedClusterBinaryAuthorization {
   /**
   * Configure Binary Authorization evaluation mode. Possible values: ["DISABLED", "PROJECT_SINGLETON_POLICY_ENFORCE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#evaluation_mode ContainerAttachedCluster#evaluation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#evaluation_mode ContainerAttachedCluster#evaluation_mode}
   */
   readonly evaluationMode?: string;
 }
@@ -513,7 +513,7 @@ export interface ContainerAttachedClusterFleet {
   /**
   * The number of the Fleet host project where this cluster will be registered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}
   */
   readonly project: string;
 }
@@ -601,7 +601,7 @@ export interface ContainerAttachedClusterLoggingConfigComponentConfig {
   /**
   * The components to be enabled. Possible values: ["SYSTEM_COMPONENTS", "WORKLOADS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#enable_components ContainerAttachedCluster#enable_components}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#enable_components ContainerAttachedCluster#enable_components}
   */
   readonly enableComponents?: string[];
 }
@@ -687,7 +687,7 @@ export interface ContainerAttachedClusterLoggingConfig {
   /**
   * component_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#component_config ContainerAttachedCluster#component_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#component_config ContainerAttachedCluster#component_config}
   */
   readonly componentConfig?: ContainerAttachedClusterLoggingConfigComponentConfig;
 }
@@ -773,7 +773,7 @@ export interface ContainerAttachedClusterMonitoringConfigManagedPrometheusConfig
   /**
   * Enable Managed Collection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#enabled ContainerAttachedCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#enabled ContainerAttachedCluster#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
 }
@@ -859,7 +859,7 @@ export interface ContainerAttachedClusterMonitoringConfig {
   /**
   * managed_prometheus_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#managed_prometheus_config ContainerAttachedCluster#managed_prometheus_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#managed_prometheus_config ContainerAttachedCluster#managed_prometheus_config}
   */
   readonly managedPrometheusConfig?: ContainerAttachedClusterMonitoringConfigManagedPrometheusConfig;
 }
@@ -945,13 +945,13 @@ export interface ContainerAttachedClusterOidcConfig {
   /**
   * A JSON Web Token (JWT) issuer URI. 'issuer' must start with 'https://'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#issuer_url ContainerAttachedCluster#issuer_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#issuer_url ContainerAttachedCluster#issuer_url}
   */
   readonly issuerUrl: string;
   /**
   * OIDC verification keys in JWKS format (RFC 7517).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#jwks ContainerAttachedCluster#jwks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#jwks ContainerAttachedCluster#jwks}
   */
   readonly jwks?: string;
 }
@@ -1063,13 +1063,13 @@ export interface ContainerAttachedClusterProxyConfigKubernetesSecret {
   /**
   * Name of the kubernetes secret containing the proxy config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
   */
   readonly name: string;
   /**
   * Namespace of the kubernetes secret containing the proxy config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#namespace ContainerAttachedCluster#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#namespace ContainerAttachedCluster#namespace}
   */
   readonly namespace: string;
 }
@@ -1178,7 +1178,7 @@ export interface ContainerAttachedClusterProxyConfig {
   /**
   * kubernetes_secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#kubernetes_secret ContainerAttachedCluster#kubernetes_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#kubernetes_secret ContainerAttachedCluster#kubernetes_secret}
   */
   readonly kubernetesSecret?: ContainerAttachedClusterProxyConfigKubernetesSecret;
 }
@@ -1264,7 +1264,7 @@ export interface ContainerAttachedClusterSecurityPostureConfig {
   /**
   * Sets the mode of the Kubernetes security posture API's workload vulnerability scanning. Possible values: ["VULNERABILITY_DISABLED", "VULNERABILITY_ENTERPRISE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#vulnerability_mode ContainerAttachedCluster#vulnerability_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#vulnerability_mode ContainerAttachedCluster#vulnerability_mode}
   */
   readonly vulnerabilityMode: string;
 }
@@ -1345,15 +1345,15 @@ export class ContainerAttachedClusterSecurityPostureConfigOutputReference extend
 }
 export interface ContainerAttachedClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#create ContainerAttachedCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#create ContainerAttachedCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#delete ContainerAttachedCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#delete ContainerAttachedCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#update ContainerAttachedCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#update ContainerAttachedCluster#update}
   */
   readonly update?: string;
 }
@@ -1505,7 +1505,7 @@ export class ContainerAttachedClusterTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster google_container_attached_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster google_container_attached_cluster}
 */
 export class ContainerAttachedCluster extends cdktf.TerraformResource {
 
@@ -1521,7 +1521,7 @@ export class ContainerAttachedCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerAttachedCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerAttachedCluster to import
-  * @param importFromId The id of the existing ContainerAttachedCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerAttachedCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerAttachedCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1533,7 +1533,7 @@ export class ContainerAttachedCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/container_attached_cluster google_container_attached_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/container_attached_cluster google_container_attached_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1544,7 +1544,7 @@ export class ContainerAttachedCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_attached_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.14.1',
+        providerVersion: '6.15.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

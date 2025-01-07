@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,13 +15,23 @@ export interface ParallelstoreInstanceConfig extends cdktf.TerraformMetaArgument
   /**
   * Required. Immutable. Storage capacity of Parallelstore instance in Gibibytes (GiB).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#capacity_gib ParallelstoreInstance#capacity_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#capacity_gib ParallelstoreInstance#capacity_gib}
   */
   readonly capacityGib: string;
   /**
+  * Parallelstore Instance deployment type.
+  *   Possible values:
+  *   DEPLOYMENT_TYPE_UNSPECIFIED
+  *   SCRATCH
+  *   PERSISTENT
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#deployment_type ParallelstoreInstance#deployment_type}
+  */
+  readonly deploymentType?: string;
+  /**
   * The description of the instance. 2048 characters or less.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#description ParallelstoreInstance#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#description ParallelstoreInstance#description}
   */
   readonly description?: string;
   /**
@@ -34,7 +44,7 @@ export interface ParallelstoreInstanceConfig extends cdktf.TerraformMetaArgument
   *   DIRECTORY_STRIPE_LEVEL_BALANCED
   *   DIRECTORY_STRIPE_LEVEL_MAX
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#directory_stripe_level ParallelstoreInstance#directory_stripe_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#directory_stripe_level ParallelstoreInstance#directory_stripe_level}
   */
   readonly directoryStripeLevel?: string;
   /**
@@ -47,11 +57,11 @@ export interface ParallelstoreInstanceConfig extends cdktf.TerraformMetaArgument
   *   FILE_STRIPE_LEVEL_BALANCED
   *   FILE_STRIPE_LEVEL_MAX
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#file_stripe_level ParallelstoreInstance#file_stripe_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#file_stripe_level ParallelstoreInstance#file_stripe_level}
   */
   readonly fileStripeLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#id ParallelstoreInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#id ParallelstoreInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -65,7 +75,7 @@ export interface ParallelstoreInstanceConfig extends cdktf.TerraformMetaArgument
   *   * Must end with a number or a letter.
   *   * Must be unique within the customer project/ location
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#instance_id ParallelstoreInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#instance_id ParallelstoreInstance#instance_id}
   */
   readonly instanceId: string;
   /**
@@ -95,24 +105,24 @@ export interface ParallelstoreInstanceConfig extends cdktf.TerraformMetaArgument
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#labels ParallelstoreInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#labels ParallelstoreInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Part of 'parent'. See documentation of 'projectsId'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#location ParallelstoreInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#location ParallelstoreInstance#location}
   */
   readonly location: string;
   /**
   * Immutable. The name of the Google Compute Engine [VPC network](https://cloud.google.com/vpc/docs/vpc)
   * to which the instance is connected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#network ParallelstoreInstance#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#network ParallelstoreInstance#network}
   */
   readonly network?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#project ParallelstoreInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#project ParallelstoreInstance#project}
   */
   readonly project?: string;
   /**
@@ -121,27 +131,27 @@ export interface ParallelstoreInstanceConfig extends cdktf.TerraformMetaArgument
   * associated with IP range 10.0.0.0/29. If no range id is provided all ranges will
   * be considered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#reserved_ip_range ParallelstoreInstance#reserved_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#reserved_ip_range ParallelstoreInstance#reserved_ip_range}
   */
   readonly reservedIpRange?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#timeouts ParallelstoreInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#timeouts ParallelstoreInstance#timeouts}
   */
   readonly timeouts?: ParallelstoreInstanceTimeouts;
 }
 export interface ParallelstoreInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#create ParallelstoreInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#create ParallelstoreInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#delete ParallelstoreInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#delete ParallelstoreInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#update ParallelstoreInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#update ParallelstoreInstance#update}
   */
   readonly update?: string;
 }
@@ -293,7 +303,7 @@ export class ParallelstoreInstanceTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance google_parallelstore_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance google_parallelstore_instance}
 */
 export class ParallelstoreInstance extends cdktf.TerraformResource {
 
@@ -309,7 +319,7 @@ export class ParallelstoreInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ParallelstoreInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ParallelstoreInstance to import
-  * @param importFromId The id of the existing ParallelstoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ParallelstoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ParallelstoreInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -321,7 +331,7 @@ export class ParallelstoreInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.14.1/docs/resources/parallelstore_instance google_parallelstore_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/parallelstore_instance google_parallelstore_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -332,7 +342,7 @@ export class ParallelstoreInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_parallelstore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.14.1',
+        providerVersion: '6.15.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -344,6 +354,7 @@ export class ParallelstoreInstance extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._capacityGib = config.capacityGib;
+    this._deploymentType = config.deploymentType;
     this._description = config.description;
     this._directoryStripeLevel = config.directoryStripeLevel;
     this._fileStripeLevel = config.fileStripeLevel;
@@ -387,6 +398,22 @@ export class ParallelstoreInstance extends cdktf.TerraformResource {
   // daos_version - computed: true, optional: false, required: false
   public get daosVersion() {
     return this.getStringAttribute('daos_version');
+  }
+
+  // deployment_type - computed: false, optional: true, required: false
+  private _deploymentType?: string; 
+  public get deploymentType() {
+    return this.getStringAttribute('deployment_type');
+  }
+  public set deploymentType(value: string) {
+    this._deploymentType = value;
+  }
+  public resetDeploymentType() {
+    this._deploymentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentTypeInput() {
+    return this._deploymentType;
   }
 
   // description - computed: false, optional: true, required: false
@@ -598,6 +625,7 @@ export class ParallelstoreInstance extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       capacity_gib: cdktf.stringToTerraform(this._capacityGib),
+      deployment_type: cdktf.stringToTerraform(this._deploymentType),
       description: cdktf.stringToTerraform(this._description),
       directory_stripe_level: cdktf.stringToTerraform(this._directoryStripeLevel),
       file_stripe_level: cdktf.stringToTerraform(this._fileStripeLevel),
@@ -616,6 +644,12 @@ export class ParallelstoreInstance extends cdktf.TerraformResource {
     const attrs = {
       capacity_gib: {
         value: cdktf.stringToHclTerraform(this._capacityGib),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deployment_type: {
+        value: cdktf.stringToHclTerraform(this._deploymentType),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
