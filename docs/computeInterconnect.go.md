@@ -4,12 +4,12 @@
 
 ### ComputeInterconnect <a name="ComputeInterconnect" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnect"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect google_compute_interconnect}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect google_compute_interconnect}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnect(scope Construct, id *string, config ComputeInterconnectConfig) ComputeInterconnect
 ```
@@ -495,7 +495,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnect.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.ComputeInterconnect_IsConstruct(x interface{}) *bool
 ```
@@ -527,7 +527,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnect.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.ComputeInterconnect_IsTerraformElement(x interface{}) *bool
 ```
@@ -541,7 +541,7 @@ computeinterconnect.ComputeInterconnect_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnect.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.ComputeInterconnect_IsTerraformResource(x interface{}) *bool
 ```
@@ -555,7 +555,7 @@ computeinterconnect.ComputeInterconnect_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnect.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.ComputeInterconnect_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -584,7 +584,7 @@ The construct id used in the generated config for the ComputeInterconnect to imp
 
 The id of the existing ComputeInterconnect that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1323,7 +1323,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectCircuitInfos.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 &computeinterconnect.ComputeInterconnectCircuitInfos {
 
@@ -1336,7 +1336,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 &computeinterconnect.ComputeInterconnectConfig {
 	Connection: interface{},
@@ -1356,13 +1356,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect
 	Id: *string,
 	Labels: *map[string]*string,
 	Location: *string,
-	Macsec: github.com/cdktf/cdktf-provider-google-go/google/v14.computeInterconnect.ComputeInterconnectMacsec,
+	Macsec: github.com/cdktf/cdktf-provider-google-go/google.computeInterconnect.ComputeInterconnectMacsec,
 	MacsecEnabled: interface{},
 	NocContactEmail: *string,
 	Project: *string,
 	RemoteLocation: *string,
 	RequestedFeatures: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeInterconnect.ComputeInterconnectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeInterconnect.ComputeInterconnectTimeouts,
 }
 ```
 
@@ -1384,13 +1384,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.adminEnabled">AdminEnabled</a></code> | <code>interface{}</code> | Administrative status of the interconnect. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.customerName">CustomerName</a></code> | <code>*string</code> | Customer name, to put in the Letter of Authorization as the party authorized to request a crossconnect. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. Provide this property when you create the resource. |
-| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#id ComputeInterconnect#id}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#id ComputeInterconnect#id}. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels for this resource. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.location">Location</a></code> | <code>*string</code> | URL of the InterconnectLocation object that represents where this connection is to be provisioned. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.macsec">Macsec</a></code> | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectMacsec">ComputeInterconnectMacsec</a></code> | macsec block. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.macsecEnabled">MacsecEnabled</a></code> | <code>interface{}</code> | Enable or disable MACsec on this Interconnect connection. MACsec enablement fails if the MACsec object is not specified. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.nocContactEmail">NocContactEmail</a></code> | <code>*string</code> | Email address to contact the customer NOC for operations and maintenance notifications regarding this Interconnect. |
-| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#project ComputeInterconnect#project}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#project ComputeInterconnect#project}. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.remoteLocation">RemoteLocation</a></code> | <code>*string</code> | Indicates that this is a Cross-Cloud Interconnect. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.requestedFeatures">RequestedFeatures</a></code> | <code>*[]*string</code> | interconnects.list of features requested for this Interconnect connection. Options: IF_MACSEC ( If specified then the connection is created on MACsec capable hardware ports. If not specified, the default value is false, which allocates non-MACsec capable ports first if available). Note that MACSEC is still technically allowed for compatibility reasons, but it does not work with the API, and will be removed in an upcoming major version. Possible values: ["MACSEC", "IF_MACSEC"]. |
 | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeouts">ComputeInterconnectTimeouts</a></code> | timeouts block. |
@@ -1483,7 +1483,7 @@ Can take one of the following values:
 * PARTNER: A partner-managed interconnection shared between customers though a partner.
 * DEDICATED: A dedicated physical interconnection with the customer. Possible values: ["DEDICATED", "PARTNER", "IT_PRIVATE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#interconnect_type ComputeInterconnect#interconnect_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#interconnect_type ComputeInterconnect#interconnect_type}
 
 ---
 
@@ -1503,7 +1503,7 @@ bundle, not the speed of the entire bundle. Can take one of the following values
 * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics.
 * LINK_TYPE_ETHERNET_100G_LR: A 100G Ethernet with LR optics. Possible values: ["LINK_TYPE_ETHERNET_10G_LR", "LINK_TYPE_ETHERNET_100G_LR"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#link_type ComputeInterconnect#link_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#link_type ComputeInterconnect#link_type}
 
 ---
 
@@ -1523,7 +1523,7 @@ long and match the regular expression '[a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?' which
 character must be a lowercase letter, and all following characters must be a dash,
 lowercase letter, or digit, except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#name ComputeInterconnect#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#name ComputeInterconnect#name}
 
 ---
 
@@ -1537,7 +1537,7 @@ RequestedLinkCount *f64
 
 Target number of physical links in the link bundle, as requested by the customer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#requested_link_count ComputeInterconnect#requested_link_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#requested_link_count ComputeInterconnect#requested_link_count}
 
 ---
 
@@ -1555,7 +1555,7 @@ When this is set to true, the Interconnect is
 functional and can carry traffic. When set to false, no packets can be carried over the
 interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#admin_enabled ComputeInterconnect#admin_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#admin_enabled ComputeInterconnect#admin_enabled}
 
 ---
 
@@ -1572,7 +1572,7 @@ Customer name, to put in the Letter of Authorization as the party authorized to 
 This field is required for Dedicated and Partner Interconnect, should not be specified
 for cross-cloud interconnect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#customer_name ComputeInterconnect#customer_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#customer_name ComputeInterconnect#customer_name}
 
 ---
 
@@ -1586,7 +1586,7 @@ Description *string
 
 An optional description of this resource. Provide this property when you create the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#description ComputeInterconnect#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#description ComputeInterconnect#description}
 
 ---
 
@@ -1598,7 +1598,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#id ComputeInterconnect#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#id ComputeInterconnect#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1621,7 +1621,7 @@ method. Each label key/value pair must comply with RFC1035. Label values may be 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#labels ComputeInterconnect#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#labels ComputeInterconnect#labels}
 
 ---
 
@@ -1637,7 +1637,7 @@ URL of the InterconnectLocation object that represents where this connection is 
 
 Specifies the location inside Google's Networks, should not be passed in case of cross-cloud interconnect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#location ComputeInterconnect#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#location ComputeInterconnect#location}
 
 ---
 
@@ -1651,7 +1651,7 @@ Macsec ComputeInterconnectMacsec
 
 macsec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#macsec ComputeInterconnect#macsec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#macsec ComputeInterconnect#macsec}
 
 ---
 
@@ -1665,7 +1665,7 @@ MacsecEnabled interface{}
 
 Enable or disable MACsec on this Interconnect connection. MACsec enablement fails if the MACsec object is not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#macsec_enabled ComputeInterconnect#macsec_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#macsec_enabled ComputeInterconnect#macsec_enabled}
 
 ---
 
@@ -1684,7 +1684,7 @@ all other forms described, such as Cloud Monitoring logs alerting and Cloud Noti
 This field is required for users who sign up for Cloud Interconnect using workforce identity
 federation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#noc_contact_email ComputeInterconnect#noc_contact_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#noc_contact_email ComputeInterconnect#noc_contact_email}
 
 ---
 
@@ -1696,7 +1696,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#project ComputeInterconnect#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#project ComputeInterconnect#project}.
 
 ---
 
@@ -1713,7 +1713,7 @@ Indicates that this is a Cross-Cloud Interconnect.
 This field specifies the location outside
 of Google's network that the interconnect is connected to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#remote_location ComputeInterconnect#remote_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#remote_location ComputeInterconnect#remote_location}
 
 ---
 
@@ -1727,7 +1727,7 @@ RequestedFeatures *[]*string
 
 interconnects.list of features requested for this Interconnect connection. Options: IF_MACSEC ( If specified then the connection is created on MACsec capable hardware ports. If not specified, the default value is false, which allocates non-MACsec capable ports first if available). Note that MACSEC is still technically allowed for compatibility reasons, but it does not work with the API, and will be removed in an upcoming major version. Possible values: ["MACSEC", "IF_MACSEC"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#requested_features ComputeInterconnect#requested_features}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#requested_features ComputeInterconnect#requested_features}
 
 ---
 
@@ -1741,7 +1741,7 @@ Timeouts ComputeInterconnectTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#timeouts ComputeInterconnect#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#timeouts ComputeInterconnect#timeouts}
 
 ---
 
@@ -1750,7 +1750,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectExpectedOutages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 &computeinterconnect.ComputeInterconnectExpectedOutages {
 
@@ -1763,7 +1763,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectMacsec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 &computeinterconnect.ComputeInterconnectMacsec {
 	PreSharedKeys: interface{},
@@ -1790,7 +1790,7 @@ PreSharedKeys interface{}
 
 pre_shared_keys block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#pre_shared_keys ComputeInterconnect#pre_shared_keys}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#pre_shared_keys ComputeInterconnect#pre_shared_keys}
 
 ---
 
@@ -1808,7 +1808,7 @@ By default, the Interconnect
 connection is configured with a must-secure security policy that drops all traffic
 if the MKA session cannot be established with your router.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#fail_open ComputeInterconnect#fail_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#fail_open ComputeInterconnect#fail_open}
 
 ---
 
@@ -1817,7 +1817,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectMacsecPreSharedKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 &computeinterconnect.ComputeInterconnectMacsecPreSharedKeys {
 	Name: *string,
@@ -1852,7 +1852,7 @@ the regular expression '[a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?' which means the firs
 must be a lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#name ComputeInterconnect#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#name ComputeInterconnect#name}
 
 ---
 
@@ -1870,7 +1870,7 @@ By default, the Interconnect
 connection is configured with a must-secure security policy that drops all traffic
 if the MKA session cannot be established with your router.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#fail_open ComputeInterconnect#fail_open}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#fail_open ComputeInterconnect#fail_open}
 
 ---
 
@@ -1890,7 +1890,7 @@ has multiple keys, startTime is mandatory for each key. The start times of keys 
 be in increasing order. The start times of two consecutive keys must be at least 6
 hours apart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#start_time ComputeInterconnect#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#start_time ComputeInterconnect#start_time}
 
 ---
 
@@ -1899,7 +1899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 &computeinterconnect.ComputeInterconnectTimeouts {
 	Create: *string,
@@ -1912,9 +1912,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#create ComputeInterconnect#create}. |
-| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#delete ComputeInterconnect#delete}. |
-| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#update ComputeInterconnect#update}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#create ComputeInterconnect#create}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#delete ComputeInterconnect#delete}. |
+| <code><a href="#@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#update ComputeInterconnect#update}. |
 
 ---
 
@@ -1926,7 +1926,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#create ComputeInterconnect#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#create ComputeInterconnect#create}.
 
 ---
 
@@ -1938,7 +1938,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#delete ComputeInterconnect#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#delete ComputeInterconnect#delete}.
 
 ---
 
@@ -1950,7 +1950,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_interconnect#update ComputeInterconnect#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_interconnect#update ComputeInterconnect#update}.
 
 ---
 
@@ -1961,7 +1961,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectCircuitInfosList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnectCircuitInfosList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInterconnectCircuitInfosList
 ```
@@ -2110,7 +2110,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectCircuitInfosOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnectCircuitInfosOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInterconnectCircuitInfosOutputReference
 ```
@@ -2410,7 +2410,7 @@ func InternalValue() ComputeInterconnectCircuitInfos
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectExpectedOutagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnectExpectedOutagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInterconnectExpectedOutagesList
 ```
@@ -2559,7 +2559,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectExpectedOutagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnectExpectedOutagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInterconnectExpectedOutagesOutputReference
 ```
@@ -2914,7 +2914,7 @@ func InternalValue() ComputeInterconnectExpectedOutages
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectMacsecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnectMacsecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInterconnectMacsecOutputReference
 ```
@@ -3227,7 +3227,7 @@ func InternalValue() ComputeInterconnectMacsec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectMacsecPreSharedKeysList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnectMacsecPreSharedKeysList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInterconnectMacsecPreSharedKeysList
 ```
@@ -3387,7 +3387,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectMacsecPreSharedKeysOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnectMacsecPreSharedKeysOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInterconnectMacsecPreSharedKeysOutputReference
 ```
@@ -3734,7 +3734,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInterconnect.ComputeInterconnectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinterconnect"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinterconnect"
 
 computeinterconnect.NewComputeInterconnectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInterconnectTimeoutsOutputReference
 ```

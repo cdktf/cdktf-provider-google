@@ -4,12 +4,12 @@
 
 ### DataplexEntryGroupIamMember <a name="DataplexEntryGroupIamMember" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member google_dataplex_entry_group_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member google_dataplex_entry_group_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.NewDataplexEntryGroupIamMember(scope Construct, id *string, config DataplexEntryGroupIamMemberConfig) DataplexEntryGroupIamMember
 ```
@@ -419,7 +419,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ dataplexentrygroupiammember.DataplexEntryGroupIamMember_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.DataplexEntryGroupIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -508,7 +508,7 @@ The construct id used in the generated config for the DataplexEntryGroupIamMembe
 
 The id of the existing DataplexEntryGroupIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
 
 &dataplexentrygroupiammember.DataplexEntryGroupIamMemberCondition {
 	Expression: *string,
@@ -886,9 +886,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#expression DataplexEntryGroupIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#title DataplexEntryGroupIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#description DataplexEntryGroupIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#expression DataplexEntryGroupIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#title DataplexEntryGroupIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#description DataplexEntryGroupIamMember#description}. |
 
 ---
 
@@ -900,7 +900,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#expression DataplexEntryGroupIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#expression DataplexEntryGroupIamMember#expression}.
 
 ---
 
@@ -912,7 +912,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#title DataplexEntryGroupIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#title DataplexEntryGroupIamMember#title}.
 
 ---
 
@@ -924,7 +924,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#description DataplexEntryGroupIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#description DataplexEntryGroupIamMember#description}.
 
 ---
 
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
 
 &dataplexentrygroupiammember.DataplexEntryGroupIamMemberConfig {
 	Connection: interface{},
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupi
 	EntryGroupId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -964,13 +964,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupi
 | <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.entryGroupId">EntryGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#entry_group_id DataplexEntryGroupIamMember#entry_group_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#member DataplexEntryGroupIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#role DataplexEntryGroupIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.entryGroupId">EntryGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#entry_group_id DataplexEntryGroupIamMember#entry_group_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#member DataplexEntryGroupIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#role DataplexEntryGroupIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberCondition">DataplexEntryGroupIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#id DataplexEntryGroupIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#location DataplexEntryGroupIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#project DataplexEntryGroupIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#id DataplexEntryGroupIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#location DataplexEntryGroupIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#project DataplexEntryGroupIamMember#project}. |
 
 ---
 
@@ -1052,7 +1052,7 @@ EntryGroupId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#entry_group_id DataplexEntryGroupIamMember#entry_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#entry_group_id DataplexEntryGroupIamMember#entry_group_id}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#member DataplexEntryGroupIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#member DataplexEntryGroupIamMember#member}.
 
 ---
 
@@ -1076,7 +1076,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#role DataplexEntryGroupIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#role DataplexEntryGroupIamMember#role}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Condition DataplexEntryGroupIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#condition DataplexEntryGroupIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#condition DataplexEntryGroupIamMember#condition}
 
 ---
 
@@ -1102,7 +1102,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#id DataplexEntryGroupIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#id DataplexEntryGroupIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1117,7 +1117,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#location DataplexEntryGroupIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#location DataplexEntryGroupIamMember#location}.
 
 ---
 
@@ -1129,7 +1129,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/dataplex_entry_group_iam_member#project DataplexEntryGroupIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/dataplex_entry_group_iam_member#project DataplexEntryGroupIamMember#project}.
 
 ---
 
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexEntryGroupIamMember.DataplexEntryGroupIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataplexentrygroupiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataplexentrygroupiammember"
 
 dataplexentrygroupiammember.NewDataplexEntryGroupIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexEntryGroupIamMemberConditionOutputReference
 ```

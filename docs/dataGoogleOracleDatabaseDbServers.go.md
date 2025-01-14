@@ -4,12 +4,12 @@
 
 ### DataGoogleOracleDatabaseDbServers <a name="DataGoogleOracleDatabaseDbServers" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServers"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/data-sources/oracle_database_db_servers google_oracle_database_db_servers}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/data-sources/oracle_database_db_servers google_oracle_database_db_servers}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.NewDataGoogleOracleDatabaseDbServers(scope Construct, id *string, config DataGoogleOracleDatabaseDbServersConfig) DataGoogleOracleDatabaseDbServers
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServers.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServers_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServers.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServers_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServers_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServers.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServers_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServers_IsTerraformD
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServers.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServers_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleOracleDatabaseDb
 
 The id of the existing DataGoogleOracleDatabaseDbServers that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/data-sources/oracle_database_db_servers#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/data-sources/oracle_database_db_servers#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -656,7 +656,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 &datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServersConfig {
 	Connection: interface{},
@@ -686,7 +686,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledat
 | <code><a href="#@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersConfig.property.cloudExadataInfrastructure">CloudExadataInfrastructure</a></code> | <code>*string</code> | exadata. |
 | <code><a href="#@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersConfig.property.location">Location</a></code> | <code>*string</code> | location. |
-| <code><a href="#@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/data-sources/oracle_database_db_servers#id DataGoogleOracleDatabaseDbServers#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/data-sources/oracle_database_db_servers#id DataGoogleOracleDatabaseDbServers#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersConfig.property.project">Project</a></code> | <code>*string</code> | The ID of the project in which the dataset is located. |
 
 ---
@@ -771,7 +771,7 @@ CloudExadataInfrastructure *string
 
 exadata.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/data-sources/oracle_database_db_servers#cloud_exadata_infrastructure DataGoogleOracleDatabaseDbServers#cloud_exadata_infrastructure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/data-sources/oracle_database_db_servers#cloud_exadata_infrastructure DataGoogleOracleDatabaseDbServers#cloud_exadata_infrastructure}
 
 ---
 
@@ -785,7 +785,7 @@ Location *string
 
 location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/data-sources/oracle_database_db_servers#location DataGoogleOracleDatabaseDbServers#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/data-sources/oracle_database_db_servers#location DataGoogleOracleDatabaseDbServers#location}
 
 ---
 
@@ -797,7 +797,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/data-sources/oracle_database_db_servers#id DataGoogleOracleDatabaseDbServers#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/data-sources/oracle_database_db_servers#id DataGoogleOracleDatabaseDbServers#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -816,7 +816,7 @@ The ID of the project in which the dataset is located.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/data-sources/oracle_database_db_servers#project DataGoogleOracleDatabaseDbServers#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/data-sources/oracle_database_db_servers#project DataGoogleOracleDatabaseDbServers#project}
 
 ---
 
@@ -825,7 +825,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersDbServers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 &datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServersDbServers {
 
@@ -838,7 +838,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledat
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersDbServersProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 &datagoogleoracledatabasedbservers.DataGoogleOracleDatabaseDbServersDbServersProperties {
 
@@ -853,7 +853,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledat
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersDbServersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.NewDataGoogleOracleDatabaseDbServersDbServersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleOracleDatabaseDbServersDbServersList
 ```
@@ -1002,7 +1002,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersDbServersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.NewDataGoogleOracleDatabaseDbServersDbServersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleOracleDatabaseDbServersDbServersOutputReference
 ```
@@ -1291,7 +1291,7 @@ func InternalValue() DataGoogleOracleDatabaseDbServersDbServers
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersDbServersPropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.NewDataGoogleOracleDatabaseDbServersDbServersPropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleOracleDatabaseDbServersDbServersPropertiesList
 ```
@@ -1440,7 +1440,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOracleDatabaseDbServers.DataGoogleOracleDatabaseDbServersDbServersPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleoracledatabasedbservers"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleoracledatabasedbservers"
 
 datagoogleoracledatabasedbservers.NewDataGoogleOracleDatabaseDbServersDbServersPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleOracleDatabaseDbServersDbServersPropertiesOutputReference
 ```

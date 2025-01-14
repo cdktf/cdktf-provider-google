@@ -4,12 +4,12 @@
 
 ### ComposerUserWorkloadsSecret <a name="ComposerUserWorkloadsSecret" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecret"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret google_composer_user_workloads_secret}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret google_composer_user_workloads_secret}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloadssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/composeruserworkloadssecret"
 
 composeruserworkloadssecret.NewComposerUserWorkloadsSecret(scope Construct, id *string, config ComposerUserWorkloadsSecretConfig) ComposerUserWorkloadsSecret
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecret.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloadssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/composeruserworkloadssecret"
 
 composeruserworkloadssecret.ComposerUserWorkloadsSecret_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecret.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloadssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/composeruserworkloadssecret"
 
 composeruserworkloadssecret.ComposerUserWorkloadsSecret_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ composeruserworkloadssecret.ComposerUserWorkloadsSecret_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecret.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloadssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/composeruserworkloadssecret"
 
 composeruserworkloadssecret.ComposerUserWorkloadsSecret_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ composeruserworkloadssecret.ComposerUserWorkloadsSecret_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecret.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloadssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/composeruserworkloadssecret"
 
 composeruserworkloadssecret.ComposerUserWorkloadsSecret_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -515,7 +515,7 @@ The construct id used in the generated config for the ComposerUserWorkloadsSecre
 
 The id of the existing ComposerUserWorkloadsSecret that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -869,7 +869,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloadssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/composeruserworkloadssecret"
 
 &composeruserworkloadssecret.ComposerUserWorkloadsSecretConfig {
 	Connection: interface{},
@@ -885,7 +885,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloa
 	Id: *string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts,
 }
 ```
 
@@ -903,7 +903,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloa
 | <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.property.environment">Environment</a></code> | <code>*string</code> | Name of the environment. |
 | <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.property.name">Name</a></code> | <code>*string</code> | Name of the secret. |
 | <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.property.data">Data</a></code> | <code>*map[string]*string</code> | A map of the secret data. |
-| <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#id ComposerUserWorkloadsSecret#id}. |
+| <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#id ComposerUserWorkloadsSecret#id}. |
 | <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.property.project">Project</a></code> | <code>*string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.property.region">Region</a></code> | <code>*string</code> | The location or Compute Engine region for the environment. |
 | <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts">ComposerUserWorkloadsSecretTimeouts</a></code> | timeouts block. |
@@ -990,7 +990,7 @@ Environment *string
 
 Name of the environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#environment ComposerUserWorkloadsSecret#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#environment ComposerUserWorkloadsSecret#environment}
 
 ---
 
@@ -1004,7 +1004,7 @@ Name *string
 
 Name of the secret.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#name ComposerUserWorkloadsSecret#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#name ComposerUserWorkloadsSecret#name}
 
 ---
 
@@ -1018,7 +1018,7 @@ Data *map[string]*string
 
 A map of the secret data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#data ComposerUserWorkloadsSecret#data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#data ComposerUserWorkloadsSecret#data}
 
 ---
 
@@ -1030,7 +1030,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#id ComposerUserWorkloadsSecret#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#id ComposerUserWorkloadsSecret#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1049,7 +1049,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#project ComposerUserWorkloadsSecret#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#project ComposerUserWorkloadsSecret#project}
 
 ---
 
@@ -1063,7 +1063,7 @@ Region *string
 
 The location or Compute Engine region for the environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#region ComposerUserWorkloadsSecret#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#region ComposerUserWorkloadsSecret#region}
 
 ---
 
@@ -1077,7 +1077,7 @@ Timeouts ComposerUserWorkloadsSecretTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#timeouts ComposerUserWorkloadsSecret#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#timeouts ComposerUserWorkloadsSecret#timeouts}
 
 ---
 
@@ -1086,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloadssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/composeruserworkloadssecret"
 
 &composeruserworkloadssecret.ComposerUserWorkloadsSecretTimeouts {
 	Create: *string,
@@ -1099,9 +1099,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloa
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#create ComposerUserWorkloadsSecret#create}. |
-| <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#delete ComposerUserWorkloadsSecret#delete}. |
-| <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#update ComposerUserWorkloadsSecret#update}. |
+| <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#create ComposerUserWorkloadsSecret#create}. |
+| <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#delete ComposerUserWorkloadsSecret#delete}. |
+| <code><a href="#@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#update ComposerUserWorkloadsSecret#update}. |
 
 ---
 
@@ -1113,7 +1113,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#create ComposerUserWorkloadsSecret#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#create ComposerUserWorkloadsSecret#create}.
 
 ---
 
@@ -1125,7 +1125,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#delete ComposerUserWorkloadsSecret#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#delete ComposerUserWorkloadsSecret#delete}.
 
 ---
 
@@ -1137,7 +1137,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/composer_user_workloads_secret#update ComposerUserWorkloadsSecret#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/composer_user_workloads_secret#update ComposerUserWorkloadsSecret#update}.
 
 ---
 
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerUserWorkloadsSecret.ComposerUserWorkloadsSecretTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/composeruserworkloadssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/composeruserworkloadssecret"
 
 composeruserworkloadssecret.NewComposerUserWorkloadsSecretTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerUserWorkloadsSecretTimeoutsOutputReference
 ```
