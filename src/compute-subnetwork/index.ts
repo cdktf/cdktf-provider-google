@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork
+// https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,17 +17,17 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   * you create the resource. This field can be set only at resource
   * creation time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#description ComputeSubnetwork#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#description ComputeSubnetwork#description}
   */
   readonly description?: string;
   /**
   * The range of external IPv6 addresses that are owned by this subnetwork.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#external_ipv6_prefix ComputeSubnetwork#external_ipv6_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#external_ipv6_prefix ComputeSubnetwork#external_ipv6_prefix}
   */
   readonly externalIpv6Prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#id ComputeSubnetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#id ComputeSubnetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,7 +40,7 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   * non-overlapping within a network. Only IPv4 is supported.
   * Field is optional when 'reserved_internal_range' is defined, otherwise required.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
   */
   readonly ipCidrRange?: string;
   /**
@@ -48,7 +48,7 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   * or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
   * cannot enable direct path. Possible values: ["EXTERNAL", "INTERNAL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#ipv6_access_type ComputeSubnetwork#ipv6_access_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#ipv6_access_type ComputeSubnetwork#ipv6_access_type}
   */
   readonly ipv6AccessType?: string;
   /**
@@ -60,31 +60,31 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   * following characters must be a dash, lowercase letter, or digit,
   * except the last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#name ComputeSubnetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#name ComputeSubnetwork#name}
   */
   readonly name: string;
   /**
   * The network this subnet belongs to.
   * Only networks that are in the distributed mode can have subnetworks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#network ComputeSubnetwork#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#network ComputeSubnetwork#network}
   */
   readonly network: string;
   /**
   * When enabled, VMs in this subnetwork without external IP addresses can
   * access Google APIs and services by using Private Google Access.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#private_ip_google_access ComputeSubnetwork#private_ip_google_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#private_ip_google_access ComputeSubnetwork#private_ip_google_access}
   */
   readonly privateIpGoogleAccess?: boolean | cdktf.IResolvable;
   /**
   * The private IPv6 google access type for the VMs in this subnet.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#private_ipv6_google_access ComputeSubnetwork#private_ipv6_google_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#private_ipv6_google_access ComputeSubnetwork#private_ipv6_google_access}
   */
   readonly privateIpv6GoogleAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#project ComputeSubnetwork#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#project ComputeSubnetwork#project}
   */
   readonly project?: string;
   /**
@@ -96,20 +96,20 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   * Note that 'REGIONAL_MANAGED_PROXY' is the preferred setting for all regional Envoy load balancers.
   * If unspecified, the purpose defaults to 'PRIVATE'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#purpose ComputeSubnetwork#purpose}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#purpose ComputeSubnetwork#purpose}
   */
   readonly purpose?: string;
   /**
   * The GCP region for this subnetwork.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#region ComputeSubnetwork#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#region ComputeSubnetwork#region}
   */
   readonly region?: string;
   /**
   * The ID of the reserved internal range. Must be prefixed with 'networkconnectivity.googleapis.com'
   * E.g. 'networkconnectivity.googleapis.com/projects/{project}/locations/global/internalRanges/{rangeId}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#reserved_internal_range ComputeSubnetwork#reserved_internal_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#reserved_internal_range ComputeSubnetwork#reserved_internal_range}
   */
   readonly reservedInternalRange?: string;
   /**
@@ -119,7 +119,7 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   * An 'ACTIVE' subnetwork is one that is currently being used for Envoy-based load balancers in a region.
   * A 'BACKUP' subnetwork is one that is ready to be promoted to 'ACTIVE' or is currently draining. Possible values: ["ACTIVE", "BACKUP"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#role ComputeSubnetwork#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#role ComputeSubnetwork#role}
   */
   readonly role?: string;
   /**
@@ -130,32 +130,32 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   * empty list of secondary IP ranges to the API.
   * Defaults to false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#send_secondary_ip_range_if_empty ComputeSubnetwork#send_secondary_ip_range_if_empty}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#send_secondary_ip_range_if_empty ComputeSubnetwork#send_secondary_ip_range_if_empty}
   */
   readonly sendSecondaryIpRangeIfEmpty?: boolean | cdktf.IResolvable;
   /**
   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
   * If not specified IPV4_ONLY will be used. Possible values: ["IPV4_ONLY", "IPV4_IPV6"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#stack_type ComputeSubnetwork#stack_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#stack_type ComputeSubnetwork#stack_type}
   */
   readonly stackType?: string;
   /**
   * log_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#log_config ComputeSubnetwork#log_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#log_config ComputeSubnetwork#log_config}
   */
   readonly logConfig?: ComputeSubnetworkLogConfig;
   /**
   * secondary_ip_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#secondary_ip_range ComputeSubnetwork#secondary_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#secondary_ip_range ComputeSubnetwork#secondary_ip_range}
   */
   readonly secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#timeouts ComputeSubnetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#timeouts ComputeSubnetwork#timeouts}
   */
   readonly timeouts?: ComputeSubnetworkTimeouts;
 }
@@ -166,7 +166,7 @@ export interface ComputeSubnetworkLogConfig {
   * interval time will reduce the amount of generated flow logs for long
   * lasting connections. Default is an interval of 5 seconds per connection. Default value: "INTERVAL_5_SEC" Possible values: ["INTERVAL_5_SEC", "INTERVAL_30_SEC", "INTERVAL_1_MIN", "INTERVAL_5_MIN", "INTERVAL_10_MIN", "INTERVAL_15_MIN"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#aggregation_interval ComputeSubnetwork#aggregation_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#aggregation_interval ComputeSubnetwork#aggregation_interval}
   */
   readonly aggregationInterval?: string;
   /**
@@ -174,7 +174,7 @@ export interface ComputeSubnetworkLogConfig {
   * https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
   * The default value is 'true', which evaluates to include everything.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#filter_expr ComputeSubnetwork#filter_expr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#filter_expr ComputeSubnetwork#filter_expr}
   */
   readonly filterExpr?: string;
   /**
@@ -184,7 +184,7 @@ export interface ComputeSubnetworkLogConfig {
   * reported and 0.0 means no logs are reported. Default is 0.5 which means
   * half of all collected logs are reported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#flow_sampling ComputeSubnetwork#flow_sampling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#flow_sampling ComputeSubnetwork#flow_sampling}
   */
   readonly flowSampling?: number;
   /**
@@ -192,14 +192,14 @@ export interface ComputeSubnetworkLogConfig {
   * Configures whether metadata fields should be added to the reported VPC
   * flow logs. Default value: "INCLUDE_ALL_METADATA" Possible values: ["EXCLUDE_ALL_METADATA", "INCLUDE_ALL_METADATA", "CUSTOM_METADATA"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#metadata ComputeSubnetwork#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#metadata ComputeSubnetwork#metadata}
   */
   readonly metadata?: string;
   /**
   * List of metadata fields that should be added to reported logs.
   * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#metadata_fields ComputeSubnetwork#metadata_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#metadata_fields ComputeSubnetwork#metadata_fields}
   */
   readonly metadataFields?: string[];
 }
@@ -405,7 +405,7 @@ export interface ComputeSubnetworkSecondaryIpRange {
   * secondary IP ranges within a network. Only IPv4 is supported.
   * Field is optional when 'reserved_internal_range' is defined, otherwise required.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
   */
   readonly ipCidrRange?: string;
   /**
@@ -414,14 +414,14 @@ export interface ComputeSubnetworkSecondaryIpRange {
   * be 1-63 characters long, and comply with RFC1035. The name
   * must be unique within the subnetwork.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#range_name ComputeSubnetwork#range_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#range_name ComputeSubnetwork#range_name}
   */
   readonly rangeName: string;
   /**
   * The ID of the reserved internal range. Must be prefixed with 'networkconnectivity.googleapis.com'
   * E.g. 'networkconnectivity.googleapis.com/projects/{project}/locations/global/internalRanges/{rangeId}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#reserved_internal_range ComputeSubnetwork#reserved_internal_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#reserved_internal_range ComputeSubnetwork#reserved_internal_range}
   */
   readonly reservedInternalRange?: string;
 }
@@ -592,15 +592,15 @@ export class ComputeSubnetworkSecondaryIpRangeList extends cdktf.ComplexList {
 }
 export interface ComputeSubnetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#create ComputeSubnetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#create ComputeSubnetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#delete ComputeSubnetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#delete ComputeSubnetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#update ComputeSubnetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#update ComputeSubnetwork#update}
   */
   readonly update?: string;
 }
@@ -752,7 +752,7 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork google_compute_subnetwork}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork google_compute_subnetwork}
 */
 export class ComputeSubnetwork extends cdktf.TerraformResource {
 
@@ -768,7 +768,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeSubnetwork resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeSubnetwork to import
-  * @param importFromId The id of the existing ComputeSubnetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeSubnetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeSubnetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -780,7 +780,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.15.0/docs/resources/compute_subnetwork google_compute_subnetwork} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/compute_subnetwork google_compute_subnetwork} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -791,7 +791,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_subnetwork',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.15.0',
+        providerVersion: '6.16.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
