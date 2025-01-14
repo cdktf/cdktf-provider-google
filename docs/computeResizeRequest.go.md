@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequest(scope Construct, id *string, config ComputeResizeRequestConfig) ComputeResizeRequest
 ```
@@ -439,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequest.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.ComputeResizeRequest_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequest.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.ComputeResizeRequest_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ computeresizerequest.ComputeResizeRequest_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequest.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.ComputeResizeRequest_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ computeresizerequest.ComputeResizeRequest_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequest.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.ComputeResizeRequest_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -959,7 +959,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestConfig {
 	Connection: interface{},
@@ -976,8 +976,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	RequestedRunDuration: github.com/cdktf/cdktf-provider-google-go/google/v14.computeResizeRequest.ComputeResizeRequestRequestedRunDuration,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeResizeRequest.ComputeResizeRequestTimeouts,
+	RequestedRunDuration: github.com/cdktf/cdktf-provider-google-go/google.computeResizeRequest.ComputeResizeRequestRequestedRunDuration,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeResizeRequest.ComputeResizeRequestTimeouts,
 }
 ```
 
@@ -1206,7 +1206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestRequestedRunDuration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestRequestedRunDuration {
 	Seconds: *string,
@@ -1260,7 +1260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatus {
 
@@ -1273,7 +1273,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusError.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusError {
 
@@ -1286,7 +1286,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusErrorErrors {
 
@@ -1299,7 +1299,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetails.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusErrorErrorsErrorDetails {
 
@@ -1312,7 +1312,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfo {
 
@@ -1325,7 +1325,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsHelp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsHelp {
 
@@ -1338,7 +1338,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinks {
 
@@ -1351,7 +1351,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedMessage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedMessage {
 
@@ -1364,7 +1364,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfo {
 
@@ -1377,7 +1377,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttempt.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttempt {
 
@@ -1390,7 +1390,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptError.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttemptError {
 
@@ -1403,7 +1403,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttemptErrorErrors {
 
@@ -1416,7 +1416,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetails.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetails {
 
@@ -1429,7 +1429,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsErrorInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsErrorInfo {
 
@@ -1442,7 +1442,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelp {
 
@@ -1455,7 +1455,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpLinks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpLinks {
 
@@ -1468,7 +1468,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsLocalizedMessage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsLocalizedMessage {
 
@@ -1481,7 +1481,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsQuotaInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsQuotaInfo {
 
@@ -1494,7 +1494,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizereques
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 &computeresizerequest.ComputeResizeRequestTimeouts {
 	Create: *string,
@@ -1542,7 +1542,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestRequestedRunDurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestRequestedRunDurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeResizeRequestRequestedRunDurationOutputReference
 ```
@@ -1842,7 +1842,7 @@ func InternalValue() ComputeResizeRequestRequestedRunDuration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfoList
 ```
@@ -1991,7 +1991,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfoOutputReference
 ```
@@ -2291,7 +2291,7 @@ func InternalValue() ComputeResizeRequestStatusErrorErrorsErrorDetailsErrorInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinksList
 ```
@@ -2440,7 +2440,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinksOutputReference
 ```
@@ -2729,7 +2729,7 @@ func InternalValue() ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpLinks
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsHelpList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpList
 ```
@@ -2878,7 +2878,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsHelpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsHelpOutputReference
 ```
@@ -3156,7 +3156,7 @@ func InternalValue() ComputeResizeRequestStatusErrorErrorsErrorDetailsHelp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsList
 ```
@@ -3305,7 +3305,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedMessageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedMessageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedMessageList
 ```
@@ -3454,7 +3454,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedMessageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedMessageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedMessageOutputReference
 ```
@@ -3743,7 +3743,7 @@ func InternalValue() ComputeResizeRequestStatusErrorErrorsErrorDetailsLocalizedM
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsOutputReference
 ```
@@ -4054,7 +4054,7 @@ func InternalValue() ComputeResizeRequestStatusErrorErrorsErrorDetails
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfoList
 ```
@@ -4203,7 +4203,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfoOutputReference
 ```
@@ -4536,7 +4536,7 @@ func InternalValue() ComputeResizeRequestStatusErrorErrorsErrorDetailsQuotaInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusErrorErrorsList
 ```
@@ -4685,7 +4685,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorErrorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorErrorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusErrorErrorsOutputReference
 ```
@@ -4996,7 +4996,7 @@ func InternalValue() ComputeResizeRequestStatusErrorErrors
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusErrorList
 ```
@@ -5145,7 +5145,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusErrorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusErrorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusErrorOutputReference
 ```
@@ -5423,7 +5423,7 @@ func InternalValue() ComputeResizeRequestStatusError
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsErrorInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsErrorInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsErrorInfoList
 ```
@@ -5572,7 +5572,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsErrorInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsErrorInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsErrorInfoOutputReference
 ```
@@ -5872,7 +5872,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetail
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpLinksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpLinksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpLinksList
 ```
@@ -6021,7 +6021,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpLinksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpLinksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpLinksOutputReference
 ```
@@ -6310,7 +6310,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetail
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpList
 ```
@@ -6459,7 +6459,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsHelpOutputReference
 ```
@@ -6737,7 +6737,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetail
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsList
 ```
@@ -6886,7 +6886,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsLocalizedMessageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsLocalizedMessageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsLocalizedMessageList
 ```
@@ -7035,7 +7035,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsLocalizedMessageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsLocalizedMessageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsLocalizedMessageOutputReference
 ```
@@ -7324,7 +7324,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetail
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsOutputReference
 ```
@@ -7635,7 +7635,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetail
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsQuotaInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsQuotaInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsQuotaInfoList
 ```
@@ -7784,7 +7784,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsQuotaInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsQuotaInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetailsQuotaInfoOutputReference
 ```
@@ -8117,7 +8117,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttemptErrorErrorsErrorDetail
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsList
 ```
@@ -8266,7 +8266,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorErrorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorErrorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptErrorErrorsOutputReference
 ```
@@ -8577,7 +8577,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttemptErrorErrors
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptErrorList
 ```
@@ -8726,7 +8726,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptErrorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptErrorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptErrorOutputReference
 ```
@@ -9004,7 +9004,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttemptError
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusLastAttemptList
 ```
@@ -9153,7 +9153,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusLastAttemptOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusLastAttemptOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusLastAttemptOutputReference
 ```
@@ -9431,7 +9431,7 @@ func InternalValue() ComputeResizeRequestStatusLastAttempt
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeResizeRequestStatusList
 ```
@@ -9580,7 +9580,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeResizeRequestStatusOutputReference
 ```
@@ -9869,7 +9869,7 @@ func InternalValue() ComputeResizeRequestStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeResizeRequest.ComputeResizeRequestTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeresizerequest"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeresizerequest"
 
 computeresizerequest.NewComputeResizeRequestTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeResizeRequestTimeoutsOutputReference
 ```
