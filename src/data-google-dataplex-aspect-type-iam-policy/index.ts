@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/data-sources/dataplex_aspect_type_iam_policy
 // generated from terraform resource schema
 
