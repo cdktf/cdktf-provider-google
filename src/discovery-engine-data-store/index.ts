@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store
+// https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +15,7 @@ export interface DiscoveryEngineDataStoreConfig extends cdktf.TerraformMetaArgum
   /**
   * The content config of the data store. Possible values: ["NO_CONTENT", "CONTENT_REQUIRED", "PUBLIC_WEBSITE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#content_config DiscoveryEngineDataStore#content_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#content_config DiscoveryEngineDataStore#content_config}
   */
   readonly contentConfig: string;
   /**
@@ -23,24 +23,24 @@ export interface DiscoveryEngineDataStoreConfig extends cdktf.TerraformMetaArgum
   * data store is not configured as site search (GENERIC vertical and
   * PUBLIC_WEBSITE contentConfig), this flag will be ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#create_advanced_site_search DiscoveryEngineDataStore#create_advanced_site_search}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#create_advanced_site_search DiscoveryEngineDataStore#create_advanced_site_search}
   */
   readonly createAdvancedSiteSearch?: boolean | cdktf.IResolvable;
   /**
   * The unique id of the data store.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#data_store_id DiscoveryEngineDataStore#data_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#data_store_id DiscoveryEngineDataStore#data_store_id}
   */
   readonly dataStoreId: string;
   /**
   * The display name of the data store. This field must be a UTF-8 encoded
   * string with a length limit of 128 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#display_name DiscoveryEngineDataStore#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#display_name DiscoveryEngineDataStore#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#id DiscoveryEngineDataStore#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#id DiscoveryEngineDataStore#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -49,18 +49,18 @@ export interface DiscoveryEngineDataStoreConfig extends cdktf.TerraformMetaArgum
   /**
   * The industry vertical that the data store registers. Possible values: ["GENERIC", "MEDIA", "HEALTHCARE_FHIR"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#industry_vertical DiscoveryEngineDataStore#industry_vertical}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#industry_vertical DiscoveryEngineDataStore#industry_vertical}
   */
   readonly industryVertical: string;
   /**
   * The geographic location where the data store should reside. The value can
   * only be one of "global", "us" and "eu".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#location DiscoveryEngineDataStore#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#location DiscoveryEngineDataStore#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#project DiscoveryEngineDataStore#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#project DiscoveryEngineDataStore#project}
   */
   readonly project?: string;
   /**
@@ -72,41 +72,168 @@ export interface DiscoveryEngineDataStoreConfig extends cdktf.TerraformMetaArgum
   * This flag cannot be specified if 'data_store.starting_schema' is
   * specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#skip_default_schema_creation DiscoveryEngineDataStore#skip_default_schema_creation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#skip_default_schema_creation DiscoveryEngineDataStore#skip_default_schema_creation}
   */
   readonly skipDefaultSchemaCreation?: boolean | cdktf.IResolvable;
   /**
   * The solutions that the data store enrolls. Possible values: ["SOLUTION_TYPE_RECOMMENDATION", "SOLUTION_TYPE_SEARCH", "SOLUTION_TYPE_CHAT", "SOLUTION_TYPE_GENERATIVE_CHAT"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#solution_types DiscoveryEngineDataStore#solution_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#solution_types DiscoveryEngineDataStore#solution_types}
   */
   readonly solutionTypes?: string[];
   /**
+  * advanced_site_search_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#advanced_site_search_config DiscoveryEngineDataStore#advanced_site_search_config}
+  */
+  readonly advancedSiteSearchConfig?: DiscoveryEngineDataStoreAdvancedSiteSearchConfig;
+  /**
   * document_processing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#document_processing_config DiscoveryEngineDataStore#document_processing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#document_processing_config DiscoveryEngineDataStore#document_processing_config}
   */
   readonly documentProcessingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#timeouts DiscoveryEngineDataStore#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#timeouts DiscoveryEngineDataStore#timeouts}
   */
   readonly timeouts?: DiscoveryEngineDataStoreTimeouts;
+}
+export interface DiscoveryEngineDataStoreAdvancedSiteSearchConfig {
+  /**
+  * If set true, automatic refresh is disabled for the DataStore.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#disable_automatic_refresh DiscoveryEngineDataStore#disable_automatic_refresh}
+  */
+  readonly disableAutomaticRefresh?: boolean | cdktf.IResolvable;
+  /**
+  * If set true, initial indexing is disabled for the DataStore.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#disable_initial_index DiscoveryEngineDataStore#disable_initial_index}
+  */
+  readonly disableInitialIndex?: boolean | cdktf.IResolvable;
+}
+
+export function discoveryEngineDataStoreAdvancedSiteSearchConfigToTerraform(struct?: DiscoveryEngineDataStoreAdvancedSiteSearchConfigOutputReference | DiscoveryEngineDataStoreAdvancedSiteSearchConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disable_automatic_refresh: cdktf.booleanToTerraform(struct!.disableAutomaticRefresh),
+    disable_initial_index: cdktf.booleanToTerraform(struct!.disableInitialIndex),
+  }
+}
+
+
+export function discoveryEngineDataStoreAdvancedSiteSearchConfigToHclTerraform(struct?: DiscoveryEngineDataStoreAdvancedSiteSearchConfigOutputReference | DiscoveryEngineDataStoreAdvancedSiteSearchConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disable_automatic_refresh: {
+      value: cdktf.booleanToHclTerraform(struct!.disableAutomaticRefresh),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    disable_initial_index: {
+      value: cdktf.booleanToHclTerraform(struct!.disableInitialIndex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DiscoveryEngineDataStoreAdvancedSiteSearchConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DiscoveryEngineDataStoreAdvancedSiteSearchConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._disableAutomaticRefresh !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disableAutomaticRefresh = this._disableAutomaticRefresh;
+    }
+    if (this._disableInitialIndex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disableInitialIndex = this._disableInitialIndex;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DiscoveryEngineDataStoreAdvancedSiteSearchConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._disableAutomaticRefresh = undefined;
+      this._disableInitialIndex = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._disableAutomaticRefresh = value.disableAutomaticRefresh;
+      this._disableInitialIndex = value.disableInitialIndex;
+    }
+  }
+
+  // disable_automatic_refresh - computed: false, optional: true, required: false
+  private _disableAutomaticRefresh?: boolean | cdktf.IResolvable; 
+  public get disableAutomaticRefresh() {
+    return this.getBooleanAttribute('disable_automatic_refresh');
+  }
+  public set disableAutomaticRefresh(value: boolean | cdktf.IResolvable) {
+    this._disableAutomaticRefresh = value;
+  }
+  public resetDisableAutomaticRefresh() {
+    this._disableAutomaticRefresh = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableAutomaticRefreshInput() {
+    return this._disableAutomaticRefresh;
+  }
+
+  // disable_initial_index - computed: false, optional: true, required: false
+  private _disableInitialIndex?: boolean | cdktf.IResolvable; 
+  public get disableInitialIndex() {
+    return this.getBooleanAttribute('disable_initial_index');
+  }
+  public set disableInitialIndex(value: boolean | cdktf.IResolvable) {
+    this._disableInitialIndex = value;
+  }
+  public resetDisableInitialIndex() {
+    this._disableInitialIndex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableInitialIndexInput() {
+    return this._disableInitialIndex;
+  }
 }
 export interface DiscoveryEngineDataStoreDocumentProcessingConfigChunkingConfigLayoutBasedChunkingConfig {
   /**
   * The token size limit for each chunk.
   * Supported values: 100-500 (inclusive). Default value: 500.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#chunk_size DiscoveryEngineDataStore#chunk_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#chunk_size DiscoveryEngineDataStore#chunk_size}
   */
   readonly chunkSize?: number;
   /**
   * Whether to include appending different levels of headings to chunks from the middle of the document to prevent context loss.
   * Default value: False.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#include_ancestor_headings DiscoveryEngineDataStore#include_ancestor_headings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#include_ancestor_headings DiscoveryEngineDataStore#include_ancestor_headings}
   */
   readonly includeAncestorHeadings?: boolean | cdktf.IResolvable;
 }
@@ -221,7 +348,7 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfigChunkingConfig 
   /**
   * layout_based_chunking_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#layout_based_chunking_config DiscoveryEngineDataStore#layout_based_chunking_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#layout_based_chunking_config DiscoveryEngineDataStore#layout_based_chunking_config}
   */
   readonly layoutBasedChunkingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigChunkingConfigLayoutBasedChunkingConfig;
 }
@@ -405,7 +532,7 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingC
   /**
   * If true, will use native text instead of OCR text on pages containing native text.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#use_native_text DiscoveryEngineDataStore#use_native_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#use_native_text DiscoveryEngineDataStore#use_native_text}
   */
   readonly useNativeText?: boolean | cdktf.IResolvable;
 }
@@ -491,19 +618,19 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingC
   /**
   * digital_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#digital_parsing_config DiscoveryEngineDataStore#digital_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#digital_parsing_config DiscoveryEngineDataStore#digital_parsing_config}
   */
   readonly digitalParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigDigitalParsingConfig;
   /**
   * layout_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#layout_parsing_config DiscoveryEngineDataStore#layout_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#layout_parsing_config DiscoveryEngineDataStore#layout_parsing_config}
   */
   readonly layoutParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfig;
   /**
   * ocr_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#ocr_parsing_config DiscoveryEngineDataStore#ocr_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#ocr_parsing_config DiscoveryEngineDataStore#ocr_parsing_config}
   */
   readonly ocrParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigOcrParsingConfig;
 }
@@ -745,7 +872,7 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOv
   /**
   * If true, will use native text instead of OCR text on pages containing native text.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#use_native_text DiscoveryEngineDataStore#use_native_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#use_native_text DiscoveryEngineDataStore#use_native_text}
   */
   readonly useNativeText?: boolean | cdktf.IResolvable;
 }
@@ -829,25 +956,25 @@ export class DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverri
 }
 export interface DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverrides {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#file_type DiscoveryEngineDataStore#file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#file_type DiscoveryEngineDataStore#file_type}
   */
   readonly fileType: string;
   /**
   * digital_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#digital_parsing_config DiscoveryEngineDataStore#digital_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#digital_parsing_config DiscoveryEngineDataStore#digital_parsing_config}
   */
   readonly digitalParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesDigitalParsingConfig;
   /**
   * layout_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#layout_parsing_config DiscoveryEngineDataStore#layout_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#layout_parsing_config DiscoveryEngineDataStore#layout_parsing_config}
   */
   readonly layoutParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfig;
   /**
   * ocr_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#ocr_parsing_config DiscoveryEngineDataStore#ocr_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#ocr_parsing_config DiscoveryEngineDataStore#ocr_parsing_config}
   */
   readonly ocrParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesOcrParsingConfig;
 }
@@ -1049,19 +1176,19 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfig {
   /**
   * chunking_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#chunking_config DiscoveryEngineDataStore#chunking_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#chunking_config DiscoveryEngineDataStore#chunking_config}
   */
   readonly chunkingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigChunkingConfig;
   /**
   * default_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#default_parsing_config DiscoveryEngineDataStore#default_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#default_parsing_config DiscoveryEngineDataStore#default_parsing_config}
   */
   readonly defaultParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfig;
   /**
   * parsing_config_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#parsing_config_overrides DiscoveryEngineDataStore#parsing_config_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#parsing_config_overrides DiscoveryEngineDataStore#parsing_config_overrides}
   */
   readonly parsingConfigOverrides?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverrides[] | cdktf.IResolvable;
 }
@@ -1208,15 +1335,15 @@ export class DiscoveryEngineDataStoreDocumentProcessingConfigOutputReference ext
 }
 export interface DiscoveryEngineDataStoreTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#create DiscoveryEngineDataStore#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#create DiscoveryEngineDataStore#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#delete DiscoveryEngineDataStore#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#delete DiscoveryEngineDataStore#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#update DiscoveryEngineDataStore#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#update DiscoveryEngineDataStore#update}
   */
   readonly update?: string;
 }
@@ -1368,7 +1495,7 @@ export class DiscoveryEngineDataStoreTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store google_discovery_engine_data_store}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store google_discovery_engine_data_store}
 */
 export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
 
@@ -1384,7 +1511,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DiscoveryEngineDataStore resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DiscoveryEngineDataStore to import
-  * @param importFromId The id of the existing DiscoveryEngineDataStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DiscoveryEngineDataStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DiscoveryEngineDataStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1396,7 +1523,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.16.0/docs/resources/discovery_engine_data_store google_discovery_engine_data_store} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/resources/discovery_engine_data_store google_discovery_engine_data_store} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1407,7 +1534,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
       terraformResourceType: 'google_discovery_engine_data_store',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.16.0',
+        providerVersion: '6.17.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1428,6 +1555,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
     this._project = config.project;
     this._skipDefaultSchemaCreation = config.skipDefaultSchemaCreation;
     this._solutionTypes = config.solutionTypes;
+    this._advancedSiteSearchConfig.internalValue = config.advancedSiteSearchConfig;
     this._documentProcessingConfig.internalValue = config.documentProcessingConfig;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1596,6 +1724,22 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
     return this._solutionTypes;
   }
 
+  // advanced_site_search_config - computed: false, optional: true, required: false
+  private _advancedSiteSearchConfig = new DiscoveryEngineDataStoreAdvancedSiteSearchConfigOutputReference(this, "advanced_site_search_config");
+  public get advancedSiteSearchConfig() {
+    return this._advancedSiteSearchConfig;
+  }
+  public putAdvancedSiteSearchConfig(value: DiscoveryEngineDataStoreAdvancedSiteSearchConfig) {
+    this._advancedSiteSearchConfig.internalValue = value;
+  }
+  public resetAdvancedSiteSearchConfig() {
+    this._advancedSiteSearchConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedSiteSearchConfigInput() {
+    return this._advancedSiteSearchConfig.internalValue;
+  }
+
   // document_processing_config - computed: false, optional: true, required: false
   private _documentProcessingConfig = new DiscoveryEngineDataStoreDocumentProcessingConfigOutputReference(this, "document_processing_config");
   public get documentProcessingConfig() {
@@ -1644,6 +1788,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       skip_default_schema_creation: cdktf.booleanToTerraform(this._skipDefaultSchemaCreation),
       solution_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._solutionTypes),
+      advanced_site_search_config: discoveryEngineDataStoreAdvancedSiteSearchConfigToTerraform(this._advancedSiteSearchConfig.internalValue),
       document_processing_config: discoveryEngineDataStoreDocumentProcessingConfigToTerraform(this._documentProcessingConfig.internalValue),
       timeouts: discoveryEngineDataStoreTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -1710,6 +1855,12 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
         isBlock: false,
         type: "list",
         storageClassType: "stringList",
+      },
+      advanced_site_search_config: {
+        value: discoveryEngineDataStoreAdvancedSiteSearchConfigToHclTerraform(this._advancedSiteSearchConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DiscoveryEngineDataStoreAdvancedSiteSearchConfigList",
       },
       document_processing_config: {
         value: discoveryEngineDataStoreDocumentProcessingConfigToHclTerraform(this._documentProcessingConfig.internalValue),
