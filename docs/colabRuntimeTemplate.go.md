@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplate(scope Construct, id *string, config ColabRuntimeTemplateConfig) ColabRuntimeTemplate
 ```
@@ -580,7 +580,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.ColabRuntimeTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -612,7 +612,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.ColabRuntimeTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ colabruntimetemplate.ColabRuntimeTemplate_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.ColabRuntimeTemplate_IsTerraformResource(x interface{}) *bool
 ```
@@ -640,7 +640,7 @@ colabruntimetemplate.ColabRuntimeTemplate_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.ColabRuntimeTemplate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1243,7 +1243,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateConfig {
 	Connection: interface{},
@@ -1255,20 +1255,20 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplat
 	Provisioners: *[]interface{},
 	DisplayName: *string,
 	Location: *string,
-	DataPersistentDiskSpec: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateDataPersistentDiskSpec,
+	DataPersistentDiskSpec: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateDataPersistentDiskSpec,
 	Description: *string,
-	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpec,
-	EucConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateEucConfig,
+	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpec,
+	EucConfig: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateEucConfig,
 	Id: *string,
-	IdleShutdownConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfig,
+	IdleShutdownConfig: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfig,
 	Labels: *map[string]*string,
-	MachineSpec: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpec,
+	MachineSpec: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpec,
 	Name: *string,
-	NetworkSpec: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpec,
+	NetworkSpec: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpec,
 	NetworkTags: *[]*string,
 	Project: *string,
-	ShieldedVmConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts,
+	ShieldedVmConfig: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts,
 }
 ```
 
@@ -1603,7 +1603,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateDataPersistentDiskSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateDataPersistentDiskSpec {
 	DiskSizeGb: *string,
@@ -1655,7 +1655,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateEncryptionSpec {
 	KmsKeyName: *string,
@@ -1689,7 +1689,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEucConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateEucConfig {
 	EucDisabled: interface{},
@@ -1723,7 +1723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateIdleShutdownConfig {
 	IdleTimeout: *string,
@@ -1759,7 +1759,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateMachineSpec {
 	AcceleratorCount: *f64,
@@ -1825,7 +1825,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateNetworkSpec {
 	EnableInternetAccess: interface{},
@@ -1891,7 +1891,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateShieldedVmConfig {
 	EnableSecureBoot: interface{},
@@ -1925,7 +1925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateTimeouts {
 	Create: *string,
@@ -1987,7 +1987,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateDataPersistentDiskSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateDataPersistentDiskSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateDataPersistentDiskSpecOutputReference
 ```
@@ -2294,7 +2294,7 @@ func InternalValue() ColabRuntimeTemplateDataPersistentDiskSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateEncryptionSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateEncryptionSpecOutputReference
 ```
@@ -2572,7 +2572,7 @@ func InternalValue() ColabRuntimeTemplateEncryptionSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEucConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateEucConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateEucConfigOutputReference
 ```
@@ -2850,7 +2850,7 @@ func InternalValue() ColabRuntimeTemplateEucConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateIdleShutdownConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateIdleShutdownConfigOutputReference
 ```
@@ -3128,7 +3128,7 @@ func InternalValue() ColabRuntimeTemplateIdleShutdownConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateMachineSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateMachineSpecOutputReference
 ```
@@ -3464,7 +3464,7 @@ func InternalValue() ColabRuntimeTemplateMachineSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateNetworkSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateNetworkSpecOutputReference
 ```
@@ -3800,7 +3800,7 @@ func InternalValue() ColabRuntimeTemplateNetworkSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateShieldedVmConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateShieldedVmConfigOutputReference
 ```
@@ -4078,7 +4078,7 @@ func InternalValue() ColabRuntimeTemplateShieldedVmConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateTimeoutsOutputReference
 ```
