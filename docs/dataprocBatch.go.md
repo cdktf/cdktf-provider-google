@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatch(scope Construct, id *string, config DataprocBatchConfig) DataprocBatch
 ```
@@ -553,7 +553,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.DataprocBatch_IsConstruct(x interface{}) *bool
 ```
@@ -585,7 +585,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.DataprocBatch_IsTerraformElement(x interface{}) *bool
 ```
@@ -599,7 +599,7 @@ dataprocbatch.DataprocBatch_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.DataprocBatch_IsTerraformResource(x interface{}) *bool
 ```
@@ -613,7 +613,7 @@ dataprocbatch.DataprocBatch_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.DataprocBatch_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1238,7 +1238,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchConfig {
 	Connection: interface{},
@@ -1249,17 +1249,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	BatchId: *string,
-	EnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchEnvironmentConfig,
+	EnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchEnvironmentConfig,
 	Id: *string,
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	PysparkBatch: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchPysparkBatch,
-	RuntimeConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchRuntimeConfig,
-	SparkBatch: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchSparkBatch,
-	SparkRBatch: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchSparkRBatch,
-	SparkSqlBatch: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchSparkSqlBatch,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchTimeouts,
+	PysparkBatch: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchPysparkBatch,
+	RuntimeConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchRuntimeConfig,
+	SparkBatch: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchSparkBatch,
+	SparkRBatch: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchSparkRBatch,
+	SparkSqlBatch: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchSparkSqlBatch,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchTimeouts,
 }
 ```
 
@@ -1536,11 +1536,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchEnvironmentConfig {
-	ExecutionConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig,
-	PeripheralsConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfig,
+	ExecutionConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig,
+	PeripheralsConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfig,
 }
 ```
 
@@ -1586,7 +1586,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchEnvironmentConfigExecutionConfig {
 	KmsKey: *string,
@@ -1729,11 +1729,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchEnvironmentConfigPeripheralsConfig {
 	MetastoreService: *string,
-	SparkHistoryServerConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig,
+	SparkHistoryServerConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig,
 }
 ```
 
@@ -1779,7 +1779,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig {
 	DataprocCluster: *string,
@@ -1813,7 +1813,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchPysparkBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchPysparkBatch {
 	ArchiveUris: *[]*string,
@@ -1932,10 +1932,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeConfig {
-	AutotuningConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocBatch.DataprocBatchRuntimeConfigAutotuningConfig,
+	AutotuningConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocBatch.DataprocBatchRuntimeConfigAutotuningConfig,
 	Cohort: *string,
 	ContainerImage: *string,
 	Properties: *map[string]*string,
@@ -2030,7 +2030,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeConfigAutotuningConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeConfigAutotuningConfig {
 	Scenarios: *[]*string,
@@ -2064,7 +2064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeInfo {
 
@@ -2077,7 +2077,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoApproximateUsage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeInfoApproximateUsage {
 
@@ -2090,7 +2090,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoCurrentUsage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchRuntimeInfoCurrentUsage {
 
@@ -2103,7 +2103,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchSparkBatch {
 	ArchiveUris: *[]*string,
@@ -2225,7 +2225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkRBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchSparkRBatch {
 	ArchiveUris: *[]*string,
@@ -2314,7 +2314,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkSqlBatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchSparkSqlBatch {
 	JarFileUris: *[]*string,
@@ -2380,7 +2380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchStateHistory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchStateHistory {
 
@@ -2393,7 +2393,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 &dataprocbatch.DataprocBatchTimeouts {
 	Create: *string,
@@ -2455,7 +2455,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchEnvironmentConfigExecutionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchEnvironmentConfigExecutionConfigOutputReference
 ```
@@ -2907,7 +2907,7 @@ func InternalValue() DataprocBatchEnvironmentConfigExecutionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchEnvironmentConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchEnvironmentConfigOutputReference
 ```
@@ -3240,7 +3240,7 @@ func InternalValue() DataprocBatchEnvironmentConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchEnvironmentConfigPeripheralsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchEnvironmentConfigPeripheralsConfigOutputReference
 ```
@@ -3560,7 +3560,7 @@ func InternalValue() DataprocBatchEnvironmentConfigPeripheralsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfigOutputReference
 ```
@@ -3838,7 +3838,7 @@ func InternalValue() DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistory
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchPysparkBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchPysparkBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchPysparkBatchOutputReference
 ```
@@ -4261,7 +4261,7 @@ func InternalValue() DataprocBatchPysparkBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeConfigAutotuningConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeConfigAutotuningConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchRuntimeConfigAutotuningConfigOutputReference
 ```
@@ -4539,7 +4539,7 @@ func InternalValue() DataprocBatchRuntimeConfigAutotuningConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchRuntimeConfigOutputReference
 ```
@@ -4957,7 +4957,7 @@ func InternalValue() DataprocBatchRuntimeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoApproximateUsageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoApproximateUsageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocBatchRuntimeInfoApproximateUsageList
 ```
@@ -5106,7 +5106,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoApproximateUsageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoApproximateUsageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocBatchRuntimeInfoApproximateUsageOutputReference
 ```
@@ -5417,7 +5417,7 @@ func InternalValue() DataprocBatchRuntimeInfoApproximateUsage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoCurrentUsageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoCurrentUsageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocBatchRuntimeInfoCurrentUsageList
 ```
@@ -5566,7 +5566,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoCurrentUsageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoCurrentUsageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocBatchRuntimeInfoCurrentUsageOutputReference
 ```
@@ -5910,7 +5910,7 @@ func InternalValue() DataprocBatchRuntimeInfoCurrentUsage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocBatchRuntimeInfoList
 ```
@@ -6059,7 +6059,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchRuntimeInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocBatchRuntimeInfoOutputReference
 ```
@@ -6381,7 +6381,7 @@ func InternalValue() DataprocBatchRuntimeInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchSparkBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchSparkBatchOutputReference
 ```
@@ -6804,7 +6804,7 @@ func InternalValue() DataprocBatchSparkBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkRBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchSparkRBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchSparkRBatchOutputReference
 ```
@@ -7169,7 +7169,7 @@ func InternalValue() DataprocBatchSparkRBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchSparkSqlBatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchSparkSqlBatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchSparkSqlBatchOutputReference
 ```
@@ -7505,7 +7505,7 @@ func InternalValue() DataprocBatchSparkSqlBatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchStateHistoryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchStateHistoryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataprocBatchStateHistoryList
 ```
@@ -7654,7 +7654,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchStateHistoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchStateHistoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataprocBatchStateHistoryOutputReference
 ```
@@ -7954,7 +7954,7 @@ func InternalValue() DataprocBatchStateHistory
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dataprocbatch"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocbatch"
 
 dataprocbatch.NewDataprocBatchTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocBatchTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.NewComputeRouterPeer(scope Construct, id *string, config ComputeRouterPeerConfig) ComputeRouterPeer
 ```
@@ -604,7 +604,7 @@ func ResetZeroCustomLearnedRoutePriority()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.ComputeRouterPeer_IsConstruct(x interface{}) *bool
 ```
@@ -636,7 +636,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.ComputeRouterPeer_IsTerraformElement(x interface{}) *bool
 ```
@@ -650,7 +650,7 @@ computerouterpeer.ComputeRouterPeer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.ComputeRouterPeer_IsTerraformResource(x interface{}) *bool
 ```
@@ -664,7 +664,7 @@ computerouterpeer.ComputeRouterPeer_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.ComputeRouterPeer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1509,7 +1509,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerAdvertisedIpRanges.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 &computerouterpeer.ComputeRouterPeerAdvertisedIpRanges {
 	Range: *string,
@@ -1559,7 +1559,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerBfd.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 &computerouterpeer.ComputeRouterPeerBfd {
 	SessionInitializationMode: *string,
@@ -1659,7 +1659,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 &computerouterpeer.ComputeRouterPeerConfig {
 	Connection: interface{},
@@ -1677,7 +1677,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
 	AdvertisedIpRanges: interface{},
 	AdvertisedRoutePriority: *f64,
 	AdvertiseMode: *string,
-	Bfd: github.com/cdktf/cdktf-provider-google-go/google.computeRouterPeer.ComputeRouterPeerBfd,
+	Bfd: github.com/cdktf/cdktf-provider-google-go/google/v14.computeRouterPeer.ComputeRouterPeerBfd,
 	CustomLearnedIpRanges: interface{},
 	CustomLearnedRoutePriority: *f64,
 	Enable: interface{},
@@ -1687,14 +1687,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
 	IpAddress: *string,
 	Ipv4NexthopAddress: *string,
 	Ipv6NexthopAddress: *string,
-	Md5AuthenticationKey: github.com/cdktf/cdktf-provider-google-go/google.computeRouterPeer.ComputeRouterPeerMd5AuthenticationKey,
+	Md5AuthenticationKey: github.com/cdktf/cdktf-provider-google-go/google/v14.computeRouterPeer.ComputeRouterPeerMd5AuthenticationKey,
 	PeerIpAddress: *string,
 	PeerIpv4NexthopAddress: *string,
 	PeerIpv6NexthopAddress: *string,
 	Project: *string,
 	Region: *string,
 	RouterApplianceInstance: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeRouterPeer.ComputeRouterPeerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeRouterPeer.ComputeRouterPeerTimeouts,
 	ZeroCustomLearnedRoutePriority: interface{},
 }
 ```
@@ -2232,7 +2232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRanges.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 &computerouterpeer.ComputeRouterPeerCustomLearnedIpRanges {
 	Range: *string,
@@ -2266,7 +2266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerMd5AuthenticationKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 &computerouterpeer.ComputeRouterPeerMd5AuthenticationKey {
 	Key: *string,
@@ -2318,7 +2318,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 &computerouterpeer.ComputeRouterPeerTimeouts {
 	Create: *string,
@@ -2380,7 +2380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerAdvertisedIpRangesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.NewComputeRouterPeerAdvertisedIpRangesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRouterPeerAdvertisedIpRangesList
 ```
@@ -2540,7 +2540,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerAdvertisedIpRangesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.NewComputeRouterPeerAdvertisedIpRangesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRouterPeerAdvertisedIpRangesOutputReference
 ```
@@ -2858,7 +2858,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerBfdOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.NewComputeRouterPeerBfdOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRouterPeerBfdOutputReference
 ```
@@ -3216,7 +3216,7 @@ func InternalValue() ComputeRouterPeerBfd
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.NewComputeRouterPeerCustomLearnedIpRangesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRouterPeerCustomLearnedIpRangesList
 ```
@@ -3376,7 +3376,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerCustomLearnedIpRangesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.NewComputeRouterPeerCustomLearnedIpRangesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRouterPeerCustomLearnedIpRangesOutputReference
 ```
@@ -3665,7 +3665,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerMd5AuthenticationKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.NewComputeRouterPeerMd5AuthenticationKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRouterPeerMd5AuthenticationKeyOutputReference
 ```
@@ -3958,7 +3958,7 @@ func InternalValue() ComputeRouterPeerMd5AuthenticationKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterPeer.ComputeRouterPeerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computerouterpeer"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computerouterpeer"
 
 computerouterpeer.NewComputeRouterPeerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRouterPeerTimeoutsOutputReference
 ```

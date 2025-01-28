@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflowlogsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkmanagementvpcflowlogsconfig"
 
 networkmanagementvpcflowlogsconfig.NewNetworkManagementVpcFlowLogsConfig(scope Construct, id *string, config NetworkManagementVpcFlowLogsConfigConfig) NetworkManagementVpcFlowLogsConfig
 ```
@@ -482,7 +482,7 @@ func ResetVpnTunnel()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflowlogsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkmanagementvpcflowlogsconfig"
 
 networkmanagementvpcflowlogsconfig.NetworkManagementVpcFlowLogsConfig_IsConstruct(x interface{}) *bool
 ```
@@ -514,7 +514,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflowlogsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkmanagementvpcflowlogsconfig"
 
 networkmanagementvpcflowlogsconfig.NetworkManagementVpcFlowLogsConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -528,7 +528,7 @@ networkmanagementvpcflowlogsconfig.NetworkManagementVpcFlowLogsConfig_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflowlogsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkmanagementvpcflowlogsconfig"
 
 networkmanagementvpcflowlogsconfig.NetworkManagementVpcFlowLogsConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -542,7 +542,7 @@ networkmanagementvpcflowlogsconfig.NetworkManagementVpcFlowLogsConfig_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflowlogsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkmanagementvpcflowlogsconfig"
 
 networkmanagementvpcflowlogsconfig.NetworkManagementVpcFlowLogsConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1156,7 +1156,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflowlogsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkmanagementvpcflowlogsconfig"
 
 &networkmanagementvpcflowlogsconfig.NetworkManagementVpcFlowLogsConfigConfig {
 	Connection: interface{},
@@ -1179,7 +1179,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflo
 	MetadataFields: *[]*string,
 	Project: *string,
 	State: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfigTimeouts,
 	VpnTunnel: *string,
 }
 ```
@@ -1522,7 +1522,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflowlogsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkmanagementvpcflowlogsconfig"
 
 &networkmanagementvpcflowlogsconfig.NetworkManagementVpcFlowLogsConfigTimeouts {
 	Create: *string,
@@ -1584,7 +1584,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkManagementVpcFlowLogsConfig.NetworkManagementVpcFlowLogsConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/networkmanagementvpcflowlogsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkmanagementvpcflowlogsconfig"
 
 networkmanagementvpcflowlogsconfig.NewNetworkManagementVpcFlowLogsConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkManagementVpcFlowLogsConfigTimeoutsOutputReference
 ```
