@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/data-sources/pubsub_topic
+// https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/data-sources/pubsub_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGooglePubsubTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/data-sources/pubsub_topic#id DataGooglePubsubTopic#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/data-sources/pubsub_topic#id DataGooglePubsubTopic#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,11 +22,11 @@ export interface DataGooglePubsubTopicConfig extends cdktf.TerraformMetaArgument
   /**
   * Name of the topic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/data-sources/pubsub_topic#name DataGooglePubsubTopic#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/data-sources/pubsub_topic#name DataGooglePubsubTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/data-sources/pubsub_topic#project DataGooglePubsubTopic#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/data-sources/pubsub_topic#project DataGooglePubsubTopic#project}
   */
   readonly project?: string;
 }
@@ -118,6 +118,111 @@ export class DataGooglePubsubTopicIngestionDataSourceSettingsAwsKinesisList exte
   */
   public get(index: number): DataGooglePubsubTopicIngestionDataSourceSettingsAwsKinesisOutputReference {
     return new DataGooglePubsubTopicIngestionDataSourceSettingsAwsKinesisOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubs {
+}
+
+export function dataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubsToTerraform(struct?: DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubsToHclTerraform(struct?: DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // event_hub - computed: true, optional: false, required: false
+  public get eventHub() {
+    return this.getStringAttribute('event_hub');
+  }
+
+  // gcp_service_account - computed: true, optional: false, required: false
+  public get gcpServiceAccount() {
+    return this.getStringAttribute('gcp_service_account');
+  }
+
+  // namespace - computed: true, optional: false, required: false
+  public get namespace() {
+    return this.getStringAttribute('namespace');
+  }
+
+  // resource_group - computed: true, optional: false, required: false
+  public get resourceGroup() {
+    return this.getStringAttribute('resource_group');
+  }
+
+  // subscription_id - computed: true, optional: false, required: false
+  public get subscriptionId() {
+    return this.getStringAttribute('subscription_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+}
+
+export class DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubsOutputReference {
+    return new DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGooglePubsubTopicIngestionDataSourceSettingsCloudStorageAvroFormat {
@@ -570,6 +675,12 @@ export class DataGooglePubsubTopicIngestionDataSourceSettingsOutputReference ext
     return this._awsKinesis;
   }
 
+  // azure_event_hubs - computed: true, optional: false, required: false
+  private _azureEventHubs = new DataGooglePubsubTopicIngestionDataSourceSettingsAzureEventHubsList(this, "azure_event_hubs", false);
+  public get azureEventHubs() {
+    return this._azureEventHubs;
+  }
+
   // cloud_storage - computed: true, optional: false, required: false
   private _cloudStorage = new DataGooglePubsubTopicIngestionDataSourceSettingsCloudStorageList(this, "cloud_storage", false);
   public get cloudStorage() {
@@ -655,6 +766,11 @@ export class DataGooglePubsubTopicMessageStoragePolicyOutputReference extends cd
   // allowed_persistence_regions - computed: true, optional: false, required: false
   public get allowedPersistenceRegions() {
     return this.getListAttribute('allowed_persistence_regions');
+  }
+
+  // enforce_in_transit - computed: true, optional: false, required: false
+  public get enforceInTransit() {
+    return this.getBooleanAttribute('enforce_in_transit');
   }
 }
 
@@ -758,7 +874,7 @@ export class DataGooglePubsubTopicSchemaSettingsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/data-sources/pubsub_topic google_pubsub_topic}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/data-sources/pubsub_topic google_pubsub_topic}
 */
 export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
 
@@ -774,7 +890,7 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGooglePubsubTopic resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGooglePubsubTopic to import
-  * @param importFromId The id of the existing DataGooglePubsubTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/data-sources/pubsub_topic#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGooglePubsubTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/data-sources/pubsub_topic#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGooglePubsubTopic to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -786,7 +902,7 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.17.0/docs/data-sources/pubsub_topic google_pubsub_topic} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/data-sources/pubsub_topic google_pubsub_topic} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -797,7 +913,7 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_pubsub_topic',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.17.0',
+        providerVersion: '6.18.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
