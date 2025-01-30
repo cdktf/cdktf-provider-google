@@ -4,12 +4,12 @@
 
 ### ColabRuntimeTemplate <a name="ColabRuntimeTemplate" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template google_colab_runtime_template}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template google_colab_runtime_template}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplate(scope Construct, id *string, config ColabRuntimeTemplateConfig) ColabRuntimeTemplate
 ```
@@ -580,7 +580,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.ColabRuntimeTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -612,7 +612,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.ColabRuntimeTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ colabruntimetemplate.ColabRuntimeTemplate_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.ColabRuntimeTemplate_IsTerraformResource(x interface{}) *bool
 ```
@@ -640,7 +640,7 @@ colabruntimetemplate.ColabRuntimeTemplate_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.ColabRuntimeTemplate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -669,7 +669,7 @@ The construct id used in the generated config for the ColabRuntimeTemplate to im
 
 The id of the existing ColabRuntimeTemplate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1243,7 +1243,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateConfig {
 	Connection: interface{},
@@ -1255,20 +1255,20 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplat
 	Provisioners: *[]interface{},
 	DisplayName: *string,
 	Location: *string,
-	DataPersistentDiskSpec: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateDataPersistentDiskSpec,
+	DataPersistentDiskSpec: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateDataPersistentDiskSpec,
 	Description: *string,
-	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpec,
-	EucConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateEucConfig,
+	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpec,
+	EucConfig: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateEucConfig,
 	Id: *string,
-	IdleShutdownConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfig,
+	IdleShutdownConfig: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfig,
 	Labels: *map[string]*string,
-	MachineSpec: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpec,
+	MachineSpec: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpec,
 	Name: *string,
-	NetworkSpec: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpec,
+	NetworkSpec: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpec,
 	NetworkTags: *[]*string,
 	Project: *string,
-	ShieldedVmConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts,
+	ShieldedVmConfig: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts,
 }
 ```
 
@@ -1289,14 +1289,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplat
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.description">Description</a></code> | <code>*string</code> | The description of the Runtime Template. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.encryptionSpec">EncryptionSpec</a></code> | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpec">ColabRuntimeTemplateEncryptionSpec</a></code> | encryption_spec block. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.eucConfig">EucConfig</a></code> | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEucConfig">ColabRuntimeTemplateEucConfig</a></code> | euc_config block. |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#id ColabRuntimeTemplate#id}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#id ColabRuntimeTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.idleShutdownConfig">IdleShutdownConfig</a></code> | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfig">ColabRuntimeTemplateIdleShutdownConfig</a></code> | idle_shutdown_config block. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels to identify and group the runtime template. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.machineSpec">MachineSpec</a></code> | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpec">ColabRuntimeTemplateMachineSpec</a></code> | machine_spec block. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.name">Name</a></code> | <code>*string</code> | The resource name of the Runtime Template. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.networkSpec">NetworkSpec</a></code> | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpec">ColabRuntimeTemplateNetworkSpec</a></code> | network_spec block. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.networkTags">NetworkTags</a></code> | <code>*[]*string</code> | Applies the given Compute Engine tags to the runtime. |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#project ColabRuntimeTemplate#project}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#project ColabRuntimeTemplate#project}. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.shieldedVmConfig">ShieldedVmConfig</a></code> | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfig">ColabRuntimeTemplateShieldedVmConfig</a></code> | shielded_vm_config block. |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts">ColabRuntimeTemplateTimeouts</a></code> | timeouts block. |
 
@@ -1382,7 +1382,7 @@ DisplayName *string
 
 Required. The display name of the Runtime Template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#display_name ColabRuntimeTemplate#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#display_name ColabRuntimeTemplate#display_name}
 
 ---
 
@@ -1396,7 +1396,7 @@ Location *string
 
 The location for the resource: https://cloud.google.com/colab/docs/locations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#location ColabRuntimeTemplate#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#location ColabRuntimeTemplate#location}
 
 ---
 
@@ -1410,7 +1410,7 @@ DataPersistentDiskSpec ColabRuntimeTemplateDataPersistentDiskSpec
 
 data_persistent_disk_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#data_persistent_disk_spec ColabRuntimeTemplate#data_persistent_disk_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#data_persistent_disk_spec ColabRuntimeTemplate#data_persistent_disk_spec}
 
 ---
 
@@ -1424,7 +1424,7 @@ Description *string
 
 The description of the Runtime Template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#description ColabRuntimeTemplate#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#description ColabRuntimeTemplate#description}
 
 ---
 
@@ -1438,7 +1438,7 @@ EncryptionSpec ColabRuntimeTemplateEncryptionSpec
 
 encryption_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#encryption_spec ColabRuntimeTemplate#encryption_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#encryption_spec ColabRuntimeTemplate#encryption_spec}
 
 ---
 
@@ -1452,7 +1452,7 @@ EucConfig ColabRuntimeTemplateEucConfig
 
 euc_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#euc_config ColabRuntimeTemplate#euc_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#euc_config ColabRuntimeTemplate#euc_config}
 
 ---
 
@@ -1464,7 +1464,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#id ColabRuntimeTemplate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#id ColabRuntimeTemplate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1481,7 +1481,7 @@ IdleShutdownConfig ColabRuntimeTemplateIdleShutdownConfig
 
 idle_shutdown_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#idle_shutdown_config ColabRuntimeTemplate#idle_shutdown_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#idle_shutdown_config ColabRuntimeTemplate#idle_shutdown_config}
 
 ---
 
@@ -1498,7 +1498,7 @@ Labels to identify and group the runtime template.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#labels ColabRuntimeTemplate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#labels ColabRuntimeTemplate#labels}
 
 ---
 
@@ -1512,7 +1512,7 @@ MachineSpec ColabRuntimeTemplateMachineSpec
 
 machine_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#machine_spec ColabRuntimeTemplate#machine_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#machine_spec ColabRuntimeTemplate#machine_spec}
 
 ---
 
@@ -1526,7 +1526,7 @@ Name *string
 
 The resource name of the Runtime Template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#name ColabRuntimeTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#name ColabRuntimeTemplate#name}
 
 ---
 
@@ -1540,7 +1540,7 @@ NetworkSpec ColabRuntimeTemplateNetworkSpec
 
 network_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#network_spec ColabRuntimeTemplate#network_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#network_spec ColabRuntimeTemplate#network_spec}
 
 ---
 
@@ -1554,7 +1554,7 @@ NetworkTags *[]*string
 
 Applies the given Compute Engine tags to the runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#network_tags ColabRuntimeTemplate#network_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#network_tags ColabRuntimeTemplate#network_tags}
 
 ---
 
@@ -1566,7 +1566,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#project ColabRuntimeTemplate#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#project ColabRuntimeTemplate#project}.
 
 ---
 
@@ -1580,7 +1580,7 @@ ShieldedVmConfig ColabRuntimeTemplateShieldedVmConfig
 
 shielded_vm_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#shielded_vm_config ColabRuntimeTemplate#shielded_vm_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#shielded_vm_config ColabRuntimeTemplate#shielded_vm_config}
 
 ---
 
@@ -1594,7 +1594,7 @@ Timeouts ColabRuntimeTemplateTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#timeouts ColabRuntimeTemplate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#timeouts ColabRuntimeTemplate#timeouts}
 
 ---
 
@@ -1603,7 +1603,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateDataPersistentDiskSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateDataPersistentDiskSpec {
 	DiskSizeGb: *string,
@@ -1632,7 +1632,7 @@ The disk size of the runtime in GB.
 
 If specified, the diskType must also be specified. The minimum size is 10GB and the maximum is 65536GB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#disk_size_gb ColabRuntimeTemplate#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#disk_size_gb ColabRuntimeTemplate#disk_size_gb}
 
 ---
 
@@ -1646,7 +1646,7 @@ DiskType *string
 
 The type of the persistent disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#disk_type ColabRuntimeTemplate#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#disk_type ColabRuntimeTemplate#disk_type}
 
 ---
 
@@ -1655,7 +1655,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateEncryptionSpec {
 	KmsKeyName: *string,
@@ -1680,7 +1680,7 @@ KmsKeyName *string
 
 The Cloud KMS encryption key (customer-managed encryption key) used to protect the runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#kms_key_name ColabRuntimeTemplate#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#kms_key_name ColabRuntimeTemplate#kms_key_name}
 
 ---
 
@@ -1689,7 +1689,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEucConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateEucConfig {
 	EucDisabled: interface{},
@@ -1714,7 +1714,7 @@ EucDisabled interface{}
 
 Disable end user credential access for the runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#euc_disabled ColabRuntimeTemplate#euc_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#euc_disabled ColabRuntimeTemplate#euc_disabled}
 
 ---
 
@@ -1723,7 +1723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateIdleShutdownConfig {
 	IdleTimeout: *string,
@@ -1750,7 +1750,7 @@ The duration after which the runtime is automatically shut down.
 
 An input of 0s disables the idle shutdown feature, and a valid range is [10m, 24h].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#idle_timeout ColabRuntimeTemplate#idle_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#idle_timeout ColabRuntimeTemplate#idle_timeout}
 
 ---
 
@@ -1759,7 +1759,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateMachineSpec {
 	AcceleratorCount: *f64,
@@ -1788,7 +1788,7 @@ AcceleratorCount *f64
 
 The number of accelerators used by the runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#accelerator_count ColabRuntimeTemplate#accelerator_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#accelerator_count ColabRuntimeTemplate#accelerator_count}
 
 ---
 
@@ -1802,7 +1802,7 @@ AcceleratorType *string
 
 The type of hardware accelerator used by the runtime. If specified, acceleratorCount must also be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#accelerator_type ColabRuntimeTemplate#accelerator_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#accelerator_type ColabRuntimeTemplate#accelerator_type}
 
 ---
 
@@ -1816,7 +1816,7 @@ MachineType *string
 
 The Compute Engine machine type selected for the runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#machine_type ColabRuntimeTemplate#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#machine_type ColabRuntimeTemplate#machine_type}
 
 ---
 
@@ -1825,7 +1825,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateNetworkSpec {
 	EnableInternetAccess: interface{},
@@ -1854,7 +1854,7 @@ EnableInternetAccess interface{}
 
 Enable public internet access for the runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#enable_internet_access ColabRuntimeTemplate#enable_internet_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#enable_internet_access ColabRuntimeTemplate#enable_internet_access}
 
 ---
 
@@ -1868,7 +1868,7 @@ Network *string
 
 The name of the VPC that this runtime is in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#network ColabRuntimeTemplate#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#network ColabRuntimeTemplate#network}
 
 ---
 
@@ -1882,7 +1882,7 @@ Subnetwork *string
 
 The name of the subnetwork that this runtime is in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#subnetwork ColabRuntimeTemplate#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#subnetwork ColabRuntimeTemplate#subnetwork}
 
 ---
 
@@ -1891,7 +1891,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateShieldedVmConfig {
 	EnableSecureBoot: interface{},
@@ -1916,7 +1916,7 @@ EnableSecureBoot interface{}
 
 Enables secure boot for the runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#enable_secure_boot ColabRuntimeTemplate#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#enable_secure_boot ColabRuntimeTemplate#enable_secure_boot}
 
 ---
 
@@ -1925,7 +1925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 &colabruntimetemplate.ColabRuntimeTemplateTimeouts {
 	Create: *string,
@@ -1938,9 +1938,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplat
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#create ColabRuntimeTemplate#create}. |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#delete ColabRuntimeTemplate#delete}. |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#update ColabRuntimeTemplate#update}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#create ColabRuntimeTemplate#create}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#delete ColabRuntimeTemplate#delete}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#update ColabRuntimeTemplate#update}. |
 
 ---
 
@@ -1952,7 +1952,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#create ColabRuntimeTemplate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#create ColabRuntimeTemplate#create}.
 
 ---
 
@@ -1964,7 +1964,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#delete ColabRuntimeTemplate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#delete ColabRuntimeTemplate#delete}.
 
 ---
 
@@ -1976,7 +1976,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.0/docs/resources/colab_runtime_template#update ColabRuntimeTemplate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/colab_runtime_template#update ColabRuntimeTemplate#update}.
 
 ---
 
@@ -1987,7 +1987,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateDataPersistentDiskSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateDataPersistentDiskSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateDataPersistentDiskSpecOutputReference
 ```
@@ -2294,7 +2294,7 @@ func InternalValue() ColabRuntimeTemplateDataPersistentDiskSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEncryptionSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateEncryptionSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateEncryptionSpecOutputReference
 ```
@@ -2572,7 +2572,7 @@ func InternalValue() ColabRuntimeTemplateEncryptionSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateEucConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateEucConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateEucConfigOutputReference
 ```
@@ -2850,7 +2850,7 @@ func InternalValue() ColabRuntimeTemplateEucConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateIdleShutdownConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateIdleShutdownConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateIdleShutdownConfigOutputReference
 ```
@@ -3128,7 +3128,7 @@ func InternalValue() ColabRuntimeTemplateIdleShutdownConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateMachineSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateMachineSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateMachineSpecOutputReference
 ```
@@ -3464,7 +3464,7 @@ func InternalValue() ColabRuntimeTemplateMachineSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateNetworkSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateNetworkSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateNetworkSpecOutputReference
 ```
@@ -3800,7 +3800,7 @@ func InternalValue() ColabRuntimeTemplateNetworkSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateShieldedVmConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateShieldedVmConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateShieldedVmConfigOutputReference
 ```
@@ -4078,7 +4078,7 @@ func InternalValue() ColabRuntimeTemplateShieldedVmConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplate.ColabRuntimeTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/colabruntimetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/colabruntimetemplate"
 
 colabruntimetemplate.NewColabRuntimeTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ColabRuntimeTemplateTimeoutsOutputReference
 ```
