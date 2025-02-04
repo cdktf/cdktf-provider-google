@@ -81,6 +81,9 @@ Object.defineProperty(exports, 'beyondcorpAppConnection', { get: function () { r
 Object.defineProperty(exports, 'beyondcorpAppConnector', { get: function () { return require('./beyondcorp-app-connector'); } });
 Object.defineProperty(exports, 'beyondcorpAppGateway', { get: function () { return require('./beyondcorp-app-gateway'); } });
 Object.defineProperty(exports, 'beyondcorpSecurityGateway', { get: function () { return require('./beyondcorp-security-gateway'); } });
+Object.defineProperty(exports, 'beyondcorpSecurityGatewayIamBinding', { get: function () { return require('./beyondcorp-security-gateway-iam-binding'); } });
+Object.defineProperty(exports, 'beyondcorpSecurityGatewayIamMember', { get: function () { return require('./beyondcorp-security-gateway-iam-member'); } });
+Object.defineProperty(exports, 'beyondcorpSecurityGatewayIamPolicy', { get: function () { return require('./beyondcorp-security-gateway-iam-policy'); } });
 Object.defineProperty(exports, 'biglakeCatalog', { get: function () { return require('./biglake-catalog'); } });
 Object.defineProperty(exports, 'biglakeDatabase', { get: function () { return require('./biglake-database'); } });
 Object.defineProperty(exports, 'biglakeTable', { get: function () { return require('./biglake-table'); } });
@@ -960,6 +963,7 @@ Object.defineProperty(exports, 'dataGoogleBackupDrDataSource', { get: function (
 Object.defineProperty(exports, 'dataGoogleBeyondcorpAppConnection', { get: function () { return require('./data-google-beyondcorp-app-connection'); } });
 Object.defineProperty(exports, 'dataGoogleBeyondcorpAppConnector', { get: function () { return require('./data-google-beyondcorp-app-connector'); } });
 Object.defineProperty(exports, 'dataGoogleBeyondcorpAppGateway', { get: function () { return require('./data-google-beyondcorp-app-gateway'); } });
+Object.defineProperty(exports, 'dataGoogleBeyondcorpSecurityGatewayIamPolicy', { get: function () { return require('./data-google-beyondcorp-security-gateway-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryAnalyticsHubDataExchangeIamPolicy', { get: function () { return require('./data-google-bigquery-analytics-hub-data-exchange-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryAnalyticsHubListingIamPolicy', { get: function () { return require('./data-google-bigquery-analytics-hub-listing-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleBigqueryConnectionIamPolicy', { get: function () { return require('./data-google-bigquery-connection-iam-policy'); } });

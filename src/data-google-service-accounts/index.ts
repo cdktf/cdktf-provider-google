@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts
+// https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,16 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleServiceAccountsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts#id DataGoogleServiceAccounts#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#id DataGoogleServiceAccounts#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts#project DataGoogleServiceAccounts#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#prefix DataGoogleServiceAccounts#prefix}
+  */
+  readonly prefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#project DataGoogleServiceAccounts#project}
   */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#regex DataGoogleServiceAccounts#regex}
+  */
+  readonly regex?: string;
 }
 export interface DataGoogleServiceAccountsAccounts {
 }
@@ -131,7 +139,7 @@ export class DataGoogleServiceAccountsAccountsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts google_service_accounts}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts google_service_accounts}
 */
 export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
 
@@ -147,7 +155,7 @@ export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleServiceAccounts resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleServiceAccounts to import
-  * @param importFromId The id of the existing DataGoogleServiceAccounts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleServiceAccounts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleServiceAccounts to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -159,7 +167,7 @@ export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts google_service_accounts} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts google_service_accounts} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -170,7 +178,7 @@ export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_service_accounts',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.18.1',
+        providerVersion: '6.19.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -182,7 +190,9 @@ export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
       forEach: config.forEach
     });
     this._id = config.id;
+    this._prefix = config.prefix;
     this._project = config.project;
+    this._regex = config.regex;
   }
 
   // ==========
@@ -211,6 +221,22 @@ export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
     return this._id;
   }
 
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+
   // project - computed: false, optional: true, required: false
   private _project?: string; 
   public get project() {
@@ -227,6 +253,22 @@ export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
     return this._project;
   }
 
+  // regex - computed: false, optional: true, required: false
+  private _regex?: string; 
+  public get regex() {
+    return this.getStringAttribute('regex');
+  }
+  public set regex(value: string) {
+    this._regex = value;
+  }
+  public resetRegex() {
+    this._regex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regexInput() {
+    return this._regex;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -234,7 +276,9 @@ export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      prefix: cdktf.stringToTerraform(this._prefix),
       project: cdktf.stringToTerraform(this._project),
+      regex: cdktf.stringToTerraform(this._regex),
     };
   }
 
@@ -246,8 +290,20 @@ export class DataGoogleServiceAccounts extends cdktf.TerraformDataSource {
         type: "simple",
         storageClassType: "string",
       },
+      prefix: {
+        value: cdktf.stringToHclTerraform(this._prefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       project: {
         value: cdktf.stringToHclTerraform(this._project),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      regex: {
+        value: cdktf.stringToHclTerraform(this._regex),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

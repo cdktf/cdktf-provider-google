@@ -6951,6 +6951,11 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
     return this.getStringAttribute('machine_type');
   }
 
+  // max_run_duration - computed: true, optional: false, required: false
+  public get maxRunDuration() {
+    return this.getStringAttribute('max_run_duration');
+  }
+
   // metadata - computed: true, optional: false, required: false
   private _metadata = new cdktf.StringMap(this, "metadata");
   public get metadata() {

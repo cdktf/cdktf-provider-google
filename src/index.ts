@@ -81,6 +81,9 @@ export * as beyondcorpAppConnection from './beyondcorp-app-connection';
 export * as beyondcorpAppConnector from './beyondcorp-app-connector';
 export * as beyondcorpAppGateway from './beyondcorp-app-gateway';
 export * as beyondcorpSecurityGateway from './beyondcorp-security-gateway';
+export * as beyondcorpSecurityGatewayIamBinding from './beyondcorp-security-gateway-iam-binding';
+export * as beyondcorpSecurityGatewayIamMember from './beyondcorp-security-gateway-iam-member';
+export * as beyondcorpSecurityGatewayIamPolicy from './beyondcorp-security-gateway-iam-policy';
 export * as biglakeCatalog from './biglake-catalog';
 export * as biglakeDatabase from './biglake-database';
 export * as biglakeTable from './biglake-table';
@@ -960,6 +963,7 @@ export * as dataGoogleBackupDrDataSource from './data-google-backup-dr-data-sour
 export * as dataGoogleBeyondcorpAppConnection from './data-google-beyondcorp-app-connection';
 export * as dataGoogleBeyondcorpAppConnector from './data-google-beyondcorp-app-connector';
 export * as dataGoogleBeyondcorpAppGateway from './data-google-beyondcorp-app-gateway';
+export * as dataGoogleBeyondcorpSecurityGatewayIamPolicy from './data-google-beyondcorp-security-gateway-iam-policy';
 export * as dataGoogleBigqueryAnalyticsHubDataExchangeIamPolicy from './data-google-bigquery-analytics-hub-data-exchange-iam-policy';
 export * as dataGoogleBigqueryAnalyticsHubListingIamPolicy from './data-google-bigquery-analytics-hub-listing-iam-policy';
 export * as dataGoogleBigqueryConnectionIamPolicy from './data-google-bigquery-connection-iam-policy';
