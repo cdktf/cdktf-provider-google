@@ -4,12 +4,12 @@
 
 ### DataGoogleServiceAccounts <a name="DataGoogleServiceAccounts" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts google_service_accounts}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts google_service_accounts}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.NewDataGoogleServiceAccounts(scope Construct, id *string, config DataGoogleServiceAccountsConfig) DataGoogleServiceAccounts
 ```
@@ -68,7 +68,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.resetId">ResetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.resetPrefix">ResetPrefix</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.resetProject">ResetProject</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.resetRegex">ResetRegex</a></code> | *No description.* |
 
 ---
 
@@ -270,10 +272,22 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 func ResetId()
 ```
 
+##### `ResetPrefix` <a name="ResetPrefix" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.resetPrefix"></a>
+
+```go
+func ResetPrefix()
+```
+
 ##### `ResetProject` <a name="ResetProject" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.resetProject"></a>
 
 ```go
 func ResetProject()
+```
+
+##### `ResetRegex` <a name="ResetRegex" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.resetRegex"></a>
+
+```go
+func ResetRegex()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -290,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.DataGoogleServiceAccounts_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.DataGoogleServiceAccounts_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +350,7 @@ datagoogleserviceaccounts.DataGoogleServiceAccounts_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.DataGoogleServiceAccounts_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +364,7 @@ datagoogleserviceaccounts.DataGoogleServiceAccounts_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.DataGoogleServiceAccounts_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -379,7 +393,7 @@ The construct id used in the generated config for the DataGoogleServiceAccounts 
 
 The id of the existing DataGoogleServiceAccounts that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -409,9 +423,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.1
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.accounts">Accounts</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsAccountsList">DataGoogleServiceAccountsAccountsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.prefixInput">PrefixInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.projectInput">ProjectInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.regexInput">RegexInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.id">Id</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.prefix">Prefix</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.project">Project</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.regex">Regex</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
@@ -557,10 +575,30 @@ func IdInput() *string
 
 ---
 
+##### `PrefixInput`<sup>Optional</sup> <a name="PrefixInput" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.prefixInput"></a>
+
+```go
+func PrefixInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `ProjectInput`<sup>Optional</sup> <a name="ProjectInput" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.projectInput"></a>
 
 ```go
 func ProjectInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `RegexInput`<sup>Optional</sup> <a name="RegexInput" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.regexInput"></a>
+
+```go
+func RegexInput() *string
 ```
 
 - *Type:* *string
@@ -577,10 +615,30 @@ func Id() *string
 
 ---
 
+##### `Prefix`<sup>Required</sup> <a name="Prefix" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.prefix"></a>
+
+```go
+func Prefix() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `Project`<sup>Required</sup> <a name="Project" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.project"></a>
 
 ```go
 func Project() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Regex`<sup>Required</sup> <a name="Regex" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.property.regex"></a>
+
+```go
+func Regex() *string
 ```
 
 - *Type:* *string
@@ -612,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 &datagoogleserviceaccounts.DataGoogleServiceAccountsAccounts {
 
@@ -625,7 +683,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceac
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 &datagoogleserviceaccounts.DataGoogleServiceAccountsConfig {
 	Connection: interface{},
@@ -636,7 +694,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceac
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Id: *string,
+	Prefix: *string,
 	Project: *string,
+	Regex: *string,
 }
 ```
 
@@ -651,8 +711,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceac
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts#id DataGoogleServiceAccounts#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts#project DataGoogleServiceAccounts#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#id DataGoogleServiceAccounts#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.prefix">Prefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#prefix DataGoogleServiceAccounts#prefix}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#project DataGoogleServiceAccounts#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.regex">Regex</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#regex DataGoogleServiceAccounts#regex}. |
 
 ---
 
@@ -734,10 +796,22 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts#id DataGoogleServiceAccounts#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#id DataGoogleServiceAccounts#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `Prefix`<sup>Optional</sup> <a name="Prefix" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.prefix"></a>
+
+```go
+Prefix *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#prefix DataGoogleServiceAccounts#prefix}.
 
 ---
 
@@ -749,7 +823,19 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/data-sources/service_accounts#project DataGoogleServiceAccounts#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#project DataGoogleServiceAccounts#project}.
+
+---
+
+##### `Regex`<sup>Optional</sup> <a name="Regex" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.property.regex"></a>
+
+```go
+Regex *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/service_accounts#regex DataGoogleServiceAccounts#regex}.
 
 ---
 
@@ -760,7 +846,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsAccountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.NewDataGoogleServiceAccountsAccountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleServiceAccountsAccountsList
 ```
@@ -909,7 +995,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsAccountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.NewDataGoogleServiceAccountsAccountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleServiceAccountsAccountsOutputReference
 ```

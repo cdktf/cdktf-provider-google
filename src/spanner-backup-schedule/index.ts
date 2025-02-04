@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule
+// https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface SpannerBackupScheduleConfig extends cdktf.TerraformMetaArgument
   /**
   * The database to create the backup schedule on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#database SpannerBackupSchedule#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#database SpannerBackupSchedule#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#id SpannerBackupSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#id SpannerBackupSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,18 +23,18 @@ export interface SpannerBackupScheduleConfig extends cdktf.TerraformMetaArgument
   /**
   * The instance to create the database on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#instance SpannerBackupSchedule#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#instance SpannerBackupSchedule#instance}
   */
   readonly instance: string;
   /**
   * A unique identifier for the backup schedule, which cannot be changed after
   * the backup schedule is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#name SpannerBackupSchedule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#name SpannerBackupSchedule#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#project SpannerBackupSchedule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#project SpannerBackupSchedule#project}
   */
   readonly project?: string;
   /**
@@ -47,33 +42,161 @@ export interface SpannerBackupScheduleConfig extends cdktf.TerraformMetaArgument
   * A duration in seconds with up to nine fractional digits, ending with 's'. Example: '3.5s'.
   * You can set this to a value up to 366 days.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#retention_duration SpannerBackupSchedule#retention_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#retention_duration SpannerBackupSchedule#retention_duration}
   */
   readonly retentionDuration: string;
   /**
+  * encryption_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#encryption_config SpannerBackupSchedule#encryption_config}
+  */
+  readonly encryptionConfig?: SpannerBackupScheduleEncryptionConfig;
+  /**
   * full_backup_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#full_backup_spec SpannerBackupSchedule#full_backup_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#full_backup_spec SpannerBackupSchedule#full_backup_spec}
   */
   readonly fullBackupSpec?: SpannerBackupScheduleFullBackupSpec;
   /**
   * incremental_backup_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#incremental_backup_spec SpannerBackupSchedule#incremental_backup_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#incremental_backup_spec SpannerBackupSchedule#incremental_backup_spec}
   */
   readonly incrementalBackupSpec?: SpannerBackupScheduleIncrementalBackupSpec;
   /**
   * spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#spec SpannerBackupSchedule#spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#spec SpannerBackupSchedule#spec}
   */
   readonly spec?: SpannerBackupScheduleSpec;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#timeouts SpannerBackupSchedule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#timeouts SpannerBackupSchedule#timeouts}
   */
   readonly timeouts?: SpannerBackupScheduleTimeouts;
+}
+export interface SpannerBackupScheduleEncryptionConfig {
+  /**
+  * The encryption type of backups created by the backup schedule.
+  * Possible values are USE_DATABASE_ENCRYPTION, GOOGLE_DEFAULT_ENCRYPTION, or CUSTOMER_MANAGED_ENCRYPTION.
+  * If you use CUSTOMER_MANAGED_ENCRYPTION, you must specify a kmsKeyName.
+  * If your backup type is incremental-backup, the encryption type must be GOOGLE_DEFAULT_ENCRYPTION. Possible values: ["USE_DATABASE_ENCRYPTION", "GOOGLE_DEFAULT_ENCRYPTION", "CUSTOMER_MANAGED_ENCRYPTION"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#encryption_type SpannerBackupSchedule#encryption_type}
+  */
+  readonly encryptionType: string;
+  /**
+  * The resource name of the Cloud KMS key to use for encryption.
+  * Format: 'projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#kms_key_name SpannerBackupSchedule#kms_key_name}
+  */
+  readonly kmsKeyName?: string;
+}
+
+export function spannerBackupScheduleEncryptionConfigToTerraform(struct?: SpannerBackupScheduleEncryptionConfigOutputReference | SpannerBackupScheduleEncryptionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    encryption_type: cdktf.stringToTerraform(struct!.encryptionType),
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
+  }
+}
+
+
+export function spannerBackupScheduleEncryptionConfigToHclTerraform(struct?: SpannerBackupScheduleEncryptionConfigOutputReference | SpannerBackupScheduleEncryptionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    encryption_type: {
+      value: cdktf.stringToHclTerraform(struct!.encryptionType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_name: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class SpannerBackupScheduleEncryptionConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpannerBackupScheduleEncryptionConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._encryptionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encryptionType = this._encryptionType;
+    }
+    if (this._kmsKeyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpannerBackupScheduleEncryptionConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._encryptionType = undefined;
+      this._kmsKeyName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._encryptionType = value.encryptionType;
+      this._kmsKeyName = value.kmsKeyName;
+    }
+  }
+
+  // encryption_type - computed: false, optional: false, required: true
+  private _encryptionType?: string; 
+  public get encryptionType() {
+    return this.getStringAttribute('encryption_type');
+  }
+  public set encryptionType(value: string) {
+    this._encryptionType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionTypeInput() {
+    return this._encryptionType;
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
+  }
 }
 export interface SpannerBackupScheduleFullBackupSpec {
 }
@@ -187,7 +310,7 @@ export interface SpannerBackupScheduleSpecCronSpec {
   *   0 2 * * 0    : once a week every Sunday at 2 past midnight in UTC.
   *   0 2 8 * *    : once a month on 8th day at 2 past midnight in UTC.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#text SpannerBackupSchedule#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#text SpannerBackupSchedule#text}
   */
   readonly text?: string;
 }
@@ -273,7 +396,7 @@ export interface SpannerBackupScheduleSpec {
   /**
   * cron_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#cron_spec SpannerBackupSchedule#cron_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#cron_spec SpannerBackupSchedule#cron_spec}
   */
   readonly cronSpec?: SpannerBackupScheduleSpecCronSpec;
 }
@@ -357,15 +480,15 @@ export class SpannerBackupScheduleSpecOutputReference extends cdktf.ComplexObjec
 }
 export interface SpannerBackupScheduleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#create SpannerBackupSchedule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#create SpannerBackupSchedule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#delete SpannerBackupSchedule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#delete SpannerBackupSchedule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#update SpannerBackupSchedule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#update SpannerBackupSchedule#update}
   */
   readonly update?: string;
 }
@@ -517,7 +640,7 @@ export class SpannerBackupScheduleTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule google_spanner_backup_schedule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule google_spanner_backup_schedule}
 */
 export class SpannerBackupSchedule extends cdktf.TerraformResource {
 
@@ -533,7 +656,7 @@ export class SpannerBackupSchedule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SpannerBackupSchedule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SpannerBackupSchedule to import
-  * @param importFromId The id of the existing SpannerBackupSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SpannerBackupSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SpannerBackupSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -545,7 +668,7 @@ export class SpannerBackupSchedule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.18.1/docs/resources/spanner_backup_schedule google_spanner_backup_schedule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/spanner_backup_schedule google_spanner_backup_schedule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -556,7 +679,7 @@ export class SpannerBackupSchedule extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_backup_schedule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.18.1',
+        providerVersion: '6.19.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -573,6 +696,7 @@ export class SpannerBackupSchedule extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._retentionDuration = config.retentionDuration;
+    this._encryptionConfig.internalValue = config.encryptionConfig;
     this._fullBackupSpec.internalValue = config.fullBackupSpec;
     this._incrementalBackupSpec.internalValue = config.incrementalBackupSpec;
     this._spec.internalValue = config.spec;
@@ -670,6 +794,22 @@ export class SpannerBackupSchedule extends cdktf.TerraformResource {
     return this._retentionDuration;
   }
 
+  // encryption_config - computed: false, optional: true, required: false
+  private _encryptionConfig = new SpannerBackupScheduleEncryptionConfigOutputReference(this, "encryption_config");
+  public get encryptionConfig() {
+    return this._encryptionConfig;
+  }
+  public putEncryptionConfig(value: SpannerBackupScheduleEncryptionConfig) {
+    this._encryptionConfig.internalValue = value;
+  }
+  public resetEncryptionConfig() {
+    this._encryptionConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionConfigInput() {
+    return this._encryptionConfig.internalValue;
+  }
+
   // full_backup_spec - computed: false, optional: true, required: false
   private _fullBackupSpec = new SpannerBackupScheduleFullBackupSpecOutputReference(this, "full_backup_spec");
   public get fullBackupSpec() {
@@ -746,6 +886,7 @@ export class SpannerBackupSchedule extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       retention_duration: cdktf.stringToTerraform(this._retentionDuration),
+      encryption_config: spannerBackupScheduleEncryptionConfigToTerraform(this._encryptionConfig.internalValue),
       full_backup_spec: spannerBackupScheduleFullBackupSpecToTerraform(this._fullBackupSpec.internalValue),
       incremental_backup_spec: spannerBackupScheduleIncrementalBackupSpecToTerraform(this._incrementalBackupSpec.internalValue),
       spec: spannerBackupScheduleSpecToTerraform(this._spec.internalValue),
@@ -790,6 +931,12 @@ export class SpannerBackupSchedule extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      encryption_config: {
+        value: spannerBackupScheduleEncryptionConfigToHclTerraform(this._encryptionConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpannerBackupScheduleEncryptionConfigList",
       },
       full_backup_spec: {
         value: spannerBackupScheduleFullBackupSpecToHclTerraform(this._fullBackupSpec.internalValue),
