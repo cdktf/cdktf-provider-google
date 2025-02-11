@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime
+// https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,19 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface ColabRuntimeConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Triggers an upgrade anytime the runtime is started if it is upgradable.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#auto_upgrade ColabRuntime#auto_upgrade}
+  */
+  readonly autoUpgrade?: boolean | cdktf.IResolvable;
+  /**
   * The description of the Runtime.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#description ColabRuntime#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#description ColabRuntime#description}
   */
   readonly description?: string;
   /**
+  * Desired state of the Colab Runtime. Set this field to 'RUNNING' to start the runtime, and 'STOPPED' to stop it.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#desired_state ColabRuntime#desired_state}
+  */
+  readonly desiredState?: string;
+  /**
   * Required. The display name of the Runtime.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#display_name ColabRuntime#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#display_name ColabRuntime#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#id ColabRuntime#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#id ColabRuntime#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,35 +41,35 @@ export interface ColabRuntimeConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location for the resource: https://cloud.google.com/colab/docs/locations
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#location ColabRuntime#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#location ColabRuntime#location}
   */
   readonly location: string;
   /**
   * The resource name of the Runtime
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#name ColabRuntime#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#name ColabRuntime#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#project ColabRuntime#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#project ColabRuntime#project}
   */
   readonly project?: string;
   /**
   * The user email of the NotebookRuntime.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#runtime_user ColabRuntime#runtime_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#runtime_user ColabRuntime#runtime_user}
   */
   readonly runtimeUser: string;
   /**
   * notebook_runtime_template_ref block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#notebook_runtime_template_ref ColabRuntime#notebook_runtime_template_ref}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#notebook_runtime_template_ref ColabRuntime#notebook_runtime_template_ref}
   */
   readonly notebookRuntimeTemplateRef?: ColabRuntimeNotebookRuntimeTemplateRef;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#timeouts ColabRuntime#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#timeouts ColabRuntime#timeouts}
   */
   readonly timeouts?: ColabRuntimeTimeouts;
 }
@@ -70,7 +77,7 @@ export interface ColabRuntimeNotebookRuntimeTemplateRef {
   /**
   * The resource name of the NotebookRuntimeTemplate based on which a NotebookRuntime will be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#notebook_runtime_template ColabRuntime#notebook_runtime_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#notebook_runtime_template ColabRuntime#notebook_runtime_template}
   */
   readonly notebookRuntimeTemplate: string;
 }
@@ -151,15 +158,15 @@ export class ColabRuntimeNotebookRuntimeTemplateRefOutputReference extends cdktf
 }
 export interface ColabRuntimeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#create ColabRuntime#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#create ColabRuntime#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#delete ColabRuntime#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#delete ColabRuntime#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#update ColabRuntime#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#update ColabRuntime#update}
   */
   readonly update?: string;
 }
@@ -311,7 +318,7 @@ export class ColabRuntimeTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime google_colab_runtime}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime google_colab_runtime}
 */
 export class ColabRuntime extends cdktf.TerraformResource {
 
@@ -327,7 +334,7 @@ export class ColabRuntime extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ColabRuntime resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ColabRuntime to import
-  * @param importFromId The id of the existing ColabRuntime that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ColabRuntime that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ColabRuntime to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -339,7 +346,7 @@ export class ColabRuntime extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/resources/colab_runtime google_colab_runtime} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/colab_runtime google_colab_runtime} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -350,7 +357,7 @@ export class ColabRuntime extends cdktf.TerraformResource {
       terraformResourceType: 'google_colab_runtime',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.19.0',
+        providerVersion: '6.20.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -361,7 +368,9 @@ export class ColabRuntime extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._autoUpgrade = config.autoUpgrade;
     this._description = config.description;
+    this._desiredState = config.desiredState;
     this._displayName = config.displayName;
     this._id = config.id;
     this._location = config.location;
@@ -375,6 +384,22 @@ export class ColabRuntime extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // auto_upgrade - computed: false, optional: true, required: false
+  private _autoUpgrade?: boolean | cdktf.IResolvable; 
+  public get autoUpgrade() {
+    return this.getBooleanAttribute('auto_upgrade');
+  }
+  public set autoUpgrade(value: boolean | cdktf.IResolvable) {
+    this._autoUpgrade = value;
+  }
+  public resetAutoUpgrade() {
+    this._autoUpgrade = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoUpgradeInput() {
+    return this._autoUpgrade;
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string; 
@@ -392,6 +417,22 @@ export class ColabRuntime extends cdktf.TerraformResource {
     return this._description;
   }
 
+  // desired_state - computed: false, optional: true, required: false
+  private _desiredState?: string; 
+  public get desiredState() {
+    return this.getStringAttribute('desired_state');
+  }
+  public set desiredState(value: string) {
+    this._desiredState = value;
+  }
+  public resetDesiredState() {
+    this._desiredState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get desiredStateInput() {
+    return this._desiredState;
+  }
+
   // display_name - computed: false, optional: false, required: true
   private _displayName?: string; 
   public get displayName() {
@@ -403,6 +444,11 @@ export class ColabRuntime extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
     return this._displayName;
+  }
+
+  // expiration_time - computed: true, optional: false, required: false
+  public get expirationTime() {
+    return this.getStringAttribute('expiration_time');
   }
 
   // id - computed: true, optional: true, required: false
@@ -419,6 +465,11 @@ export class ColabRuntime extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // is_upgradable - computed: true, optional: false, required: false
+  public get isUpgradable() {
+    return this.getBooleanAttribute('is_upgradable');
   }
 
   // location - computed: false, optional: false, required: true
@@ -450,6 +501,11 @@ export class ColabRuntime extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // notebook_runtime_type - computed: true, optional: false, required: false
+  public get notebookRuntimeType() {
+    return this.getStringAttribute('notebook_runtime_type');
+  }
+
   // project - computed: true, optional: true, required: false
   private _project?: string; 
   public get project() {
@@ -477,6 +533,11 @@ export class ColabRuntime extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get runtimeUserInput() {
     return this._runtimeUser;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
   }
 
   // notebook_runtime_template_ref - computed: false, optional: true, required: false
@@ -517,7 +578,9 @@ export class ColabRuntime extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      auto_upgrade: cdktf.booleanToTerraform(this._autoUpgrade),
       description: cdktf.stringToTerraform(this._description),
+      desired_state: cdktf.stringToTerraform(this._desiredState),
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -531,8 +594,20 @@ export class ColabRuntime extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      auto_upgrade: {
+        value: cdktf.booleanToHclTerraform(this._autoUpgrade),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
       description: {
         value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      desired_state: {
+        value: cdktf.stringToHclTerraform(this._desiredState),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

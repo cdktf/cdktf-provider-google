@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority
+// https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface DataGooglePrivatecaCertificateAuthorityConfig extends cdktf.Ter
   /**
   * The user provided Resource ID for this Certificate Authority.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority#certificate_authority_id DataGooglePrivatecaCertificateAuthority#certificate_authority_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority#certificate_authority_id DataGooglePrivatecaCertificateAuthority#certificate_authority_id}
   */
   readonly certificateAuthorityId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority#id DataGooglePrivatecaCertificateAuthority#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority#id DataGooglePrivatecaCertificateAuthority#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,17 +24,17 @@ export interface DataGooglePrivatecaCertificateAuthorityConfig extends cdktf.Ter
   * Location of the CertificateAuthority. A full list of valid locations can be found by
   * running 'gcloud privateca locations list'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority#location DataGooglePrivatecaCertificateAuthority#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority#location DataGooglePrivatecaCertificateAuthority#location}
   */
   readonly location?: string;
   /**
   * The name of the CaPool this Certificate Authority belongs to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority#pool DataGooglePrivatecaCertificateAuthority#pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority#pool DataGooglePrivatecaCertificateAuthority#pool}
   */
   readonly pool?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority#project DataGooglePrivatecaCertificateAuthority#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority#project DataGooglePrivatecaCertificateAuthority#project}
   */
   readonly project?: string;
 }
@@ -1728,9 +1723,89 @@ export class DataGooglePrivatecaCertificateAuthoritySubordinateConfigList extend
     return new DataGooglePrivatecaCertificateAuthoritySubordinateConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrls {
+}
+
+export function dataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrlsToTerraform(struct?: DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrls): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrlsToHclTerraform(struct?: DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrls): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrlsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrls | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrls | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // aia_issuing_certificate_urls - computed: true, optional: false, required: false
+  public get aiaIssuingCertificateUrls() {
+    return this.getListAttribute('aia_issuing_certificate_urls');
+  }
+
+  // crl_access_urls - computed: true, optional: false, required: false
+  public get crlAccessUrls() {
+    return this.getListAttribute('crl_access_urls');
+  }
+}
+
+export class DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrlsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrlsOutputReference {
+    return new DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrlsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority google_privateca_certificate_authority}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority google_privateca_certificate_authority}
 */
 export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformDataSource {
 
@@ -1746,7 +1821,7 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
   * Generates CDKTF code for importing a DataGooglePrivatecaCertificateAuthority resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGooglePrivatecaCertificateAuthority to import
-  * @param importFromId The id of the existing DataGooglePrivatecaCertificateAuthority that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGooglePrivatecaCertificateAuthority that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGooglePrivatecaCertificateAuthority to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1758,7 +1833,7 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.19.0/docs/data-sources/privateca_certificate_authority google_privateca_certificate_authority} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/data-sources/privateca_certificate_authority google_privateca_certificate_authority} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1769,7 +1844,7 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.19.0',
+        providerVersion: '6.20.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1981,6 +2056,12 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
   // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
+  }
+
+  // user_defined_access_urls - computed: true, optional: false, required: false
+  private _userDefinedAccessUrls = new DataGooglePrivatecaCertificateAuthorityUserDefinedAccessUrlsList(this, "user_defined_access_urls", false);
+  public get userDefinedAccessUrls() {
+    return this._userDefinedAccessUrls;
   }
 
   // =========
