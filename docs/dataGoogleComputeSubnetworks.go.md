@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 datagooglecomputesubnetworks.NewDataGoogleComputeSubnetworks(scope Construct, id *string, config DataGoogleComputeSubnetworksConfig) DataGoogleComputeSubnetworks
 ```
@@ -304,7 +304,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworks.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 datagooglecomputesubnetworks.DataGoogleComputeSubnetworks_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworks.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 datagooglecomputesubnetworks.DataGoogleComputeSubnetworks_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglecomputesubnetworks.DataGoogleComputeSubnetworks_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworks.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 datagooglecomputesubnetworks.DataGoogleComputeSubnetworks_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ datagooglecomputesubnetworks.DataGoogleComputeSubnetworks_IsTerraformDataSource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworks.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 datagooglecomputesubnetworks.DataGoogleComputeSubnetworks_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworksConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 &datagooglecomputesubnetworks.DataGoogleComputeSubnetworksConfig {
 	Connection: interface{},
@@ -831,7 +831,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworksSubnetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 &datagooglecomputesubnetworks.DataGoogleComputeSubnetworksSubnetworks {
 
@@ -846,7 +846,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworksSubnetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 datagooglecomputesubnetworks.NewDataGoogleComputeSubnetworksSubnetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeSubnetworksSubnetworksList
 ```
@@ -995,7 +995,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSubnetworks.DataGoogleComputeSubnetworksSubnetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesubnetworks"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputesubnetworks"
 
 datagooglecomputesubnetworks.NewDataGoogleComputeSubnetworksSubnetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeSubnetworksSubnetworksOutputReference
 ```
