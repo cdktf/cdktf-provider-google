@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,7 +11,7 @@ export interface MonitoringAlertPolicyConfig extends cdktf.TerraformMetaArgument
   * How to combine the results of multiple conditions to
   * determine if an incident should be opened. Possible values: ["AND", "OR", "AND_WITH_MATCHING_RESOURCE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#combiner MonitoringAlertPolicy#combiner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#combiner MonitoringAlertPolicy#combiner}
   */
   readonly combiner: string;
   /**
@@ -25,17 +20,17 @@ export interface MonitoringAlertPolicyConfig extends cdktf.TerraformMetaArgument
   * the same display name for multiple policies in the same project. The
   * name is limited to 512 Unicode characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
   */
   readonly displayName: string;
   /**
   * Whether or not the policy is enabled. The default is true.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#enabled MonitoringAlertPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#enabled MonitoringAlertPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#id MonitoringAlertPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#id MonitoringAlertPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -50,11 +45,11 @@ export interface MonitoringAlertPolicyConfig extends cdktf.TerraformMetaArgument
   * entries in this field is
   * 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#notification_channels MonitoringAlertPolicy#notification_channels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#notification_channels MonitoringAlertPolicy#notification_channels}
   */
   readonly notificationChannels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#project MonitoringAlertPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#project MonitoringAlertPolicy#project}
   */
   readonly project?: string;
   /**
@@ -62,7 +57,7 @@ export interface MonitoringAlertPolicyConfig extends cdktf.TerraformMetaArgument
   * by that policy are. The severity level will be displayed on the Incident
   * detail page and in notifications. Possible values: ["CRITICAL", "ERROR", "WARNING"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#severity MonitoringAlertPolicy#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#severity MonitoringAlertPolicy#severity}
   */
   readonly severity?: string;
   /**
@@ -72,31 +67,31 @@ export interface MonitoringAlertPolicyConfig extends cdktf.TerraformMetaArgument
   * can contain only lowercase letters, numerals, underscores, and dashes. Keys
   * must begin with a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#user_labels MonitoringAlertPolicy#user_labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#user_labels MonitoringAlertPolicy#user_labels}
   */
   readonly userLabels?: { [key: string]: string };
   /**
   * alert_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#alert_strategy MonitoringAlertPolicy#alert_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#alert_strategy MonitoringAlertPolicy#alert_strategy}
   */
   readonly alertStrategy?: MonitoringAlertPolicyAlertStrategy;
   /**
   * conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#conditions MonitoringAlertPolicy#conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#conditions MonitoringAlertPolicy#conditions}
   */
   readonly conditions: MonitoringAlertPolicyConditions[] | cdktf.IResolvable;
   /**
   * documentation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#documentation MonitoringAlertPolicy#documentation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#documentation MonitoringAlertPolicy#documentation}
   */
   readonly documentation?: MonitoringAlertPolicyDocumentation;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#timeouts MonitoringAlertPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#timeouts MonitoringAlertPolicy#timeouts}
   */
   readonly timeouts?: MonitoringAlertPolicyTimeouts;
 }
@@ -187,13 +182,13 @@ export interface MonitoringAlertPolicyAlertStrategyNotificationChannelStrategy {
   * referenced in the notification_channels field of this AlertPolicy. The format is
   * 'projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#notification_channel_names MonitoringAlertPolicy#notification_channel_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#notification_channel_names MonitoringAlertPolicy#notification_channel_names}
   */
   readonly notificationChannelNames?: string[];
   /**
   * The frequency at which to send reminder notifications for open incidents.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#renotify_interval MonitoringAlertPolicy#renotify_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#renotify_interval MonitoringAlertPolicy#renotify_interval}
   */
   readonly renotifyInterval?: string;
 }
@@ -341,7 +336,7 @@ export interface MonitoringAlertPolicyAlertStrategyNotificationRateLimit {
   * Not more than one notification per period.
   * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "60.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#period MonitoringAlertPolicy#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#period MonitoringAlertPolicy#period}
   */
   readonly period?: string;
 }
@@ -427,25 +422,25 @@ export interface MonitoringAlertPolicyAlertStrategy {
   /**
   * If an alert policy that was active has no data for this long, any open incidents will close.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#auto_close MonitoringAlertPolicy#auto_close}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#auto_close MonitoringAlertPolicy#auto_close}
   */
   readonly autoClose?: string;
   /**
   * Control when notifications will be sent out. Possible values: ["NOTIFICATION_PROMPT_UNSPECIFIED", "OPENED", "CLOSED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#notification_prompts MonitoringAlertPolicy#notification_prompts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#notification_prompts MonitoringAlertPolicy#notification_prompts}
   */
   readonly notificationPrompts?: string[];
   /**
   * notification_channel_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#notification_channel_strategy MonitoringAlertPolicy#notification_channel_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#notification_channel_strategy MonitoringAlertPolicy#notification_channel_strategy}
   */
   readonly notificationChannelStrategy?: MonitoringAlertPolicyAlertStrategyNotificationChannelStrategy[] | cdktf.IResolvable;
   /**
   * notification_rate_limit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#notification_rate_limit MonitoringAlertPolicy#notification_rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#notification_rate_limit MonitoringAlertPolicy#notification_rate_limit}
   */
   readonly notificationRateLimit?: MonitoringAlertPolicyAlertStrategyNotificationRateLimit;
 }
@@ -631,7 +626,7 @@ export interface MonitoringAlertPolicyConditionsConditionAbsentAggregations {
   * this field must be defined;
   * otherwise an error is returned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
@@ -653,7 +648,7 @@ export interface MonitoringAlertPolicyConditionsConditionAbsentAggregations {
   * specified; otherwise, an error is
   * returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
@@ -683,7 +678,7 @@ export interface MonitoringAlertPolicyConditionsConditionAbsentAggregations {
   * is not defined, this field is
   * ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
@@ -705,7 +700,7 @@ export interface MonitoringAlertPolicyConditionsConditionAbsentAggregations {
   * specified; otherwise, an error is
   * returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
   readonly perSeriesAligner?: string;
 }
@@ -912,7 +907,7 @@ export interface MonitoringAlertPolicyConditionsConditionAbsentTrigger {
   * that must fail the predicate for the
   * condition to be triggered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
@@ -920,7 +915,7 @@ export interface MonitoringAlertPolicyConditionsConditionAbsentTrigger {
   * must fail the predicate for the
   * condition to be triggered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
   readonly percent?: number;
 }
@@ -1039,7 +1034,7 @@ export interface MonitoringAlertPolicyConditionsConditionAbsent {
   * multiple of a minute--e.g. 60s, 120s, or 300s
   * --are supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
@@ -1056,19 +1051,19 @@ export interface MonitoringAlertPolicyConditionsConditionAbsent {
   * field may not exceed 2048 Unicode characters
   * in length.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
   */
   readonly filter?: string;
   /**
   * aggregations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
   */
   readonly aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable;
   /**
   * trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
   */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionAbsentTrigger;
 }
@@ -1238,7 +1233,7 @@ export interface MonitoringAlertPolicyConditionsConditionMatchedLog {
   /**
   * A logs-based filter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
   */
   readonly filter: string;
   /**
@@ -1250,7 +1245,7 @@ export interface MonitoringAlertPolicyConditionsConditionMatchedLog {
   * Label keys and corresponding values can be used in notifications
   * generated by this condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#label_extractors MonitoringAlertPolicy#label_extractors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#label_extractors MonitoringAlertPolicy#label_extractors}
   */
   readonly labelExtractors?: { [key: string]: string };
 }
@@ -1364,7 +1359,7 @@ export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage
   * that must fail the predicate for the
   * condition to be triggered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
@@ -1372,7 +1367,7 @@ export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage
   * must fail the predicate for the
   * condition to be triggered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
   readonly percent?: number;
 }
@@ -1501,7 +1496,7 @@ export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage
   * that unhealthy states are detected and
   * alerted on quickly.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
@@ -1509,19 +1504,19 @@ export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage
   * metric-threshold conditions are evaluated when
   * data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
   */
   readonly evaluationMissingData?: string;
   /**
   * Monitoring Query Language query that outputs a boolean stream.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#query MonitoringAlertPolicy#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#query MonitoringAlertPolicy#query}
   */
   readonly query: string;
   /**
   * trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
   */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger;
 }
@@ -1698,7 +1693,7 @@ export interface MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage
   * This field is optional. If this field is not empty, then it must be a
   * valid Prometheus label name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#alert_rule MonitoringAlertPolicy#alert_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#alert_rule MonitoringAlertPolicy#alert_rule}
   */
   readonly alertRule?: string;
   /**
@@ -1711,7 +1706,7 @@ export interface MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage
   * Users with the 'monitoring.alertPolicyViewer' role are able to see the
   * name of the non-existent metric in the alerting policy condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#disable_metric_validation MonitoringAlertPolicy#disable_metric_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#disable_metric_validation MonitoringAlertPolicy#disable_metric_validation}
   */
   readonly disableMetricValidation?: boolean | cdktf.IResolvable;
   /**
@@ -1720,7 +1715,7 @@ export interface MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage
   * evaluated to be "true" for long enough are considered pending. The
   * default value is zero. Must be zero or positive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration?: string;
   /**
@@ -1730,7 +1725,7 @@ export interface MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage
   * alerting rule, then this value should be taken from the enclosing
   * rule group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#evaluation_interval MonitoringAlertPolicy#evaluation_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#evaluation_interval MonitoringAlertPolicy#evaluation_interval}
   */
   readonly evaluationInterval?: string;
   /**
@@ -1743,7 +1738,7 @@ export interface MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage
   * internal use. "labels" may be empty. This field is intended to be used
   * for organizing and identifying the AlertPolicy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#labels MonitoringAlertPolicy#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#labels MonitoringAlertPolicy#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -1751,7 +1746,7 @@ export interface MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage
   * expression is evaluated at the current time, and all resultant time
   * series become pending/firing alerts. This field must not be empty.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#query MonitoringAlertPolicy#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#query MonitoringAlertPolicy#query}
   */
   readonly query: string;
   /**
@@ -1764,7 +1759,7 @@ export interface MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage
   * relevant AlertPolicies in case the definition of the rule group changes
   * in the future. This field is optional.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#rule_group MonitoringAlertPolicy#rule_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#rule_group MonitoringAlertPolicy#rule_group}
   */
   readonly ruleGroup?: string;
 }
@@ -2017,6 +2012,996 @@ export class MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguageOutp
     return this._ruleGroup;
   }
 }
+export interface MonitoringAlertPolicyConditionsConditionSqlBooleanTest {
+  /**
+  * The name of the column containing the boolean value. If the value
+  * in a row is NULL, that row is ignored.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#column MonitoringAlertPolicy#column}
+  */
+  readonly column: string;
+}
+
+export function monitoringAlertPolicyConditionsConditionSqlBooleanTestToTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlBooleanTestOutputReference | MonitoringAlertPolicyConditionsConditionSqlBooleanTest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    column: cdktf.stringToTerraform(struct!.column),
+  }
+}
+
+
+export function monitoringAlertPolicyConditionsConditionSqlBooleanTestToHclTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlBooleanTestOutputReference | MonitoringAlertPolicyConditionsConditionSqlBooleanTest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    column: {
+      value: cdktf.stringToHclTerraform(struct!.column),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MonitoringAlertPolicyConditionsConditionSqlBooleanTestOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionSqlBooleanTest | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._column !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionSqlBooleanTest | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._column = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._column = value.column;
+    }
+  }
+
+  // column - computed: false, optional: false, required: true
+  private _column?: string; 
+  public get column() {
+    return this.getStringAttribute('column');
+  }
+  public set column(value: string) {
+    this._column = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column;
+  }
+}
+export interface MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTime {
+  /**
+  * Hours of a day in 24 hour format. Must be greater than or equal
+  * to 0 and typically must be less than or equal to 23. An API may
+  * choose to allow the value "24:00:00" for scenarios like business
+  * closing time.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#hours MonitoringAlertPolicy#hours}
+  */
+  readonly hours?: number;
+  /**
+  * Minutes of an hour. Must be greater than or equal to 0 and
+  * less than or equal to 59.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#minutes MonitoringAlertPolicy#minutes}
+  */
+  readonly minutes?: number;
+  /**
+  * Fractions of seconds, in nanoseconds. Must be greater than or
+  * equal to 0 and less than or equal to 999,999,999.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#nanos MonitoringAlertPolicy#nanos}
+  */
+  readonly nanos?: number;
+  /**
+  * Seconds of a minute. Must be greater than or equal to 0 and
+  * typically must be less than or equal to 59. An API may allow the
+  * value 60 if it allows leap-seconds.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#seconds MonitoringAlertPolicy#seconds}
+  */
+  readonly seconds?: number;
+}
+
+export function monitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeToTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeOutputReference | MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    hours: cdktf.numberToTerraform(struct!.hours),
+    minutes: cdktf.numberToTerraform(struct!.minutes),
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
+
+export function monitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeToHclTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeOutputReference | MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTime | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hours !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTime | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
+  // hours - computed: false, optional: true, required: false
+  private _hours?: number; 
+  public get hours() {
+    return this.getNumberAttribute('hours');
+  }
+  public set hours(value: number) {
+    this._hours = value;
+  }
+  public resetHours() {
+    this._hours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours;
+  }
+
+  // minutes - computed: false, optional: true, required: false
+  private _minutes?: number; 
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+  public set minutes(value: number) {
+    this._minutes = value;
+  }
+  public resetMinutes() {
+    this._minutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes;
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos;
+  }
+
+  // seconds - computed: false, optional: true, required: false
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  public resetSeconds() {
+    this._seconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds;
+  }
+}
+export interface MonitoringAlertPolicyConditionsConditionSqlDaily {
+  /**
+  * The number of days between runs. Must be greater than or equal
+  * to 1 day and less than or equal to 30 days.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#periodicity MonitoringAlertPolicy#periodicity}
+  */
+  readonly periodicity: number;
+  /**
+  * execution_time block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#execution_time MonitoringAlertPolicy#execution_time}
+  */
+  readonly executionTime?: MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTime;
+}
+
+export function monitoringAlertPolicyConditionsConditionSqlDailyToTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlDailyOutputReference | MonitoringAlertPolicyConditionsConditionSqlDaily): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    periodicity: cdktf.numberToTerraform(struct!.periodicity),
+    execution_time: monitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeToTerraform(struct!.executionTime),
+  }
+}
+
+
+export function monitoringAlertPolicyConditionsConditionSqlDailyToHclTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlDailyOutputReference | MonitoringAlertPolicyConditionsConditionSqlDaily): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    periodicity: {
+      value: cdktf.numberToHclTerraform(struct!.periodicity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    execution_time: {
+      value: monitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeToHclTerraform(struct!.executionTime),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MonitoringAlertPolicyConditionsConditionSqlDailyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionSqlDaily | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._periodicity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.periodicity = this._periodicity;
+    }
+    if (this._executionTime?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.executionTime = this._executionTime?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionSqlDaily | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._periodicity = undefined;
+      this._executionTime.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._periodicity = value.periodicity;
+      this._executionTime.internalValue = value.executionTime;
+    }
+  }
+
+  // periodicity - computed: false, optional: false, required: true
+  private _periodicity?: number; 
+  public get periodicity() {
+    return this.getNumberAttribute('periodicity');
+  }
+  public set periodicity(value: number) {
+    this._periodicity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodicityInput() {
+    return this._periodicity;
+  }
+
+  // execution_time - computed: false, optional: true, required: false
+  private _executionTime = new MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTimeOutputReference(this, "execution_time");
+  public get executionTime() {
+    return this._executionTime;
+  }
+  public putExecutionTime(value: MonitoringAlertPolicyConditionsConditionSqlDailyExecutionTime) {
+    this._executionTime.internalValue = value;
+  }
+  public resetExecutionTime() {
+    this._executionTime.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get executionTimeInput() {
+    return this._executionTime.internalValue;
+  }
+}
+export interface MonitoringAlertPolicyConditionsConditionSqlHourly {
+  /**
+  * The number of minutes after the hour (in UTC) to run the query.
+  * Must be greater than or equal to 0 minutes and less than or equal to
+  * 59 minutes.  If left unspecified, then an arbitrary offset is used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#minute_offset MonitoringAlertPolicy#minute_offset}
+  */
+  readonly minuteOffset?: number;
+  /**
+  * Number of hours between runs. The interval must be greater than or
+  * equal to 1 hour and less than or equal to 48 hours.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#periodicity MonitoringAlertPolicy#periodicity}
+  */
+  readonly periodicity: number;
+}
+
+export function monitoringAlertPolicyConditionsConditionSqlHourlyToTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlHourlyOutputReference | MonitoringAlertPolicyConditionsConditionSqlHourly): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    minute_offset: cdktf.numberToTerraform(struct!.minuteOffset),
+    periodicity: cdktf.numberToTerraform(struct!.periodicity),
+  }
+}
+
+
+export function monitoringAlertPolicyConditionsConditionSqlHourlyToHclTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlHourlyOutputReference | MonitoringAlertPolicyConditionsConditionSqlHourly): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    minute_offset: {
+      value: cdktf.numberToHclTerraform(struct!.minuteOffset),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    periodicity: {
+      value: cdktf.numberToHclTerraform(struct!.periodicity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MonitoringAlertPolicyConditionsConditionSqlHourlyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionSqlHourly | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._minuteOffset !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minuteOffset = this._minuteOffset;
+    }
+    if (this._periodicity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.periodicity = this._periodicity;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionSqlHourly | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._minuteOffset = undefined;
+      this._periodicity = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._minuteOffset = value.minuteOffset;
+      this._periodicity = value.periodicity;
+    }
+  }
+
+  // minute_offset - computed: false, optional: true, required: false
+  private _minuteOffset?: number; 
+  public get minuteOffset() {
+    return this.getNumberAttribute('minute_offset');
+  }
+  public set minuteOffset(value: number) {
+    this._minuteOffset = value;
+  }
+  public resetMinuteOffset() {
+    this._minuteOffset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minuteOffsetInput() {
+    return this._minuteOffset;
+  }
+
+  // periodicity - computed: false, optional: false, required: true
+  private _periodicity?: number; 
+  public get periodicity() {
+    return this.getNumberAttribute('periodicity');
+  }
+  public set periodicity(value: number) {
+    this._periodicity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodicityInput() {
+    return this._periodicity;
+  }
+}
+export interface MonitoringAlertPolicyConditionsConditionSqlMinutes {
+  /**
+  * Number of minutes between runs. The interval must be greater than or
+  * equal to 5 minutes and less than or equal to 1440 minutes.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#periodicity MonitoringAlertPolicy#periodicity}
+  */
+  readonly periodicity: number;
+}
+
+export function monitoringAlertPolicyConditionsConditionSqlMinutesToTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlMinutesOutputReference | MonitoringAlertPolicyConditionsConditionSqlMinutes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    periodicity: cdktf.numberToTerraform(struct!.periodicity),
+  }
+}
+
+
+export function monitoringAlertPolicyConditionsConditionSqlMinutesToHclTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlMinutesOutputReference | MonitoringAlertPolicyConditionsConditionSqlMinutes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    periodicity: {
+      value: cdktf.numberToHclTerraform(struct!.periodicity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MonitoringAlertPolicyConditionsConditionSqlMinutesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionSqlMinutes | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._periodicity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.periodicity = this._periodicity;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionSqlMinutes | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._periodicity = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._periodicity = value.periodicity;
+    }
+  }
+
+  // periodicity - computed: false, optional: false, required: true
+  private _periodicity?: number; 
+  public get periodicity() {
+    return this.getNumberAttribute('periodicity');
+  }
+  public set periodicity(value: number) {
+    this._periodicity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodicityInput() {
+    return this._periodicity;
+  }
+}
+export interface MonitoringAlertPolicyConditionsConditionSqlRowCountTest {
+  /**
+  * The comparison to apply between the time
+  * series (indicated by filter and aggregation)
+  * and the threshold (indicated by
+  * threshold_value). The comparison is applied
+  * on each time series, with the time series on
+  * the left-hand side and the threshold on the
+  * right-hand side. Only COMPARISON_LT and
+  * COMPARISON_GT are supported currently. Possible values: ["COMPARISON_GT", "COMPARISON_GE", "COMPARISON_LT", "COMPARISON_LE", "COMPARISON_EQ", "COMPARISON_NE"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#comparison MonitoringAlertPolicy#comparison}
+  */
+  readonly comparison: string;
+  /**
+  * Test the boolean value in the indicated column.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#threshold MonitoringAlertPolicy#threshold}
+  */
+  readonly threshold: number;
+}
+
+export function monitoringAlertPolicyConditionsConditionSqlRowCountTestToTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlRowCountTestOutputReference | MonitoringAlertPolicyConditionsConditionSqlRowCountTest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    comparison: cdktf.stringToTerraform(struct!.comparison),
+    threshold: cdktf.numberToTerraform(struct!.threshold),
+  }
+}
+
+
+export function monitoringAlertPolicyConditionsConditionSqlRowCountTestToHclTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlRowCountTestOutputReference | MonitoringAlertPolicyConditionsConditionSqlRowCountTest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    comparison: {
+      value: cdktf.stringToHclTerraform(struct!.comparison),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    threshold: {
+      value: cdktf.numberToHclTerraform(struct!.threshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MonitoringAlertPolicyConditionsConditionSqlRowCountTestOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionSqlRowCountTest | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._comparison !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.comparison = this._comparison;
+    }
+    if (this._threshold !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionSqlRowCountTest | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._comparison = undefined;
+      this._threshold = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._comparison = value.comparison;
+      this._threshold = value.threshold;
+    }
+  }
+
+  // comparison - computed: false, optional: false, required: true
+  private _comparison?: string; 
+  public get comparison() {
+    return this.getStringAttribute('comparison');
+  }
+  public set comparison(value: string) {
+    this._comparison = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get comparisonInput() {
+    return this._comparison;
+  }
+
+  // threshold - computed: false, optional: false, required: true
+  private _threshold?: number; 
+  public get threshold() {
+    return this.getNumberAttribute('threshold');
+  }
+  public set threshold(value: number) {
+    this._threshold = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thresholdInput() {
+    return this._threshold;
+  }
+}
+export interface MonitoringAlertPolicyConditionsConditionSql {
+  /**
+  * The Log Analytics SQL query to run, as a string.  The query must
+  * conform to the required shape. Specifically, the query must not try to
+  * filter the input by time.  A filter will automatically be applied
+  * to filter the input so that the query receives all rows received
+  * since the last time the query was run.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#query MonitoringAlertPolicy#query}
+  */
+  readonly query: string;
+  /**
+  * boolean_test block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#boolean_test MonitoringAlertPolicy#boolean_test}
+  */
+  readonly booleanTest?: MonitoringAlertPolicyConditionsConditionSqlBooleanTest;
+  /**
+  * daily block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#daily MonitoringAlertPolicy#daily}
+  */
+  readonly daily?: MonitoringAlertPolicyConditionsConditionSqlDaily;
+  /**
+  * hourly block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#hourly MonitoringAlertPolicy#hourly}
+  */
+  readonly hourly?: MonitoringAlertPolicyConditionsConditionSqlHourly;
+  /**
+  * minutes block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#minutes MonitoringAlertPolicy#minutes}
+  */
+  readonly minutes?: MonitoringAlertPolicyConditionsConditionSqlMinutes;
+  /**
+  * row_count_test block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#row_count_test MonitoringAlertPolicy#row_count_test}
+  */
+  readonly rowCountTest?: MonitoringAlertPolicyConditionsConditionSqlRowCountTest;
+}
+
+export function monitoringAlertPolicyConditionsConditionSqlToTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlOutputReference | MonitoringAlertPolicyConditionsConditionSql): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    query: cdktf.stringToTerraform(struct!.query),
+    boolean_test: monitoringAlertPolicyConditionsConditionSqlBooleanTestToTerraform(struct!.booleanTest),
+    daily: monitoringAlertPolicyConditionsConditionSqlDailyToTerraform(struct!.daily),
+    hourly: monitoringAlertPolicyConditionsConditionSqlHourlyToTerraform(struct!.hourly),
+    minutes: monitoringAlertPolicyConditionsConditionSqlMinutesToTerraform(struct!.minutes),
+    row_count_test: monitoringAlertPolicyConditionsConditionSqlRowCountTestToTerraform(struct!.rowCountTest),
+  }
+}
+
+
+export function monitoringAlertPolicyConditionsConditionSqlToHclTerraform(struct?: MonitoringAlertPolicyConditionsConditionSqlOutputReference | MonitoringAlertPolicyConditionsConditionSql): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    query: {
+      value: cdktf.stringToHclTerraform(struct!.query),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    boolean_test: {
+      value: monitoringAlertPolicyConditionsConditionSqlBooleanTestToHclTerraform(struct!.booleanTest),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringAlertPolicyConditionsConditionSqlBooleanTestList",
+    },
+    daily: {
+      value: monitoringAlertPolicyConditionsConditionSqlDailyToHclTerraform(struct!.daily),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringAlertPolicyConditionsConditionSqlDailyList",
+    },
+    hourly: {
+      value: monitoringAlertPolicyConditionsConditionSqlHourlyToHclTerraform(struct!.hourly),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringAlertPolicyConditionsConditionSqlHourlyList",
+    },
+    minutes: {
+      value: monitoringAlertPolicyConditionsConditionSqlMinutesToHclTerraform(struct!.minutes),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringAlertPolicyConditionsConditionSqlMinutesList",
+    },
+    row_count_test: {
+      value: monitoringAlertPolicyConditionsConditionSqlRowCountTestToHclTerraform(struct!.rowCountTest),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringAlertPolicyConditionsConditionSqlRowCountTestList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MonitoringAlertPolicyConditionsConditionSqlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionSql | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._query !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.query = this._query;
+    }
+    if (this._booleanTest?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.booleanTest = this._booleanTest?.internalValue;
+    }
+    if (this._daily?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.daily = this._daily?.internalValue;
+    }
+    if (this._hourly?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hourly = this._hourly?.internalValue;
+    }
+    if (this._minutes?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes?.internalValue;
+    }
+    if (this._rowCountTest?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rowCountTest = this._rowCountTest?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionSql | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._query = undefined;
+      this._booleanTest.internalValue = undefined;
+      this._daily.internalValue = undefined;
+      this._hourly.internalValue = undefined;
+      this._minutes.internalValue = undefined;
+      this._rowCountTest.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._query = value.query;
+      this._booleanTest.internalValue = value.booleanTest;
+      this._daily.internalValue = value.daily;
+      this._hourly.internalValue = value.hourly;
+      this._minutes.internalValue = value.minutes;
+      this._rowCountTest.internalValue = value.rowCountTest;
+    }
+  }
+
+  // query - computed: false, optional: false, required: true
+  private _query?: string; 
+  public get query() {
+    return this.getStringAttribute('query');
+  }
+  public set query(value: string) {
+    this._query = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryInput() {
+    return this._query;
+  }
+
+  // boolean_test - computed: false, optional: true, required: false
+  private _booleanTest = new MonitoringAlertPolicyConditionsConditionSqlBooleanTestOutputReference(this, "boolean_test");
+  public get booleanTest() {
+    return this._booleanTest;
+  }
+  public putBooleanTest(value: MonitoringAlertPolicyConditionsConditionSqlBooleanTest) {
+    this._booleanTest.internalValue = value;
+  }
+  public resetBooleanTest() {
+    this._booleanTest.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get booleanTestInput() {
+    return this._booleanTest.internalValue;
+  }
+
+  // daily - computed: false, optional: true, required: false
+  private _daily = new MonitoringAlertPolicyConditionsConditionSqlDailyOutputReference(this, "daily");
+  public get daily() {
+    return this._daily;
+  }
+  public putDaily(value: MonitoringAlertPolicyConditionsConditionSqlDaily) {
+    this._daily.internalValue = value;
+  }
+  public resetDaily() {
+    this._daily.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dailyInput() {
+    return this._daily.internalValue;
+  }
+
+  // hourly - computed: false, optional: true, required: false
+  private _hourly = new MonitoringAlertPolicyConditionsConditionSqlHourlyOutputReference(this, "hourly");
+  public get hourly() {
+    return this._hourly;
+  }
+  public putHourly(value: MonitoringAlertPolicyConditionsConditionSqlHourly) {
+    this._hourly.internalValue = value;
+  }
+  public resetHourly() {
+    this._hourly.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hourlyInput() {
+    return this._hourly.internalValue;
+  }
+
+  // minutes - computed: false, optional: true, required: false
+  private _minutes = new MonitoringAlertPolicyConditionsConditionSqlMinutesOutputReference(this, "minutes");
+  public get minutes() {
+    return this._minutes;
+  }
+  public putMinutes(value: MonitoringAlertPolicyConditionsConditionSqlMinutes) {
+    this._minutes.internalValue = value;
+  }
+  public resetMinutes() {
+    this._minutes.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes.internalValue;
+  }
+
+  // row_count_test - computed: false, optional: true, required: false
+  private _rowCountTest = new MonitoringAlertPolicyConditionsConditionSqlRowCountTestOutputReference(this, "row_count_test");
+  public get rowCountTest() {
+    return this._rowCountTest;
+  }
+  public putRowCountTest(value: MonitoringAlertPolicyConditionsConditionSqlRowCountTest) {
+    this._rowCountTest.internalValue = value;
+  }
+  public resetRowCountTest() {
+    this._rowCountTest.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rowCountTestInput() {
+    return this._rowCountTest.internalValue;
+  }
+}
 export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
   /**
   * The alignment period for per-time
@@ -2034,7 +3019,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
   * this field must be defined;
   * otherwise an error is returned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
@@ -2056,7 +3041,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
   * specified; otherwise, an error is
   * returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
@@ -2086,7 +3071,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
   * is not defined, this field is
   * ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
@@ -2108,7 +3093,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
   * specified; otherwise, an error is
   * returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
   readonly perSeriesAligner?: string;
 }
@@ -2326,7 +3311,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdDenominatorAgg
   * this field must be defined;
   * otherwise an error is returned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
@@ -2348,7 +3333,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdDenominatorAgg
   * specified; otherwise, an error is
   * returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
@@ -2378,7 +3363,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdDenominatorAgg
   * is not defined, this field is
   * ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
@@ -2400,7 +3385,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdDenominatorAgg
   * specified; otherwise, an error is
   * returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
   readonly perSeriesAligner?: string;
 }
@@ -2610,7 +3595,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdForecastOption
   * forecasts made for the Configured 'duration',
   * then the timeseries is considered to be failing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#forecast_horizon MonitoringAlertPolicy#forecast_horizon}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#forecast_horizon MonitoringAlertPolicy#forecast_horizon}
   */
   readonly forecastHorizon: string;
 }
@@ -2695,7 +3680,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdTrigger {
   * that must fail the predicate for the
   * condition to be triggered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
@@ -2703,7 +3688,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdTrigger {
   * must fail the predicate for the
   * condition to be triggered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
   readonly percent?: number;
 }
@@ -2825,7 +3810,7 @@ export interface MonitoringAlertPolicyConditionsConditionThreshold {
   * right-hand side. Only COMPARISON_LT and
   * COMPARISON_GT are supported currently. Possible values: ["COMPARISON_GT", "COMPARISON_GE", "COMPARISON_LT", "COMPARISON_LE", "COMPARISON_EQ", "COMPARISON_NE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#comparison MonitoringAlertPolicy#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#comparison MonitoringAlertPolicy#comparison}
   */
   readonly comparison: string;
   /**
@@ -2845,7 +3830,7 @@ export interface MonitoringAlertPolicyConditionsConditionThreshold {
   * field may not exceed 2048 Unicode characters
   * in length.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#denominator_filter MonitoringAlertPolicy#denominator_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#denominator_filter MonitoringAlertPolicy#denominator_filter}
   */
   readonly denominatorFilter?: string;
   /**
@@ -2865,7 +3850,7 @@ export interface MonitoringAlertPolicyConditionsConditionThreshold {
   * that unhealthy states are detected and
   * alerted on quickly.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
@@ -2873,7 +3858,7 @@ export interface MonitoringAlertPolicyConditionsConditionThreshold {
   * metric-threshold conditions are evaluated when
   * data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
   */
   readonly evaluationMissingData?: string;
   /**
@@ -2890,38 +3875,38 @@ export interface MonitoringAlertPolicyConditionsConditionThreshold {
   * field may not exceed 2048 Unicode characters
   * in length.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
   */
   readonly filter?: string;
   /**
   * A value against which to compare the time
   * series.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#threshold_value MonitoringAlertPolicy#threshold_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#threshold_value MonitoringAlertPolicy#threshold_value}
   */
   readonly thresholdValue?: number;
   /**
   * aggregations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
   */
   readonly aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable;
   /**
   * denominator_aggregations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#denominator_aggregations MonitoringAlertPolicy#denominator_aggregations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#denominator_aggregations MonitoringAlertPolicy#denominator_aggregations}
   */
   readonly denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable;
   /**
   * forecast_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#forecast_options MonitoringAlertPolicy#forecast_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#forecast_options MonitoringAlertPolicy#forecast_options}
   */
   readonly forecastOptions?: MonitoringAlertPolicyConditionsConditionThresholdForecastOptions;
   /**
   * trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
   */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionThresholdTrigger;
 }
@@ -3266,37 +4251,43 @@ export interface MonitoringAlertPolicyConditions {
   * display name for multiple conditions in the same
   * policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
   */
   readonly displayName: string;
   /**
   * condition_absent block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#condition_absent MonitoringAlertPolicy#condition_absent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#condition_absent MonitoringAlertPolicy#condition_absent}
   */
   readonly conditionAbsent?: MonitoringAlertPolicyConditionsConditionAbsent;
   /**
   * condition_matched_log block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#condition_matched_log MonitoringAlertPolicy#condition_matched_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#condition_matched_log MonitoringAlertPolicy#condition_matched_log}
   */
   readonly conditionMatchedLog?: MonitoringAlertPolicyConditionsConditionMatchedLog;
   /**
   * condition_monitoring_query_language block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#condition_monitoring_query_language MonitoringAlertPolicy#condition_monitoring_query_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#condition_monitoring_query_language MonitoringAlertPolicy#condition_monitoring_query_language}
   */
   readonly conditionMonitoringQueryLanguage?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage;
   /**
   * condition_prometheus_query_language block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#condition_prometheus_query_language MonitoringAlertPolicy#condition_prometheus_query_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#condition_prometheus_query_language MonitoringAlertPolicy#condition_prometheus_query_language}
   */
   readonly conditionPrometheusQueryLanguage?: MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguage;
   /**
+  * condition_sql block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#condition_sql MonitoringAlertPolicy#condition_sql}
+  */
+  readonly conditionSql?: MonitoringAlertPolicyConditionsConditionSql;
+  /**
   * condition_threshold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#condition_threshold MonitoringAlertPolicy#condition_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#condition_threshold MonitoringAlertPolicy#condition_threshold}
   */
   readonly conditionThreshold?: MonitoringAlertPolicyConditionsConditionThreshold;
 }
@@ -3312,6 +4303,7 @@ export function monitoringAlertPolicyConditionsToTerraform(struct?: MonitoringAl
     condition_matched_log: monitoringAlertPolicyConditionsConditionMatchedLogToTerraform(struct!.conditionMatchedLog),
     condition_monitoring_query_language: monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageToTerraform(struct!.conditionMonitoringQueryLanguage),
     condition_prometheus_query_language: monitoringAlertPolicyConditionsConditionPrometheusQueryLanguageToTerraform(struct!.conditionPrometheusQueryLanguage),
+    condition_sql: monitoringAlertPolicyConditionsConditionSqlToTerraform(struct!.conditionSql),
     condition_threshold: monitoringAlertPolicyConditionsConditionThresholdToTerraform(struct!.conditionThreshold),
   }
 }
@@ -3352,6 +4344,12 @@ export function monitoringAlertPolicyConditionsToHclTerraform(struct?: Monitorin
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringAlertPolicyConditionsConditionPrometheusQueryLanguageList",
+    },
+    condition_sql: {
+      value: monitoringAlertPolicyConditionsConditionSqlToHclTerraform(struct!.conditionSql),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitoringAlertPolicyConditionsConditionSqlList",
     },
     condition_threshold: {
       value: monitoringAlertPolicyConditionsConditionThresholdToHclTerraform(struct!.conditionThreshold),
@@ -3405,6 +4403,10 @@ export class MonitoringAlertPolicyConditionsOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.conditionPrometheusQueryLanguage = this._conditionPrometheusQueryLanguage?.internalValue;
     }
+    if (this._conditionSql?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.conditionSql = this._conditionSql?.internalValue;
+    }
     if (this._conditionThreshold?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.conditionThreshold = this._conditionThreshold?.internalValue;
@@ -3421,6 +4423,7 @@ export class MonitoringAlertPolicyConditionsOutputReference extends cdktf.Comple
       this._conditionMatchedLog.internalValue = undefined;
       this._conditionMonitoringQueryLanguage.internalValue = undefined;
       this._conditionPrometheusQueryLanguage.internalValue = undefined;
+      this._conditionSql.internalValue = undefined;
       this._conditionThreshold.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -3435,6 +4438,7 @@ export class MonitoringAlertPolicyConditionsOutputReference extends cdktf.Comple
       this._conditionMatchedLog.internalValue = value.conditionMatchedLog;
       this._conditionMonitoringQueryLanguage.internalValue = value.conditionMonitoringQueryLanguage;
       this._conditionPrometheusQueryLanguage.internalValue = value.conditionPrometheusQueryLanguage;
+      this._conditionSql.internalValue = value.conditionSql;
       this._conditionThreshold.internalValue = value.conditionThreshold;
     }
   }
@@ -3521,6 +4525,22 @@ export class MonitoringAlertPolicyConditionsOutputReference extends cdktf.Comple
     return this._conditionPrometheusQueryLanguage.internalValue;
   }
 
+  // condition_sql - computed: false, optional: true, required: false
+  private _conditionSql = new MonitoringAlertPolicyConditionsConditionSqlOutputReference(this, "condition_sql");
+  public get conditionSql() {
+    return this._conditionSql;
+  }
+  public putConditionSql(value: MonitoringAlertPolicyConditionsConditionSql) {
+    this._conditionSql.internalValue = value;
+  }
+  public resetConditionSql() {
+    this._conditionSql.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionSqlInput() {
+    return this._conditionSql.internalValue;
+  }
+
   // condition_threshold - computed: false, optional: true, required: false
   private _conditionThreshold = new MonitoringAlertPolicyConditionsConditionThresholdOutputReference(this, "condition_threshold");
   public get conditionThreshold() {
@@ -3561,13 +4581,13 @@ export interface MonitoringAlertPolicyDocumentationLinks {
   /**
   * A short display name for the link. The display name must not be empty or exceed 63 characters. Example: "playbook".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
   */
   readonly displayName?: string;
   /**
   * The url of a webpage. A url can be templatized by using variables in the path or the query parameters. The total length of a URL should not exceed 2083 characters before and after variable expansion. Example: "https://my_domain.com/playbook?name=${resource.name}".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#url MonitoringAlertPolicy#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#url MonitoringAlertPolicy#url}
   */
   readonly url?: string;
 }
@@ -3717,14 +4737,14 @@ export interface MonitoringAlertPolicyDocumentation {
   * exceed more than 10,240 bytes when encoded in UTF-8 format,
   * whichever is smaller.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#content MonitoringAlertPolicy#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#content MonitoringAlertPolicy#content}
   */
   readonly content?: string;
   /**
   * The format of the content field. Presently, only the value
   * "text/markdown" is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#mime_type MonitoringAlertPolicy#mime_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#mime_type MonitoringAlertPolicy#mime_type}
   */
   readonly mimeType?: string;
   /**
@@ -3733,13 +4753,13 @@ export interface MonitoringAlertPolicyDocumentation {
   * of the subject line after variable expansion will be truncated to 255 bytes
   * or shorter at the latest UTF-8 character boundary.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#subject MonitoringAlertPolicy#subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#subject MonitoringAlertPolicy#subject}
   */
   readonly subject?: string;
   /**
   * links block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#links MonitoringAlertPolicy#links}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#links MonitoringAlertPolicy#links}
   */
   readonly links?: MonitoringAlertPolicyDocumentationLinks[] | cdktf.IResolvable;
 }
@@ -3910,15 +4930,15 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
 }
 export interface MonitoringAlertPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#create MonitoringAlertPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#create MonitoringAlertPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#delete MonitoringAlertPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#delete MonitoringAlertPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#update MonitoringAlertPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#update MonitoringAlertPolicy#update}
   */
   readonly update?: string;
 }
@@ -4070,7 +5090,7 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy google_monitoring_alert_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy google_monitoring_alert_policy}
 */
 export class MonitoringAlertPolicy extends cdktf.TerraformResource {
 
@@ -4086,7 +5106,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MonitoringAlertPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MonitoringAlertPolicy to import
-  * @param importFromId The id of the existing MonitoringAlertPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MonitoringAlertPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MonitoringAlertPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -4098,7 +5118,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/monitoring_alert_policy google_monitoring_alert_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/monitoring_alert_policy google_monitoring_alert_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4109,7 +5129,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_alert_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.20.0',
+        providerVersion: '6.21.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
