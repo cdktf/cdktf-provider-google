@@ -1,3 +1,3 @@
 # `google_network_security_security_profile`
 
-Refer to the Terraform Registry for docs: [`google_network_security_security_profile`](https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/network_security_security_profile).
+Refer to the Terraform Registry for docs: [`google_network_security_security_profile`](https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/network_security_security_profile).

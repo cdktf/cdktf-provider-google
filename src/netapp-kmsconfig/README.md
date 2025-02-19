@@ -1,3 +1,3 @@
 # `google_netapp_kmsconfig`
 
-Refer to the Terraform Registry for docs: [`google_netapp_kmsconfig`](https://registry.terraform.io/providers/hashicorp/google/6.20.0/docs/resources/netapp_kmsconfig).
+Refer to the Terraform Registry for docs: [`google_netapp_kmsconfig`](https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/netapp_kmsconfig).

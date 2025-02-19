@@ -541,6 +541,21 @@ export class DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputRefe
     }
   }
 
+  // allowed_unsafe_sysctls - computed: true, optional: false, required: false
+  public get allowedUnsafeSysctls() {
+    return this.getListAttribute('allowed_unsafe_sysctls');
+  }
+
+  // container_log_max_files - computed: true, optional: false, required: false
+  public get containerLogMaxFiles() {
+    return this.getNumberAttribute('container_log_max_files');
+  }
+
+  // container_log_max_size - computed: true, optional: false, required: false
+  public get containerLogMaxSize() {
+    return this.getStringAttribute('container_log_max_size');
+  }
+
   // cpu_cfs_quota - computed: true, optional: false, required: false
   public get cpuCfsQuota() {
     return this.getBooleanAttribute('cpu_cfs_quota');
@@ -554,6 +569,26 @@ export class DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputRefe
   // cpu_manager_policy - computed: true, optional: false, required: false
   public get cpuManagerPolicy() {
     return this.getStringAttribute('cpu_manager_policy');
+  }
+
+  // image_gc_high_threshold_percent - computed: true, optional: false, required: false
+  public get imageGcHighThresholdPercent() {
+    return this.getNumberAttribute('image_gc_high_threshold_percent');
+  }
+
+  // image_gc_low_threshold_percent - computed: true, optional: false, required: false
+  public get imageGcLowThresholdPercent() {
+    return this.getNumberAttribute('image_gc_low_threshold_percent');
+  }
+
+  // image_maximum_gc_age - computed: true, optional: false, required: false
+  public get imageMaximumGcAge() {
+    return this.getStringAttribute('image_maximum_gc_age');
+  }
+
+  // image_minimum_gc_age - computed: true, optional: false, required: false
+  public get imageMinimumGcAge() {
+    return this.getStringAttribute('image_minimum_gc_age');
   }
 
   // insecure_kubelet_readonly_port_enabled - computed: true, optional: false, required: false
