@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgooglesetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminidatasharingwithgooglesetting"
 
 geminidatasharingwithgooglesetting.NewGeminiDataSharingWithGoogleSetting(scope Construct, id *string, config GeminiDataSharingWithGoogleSettingConfig) GeminiDataSharingWithGoogleSetting
 ```
@@ -433,7 +433,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSetting.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgooglesetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminidatasharingwithgooglesetting"
 
 geminidatasharingwithgooglesetting.GeminiDataSharingWithGoogleSetting_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSetting.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgooglesetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminidatasharingwithgooglesetting"
 
 geminidatasharingwithgooglesetting.GeminiDataSharingWithGoogleSetting_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ geminidatasharingwithgooglesetting.GeminiDataSharingWithGoogleSetting_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSetting.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgooglesetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminidatasharingwithgooglesetting"
 
 geminidatasharingwithgooglesetting.GeminiDataSharingWithGoogleSetting_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ geminidatasharingwithgooglesetting.GeminiDataSharingWithGoogleSetting_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSetting.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgooglesetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminidatasharingwithgooglesetting"
 
 geminidatasharingwithgooglesetting.GeminiDataSharingWithGoogleSetting_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -931,7 +931,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSettingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgooglesetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminidatasharingwithgooglesetting"
 
 &geminidatasharingwithgooglesetting.GeminiDataSharingWithGoogleSettingConfig {
 	Connection: interface{},
@@ -947,7 +947,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgo
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSettingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSettingTimeouts,
 }
 ```
 
@@ -1147,7 +1147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSettingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgooglesetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminidatasharingwithgooglesetting"
 
 &geminidatasharingwithgooglesetting.GeminiDataSharingWithGoogleSettingTimeouts {
 	Create: *string,
@@ -1209,7 +1209,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.geminiDataSharingWithGoogleSetting.GeminiDataSharingWithGoogleSettingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/geminidatasharingwithgooglesetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminidatasharingwithgooglesetting"
 
 geminidatasharingwithgooglesetting.NewGeminiDataSharingWithGoogleSettingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GeminiDataSharingWithGoogleSettingTimeoutsOutputReference
 ```
