@@ -1,3 +1,3 @@
 # `google_redis_cluster_user_created_connections`
 
-Refer to the Terraform Registry for docs: [`google_redis_cluster_user_created_connections`](https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/redis_cluster_user_created_connections).
+Refer to the Terraform Registry for docs: [`google_redis_cluster_user_created_connections`](https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/redis_cluster_user_created_connections).

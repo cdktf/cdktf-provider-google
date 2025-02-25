@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection
+// https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,7 +13,7 @@ export interface DeveloperConnectConnectionConfig extends cdktf.TerraformMetaArg
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#annotations DeveloperConnectConnection#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#annotations DeveloperConnectConnection#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
@@ -26,7 +21,7 @@ export interface DeveloperConnectConnectionConfig extends cdktf.TerraformMetaArg
   * If auto-generating Id server-side, remove this field and
   * connection_id from the method_signature of Create RPC
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#connection_id DeveloperConnectConnection#connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#connection_id DeveloperConnectConnection#connection_id}
   */
   readonly connectionId: string;
   /**
@@ -34,7 +29,7 @@ export interface DeveloperConnectConnectionConfig extends cdktf.TerraformMetaArg
   * Repository based API methods and webhooks processing for repositories in
   * this connection will be disabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#disabled DeveloperConnectConnection#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#disabled DeveloperConnectConnection#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
@@ -42,11 +37,11 @@ export interface DeveloperConnectConnectionConfig extends cdktf.TerraformMetaArg
   * fields, and may be sent on update and delete requests to ensure the
   * client has an up-to-date value before proceeding.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#etag DeveloperConnectConnection#etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#etag DeveloperConnectConnection#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#id DeveloperConnectConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#id DeveloperConnectConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -58,53 +53,65 @@ export interface DeveloperConnectConnectionConfig extends cdktf.TerraformMetaArg
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#labels DeveloperConnectConnection#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#labels DeveloperConnectConnection#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#location DeveloperConnectConnection#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#location DeveloperConnectConnection#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#project DeveloperConnectConnection#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#project DeveloperConnectConnection#project}
   */
   readonly project?: string;
   /**
+  * bitbucket_cloud_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#bitbucket_cloud_config DeveloperConnectConnection#bitbucket_cloud_config}
+  */
+  readonly bitbucketCloudConfig?: DeveloperConnectConnectionBitbucketCloudConfig;
+  /**
+  * bitbucket_data_center_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#bitbucket_data_center_config DeveloperConnectConnection#bitbucket_data_center_config}
+  */
+  readonly bitbucketDataCenterConfig?: DeveloperConnectConnectionBitbucketDataCenterConfig;
+  /**
   * crypto_key_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#crypto_key_config DeveloperConnectConnection#crypto_key_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#crypto_key_config DeveloperConnectConnection#crypto_key_config}
   */
   readonly cryptoKeyConfig?: DeveloperConnectConnectionCryptoKeyConfig;
   /**
   * github_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#github_config DeveloperConnectConnection#github_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#github_config DeveloperConnectConnection#github_config}
   */
   readonly githubConfig?: DeveloperConnectConnectionGithubConfig;
   /**
   * github_enterprise_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#github_enterprise_config DeveloperConnectConnection#github_enterprise_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#github_enterprise_config DeveloperConnectConnection#github_enterprise_config}
   */
   readonly githubEnterpriseConfig?: DeveloperConnectConnectionGithubEnterpriseConfig;
   /**
   * gitlab_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#gitlab_config DeveloperConnectConnection#gitlab_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#gitlab_config DeveloperConnectConnection#gitlab_config}
   */
   readonly gitlabConfig?: DeveloperConnectConnectionGitlabConfig;
   /**
   * gitlab_enterprise_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#gitlab_enterprise_config DeveloperConnectConnection#gitlab_enterprise_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#gitlab_enterprise_config DeveloperConnectConnection#gitlab_enterprise_config}
   */
   readonly gitlabEnterpriseConfig?: DeveloperConnectConnectionGitlabEnterpriseConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#timeouts DeveloperConnectConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#timeouts DeveloperConnectConnection#timeouts}
   */
   readonly timeouts?: DeveloperConnectConnectionTimeouts;
 }
@@ -193,13 +200,908 @@ export class DeveloperConnectConnectionInstallationStateList extends cdktf.Compl
     return new DeveloperConnectConnectionInstallationStateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredential {
+  /**
+  * Required. A SecretManager resource containing the user token that authorizes
+  * the Developer Connect connection. Format:
+  * 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly userTokenSecretVersion: string;
+}
+
+export function developerConnectConnectionBitbucketCloudConfigAuthorizerCredentialToTerraform(struct?: DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredentialOutputReference | DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    user_token_secret_version: cdktf.stringToTerraform(struct!.userTokenSecretVersion),
+  }
+}
+
+
+export function developerConnectConnectionBitbucketCloudConfigAuthorizerCredentialToHclTerraform(struct?: DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredentialOutputReference | DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._userTokenSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userTokenSecretVersion = this._userTokenSecretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._userTokenSecretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._userTokenSecretVersion = value.userTokenSecretVersion;
+    }
+  }
+
+  // user_token_secret_version - computed: false, optional: false, required: true
+  private _userTokenSecretVersion?: string; 
+  public get userTokenSecretVersion() {
+    return this.getStringAttribute('user_token_secret_version');
+  }
+  public set userTokenSecretVersion(value: string) {
+    this._userTokenSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTokenSecretVersionInput() {
+    return this._userTokenSecretVersion;
+  }
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+}
+export interface DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredential {
+  /**
+  * Required. A SecretManager resource containing the user token that authorizes
+  * the Developer Connect connection. Format:
+  * 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly userTokenSecretVersion: string;
+}
+
+export function developerConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialToTerraform(struct?: DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialOutputReference | DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    user_token_secret_version: cdktf.stringToTerraform(struct!.userTokenSecretVersion),
+  }
+}
+
+
+export function developerConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialToHclTerraform(struct?: DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialOutputReference | DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._userTokenSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userTokenSecretVersion = this._userTokenSecretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._userTokenSecretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._userTokenSecretVersion = value.userTokenSecretVersion;
+    }
+  }
+
+  // user_token_secret_version - computed: false, optional: false, required: true
+  private _userTokenSecretVersion?: string; 
+  public get userTokenSecretVersion() {
+    return this.getStringAttribute('user_token_secret_version');
+  }
+  public set userTokenSecretVersion(value: string) {
+    this._userTokenSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTokenSecretVersionInput() {
+    return this._userTokenSecretVersion;
+  }
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+}
+export interface DeveloperConnectConnectionBitbucketCloudConfig {
+  /**
+  * Required. Immutable. SecretManager resource containing the webhook secret used to verify webhook
+  * events, formatted as 'projects/* /secrets/* /versions/*'. This is used to
+  * validate and create webhooks.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#webhook_secret_secret_version DeveloperConnectConnection#webhook_secret_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly webhookSecretSecretVersion: string;
+  /**
+  * Required. The Bitbucket Cloud Workspace ID to be connected to Google Cloud Platform.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#workspace DeveloperConnectConnection#workspace}
+  */
+  readonly workspace: string;
+  /**
+  * authorizer_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#authorizer_credential DeveloperConnectConnection#authorizer_credential}
+  */
+  readonly authorizerCredential: DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredential;
+  /**
+  * read_authorizer_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#read_authorizer_credential DeveloperConnectConnection#read_authorizer_credential}
+  */
+  readonly readAuthorizerCredential: DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredential;
+}
+
+export function developerConnectConnectionBitbucketCloudConfigToTerraform(struct?: DeveloperConnectConnectionBitbucketCloudConfigOutputReference | DeveloperConnectConnectionBitbucketCloudConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    webhook_secret_secret_version: cdktf.stringToTerraform(struct!.webhookSecretSecretVersion),
+    workspace: cdktf.stringToTerraform(struct!.workspace),
+    authorizer_credential: developerConnectConnectionBitbucketCloudConfigAuthorizerCredentialToTerraform(struct!.authorizerCredential),
+    read_authorizer_credential: developerConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialToTerraform(struct!.readAuthorizerCredential),
+  }
+}
+
+
+export function developerConnectConnectionBitbucketCloudConfigToHclTerraform(struct?: DeveloperConnectConnectionBitbucketCloudConfigOutputReference | DeveloperConnectConnectionBitbucketCloudConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    webhook_secret_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.webhookSecretSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    workspace: {
+      value: cdktf.stringToHclTerraform(struct!.workspace),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    authorizer_credential: {
+      value: developerConnectConnectionBitbucketCloudConfigAuthorizerCredentialToHclTerraform(struct!.authorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredentialList",
+    },
+    read_authorizer_credential: {
+      value: developerConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialToHclTerraform(struct!.readAuthorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DeveloperConnectConnectionBitbucketCloudConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DeveloperConnectConnectionBitbucketCloudConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._webhookSecretSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webhookSecretSecretVersion = this._webhookSecretSecretVersion;
+    }
+    if (this._workspace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.workspace = this._workspace;
+    }
+    if (this._authorizerCredential?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authorizerCredential = this._authorizerCredential?.internalValue;
+    }
+    if (this._readAuthorizerCredential?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readAuthorizerCredential = this._readAuthorizerCredential?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeveloperConnectConnectionBitbucketCloudConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._webhookSecretSecretVersion = undefined;
+      this._workspace = undefined;
+      this._authorizerCredential.internalValue = undefined;
+      this._readAuthorizerCredential.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._webhookSecretSecretVersion = value.webhookSecretSecretVersion;
+      this._workspace = value.workspace;
+      this._authorizerCredential.internalValue = value.authorizerCredential;
+      this._readAuthorizerCredential.internalValue = value.readAuthorizerCredential;
+    }
+  }
+
+  // webhook_secret_secret_version - computed: false, optional: false, required: true
+  private _webhookSecretSecretVersion?: string; 
+  public get webhookSecretSecretVersion() {
+    return this.getStringAttribute('webhook_secret_secret_version');
+  }
+  public set webhookSecretSecretVersion(value: string) {
+    this._webhookSecretSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookSecretSecretVersionInput() {
+    return this._webhookSecretSecretVersion;
+  }
+
+  // workspace - computed: false, optional: false, required: true
+  private _workspace?: string; 
+  public get workspace() {
+    return this.getStringAttribute('workspace');
+  }
+  public set workspace(value: string) {
+    this._workspace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceInput() {
+    return this._workspace;
+  }
+
+  // authorizer_credential - computed: false, optional: false, required: true
+  private _authorizerCredential = new DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredentialOutputReference(this, "authorizer_credential");
+  public get authorizerCredential() {
+    return this._authorizerCredential;
+  }
+  public putAuthorizerCredential(value: DeveloperConnectConnectionBitbucketCloudConfigAuthorizerCredential) {
+    this._authorizerCredential.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizerCredentialInput() {
+    return this._authorizerCredential.internalValue;
+  }
+
+  // read_authorizer_credential - computed: false, optional: false, required: true
+  private _readAuthorizerCredential = new DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredentialOutputReference(this, "read_authorizer_credential");
+  public get readAuthorizerCredential() {
+    return this._readAuthorizerCredential;
+  }
+  public putReadAuthorizerCredential(value: DeveloperConnectConnectionBitbucketCloudConfigReadAuthorizerCredential) {
+    this._readAuthorizerCredential.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readAuthorizerCredentialInput() {
+    return this._readAuthorizerCredential.internalValue;
+  }
+}
+export interface DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredential {
+  /**
+  * Required. A SecretManager resource containing the user token that authorizes
+  * the Developer Connect connection. Format:
+  * 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly userTokenSecretVersion: string;
+}
+
+export function developerConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialToTerraform(struct?: DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialOutputReference | DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    user_token_secret_version: cdktf.stringToTerraform(struct!.userTokenSecretVersion),
+  }
+}
+
+
+export function developerConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialToHclTerraform(struct?: DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialOutputReference | DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._userTokenSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userTokenSecretVersion = this._userTokenSecretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._userTokenSecretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._userTokenSecretVersion = value.userTokenSecretVersion;
+    }
+  }
+
+  // user_token_secret_version - computed: false, optional: false, required: true
+  private _userTokenSecretVersion?: string; 
+  public get userTokenSecretVersion() {
+    return this.getStringAttribute('user_token_secret_version');
+  }
+  public set userTokenSecretVersion(value: string) {
+    this._userTokenSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTokenSecretVersionInput() {
+    return this._userTokenSecretVersion;
+  }
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+}
+export interface DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredential {
+  /**
+  * Required. A SecretManager resource containing the user token that authorizes
+  * the Developer Connect connection. Format:
+  * 'projects/* /secrets/* /versions/*'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly userTokenSecretVersion: string;
+}
+
+export function developerConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialToTerraform(struct?: DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialOutputReference | DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    user_token_secret_version: cdktf.stringToTerraform(struct!.userTokenSecretVersion),
+  }
+}
+
+
+export function developerConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialToHclTerraform(struct?: DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialOutputReference | DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    user_token_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.userTokenSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._userTokenSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userTokenSecretVersion = this._userTokenSecretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._userTokenSecretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._userTokenSecretVersion = value.userTokenSecretVersion;
+    }
+  }
+
+  // user_token_secret_version - computed: false, optional: false, required: true
+  private _userTokenSecretVersion?: string; 
+  public get userTokenSecretVersion() {
+    return this.getStringAttribute('user_token_secret_version');
+  }
+  public set userTokenSecretVersion(value: string) {
+    this._userTokenSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTokenSecretVersionInput() {
+    return this._userTokenSecretVersion;
+  }
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+}
+export interface DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfig {
+  /**
+  * Required. The Service Directory service name.
+  * Format:
+  * projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#service DeveloperConnectConnection#service}
+  */
+  readonly service: string;
+}
+
+export function developerConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigToTerraform(struct?: DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigOutputReference | DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    service: cdktf.stringToTerraform(struct!.service),
+  }
+}
+
+
+export function developerConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigToHclTerraform(struct?: DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigOutputReference | DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    service: {
+      value: cdktf.stringToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._service !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._service = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._service = value.service;
+    }
+  }
+
+  // service - computed: false, optional: false, required: true
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+}
+export interface DeveloperConnectConnectionBitbucketDataCenterConfig {
+  /**
+  * Required. The URI of the Bitbucket Data Center host this connection is for.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#host_uri DeveloperConnectConnection#host_uri}
+  */
+  readonly hostUri: string;
+  /**
+  * Optional. SSL certificate authority to trust when making requests to Bitbucket Data
+  * Center.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#ssl_ca_certificate DeveloperConnectConnection#ssl_ca_certificate}
+  */
+  readonly sslCaCertificate?: string;
+  /**
+  * Required. Immutable. SecretManager resource containing the webhook secret used to verify webhook
+  * events, formatted as 'projects/* /secrets/* /versions/*'. This is used to
+  * validate webhooks.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#webhook_secret_secret_version DeveloperConnectConnection#webhook_secret_secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly webhookSecretSecretVersion: string;
+  /**
+  * authorizer_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#authorizer_credential DeveloperConnectConnection#authorizer_credential}
+  */
+  readonly authorizerCredential: DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredential;
+  /**
+  * read_authorizer_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#read_authorizer_credential DeveloperConnectConnection#read_authorizer_credential}
+  */
+  readonly readAuthorizerCredential: DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredential;
+  /**
+  * service_directory_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#service_directory_config DeveloperConnectConnection#service_directory_config}
+  */
+  readonly serviceDirectoryConfig?: DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfig;
+}
+
+export function developerConnectConnectionBitbucketDataCenterConfigToTerraform(struct?: DeveloperConnectConnectionBitbucketDataCenterConfigOutputReference | DeveloperConnectConnectionBitbucketDataCenterConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    host_uri: cdktf.stringToTerraform(struct!.hostUri),
+    ssl_ca_certificate: cdktf.stringToTerraform(struct!.sslCaCertificate),
+    webhook_secret_secret_version: cdktf.stringToTerraform(struct!.webhookSecretSecretVersion),
+    authorizer_credential: developerConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialToTerraform(struct!.authorizerCredential),
+    read_authorizer_credential: developerConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialToTerraform(struct!.readAuthorizerCredential),
+    service_directory_config: developerConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigToTerraform(struct!.serviceDirectoryConfig),
+  }
+}
+
+
+export function developerConnectConnectionBitbucketDataCenterConfigToHclTerraform(struct?: DeveloperConnectConnectionBitbucketDataCenterConfigOutputReference | DeveloperConnectConnectionBitbucketDataCenterConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host_uri: {
+      value: cdktf.stringToHclTerraform(struct!.hostUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssl_ca_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.sslCaCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    webhook_secret_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.webhookSecretSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    authorizer_credential: {
+      value: developerConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialToHclTerraform(struct!.authorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialList",
+    },
+    read_authorizer_credential: {
+      value: developerConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialToHclTerraform(struct!.readAuthorizerCredential),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialList",
+    },
+    service_directory_config: {
+      value: developerConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigToHclTerraform(struct!.serviceDirectoryConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DeveloperConnectConnectionBitbucketDataCenterConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DeveloperConnectConnectionBitbucketDataCenterConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hostUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostUri = this._hostUri;
+    }
+    if (this._sslCaCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslCaCertificate = this._sslCaCertificate;
+    }
+    if (this._webhookSecretSecretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webhookSecretSecretVersion = this._webhookSecretSecretVersion;
+    }
+    if (this._authorizerCredential?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authorizerCredential = this._authorizerCredential?.internalValue;
+    }
+    if (this._readAuthorizerCredential?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readAuthorizerCredential = this._readAuthorizerCredential?.internalValue;
+    }
+    if (this._serviceDirectoryConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceDirectoryConfig = this._serviceDirectoryConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeveloperConnectConnectionBitbucketDataCenterConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hostUri = undefined;
+      this._sslCaCertificate = undefined;
+      this._webhookSecretSecretVersion = undefined;
+      this._authorizerCredential.internalValue = undefined;
+      this._readAuthorizerCredential.internalValue = undefined;
+      this._serviceDirectoryConfig.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hostUri = value.hostUri;
+      this._sslCaCertificate = value.sslCaCertificate;
+      this._webhookSecretSecretVersion = value.webhookSecretSecretVersion;
+      this._authorizerCredential.internalValue = value.authorizerCredential;
+      this._readAuthorizerCredential.internalValue = value.readAuthorizerCredential;
+      this._serviceDirectoryConfig.internalValue = value.serviceDirectoryConfig;
+    }
+  }
+
+  // host_uri - computed: false, optional: false, required: true
+  private _hostUri?: string; 
+  public get hostUri() {
+    return this.getStringAttribute('host_uri');
+  }
+  public set hostUri(value: string) {
+    this._hostUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostUriInput() {
+    return this._hostUri;
+  }
+
+  // server_version - computed: true, optional: false, required: false
+  public get serverVersion() {
+    return this.getStringAttribute('server_version');
+  }
+
+  // ssl_ca_certificate - computed: false, optional: true, required: false
+  private _sslCaCertificate?: string; 
+  public get sslCaCertificate() {
+    return this.getStringAttribute('ssl_ca_certificate');
+  }
+  public set sslCaCertificate(value: string) {
+    this._sslCaCertificate = value;
+  }
+  public resetSslCaCertificate() {
+    this._sslCaCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslCaCertificateInput() {
+    return this._sslCaCertificate;
+  }
+
+  // webhook_secret_secret_version - computed: false, optional: false, required: true
+  private _webhookSecretSecretVersion?: string; 
+  public get webhookSecretSecretVersion() {
+    return this.getStringAttribute('webhook_secret_secret_version');
+  }
+  public set webhookSecretSecretVersion(value: string) {
+    this._webhookSecretSecretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookSecretSecretVersionInput() {
+    return this._webhookSecretSecretVersion;
+  }
+
+  // authorizer_credential - computed: false, optional: false, required: true
+  private _authorizerCredential = new DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredentialOutputReference(this, "authorizer_credential");
+  public get authorizerCredential() {
+    return this._authorizerCredential;
+  }
+  public putAuthorizerCredential(value: DeveloperConnectConnectionBitbucketDataCenterConfigAuthorizerCredential) {
+    this._authorizerCredential.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizerCredentialInput() {
+    return this._authorizerCredential.internalValue;
+  }
+
+  // read_authorizer_credential - computed: false, optional: false, required: true
+  private _readAuthorizerCredential = new DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredentialOutputReference(this, "read_authorizer_credential");
+  public get readAuthorizerCredential() {
+    return this._readAuthorizerCredential;
+  }
+  public putReadAuthorizerCredential(value: DeveloperConnectConnectionBitbucketDataCenterConfigReadAuthorizerCredential) {
+    this._readAuthorizerCredential.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readAuthorizerCredentialInput() {
+    return this._readAuthorizerCredential.internalValue;
+  }
+
+  // service_directory_config - computed: false, optional: true, required: false
+  private _serviceDirectoryConfig = new DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfigOutputReference(this, "service_directory_config");
+  public get serviceDirectoryConfig() {
+    return this._serviceDirectoryConfig;
+  }
+  public putServiceDirectoryConfig(value: DeveloperConnectConnectionBitbucketDataCenterConfigServiceDirectoryConfig) {
+    this._serviceDirectoryConfig.internalValue = value;
+  }
+  public resetServiceDirectoryConfig() {
+    this._serviceDirectoryConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceDirectoryConfigInput() {
+    return this._serviceDirectoryConfig.internalValue;
+  }
+}
 export interface DeveloperConnectConnectionCryptoKeyConfig {
   /**
   * Required. The name of the key which is used to encrypt/decrypt customer data. For key
   * in Cloud KMS, the key should be in the format of
   * 'projects/* /locations/* /keyRings/* /cryptoKeys/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#key_reference DeveloperConnectConnection#key_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#key_reference DeveloperConnectConnection#key_reference}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -285,7 +1187,7 @@ export interface DeveloperConnectConnectionGithubConfigAuthorizerCredential {
   * Required. A SecretManager resource containing the OAuth token that authorizes
   * the connection. Format: 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#oauth_token_secret_version DeveloperConnectConnection#oauth_token_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#oauth_token_secret_version DeveloperConnectConnection#oauth_token_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -375,7 +1277,7 @@ export interface DeveloperConnectConnectionGithubConfig {
   /**
   * Optional. GitHub App installation id.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#app_installation_id DeveloperConnectConnection#app_installation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#app_installation_id DeveloperConnectConnection#app_installation_id}
   */
   readonly appInstallationId?: string;
   /**
@@ -386,13 +1288,13 @@ export interface DeveloperConnectConnectionGithubConfig {
   * DEVELOPER_CONNECT
   * FIREBASE
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#github_app DeveloperConnectConnection#github_app}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#github_app DeveloperConnectConnection#github_app}
   */
   readonly githubApp: string;
   /**
   * authorizer_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#authorizer_credential DeveloperConnectConnection#authorizer_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#authorizer_credential DeveloperConnectConnection#authorizer_credential}
   */
   readonly authorizerCredential?: DeveloperConnectConnectionGithubConfigAuthorizerCredential;
 }
@@ -540,7 +1442,7 @@ export interface DeveloperConnectConnectionGithubEnterpriseConfigServiceDirector
   * Format:
   * projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#service DeveloperConnectConnection#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#service DeveloperConnectConnection#service}
   */
   readonly service: string;
 }
@@ -623,26 +1525,26 @@ export interface DeveloperConnectConnectionGithubEnterpriseConfig {
   /**
   * Optional. ID of the GitHub App created from the manifest.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#app_id DeveloperConnectConnection#app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#app_id DeveloperConnectConnection#app_id}
   */
   readonly appId?: string;
   /**
   * Optional. ID of the installation of the GitHub App.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#app_installation_id DeveloperConnectConnection#app_installation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#app_installation_id DeveloperConnectConnection#app_installation_id}
   */
   readonly appInstallationId?: string;
   /**
   * Required. The URI of the GitHub Enterprise host this connection is for.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#host_uri DeveloperConnectConnection#host_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#host_uri DeveloperConnectConnection#host_uri}
   */
   readonly hostUri: string;
   /**
   * Optional. SecretManager resource containing the private key of the GitHub App,
   * formatted as 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#private_key_secret_version DeveloperConnectConnection#private_key_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#private_key_secret_version DeveloperConnectConnection#private_key_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -650,14 +1552,14 @@ export interface DeveloperConnectConnectionGithubEnterpriseConfig {
   /**
   * Optional. SSL certificate to use for requests to GitHub Enterprise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#ssl_ca_certificate DeveloperConnectConnection#ssl_ca_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#ssl_ca_certificate DeveloperConnectConnection#ssl_ca_certificate}
   */
   readonly sslCaCertificate?: string;
   /**
   * Optional. SecretManager resource containing the webhook secret of the GitHub App,
   * formatted as 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#webhook_secret_secret_version DeveloperConnectConnection#webhook_secret_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#webhook_secret_secret_version DeveloperConnectConnection#webhook_secret_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -665,7 +1567,7 @@ export interface DeveloperConnectConnectionGithubEnterpriseConfig {
   /**
   * service_directory_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#service_directory_config DeveloperConnectConnection#service_directory_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#service_directory_config DeveloperConnectConnection#service_directory_config}
   */
   readonly serviceDirectoryConfig?: DeveloperConnectConnectionGithubEnterpriseConfigServiceDirectoryConfig;
 }
@@ -939,7 +1841,7 @@ export interface DeveloperConnectConnectionGitlabConfigAuthorizerCredential {
   * the Developer Connect connection. Format:
   * 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1031,7 +1933,7 @@ export interface DeveloperConnectConnectionGitlabConfigReadAuthorizerCredential 
   * the Developer Connect connection. Format:
   * 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1123,7 +2025,7 @@ export interface DeveloperConnectConnectionGitlabConfig {
   * formatted as 'projects/* /secrets/* /versions/*'. This is used to validate
   * webhooks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#webhook_secret_secret_version DeveloperConnectConnection#webhook_secret_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#webhook_secret_secret_version DeveloperConnectConnection#webhook_secret_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1131,13 +2033,13 @@ export interface DeveloperConnectConnectionGitlabConfig {
   /**
   * authorizer_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#authorizer_credential DeveloperConnectConnection#authorizer_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#authorizer_credential DeveloperConnectConnection#authorizer_credential}
   */
   readonly authorizerCredential: DeveloperConnectConnectionGitlabConfigAuthorizerCredential;
   /**
   * read_authorizer_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#read_authorizer_credential DeveloperConnectConnection#read_authorizer_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#read_authorizer_credential DeveloperConnectConnection#read_authorizer_credential}
   */
   readonly readAuthorizerCredential: DeveloperConnectConnectionGitlabConfigReadAuthorizerCredential;
 }
@@ -1274,7 +2176,7 @@ export interface DeveloperConnectConnectionGitlabEnterpriseConfigAuthorizerCrede
   * the Developer Connect connection. Format:
   * 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1366,7 +2268,7 @@ export interface DeveloperConnectConnectionGitlabEnterpriseConfigReadAuthorizerC
   * the Developer Connect connection. Format:
   * 'projects/* /secrets/* /versions/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#user_token_secret_version DeveloperConnectConnection#user_token_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1458,7 +2360,7 @@ export interface DeveloperConnectConnectionGitlabEnterpriseConfigServiceDirector
   * Format:
   * projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#service DeveloperConnectConnection#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#service DeveloperConnectConnection#service}
   */
   readonly service: string;
 }
@@ -1541,14 +2443,14 @@ export interface DeveloperConnectConnectionGitlabEnterpriseConfig {
   /**
   * Required. The URI of the GitLab Enterprise host this connection is for.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#host_uri DeveloperConnectConnection#host_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#host_uri DeveloperConnectConnection#host_uri}
   */
   readonly hostUri: string;
   /**
   * Optional. SSL Certificate Authority certificate to use for requests to GitLab
   * Enterprise instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#ssl_ca_certificate DeveloperConnectConnection#ssl_ca_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#ssl_ca_certificate DeveloperConnectConnection#ssl_ca_certificate}
   */
   readonly sslCaCertificate?: string;
   /**
@@ -1556,7 +2458,7 @@ export interface DeveloperConnectConnectionGitlabEnterpriseConfig {
   * formatted as 'projects/* /secrets/* /versions/*'. This is used to validate
   * webhooks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#webhook_secret_secret_version DeveloperConnectConnection#webhook_secret_secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#webhook_secret_secret_version DeveloperConnectConnection#webhook_secret_secret_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -1564,19 +2466,19 @@ export interface DeveloperConnectConnectionGitlabEnterpriseConfig {
   /**
   * authorizer_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#authorizer_credential DeveloperConnectConnection#authorizer_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#authorizer_credential DeveloperConnectConnection#authorizer_credential}
   */
   readonly authorizerCredential: DeveloperConnectConnectionGitlabEnterpriseConfigAuthorizerCredential;
   /**
   * read_authorizer_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#read_authorizer_credential DeveloperConnectConnection#read_authorizer_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#read_authorizer_credential DeveloperConnectConnection#read_authorizer_credential}
   */
   readonly readAuthorizerCredential: DeveloperConnectConnectionGitlabEnterpriseConfigReadAuthorizerCredential;
   /**
   * service_directory_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#service_directory_config DeveloperConnectConnection#service_directory_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#service_directory_config DeveloperConnectConnection#service_directory_config}
   */
   readonly serviceDirectoryConfig?: DeveloperConnectConnectionGitlabEnterpriseConfigServiceDirectoryConfig;
 }
@@ -1798,15 +2700,15 @@ export class DeveloperConnectConnectionGitlabEnterpriseConfigOutputReference ext
 }
 export interface DeveloperConnectConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#create DeveloperConnectConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#create DeveloperConnectConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#delete DeveloperConnectConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#delete DeveloperConnectConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#update DeveloperConnectConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#update DeveloperConnectConnection#update}
   */
   readonly update?: string;
 }
@@ -1958,7 +2860,7 @@ export class DeveloperConnectConnectionTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection google_developer_connect_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection google_developer_connect_connection}
 */
 export class DeveloperConnectConnection extends cdktf.TerraformResource {
 
@@ -1974,7 +2876,7 @@ export class DeveloperConnectConnection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DeveloperConnectConnection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DeveloperConnectConnection to import
-  * @param importFromId The id of the existing DeveloperConnectConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DeveloperConnectConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DeveloperConnectConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1986,7 +2888,7 @@ export class DeveloperConnectConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.21.0/docs/resources/developer_connect_connection google_developer_connect_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/developer_connect_connection google_developer_connect_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1997,7 +2899,7 @@ export class DeveloperConnectConnection extends cdktf.TerraformResource {
       terraformResourceType: 'google_developer_connect_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.21.0',
+        providerVersion: '6.22.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -2016,6 +2918,8 @@ export class DeveloperConnectConnection extends cdktf.TerraformResource {
     this._labels = config.labels;
     this._location = config.location;
     this._project = config.project;
+    this._bitbucketCloudConfig.internalValue = config.bitbucketCloudConfig;
+    this._bitbucketDataCenterConfig.internalValue = config.bitbucketDataCenterConfig;
     this._cryptoKeyConfig.internalValue = config.cryptoKeyConfig;
     this._githubConfig.internalValue = config.githubConfig;
     this._githubEnterpriseConfig.internalValue = config.githubEnterpriseConfig;
@@ -2204,6 +3108,38 @@ export class DeveloperConnectConnection extends cdktf.TerraformResource {
     return this.getStringAttribute('update_time');
   }
 
+  // bitbucket_cloud_config - computed: false, optional: true, required: false
+  private _bitbucketCloudConfig = new DeveloperConnectConnectionBitbucketCloudConfigOutputReference(this, "bitbucket_cloud_config");
+  public get bitbucketCloudConfig() {
+    return this._bitbucketCloudConfig;
+  }
+  public putBitbucketCloudConfig(value: DeveloperConnectConnectionBitbucketCloudConfig) {
+    this._bitbucketCloudConfig.internalValue = value;
+  }
+  public resetBitbucketCloudConfig() {
+    this._bitbucketCloudConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bitbucketCloudConfigInput() {
+    return this._bitbucketCloudConfig.internalValue;
+  }
+
+  // bitbucket_data_center_config - computed: false, optional: true, required: false
+  private _bitbucketDataCenterConfig = new DeveloperConnectConnectionBitbucketDataCenterConfigOutputReference(this, "bitbucket_data_center_config");
+  public get bitbucketDataCenterConfig() {
+    return this._bitbucketDataCenterConfig;
+  }
+  public putBitbucketDataCenterConfig(value: DeveloperConnectConnectionBitbucketDataCenterConfig) {
+    this._bitbucketDataCenterConfig.internalValue = value;
+  }
+  public resetBitbucketDataCenterConfig() {
+    this._bitbucketDataCenterConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bitbucketDataCenterConfigInput() {
+    return this._bitbucketDataCenterConfig.internalValue;
+  }
+
   // crypto_key_config - computed: false, optional: true, required: false
   private _cryptoKeyConfig = new DeveloperConnectConnectionCryptoKeyConfigOutputReference(this, "crypto_key_config");
   public get cryptoKeyConfig() {
@@ -2314,6 +3250,8 @@ export class DeveloperConnectConnection extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
+      bitbucket_cloud_config: developerConnectConnectionBitbucketCloudConfigToTerraform(this._bitbucketCloudConfig.internalValue),
+      bitbucket_data_center_config: developerConnectConnectionBitbucketDataCenterConfigToTerraform(this._bitbucketDataCenterConfig.internalValue),
       crypto_key_config: developerConnectConnectionCryptoKeyConfigToTerraform(this._cryptoKeyConfig.internalValue),
       github_config: developerConnectConnectionGithubConfigToTerraform(this._githubConfig.internalValue),
       github_enterprise_config: developerConnectConnectionGithubEnterpriseConfigToTerraform(this._githubEnterpriseConfig.internalValue),
@@ -2372,6 +3310,18 @@ export class DeveloperConnectConnection extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      bitbucket_cloud_config: {
+        value: developerConnectConnectionBitbucketCloudConfigToHclTerraform(this._bitbucketCloudConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DeveloperConnectConnectionBitbucketCloudConfigList",
+      },
+      bitbucket_data_center_config: {
+        value: developerConnectConnectionBitbucketDataCenterConfigToHclTerraform(this._bitbucketDataCenterConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DeveloperConnectConnectionBitbucketDataCenterConfigList",
       },
       crypto_key_config: {
         value: developerConnectConnectionCryptoKeyConfigToHclTerraform(this._cryptoKeyConfig.internalValue),
