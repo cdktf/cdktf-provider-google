@@ -4,7 +4,7 @@
 
 ### SecretManagerSecretVersion <a name="SecretManagerSecretVersion" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version google_secret_manager_secret_version}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version google_secret_manager_secret_version}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.Initializer"></a>
 
@@ -78,6 +78,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetEnabled">ResetEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetIsSecretDataBase64">ResetIsSecretDataBase64</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetSecretData">ResetSecretData</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetSecretDataWo">ResetSecretDataWo</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetSecretDataWoVersion">ResetSecretDataWoVersion</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
 ---
@@ -406,6 +409,24 @@ private void ResetId()
 private void ResetIsSecretDataBase64()
 ```
 
+##### `ResetSecretData` <a name="ResetSecretData" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetSecretData"></a>
+
+```csharp
+private void ResetSecretData()
+```
+
+##### `ResetSecretDataWo` <a name="ResetSecretDataWo" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetSecretDataWo"></a>
+
+```csharp
+private void ResetSecretDataWo()
+```
+
+##### `ResetSecretDataWoVersion` <a name="ResetSecretDataWoVersion" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetSecretDataWoVersion"></a>
+
+```csharp
+private void ResetSecretDataWoVersion()
+```
+
 ##### `ResetTimeouts` <a name="ResetTimeouts" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.resetTimeouts"></a>
 
 ```csharp
@@ -515,7 +536,7 @@ The construct id used in the generated config for the SecretManagerSecretVersion
 
 The id of the existing SecretManagerSecretVersion that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -555,6 +576,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.isSecretDataBase64Input">IsSecretDataBase64Input</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataInput">SecretDataInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataWoInput">SecretDataWoInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataWoVersionInput">SecretDataWoVersionInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretInput">SecretInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.deletionPolicy">DeletionPolicy</a></code> | <code>string</code> | *No description.* |
@@ -563,6 +586,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.isSecretDataBase64">IsSecretDataBase64</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secret">Secret</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretData">SecretData</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataWo">SecretDataWo</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataWoVersion">SecretDataWoVersion</a></code> | <code>double</code> | *No description.* |
 
 ---
 
@@ -808,6 +833,26 @@ public string SecretDataInput { get; }
 
 ---
 
+##### `SecretDataWoInput`<sup>Optional</sup> <a name="SecretDataWoInput" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataWoInput"></a>
+
+```csharp
+public string SecretDataWoInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SecretDataWoVersionInput`<sup>Optional</sup> <a name="SecretDataWoVersionInput" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataWoVersionInput"></a>
+
+```csharp
+public double SecretDataWoVersionInput { get; }
+```
+
+- *Type:* double
+
+---
+
 ##### `SecretInput`<sup>Optional</sup> <a name="SecretInput" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretInput"></a>
 
 ```csharp
@@ -888,6 +933,26 @@ public string SecretData { get; }
 
 ---
 
+##### `SecretDataWo`<sup>Required</sup> <a name="SecretDataWo" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataWo"></a>
+
+```csharp
+public string SecretDataWo { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SecretDataWoVersion`<sup>Required</sup> <a name="SecretDataWoVersion" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.property.secretDataWoVersion"></a>
+
+```csharp
+public double SecretDataWoVersion { get; }
+```
+
+- *Type:* double
+
+---
+
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -924,11 +989,13 @@ new SecretManagerSecretVersionConfig {
     TerraformProvider Provider = null,
     object[] Provisioners = null,
     string Secret,
-    string SecretData,
     string DeletionPolicy = null,
     object Enabled = null,
     string Id = null,
     object IsSecretDataBase64 = null,
+    string SecretData = null,
+    string SecretDataWo = null,
+    double SecretDataWoVersion = null,
     SecretManagerSecretVersionTimeouts Timeouts = null
 };
 ```
@@ -945,11 +1012,13 @@ new SecretManagerSecretVersionConfig {
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secret">Secret</a></code> | <code>string</code> | Secret Manager secret resource. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secretData">SecretData</a></code> | <code>string</code> | The secret data. Must be no larger than 64KiB. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.deletionPolicy">DeletionPolicy</a></code> | <code>string</code> | The deletion policy for the secret version. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.enabled">Enabled</a></code> | <code>object</code> | The current state of the SecretVersion. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#id SecretManagerSecretVersion#id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#id SecretManagerSecretVersion#id}. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.isSecretDataBase64">IsSecretDataBase64</a></code> | <code>object</code> | If set to 'true', the secret data is expected to be base64-encoded string and would be sent as is. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secretData">SecretData</a></code> | <code>string</code> | The secret data. Must be no larger than 64KiB. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secretDataWo">SecretDataWo</a></code> | <code>string</code> | The secret data. Must be no larger than 64KiB. For more info see [updating write-only attributes](/docs/providers/google/guides/using_write_only_attributes.html#updating-write-only-attributes). |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secretDataWoVersion">SecretDataWoVersion</a></code> | <code>double</code> | Triggers update of secret data write-only. For more info see [updating write-only attributes](/docs/providers/google/guides/using_write_only_attributes.html#updating-write-only-attributes). |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts">SecretManagerSecretVersionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1034,21 +1103,7 @@ public string Secret { get; set; }
 
 Secret Manager secret resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#secret SecretManagerSecretVersion#secret}
-
----
-
-##### `SecretData`<sup>Required</sup> <a name="SecretData" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secretData"></a>
-
-```csharp
-public string SecretData { get; set; }
-```
-
-- *Type:* string
-
-The secret data. Must be no larger than 64KiB.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#secret_data SecretManagerSecretVersion#secret_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#secret SecretManagerSecretVersion#secret}
 
 ---
 
@@ -1070,7 +1125,7 @@ disabled rather than deleted. Default is 'DELETE'. Possible values are:
 * DISABLE
 * ABANDON
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#deletion_policy SecretManagerSecretVersion#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#deletion_policy SecretManagerSecretVersion#deletion_policy}
 
 ---
 
@@ -1084,7 +1139,7 @@ public object Enabled { get; set; }
 
 The current state of the SecretVersion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#enabled SecretManagerSecretVersion#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#enabled SecretManagerSecretVersion#enabled}
 
 ---
 
@@ -1096,7 +1151,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#id SecretManagerSecretVersion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#id SecretManagerSecretVersion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1113,7 +1168,49 @@ public object IsSecretDataBase64 { get; set; }
 
 If set to 'true', the secret data is expected to be base64-encoded string and would be sent as is.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#is_secret_data_base64 SecretManagerSecretVersion#is_secret_data_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#is_secret_data_base64 SecretManagerSecretVersion#is_secret_data_base64}
+
+---
+
+##### `SecretData`<sup>Optional</sup> <a name="SecretData" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secretData"></a>
+
+```csharp
+public string SecretData { get; set; }
+```
+
+- *Type:* string
+
+The secret data. Must be no larger than 64KiB.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#secret_data SecretManagerSecretVersion#secret_data}
+
+---
+
+##### `SecretDataWo`<sup>Optional</sup> <a name="SecretDataWo" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secretDataWo"></a>
+
+```csharp
+public string SecretDataWo { get; set; }
+```
+
+- *Type:* string
+
+The secret data. Must be no larger than 64KiB. For more info see [updating write-only attributes](/docs/providers/google/guides/using_write_only_attributes.html#updating-write-only-attributes).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#secret_data_wo SecretManagerSecretVersion#secret_data_wo}
+
+---
+
+##### `SecretDataWoVersion`<sup>Optional</sup> <a name="SecretDataWoVersion" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.property.secretDataWoVersion"></a>
+
+```csharp
+public double SecretDataWoVersion { get; set; }
+```
+
+- *Type:* double
+
+Triggers update of secret data write-only. For more info see [updating write-only attributes](/docs/providers/google/guides/using_write_only_attributes.html#updating-write-only-attributes).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#secret_data_wo_version SecretManagerSecretVersion#secret_data_wo_version}
 
 ---
 
@@ -1127,7 +1224,7 @@ public SecretManagerSecretVersionTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#timeouts SecretManagerSecretVersion#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#timeouts SecretManagerSecretVersion#timeouts}
 
 ---
 
@@ -1149,9 +1246,9 @@ new SecretManagerSecretVersionTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#create SecretManagerSecretVersion#create}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#delete SecretManagerSecretVersion#delete}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#update SecretManagerSecretVersion#update}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#create SecretManagerSecretVersion#create}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#delete SecretManagerSecretVersion#delete}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#update SecretManagerSecretVersion#update}. |
 
 ---
 
@@ -1163,7 +1260,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#create SecretManagerSecretVersion#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#create SecretManagerSecretVersion#create}.
 
 ---
 
@@ -1175,7 +1272,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#delete SecretManagerSecretVersion#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#delete SecretManagerSecretVersion#delete}.
 
 ---
 
@@ -1187,7 +1284,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/secret_manager_secret_version#update SecretManagerSecretVersion#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/secret_manager_secret_version#update SecretManagerSecretVersion#update}.
 
 ---
 

@@ -1,3 +1,3 @@
 # `google_transcoder_job_template`
 
-Refer to the Terraform Registry for docs: [`google_transcoder_job_template`](https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/transcoder_job_template).
+Refer to the Terraform Registry for docs: [`google_transcoder_job_template`](https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/transcoder_job_template).
