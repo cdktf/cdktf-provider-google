@@ -1,3 +1,3 @@
 # `google_clouddeploy_automation`
 
-Refer to the Terraform Registry for docs: [`google_clouddeploy_automation`](https://registry.terraform.io/providers/hashicorp/google/6.22.0/docs/resources/clouddeploy_automation).
+Refer to the Terraform Registry for docs: [`google_clouddeploy_automation`](https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/clouddeploy_automation).
