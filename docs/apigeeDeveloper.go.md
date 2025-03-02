@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloper.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 apigeedeveloper.NewApigeeDeveloper(scope Construct, id *string, config ApigeeDeveloperConfig) ApigeeDeveloper
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloper.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 apigeedeveloper.ApigeeDeveloper_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloper.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 apigeedeveloper.ApigeeDeveloper_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ apigeedeveloper.ApigeeDeveloper_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloper.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 apigeedeveloper.ApigeeDeveloper_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ apigeedeveloper.ApigeeDeveloper_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloper.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 apigeedeveloper.ApigeeDeveloper_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -934,7 +934,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloperAttributes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 &apigeedeveloper.ApigeeDeveloperAttributes {
 	Name: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloperConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 &apigeedeveloper.ApigeeDeveloperConfig {
 	Connection: interface{},
@@ -1001,7 +1001,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
 	UserName: *string,
 	Attributes: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.apigeeDeveloper.ApigeeDeveloperTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeDeveloper.ApigeeDeveloperTimeouts,
 }
 ```
 
@@ -1217,7 +1217,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloperTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 &apigeedeveloper.ApigeeDeveloperTimeouts {
 	Create: *string,
@@ -1279,7 +1279,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloperAttributesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 apigeedeveloper.NewApigeeDeveloperAttributesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApigeeDeveloperAttributesList
 ```
@@ -1439,7 +1439,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloperAttributesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 apigeedeveloper.NewApigeeDeveloperAttributesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApigeeDeveloperAttributesOutputReference
 ```
@@ -1764,7 +1764,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeDeveloper.ApigeeDeveloperTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeedeveloper"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeedeveloper"
 
 apigeedeveloper.NewApigeeDeveloperTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeDeveloperTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenablementsetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/geminigeminigcpenablementsetting"
 
 geminigeminigcpenablementsetting.NewGeminiGeminiGcpEnablementSetting(scope Construct, id *string, config GeminiGeminiGcpEnablementSettingConfig) GeminiGeminiGcpEnablementSetting
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSetting.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenablementsetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/geminigeminigcpenablementsetting"
 
 geminigeminigcpenablementsetting.GeminiGeminiGcpEnablementSetting_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSetting.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenablementsetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/geminigeminigcpenablementsetting"
 
 geminigeminigcpenablementsetting.GeminiGeminiGcpEnablementSetting_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ geminigeminigcpenablementsetting.GeminiGeminiGcpEnablementSetting_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSetting.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenablementsetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/geminigeminigcpenablementsetting"
 
 geminigeminigcpenablementsetting.GeminiGeminiGcpEnablementSetting_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ geminigeminigcpenablementsetting.GeminiGeminiGcpEnablementSetting_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSetting.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenablementsetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/geminigeminigcpenablementsetting"
 
 geminigeminigcpenablementsetting.GeminiGeminiGcpEnablementSetting_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -924,7 +924,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSettingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenablementsetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/geminigeminigcpenablementsetting"
 
 &geminigeminigcpenablementsetting.GeminiGeminiGcpEnablementSettingConfig {
 	Connection: interface{},
@@ -940,7 +940,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenab
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSettingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSettingTimeouts,
 }
 ```
 
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSettingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenablementsetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/geminigeminigcpenablementsetting"
 
 &geminigeminigcpenablementsetting.GeminiGeminiGcpEnablementSettingTimeouts {
 	Create: *string,
@@ -1202,7 +1202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.geminiGeminiGcpEnablementSetting.GeminiGeminiGcpEnablementSettingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/geminigeminigcpenablementsetting"
+import "github.com/cdktf/cdktf-provider-google-go/google/geminigeminigcpenablementsetting"
 
 geminigeminigcpenablementsetting.NewGeminiGeminiGcpEnablementSettingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GeminiGeminiGcpEnablementSettingTimeoutsOutputReference
 ```

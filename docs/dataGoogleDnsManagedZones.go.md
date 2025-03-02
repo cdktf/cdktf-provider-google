@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZones.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 datagooglednsmanagedzones.NewDataGoogleDnsManagedZones(scope Construct, id *string, config DataGoogleDnsManagedZonesConfig) DataGoogleDnsManagedZones
 ```
@@ -283,7 +283,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZones.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 datagooglednsmanagedzones.DataGoogleDnsManagedZones_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZones.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 datagooglednsmanagedzones.DataGoogleDnsManagedZones_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagooglednsmanagedzones.DataGoogleDnsManagedZones_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZones.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 datagooglednsmanagedzones.DataGoogleDnsManagedZones_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglednsmanagedzones.DataGoogleDnsManagedZones_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZones.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 datagooglednsmanagedzones.DataGoogleDnsManagedZones_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -594,7 +594,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZonesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 &datagooglednsmanagedzones.DataGoogleDnsManagedZonesConfig {
 	Connection: interface{},
@@ -710,7 +710,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZonesManagedZones.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 &datagooglednsmanagedzones.DataGoogleDnsManagedZonesManagedZones {
 
@@ -725,7 +725,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZonesManagedZonesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 datagooglednsmanagedzones.NewDataGoogleDnsManagedZonesManagedZonesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleDnsManagedZonesManagedZonesList
 ```
@@ -874,7 +874,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsManagedZones.DataGoogleDnsManagedZonesManagedZonesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglednsmanagedzones"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsmanagedzones"
 
 datagooglednsmanagedzones.NewDataGoogleDnsManagedZonesManagedZonesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleDnsManagedZonesManagedZonesOutputReference
 ```

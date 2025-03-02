@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstance(scope Construct, id *string, config DataGoogleAlloydbInstanceConfig) DataGoogleAlloydbInstance
 ```
@@ -297,7 +297,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.DataGoogleAlloydbInstance_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.DataGoogleAlloydbInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglealloydbinstance.DataGoogleAlloydbInstance_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstance.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.DataGoogleAlloydbInstance_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglealloydbinstance.DataGoogleAlloydbInstance_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.DataGoogleAlloydbInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -960,7 +960,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceClientConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstanceClientConnectionConfig {
 
@@ -973,7 +973,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceClientConnectionConfigSslConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstanceClientConnectionConfigSslConfig {
 
@@ -986,7 +986,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstanceConfig {
 	Connection: interface{},
@@ -1169,7 +1169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstanceMachineConfig {
 
@@ -1182,7 +1182,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstanceNetworkConfig {
 
@@ -1195,7 +1195,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNetworks {
 
@@ -1208,7 +1208,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstancePscInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstancePscInstanceConfig {
 
@@ -1221,7 +1221,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceQueryInsightsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstanceQueryInsightsConfig {
 
@@ -1234,7 +1234,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbin
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceReadPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 &datagooglealloydbinstance.DataGoogleAlloydbInstanceReadPoolConfig {
 
@@ -1249,7 +1249,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceClientConnectionConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceClientConnectionConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbInstanceClientConnectionConfigList
 ```
@@ -1398,7 +1398,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceClientConnectionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceClientConnectionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbInstanceClientConnectionConfigOutputReference
 ```
@@ -1687,7 +1687,7 @@ func InternalValue() DataGoogleAlloydbInstanceClientConnectionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceClientConnectionConfigSslConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceClientConnectionConfigSslConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbInstanceClientConnectionConfigSslConfigList
 ```
@@ -1836,7 +1836,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceClientConnectionConfigSslConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceClientConnectionConfigSslConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbInstanceClientConnectionConfigSslConfigOutputReference
 ```
@@ -2114,7 +2114,7 @@ func InternalValue() DataGoogleAlloydbInstanceClientConnectionConfigSslConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceMachineConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceMachineConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbInstanceMachineConfigList
 ```
@@ -2263,7 +2263,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceMachineConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceMachineConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbInstanceMachineConfigOutputReference
 ```
@@ -2541,7 +2541,7 @@ func InternalValue() DataGoogleAlloydbInstanceMachineConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNetworksList
 ```
@@ -2690,7 +2690,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNetworksOutputReference
 ```
@@ -2968,7 +2968,7 @@ func InternalValue() DataGoogleAlloydbInstanceNetworkConfigAuthorizedExternalNet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceNetworkConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceNetworkConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbInstanceNetworkConfigList
 ```
@@ -3117,7 +3117,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbInstanceNetworkConfigOutputReference
 ```
@@ -3417,7 +3417,7 @@ func InternalValue() DataGoogleAlloydbInstanceNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstancePscInstanceConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstancePscInstanceConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbInstancePscInstanceConfigList
 ```
@@ -3566,7 +3566,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstancePscInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstancePscInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbInstancePscInstanceConfigOutputReference
 ```
@@ -3866,7 +3866,7 @@ func InternalValue() DataGoogleAlloydbInstancePscInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceQueryInsightsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceQueryInsightsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbInstanceQueryInsightsConfigList
 ```
@@ -4015,7 +4015,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceQueryInsightsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceQueryInsightsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbInstanceQueryInsightsConfigOutputReference
 ```
@@ -4326,7 +4326,7 @@ func InternalValue() DataGoogleAlloydbInstanceQueryInsightsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceReadPoolConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceReadPoolConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleAlloydbInstanceReadPoolConfigList
 ```
@@ -4475,7 +4475,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAlloydbInstance.DataGoogleAlloydbInstanceReadPoolConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglealloydbinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglealloydbinstance"
 
 datagooglealloydbinstance.NewDataGoogleAlloydbInstanceReadPoolConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleAlloydbInstanceReadPoolConfigOutputReference
 ```
