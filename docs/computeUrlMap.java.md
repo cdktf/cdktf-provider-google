@@ -4,7 +4,7 @@
 
 ### ComputeUrlMap <a name="ComputeUrlMap" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMap"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map google_compute_url_map}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map google_compute_url_map}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer"></a>
 
@@ -59,9 +59,9 @@ ComputeUrlMap.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. Provide this property when you create the resource. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.headerAction">headerAction</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderAction">ComputeUrlMapHeaderAction</a></code> | header_action block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.hostRule">hostRule</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRule">ComputeUrlMapHostRule</a>></code> | host_rule block. |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#id ComputeUrlMap#id}. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#id ComputeUrlMap#id}. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.pathMatcher">pathMatcher</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcher">ComputeUrlMapPathMatcher</a>></code> | path_matcher block. |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#project ComputeUrlMap#project}. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#project ComputeUrlMap#project}. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.test">test</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTest">ComputeUrlMapTest</a>></code> | test block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a></code> | timeouts block. |
 
@@ -140,7 +140,7 @@ name must be 1-63 characters long and match the regular expression
 letter, and all following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 default_route_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_route_action ComputeUrlMap#default_route_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_route_action ComputeUrlMap#default_route_action}
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The backend service or backend bucket to use when none of the given rules match.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_service ComputeUrlMap#default_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_service ComputeUrlMap#default_service}
 
 ---
 
@@ -170,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 default_url_redirect block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_url_redirect ComputeUrlMap#default_url_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_url_redirect ComputeUrlMap#default_url_redirect}
 
 ---
 
@@ -180,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An optional description of this resource. Provide this property when you create the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
 
 ---
 
@@ -190,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
 
 ---
 
@@ -200,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 host_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_rule ComputeUrlMap#host_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_rule ComputeUrlMap#host_rule}
 
 ---
 
@@ -208,7 +208,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#id ComputeUrlMap#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#id ComputeUrlMap#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -221,7 +221,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 path_matcher block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_matcher ComputeUrlMap#path_matcher}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_matcher ComputeUrlMap#path_matcher}
 
 ---
 
@@ -229,7 +229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#project ComputeUrlMap#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#project ComputeUrlMap#project}.
 
 ---
 
@@ -239,7 +239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 test block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#test ComputeUrlMap#test}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#test ComputeUrlMap#test}
 
 ---
 
@@ -249,7 +249,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#timeouts ComputeUrlMap#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#timeouts ComputeUrlMap#timeouts}
 
 ---
 
@@ -844,7 +844,7 @@ The construct id used in the generated config for the ComputeUrlMap to import.
 
 The id of the existing ComputeUrlMap that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1402,9 +1402,9 @@ ComputeUrlMapConfig.builder()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. Provide this property when you create the resource. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.headerAction">headerAction</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderAction">ComputeUrlMapHeaderAction</a></code> | header_action block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.hostRule">hostRule</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRule">ComputeUrlMapHostRule</a>></code> | host_rule block. |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#id ComputeUrlMap#id}. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#id ComputeUrlMap#id}. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.pathMatcher">pathMatcher</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcher">ComputeUrlMapPathMatcher</a>></code> | path_matcher block. |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#project ComputeUrlMap#project}. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#project ComputeUrlMap#project}. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.test">test</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTest">ComputeUrlMapTest</a>></code> | test block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a></code> | timeouts block. |
 
@@ -1497,7 +1497,7 @@ name must be 1-63 characters long and match the regular expression
 letter, and all following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
 
 ---
 
@@ -1511,7 +1511,7 @@ public ComputeUrlMapDefaultRouteAction getDefaultRouteAction();
 
 default_route_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_route_action ComputeUrlMap#default_route_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_route_action ComputeUrlMap#default_route_action}
 
 ---
 
@@ -1525,7 +1525,7 @@ public java.lang.String getDefaultService();
 
 The backend service or backend bucket to use when none of the given rules match.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_service ComputeUrlMap#default_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_service ComputeUrlMap#default_service}
 
 ---
 
@@ -1539,7 +1539,7 @@ public ComputeUrlMapDefaultUrlRedirect getDefaultUrlRedirect();
 
 default_url_redirect block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_url_redirect ComputeUrlMap#default_url_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_url_redirect ComputeUrlMap#default_url_redirect}
 
 ---
 
@@ -1553,7 +1553,7 @@ public java.lang.String getDescription();
 
 An optional description of this resource. Provide this property when you create the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
 
 ---
 
@@ -1567,7 +1567,7 @@ public ComputeUrlMapHeaderAction getHeaderAction();
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
 
 ---
 
@@ -1581,7 +1581,7 @@ public java.lang.Object getHostRule();
 
 host_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_rule ComputeUrlMap#host_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_rule ComputeUrlMap#host_rule}
 
 ---
 
@@ -1593,7 +1593,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#id ComputeUrlMap#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#id ComputeUrlMap#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1610,7 +1610,7 @@ public java.lang.Object getPathMatcher();
 
 path_matcher block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_matcher ComputeUrlMap#path_matcher}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_matcher ComputeUrlMap#path_matcher}
 
 ---
 
@@ -1622,7 +1622,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#project ComputeUrlMap#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#project ComputeUrlMap#project}.
 
 ---
 
@@ -1636,7 +1636,7 @@ public java.lang.Object getTest();
 
 test block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#test ComputeUrlMap#test}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#test ComputeUrlMap#test}
 
 ---
 
@@ -1650,7 +1650,7 @@ public ComputeUrlMapTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#timeouts ComputeUrlMap#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#timeouts ComputeUrlMap#timeouts}
 
 ---
 
@@ -1664,6 +1664,7 @@ import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapDefault
 ComputeUrlMapDefaultRouteAction.builder()
 //  .corsPolicy(ComputeUrlMapDefaultRouteActionCorsPolicy)
 //  .faultInjectionPolicy(ComputeUrlMapDefaultRouteActionFaultInjectionPolicy)
+//  .maxStreamDuration(ComputeUrlMapDefaultRouteActionMaxStreamDuration)
 //  .requestMirrorPolicy(ComputeUrlMapDefaultRouteActionRequestMirrorPolicy)
 //  .retryPolicy(ComputeUrlMapDefaultRouteActionRetryPolicy)
 //  .timeout(ComputeUrlMapDefaultRouteActionTimeout)
@@ -1679,6 +1680,7 @@ ComputeUrlMapDefaultRouteAction.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteAction.property.corsPolicy">corsPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionCorsPolicy">ComputeUrlMapDefaultRouteActionCorsPolicy</a></code> | cors_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteAction.property.faultInjectionPolicy">faultInjectionPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicy">ComputeUrlMapDefaultRouteActionFaultInjectionPolicy</a></code> | fault_injection_policy block. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteAction.property.maxStreamDuration">maxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration">ComputeUrlMapDefaultRouteActionMaxStreamDuration</a></code> | max_stream_duration block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteAction.property.requestMirrorPolicy">requestMirrorPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRequestMirrorPolicy">ComputeUrlMapDefaultRouteActionRequestMirrorPolicy</a></code> | request_mirror_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteAction.property.retryPolicy">retryPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicy">ComputeUrlMapDefaultRouteActionRetryPolicy</a></code> | retry_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteAction.property.timeout">timeout</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionTimeout">ComputeUrlMapDefaultRouteActionTimeout</a></code> | timeout block. |
@@ -1697,7 +1699,7 @@ public ComputeUrlMapDefaultRouteActionCorsPolicy getCorsPolicy();
 
 cors_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#cors_policy ComputeUrlMap#cors_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#cors_policy ComputeUrlMap#cors_policy}
 
 ---
 
@@ -1711,7 +1713,21 @@ public ComputeUrlMapDefaultRouteActionFaultInjectionPolicy getFaultInjectionPoli
 
 fault_injection_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#fault_injection_policy ComputeUrlMap#fault_injection_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#fault_injection_policy ComputeUrlMap#fault_injection_policy}
+
+---
+
+##### `maxStreamDuration`<sup>Optional</sup> <a name="maxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteAction.property.maxStreamDuration"></a>
+
+```java
+public ComputeUrlMapDefaultRouteActionMaxStreamDuration getMaxStreamDuration();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration">ComputeUrlMapDefaultRouteActionMaxStreamDuration</a>
+
+max_stream_duration block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#max_stream_duration ComputeUrlMap#max_stream_duration}
 
 ---
 
@@ -1725,7 +1741,7 @@ public ComputeUrlMapDefaultRouteActionRequestMirrorPolicy getRequestMirrorPolicy
 
 request_mirror_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_mirror_policy ComputeUrlMap#request_mirror_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_mirror_policy ComputeUrlMap#request_mirror_policy}
 
 ---
 
@@ -1739,7 +1755,7 @@ public ComputeUrlMapDefaultRouteActionRetryPolicy getRetryPolicy();
 
 retry_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#retry_policy ComputeUrlMap#retry_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#retry_policy ComputeUrlMap#retry_policy}
 
 ---
 
@@ -1753,7 +1769,7 @@ public ComputeUrlMapDefaultRouteActionTimeout getTimeout();
 
 timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#timeout ComputeUrlMap#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#timeout ComputeUrlMap#timeout}
 
 ---
 
@@ -1767,7 +1783,7 @@ public ComputeUrlMapDefaultRouteActionUrlRewrite getUrlRewrite();
 
 url_rewrite block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#url_rewrite ComputeUrlMap#url_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#url_rewrite ComputeUrlMap#url_rewrite}
 
 ---
 
@@ -1781,7 +1797,7 @@ public java.lang.Object getWeightedBackendServices();
 
 weighted_backend_services block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
 
 ---
 
@@ -1833,7 +1849,7 @@ In response to a preflight request, setting this to true indicates that the actu
 
 This translates to the Access-Control-Allow-Credentials header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_credentials ComputeUrlMap#allow_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_credentials ComputeUrlMap#allow_credentials}
 
 ---
 
@@ -1847,7 +1863,7 @@ public java.util.List<java.lang.String> getAllowHeaders();
 
 Specifies the content for the Access-Control-Allow-Headers header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_headers ComputeUrlMap#allow_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_headers ComputeUrlMap#allow_headers}
 
 ---
 
@@ -1861,7 +1877,7 @@ public java.util.List<java.lang.String> getAllowMethods();
 
 Specifies the content for the Access-Control-Allow-Methods header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_methods ComputeUrlMap#allow_methods}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_methods ComputeUrlMap#allow_methods}
 
 ---
 
@@ -1879,7 +1895,7 @@ For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_origin_regexes ComputeUrlMap#allow_origin_regexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_origin_regexes ComputeUrlMap#allow_origin_regexes}
 
 ---
 
@@ -1895,7 +1911,7 @@ Specifies the list of origins that will be allowed to do CORS requests.
 
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_origins ComputeUrlMap#allow_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_origins ComputeUrlMap#allow_origins}
 
 ---
 
@@ -1911,7 +1927,7 @@ If true, specifies the CORS policy is disabled.
 
 The default value is false, which indicates that the CORS policy is in effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#disabled ComputeUrlMap#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#disabled ComputeUrlMap#disabled}
 
 ---
 
@@ -1925,7 +1941,7 @@ public java.util.List<java.lang.String> getExposeHeaders();
 
 Specifies the content for the Access-Control-Expose-Headers header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#expose_headers ComputeUrlMap#expose_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#expose_headers ComputeUrlMap#expose_headers}
 
 ---
 
@@ -1939,7 +1955,7 @@ public java.lang.Number getMaxAge();
 
 Specifies how long results of a preflight request can be cached in seconds. This translates to the Access-Control-Max-Age header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#max_age ComputeUrlMap#max_age}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#max_age ComputeUrlMap#max_age}
 
 ---
 
@@ -1975,7 +1991,7 @@ public ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort getAbort();
 
 abort block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#abort ComputeUrlMap#abort}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#abort ComputeUrlMap#abort}
 
 ---
 
@@ -1989,7 +2005,7 @@ public ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay getDelay();
 
 delay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#delay ComputeUrlMap#delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#delay ComputeUrlMap#delay}
 
 ---
 
@@ -2025,7 +2041,7 @@ public java.lang.Number getHttpStatus();
 
 The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#http_status ComputeUrlMap#http_status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#http_status ComputeUrlMap#http_status}
 
 ---
 
@@ -2041,7 +2057,7 @@ The percentage of traffic (connections/operations/requests) which will be aborte
 
 The value must be between 0.0 and 100.0 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
 
 ---
 
@@ -2077,7 +2093,7 @@ public ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay getFix
 
 fixed_delay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#fixed_delay ComputeUrlMap#fixed_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#fixed_delay ComputeUrlMap#fixed_delay}
 
 ---
 
@@ -2093,7 +2109,7 @@ The percentage of traffic (connections/operations/requests) on which delay will 
 
 The value must be between 0.0 and 100.0 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
 
 ---
 
@@ -2132,7 +2148,7 @@ Span of time that's a fraction of a second at nanosecond resolution.
 Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -2149,7 +2165,63 @@ Span of time at a resolution of a second.
 Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+
+---
+
+### ComputeUrlMapDefaultRouteActionMaxStreamDuration <a name="ComputeUrlMapDefaultRouteActionMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapDefaultRouteActionMaxStreamDuration;
+
+ComputeUrlMapDefaultRouteActionMaxStreamDuration.builder()
+    .seconds(java.lang.String)
+//  .nanos(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration.property.seconds">seconds</a></code> | <code>java.lang.String</code> | Span of time at a resolution of a second. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration.property.nanos">nanos</a></code> | <code>java.lang.Number</code> | Span of time that's a fraction of a second at nanosecond resolution. |
+
+---
+
+##### `seconds`<sup>Required</sup> <a name="seconds" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration.property.seconds"></a>
+
+```java
+public java.lang.String getSeconds();
+```
+
+- *Type:* java.lang.String
+
+Span of time at a resolution of a second.
+
+Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+
+---
+
+##### `nanos`<sup>Optional</sup> <a name="nanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration.property.nanos"></a>
+
+```java
+public java.lang.Number getNanos();
+```
+
+- *Type:* java.lang.Number
+
+Span of time that's a fraction of a second at nanosecond resolution.
+
+Durations less than one second are represented
+with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -2183,7 +2255,7 @@ public java.lang.String getBackendService();
 
 The full or partial URL to the BackendService resource being mirrored to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
 
 ---
 
@@ -2221,7 +2293,7 @@ public java.lang.Number getNumRetries();
 
 Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#num_retries ComputeUrlMap#num_retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#num_retries ComputeUrlMap#num_retries}
 
 ---
 
@@ -2235,7 +2307,7 @@ public ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout getPerTryTimeout(
 
 per_try_timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#per_try_timeout ComputeUrlMap#per_try_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#per_try_timeout ComputeUrlMap#per_try_timeout}
 
 ---
 
@@ -2264,7 +2336,7 @@ Specfies one or more conditions when this retry rule applies. Valid values are:.
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
 
 ---
 
@@ -2303,7 +2375,7 @@ Span of time that's a fraction of a second at nanosecond resolution.
 Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -2320,7 +2392,7 @@ Span of time at a resolution of a second.
 Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -2359,7 +2431,7 @@ Span of time that's a fraction of a second at nanosecond resolution.
 Durations less than one second are represented
 with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -2376,7 +2448,7 @@ Span of time at a resolution of a second.
 Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -2414,7 +2486,7 @@ Prior to forwarding the request to the selected service, the request's host head
 
 The value must be between 1 and 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_rewrite ComputeUrlMap#host_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_rewrite ComputeUrlMap#host_rewrite}
 
 ---
 
@@ -2430,7 +2502,7 @@ Prior to forwarding the request to the selected backend service, the matching po
 
 The value must be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_prefix_rewrite ComputeUrlMap#path_prefix_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_prefix_rewrite ComputeUrlMap#path_prefix_rewrite}
 
 ---
 
@@ -2472,7 +2544,7 @@ Before forwarding the
 request to backendService, the loadbalancer applies any relevant headerActions
 specified as part of this backendServiceWeight.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
 
 ---
 
@@ -2486,7 +2558,7 @@ public ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction getHea
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
 
 ---
 
@@ -2506,7 +2578,7 @@ as determined by the BackendService's session affinity policy.
 
 The value must be between 0 and 1000
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#weight ComputeUrlMap#weight}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#weight ComputeUrlMap#weight}
 
 ---
 
@@ -2548,7 +2620,7 @@ public java.lang.Object getRequestHeadersToAdd();
 
 request_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
 
 ---
 
@@ -2562,7 +2634,7 @@ public java.util.List<java.lang.String> getRequestHeadersToRemove();
 
 A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
 
 ---
 
@@ -2576,7 +2648,7 @@ public java.lang.Object getResponseHeadersToAdd();
 
 response_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
 
 ---
 
@@ -2590,7 +2662,7 @@ public java.util.List<java.lang.String> getResponseHeadersToRemove();
 
 A list of header names for headers that need to be removed from the response prior to sending the response back to the client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
 
 ---
 
@@ -2629,7 +2701,7 @@ public java.lang.String getHeaderName();
 
 The name of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -2643,7 +2715,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -2659,7 +2731,7 @@ If false, headerValue is appended to any values that already exist for the heade
 
 If true, headerValue is set for the header, discarding any values that were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -2698,7 +2770,7 @@ public java.lang.String getHeaderName();
 
 The name of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -2712,7 +2784,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -2728,7 +2800,7 @@ If false, headerValue is appended to any values that already exist for the heade
 
 If true, headerValue is set for the header, discarding any values that were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -2778,7 +2850,7 @@ If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#strip_query ComputeUrlMap#strip_query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#strip_query ComputeUrlMap#strip_query}
 
 ---
 
@@ -2794,7 +2866,7 @@ The host that will be used in the redirect response instead of the one that was 
 
 The value must be between 1 and 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_redirect ComputeUrlMap#host_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_redirect ComputeUrlMap#host_redirect}
 
 ---
 
@@ -2813,7 +2885,7 @@ false, the URL scheme of the redirected request will remain the same as that of 
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#https_redirect ComputeUrlMap#https_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#https_redirect ComputeUrlMap#https_redirect}
 
 ---
 
@@ -2832,7 +2904,7 @@ prefixRedirect. Supply one alone or neither. If neither is supplied, the path of
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_redirect ComputeUrlMap#path_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_redirect ComputeUrlMap#path_redirect}
 
 ---
 
@@ -2850,7 +2922,7 @@ prefixRedirect cannot be supplied together with pathRedirect. Supply one alone o
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#prefix_redirect ComputeUrlMap#prefix_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#prefix_redirect ComputeUrlMap#prefix_redirect}
 
 ---
 
@@ -2872,7 +2944,7 @@ The HTTP Status code to use for this RedirectAction. Supported values are:.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
   the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
 
 ---
 
@@ -2914,7 +2986,7 @@ public java.lang.Object getRequestHeadersToAdd();
 
 request_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
 
 ---
 
@@ -2928,7 +3000,7 @@ public java.util.List<java.lang.String> getRequestHeadersToRemove();
 
 A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
 
 ---
 
@@ -2942,7 +3014,7 @@ public java.lang.Object getResponseHeadersToAdd();
 
 response_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
 
 ---
 
@@ -2956,7 +3028,7 @@ public java.util.List<java.lang.String> getResponseHeadersToRemove();
 
 A list of header names for headers that need to be removed from the response prior to sending the response back to the client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
 
 ---
 
@@ -2995,7 +3067,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -3009,7 +3081,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -3026,7 +3098,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -3065,7 +3137,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -3079,7 +3151,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -3096,7 +3168,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -3138,7 +3210,7 @@ They must be valid hostnames, except * will
 match any string of ([a-z0-9-.]*). In that case, * must be the first character
 and must be followed in the pattern by either - or ..
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#hosts ComputeUrlMap#hosts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#hosts ComputeUrlMap#hosts}
 
 ---
 
@@ -3152,7 +3224,7 @@ public java.lang.String getPathMatcher();
 
 The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_matcher ComputeUrlMap#path_matcher}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_matcher ComputeUrlMap#path_matcher}
 
 ---
 
@@ -3166,7 +3238,7 @@ public java.lang.String getDescription();
 
 An optional description of this resource. Provide this property when you create the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
 
 ---
 
@@ -3216,7 +3288,7 @@ public java.lang.String getName();
 
 The name to which this PathMatcher is referred by the HostRule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
 
 ---
 
@@ -3230,7 +3302,7 @@ public ComputeUrlMapPathMatcherDefaultRouteAction getDefaultRouteAction();
 
 default_route_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_route_action ComputeUrlMap#default_route_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_route_action ComputeUrlMap#default_route_action}
 
 ---
 
@@ -3244,7 +3316,7 @@ public java.lang.String getDefaultService();
 
 The backend service or backend bucket to use when none of the given paths match.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_service ComputeUrlMap#default_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_service ComputeUrlMap#default_service}
 
 ---
 
@@ -3258,7 +3330,7 @@ public ComputeUrlMapPathMatcherDefaultUrlRedirect getDefaultUrlRedirect();
 
 default_url_redirect block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#default_url_redirect ComputeUrlMap#default_url_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#default_url_redirect ComputeUrlMap#default_url_redirect}
 
 ---
 
@@ -3272,7 +3344,7 @@ public java.lang.String getDescription();
 
 An optional description of this resource. Provide this property when you create the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
 
 ---
 
@@ -3286,7 +3358,7 @@ public ComputeUrlMapPathMatcherHeaderAction getHeaderAction();
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
 
 ---
 
@@ -3300,7 +3372,7 @@ public java.lang.Object getPathRule();
 
 path_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_rule ComputeUrlMap#path_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_rule ComputeUrlMap#path_rule}
 
 ---
 
@@ -3314,7 +3386,7 @@ public java.lang.Object getRouteRules();
 
 route_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#route_rules ComputeUrlMap#route_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#route_rules ComputeUrlMap#route_rules}
 
 ---
 
@@ -3328,6 +3400,7 @@ import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMat
 ComputeUrlMapPathMatcherDefaultRouteAction.builder()
 //  .corsPolicy(ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy)
 //  .faultInjectionPolicy(ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy)
+//  .maxStreamDuration(ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration)
 //  .requestMirrorPolicy(ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy)
 //  .retryPolicy(ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy)
 //  .timeout(ComputeUrlMapPathMatcherDefaultRouteActionTimeout)
@@ -3343,6 +3416,7 @@ ComputeUrlMapPathMatcherDefaultRouteAction.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction.property.corsPolicy">corsPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy">ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy</a></code> | cors_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction.property.faultInjectionPolicy">faultInjectionPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy</a></code> | fault_injection_policy block. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction.property.maxStreamDuration">maxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration</a></code> | max_stream_duration block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction.property.requestMirrorPolicy">requestMirrorPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy">ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy</a></code> | request_mirror_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction.property.retryPolicy">retryPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy">ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy</a></code> | retry_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction.property.timeout">timeout</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionTimeout">ComputeUrlMapPathMatcherDefaultRouteActionTimeout</a></code> | timeout block. |
@@ -3361,7 +3435,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy getCorsPolicy();
 
 cors_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#cors_policy ComputeUrlMap#cors_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#cors_policy ComputeUrlMap#cors_policy}
 
 ---
 
@@ -3375,7 +3449,21 @@ public ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy getFaultIn
 
 fault_injection_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#fault_injection_policy ComputeUrlMap#fault_injection_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#fault_injection_policy ComputeUrlMap#fault_injection_policy}
+
+---
+
+##### `maxStreamDuration`<sup>Optional</sup> <a name="maxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteAction.property.maxStreamDuration"></a>
+
+```java
+public ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration getMaxStreamDuration();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration</a>
+
+max_stream_duration block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#max_stream_duration ComputeUrlMap#max_stream_duration}
 
 ---
 
@@ -3389,7 +3477,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy getRequestM
 
 request_mirror_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_mirror_policy ComputeUrlMap#request_mirror_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_mirror_policy ComputeUrlMap#request_mirror_policy}
 
 ---
 
@@ -3403,7 +3491,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy getRetryPolicy();
 
 retry_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#retry_policy ComputeUrlMap#retry_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#retry_policy ComputeUrlMap#retry_policy}
 
 ---
 
@@ -3417,7 +3505,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionTimeout getTimeout();
 
 timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#timeout ComputeUrlMap#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#timeout ComputeUrlMap#timeout}
 
 ---
 
@@ -3431,7 +3519,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite getUrlRewrite();
 
 url_rewrite block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#url_rewrite ComputeUrlMap#url_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#url_rewrite ComputeUrlMap#url_rewrite}
 
 ---
 
@@ -3445,7 +3533,7 @@ public java.lang.Object getWeightedBackendServices();
 
 weighted_backend_services block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
 
 ---
 
@@ -3497,7 +3585,7 @@ In response to a preflight request, setting this to true indicates that the actu
 
 This translates to the Access-Control-Allow-Credentials header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_credentials ComputeUrlMap#allow_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_credentials ComputeUrlMap#allow_credentials}
 
 ---
 
@@ -3511,7 +3599,7 @@ public java.util.List<java.lang.String> getAllowHeaders();
 
 Specifies the content for the Access-Control-Allow-Headers header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_headers ComputeUrlMap#allow_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_headers ComputeUrlMap#allow_headers}
 
 ---
 
@@ -3525,7 +3613,7 @@ public java.util.List<java.lang.String> getAllowMethods();
 
 Specifies the content for the Access-Control-Allow-Methods header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_methods ComputeUrlMap#allow_methods}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_methods ComputeUrlMap#allow_methods}
 
 ---
 
@@ -3543,7 +3631,7 @@ For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_origin_regexes ComputeUrlMap#allow_origin_regexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_origin_regexes ComputeUrlMap#allow_origin_regexes}
 
 ---
 
@@ -3559,7 +3647,7 @@ Specifies the list of origins that will be allowed to do CORS requests.
 
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_origins ComputeUrlMap#allow_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_origins ComputeUrlMap#allow_origins}
 
 ---
 
@@ -3575,7 +3663,7 @@ If true, specifies the CORS policy is disabled.
 
 The default value is false, which indicates that the CORS policy is in effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#disabled ComputeUrlMap#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#disabled ComputeUrlMap#disabled}
 
 ---
 
@@ -3589,7 +3677,7 @@ public java.util.List<java.lang.String> getExposeHeaders();
 
 Specifies the content for the Access-Control-Expose-Headers header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#expose_headers ComputeUrlMap#expose_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#expose_headers ComputeUrlMap#expose_headers}
 
 ---
 
@@ -3603,7 +3691,7 @@ public java.lang.Number getMaxAge();
 
 Specifies how long results of a preflight request can be cached in seconds. This translates to the Access-Control-Max-Age header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#max_age ComputeUrlMap#max_age}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#max_age ComputeUrlMap#max_age}
 
 ---
 
@@ -3639,7 +3727,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort getAb
 
 abort block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#abort ComputeUrlMap#abort}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#abort ComputeUrlMap#abort}
 
 ---
 
@@ -3653,7 +3741,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay getDe
 
 delay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#delay ComputeUrlMap#delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#delay ComputeUrlMap#delay}
 
 ---
 
@@ -3689,7 +3777,7 @@ public java.lang.Number getHttpStatus();
 
 The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#http_status ComputeUrlMap#http_status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#http_status ComputeUrlMap#http_status}
 
 ---
 
@@ -3705,7 +3793,7 @@ The percentage of traffic (connections/operations/requests) which will be aborte
 
 The value must be between 0.0 and 100.0 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
 
 ---
 
@@ -3741,7 +3829,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedD
 
 fixed_delay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#fixed_delay ComputeUrlMap#fixed_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#fixed_delay ComputeUrlMap#fixed_delay}
 
 ---
 
@@ -3757,7 +3845,7 @@ The percentage of traffic (connections/operations/requests) on which delay will 
 
 The value must be between 0.0 and 100.0 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
 
 ---
 
@@ -3796,7 +3884,7 @@ Span of time that's a fraction of a second at nanosecond resolution.
 Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -3813,7 +3901,63 @@ Span of time at a resolution of a second.
 Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+
+---
+
+### ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration <a name="ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration;
+
+ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration.builder()
+    .seconds(java.lang.String)
+//  .nanos(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration.property.seconds">seconds</a></code> | <code>java.lang.String</code> | Span of time at a resolution of a second. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration.property.nanos">nanos</a></code> | <code>java.lang.Number</code> | Span of time that's a fraction of a second at nanosecond resolution. |
+
+---
+
+##### `seconds`<sup>Required</sup> <a name="seconds" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration.property.seconds"></a>
+
+```java
+public java.lang.String getSeconds();
+```
+
+- *Type:* java.lang.String
+
+Span of time at a resolution of a second.
+
+Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+
+---
+
+##### `nanos`<sup>Optional</sup> <a name="nanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration.property.nanos"></a>
+
+```java
+public java.lang.Number getNanos();
+```
+
+- *Type:* java.lang.Number
+
+Span of time that's a fraction of a second at nanosecond resolution.
+
+Durations less than one second are represented
+with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -3847,7 +3991,7 @@ public java.lang.String getBackendService();
 
 The full or partial URL to the BackendService resource being mirrored to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
 
 ---
 
@@ -3885,7 +4029,7 @@ public java.lang.Number getNumRetries();
 
 Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#num_retries ComputeUrlMap#num_retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#num_retries ComputeUrlMap#num_retries}
 
 ---
 
@@ -3899,7 +4043,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout getPer
 
 per_try_timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#per_try_timeout ComputeUrlMap#per_try_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#per_try_timeout ComputeUrlMap#per_try_timeout}
 
 ---
 
@@ -3928,7 +4072,7 @@ Specfies one or more conditions when this retry rule applies. Valid values are:.
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
 
 ---
 
@@ -3967,7 +4111,7 @@ Span of time that's a fraction of a second at nanosecond resolution.
 Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -3984,7 +4128,7 @@ Span of time at a resolution of a second.
 Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -4023,7 +4167,7 @@ Span of time that's a fraction of a second at nanosecond resolution.
 Durations less than one second are represented
 with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -4040,7 +4184,7 @@ Span of time at a resolution of a second.
 Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -4078,7 +4222,7 @@ Prior to forwarding the request to the selected service, the request's host head
 
 The value must be between 1 and 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_rewrite ComputeUrlMap#host_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_rewrite ComputeUrlMap#host_rewrite}
 
 ---
 
@@ -4094,7 +4238,7 @@ Prior to forwarding the request to the selected backend service, the matching po
 
 The value must be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_prefix_rewrite ComputeUrlMap#path_prefix_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_prefix_rewrite ComputeUrlMap#path_prefix_rewrite}
 
 ---
 
@@ -4136,7 +4280,7 @@ Before forwarding the
 request to backendService, the loadbalancer applies any relevant headerActions
 specified as part of this backendServiceWeight.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
 
 ---
 
@@ -4150,7 +4294,7 @@ public ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAc
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
 
 ---
 
@@ -4170,7 +4314,7 @@ as determined by the BackendService's session affinity policy.
 
 The value must be between 0 and 1000
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#weight ComputeUrlMap#weight}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#weight ComputeUrlMap#weight}
 
 ---
 
@@ -4212,7 +4356,7 @@ public java.lang.Object getRequestHeadersToAdd();
 
 request_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
 
 ---
 
@@ -4226,7 +4370,7 @@ public java.util.List<java.lang.String> getRequestHeadersToRemove();
 
 A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
 
 ---
 
@@ -4240,7 +4384,7 @@ public java.lang.Object getResponseHeadersToAdd();
 
 response_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
 
 ---
 
@@ -4254,7 +4398,7 @@ public java.util.List<java.lang.String> getResponseHeadersToRemove();
 
 A list of header names for headers that need to be removed from the response prior to sending the response back to the client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
 
 ---
 
@@ -4293,7 +4437,7 @@ public java.lang.String getHeaderName();
 
 The name of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -4307,7 +4451,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -4323,7 +4467,7 @@ If false, headerValue is appended to any values that already exist for the heade
 
 If true, headerValue is set for the header, discarding any values that were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -4362,7 +4506,7 @@ public java.lang.String getHeaderName();
 
 The name of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -4376,7 +4520,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -4392,7 +4536,7 @@ If false, headerValue is appended to any values that already exist for the heade
 
 If true, headerValue is set for the header, discarding any values that were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -4442,7 +4586,7 @@ If set to false, the query portion of the original URL is
 retained.
 This field is required to ensure an empty block is not set. The normal default value is false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#strip_query ComputeUrlMap#strip_query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#strip_query ComputeUrlMap#strip_query}
 
 ---
 
@@ -4458,7 +4602,7 @@ The host that will be used in the redirect response instead of the one that was 
 
 The value must be between 1 and 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_redirect ComputeUrlMap#host_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_redirect ComputeUrlMap#host_redirect}
 
 ---
 
@@ -4477,7 +4621,7 @@ false, the URL scheme of the redirected request will remain the same as that of 
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#https_redirect ComputeUrlMap#https_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#https_redirect ComputeUrlMap#https_redirect}
 
 ---
 
@@ -4496,7 +4640,7 @@ prefixRedirect. Supply one alone or neither. If neither is supplied, the path of
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_redirect ComputeUrlMap#path_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_redirect ComputeUrlMap#path_redirect}
 
 ---
 
@@ -4514,7 +4658,7 @@ prefixRedirect cannot be supplied together with pathRedirect. Supply one alone o
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#prefix_redirect ComputeUrlMap#prefix_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#prefix_redirect ComputeUrlMap#prefix_redirect}
 
 ---
 
@@ -4536,7 +4680,7 @@ The HTTP Status code to use for this RedirectAction. Supported values are:.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
   the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
 
 ---
 
@@ -4578,7 +4722,7 @@ public java.lang.Object getRequestHeadersToAdd();
 
 request_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
 
 ---
 
@@ -4592,7 +4736,7 @@ public java.util.List<java.lang.String> getRequestHeadersToRemove();
 
 A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
 
 ---
 
@@ -4606,7 +4750,7 @@ public java.lang.Object getResponseHeadersToAdd();
 
 response_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
 
 ---
 
@@ -4620,7 +4764,7 @@ public java.util.List<java.lang.String> getResponseHeadersToRemove();
 
 A list of header names for headers that need to be removed from the response prior to sending the response back to the client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
 
 ---
 
@@ -4659,7 +4803,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -4673,7 +4817,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -4690,7 +4834,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -4729,7 +4873,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -4743,7 +4887,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -4760,7 +4904,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -4805,7 +4949,7 @@ Each must start with / and the only place a
 does not include any text after the first ? or #, and those chars are not
 allowed here.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#paths ComputeUrlMap#paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#paths ComputeUrlMap#paths}
 
 ---
 
@@ -4819,7 +4963,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteAction getRouteAction();
 
 route_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#route_action ComputeUrlMap#route_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#route_action ComputeUrlMap#route_action}
 
 ---
 
@@ -4833,7 +4977,7 @@ public java.lang.String getService();
 
 The backend service or backend bucket to use if any of the given paths match.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#service ComputeUrlMap#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#service ComputeUrlMap#service}
 
 ---
 
@@ -4847,7 +4991,7 @@ public ComputeUrlMapPathMatcherPathRuleUrlRedirect getUrlRedirect();
 
 url_redirect block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#url_redirect ComputeUrlMap#url_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#url_redirect ComputeUrlMap#url_redirect}
 
 ---
 
@@ -4861,6 +5005,7 @@ import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMat
 ComputeUrlMapPathMatcherPathRuleRouteAction.builder()
 //  .corsPolicy(ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy)
 //  .faultInjectionPolicy(ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy)
+//  .maxStreamDuration(ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration)
 //  .requestMirrorPolicy(ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy)
 //  .retryPolicy(ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy)
 //  .timeout(ComputeUrlMapPathMatcherPathRuleRouteActionTimeout)
@@ -4876,6 +5021,7 @@ ComputeUrlMapPathMatcherPathRuleRouteAction.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction.property.corsPolicy">corsPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy</a></code> | cors_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction.property.faultInjectionPolicy">faultInjectionPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy</a></code> | fault_injection_policy block. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction.property.maxStreamDuration">maxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration</a></code> | max_stream_duration block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction.property.requestMirrorPolicy">requestMirrorPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy</a></code> | request_mirror_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction.property.retryPolicy">retryPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy</a></code> | retry_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction.property.timeout">timeout</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionTimeout">ComputeUrlMapPathMatcherPathRuleRouteActionTimeout</a></code> | timeout block. |
@@ -4894,7 +5040,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy getCorsPolicy();
 
 cors_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#cors_policy ComputeUrlMap#cors_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#cors_policy ComputeUrlMap#cors_policy}
 
 ---
 
@@ -4908,7 +5054,21 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy getFaultI
 
 fault_injection_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#fault_injection_policy ComputeUrlMap#fault_injection_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#fault_injection_policy ComputeUrlMap#fault_injection_policy}
+
+---
+
+##### `maxStreamDuration`<sup>Optional</sup> <a name="maxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteAction.property.maxStreamDuration"></a>
+
+```java
+public ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration getMaxStreamDuration();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration</a>
+
+max_stream_duration block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#max_stream_duration ComputeUrlMap#max_stream_duration}
 
 ---
 
@@ -4922,7 +5082,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy getRequest
 
 request_mirror_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_mirror_policy ComputeUrlMap#request_mirror_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_mirror_policy ComputeUrlMap#request_mirror_policy}
 
 ---
 
@@ -4936,7 +5096,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy getRetryPolicy();
 
 retry_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#retry_policy ComputeUrlMap#retry_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#retry_policy ComputeUrlMap#retry_policy}
 
 ---
 
@@ -4950,7 +5110,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionTimeout getTimeout();
 
 timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#timeout ComputeUrlMap#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#timeout ComputeUrlMap#timeout}
 
 ---
 
@@ -4964,7 +5124,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite getUrlRewrite();
 
 url_rewrite block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#url_rewrite ComputeUrlMap#url_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#url_rewrite ComputeUrlMap#url_rewrite}
 
 ---
 
@@ -4978,7 +5138,7 @@ public java.lang.Object getWeightedBackendServices();
 
 weighted_backend_services block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
 
 ---
 
@@ -5028,7 +5188,7 @@ public java.lang.Object getDisabled();
 
 If true, specifies the CORS policy is disabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#disabled ComputeUrlMap#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#disabled ComputeUrlMap#disabled}
 
 ---
 
@@ -5045,7 +5205,7 @@ In response to a preflight request, setting this to true indicates that the actu
 This translates to the Access-
 Control-Allow-Credentials header. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_credentials ComputeUrlMap#allow_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_credentials ComputeUrlMap#allow_credentials}
 
 ---
 
@@ -5059,7 +5219,7 @@ public java.util.List<java.lang.String> getAllowHeaders();
 
 Specifies the content for the Access-Control-Allow-Headers header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_headers ComputeUrlMap#allow_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_headers ComputeUrlMap#allow_headers}
 
 ---
 
@@ -5073,7 +5233,7 @@ public java.util.List<java.lang.String> getAllowMethods();
 
 Specifies the content for the Access-Control-Allow-Methods header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_methods ComputeUrlMap#allow_methods}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_methods ComputeUrlMap#allow_methods}
 
 ---
 
@@ -5091,7 +5251,7 @@ For
 regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either allow_origins or allow_origin_regex.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_origin_regexes ComputeUrlMap#allow_origin_regexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_origin_regexes ComputeUrlMap#allow_origin_regexes}
 
 ---
 
@@ -5108,7 +5268,7 @@ Specifies the list of origins that will be allowed to do CORS requests.
 An
 origin is allowed if it matches either allow_origins or allow_origin_regex.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_origins ComputeUrlMap#allow_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_origins ComputeUrlMap#allow_origins}
 
 ---
 
@@ -5122,7 +5282,7 @@ public java.util.List<java.lang.String> getExposeHeaders();
 
 Specifies the content for the Access-Control-Expose-Headers header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#expose_headers ComputeUrlMap#expose_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#expose_headers ComputeUrlMap#expose_headers}
 
 ---
 
@@ -5139,7 +5299,7 @@ Specifies how long the results of a preflight request can be cached.
 This
 translates to the content for the Access-Control-Max-Age header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#max_age ComputeUrlMap#max_age}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#max_age ComputeUrlMap#max_age}
 
 ---
 
@@ -5175,7 +5335,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort getA
 
 abort block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#abort ComputeUrlMap#abort}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#abort ComputeUrlMap#abort}
 
 ---
 
@@ -5189,7 +5349,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay getD
 
 delay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#delay ComputeUrlMap#delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#delay ComputeUrlMap#delay}
 
 ---
 
@@ -5225,7 +5385,7 @@ public java.lang.Number getHttpStatus();
 
 The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#http_status ComputeUrlMap#http_status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#http_status ComputeUrlMap#http_status}
 
 ---
 
@@ -5242,7 +5402,7 @@ The percentage of traffic (connections/operations/requests) which will be aborte
 The value must be between 0.0 and 100.0
 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
 
 ---
 
@@ -5278,7 +5438,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixed
 
 fixed_delay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#fixed_delay ComputeUrlMap#fixed_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#fixed_delay ComputeUrlMap#fixed_delay}
 
 ---
 
@@ -5295,7 +5455,7 @@ The percentage of traffic (connections/operations/requests) on which delay will 
 The value must be between 0.0 and
 100.0 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
 
 ---
 
@@ -5331,7 +5491,7 @@ public java.lang.String getSeconds();
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -5349,7 +5509,61 @@ Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+
+---
+
+### ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration <a name="ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration;
+
+ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration.builder()
+    .seconds(java.lang.String)
+//  .nanos(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration.property.seconds">seconds</a></code> | <code>java.lang.String</code> | Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration.property.nanos">nanos</a></code> | <code>java.lang.Number</code> | Span of time that's a fraction of a second at nanosecond resolution. |
+
+---
+
+##### `seconds`<sup>Required</sup> <a name="seconds" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration.property.seconds"></a>
+
+```java
+public java.lang.String getSeconds();
+```
+
+- *Type:* java.lang.String
+
+Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+
+---
+
+##### `nanos`<sup>Optional</sup> <a name="nanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration.property.nanos"></a>
+
+```java
+public java.lang.Number getNanos();
+```
+
+- *Type:* java.lang.Number
+
+Span of time that's a fraction of a second at nanosecond resolution.
+
+Durations
+less than one second are represented with a 0 'seconds' field and a positive
+'nanos' field. Must be from 0 to 999,999,999 inclusive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -5383,7 +5597,7 @@ public java.lang.String getBackendService();
 
 The BackendService resource being mirrored to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
 
 ---
 
@@ -5421,7 +5635,7 @@ public java.lang.Number getNumRetries();
 
 Specifies the allowed number retries. This number must be > 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#num_retries ComputeUrlMap#num_retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#num_retries ComputeUrlMap#num_retries}
 
 ---
 
@@ -5435,7 +5649,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout getPe
 
 per_try_timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#per_try_timeout ComputeUrlMap#per_try_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#per_try_timeout ComputeUrlMap#per_try_timeout}
 
 ---
 
@@ -5470,7 +5684,7 @@ Specifies one or more conditions when this retry rule applies. Valid values are:
 * unavailable: Loadbalancer will retry if
   the gRPC status code in the response header is set to unavailable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
 
 ---
 
@@ -5506,7 +5720,7 @@ public java.lang.String getSeconds();
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -5524,7 +5738,7 @@ Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -5560,7 +5774,7 @@ public java.lang.String getSeconds();
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -5578,7 +5792,7 @@ Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -5617,7 +5831,7 @@ Prior to forwarding the request to the selected service, the request's host head
 The value must be between 1 and
 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_rewrite ComputeUrlMap#host_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_rewrite ComputeUrlMap#host_rewrite}
 
 ---
 
@@ -5634,7 +5848,7 @@ Prior to forwarding the request to the selected backend service, the matching po
 The value must
 be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_prefix_rewrite ComputeUrlMap#path_prefix_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_prefix_rewrite ComputeUrlMap#path_prefix_rewrite}
 
 ---
 
@@ -5676,7 +5890,7 @@ Before
 forwarding the request to backendService, the loadbalancer applies any relevant
 headerActions specified as part of this backendServiceWeight.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
 
 ---
 
@@ -5696,7 +5910,7 @@ been directed to a backendService, subsequent requests will be sent to the same
 backendService as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#weight ComputeUrlMap#weight}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#weight ComputeUrlMap#weight}
 
 ---
 
@@ -5710,7 +5924,7 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderA
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
 
 ---
 
@@ -5752,7 +5966,7 @@ public java.lang.Object getRequestHeadersToAdd();
 
 request_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
 
 ---
 
@@ -5766,7 +5980,7 @@ public java.util.List<java.lang.String> getRequestHeadersToRemove();
 
 A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
 
 ---
 
@@ -5780,7 +5994,7 @@ public java.lang.Object getResponseHeadersToAdd();
 
 response_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
 
 ---
 
@@ -5794,7 +6008,7 @@ public java.util.List<java.lang.String> getResponseHeadersToRemove();
 
 A list of header names for headers that need to be removed from the response prior to sending the response back to the client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
 
 ---
 
@@ -5833,7 +6047,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -5847,7 +6061,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -5864,7 +6078,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -5903,7 +6117,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -5917,7 +6131,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -5934,7 +6148,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -5984,7 +6198,7 @@ If set to false, the query
 portion of the original URL is retained.
 This field is required to ensure an empty block is not set. The normal default value is false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#strip_query ComputeUrlMap#strip_query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#strip_query ComputeUrlMap#strip_query}
 
 ---
 
@@ -6001,7 +6215,7 @@ The host that will be used in the redirect response instead of the one that was 
 The value must be between 1 and 255
 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_redirect ComputeUrlMap#host_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_redirect ComputeUrlMap#host_redirect}
 
 ---
 
@@ -6020,7 +6234,7 @@ same as that of the request. This must only be set for UrlMaps used in
 TargetHttpProxys. Setting this true for TargetHttpsProxy is not
 permitted. The default is set to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#https_redirect ComputeUrlMap#https_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#https_redirect ComputeUrlMap#https_redirect}
 
 ---
 
@@ -6039,7 +6253,7 @@ together with prefixRedirect. Supply one alone or neither. If neither is
 supplied, the path of the original request will be used for the redirect.
 The value must be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_redirect ComputeUrlMap#path_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_redirect ComputeUrlMap#path_redirect}
 
 ---
 
@@ -6058,7 +6272,7 @@ pathRedirect. Supply one alone or neither. If neither is supplied, the
 path of the original request will be used for the redirect. The value
 must be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#prefix_redirect ComputeUrlMap#prefix_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#prefix_redirect ComputeUrlMap#prefix_redirect}
 
 ---
 
@@ -6080,7 +6294,7 @@ The HTTP Status code to use for this RedirectAction. Supported values are:.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
   the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
 
 ---
 
@@ -6140,7 +6354,7 @@ in the future without affecting the rest of the rules. For example,
 you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
 future without any impact on existing rules.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#priority ComputeUrlMap#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#priority ComputeUrlMap#priority}
 
 ---
 
@@ -6154,7 +6368,7 @@ public ComputeUrlMapPathMatcherRouteRulesHeaderAction getHeaderAction();
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
 
 ---
 
@@ -6168,7 +6382,7 @@ public java.lang.Object getMatchRules();
 
 match_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#match_rules ComputeUrlMap#match_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#match_rules ComputeUrlMap#match_rules}
 
 ---
 
@@ -6182,7 +6396,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteAction getRouteAction();
 
 route_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#route_action ComputeUrlMap#route_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#route_action ComputeUrlMap#route_action}
 
 ---
 
@@ -6203,7 +6417,7 @@ contain any weightedBackendService s. Conversely, if routeAction specifies any
 weightedBackendServices, service must not be specified. Only one of urlRedirect,
 service or routeAction.weightedBackendService must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#service ComputeUrlMap#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#service ComputeUrlMap#service}
 
 ---
 
@@ -6217,7 +6431,7 @@ public ComputeUrlMapPathMatcherRouteRulesUrlRedirect getUrlRedirect();
 
 url_redirect block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#url_redirect ComputeUrlMap#url_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#url_redirect ComputeUrlMap#url_redirect}
 
 ---
 
@@ -6259,7 +6473,7 @@ public java.lang.Object getRequestHeadersToAdd();
 
 request_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
 
 ---
 
@@ -6273,7 +6487,7 @@ public java.util.List<java.lang.String> getRequestHeadersToRemove();
 
 A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
 
 ---
 
@@ -6287,7 +6501,7 @@ public java.lang.Object getResponseHeadersToAdd();
 
 response_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
 
 ---
 
@@ -6301,7 +6515,7 @@ public java.util.List<java.lang.String> getResponseHeadersToRemove();
 
 A list of header names for headers that need to be removed from the response prior to sending the response back to the client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
 
 ---
 
@@ -6340,7 +6554,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -6354,7 +6568,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -6371,7 +6585,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -6410,7 +6624,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -6424,7 +6638,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -6441,7 +6655,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -6497,7 +6711,7 @@ FullPathMatch must be between 1
 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
 be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#full_path_match ComputeUrlMap#full_path_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#full_path_match ComputeUrlMap#full_path_match}
 
 ---
 
@@ -6511,7 +6725,7 @@ public java.lang.Object getHeaderMatches();
 
 header_matches block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_matches ComputeUrlMap#header_matches}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_matches ComputeUrlMap#header_matches}
 
 ---
 
@@ -6525,7 +6739,7 @@ public java.lang.Object getIgnoreCase();
 
 Specifies that prefixMatch and fullPathMatch matches are case sensitive. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#ignore_case ComputeUrlMap#ignore_case}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#ignore_case ComputeUrlMap#ignore_case}
 
 ---
 
@@ -6539,7 +6753,7 @@ public java.lang.Object getMetadataFilters();
 
 metadata_filters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#metadata_filters ComputeUrlMap#metadata_filters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#metadata_filters ComputeUrlMap#metadata_filters}
 
 ---
 
@@ -6558,7 +6772,7 @@ pathTemplateMatch must be between 1 and 255 characters
 have at most 5 wildcard operators and at most 5 variable
 captures in total.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_template_match ComputeUrlMap#path_template_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_template_match ComputeUrlMap#path_template_match}
 
 ---
 
@@ -6576,7 +6790,7 @@ prefixMatch must begin with a /. The value must be
 between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or
 regexMatch must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#prefix_match ComputeUrlMap#prefix_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#prefix_match ComputeUrlMap#prefix_match}
 
 ---
 
@@ -6590,7 +6804,7 @@ public java.lang.Object getQueryParameterMatches();
 
 query_parameter_matches block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#query_parameter_matches ComputeUrlMap#query_parameter_matches}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#query_parameter_matches ComputeUrlMap#query_parameter_matches}
 
 ---
 
@@ -6608,7 +6822,7 @@ For regular expression grammar please
 see en.cppreference.com/w/cpp/regex/ecmascript  Only one of prefixMatch,
 fullPathMatch or regexMatch must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#regex_match ComputeUrlMap#regex_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#regex_match ComputeUrlMap#regex_match}
 
 ---
 
@@ -6662,7 +6876,7 @@ For matching against the HTTP request's
 authority, use a headerMatch with the header name ":authority". For matching a
 request's method, use the headerName ":method".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -6679,7 +6893,7 @@ The value should exactly match contents of exactMatch.
 Only one of exactMatch,
 prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#exact_match ComputeUrlMap#exact_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#exact_match ComputeUrlMap#exact_match}
 
 ---
 
@@ -6696,7 +6910,7 @@ If set to false, the headerMatch is considered a match if the match criteria abo
 If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#invert_match ComputeUrlMap#invert_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#invert_match ComputeUrlMap#invert_match}
 
 ---
 
@@ -6714,7 +6928,7 @@ Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#prefix_match ComputeUrlMap#prefix_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#prefix_match ComputeUrlMap#prefix_match}
 
 ---
 
@@ -6732,7 +6946,7 @@ The match takes place
 whether or not the request's header has a value or not. Only one of exactMatch,
 prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#present_match ComputeUrlMap#present_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#present_match ComputeUrlMap#present_match}
 
 ---
 
@@ -6746,7 +6960,7 @@ public ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch getRa
 
 range_match block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#range_match ComputeUrlMap#range_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#range_match ComputeUrlMap#range_match}
 
 ---
 
@@ -6767,7 +6981,7 @@ a regular expression that satisfies the RFC2616 Host header's port specifier.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
 rangeMatch must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#regex_match ComputeUrlMap#regex_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#regex_match ComputeUrlMap#regex_match}
 
 ---
 
@@ -6785,7 +6999,7 @@ Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#suffix_match ComputeUrlMap#suffix_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#suffix_match ComputeUrlMap#suffix_match}
 
 ---
 
@@ -6821,7 +7035,7 @@ public java.lang.Number getRangeEnd();
 
 The end of the range (exclusive).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#range_end ComputeUrlMap#range_end}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#range_end ComputeUrlMap#range_end}
 
 ---
 
@@ -6835,7 +7049,7 @@ public java.lang.Number getRangeStart();
 
 The start of the range (inclusive).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#range_start ComputeUrlMap#range_start}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#range_start ComputeUrlMap#range_start}
 
 ---
 
@@ -6872,7 +7086,7 @@ public java.lang.Object getFilterLabels();
 
 filter_labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#filter_labels ComputeUrlMap#filter_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#filter_labels ComputeUrlMap#filter_labels}
 
 ---
 
@@ -6893,7 +7107,7 @@ Supported values are:
 * MATCH_ALL: All filterLabels must have matching labels in
   the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#filter_match_criteria ComputeUrlMap#filter_match_criteria}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#filter_match_criteria ComputeUrlMap#filter_match_criteria}
 
 ---
 
@@ -6932,7 +7146,7 @@ Name of metadata label.
 The name can have a maximum length of 1024 characters
 and must be at least 1 character long.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
 
 ---
 
@@ -6946,7 +7160,7 @@ public java.lang.String getValue();
 
 The value of the label must match the specified value. value can have a maximum length of 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#value ComputeUrlMap#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#value ComputeUrlMap#value}
 
 ---
 
@@ -6990,7 +7204,7 @@ The name of the query parameter to match.
 The query parameter must exist in the
 request, in the absence of which the request match fails.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#name ComputeUrlMap#name}
 
 ---
 
@@ -7007,7 +7221,7 @@ The queryParameterMatch matches if the value of the parameter exactly matches th
 Only one of presentMatch, exactMatch and regexMatch
 must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#exact_match ComputeUrlMap#exact_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#exact_match ComputeUrlMap#exact_match}
 
 ---
 
@@ -7024,7 +7238,7 @@ Specifies that the queryParameterMatch matches if the request contains the query
 Only one of
 presentMatch, exactMatch and regexMatch must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#present_match ComputeUrlMap#present_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#present_match ComputeUrlMap#present_match}
 
 ---
 
@@ -7042,7 +7256,7 @@ For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#regex_match ComputeUrlMap#regex_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#regex_match ComputeUrlMap#regex_match}
 
 ---
 
@@ -7056,6 +7270,7 @@ import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMat
 ComputeUrlMapPathMatcherRouteRulesRouteAction.builder()
 //  .corsPolicy(ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy)
 //  .faultInjectionPolicy(ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy)
+//  .maxStreamDuration(ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration)
 //  .requestMirrorPolicy(ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy)
 //  .retryPolicy(ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy)
 //  .timeout(ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout)
@@ -7071,6 +7286,7 @@ ComputeUrlMapPathMatcherRouteRulesRouteAction.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction.property.corsPolicy">corsPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy</a></code> | cors_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction.property.faultInjectionPolicy">faultInjectionPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy</a></code> | fault_injection_policy block. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction.property.maxStreamDuration">maxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration</a></code> | max_stream_duration block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction.property.requestMirrorPolicy">requestMirrorPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy</a></code> | request_mirror_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction.property.retryPolicy">retryPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy</a></code> | retry_policy block. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction.property.timeout">timeout</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout">ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout</a></code> | timeout block. |
@@ -7089,7 +7305,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy getCorsPolicy();
 
 cors_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#cors_policy ComputeUrlMap#cors_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#cors_policy ComputeUrlMap#cors_policy}
 
 ---
 
@@ -7103,7 +7319,21 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy getFaul
 
 fault_injection_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#fault_injection_policy ComputeUrlMap#fault_injection_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#fault_injection_policy ComputeUrlMap#fault_injection_policy}
+
+---
+
+##### `maxStreamDuration`<sup>Optional</sup> <a name="maxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteAction.property.maxStreamDuration"></a>
+
+```java
+public ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration getMaxStreamDuration();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration</a>
+
+max_stream_duration block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#max_stream_duration ComputeUrlMap#max_stream_duration}
 
 ---
 
@@ -7117,7 +7347,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy getReque
 
 request_mirror_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_mirror_policy ComputeUrlMap#request_mirror_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_mirror_policy ComputeUrlMap#request_mirror_policy}
 
 ---
 
@@ -7131,7 +7361,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy getRetryPolicy()
 
 retry_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#retry_policy ComputeUrlMap#retry_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#retry_policy ComputeUrlMap#retry_policy}
 
 ---
 
@@ -7145,7 +7375,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout getTimeout();
 
 timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#timeout ComputeUrlMap#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#timeout ComputeUrlMap#timeout}
 
 ---
 
@@ -7159,7 +7389,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite getUrlRewrite();
 
 url_rewrite block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#url_rewrite ComputeUrlMap#url_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#url_rewrite ComputeUrlMap#url_rewrite}
 
 ---
 
@@ -7173,7 +7403,7 @@ public java.lang.Object getWeightedBackendServices();
 
 weighted_backend_services block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
 
 ---
 
@@ -7226,7 +7456,7 @@ In response to a preflight request, setting this to true indicates that the actu
 This translates to the Access-
 Control-Allow-Credentials header. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_credentials ComputeUrlMap#allow_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_credentials ComputeUrlMap#allow_credentials}
 
 ---
 
@@ -7240,7 +7470,7 @@ public java.util.List<java.lang.String> getAllowHeaders();
 
 Specifies the content for the Access-Control-Allow-Headers header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_headers ComputeUrlMap#allow_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_headers ComputeUrlMap#allow_headers}
 
 ---
 
@@ -7254,7 +7484,7 @@ public java.util.List<java.lang.String> getAllowMethods();
 
 Specifies the content for the Access-Control-Allow-Methods header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_methods ComputeUrlMap#allow_methods}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_methods ComputeUrlMap#allow_methods}
 
 ---
 
@@ -7272,7 +7502,7 @@ For
 regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either allow_origins or allow_origin_regex.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_origin_regexes ComputeUrlMap#allow_origin_regexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_origin_regexes ComputeUrlMap#allow_origin_regexes}
 
 ---
 
@@ -7289,7 +7519,7 @@ Specifies the list of origins that will be allowed to do CORS requests.
 An
 origin is allowed if it matches either allow_origins or allow_origin_regex.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#allow_origins ComputeUrlMap#allow_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#allow_origins ComputeUrlMap#allow_origins}
 
 ---
 
@@ -7303,7 +7533,7 @@ public java.lang.Object getDisabled();
 
 If true, specifies the CORS policy is disabled. which indicates that the CORS policy is in effect. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#disabled ComputeUrlMap#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#disabled ComputeUrlMap#disabled}
 
 ---
 
@@ -7317,7 +7547,7 @@ public java.util.List<java.lang.String> getExposeHeaders();
 
 Specifies the content for the Access-Control-Expose-Headers header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#expose_headers ComputeUrlMap#expose_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#expose_headers ComputeUrlMap#expose_headers}
 
 ---
 
@@ -7334,7 +7564,7 @@ Specifies how long the results of a preflight request can be cached.
 This
 translates to the content for the Access-Control-Max-Age header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#max_age ComputeUrlMap#max_age}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#max_age ComputeUrlMap#max_age}
 
 ---
 
@@ -7370,7 +7600,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort ge
 
 abort block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#abort ComputeUrlMap#abort}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#abort ComputeUrlMap#abort}
 
 ---
 
@@ -7384,7 +7614,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay ge
 
 delay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#delay ComputeUrlMap#delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#delay ComputeUrlMap#delay}
 
 ---
 
@@ -7420,7 +7650,7 @@ public java.lang.Number getHttpStatus();
 
 The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#http_status ComputeUrlMap#http_status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#http_status ComputeUrlMap#http_status}
 
 ---
 
@@ -7437,7 +7667,7 @@ The percentage of traffic (connections/operations/requests) which will be aborte
 The value must be between 0.0 and 100.0
 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
 
 ---
 
@@ -7473,7 +7703,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFix
 
 fixed_delay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#fixed_delay ComputeUrlMap#fixed_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#fixed_delay ComputeUrlMap#fixed_delay}
 
 ---
 
@@ -7490,7 +7720,7 @@ The percentage of traffic (connections/operations/requests) on which delay will 
 The value must be between 0.0 and
 100.0 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#percentage ComputeUrlMap#percentage}
 
 ---
 
@@ -7526,7 +7756,7 @@ public java.lang.String getSeconds();
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -7544,7 +7774,61 @@ Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+
+---
+
+### ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration <a name="ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration;
+
+ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration.builder()
+    .seconds(java.lang.String)
+//  .nanos(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration.property.seconds">seconds</a></code> | <code>java.lang.String</code> | Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration.property.nanos">nanos</a></code> | <code>java.lang.Number</code> | Span of time that's a fraction of a second at nanosecond resolution. |
+
+---
+
+##### `seconds`<sup>Required</sup> <a name="seconds" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration.property.seconds"></a>
+
+```java
+public java.lang.String getSeconds();
+```
+
+- *Type:* java.lang.String
+
+Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+
+---
+
+##### `nanos`<sup>Optional</sup> <a name="nanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration.property.nanos"></a>
+
+```java
+public java.lang.Number getNanos();
+```
+
+- *Type:* java.lang.Number
+
+Span of time that's a fraction of a second at nanosecond resolution.
+
+Durations
+less than one second are represented with a 0 'seconds' field and a positive
+'nanos' field. Must be from 0 to 999,999,999 inclusive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -7578,7 +7862,7 @@ public java.lang.String getBackendService();
 
 The BackendService resource being mirrored to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
 
 ---
 
@@ -7616,7 +7900,7 @@ public java.lang.Number getNumRetries();
 
 Specifies the allowed number retries. This number must be > 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#num_retries ComputeUrlMap#num_retries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#num_retries ComputeUrlMap#num_retries}
 
 ---
 
@@ -7630,7 +7914,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout get
 
 per_try_timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#per_try_timeout ComputeUrlMap#per_try_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#per_try_timeout ComputeUrlMap#per_try_timeout}
 
 ---
 
@@ -7665,7 +7949,7 @@ Specfies one or more conditions when this retry rule applies. Valid values are:.
 * unavailable: Loadbalancer will retry if the gRPC status code in
   the response header is set to unavailable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#retry_conditions ComputeUrlMap#retry_conditions}
 
 ---
 
@@ -7701,7 +7985,7 @@ public java.lang.String getSeconds();
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -7719,7 +8003,7 @@ Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -7755,7 +8039,7 @@ public java.lang.String getSeconds();
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#seconds ComputeUrlMap#seconds}
 
 ---
 
@@ -7773,7 +8057,7 @@ Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#nanos ComputeUrlMap#nanos}
 
 ---
 
@@ -7814,7 +8098,7 @@ Prior to forwarding the request to the selected service, the request's host head
 The value must be between 1 and
 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_rewrite ComputeUrlMap#host_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_rewrite ComputeUrlMap#host_rewrite}
 
 ---
 
@@ -7831,7 +8115,7 @@ Prior to forwarding the request to the selected backend service, the matching po
 The value must
 be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_prefix_rewrite ComputeUrlMap#path_prefix_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_prefix_rewrite ComputeUrlMap#path_prefix_rewrite}
 
 ---
 
@@ -7855,7 +8139,7 @@ MatchRules specify pathTemplate.
 Only one of pathPrefixRewrite and pathTemplateRewrite may be
 specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_template_rewrite ComputeUrlMap#path_template_rewrite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_template_rewrite ComputeUrlMap#path_template_rewrite}
 
 ---
 
@@ -7897,7 +8181,7 @@ Before
 forwarding the request to backendService, the loadbalancer applies any relevant
 headerActions specified as part of this backendServiceWeight.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#backend_service ComputeUrlMap#backend_service}
 
 ---
 
@@ -7917,7 +8201,7 @@ been directed to a backendService, subsequent requests will be sent to the same
 backendService as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#weight ComputeUrlMap#weight}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#weight ComputeUrlMap#weight}
 
 ---
 
@@ -7931,7 +8215,7 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeade
 
 header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_action ComputeUrlMap#header_action}
 
 ---
 
@@ -7973,7 +8257,7 @@ public java.lang.Object getRequestHeadersToAdd();
 
 request_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
 
 ---
 
@@ -7987,7 +8271,7 @@ public java.util.List<java.lang.String> getRequestHeadersToRemove();
 
 A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#request_headers_to_remove ComputeUrlMap#request_headers_to_remove}
 
 ---
 
@@ -8001,7 +8285,7 @@ public java.lang.Object getResponseHeadersToAdd();
 
 response_headers_to_add block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
 
 ---
 
@@ -8015,7 +8299,7 @@ public java.util.List<java.lang.String> getResponseHeadersToRemove();
 
 A list of header names for headers that need to be removed from the response prior to sending the response back to the client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#response_headers_to_remove ComputeUrlMap#response_headers_to_remove}
 
 ---
 
@@ -8054,7 +8338,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -8068,7 +8352,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -8085,7 +8369,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -8124,7 +8408,7 @@ public java.lang.String getHeaderName();
 
 The name of the header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_name ComputeUrlMap#header_name}
 
 ---
 
@@ -8138,7 +8422,7 @@ public java.lang.String getHeaderValue();
 
 The value of the header to add.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#header_value ComputeUrlMap#header_value}
 
 ---
 
@@ -8155,7 +8439,7 @@ If false, headerValue is appended to any values that already exist for the heade
 If true, headerValue is set for the header, discarding any values that
 were set for that header.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#replace ComputeUrlMap#replace}
 
 ---
 
@@ -8203,7 +8487,7 @@ The host that will be used in the redirect response instead of the one that was 
 
 The value must be between 1 and 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host_redirect ComputeUrlMap#host_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host_redirect ComputeUrlMap#host_redirect}
 
 ---
 
@@ -8222,7 +8506,7 @@ to false, the URL scheme of the redirected request will remain the same as that
 of the request. This must only be set for UrlMaps used in TargetHttpProxys.
 Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#https_redirect ComputeUrlMap#https_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#https_redirect ComputeUrlMap#https_redirect}
 
 ---
 
@@ -8239,7 +8523,7 @@ The path that will be used in the redirect response instead of the one that was 
 Only one of pathRedirect or prefixRedirect must be
 specified. The value must be between 1 and 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path_redirect ComputeUrlMap#path_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path_redirect ComputeUrlMap#path_redirect}
 
 ---
 
@@ -8253,7 +8537,7 @@ public java.lang.String getPrefixRedirect();
 
 The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the remaining portion of the URL before redirecting the request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#prefix_redirect ComputeUrlMap#prefix_redirect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#prefix_redirect ComputeUrlMap#prefix_redirect}
 
 ---
 
@@ -8273,7 +8557,7 @@ The HTTP Status code to use for this RedirectAction. Supported values are:.
 * TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case, the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#redirect_response_code ComputeUrlMap#redirect_response_code}
 
 ---
 
@@ -8290,7 +8574,7 @@ If set to true, any accompanying query portion of the original URL is removed pr
 If set to false, the query portion of the
 original URL is retained. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#strip_query ComputeUrlMap#strip_query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#strip_query ComputeUrlMap#strip_query}
 
 ---
 
@@ -8330,7 +8614,7 @@ public java.lang.String getHost();
 
 Host portion of the URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#host ComputeUrlMap#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#host ComputeUrlMap#host}
 
 ---
 
@@ -8344,7 +8628,7 @@ public java.lang.String getPath();
 
 Path portion of the URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#path ComputeUrlMap#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#path ComputeUrlMap#path}
 
 ---
 
@@ -8358,7 +8642,7 @@ public java.lang.String getService();
 
 The backend service or backend bucket link that should be matched by this test.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#service ComputeUrlMap#service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#service ComputeUrlMap#service}
 
 ---
 
@@ -8372,7 +8656,7 @@ public java.lang.String getDescription();
 
 Description of this test case.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#description ComputeUrlMap#description}
 
 ---
 
@@ -8394,9 +8678,9 @@ ComputeUrlMapTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#create ComputeUrlMap#create}. |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#delete ComputeUrlMap#delete}. |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#update ComputeUrlMap#update}. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#create ComputeUrlMap#create}. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#delete ComputeUrlMap#delete}. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#update ComputeUrlMap#update}. |
 
 ---
 
@@ -8408,7 +8692,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#create ComputeUrlMap#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#create ComputeUrlMap#create}.
 
 ---
 
@@ -8420,7 +8704,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#delete ComputeUrlMap#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#delete ComputeUrlMap#delete}.
 
 ---
 
@@ -8432,7 +8716,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_url_map#update ComputeUrlMap#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_url_map#update ComputeUrlMap#update}.
 
 ---
 
@@ -10186,6 +10470,306 @@ public ComputeUrlMapDefaultRouteActionFaultInjectionPolicy getInternalValue();
 ---
 
 
+### ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference <a name="ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference;
+
+new ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.resetNanos">resetNanos</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetNanos` <a name="resetNanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.resetNanos"></a>
+
+```java
+public void resetNanos()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.nanosInput">nanosInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.secondsInput">secondsInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.nanos">nanos</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.seconds">seconds</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration">ComputeUrlMapDefaultRouteActionMaxStreamDuration</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `nanosInput`<sup>Optional</sup> <a name="nanosInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.nanosInput"></a>
+
+```java
+public java.lang.Number getNanosInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `secondsInput`<sup>Optional</sup> <a name="secondsInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.secondsInput"></a>
+
+```java
+public java.lang.String getSecondsInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `nanos`<sup>Required</sup> <a name="nanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.nanos"></a>
+
+```java
+public java.lang.Number getNanos();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `seconds`<sup>Required</sup> <a name="seconds" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.seconds"></a>
+
+```java
+public java.lang.String getSeconds();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference.property.internalValue"></a>
+
+```java
+public ComputeUrlMapDefaultRouteActionMaxStreamDuration getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration">ComputeUrlMapDefaultRouteActionMaxStreamDuration</a>
+
+---
+
+
 ### ComputeUrlMapDefaultRouteActionOutputReference <a name="ComputeUrlMapDefaultRouteActionOutputReference" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.Initializer"></a>
@@ -10238,6 +10822,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putCorsPolicy">putCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putFaultInjectionPolicy">putFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putMaxStreamDuration">putMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putRequestMirrorPolicy">putRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putRetryPolicy">putRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putTimeout">putTimeout</a></code> | *No description.* |
@@ -10245,6 +10830,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putWeightedBackendServices">putWeightedBackendServices</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.resetCorsPolicy">resetCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.resetFaultInjectionPolicy">resetFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.resetMaxStreamDuration">resetMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.resetRequestMirrorPolicy">resetRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.resetRetryPolicy">resetRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.resetTimeout">resetTimeout</a></code> | *No description.* |
@@ -10427,6 +11013,18 @@ public void putFaultInjectionPolicy(ComputeUrlMapDefaultRouteActionFaultInjectio
 
 ---
 
+##### `putMaxStreamDuration` <a name="putMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putMaxStreamDuration"></a>
+
+```java
+public void putMaxStreamDuration(ComputeUrlMapDefaultRouteActionMaxStreamDuration value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putMaxStreamDuration.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration">ComputeUrlMapDefaultRouteActionMaxStreamDuration</a>
+
+---
+
 ##### `putRequestMirrorPolicy` <a name="putRequestMirrorPolicy" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.putRequestMirrorPolicy"></a>
 
 ```java
@@ -10499,6 +11097,12 @@ public void resetCorsPolicy()
 public void resetFaultInjectionPolicy()
 ```
 
+##### `resetMaxStreamDuration` <a name="resetMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.resetMaxStreamDuration"></a>
+
+```java
+public void resetMaxStreamDuration()
+```
+
 ##### `resetRequestMirrorPolicy` <a name="resetRequestMirrorPolicy" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.resetRequestMirrorPolicy"></a>
 
 ```java
@@ -10538,6 +11142,7 @@ public void resetWeightedBackendServices()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.corsPolicy">corsPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference">ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.faultInjectionPolicy">faultInjectionPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference">ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.maxStreamDuration">maxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference">ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.requestMirrorPolicy">requestMirrorPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference">ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.retryPolicy">retryPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference">ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.timeout">timeout</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionTimeoutOutputReference">ComputeUrlMapDefaultRouteActionTimeoutOutputReference</a></code> | *No description.* |
@@ -10545,6 +11150,7 @@ public void resetWeightedBackendServices()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.weightedBackendServices">weightedBackendServices</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesList">ComputeUrlMapDefaultRouteActionWeightedBackendServicesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.corsPolicyInput">corsPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionCorsPolicy">ComputeUrlMapDefaultRouteActionCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.faultInjectionPolicyInput">faultInjectionPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicy">ComputeUrlMapDefaultRouteActionFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.maxStreamDurationInput">maxStreamDurationInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration">ComputeUrlMapDefaultRouteActionMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.requestMirrorPolicyInput">requestMirrorPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRequestMirrorPolicy">ComputeUrlMapDefaultRouteActionRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.retryPolicyInput">retryPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionRetryPolicy">ComputeUrlMapDefaultRouteActionRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.timeoutInput">timeoutInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionTimeout">ComputeUrlMapDefaultRouteActionTimeout</a></code> | *No description.* |
@@ -10595,6 +11201,16 @@ public ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference getFau
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference">ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference</a>
+
+---
+
+##### `maxStreamDuration`<sup>Required</sup> <a name="maxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.maxStreamDuration"></a>
+
+```java
+public ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference getMaxStreamDuration();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference">ComputeUrlMapDefaultRouteActionMaxStreamDurationOutputReference</a>
 
 ---
 
@@ -10665,6 +11281,16 @@ public ComputeUrlMapDefaultRouteActionFaultInjectionPolicy getFaultInjectionPoli
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionFaultInjectionPolicy">ComputeUrlMapDefaultRouteActionFaultInjectionPolicy</a>
+
+---
+
+##### `maxStreamDurationInput`<sup>Optional</sup> <a name="maxStreamDurationInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionOutputReference.property.maxStreamDurationInput"></a>
+
+```java
+public ComputeUrlMapDefaultRouteActionMaxStreamDuration getMaxStreamDurationInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionMaxStreamDuration">ComputeUrlMapDefaultRouteActionMaxStreamDuration</a>
 
 ---
 
@@ -18257,6 +18883,306 @@ public ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy getInterna
 ---
 
 
+### ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference <a name="ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference;
+
+new ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.resetNanos">resetNanos</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetNanos` <a name="resetNanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.resetNanos"></a>
+
+```java
+public void resetNanos()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.nanosInput">nanosInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.secondsInput">secondsInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.nanos">nanos</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.seconds">seconds</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `nanosInput`<sup>Optional</sup> <a name="nanosInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.nanosInput"></a>
+
+```java
+public java.lang.Number getNanosInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `secondsInput`<sup>Optional</sup> <a name="secondsInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.secondsInput"></a>
+
+```java
+public java.lang.String getSecondsInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `nanos`<sup>Required</sup> <a name="nanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.nanos"></a>
+
+```java
+public java.lang.Number getNanos();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `seconds`<sup>Required</sup> <a name="seconds" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.seconds"></a>
+
+```java
+public java.lang.String getSeconds();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference.property.internalValue"></a>
+
+```java
+public ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration</a>
+
+---
+
+
 ### ComputeUrlMapPathMatcherDefaultRouteActionOutputReference <a name="ComputeUrlMapPathMatcherDefaultRouteActionOutputReference" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.Initializer"></a>
@@ -18309,6 +19235,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putCorsPolicy">putCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putFaultInjectionPolicy">putFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putMaxStreamDuration">putMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putRequestMirrorPolicy">putRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putRetryPolicy">putRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putTimeout">putTimeout</a></code> | *No description.* |
@@ -18316,6 +19243,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putWeightedBackendServices">putWeightedBackendServices</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.resetCorsPolicy">resetCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.resetFaultInjectionPolicy">resetFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.resetMaxStreamDuration">resetMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.resetRequestMirrorPolicy">resetRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.resetRetryPolicy">resetRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.resetTimeout">resetTimeout</a></code> | *No description.* |
@@ -18498,6 +19426,18 @@ public void putFaultInjectionPolicy(ComputeUrlMapPathMatcherDefaultRouteActionFa
 
 ---
 
+##### `putMaxStreamDuration` <a name="putMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putMaxStreamDuration"></a>
+
+```java
+public void putMaxStreamDuration(ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putMaxStreamDuration.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration</a>
+
+---
+
 ##### `putRequestMirrorPolicy` <a name="putRequestMirrorPolicy" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.putRequestMirrorPolicy"></a>
 
 ```java
@@ -18570,6 +19510,12 @@ public void resetCorsPolicy()
 public void resetFaultInjectionPolicy()
 ```
 
+##### `resetMaxStreamDuration` <a name="resetMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.resetMaxStreamDuration"></a>
+
+```java
+public void resetMaxStreamDuration()
+```
+
 ##### `resetRequestMirrorPolicy` <a name="resetRequestMirrorPolicy" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.resetRequestMirrorPolicy"></a>
 
 ```java
@@ -18609,6 +19555,7 @@ public void resetWeightedBackendServices()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.corsPolicy">corsPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference">ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.faultInjectionPolicy">faultInjectionPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference">ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.maxStreamDuration">maxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.requestMirrorPolicy">requestMirrorPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference">ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.retryPolicy">retryPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference">ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.timeout">timeout</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference">ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference</a></code> | *No description.* |
@@ -18616,6 +19563,7 @@ public void resetWeightedBackendServices()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.weightedBackendServices">weightedBackendServices</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesList">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.corsPolicyInput">corsPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy">ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.faultInjectionPolicyInput">faultInjectionPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.maxStreamDurationInput">maxStreamDurationInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.requestMirrorPolicyInput">requestMirrorPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy">ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.retryPolicyInput">retryPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy">ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.timeoutInput">timeoutInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionTimeout">ComputeUrlMapPathMatcherDefaultRouteActionTimeout</a></code> | *No description.* |
@@ -18666,6 +19614,16 @@ public ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputRefer
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference">ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference</a>
+
+---
+
+##### `maxStreamDuration`<sup>Required</sup> <a name="maxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.maxStreamDuration"></a>
+
+```java
+public ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference getMaxStreamDuration();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDurationOutputReference</a>
 
 ---
 
@@ -18736,6 +19694,16 @@ public ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy getFaultIn
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy</a>
+
+---
+
+##### `maxStreamDurationInput`<sup>Optional</sup> <a name="maxStreamDurationInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionOutputReference.property.maxStreamDurationInput"></a>
+
+```java
+public ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration getMaxStreamDurationInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherDefaultRouteActionMaxStreamDuration</a>
 
 ---
 
@@ -27065,6 +28033,306 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy getIntern
 ---
 
 
+### ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference <a name="ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference;
+
+new ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.resetNanos">resetNanos</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetNanos` <a name="resetNanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.resetNanos"></a>
+
+```java
+public void resetNanos()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.nanosInput">nanosInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.secondsInput">secondsInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.nanos">nanos</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.seconds">seconds</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `nanosInput`<sup>Optional</sup> <a name="nanosInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.nanosInput"></a>
+
+```java
+public java.lang.Number getNanosInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `secondsInput`<sup>Optional</sup> <a name="secondsInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.secondsInput"></a>
+
+```java
+public java.lang.String getSecondsInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `nanos`<sup>Required</sup> <a name="nanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.nanos"></a>
+
+```java
+public java.lang.Number getNanos();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `seconds`<sup>Required</sup> <a name="seconds" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.seconds"></a>
+
+```java
+public java.lang.String getSeconds();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference.property.internalValue"></a>
+
+```java
+public ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration</a>
+
+---
+
+
 ### ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference <a name="ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.Initializer"></a>
@@ -27117,6 +28385,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putCorsPolicy">putCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putFaultInjectionPolicy">putFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putMaxStreamDuration">putMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putRequestMirrorPolicy">putRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putRetryPolicy">putRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putTimeout">putTimeout</a></code> | *No description.* |
@@ -27124,6 +28393,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putWeightedBackendServices">putWeightedBackendServices</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.resetCorsPolicy">resetCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.resetFaultInjectionPolicy">resetFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.resetMaxStreamDuration">resetMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.resetRequestMirrorPolicy">resetRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.resetRetryPolicy">resetRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.resetTimeout">resetTimeout</a></code> | *No description.* |
@@ -27306,6 +28576,18 @@ public void putFaultInjectionPolicy(ComputeUrlMapPathMatcherPathRuleRouteActionF
 
 ---
 
+##### `putMaxStreamDuration` <a name="putMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putMaxStreamDuration"></a>
+
+```java
+public void putMaxStreamDuration(ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putMaxStreamDuration.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration</a>
+
+---
+
 ##### `putRequestMirrorPolicy` <a name="putRequestMirrorPolicy" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.putRequestMirrorPolicy"></a>
 
 ```java
@@ -27378,6 +28660,12 @@ public void resetCorsPolicy()
 public void resetFaultInjectionPolicy()
 ```
 
+##### `resetMaxStreamDuration` <a name="resetMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.resetMaxStreamDuration"></a>
+
+```java
+public void resetMaxStreamDuration()
+```
+
 ##### `resetRequestMirrorPolicy` <a name="resetRequestMirrorPolicy" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.resetRequestMirrorPolicy"></a>
 
 ```java
@@ -27417,6 +28705,7 @@ public void resetWeightedBackendServices()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.corsPolicy">corsPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference">ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.faultInjectionPolicy">faultInjectionPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference">ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.maxStreamDuration">maxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.requestMirrorPolicy">requestMirrorPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference">ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.retryPolicy">retryPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference">ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.timeout">timeout</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference">ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference</a></code> | *No description.* |
@@ -27424,6 +28713,7 @@ public void resetWeightedBackendServices()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.weightedBackendServices">weightedBackendServices</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesList">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.corsPolicyInput">corsPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.faultInjectionPolicyInput">faultInjectionPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.maxStreamDurationInput">maxStreamDurationInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.requestMirrorPolicyInput">requestMirrorPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.retryPolicyInput">retryPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.timeoutInput">timeoutInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionTimeout">ComputeUrlMapPathMatcherPathRuleRouteActionTimeout</a></code> | *No description.* |
@@ -27474,6 +28764,16 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputRefe
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference">ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference</a>
+
+---
+
+##### `maxStreamDuration`<sup>Required</sup> <a name="maxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.maxStreamDuration"></a>
+
+```java
+public ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference getMaxStreamDuration();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDurationOutputReference</a>
 
 ---
 
@@ -27544,6 +28844,16 @@ public ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy getFaultI
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy</a>
+
+---
+
+##### `maxStreamDurationInput`<sup>Optional</sup> <a name="maxStreamDurationInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference.property.maxStreamDurationInput"></a>
+
+```java
+public ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration getMaxStreamDurationInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherPathRuleRouteActionMaxStreamDuration</a>
 
 ---
 
@@ -38352,6 +39662,306 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy getInte
 ---
 
 
+### ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference <a name="ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.compute_url_map.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference;
+
+new ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.resetNanos">resetNanos</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetNanos` <a name="resetNanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.resetNanos"></a>
+
+```java
+public void resetNanos()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.nanosInput">nanosInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.secondsInput">secondsInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.nanos">nanos</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.seconds">seconds</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `nanosInput`<sup>Optional</sup> <a name="nanosInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.nanosInput"></a>
+
+```java
+public java.lang.Number getNanosInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `secondsInput`<sup>Optional</sup> <a name="secondsInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.secondsInput"></a>
+
+```java
+public java.lang.String getSecondsInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `nanos`<sup>Required</sup> <a name="nanos" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.nanos"></a>
+
+```java
+public java.lang.Number getNanos();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `seconds`<sup>Required</sup> <a name="seconds" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.seconds"></a>
+
+```java
+public java.lang.String getSeconds();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference.property.internalValue"></a>
+
+```java
+public ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration</a>
+
+---
+
+
 ### ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference <a name="ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.Initializer"></a>
@@ -38404,6 +40014,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putCorsPolicy">putCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putFaultInjectionPolicy">putFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putMaxStreamDuration">putMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putRequestMirrorPolicy">putRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putRetryPolicy">putRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putTimeout">putTimeout</a></code> | *No description.* |
@@ -38411,6 +40022,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putWeightedBackendServices">putWeightedBackendServices</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.resetCorsPolicy">resetCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.resetFaultInjectionPolicy">resetFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.resetMaxStreamDuration">resetMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.resetRequestMirrorPolicy">resetRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.resetRetryPolicy">resetRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.resetTimeout">resetTimeout</a></code> | *No description.* |
@@ -38593,6 +40205,18 @@ public void putFaultInjectionPolicy(ComputeUrlMapPathMatcherRouteRulesRouteActio
 
 ---
 
+##### `putMaxStreamDuration` <a name="putMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putMaxStreamDuration"></a>
+
+```java
+public void putMaxStreamDuration(ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putMaxStreamDuration.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration</a>
+
+---
+
 ##### `putRequestMirrorPolicy` <a name="putRequestMirrorPolicy" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.putRequestMirrorPolicy"></a>
 
 ```java
@@ -38665,6 +40289,12 @@ public void resetCorsPolicy()
 public void resetFaultInjectionPolicy()
 ```
 
+##### `resetMaxStreamDuration` <a name="resetMaxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.resetMaxStreamDuration"></a>
+
+```java
+public void resetMaxStreamDuration()
+```
+
 ##### `resetRequestMirrorPolicy` <a name="resetRequestMirrorPolicy" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.resetRequestMirrorPolicy"></a>
 
 ```java
@@ -38704,6 +40334,7 @@ public void resetWeightedBackendServices()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.corsPolicy">corsPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference">ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.faultInjectionPolicy">faultInjectionPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference">ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.maxStreamDuration">maxStreamDuration</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.requestMirrorPolicy">requestMirrorPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference">ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.retryPolicy">retryPolicy</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference">ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.timeout">timeout</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference">ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference</a></code> | *No description.* |
@@ -38711,6 +40342,7 @@ public void resetWeightedBackendServices()
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.weightedBackendServices">weightedBackendServices</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesList">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.corsPolicyInput">corsPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.faultInjectionPolicyInput">faultInjectionPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.maxStreamDurationInput">maxStreamDurationInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.requestMirrorPolicyInput">requestMirrorPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.retryPolicyInput">retryPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.timeoutInput">timeoutInput</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout">ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout</a></code> | *No description.* |
@@ -38761,6 +40393,16 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputRe
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference">ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference</a>
+
+---
+
+##### `maxStreamDuration`<sup>Required</sup> <a name="maxStreamDuration" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.maxStreamDuration"></a>
+
+```java
+public ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference getMaxStreamDuration();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDurationOutputReference</a>
 
 ---
 
@@ -38831,6 +40473,16 @@ public ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy getFaul
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy">ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy</a>
+
+---
+
+##### `maxStreamDurationInput`<sup>Optional</sup> <a name="maxStreamDurationInput" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference.property.maxStreamDurationInput"></a>
+
+```java
+public ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration getMaxStreamDurationInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration">ComputeUrlMapPathMatcherRouteRulesRouteActionMaxStreamDuration</a>
 
 ---
 

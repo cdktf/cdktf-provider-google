@@ -4,7 +4,7 @@
 
 ### DataGoogleComputeDisk <a name="DataGoogleComputeDisk" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk google_compute_disk}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk google_compute_disk}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer"></a>
 
@@ -40,8 +40,8 @@ dataGoogleComputeDisk.DataGoogleComputeDisk(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer.parameter.name">name</a></code> | <code>str</code> | Name of the resource. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer.parameter.zone">zone</a></code> | <code>str</code> | A reference to the zone where the disk resides. |
 
 ---
@@ -120,7 +120,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}.
 
 ---
 
@@ -149,7 +149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A reference to the zone where the disk resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
 
 ---
 
@@ -529,7 +529,7 @@ The construct id used in the generated config for the DataGoogleComputeDisk to i
 
 The id of the existing DataGoogleComputeDisk that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -558,6 +558,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.accessMode">access_mode</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.architecture">architecture</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.asyncPrimaryDisk">async_primary_disk</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskAsyncPrimaryDiskList">DataGoogleComputeDiskAsyncPrimaryDiskList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.creationTimestamp">creation_timestamp</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.description">description</a></code> | <code>str</code> | *No description.* |
@@ -572,6 +573,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.lastAttachTimestamp">last_attach_timestamp</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.lastDetachTimestamp">last_detach_timestamp</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.licenses">licenses</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.params">params</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList">DataGoogleComputeDiskParamsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.physicalBlockSizeBytes">physical_block_size_bytes</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.provisionedIops">provisioned_iops</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.provisionedThroughput">provisioned_throughput</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -582,8 +584,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceDiskId">source_disk_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceImageEncryptionKey">source_image_encryption_key</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskSourceImageEncryptionKeyList">DataGoogleComputeDiskSourceImageEncryptionKeyList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceImageId">source_image_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceInstantSnapshot">source_instant_snapshot</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceInstantSnapshotId">source_instant_snapshot_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceSnapshotEncryptionKey">source_snapshot_encryption_key</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskSourceSnapshotEncryptionKeyList">DataGoogleComputeDiskSourceSnapshotEncryptionKeyList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceSnapshotId">source_snapshot_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceStorageObject">source_storage_object</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.storagePool">storage_pool</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.terraformLabels">terraform_labels</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.type">type</a></code> | <code>str</code> | *No description.* |
@@ -731,6 +736,16 @@ access_mode: str
 
 ---
 
+##### `architecture`<sup>Required</sup> <a name="architecture" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.architecture"></a>
+
+```python
+architecture: str
+```
+
+- *Type:* str
+
+---
+
 ##### `async_primary_disk`<sup>Required</sup> <a name="async_primary_disk" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.asyncPrimaryDisk"></a>
 
 ```python
@@ -871,6 +886,16 @@ licenses: typing.List[str]
 
 ---
 
+##### `params`<sup>Required</sup> <a name="params" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.params"></a>
+
+```python
+params: DataGoogleComputeDiskParamsList
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList">DataGoogleComputeDiskParamsList</a>
+
+---
+
 ##### `physical_block_size_bytes`<sup>Required</sup> <a name="physical_block_size_bytes" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.physicalBlockSizeBytes"></a>
 
 ```python
@@ -971,6 +996,26 @@ source_image_id: str
 
 ---
 
+##### `source_instant_snapshot`<sup>Required</sup> <a name="source_instant_snapshot" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceInstantSnapshot"></a>
+
+```python
+source_instant_snapshot: str
+```
+
+- *Type:* str
+
+---
+
+##### `source_instant_snapshot_id`<sup>Required</sup> <a name="source_instant_snapshot_id" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceInstantSnapshotId"></a>
+
+```python
+source_instant_snapshot_id: str
+```
+
+- *Type:* str
+
+---
+
 ##### `source_snapshot_encryption_key`<sup>Required</sup> <a name="source_snapshot_encryption_key" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceSnapshotEncryptionKey"></a>
 
 ```python
@@ -985,6 +1030,16 @@ source_snapshot_encryption_key: DataGoogleComputeDiskSourceSnapshotEncryptionKey
 
 ```python
 source_snapshot_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `source_storage_object`<sup>Required</sup> <a name="source_storage_object" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.property.sourceStorageObject"></a>
+
+```python
+source_storage_object: str
 ```
 
 - *Type:* str
@@ -1176,8 +1231,8 @@ dataGoogleComputeDisk.DataGoogleComputeDiskConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.property.name">name</a></code> | <code>str</code> | Name of the resource. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.property.zone">zone</a></code> | <code>str</code> | A reference to the zone where the disk resides. |
 
 ---
@@ -1270,7 +1325,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
 
 ---
 
@@ -1282,7 +1337,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1297,7 +1352,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}.
 
 ---
 
@@ -1311,7 +1366,7 @@ zone: str
 
 A reference to the zone where the disk resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
 
 ---
 
@@ -1334,6 +1389,17 @@ dataGoogleComputeDisk.DataGoogleComputeDiskDiskEncryptionKey()
 from cdktf_cdktf_provider_google import data_google_compute_disk
 
 dataGoogleComputeDisk.DataGoogleComputeDiskGuestOsFeatures()
+```
+
+
+### DataGoogleComputeDiskParams <a name="DataGoogleComputeDiskParams" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParams"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParams.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import data_google_compute_disk
+
+dataGoogleComputeDisk.DataGoogleComputeDiskParams()
 ```
 
 
@@ -2793,6 +2859,470 @@ internal_value: DataGoogleComputeDiskGuestOsFeatures
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskGuestOsFeatures">DataGoogleComputeDiskGuestOsFeatures</a>
+
+---
+
+
+### DataGoogleComputeDiskParamsList <a name="DataGoogleComputeDiskParamsList" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import data_google_compute_disk
+
+dataGoogleComputeDisk.DataGoogleComputeDiskParamsList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> DataGoogleComputeDiskParamsOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+
+### DataGoogleComputeDiskParamsOutputReference <a name="DataGoogleComputeDiskParamsOutputReference" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import data_google_compute_disk
+
+dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.property.resourceManagerTags">resource_manager_tags</a></code> | <code>cdktf.StringMap</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParams">DataGoogleComputeDiskParams</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `resource_manager_tags`<sup>Required</sup> <a name="resource_manager_tags" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.property.resourceManagerTags"></a>
+
+```python
+resource_manager_tags: StringMap
+```
+
+- *Type:* cdktf.StringMap
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParamsOutputReference.property.internalValue"></a>
+
+```python
+internal_value: DataGoogleComputeDiskParams
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskParams">DataGoogleComputeDiskParams</a>
 
 ---
 
