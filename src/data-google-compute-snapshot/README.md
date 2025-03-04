@@ -1,3 +1,3 @@
 # `data_google_compute_snapshot`
 
-Refer to the Terraform Registry for docs: [`data_google_compute_snapshot`](https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/data-sources/compute_snapshot).
+Refer to the Terraform Registry for docs: [`data_google_compute_snapshot`](https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/data-sources/compute_snapshot).

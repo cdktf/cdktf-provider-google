@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route
+// https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,18 +11,18 @@ export interface ComputeRouteConfig extends cdktf.TerraformMetaArguments {
   * An optional description of this resource. Provide this property
   * when you create the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#description ComputeRoute#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#description ComputeRoute#description}
   */
   readonly description?: string;
   /**
   * The destination range of outgoing packets that this route applies to.
   * Only IPv4 is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#dest_range ComputeRoute#dest_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#dest_range ComputeRoute#dest_range}
   */
   readonly destRange: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#id ComputeRoute#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#id ComputeRoute#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -42,13 +37,13 @@ export interface ComputeRouteConfig extends cdktf.TerraformMetaArguments {
   * characters must be a dash, lowercase letter, or digit, except the
   * last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#name ComputeRoute#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#name ComputeRoute#name}
   */
   readonly name: string;
   /**
   * The network that this route applies to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#network ComputeRoute#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#network ComputeRoute#network}
   */
   readonly network: string;
   /**
@@ -60,7 +55,7 @@ export interface ComputeRouteConfig extends cdktf.TerraformMetaArguments {
   * * 'global/gateways/default-internet-gateway'
   * * The string 'default-internet-gateway'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#next_hop_gateway ComputeRoute#next_hop_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#next_hop_gateway ComputeRoute#next_hop_gateway}
   */
   readonly nextHopGateway?: string;
   /**
@@ -81,7 +76,7 @@ export interface ComputeRouteConfig extends cdktf.TerraformMetaArguments {
   * Note that this can only be used when the destinationRange is
   * a public (non-RFC 1918) IP CIDR range.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#next_hop_ilb ComputeRoute#next_hop_ilb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#next_hop_ilb ComputeRoute#next_hop_ilb}
   */
   readonly nextHopIlb?: string;
   /**
@@ -92,25 +87,25 @@ export interface ComputeRouteConfig extends cdktf.TerraformMetaArguments {
   * * 'zones/zone/instances/instance'
   * * Just the instance name, with the zone in 'next_hop_instance_zone'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#next_hop_instance ComputeRoute#next_hop_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#next_hop_instance ComputeRoute#next_hop_instance}
   */
   readonly nextHopInstance?: string;
   /**
   * The zone of the instance specified in next_hop_instance. Omit if next_hop_instance is specified as a URL.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#next_hop_instance_zone ComputeRoute#next_hop_instance_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#next_hop_instance_zone ComputeRoute#next_hop_instance_zone}
   */
   readonly nextHopInstanceZone?: string;
   /**
   * Network IP address of an instance that should handle matching packets.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#next_hop_ip ComputeRoute#next_hop_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#next_hop_ip ComputeRoute#next_hop_ip}
   */
   readonly nextHopIp?: string;
   /**
   * URL to a VpnTunnel that should handle matching packets.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#next_hop_vpn_tunnel ComputeRoute#next_hop_vpn_tunnel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#next_hop_vpn_tunnel ComputeRoute#next_hop_vpn_tunnel}
   */
   readonly nextHopVpnTunnel?: string;
   /**
@@ -122,33 +117,279 @@ export interface ComputeRouteConfig extends cdktf.TerraformMetaArguments {
   * 
   * Default value is 1000. Valid range is 0 through 65535.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#priority ComputeRoute#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#priority ComputeRoute#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#project ComputeRoute#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#project ComputeRoute#project}
   */
   readonly project?: string;
   /**
   * A list of instance tags to which this route applies.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#tags ComputeRoute#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#tags ComputeRoute#tags}
   */
   readonly tags?: string[];
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#timeouts ComputeRoute#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#timeouts ComputeRoute#timeouts}
   */
   readonly timeouts?: ComputeRouteTimeouts;
 }
+export interface ComputeRouteAsPaths {
+}
+
+export function computeRouteAsPathsToTerraform(struct?: ComputeRouteAsPaths): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function computeRouteAsPathsToHclTerraform(struct?: ComputeRouteAsPaths): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class ComputeRouteAsPathsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRouteAsPaths | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouteAsPaths | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // as_lists - computed: true, optional: false, required: false
+  public get asLists() {
+    return this.getNumberListAttribute('as_lists');
+  }
+
+  // path_segment_type - computed: true, optional: false, required: false
+  public get pathSegmentType() {
+    return this.getStringAttribute('path_segment_type');
+  }
+}
+
+export class ComputeRouteAsPathsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRouteAsPathsOutputReference {
+    return new ComputeRouteAsPathsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeRouteWarningsData {
+}
+
+export function computeRouteWarningsDataToTerraform(struct?: ComputeRouteWarningsData): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function computeRouteWarningsDataToHclTerraform(struct?: ComputeRouteWarningsData): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class ComputeRouteWarningsDataOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRouteWarningsData | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouteWarningsData | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+
+export class ComputeRouteWarningsDataList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRouteWarningsDataOutputReference {
+    return new ComputeRouteWarningsDataOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeRouteWarnings {
+}
+
+export function computeRouteWarningsToTerraform(struct?: ComputeRouteWarnings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function computeRouteWarningsToHclTerraform(struct?: ComputeRouteWarnings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class ComputeRouteWarningsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRouteWarnings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouteWarnings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // code - computed: true, optional: false, required: false
+  public get code() {
+    return this.getStringAttribute('code');
+  }
+
+  // data - computed: true, optional: false, required: false
+  private _data = new ComputeRouteWarningsDataList(this, "data", false);
+  public get data() {
+    return this._data;
+  }
+
+  // message - computed: true, optional: false, required: false
+  public get message() {
+    return this.getStringAttribute('message');
+  }
+}
+
+export class ComputeRouteWarningsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRouteWarningsOutputReference {
+    return new ComputeRouteWarningsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRouteTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#create ComputeRoute#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#create ComputeRoute#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#delete ComputeRoute#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#delete ComputeRoute#delete}
   */
   readonly delete?: string;
 }
@@ -271,7 +512,7 @@ export class ComputeRouteTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route google_compute_route}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route google_compute_route}
 */
 export class ComputeRoute extends cdktf.TerraformResource {
 
@@ -287,7 +528,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRoute resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRoute to import
-  * @param importFromId The id of the existing ComputeRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRoute to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -299,7 +540,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.23.0/docs/resources/compute_route google_compute_route} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/compute_route google_compute_route} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -310,7 +551,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_route',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.23.0',
+        providerVersion: '6.24.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -341,6 +582,17 @@ export class ComputeRoute extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // as_paths - computed: true, optional: false, required: false
+  private _asPaths = new ComputeRouteAsPathsList(this, "as_paths", false);
+  public get asPaths() {
+    return this._asPaths;
+  }
+
+  // creation_timestamp - computed: true, optional: false, required: false
+  public get creationTimestamp() {
+    return this.getStringAttribute('creation_timestamp');
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string; 
@@ -429,6 +681,11 @@ export class ComputeRoute extends cdktf.TerraformResource {
     return this._nextHopGateway;
   }
 
+  // next_hop_hub - computed: true, optional: false, required: false
+  public get nextHopHub() {
+    return this.getStringAttribute('next_hop_hub');
+  }
+
   // next_hop_ilb - computed: false, optional: true, required: false
   private _nextHopIlb?: string; 
   public get nextHopIlb() {
@@ -513,6 +770,11 @@ export class ComputeRoute extends cdktf.TerraformResource {
     return this.getStringAttribute('next_hop_origin');
   }
 
+  // next_hop_peering - computed: true, optional: false, required: false
+  public get nextHopPeering() {
+    return this.getStringAttribute('next_hop_peering');
+  }
+
   // next_hop_vpn_tunnel - computed: false, optional: true, required: false
   private _nextHopVpnTunnel?: string; 
   public get nextHopVpnTunnel() {
@@ -561,6 +823,16 @@ export class ComputeRoute extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // route_status - computed: true, optional: false, required: false
+  public get routeStatus() {
+    return this.getStringAttribute('route_status');
+  }
+
+  // route_type - computed: true, optional: false, required: false
+  public get routeType() {
+    return this.getStringAttribute('route_type');
+  }
+
   // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
@@ -580,6 +852,12 @@ export class ComputeRoute extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // warnings - computed: true, optional: false, required: false
+  private _warnings = new ComputeRouteWarningsList(this, "warnings", false);
+  public get warnings() {
+    return this._warnings;
   }
 
   // timeouts - computed: false, optional: true, required: false
