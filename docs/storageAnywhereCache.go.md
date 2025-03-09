@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecache"
+import "github.com/cdktf/cdktf-provider-google-go/google/storageanywherecache"
 
 storageanywherecache.NewStorageAnywhereCache(scope Construct, id *string, config StorageAnywhereCacheConfig) StorageAnywhereCache
 ```
@@ -419,7 +419,7 @@ func ResetTtl()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecache"
+import "github.com/cdktf/cdktf-provider-google-go/google/storageanywherecache"
 
 storageanywherecache.StorageAnywhereCache_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecache"
+import "github.com/cdktf/cdktf-provider-google-go/google/storageanywherecache"
 
 storageanywherecache.StorageAnywhereCache_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ storageanywherecache.StorageAnywhereCache_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecache"
+import "github.com/cdktf/cdktf-provider-google-go/google/storageanywherecache"
 
 storageanywherecache.StorageAnywhereCache_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ storageanywherecache.StorageAnywhereCache_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecache"
+import "github.com/cdktf/cdktf-provider-google-go/google/storageanywherecache"
 
 storageanywherecache.StorageAnywhereCache_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -895,7 +895,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecache"
+import "github.com/cdktf/cdktf-provider-google-go/google/storageanywherecache"
 
 &storageanywherecache.StorageAnywhereCacheConfig {
 	Connection: interface{},
@@ -909,7 +909,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecach
 	Zone: *string,
 	AdmissionPolicy: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.storageAnywhereCache.StorageAnywhereCacheTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.storageAnywhereCache.StorageAnywhereCacheTimeouts,
 	Ttl: *string,
 }
 ```
@@ -1096,7 +1096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecache"
+import "github.com/cdktf/cdktf-provider-google-go/google/storageanywherecache"
 
 &storageanywherecache.StorageAnywhereCacheTimeouts {
 	Create: *string,
@@ -1158,7 +1158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/storageanywherecache"
+import "github.com/cdktf/cdktf-provider-google-go/google/storageanywherecache"
 
 storageanywherecache.NewStorageAnywhereCacheTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAnywhereCacheTimeoutsOutputReference
 ```
