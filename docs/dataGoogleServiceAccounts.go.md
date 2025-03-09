@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.NewDataGoogleServiceAccounts(scope Construct, id *string, config DataGoogleServiceAccountsConfig) DataGoogleServiceAccounts
 ```
@@ -304,7 +304,7 @@ func ResetRegex()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.DataGoogleServiceAccounts_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.DataGoogleServiceAccounts_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagoogleserviceaccounts.DataGoogleServiceAccounts_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.DataGoogleServiceAccounts_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ datagoogleserviceaccounts.DataGoogleServiceAccounts_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccounts.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.DataGoogleServiceAccounts_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 &datagoogleserviceaccounts.DataGoogleServiceAccountsAccounts {
 
@@ -683,7 +683,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccoun
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 &datagoogleserviceaccounts.DataGoogleServiceAccountsConfig {
 	Connection: interface{},
@@ -846,7 +846,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsAccountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.NewDataGoogleServiceAccountsAccountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleServiceAccountsAccountsList
 ```
@@ -995,7 +995,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccounts.DataGoogleServiceAccountsAccountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleserviceaccounts"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleserviceaccounts"
 
 datagoogleserviceaccounts.NewDataGoogleServiceAccountsAccountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleServiceAccountsAccountsOutputReference
 ```
