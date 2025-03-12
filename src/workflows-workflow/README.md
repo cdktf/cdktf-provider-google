@@ -1,3 +1,3 @@
 # `google_workflows_workflow`
 
-Refer to the Terraform Registry for docs: [`google_workflows_workflow`](https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/workflows_workflow).
+Refer to the Terraform Registry for docs: [`google_workflows_workflow`](https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/workflows_workflow).

@@ -1,3 +1,3 @@
 # `google_folder_iam_member`
 
-Refer to the Terraform Registry for docs: [`google_folder_iam_member`](https://registry.terraform.io/providers/hashicorp/google/6.24.0/docs/resources/folder_iam_member).
+Refer to the Terraform Registry for docs: [`google_folder_iam_member`](https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/folder_iam_member).
