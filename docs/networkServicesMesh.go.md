@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesMesh.NetworkServicesMesh.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesmesh"
 
 networkservicesmesh.NewNetworkServicesMesh(scope Construct, id *string, config NetworkServicesMeshConfig) NetworkServicesMesh
 ```
@@ -440,7 +440,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkServicesMesh.NetworkServicesMesh.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesmesh"
 
 networkservicesmesh.NetworkServicesMesh_IsConstruct(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkServicesMesh.NetworkServicesMesh.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesmesh"
 
 networkservicesmesh.NetworkServicesMesh_IsTerraformElement(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ networkservicesmesh.NetworkServicesMesh_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkServicesMesh.NetworkServicesMesh.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesmesh"
 
 networkservicesmesh.NetworkServicesMesh_IsTerraformResource(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ networkservicesmesh.NetworkServicesMesh_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkServicesMesh.NetworkServicesMesh.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesmesh"
 
 networkservicesmesh.NetworkServicesMesh_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -960,7 +960,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesMesh.NetworkServicesMeshConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesmesh"
 
 &networkservicesmesh.NetworkServicesMeshConfig {
 	Connection: interface{},
@@ -977,7 +977,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.networkServicesMesh.NetworkServicesMeshTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkServicesMesh.NetworkServicesMeshTimeouts,
 }
 ```
 
@@ -1200,7 +1200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesMesh.NetworkServicesMeshTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesmesh"
 
 &networkservicesmesh.NetworkServicesMeshTimeouts {
 	Create: *string,
@@ -1262,7 +1262,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesMesh.NetworkServicesMeshTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networkservicesmesh"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesmesh"
 
 networkservicesmesh.NewNetworkServicesMeshTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesMeshTimeoutsOutputReference
 ```
