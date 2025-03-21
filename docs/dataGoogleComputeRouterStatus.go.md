@@ -4,12 +4,12 @@
 
 ### DataGoogleComputeRouterStatus <a name="DataGoogleComputeRouterStatus" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/compute_router_status google_compute_router_status}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/compute_router_status google_compute_router_status}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatus(scope Construct, id *string, config DataGoogleComputeRouterStatusConfig) DataGoogleComputeRouterStatus
 ```
@@ -297,7 +297,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.DataGoogleComputeRouterStatus_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleComputeRouterSta
 
 The id of the existing DataGoogleComputeRouterStatus that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/compute_router_status#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/compute_router_status#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -685,7 +685,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutes {
 
@@ -698,7 +698,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesAsPaths.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutesAsPaths {
 
@@ -711,7 +711,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutesForRouter {
 
@@ -724,7 +724,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterAsPaths.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutesForRouterAsPaths {
 
@@ -737,7 +737,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterWarnings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutesForRouterWarnings {
 
@@ -750,7 +750,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterWarningsData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutesForRouterWarningsData {
 
@@ -763,7 +763,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesWarnings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutesWarnings {
 
@@ -776,7 +776,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesWarningsData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusBestRoutesWarningsData {
 
@@ -789,7 +789,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 &datagooglecomputerouterstatus.DataGoogleComputeRouterStatusConfig {
 	Connection: interface{},
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.name">Name</a></code> | <code>*string</code> | Name of the router to query. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.project">Project</a></code> | <code>*string</code> | Project ID of the target router. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.region">Region</a></code> | <code>*string</code> | Region of the target router. |
 
@@ -904,7 +904,7 @@ Name *string
 
 Name of the router to query.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/compute_router_status#name DataGoogleComputeRouterStatus#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/compute_router_status#name DataGoogleComputeRouterStatus#name}
 
 ---
 
@@ -916,7 +916,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -933,7 +933,7 @@ Project *string
 
 Project ID of the target router.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/compute_router_status#project DataGoogleComputeRouterStatus#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/compute_router_status#project DataGoogleComputeRouterStatus#project}
 
 ---
 
@@ -947,7 +947,7 @@ Region *string
 
 Region of the target router.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/compute_router_status#region DataGoogleComputeRouterStatus#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/compute_router_status#region DataGoogleComputeRouterStatus#region}
 
 ---
 
@@ -958,7 +958,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesAsPathsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesAsPathsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesAsPathsList
 ```
@@ -1107,7 +1107,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesAsPathsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesAsPathsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesAsPathsOutputReference
 ```
@@ -1396,7 +1396,7 @@ func InternalValue() DataGoogleComputeRouterStatusBestRoutesAsPaths
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterAsPathsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterAsPathsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterAsPathsList
 ```
@@ -1545,7 +1545,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterAsPathsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterAsPathsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterAsPathsOutputReference
 ```
@@ -1834,7 +1834,7 @@ func InternalValue() DataGoogleComputeRouterStatusBestRoutesForRouterAsPaths
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterList
 ```
@@ -1983,7 +1983,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterOutputReference
 ```
@@ -2525,7 +2525,7 @@ func InternalValue() DataGoogleComputeRouterStatusBestRoutesForRouter
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterWarningsDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterWarningsDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterWarningsDataList
 ```
@@ -2674,7 +2674,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterWarningsDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterWarningsDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterWarningsDataOutputReference
 ```
@@ -2963,7 +2963,7 @@ func InternalValue() DataGoogleComputeRouterStatusBestRoutesForRouterWarningsDat
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterWarningsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterWarningsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterWarningsList
 ```
@@ -3112,7 +3112,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesForRouterWarningsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesForRouterWarningsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesForRouterWarningsOutputReference
 ```
@@ -3412,7 +3412,7 @@ func InternalValue() DataGoogleComputeRouterStatusBestRoutesForRouterWarnings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesList
 ```
@@ -3561,7 +3561,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesOutputReference
 ```
@@ -4103,7 +4103,7 @@ func InternalValue() DataGoogleComputeRouterStatusBestRoutes
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesWarningsDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesWarningsDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesWarningsDataList
 ```
@@ -4252,7 +4252,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesWarningsDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesWarningsDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesWarningsDataOutputReference
 ```
@@ -4541,7 +4541,7 @@ func InternalValue() DataGoogleComputeRouterStatusBestRoutesWarningsData
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesWarningsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesWarningsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeRouterStatusBestRoutesWarningsList
 ```
@@ -4690,7 +4690,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusBestRoutesWarningsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputerouterstatus"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputerouterstatus"
 
 datagooglecomputerouterstatus.NewDataGoogleComputeRouterStatusBestRoutesWarningsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeRouterStatusBestRoutesWarningsOutputReference
 ```

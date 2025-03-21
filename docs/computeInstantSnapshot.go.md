@@ -4,12 +4,12 @@
 
 ### ComputeInstantSnapshot <a name="ComputeInstantSnapshot" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot google_compute_instant_snapshot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot google_compute_instant_snapshot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.NewComputeInstantSnapshot(scope Construct, id *string, config ComputeInstantSnapshotConfig) ComputeInstantSnapshot
 ```
@@ -433,7 +433,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.ComputeInstantSnapshot_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.ComputeInstantSnapshot_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ computeinstantsnapshot.ComputeInstantSnapshot_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.ComputeInstantSnapshot_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ computeinstantsnapshot.ComputeInstantSnapshot_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.ComputeInstantSnapshot_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -522,7 +522,7 @@ The construct id used in the generated config for the ComputeInstantSnapshot to 
 
 The id of the existing ComputeInstantSnapshot that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -975,7 +975,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 &computeinstantsnapshot.ComputeInstantSnapshotConfig {
 	Connection: interface{},
@@ -991,7 +991,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnaps
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeInstantSnapshot.ComputeInstantSnapshotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts,
 	Zone: *string,
 }
 ```
@@ -1010,9 +1010,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnaps
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.name">Name</a></code> | <code>*string</code> | Name of the resource; |
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.sourceDisk">SourceDisk</a></code> | <code>*string</code> | A reference to the disk used to create this instant snapshot. |
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#id ComputeInstantSnapshot#id}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#id ComputeInstantSnapshot#id}. |
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels to apply to this InstantSnapshot. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#project ComputeInstantSnapshot#project}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#project ComputeInstantSnapshot#project}. |
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts">ComputeInstantSnapshotTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.property.zone">Zone</a></code> | <code>*string</code> | A reference to the zone where the disk is located. |
 
@@ -1106,7 +1106,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#name ComputeInstantSnapshot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#name ComputeInstantSnapshot#name}
 
 ---
 
@@ -1120,7 +1120,7 @@ SourceDisk *string
 
 A reference to the disk used to create this instant snapshot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#source_disk ComputeInstantSnapshot#source_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#source_disk ComputeInstantSnapshot#source_disk}
 
 ---
 
@@ -1134,7 +1134,7 @@ Description *string
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#description ComputeInstantSnapshot#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#description ComputeInstantSnapshot#description}
 
 ---
 
@@ -1146,7 +1146,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#id ComputeInstantSnapshot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#id ComputeInstantSnapshot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1166,7 +1166,7 @@ Labels to apply to this InstantSnapshot.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#labels ComputeInstantSnapshot#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#labels ComputeInstantSnapshot#labels}
 
 ---
 
@@ -1178,7 +1178,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#project ComputeInstantSnapshot#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#project ComputeInstantSnapshot#project}.
 
 ---
 
@@ -1192,7 +1192,7 @@ Timeouts ComputeInstantSnapshotTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#timeouts ComputeInstantSnapshot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#timeouts ComputeInstantSnapshot#timeouts}
 
 ---
 
@@ -1206,7 +1206,7 @@ Zone *string
 
 A reference to the zone where the disk is located.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#zone ComputeInstantSnapshot#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#zone ComputeInstantSnapshot#zone}
 
 ---
 
@@ -1215,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 &computeinstantsnapshot.ComputeInstantSnapshotTimeouts {
 	Create: *string,
@@ -1228,9 +1228,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnaps
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#create ComputeInstantSnapshot#create}. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#delete ComputeInstantSnapshot#delete}. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#update ComputeInstantSnapshot#update}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#create ComputeInstantSnapshot#create}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#delete ComputeInstantSnapshot#delete}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#update ComputeInstantSnapshot#update}. |
 
 ---
 
@@ -1242,7 +1242,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#create ComputeInstantSnapshot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#create ComputeInstantSnapshot#create}.
 
 ---
 
@@ -1254,7 +1254,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#delete ComputeInstantSnapshot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#delete ComputeInstantSnapshot#delete}.
 
 ---
 
@@ -1266,7 +1266,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_instant_snapshot#update ComputeInstantSnapshot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_instant_snapshot#update ComputeInstantSnapshot#update}.
 
 ---
 
@@ -1277,7 +1277,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.NewComputeInstantSnapshotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstantSnapshotTimeoutsOutputReference
 ```
