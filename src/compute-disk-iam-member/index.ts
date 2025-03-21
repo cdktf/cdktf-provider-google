@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeDiskIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#id ComputeDiskIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#id ComputeDiskIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#member ComputeDiskIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#member ComputeDiskIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#name ComputeDiskIamMember#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#name ComputeDiskIamMember#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#project ComputeDiskIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#project ComputeDiskIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#role ComputeDiskIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#role ComputeDiskIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#zone ComputeDiskIamMember#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#zone ComputeDiskIamMember#zone}
   */
   readonly zone?: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#condition ComputeDiskIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#condition ComputeDiskIamMember#condition}
   */
   readonly condition?: ComputeDiskIamMemberCondition;
 }
 export interface ComputeDiskIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#description ComputeDiskIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#description ComputeDiskIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#expression ComputeDiskIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#expression ComputeDiskIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#title ComputeDiskIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#title ComputeDiskIamMember#title}
   */
   readonly title: string;
 }
@@ -192,7 +187,7 @@ export class ComputeDiskIamMemberConditionOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member google_compute_disk_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member google_compute_disk_iam_member}
 */
 export class ComputeDiskIamMember extends cdktf.TerraformResource {
 
@@ -208,7 +203,7 @@ export class ComputeDiskIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeDiskIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeDiskIamMember to import
-  * @param importFromId The id of the existing ComputeDiskIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeDiskIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeDiskIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +215,7 @@ export class ComputeDiskIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/compute_disk_iam_member google_compute_disk_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/compute_disk_iam_member google_compute_disk_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +226,7 @@ export class ComputeDiskIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_disk_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.25.0',
+        providerVersion: '6.26.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

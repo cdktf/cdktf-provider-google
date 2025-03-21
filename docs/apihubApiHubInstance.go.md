@@ -4,12 +4,12 @@
 
 ### ApihubApiHubInstance <a name="ApihubApiHubInstance" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance google_apihub_api_hub_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance google_apihub_api_hub_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.NewApihubApiHubInstance(scope Construct, id *string, config ApihubApiHubInstanceConfig) ApihubApiHubInstance
 ```
@@ -446,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.ApihubApiHubInstance_IsConstruct(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.ApihubApiHubInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ apihubapihubinstance.ApihubApiHubInstance_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.ApihubApiHubInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ apihubapihubinstance.ApihubApiHubInstance_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.ApihubApiHubInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -535,7 +535,7 @@ The construct id used in the generated config for the ApihubApiHubInstance to im
 
 The id of the existing ApihubApiHubInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -988,7 +988,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 &apihubapihubinstance.ApihubApiHubInstanceConfig {
 	Connection: interface{},
@@ -998,14 +998,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstanc
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Config: github.com/cdktf/cdktf-provider-google-go/google/v14.apihubApiHubInstance.ApihubApiHubInstanceConfigA,
+	Config: github.com/cdktf/cdktf-provider-google-go/google.apihubApiHubInstance.ApihubApiHubInstanceConfigA,
 	Location: *string,
 	ApiHubInstanceId: *string,
 	Description: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.apihubApiHubInstance.ApihubApiHubInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts,
 }
 ```
 
@@ -1024,9 +1024,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstanc
 | <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.location">Location</a></code> | <code>*string</code> | Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122. |
 | <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.apiHubInstanceId">ApiHubInstanceId</a></code> | <code>*string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.description">Description</a></code> | <code>*string</code> | Optional. Description of the ApiHub instance. |
-| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#id ApihubApiHubInstance#id}. |
+| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#id ApihubApiHubInstance#id}. |
 | <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Optional. Instance labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources. |
-| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#project ApihubApiHubInstance#project}. |
+| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#project ApihubApiHubInstance#project}. |
 | <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts">ApihubApiHubInstanceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1111,7 +1111,7 @@ Config ApihubApiHubInstanceConfigA
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#config ApihubApiHubInstance#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#config ApihubApiHubInstance#config}
 
 ---
 
@@ -1125,7 +1125,7 @@ Location *string
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#location ApihubApiHubInstance#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#location ApihubApiHubInstance#location}
 
 ---
 
@@ -1146,7 +1146,7 @@ system generated id will be used.
 This value should be 4-40 characters, and valid characters
 are '/a-z[0-9]-_/'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#api_hub_instance_id ApihubApiHubInstance#api_hub_instance_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#api_hub_instance_id ApihubApiHubInstance#api_hub_instance_id}
 
 ---
 
@@ -1160,7 +1160,7 @@ Description *string
 
 Optional. Description of the ApiHub instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#description ApihubApiHubInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#description ApihubApiHubInstance#description}
 
 ---
 
@@ -1172,7 +1172,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#id ApihubApiHubInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#id ApihubApiHubInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1192,7 +1192,7 @@ Optional. Instance labels to represent user-provided metadata. Refer to cloud do
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#labels ApihubApiHubInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#labels ApihubApiHubInstance#labels}
 
 ---
 
@@ -1204,7 +1204,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#project ApihubApiHubInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#project ApihubApiHubInstance#project}.
 
 ---
 
@@ -1218,7 +1218,7 @@ Timeouts ApihubApiHubInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#timeouts ApihubApiHubInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#timeouts ApihubApiHubInstance#timeouts}
 
 ---
 
@@ -1227,7 +1227,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfigA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 &apihubapihubinstance.ApihubApiHubInstanceConfigA {
 	CmekKeyName: *string,
@@ -1264,7 +1264,7 @@ The CMEK name should follow the format of
 where the location must match the instance location.
 If the CMEK is not provided, a GMEK will be created for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#cmek_key_name ApihubApiHubInstance#cmek_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#cmek_key_name ApihubApiHubInstance#cmek_key_name}
 
 ---
 
@@ -1278,7 +1278,7 @@ DisableSearch interface{}
 
 Optional. If true, the search will be disabled for the instance. The default value is false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#disable_search ApihubApiHubInstance#disable_search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#disable_search ApihubApiHubInstance#disable_search}
 
 ---
 
@@ -1300,7 +1300,7 @@ ENCRYPTION_TYPE_UNSPECIFIED
 GMEK
 CMEK
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#encryption_type ApihubApiHubInstance#encryption_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#encryption_type ApihubApiHubInstance#encryption_type}
 
 ---
 
@@ -1314,7 +1314,7 @@ VertexLocation *string
 
 Optional. The name of the Vertex AI location where the data store is stored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#vertex_location ApihubApiHubInstance#vertex_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#vertex_location ApihubApiHubInstance#vertex_location}
 
 ---
 
@@ -1323,7 +1323,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 &apihubapihubinstance.ApihubApiHubInstanceTimeouts {
 	Create: *string,
@@ -1336,9 +1336,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstanc
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#create ApihubApiHubInstance#create}. |
-| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#delete ApihubApiHubInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#update ApihubApiHubInstance#update}. |
+| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#create ApihubApiHubInstance#create}. |
+| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#delete ApihubApiHubInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#update ApihubApiHubInstance#update}. |
 
 ---
 
@@ -1350,7 +1350,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#create ApihubApiHubInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#create ApihubApiHubInstance#create}.
 
 ---
 
@@ -1362,7 +1362,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#delete ApihubApiHubInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#delete ApihubApiHubInstance#delete}.
 
 ---
 
@@ -1374,7 +1374,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/apihub_api_hub_instance#update ApihubApiHubInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/apihub_api_hub_instance#update ApihubApiHubInstance#update}.
 
 ---
 
@@ -1385,7 +1385,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfigAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.NewApihubApiHubInstanceConfigAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApihubApiHubInstanceConfigAOutputReference
 ```
@@ -1750,7 +1750,7 @@ func InternalValue() ApihubApiHubInstanceConfigA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.NewApihubApiHubInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApihubApiHubInstanceTimeoutsOutputReference
 ```

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config
+// https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,26 +8,26 @@ import * as cdktf from 'cdktf';
 
 export interface ProjectIamAuditConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config#id ProjectIamAuditConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config#id ProjectIamAuditConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config#project ProjectIamAuditConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config#project ProjectIamAuditConfig#project}
   */
   readonly project: string;
   /**
   * Service which will be enabled for audit logging. The special value allServices covers all services.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config#service ProjectIamAuditConfig#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config#service ProjectIamAuditConfig#service}
   */
   readonly service: string;
   /**
   * audit_log_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config#audit_log_config ProjectIamAuditConfig#audit_log_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config#audit_log_config ProjectIamAuditConfig#audit_log_config}
   */
   readonly auditLogConfig: ProjectIamAuditConfigAuditLogConfig[] | cdktf.IResolvable;
 }
@@ -40,13 +35,13 @@ export interface ProjectIamAuditConfigAuditLogConfig {
   /**
   * Identities that do not cause logging for this type of permission. Each entry can have one of the following values:user:{emailid}: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com. serviceAccount:{emailid}: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email address that represents a Google group. For example, admins@example.com. domain:{domain}: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config#exempted_members ProjectIamAuditConfig#exempted_members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config#exempted_members ProjectIamAuditConfig#exempted_members}
   */
   readonly exemptedMembers?: string[];
   /**
   * Permission type for which logging is to be configured. Must be one of DATA_READ, DATA_WRITE, or ADMIN_READ.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config#log_type ProjectIamAuditConfig#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config#log_type ProjectIamAuditConfig#log_type}
   */
   readonly logType: string;
 }
@@ -188,7 +183,7 @@ export class ProjectIamAuditConfigAuditLogConfigList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config google_project_iam_audit_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config google_project_iam_audit_config}
 */
 export class ProjectIamAuditConfig extends cdktf.TerraformResource {
 
@@ -204,7 +199,7 @@ export class ProjectIamAuditConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ProjectIamAuditConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ProjectIamAuditConfig to import
-  * @param importFromId The id of the existing ProjectIamAuditConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ProjectIamAuditConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ProjectIamAuditConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -216,7 +211,7 @@ export class ProjectIamAuditConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/project_iam_audit_config google_project_iam_audit_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/project_iam_audit_config google_project_iam_audit_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -227,7 +222,7 @@ export class ProjectIamAuditConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_project_iam_audit_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.25.0',
+        providerVersion: '6.26.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

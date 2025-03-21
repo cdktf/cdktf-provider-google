@@ -1,3 +1,3 @@
 # `google_data_catalog_entry`
 
-Refer to the Terraform Registry for docs: [`google_data_catalog_entry`](https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/data_catalog_entry).
+Refer to the Terraform Registry for docs: [`google_data_catalog_entry`](https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/data_catalog_entry).
