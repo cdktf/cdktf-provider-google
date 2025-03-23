@@ -1,3 +1,3 @@
 # `google_edgenetwork_subnet`
 
-Refer to the Terraform Registry for docs: [`google_edgenetwork_subnet`](https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/resources/edgenetwork_subnet).
+Refer to the Terraform Registry for docs: [`google_edgenetwork_subnet`](https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/edgenetwork_subnet).
