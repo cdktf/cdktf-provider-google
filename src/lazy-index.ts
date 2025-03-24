@@ -509,6 +509,7 @@ Object.defineProperty(exports, 'eventarcChannel', { get: function () { return re
 Object.defineProperty(exports, 'eventarcGoogleApiSource', { get: function () { return require('./eventarc-google-api-source'); } });
 Object.defineProperty(exports, 'eventarcGoogleChannelConfig', { get: function () { return require('./eventarc-google-channel-config'); } });
 Object.defineProperty(exports, 'eventarcMessageBus', { get: function () { return require('./eventarc-message-bus'); } });
+Object.defineProperty(exports, 'eventarcPipeline', { get: function () { return require('./eventarc-pipeline'); } });
 Object.defineProperty(exports, 'eventarcTrigger', { get: function () { return require('./eventarc-trigger'); } });
 Object.defineProperty(exports, 'filestoreBackup', { get: function () { return require('./filestore-backup'); } });
 Object.defineProperty(exports, 'filestoreInstance', { get: function () { return require('./filestore-instance'); } });
@@ -520,6 +521,7 @@ Object.defineProperty(exports, 'firebaseAppCheckPlayIntegrityConfig', { get: fun
 Object.defineProperty(exports, 'firebaseAppCheckRecaptchaEnterpriseConfig', { get: function () { return require('./firebase-app-check-recaptcha-enterprise-config'); } });
 Object.defineProperty(exports, 'firebaseAppCheckRecaptchaV3Config', { get: function () { return require('./firebase-app-check-recaptcha-v3-config'); } });
 Object.defineProperty(exports, 'firebaseAppCheckServiceConfig', { get: function () { return require('./firebase-app-check-service-config'); } });
+Object.defineProperty(exports, 'firebaseAppHostingBackend', { get: function () { return require('./firebase-app-hosting-backend'); } });
 Object.defineProperty(exports, 'firebaseDataConnectService', { get: function () { return require('./firebase-data-connect-service'); } });
 Object.defineProperty(exports, 'firebaserulesRelease', { get: function () { return require('./firebaserules-release'); } });
 Object.defineProperty(exports, 'firebaserulesRuleset', { get: function () { return require('./firebaserules-ruleset'); } });
@@ -742,6 +744,10 @@ Object.defineProperty(exports, 'networkSecurityFirewallEndpoint', { get: functio
 Object.defineProperty(exports, 'networkSecurityFirewallEndpointAssociation', { get: function () { return require('./network-security-firewall-endpoint-association'); } });
 Object.defineProperty(exports, 'networkSecurityGatewaySecurityPolicy', { get: function () { return require('./network-security-gateway-security-policy'); } });
 Object.defineProperty(exports, 'networkSecurityGatewaySecurityPolicyRule', { get: function () { return require('./network-security-gateway-security-policy-rule'); } });
+Object.defineProperty(exports, 'networkSecurityMirroringDeployment', { get: function () { return require('./network-security-mirroring-deployment'); } });
+Object.defineProperty(exports, 'networkSecurityMirroringDeploymentGroup', { get: function () { return require('./network-security-mirroring-deployment-group'); } });
+Object.defineProperty(exports, 'networkSecurityMirroringEndpointGroup', { get: function () { return require('./network-security-mirroring-endpoint-group'); } });
+Object.defineProperty(exports, 'networkSecurityMirroringEndpointGroupAssociation', { get: function () { return require('./network-security-mirroring-endpoint-group-association'); } });
 Object.defineProperty(exports, 'networkSecuritySecurityProfile', { get: function () { return require('./network-security-security-profile'); } });
 Object.defineProperty(exports, 'networkSecuritySecurityProfileGroup', { get: function () { return require('./network-security-security-profile-group'); } });
 Object.defineProperty(exports, 'networkSecurityServerTlsPolicy', { get: function () { return require('./network-security-server-tls-policy'); } });
@@ -1226,6 +1232,8 @@ Object.defineProperty(exports, 'dataGooglePrivatecaCertificateTemplateIamPolicy'
 Object.defineProperty(exports, 'dataGooglePrivilegedAccessManagerEntitlement', { get: function () { return require('./data-google-privileged-access-manager-entitlement'); } });
 Object.defineProperty(exports, 'dataGoogleProject', { get: function () { return require('./data-google-project'); } });
 Object.defineProperty(exports, 'dataGoogleProjectAncestry', { get: function () { return require('./data-google-project-ancestry'); } });
+Object.defineProperty(exports, 'dataGoogleProjectIamCustomRole', { get: function () { return require('./data-google-project-iam-custom-role'); } });
+Object.defineProperty(exports, 'dataGoogleProjectIamCustomRoles', { get: function () { return require('./data-google-project-iam-custom-roles'); } });
 Object.defineProperty(exports, 'dataGoogleProjectIamPolicy', { get: function () { return require('./data-google-project-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleProjectOrganizationPolicy', { get: function () { return require('./data-google-project-organization-policy'); } });
 Object.defineProperty(exports, 'dataGoogleProjectService', { get: function () { return require('./data-google-project-service'); } });

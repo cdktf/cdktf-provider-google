@@ -509,6 +509,7 @@ export * as eventarcChannel from './eventarc-channel';
 export * as eventarcGoogleApiSource from './eventarc-google-api-source';
 export * as eventarcGoogleChannelConfig from './eventarc-google-channel-config';
 export * as eventarcMessageBus from './eventarc-message-bus';
+export * as eventarcPipeline from './eventarc-pipeline';
 export * as eventarcTrigger from './eventarc-trigger';
 export * as filestoreBackup from './filestore-backup';
 export * as filestoreInstance from './filestore-instance';
@@ -520,6 +521,7 @@ export * as firebaseAppCheckPlayIntegrityConfig from './firebase-app-check-play-
 export * as firebaseAppCheckRecaptchaEnterpriseConfig from './firebase-app-check-recaptcha-enterprise-config';
 export * as firebaseAppCheckRecaptchaV3Config from './firebase-app-check-recaptcha-v3-config';
 export * as firebaseAppCheckServiceConfig from './firebase-app-check-service-config';
+export * as firebaseAppHostingBackend from './firebase-app-hosting-backend';
 export * as firebaseDataConnectService from './firebase-data-connect-service';
 export * as firebaserulesRelease from './firebaserules-release';
 export * as firebaserulesRuleset from './firebaserules-ruleset';
@@ -742,6 +744,10 @@ export * as networkSecurityFirewallEndpoint from './network-security-firewall-en
 export * as networkSecurityFirewallEndpointAssociation from './network-security-firewall-endpoint-association';
 export * as networkSecurityGatewaySecurityPolicy from './network-security-gateway-security-policy';
 export * as networkSecurityGatewaySecurityPolicyRule from './network-security-gateway-security-policy-rule';
+export * as networkSecurityMirroringDeployment from './network-security-mirroring-deployment';
+export * as networkSecurityMirroringDeploymentGroup from './network-security-mirroring-deployment-group';
+export * as networkSecurityMirroringEndpointGroup from './network-security-mirroring-endpoint-group';
+export * as networkSecurityMirroringEndpointGroupAssociation from './network-security-mirroring-endpoint-group-association';
 export * as networkSecuritySecurityProfile from './network-security-security-profile';
 export * as networkSecuritySecurityProfileGroup from './network-security-security-profile-group';
 export * as networkSecurityServerTlsPolicy from './network-security-server-tls-policy';
@@ -1226,6 +1232,8 @@ export * as dataGooglePrivatecaCertificateTemplateIamPolicy from './data-google-
 export * as dataGooglePrivilegedAccessManagerEntitlement from './data-google-privileged-access-manager-entitlement';
 export * as dataGoogleProject from './data-google-project';
 export * as dataGoogleProjectAncestry from './data-google-project-ancestry';
+export * as dataGoogleProjectIamCustomRole from './data-google-project-iam-custom-role';
+export * as dataGoogleProjectIamCustomRoles from './data-google-project-iam-custom-roles';
 export * as dataGoogleProjectIamPolicy from './data-google-project-iam-policy';
 export * as dataGoogleProjectOrganizationPolicy from './data-google-project-organization-policy';
 export * as dataGoogleProjectService from './data-google-project-service';
