@@ -4,12 +4,12 @@
 
 ### DataGoogleBackupDrDataSource <a name="DataGoogleBackupDrDataSource" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSource"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source google_backup_dr_data_source}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source google_backup_dr_data_source}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSource(scope Construct, id *string, config DataGoogleBackupDrDataSourceConfig) DataGoogleBackupDrDataSource
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSource.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.DataGoogleBackupDrDataSource_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSource.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.DataGoogleBackupDrDataSource_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagooglebackupdrdatasource.DataGoogleBackupDrDataSource_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSource.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.DataGoogleBackupDrDataSource_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglebackupdrdatasource.DataGoogleBackupDrDataSource_IsTerraformDataSource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSource.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.DataGoogleBackupDrDataSource_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -372,7 +372,7 @@ The construct id used in the generated config for the DataGoogleBackupDrDataSour
 
 The id of the existing DataGoogleBackupDrDataSource that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -792,7 +792,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 &datagooglebackupdrdatasource.DataGoogleBackupDrDataSourceBackupConfigInfo {
 
@@ -805,7 +805,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfoBackupApplianceBackupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 &datagooglebackupdrdatasource.DataGoogleBackupDrDataSourceBackupConfigInfoBackupApplianceBackupConfig {
 
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 &datagooglebackupdrdatasource.DataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfig {
 
@@ -831,7 +831,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 &datagooglebackupdrdatasource.DataGoogleBackupDrDataSourceConfig {
 	Connection: interface{},
@@ -860,11 +860,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrd
 | <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.backupVaultId">BackupVaultId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#backup_vault_id DataGoogleBackupDrDataSource#backup_vault_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.dataSourceId">DataSourceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#data_source_id DataGoogleBackupDrDataSource#data_source_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#location DataGoogleBackupDrDataSource#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#project DataGoogleBackupDrDataSource#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#id DataGoogleBackupDrDataSource#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.backupVaultId">BackupVaultId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#backup_vault_id DataGoogleBackupDrDataSource#backup_vault_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.dataSourceId">DataSourceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#data_source_id DataGoogleBackupDrDataSource#data_source_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#location DataGoogleBackupDrDataSource#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#project DataGoogleBackupDrDataSource#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#id DataGoogleBackupDrDataSource#id}. |
 
 ---
 
@@ -946,7 +946,7 @@ BackupVaultId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#backup_vault_id DataGoogleBackupDrDataSource#backup_vault_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#backup_vault_id DataGoogleBackupDrDataSource#backup_vault_id}.
 
 ---
 
@@ -958,7 +958,7 @@ DataSourceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#data_source_id DataGoogleBackupDrDataSource#data_source_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#data_source_id DataGoogleBackupDrDataSource#data_source_id}.
 
 ---
 
@@ -970,7 +970,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#location DataGoogleBackupDrDataSource#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#location DataGoogleBackupDrDataSource#location}.
 
 ---
 
@@ -982,7 +982,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#project DataGoogleBackupDrDataSource#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#project DataGoogleBackupDrDataSource#project}.
 
 ---
 
@@ -994,7 +994,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.25.0/docs/data-sources/backup_dr_data_source#id DataGoogleBackupDrDataSource#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/backup_dr_data_source#id DataGoogleBackupDrDataSource#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1006,7 +1006,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceBackupApplianceApplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 &datagooglebackupdrdatasource.DataGoogleBackupDrDataSourceDataSourceBackupApplianceApplication {
 
@@ -1019,7 +1019,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceGcpResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 &datagooglebackupdrdatasource.DataGoogleBackupDrDataSourceDataSourceGcpResource {
 
@@ -1032,7 +1032,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceGcpResourceComputeInstanceDataSourceProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 &datagooglebackupdrdatasource.DataGoogleBackupDrDataSourceDataSourceGcpResourceComputeInstanceDataSourceProperties {
 
@@ -1047,7 +1047,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrd
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfoBackupApplianceBackupConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceBackupConfigInfoBackupApplianceBackupConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleBackupDrDataSourceBackupConfigInfoBackupApplianceBackupConfigList
 ```
@@ -1196,7 +1196,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfoBackupApplianceBackupConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceBackupConfigInfoBackupApplianceBackupConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleBackupDrDataSourceBackupConfigInfoBackupApplianceBackupConfigOutputReference
 ```
@@ -1540,7 +1540,7 @@ func InternalValue() DataGoogleBackupDrDataSourceBackupConfigInfoBackupAppliance
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfigList
 ```
@@ -1689,7 +1689,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfigOutputReference
 ```
@@ -2000,7 +2000,7 @@ func InternalValue() DataGoogleBackupDrDataSourceBackupConfigInfoGcpBackupConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceBackupConfigInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleBackupDrDataSourceBackupConfigInfoList
 ```
@@ -2149,7 +2149,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceBackupConfigInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceBackupConfigInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleBackupDrDataSourceBackupConfigInfoOutputReference
 ```
@@ -2471,7 +2471,7 @@ func InternalValue() DataGoogleBackupDrDataSourceBackupConfigInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceBackupApplianceApplicationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceDataSourceBackupApplianceApplicationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleBackupDrDataSourceDataSourceBackupApplianceApplicationList
 ```
@@ -2620,7 +2620,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceBackupApplianceApplicationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceDataSourceBackupApplianceApplicationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleBackupDrDataSourceDataSourceBackupApplianceApplicationOutputReference
 ```
@@ -2964,7 +2964,7 @@ func InternalValue() DataGoogleBackupDrDataSourceDataSourceBackupApplianceApplic
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceGcpResourceComputeInstanceDataSourcePropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceDataSourceGcpResourceComputeInstanceDataSourcePropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleBackupDrDataSourceDataSourceGcpResourceComputeInstanceDataSourcePropertiesList
 ```
@@ -3113,7 +3113,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceGcpResourceComputeInstanceDataSourcePropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceDataSourceGcpResourceComputeInstanceDataSourcePropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleBackupDrDataSourceDataSourceGcpResourceComputeInstanceDataSourcePropertiesOutputReference
 ```
@@ -3435,7 +3435,7 @@ func InternalValue() DataGoogleBackupDrDataSourceDataSourceGcpResourceComputeIns
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceGcpResourceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceDataSourceGcpResourceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleBackupDrDataSourceDataSourceGcpResourceList
 ```
@@ -3584,7 +3584,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrDataSource.DataGoogleBackupDrDataSourceDataSourceGcpResourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglebackupdrdatasource"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglebackupdrdatasource"
 
 datagooglebackupdrdatasource.NewDataGoogleBackupDrDataSourceDataSourceGcpResourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleBackupDrDataSourceDataSourceGcpResourceOutputReference
 ```
