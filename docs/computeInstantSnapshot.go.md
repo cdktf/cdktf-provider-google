@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.NewComputeInstantSnapshot(scope Construct, id *string, config ComputeInstantSnapshotConfig) ComputeInstantSnapshot
 ```
@@ -433,7 +433,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.ComputeInstantSnapshot_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.ComputeInstantSnapshot_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ computeinstantsnapshot.ComputeInstantSnapshot_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.ComputeInstantSnapshot_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ computeinstantsnapshot.ComputeInstantSnapshot_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshot.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.ComputeInstantSnapshot_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -975,7 +975,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 &computeinstantsnapshot.ComputeInstantSnapshotConfig {
 	Connection: interface{},
@@ -991,7 +991,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnaps
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.computeInstantSnapshot.ComputeInstantSnapshotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts,
 	Zone: *string,
 }
 ```
@@ -1215,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 &computeinstantsnapshot.ComputeInstantSnapshotTimeouts {
 	Create: *string,
@@ -1277,7 +1277,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstantSnapshot.ComputeInstantSnapshotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstantsnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstantsnapshot"
 
 computeinstantsnapshot.NewComputeInstantSnapshotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstantSnapshotTimeoutsOutputReference
 ```

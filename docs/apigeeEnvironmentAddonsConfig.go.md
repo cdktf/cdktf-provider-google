@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentaddonsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentaddonsconfig"
 
 apigeeenvironmentaddonsconfig.NewApigeeEnvironmentAddonsConfig(scope Construct, id *string, config ApigeeEnvironmentAddonsConfigConfig) ApigeeEnvironmentAddonsConfig
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentaddonsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentaddonsconfig"
 
 apigeeenvironmentaddonsconfig.ApigeeEnvironmentAddonsConfig_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentaddonsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentaddonsconfig"
 
 apigeeenvironmentaddonsconfig.ApigeeEnvironmentAddonsConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ apigeeenvironmentaddonsconfig.ApigeeEnvironmentAddonsConfig_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentaddonsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentaddonsconfig"
 
 apigeeenvironmentaddonsconfig.ApigeeEnvironmentAddonsConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ apigeeenvironmentaddonsconfig.ApigeeEnvironmentAddonsConfig_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentaddonsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentaddonsconfig"
 
 apigeeenvironmentaddonsconfig.ApigeeEnvironmentAddonsConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -789,7 +789,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentaddonsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentaddonsconfig"
 
 &apigeeenvironmentaddonsconfig.ApigeeEnvironmentAddonsConfigConfig {
 	Connection: interface{},
@@ -802,7 +802,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentad
 	EnvId: *string,
 	AnalyticsEnabled: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfigTimeouts,
 }
 ```
 
@@ -956,7 +956,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentaddonsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentaddonsconfig"
 
 &apigeeenvironmentaddonsconfig.ApigeeEnvironmentAddonsConfigTimeouts {
 	Create: *string,
@@ -1018,7 +1018,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvironmentAddonsConfig.ApigeeEnvironmentAddonsConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apigeeenvironmentaddonsconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentaddonsconfig"
 
 apigeeenvironmentaddonsconfig.NewApigeeEnvironmentAddonsConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeEnvironmentAddonsConfigTimeoutsOutputReference
 ```
