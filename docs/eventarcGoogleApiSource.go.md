@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 eventarcgoogleapisource.NewEventarcGoogleApiSource(scope Construct, id *string, config EventarcGoogleApiSourceConfig) EventarcGoogleApiSource
 ```
@@ -460,7 +460,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 eventarcgoogleapisource.EventarcGoogleApiSource_IsConstruct(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 eventarcgoogleapisource.EventarcGoogleApiSource_IsTerraformElement(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ eventarcgoogleapisource.EventarcGoogleApiSource_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 eventarcgoogleapisource.EventarcGoogleApiSource_IsTerraformResource(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ eventarcgoogleapisource.EventarcGoogleApiSource_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 eventarcgoogleapisource.EventarcGoogleApiSource_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1079,7 +1079,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 &eventarcgoogleapisource.EventarcGoogleApiSourceConfig {
 	Connection: interface{},
@@ -1097,9 +1097,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource
 	DisplayName: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts,
 }
 ```
 
@@ -1370,7 +1370,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 &eventarcgoogleapisource.EventarcGoogleApiSourceLoggingConfig {
 	LogSeverity: *string,
@@ -1406,7 +1406,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 &eventarcgoogleapisource.EventarcGoogleApiSourceTimeouts {
 	Create: *string,
@@ -1468,7 +1468,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 eventarcgoogleapisource.NewEventarcGoogleApiSourceLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcGoogleApiSourceLoggingConfigOutputReference
 ```
@@ -1746,7 +1746,7 @@ func InternalValue() EventarcGoogleApiSourceLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
 
 eventarcgoogleapisource.NewEventarcGoogleApiSourceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcGoogleApiSourceTimeoutsOutputReference
 ```

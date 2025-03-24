@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 datagooglesecretmanagerregionalsecretversion.NewDataGoogleSecretManagerRegionalSecretVersion(scope Construct, id *string, config DataGoogleSecretManagerRegionalSecretVersionConfig) DataGoogleSecretManagerRegionalSecretVersion
 ```
@@ -311,7 +311,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 datagooglesecretmanagerregionalsecretversion.DataGoogleSecretManagerRegionalSecretVersion_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 datagooglesecretmanagerregionalsecretversion.DataGoogleSecretManagerRegionalSecretVersion_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglesecretmanagerregionalsecretversion.DataGoogleSecretManagerRegionalSecr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersion.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 datagooglesecretmanagerregionalsecretversion.DataGoogleSecretManagerRegionalSecretVersion_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ datagooglesecretmanagerregionalsecretversion.DataGoogleSecretManagerRegionalSecr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersion.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 datagooglesecretmanagerregionalsecretversion.DataGoogleSecretManagerRegionalSecretVersion_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -776,7 +776,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 &datagooglesecretmanagerregionalsecretversion.DataGoogleSecretManagerRegionalSecretVersionConfig {
 	Connection: interface{},
@@ -965,7 +965,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersionCustomerManagedEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 &datagooglesecretmanagerregionalsecretversion.DataGoogleSecretManagerRegionalSecretVersionCustomerManagedEncryption {
 
@@ -980,7 +980,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanager
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersionCustomerManagedEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 datagooglesecretmanagerregionalsecretversion.NewDataGoogleSecretManagerRegionalSecretVersionCustomerManagedEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSecretManagerRegionalSecretVersionCustomerManagedEncryptionList
 ```
@@ -1129,7 +1129,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSecretManagerRegionalSecretVersion.DataGoogleSecretManagerRegionalSecretVersionCustomerManagedEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesecretmanagerregionalsecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglesecretmanagerregionalsecretversion"
 
 datagooglesecretmanagerregionalsecretversion.NewDataGoogleSecretManagerRegionalSecretVersionCustomerManagedEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSecretManagerRegionalSecretVersionCustomerManagedEncryptionOutputReference
 ```
