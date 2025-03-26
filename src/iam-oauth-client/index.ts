@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client
+// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,14 +15,14 @@ export interface IamOauthClientConfig extends cdktf.TerraformMetaArguments {
   /**
   * Required. The list of OAuth grant types is allowed for the OauthClient.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#allowed_grant_types IamOauthClient#allowed_grant_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#allowed_grant_types IamOauthClient#allowed_grant_types}
   */
   readonly allowedGrantTypes: string[];
   /**
   * Required. The list of redirect uris that is allowed to redirect back
   * when authorization process is completed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#allowed_redirect_uris IamOauthClient#allowed_redirect_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#allowed_redirect_uris IamOauthClient#allowed_redirect_uris}
   */
   readonly allowedRedirectUris: string[];
   /**
@@ -39,7 +39,7 @@ export interface IamOauthClientConfig extends cdktf.TerraformMetaArguments {
   * * 'email': The OAuth client can read a federated identity's email address.
   * * 'groups': The OAuth client can read a federated identity's groups.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#allowed_scopes IamOauthClient#allowed_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#allowed_scopes IamOauthClient#allowed_scopes}
   */
   readonly allowedScopes: string[];
   /**
@@ -51,7 +51,7 @@ export interface IamOauthClientConfig extends cdktf.TerraformMetaArguments {
   * PUBLIC_CLIENT
   * CONFIDENTIAL_CLIENT
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#client_type IamOauthClient#client_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#client_type IamOauthClient#client_type}
   */
   readonly clientType?: string;
   /**
@@ -59,14 +59,14 @@ export interface IamOauthClientConfig extends cdktf.TerraformMetaArguments {
   * 
   * Cannot exceed 256 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#description IamOauthClient#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#description IamOauthClient#description}
   */
   readonly description?: string;
   /**
   * Whether the OauthClient is disabled. You cannot use a disabled OAuth
   * client.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#disabled IamOauthClient#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#disabled IamOauthClient#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
@@ -74,11 +74,11 @@ export interface IamOauthClientConfig extends cdktf.TerraformMetaArguments {
   * 
   * Cannot exceed 32 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#display_name IamOauthClient#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#display_name IamOauthClient#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#id IamOauthClient#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#id IamOauthClient#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -87,7 +87,7 @@ export interface IamOauthClientConfig extends cdktf.TerraformMetaArguments {
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#location IamOauthClient#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#location IamOauthClient#location}
   */
   readonly location: string;
   /**
@@ -97,31 +97,31 @@ export interface IamOauthClientConfig extends cdktf.TerraformMetaArguments {
   * trailing hyphen. The prefix 'gcp-' is reserved for use by Google, and may
   * not be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#oauth_client_id IamOauthClient#oauth_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#oauth_client_id IamOauthClient#oauth_client_id}
   */
   readonly oauthClientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#project IamOauthClient#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#project IamOauthClient#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#timeouts IamOauthClient#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#timeouts IamOauthClient#timeouts}
   */
   readonly timeouts?: IamOauthClientTimeouts;
 }
 export interface IamOauthClientTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#create IamOauthClient#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#create IamOauthClient#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#delete IamOauthClient#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#delete IamOauthClient#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#update IamOauthClient#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#update IamOauthClient#update}
   */
   readonly update?: string;
 }
@@ -273,7 +273,7 @@ export class IamOauthClientTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client google_iam_oauth_client}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client google_iam_oauth_client}
 */
 export class IamOauthClient extends cdktf.TerraformResource {
 
@@ -289,7 +289,7 @@ export class IamOauthClient extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IamOauthClient resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IamOauthClient to import
-  * @param importFromId The id of the existing IamOauthClient that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IamOauthClient that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IamOauthClient to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -301,7 +301,7 @@ export class IamOauthClient extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/iam_oauth_client google_iam_oauth_client} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/iam_oauth_client google_iam_oauth_client} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -312,7 +312,7 @@ export class IamOauthClient extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_oauth_client',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.26.0',
+        providerVersion: '6.27.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
