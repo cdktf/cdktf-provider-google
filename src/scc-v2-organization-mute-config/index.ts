@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config
+// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface SccV2OrganizationMuteConfigConfig extends cdktf.TerraformMetaAr
   /**
   * A description of the mute config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#description SccV2OrganizationMuteConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#description SccV2OrganizationMuteConfig#description}
   */
   readonly description?: string;
   /**
@@ -25,11 +20,11 @@ export interface SccV2OrganizationMuteConfigConfig extends cdktf.TerraformMetaAr
   * If a filter contains project = X but is created under the
   * project = Y scope, it might not match any findings.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#filter SccV2OrganizationMuteConfig#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#filter SccV2OrganizationMuteConfig#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#id SccV2OrganizationMuteConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#id SccV2OrganizationMuteConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -38,46 +33,46 @@ export interface SccV2OrganizationMuteConfigConfig extends cdktf.TerraformMetaAr
   /**
   * location Id is provided by organization. If not provided, Use global as default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#location SccV2OrganizationMuteConfig#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#location SccV2OrganizationMuteConfig#location}
   */
   readonly location?: string;
   /**
   * Unique identifier provided by the client within the parent scope.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#mute_config_id SccV2OrganizationMuteConfig#mute_config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#mute_config_id SccV2OrganizationMuteConfig#mute_config_id}
   */
   readonly muteConfigId: string;
   /**
   * The organization whose Cloud Security Command Center the Mute
   * Config lives in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#organization SccV2OrganizationMuteConfig#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#organization SccV2OrganizationMuteConfig#organization}
   */
   readonly organization: string;
   /**
   * The type of the mute config.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#type SccV2OrganizationMuteConfig#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#type SccV2OrganizationMuteConfig#type}
   */
   readonly type: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#timeouts SccV2OrganizationMuteConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#timeouts SccV2OrganizationMuteConfig#timeouts}
   */
   readonly timeouts?: SccV2OrganizationMuteConfigTimeouts;
 }
 export interface SccV2OrganizationMuteConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#create SccV2OrganizationMuteConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#create SccV2OrganizationMuteConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#delete SccV2OrganizationMuteConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#delete SccV2OrganizationMuteConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#update SccV2OrganizationMuteConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#update SccV2OrganizationMuteConfig#update}
   */
   readonly update?: string;
 }
@@ -229,7 +224,7 @@ export class SccV2OrganizationMuteConfigTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config google_scc_v2_organization_mute_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config google_scc_v2_organization_mute_config}
 */
 export class SccV2OrganizationMuteConfig extends cdktf.TerraformResource {
 
@@ -245,7 +240,7 @@ export class SccV2OrganizationMuteConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SccV2OrganizationMuteConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SccV2OrganizationMuteConfig to import
-  * @param importFromId The id of the existing SccV2OrganizationMuteConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SccV2OrganizationMuteConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SccV2OrganizationMuteConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -257,7 +252,7 @@ export class SccV2OrganizationMuteConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/scc_v2_organization_mute_config google_scc_v2_organization_mute_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/scc_v2_organization_mute_config google_scc_v2_organization_mute_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -268,7 +263,7 @@ export class SccV2OrganizationMuteConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_scc_v2_organization_mute_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.26.0',
+        providerVersion: '6.27.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

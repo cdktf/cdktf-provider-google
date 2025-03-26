@@ -4,12 +4,12 @@
 
 ### EventarcGoogleApiSource <a name="EventarcGoogleApiSource" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source google_eventarc_google_api_source}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source google_eventarc_google_api_source}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 eventarcgoogleapisource.NewEventarcGoogleApiSource(scope Construct, id *string, config EventarcGoogleApiSourceConfig) EventarcGoogleApiSource
 ```
@@ -460,7 +460,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 eventarcgoogleapisource.EventarcGoogleApiSource_IsConstruct(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 eventarcgoogleapisource.EventarcGoogleApiSource_IsTerraformElement(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ eventarcgoogleapisource.EventarcGoogleApiSource_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 eventarcgoogleapisource.EventarcGoogleApiSource_IsTerraformResource(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ eventarcgoogleapisource.EventarcGoogleApiSource_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSource.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 eventarcgoogleapisource.EventarcGoogleApiSource_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -549,7 +549,7 @@ The construct id used in the generated config for the EventarcGoogleApiSource to
 
 The id of the existing EventarcGoogleApiSource that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1079,7 +1079,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 &eventarcgoogleapisource.EventarcGoogleApiSourceConfig {
 	Connection: interface{},
@@ -1097,9 +1097,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapiso
 	DisplayName: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts,
 }
 ```
 
@@ -1120,10 +1120,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapiso
 | <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.annotations">Annotations</a></code> | <code>*map[string]*string</code> | Resource annotations. |
 | <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.cryptoKeyName">CryptoKeyName</a></code> | <code>*string</code> | Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. |
 | <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Resource display name. |
-| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#id EventarcGoogleApiSource#id}. |
+| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#id EventarcGoogleApiSource#id}. |
 | <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Resource labels. |
 | <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.loggingConfig">LoggingConfig</a></code> | <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfig">EventarcGoogleApiSourceLoggingConfig</a></code> | logging_config block. |
-| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#project EventarcGoogleApiSource#project}. |
+| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#project EventarcGoogleApiSource#project}. |
 | <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts">EventarcGoogleApiSourceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1211,7 +1211,7 @@ Destination is the message bus that the GoogleApiSource is delivering to.
 It must be point to the full resource name of a MessageBus. Format:
 "projects/{PROJECT_ID}/locations/{region}/messagesBuses/{MESSAGE_BUS_ID)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#destination EventarcGoogleApiSource#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#destination EventarcGoogleApiSource#destination}
 
 ---
 
@@ -1225,7 +1225,7 @@ GoogleApiSourceId *string
 
 The user-provided ID to be assigned to the GoogleApiSource. It should match the format '^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#google_api_source_id EventarcGoogleApiSource#google_api_source_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#google_api_source_id EventarcGoogleApiSource#google_api_source_id}
 
 ---
 
@@ -1239,7 +1239,7 @@ Location *string
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#location EventarcGoogleApiSource#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#location EventarcGoogleApiSource#location}
 
 ---
 
@@ -1256,7 +1256,7 @@ Resource annotations.
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#annotations EventarcGoogleApiSource#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#annotations EventarcGoogleApiSource#annotations}
 
 ---
 
@@ -1273,7 +1273,7 @@ Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt 
 It must match the pattern
 'projects/* /locations/* /keyRings/* /cryptoKeys/*'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#crypto_key_name EventarcGoogleApiSource#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#crypto_key_name EventarcGoogleApiSource#crypto_key_name}
 
 Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
@@ -1289,7 +1289,7 @@ DisplayName *string
 
 Resource display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#display_name EventarcGoogleApiSource#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#display_name EventarcGoogleApiSource#display_name}
 
 ---
 
@@ -1301,7 +1301,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#id EventarcGoogleApiSource#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#id EventarcGoogleApiSource#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1321,7 +1321,7 @@ Resource labels.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#labels EventarcGoogleApiSource#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#labels EventarcGoogleApiSource#labels}
 
 ---
 
@@ -1335,7 +1335,7 @@ LoggingConfig EventarcGoogleApiSourceLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#logging_config EventarcGoogleApiSource#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#logging_config EventarcGoogleApiSource#logging_config}
 
 ---
 
@@ -1347,7 +1347,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#project EventarcGoogleApiSource#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#project EventarcGoogleApiSource#project}.
 
 ---
 
@@ -1361,7 +1361,7 @@ Timeouts EventarcGoogleApiSourceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#timeouts EventarcGoogleApiSource#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#timeouts EventarcGoogleApiSource#timeouts}
 
 ---
 
@@ -1370,7 +1370,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 &eventarcgoogleapisource.EventarcGoogleApiSourceLoggingConfig {
 	LogSeverity: *string,
@@ -1397,7 +1397,7 @@ The minimum severity of logs that will be sent to Stackdriver/Platform Telemetry
 
 Logs at severitiy ≥ this value will be sent, unless it is NONE. Possible values: ["NONE", "DEBUG", "INFO", "NOTICE", "WARNING", "ERROR", "CRITICAL", "ALERT", "EMERGENCY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#log_severity EventarcGoogleApiSource#log_severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#log_severity EventarcGoogleApiSource#log_severity}
 
 ---
 
@@ -1406,7 +1406,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 &eventarcgoogleapisource.EventarcGoogleApiSourceTimeouts {
 	Create: *string,
@@ -1419,9 +1419,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapiso
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#create EventarcGoogleApiSource#create}. |
-| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#delete EventarcGoogleApiSource#delete}. |
-| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#update EventarcGoogleApiSource#update}. |
+| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#create EventarcGoogleApiSource#create}. |
+| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#delete EventarcGoogleApiSource#delete}. |
+| <code><a href="#@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#update EventarcGoogleApiSource#update}. |
 
 ---
 
@@ -1433,7 +1433,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#create EventarcGoogleApiSource#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#create EventarcGoogleApiSource#create}.
 
 ---
 
@@ -1445,7 +1445,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#delete EventarcGoogleApiSource#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#delete EventarcGoogleApiSource#delete}.
 
 ---
 
@@ -1457,7 +1457,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_google_api_source#update EventarcGoogleApiSource#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_google_api_source#update EventarcGoogleApiSource#update}.
 
 ---
 
@@ -1468,7 +1468,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 eventarcgoogleapisource.NewEventarcGoogleApiSourceLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcGoogleApiSourceLoggingConfigOutputReference
 ```
@@ -1746,7 +1746,7 @@ func InternalValue() EventarcGoogleApiSourceLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcGoogleApiSource.EventarcGoogleApiSourceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcgoogleapisource"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcgoogleapisource"
 
 eventarcgoogleapisource.NewEventarcGoogleApiSourceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcGoogleApiSourceTimeoutsOutputReference
 ```

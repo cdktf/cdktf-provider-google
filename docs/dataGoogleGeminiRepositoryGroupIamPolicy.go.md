@@ -4,12 +4,12 @@
 
 ### DataGoogleGeminiRepositoryGroupIamPolicy <a name="DataGoogleGeminiRepositoryGroupIamPolicy" id="@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy google_gemini_repository_group_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy google_gemini_repository_group_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglegeminirepositorygroupiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegeminirepositorygroupiampolicy"
 
 datagooglegeminirepositorygroupiampolicy.NewDataGoogleGeminiRepositoryGroupIamPolicy(scope Construct, id *string, config DataGoogleGeminiRepositoryGroupIamPolicyConfig) DataGoogleGeminiRepositoryGroupIamPolicy
 ```
@@ -297,7 +297,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglegeminirepositorygroupiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegeminirepositorygroupiampolicy"
 
 datagooglegeminirepositorygroupiampolicy.DataGoogleGeminiRepositoryGroupIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglegeminirepositorygroupiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegeminirepositorygroupiampolicy"
 
 datagooglegeminirepositorygroupiampolicy.DataGoogleGeminiRepositoryGroupIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglegeminirepositorygroupiampolicy.DataGoogleGeminiRepositoryGroupIamPolic
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglegeminirepositorygroupiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegeminirepositorygroupiampolicy"
 
 datagooglegeminirepositorygroupiampolicy.DataGoogleGeminiRepositoryGroupIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglegeminirepositorygroupiampolicy.DataGoogleGeminiRepositoryGroupIamPolic
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglegeminirepositorygroupiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegeminirepositorygroupiampolicy"
 
 datagooglegeminirepositorygroupiampolicy.DataGoogleGeminiRepositoryGroupIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleGeminiRepository
 
 The id of the existing DataGoogleGeminiRepositoryGroupIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -696,7 +696,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglegeminirepositorygroupiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegeminirepositorygroupiampolicy"
 
 &datagooglegeminirepositorygroupiampolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig {
 	Connection: interface{},
@@ -725,11 +725,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglegeminirep
 | <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.codeRepositoryIndex">CodeRepositoryIndex</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#code_repository_index DataGoogleGeminiRepositoryGroupIamPolicy#code_repository_index}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.repositoryGroupId">RepositoryGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#repository_group_id DataGoogleGeminiRepositoryGroupIamPolicy#repository_group_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#id DataGoogleGeminiRepositoryGroupIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#location DataGoogleGeminiRepositoryGroupIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#project DataGoogleGeminiRepositoryGroupIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.codeRepositoryIndex">CodeRepositoryIndex</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#code_repository_index DataGoogleGeminiRepositoryGroupIamPolicy#code_repository_index}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.repositoryGroupId">RepositoryGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#repository_group_id DataGoogleGeminiRepositoryGroupIamPolicy#repository_group_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#id DataGoogleGeminiRepositoryGroupIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#location DataGoogleGeminiRepositoryGroupIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGeminiRepositoryGroupIamPolicy.DataGoogleGeminiRepositoryGroupIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#project DataGoogleGeminiRepositoryGroupIamPolicy#project}. |
 
 ---
 
@@ -811,7 +811,7 @@ CodeRepositoryIndex *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#code_repository_index DataGoogleGeminiRepositoryGroupIamPolicy#code_repository_index}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#code_repository_index DataGoogleGeminiRepositoryGroupIamPolicy#code_repository_index}.
 
 ---
 
@@ -823,7 +823,7 @@ RepositoryGroupId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#repository_group_id DataGoogleGeminiRepositoryGroupIamPolicy#repository_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#repository_group_id DataGoogleGeminiRepositoryGroupIamPolicy#repository_group_id}.
 
 ---
 
@@ -835,7 +835,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#id DataGoogleGeminiRepositoryGroupIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#id DataGoogleGeminiRepositoryGroupIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -850,7 +850,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#location DataGoogleGeminiRepositoryGroupIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#location DataGoogleGeminiRepositoryGroupIamPolicy#location}.
 
 ---
 
@@ -862,7 +862,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/data-sources/gemini_repository_group_iam_policy#project DataGoogleGeminiRepositoryGroupIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/gemini_repository_group_iam_policy#project DataGoogleGeminiRepositoryGroupIamPolicy#project}.
 
 ---
 

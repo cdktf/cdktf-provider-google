@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,29 +12,29 @@ export interface MemorystoreInstanceConfig extends cdktf.TerraformMetaArguments 
   *  AUTH_DISABLED
   * IAM_AUTH
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#authorization_mode MemorystoreInstance#authorization_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#authorization_mode MemorystoreInstance#authorization_mode}
   */
   readonly authorizationMode?: string;
   /**
   * Optional. If set to true deletion of the instance will fail.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#deletion_protection_enabled MemorystoreInstance#deletion_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#deletion_protection_enabled MemorystoreInstance#deletion_protection_enabled}
   */
   readonly deletionProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Optional. User-provided engine configurations for the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#engine_configs MemorystoreInstance#engine_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#engine_configs MemorystoreInstance#engine_configs}
   */
   readonly engineConfigs?: { [key: string]: string };
   /**
   * Optional. Engine version of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#engine_version MemorystoreInstance#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#engine_version MemorystoreInstance#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#id MemorystoreInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#id MemorystoreInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -57,7 +52,7 @@ export interface MemorystoreInstanceConfig extends cdktf.TerraformMetaArguments 
   * * Must not end with a hyphen
   * * Must be unique within a location
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#instance_id MemorystoreInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#instance_id MemorystoreInstance#instance_id}
   */
   readonly instanceId: string;
   /**
@@ -66,13 +61,13 @@ export interface MemorystoreInstanceConfig extends cdktf.TerraformMetaArguments 
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#labels MemorystoreInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#labels MemorystoreInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122. See documentation for resource type 'memorystore.googleapis.com/CertificateAuthority'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#location MemorystoreInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#location MemorystoreInstance#location}
   */
   readonly location: string;
   /**
@@ -81,34 +76,34 @@ export interface MemorystoreInstanceConfig extends cdktf.TerraformMetaArguments 
   *  CLUSTER
   *  CLUSTER_DISABLED Possible values: ["CLUSTER", "CLUSTER_DISABLED"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#mode MemorystoreInstance#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#mode MemorystoreInstance#mode}
   */
   readonly mode?: string;
   /**
-  * Optional. Immutable. Machine type for individual nodes of the instance. 
+  * Optional. Machine type for individual nodes of the instance. 
   *  Possible values:
   *  SHARED_CORE_NANO
   * HIGHMEM_MEDIUM
   * HIGHMEM_XLARGE
   * STANDARD_SMALL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#node_type MemorystoreInstance#node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#node_type MemorystoreInstance#node_type}
   */
   readonly nodeType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#project MemorystoreInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#project MemorystoreInstance#project}
   */
   readonly project?: string;
   /**
   * Optional. Number of replica nodes per shard. If omitted the default is 0 replicas.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#replica_count MemorystoreInstance#replica_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#replica_count MemorystoreInstance#replica_count}
   */
   readonly replicaCount?: number;
   /**
   * Required. Number of shards for the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#shard_count MemorystoreInstance#shard_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#shard_count MemorystoreInstance#shard_count}
   */
   readonly shardCount: number;
   /**
@@ -117,31 +112,37 @@ export interface MemorystoreInstanceConfig extends cdktf.TerraformMetaArguments 
   *  TRANSIT_ENCRYPTION_DISABLED
   * SERVER_AUTHENTICATION
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#transit_encryption_mode MemorystoreInstance#transit_encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#transit_encryption_mode MemorystoreInstance#transit_encryption_mode}
   */
   readonly transitEncryptionMode?: string;
   /**
   * desired_psc_auto_connections block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#desired_psc_auto_connections MemorystoreInstance#desired_psc_auto_connections}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#desired_psc_auto_connections MemorystoreInstance#desired_psc_auto_connections}
   */
   readonly desiredPscAutoConnections: MemorystoreInstanceDesiredPscAutoConnections[] | cdktf.IResolvable;
   /**
+  * maintenance_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#maintenance_policy MemorystoreInstance#maintenance_policy}
+  */
+  readonly maintenancePolicy?: MemorystoreInstanceMaintenancePolicy;
+  /**
   * persistence_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#persistence_config MemorystoreInstance#persistence_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#persistence_config MemorystoreInstance#persistence_config}
   */
   readonly persistenceConfig?: MemorystoreInstancePersistenceConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#timeouts MemorystoreInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#timeouts MemorystoreInstance#timeouts}
   */
   readonly timeouts?: MemorystoreInstanceTimeouts;
   /**
   * zone_distribution_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#zone_distribution_config MemorystoreInstance#zone_distribution_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#zone_distribution_config MemorystoreInstance#zone_distribution_config}
   */
   readonly zoneDistributionConfig?: MemorystoreInstanceZoneDistributionConfig;
 }
@@ -490,6 +491,91 @@ export class MemorystoreInstanceEndpointsList extends cdktf.ComplexList {
   */
   public get(index: number): MemorystoreInstanceEndpointsOutputReference {
     return new MemorystoreInstanceEndpointsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MemorystoreInstanceMaintenanceSchedule {
+}
+
+export function memorystoreInstanceMaintenanceScheduleToTerraform(struct?: MemorystoreInstanceMaintenanceSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function memorystoreInstanceMaintenanceScheduleToHclTerraform(struct?: MemorystoreInstanceMaintenanceSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class MemorystoreInstanceMaintenanceScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MemorystoreInstanceMaintenanceSchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemorystoreInstanceMaintenanceSchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // end_time - computed: true, optional: false, required: false
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+
+  // schedule_deadline_time - computed: true, optional: false, required: false
+  public get scheduleDeadlineTime() {
+    return this.getStringAttribute('schedule_deadline_time');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+}
+
+export class MemorystoreInstanceMaintenanceScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MemorystoreInstanceMaintenanceScheduleOutputReference {
+    return new MemorystoreInstanceMaintenanceScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface MemorystoreInstanceNodeConfig {
@@ -843,13 +929,13 @@ export interface MemorystoreInstanceDesiredPscAutoConnections {
   * Required. The consumer network where the IP address resides, in the form of
   * projects/{project_id}/global/networks/{network_id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#network MemorystoreInstance#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#network MemorystoreInstance#network}
   */
   readonly network: string;
   /**
   * Required. The consumer project_id where the forwarding rule is created from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#project_id MemorystoreInstance#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#project_id MemorystoreInstance#project_id}
   */
   readonly projectId: string;
 }
@@ -986,6 +1072,456 @@ export class MemorystoreInstanceDesiredPscAutoConnectionsList extends cdktf.Comp
     return new MemorystoreInstanceDesiredPscAutoConnectionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
+  /**
+  * Hours of day in 24 hour format. Should be from 0 to 23.
+  * An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#hours MemorystoreInstance#hours}
+  */
+  readonly hours?: number;
+  /**
+  * Minutes of hour of day. Must be from 0 to 59.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#minutes MemorystoreInstance#minutes}
+  */
+  readonly minutes?: number;
+  /**
+  * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#nanos MemorystoreInstance#nanos}
+  */
+  readonly nanos?: number;
+  /**
+  * Seconds of minutes of the time. Must normally be from 0 to 59.
+  * An API may allow the value 60 if it allows leap-seconds.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#seconds MemorystoreInstance#seconds}
+  */
+  readonly seconds?: number;
+}
+
+export function memorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToTerraform(struct?: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference | MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    hours: cdktf.numberToTerraform(struct!.hours),
+    minutes: cdktf.numberToTerraform(struct!.minutes),
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
+
+export function memorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToHclTerraform(struct?: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference | MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.numberToHclTerraform(struct!.hours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minutes: {
+      value: cdktf.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.numberToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hours !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
+  // hours - computed: false, optional: true, required: false
+  private _hours?: number; 
+  public get hours() {
+    return this.getNumberAttribute('hours');
+  }
+  public set hours(value: number) {
+    this._hours = value;
+  }
+  public resetHours() {
+    this._hours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours;
+  }
+
+  // minutes - computed: false, optional: true, required: false
+  private _minutes?: number; 
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+  public set minutes(value: number) {
+    this._minutes = value;
+  }
+  public resetMinutes() {
+    this._minutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes;
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos;
+  }
+
+  // seconds - computed: false, optional: true, required: false
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  public resetSeconds() {
+    this._seconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds;
+  }
+}
+export interface MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindow {
+  /**
+  * The day of week that maintenance updates occur.
+  * 
+  * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+  * - MONDAY: Monday
+  * - TUESDAY: Tuesday
+  * - WEDNESDAY: Wednesday
+  * - THURSDAY: Thursday
+  * - FRIDAY: Friday
+  * - SATURDAY: Saturday
+  * - SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#day MemorystoreInstance#day}
+  */
+  readonly day: string;
+  /**
+  * start_time block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#start_time MemorystoreInstance#start_time}
+  */
+  readonly startTime: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
+}
+
+export function memorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowToTerraform(struct?: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day: cdktf.stringToTerraform(struct!.day),
+    start_time: memorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToTerraform(struct!.startTime),
+  }
+}
+
+
+export function memorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowToHclTerraform(struct?: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.stringToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time: {
+      value: memorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToHclTerraform(struct!.startTime),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._day !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._startTime?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._day = undefined;
+      this._startTime.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._day = value.day;
+      this._startTime.internalValue = value.startTime;
+    }
+  }
+
+  // day - computed: false, optional: false, required: true
+  private _day?: string; 
+  public get day() {
+    return this.getStringAttribute('day');
+  }
+  public set day(value: string) {
+    this._day = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayInput() {
+    return this._day;
+  }
+
+  // duration - computed: true, optional: false, required: false
+  public get duration() {
+    return this.getStringAttribute('duration');
+  }
+
+  // start_time - computed: false, optional: false, required: true
+  private _startTime = new MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference(this, "start_time");
+  public get startTime() {
+    return this._startTime;
+  }
+  public putStartTime(value: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime) {
+    this._startTime.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime.internalValue;
+  }
+}
+
+export class MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowList extends cdktf.ComplexList {
+  public internalValue? : MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference {
+    return new MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MemorystoreInstanceMaintenancePolicy {
+  /**
+  * weekly_maintenance_window block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#weekly_maintenance_window MemorystoreInstance#weekly_maintenance_window}
+  */
+  readonly weeklyMaintenanceWindow?: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable;
+}
+
+export function memorystoreInstanceMaintenancePolicyToTerraform(struct?: MemorystoreInstanceMaintenancePolicyOutputReference | MemorystoreInstanceMaintenancePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    weekly_maintenance_window: cdktf.listMapper(memorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowToTerraform, true)(struct!.weeklyMaintenanceWindow),
+  }
+}
+
+
+export function memorystoreInstanceMaintenancePolicyToHclTerraform(struct?: MemorystoreInstanceMaintenancePolicyOutputReference | MemorystoreInstanceMaintenancePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    weekly_maintenance_window: {
+      value: cdktf.listMapperHcl(memorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowToHclTerraform, true)(struct!.weeklyMaintenanceWindow),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MemorystoreInstanceMaintenancePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MemorystoreInstanceMaintenancePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._weeklyMaintenanceWindow?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weeklyMaintenanceWindow = this._weeklyMaintenanceWindow?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemorystoreInstanceMaintenancePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._weeklyMaintenanceWindow.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._weeklyMaintenanceWindow.internalValue = value.weeklyMaintenanceWindow;
+    }
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+
+  // weekly_maintenance_window - computed: false, optional: true, required: false
+  private _weeklyMaintenanceWindow = new MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindowList(this, "weekly_maintenance_window", false);
+  public get weeklyMaintenanceWindow() {
+    return this._weeklyMaintenanceWindow;
+  }
+  public putWeeklyMaintenanceWindow(value: MemorystoreInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable) {
+    this._weeklyMaintenanceWindow.internalValue = value;
+  }
+  public resetWeeklyMaintenanceWindow() {
+    this._weeklyMaintenanceWindow.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeklyMaintenanceWindowInput() {
+    return this._weeklyMaintenanceWindow.internalValue;
+  }
+}
 export interface MemorystoreInstancePersistenceConfigAofConfig {
   /**
   * Optional. The fsync mode. 
@@ -994,7 +1530,7 @@ export interface MemorystoreInstancePersistenceConfigAofConfig {
   * EVERY_SEC
   * ALWAYS
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#append_fsync MemorystoreInstance#append_fsync}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#append_fsync MemorystoreInstance#append_fsync}
   */
   readonly appendFsync?: string;
 }
@@ -1085,7 +1621,7 @@ export interface MemorystoreInstancePersistenceConfigRdbConfig {
   * TWELVE_HOURS
   * TWENTY_FOUR_HOURS
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#rdb_snapshot_period MemorystoreInstance#rdb_snapshot_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#rdb_snapshot_period MemorystoreInstance#rdb_snapshot_period}
   */
   readonly rdbSnapshotPeriod?: string;
   /**
@@ -1093,7 +1629,7 @@ export interface MemorystoreInstancePersistenceConfigRdbConfig {
   * snapshots will be aligned. If not provided, the current time will be
   * used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#rdb_snapshot_start_time MemorystoreInstance#rdb_snapshot_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#rdb_snapshot_start_time MemorystoreInstance#rdb_snapshot_start_time}
   */
   readonly rdbSnapshotStartTime?: string;
 }
@@ -1212,19 +1748,19 @@ export interface MemorystoreInstancePersistenceConfig {
   * RDB
   * AOF Possible values: ["DISABLED", "RDB", "AOF"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#mode MemorystoreInstance#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#mode MemorystoreInstance#mode}
   */
   readonly mode?: string;
   /**
   * aof_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#aof_config MemorystoreInstance#aof_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#aof_config MemorystoreInstance#aof_config}
   */
   readonly aofConfig?: MemorystoreInstancePersistenceConfigAofConfig;
   /**
   * rdb_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#rdb_config MemorystoreInstance#rdb_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#rdb_config MemorystoreInstance#rdb_config}
   */
   readonly rdbConfig?: MemorystoreInstancePersistenceConfigRdbConfig;
 }
@@ -1366,15 +1902,15 @@ export class MemorystoreInstancePersistenceConfigOutputReference extends cdktf.C
 }
 export interface MemorystoreInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#create MemorystoreInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#create MemorystoreInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#delete MemorystoreInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#delete MemorystoreInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#update MemorystoreInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#update MemorystoreInstance#update}
   */
   readonly update?: string;
 }
@@ -1531,14 +2067,14 @@ export interface MemorystoreInstanceZoneDistributionConfig {
   *  MULTI_ZONE
   * SINGLE_ZONE Possible values: ["MULTI_ZONE", "SINGLE_ZONE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#mode MemorystoreInstance#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#mode MemorystoreInstance#mode}
   */
   readonly mode?: string;
   /**
   * Optional. Defines zone where all resources will be allocated with SINGLE_ZONE mode.
   * Ignored for MULTI_ZONE mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#zone MemorystoreInstance#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#zone MemorystoreInstance#zone}
   */
   readonly zone?: string;
 }
@@ -1651,7 +2187,7 @@ export class MemorystoreInstanceZoneDistributionConfigOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance google_memorystore_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance google_memorystore_instance}
 */
 export class MemorystoreInstance extends cdktf.TerraformResource {
 
@@ -1667,7 +2203,7 @@ export class MemorystoreInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MemorystoreInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MemorystoreInstance to import
-  * @param importFromId The id of the existing MemorystoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MemorystoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MemorystoreInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1679,7 +2215,7 @@ export class MemorystoreInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/memorystore_instance google_memorystore_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/memorystore_instance google_memorystore_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1690,7 +2226,7 @@ export class MemorystoreInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_memorystore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.26.0',
+        providerVersion: '6.27.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1716,6 +2252,7 @@ export class MemorystoreInstance extends cdktf.TerraformResource {
     this._shardCount = config.shardCount;
     this._transitEncryptionMode = config.transitEncryptionMode;
     this._desiredPscAutoConnections.internalValue = config.desiredPscAutoConnections;
+    this._maintenancePolicy.internalValue = config.maintenancePolicy;
     this._persistenceConfig.internalValue = config.persistenceConfig;
     this._timeouts.internalValue = config.timeouts;
     this._zoneDistributionConfig.internalValue = config.zoneDistributionConfig;
@@ -1870,6 +2407,12 @@ export class MemorystoreInstance extends cdktf.TerraformResource {
     return this._location;
   }
 
+  // maintenance_schedule - computed: true, optional: false, required: false
+  private _maintenanceSchedule = new MemorystoreInstanceMaintenanceScheduleList(this, "maintenance_schedule", false);
+  public get maintenanceSchedule() {
+    return this._maintenanceSchedule;
+  }
+
   // mode - computed: true, optional: true, required: false
   private _mode?: string; 
   public get mode() {
@@ -2020,6 +2563,22 @@ export class MemorystoreInstance extends cdktf.TerraformResource {
     return this._desiredPscAutoConnections.internalValue;
   }
 
+  // maintenance_policy - computed: false, optional: true, required: false
+  private _maintenancePolicy = new MemorystoreInstanceMaintenancePolicyOutputReference(this, "maintenance_policy");
+  public get maintenancePolicy() {
+    return this._maintenancePolicy;
+  }
+  public putMaintenancePolicy(value: MemorystoreInstanceMaintenancePolicy) {
+    this._maintenancePolicy.internalValue = value;
+  }
+  public resetMaintenancePolicy() {
+    this._maintenancePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenancePolicyInput() {
+    return this._maintenancePolicy.internalValue;
+  }
+
   // persistence_config - computed: false, optional: true, required: false
   private _persistenceConfig = new MemorystoreInstancePersistenceConfigOutputReference(this, "persistence_config");
   public get persistenceConfig() {
@@ -2089,6 +2648,7 @@ export class MemorystoreInstance extends cdktf.TerraformResource {
       shard_count: cdktf.numberToTerraform(this._shardCount),
       transit_encryption_mode: cdktf.stringToTerraform(this._transitEncryptionMode),
       desired_psc_auto_connections: cdktf.listMapper(memorystoreInstanceDesiredPscAutoConnectionsToTerraform, true)(this._desiredPscAutoConnections.internalValue),
+      maintenance_policy: memorystoreInstanceMaintenancePolicyToTerraform(this._maintenancePolicy.internalValue),
       persistence_config: memorystoreInstancePersistenceConfigToTerraform(this._persistenceConfig.internalValue),
       timeouts: memorystoreInstanceTimeoutsToTerraform(this._timeouts.internalValue),
       zone_distribution_config: memorystoreInstanceZoneDistributionConfigToTerraform(this._zoneDistributionConfig.internalValue),
@@ -2186,6 +2746,12 @@ export class MemorystoreInstance extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "MemorystoreInstanceDesiredPscAutoConnectionsList",
+      },
+      maintenance_policy: {
+        value: memorystoreInstanceMaintenancePolicyToHclTerraform(this._maintenancePolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MemorystoreInstanceMaintenancePolicyList",
       },
       persistence_config: {
         value: memorystoreInstancePersistenceConfigToHclTerraform(this._persistenceConfig.internalValue),

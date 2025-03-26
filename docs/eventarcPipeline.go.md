@@ -4,12 +4,12 @@
 
 ### EventarcPipeline <a name="EventarcPipeline" id="@cdktf/provider-google.eventarcPipeline.EventarcPipeline"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline google_eventarc_pipeline}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline google_eventarc_pipeline}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipeline.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipeline(scope Construct, id *string, config EventarcPipelineConfig) EventarcPipeline
 ```
@@ -533,7 +533,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.eventarcPipeline.EventarcPipeline.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.EventarcPipeline_IsConstruct(x interface{}) *bool
 ```
@@ -565,7 +565,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.eventarcPipeline.EventarcPipeline.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.EventarcPipeline_IsTerraformElement(x interface{}) *bool
 ```
@@ -579,7 +579,7 @@ eventarcpipeline.EventarcPipeline_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.eventarcPipeline.EventarcPipeline.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.EventarcPipeline_IsTerraformResource(x interface{}) *bool
 ```
@@ -593,7 +593,7 @@ eventarcpipeline.EventarcPipeline_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.eventarcPipeline.EventarcPipeline.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.EventarcPipeline_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -622,7 +622,7 @@ The construct id used in the generated config for the EventarcPipeline to import
 
 The id of the existing EventarcPipeline that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1218,7 +1218,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineConfig {
 	Connection: interface{},
@@ -1235,13 +1235,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
 	CryptoKeyName: *string,
 	DisplayName: *string,
 	Id: *string,
-	InputPayloadFormat: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineInputPayloadFormat,
+	InputPayloadFormat: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineInputPayloadFormat,
 	Labels: *map[string]*string,
-	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineLoggingConfig,
+	LoggingConfig: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineLoggingConfig,
 	Mediations: interface{},
 	Project: *string,
-	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineRetryPolicy,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineTimeouts,
+	RetryPolicy: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineRetryPolicy,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineTimeouts,
 }
 ```
 
@@ -1262,12 +1262,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.annotations">Annotations</a></code> | <code>*map[string]*string</code> | User-defined annotations. See https://google.aip.dev/128#annotations. |
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.cryptoKeyName">CryptoKeyName</a></code> | <code>*string</code> | Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt the event data. |
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Display name of resource. |
-| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#id EventarcPipeline#id}. |
+| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#id EventarcPipeline#id}. |
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.inputPayloadFormat">InputPayloadFormat</a></code> | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormat">EventarcPipelineInputPayloadFormat</a></code> | input_payload_format block. |
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User labels attached to the Pipeline that can be used to group resources. |
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.loggingConfig">LoggingConfig</a></code> | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineLoggingConfig">EventarcPipelineLoggingConfig</a></code> | logging_config block. |
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.mediations">Mediations</a></code> | <code>interface{}</code> | mediations block. |
-| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#project EventarcPipeline#project}. |
+| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#project EventarcPipeline#project}. |
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.retryPolicy">RetryPolicy</a></code> | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineRetryPolicy">EventarcPipelineRetryPolicy</a></code> | retry_policy block. |
 | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeouts">EventarcPipelineTimeouts</a></code> | timeouts block. |
 
@@ -1353,7 +1353,7 @@ Destinations interface{}
 
 destinations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#destinations EventarcPipeline#destinations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#destinations EventarcPipeline#destinations}
 
 ---
 
@@ -1367,7 +1367,7 @@ Location *string
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#location EventarcPipeline#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#location EventarcPipeline#location}
 
 ---
 
@@ -1381,7 +1381,7 @@ PipelineId *string
 
 The user-provided ID to be assigned to the Pipeline. It should match the format '^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#pipeline_id EventarcPipeline#pipeline_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#pipeline_id EventarcPipeline#pipeline_id}
 
 ---
 
@@ -1398,7 +1398,7 @@ User-defined annotations. See https://google.aip.dev/128#annotations.
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#annotations EventarcPipeline#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#annotations EventarcPipeline#annotations}
 
 ---
 
@@ -1416,7 +1416,7 @@ If not set, an internal Google-owned key
 will be used to encrypt messages. It must match the pattern
 "projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#crypto_key_name EventarcPipeline#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#crypto_key_name EventarcPipeline#crypto_key_name}
 
 ---
 
@@ -1430,7 +1430,7 @@ DisplayName *string
 
 Display name of resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#display_name EventarcPipeline#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#display_name EventarcPipeline#display_name}
 
 ---
 
@@ -1442,7 +1442,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#id EventarcPipeline#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#id EventarcPipeline#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1459,7 +1459,7 @@ InputPayloadFormat EventarcPipelineInputPayloadFormat
 
 input_payload_format block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#input_payload_format EventarcPipeline#input_payload_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#input_payload_format EventarcPipeline#input_payload_format}
 
 ---
 
@@ -1479,7 +1479,7 @@ An object containing a list of "key": value pairs. Example: {
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#labels EventarcPipeline#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#labels EventarcPipeline#labels}
 
 ---
 
@@ -1493,7 +1493,7 @@ LoggingConfig EventarcPipelineLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#logging_config EventarcPipeline#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#logging_config EventarcPipeline#logging_config}
 
 ---
 
@@ -1507,7 +1507,7 @@ Mediations interface{}
 
 mediations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#mediations EventarcPipeline#mediations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#mediations EventarcPipeline#mediations}
 
 ---
 
@@ -1519,7 +1519,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#project EventarcPipeline#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#project EventarcPipeline#project}.
 
 ---
 
@@ -1533,7 +1533,7 @@ RetryPolicy EventarcPipelineRetryPolicy
 
 retry_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#retry_policy EventarcPipeline#retry_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#retry_policy EventarcPipeline#retry_policy}
 
 ---
 
@@ -1547,7 +1547,7 @@ Timeouts EventarcPipelineTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#timeouts EventarcPipeline#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#timeouts EventarcPipeline#timeouts}
 
 ---
 
@@ -1556,14 +1556,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinations {
-	AuthenticationConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfig,
-	HttpEndpoint: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsHttpEndpoint,
+	AuthenticationConfig: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfig,
+	HttpEndpoint: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsHttpEndpoint,
 	MessageBus: *string,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsNetworkConfig,
-	OutputPayloadFormat: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormat,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsNetworkConfig,
+	OutputPayloadFormat: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormat,
 	Topic: *string,
 	Workflow: *string,
 }
@@ -1593,7 +1593,7 @@ AuthenticationConfig EventarcPipelineDestinationsAuthenticationConfig
 
 authentication_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#authentication_config EventarcPipeline#authentication_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#authentication_config EventarcPipeline#authentication_config}
 
 ---
 
@@ -1607,7 +1607,7 @@ HttpEndpoint EventarcPipelineDestinationsHttpEndpoint
 
 http_endpoint block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#http_endpoint EventarcPipeline#http_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#http_endpoint EventarcPipeline#http_endpoint}
 
 ---
 
@@ -1625,7 +1625,7 @@ The Message Bus resource should exist in the same project as
 the Pipeline. Format:
 'projects/{project}/locations/{location}/messageBuses/{message_bus}'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#message_bus EventarcPipeline#message_bus}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#message_bus EventarcPipeline#message_bus}
 
 ---
 
@@ -1639,7 +1639,7 @@ NetworkConfig EventarcPipelineDestinationsNetworkConfig
 
 network_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#network_config EventarcPipeline#network_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#network_config EventarcPipeline#network_config}
 
 ---
 
@@ -1653,7 +1653,7 @@ OutputPayloadFormat EventarcPipelineDestinationsOutputPayloadFormat
 
 output_payload_format block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#output_payload_format EventarcPipeline#output_payload_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#output_payload_format EventarcPipeline#output_payload_format}
 
 ---
 
@@ -1667,7 +1667,7 @@ Topic *string
 
 The resource name of the Pub/Sub topic to which events should be published. Format: 'projects/{project}/locations/{location}/topics/{topic}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#topic EventarcPipeline#topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#topic EventarcPipeline#topic}
 
 ---
 
@@ -1685,7 +1685,7 @@ The Workflow resource should be deployed in the same
 project as the Pipeline. Format:
 'projects/{project}/locations/{location}/workflows/{workflow}'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#workflow EventarcPipeline#workflow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#workflow EventarcPipeline#workflow}
 
 ---
 
@@ -1694,11 +1694,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsAuthenticationConfig {
-	GoogleOidc: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigGoogleOidc,
-	OauthToken: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigOauthToken,
+	GoogleOidc: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigGoogleOidc,
+	OauthToken: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigOauthToken,
 }
 ```
 
@@ -1721,7 +1721,7 @@ GoogleOidc EventarcPipelineDestinationsAuthenticationConfigGoogleOidc
 
 google_oidc block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#google_oidc EventarcPipeline#google_oidc}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#google_oidc EventarcPipeline#google_oidc}
 
 ---
 
@@ -1735,7 +1735,7 @@ OauthToken EventarcPipelineDestinationsAuthenticationConfigOauthToken
 
 oauth_token block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#oauth_token EventarcPipeline#oauth_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#oauth_token EventarcPipeline#oauth_token}
 
 ---
 
@@ -1744,7 +1744,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigGoogleOidc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsAuthenticationConfigGoogleOidc {
 	ServiceAccount: *string,
@@ -1778,7 +1778,7 @@ for more information. Eventarc service agents must have
 roles/roles/iam.serviceAccountTokenCreator role to allow the
 Pipeline to create OpenID tokens for authenticated requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#service_account EventarcPipeline#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#service_account EventarcPipeline#service_account}
 
 ---
 
@@ -1796,7 +1796,7 @@ The audience claim
 identifies the recipient that the JWT is intended for. If
 unspecified, the destination URI will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#audience EventarcPipeline#audience}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#audience EventarcPipeline#audience}
 
 ---
 
@@ -1805,7 +1805,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigOauthToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsAuthenticationConfigOauthToken {
 	ServiceAccount: *string,
@@ -1832,7 +1832,7 @@ ServiceAccount *string
 
 Service account email used to generate the [OAuth token](https://developers.google.com/identity/protocols/OAuth2). The principal who calls this API must have iam.serviceAccounts.actAs permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts for more information. Eventarc service agents must have roles/roles/iam.serviceAccountTokenCreator role to allow Pipeline to create OAuth2 tokens for authenticated requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#service_account EventarcPipeline#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#service_account EventarcPipeline#service_account}
 
 ---
 
@@ -1846,7 +1846,7 @@ Scope *string
 
 OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#scope EventarcPipeline#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#scope EventarcPipeline#scope}
 
 ---
 
@@ -1855,7 +1855,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsHttpEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsHttpEndpoint {
 	Uri: *string,
@@ -1886,7 +1886,7 @@ The value must be a RFC2396 URI string.
 Examples: 'https://svc.us-central1.p.local:8080/route'.
 Only the HTTPS protocol is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#uri EventarcPipeline#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#uri EventarcPipeline#uri}
 
 ---
 
@@ -2069,7 +2069,7 @@ The Pipeline expects that the message it receives adheres to the
 standard CloudEvent format. If it doesn't then the outgoing message
 request may fail with a persistent error.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#message_binding_template EventarcPipeline#message_binding_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#message_binding_template EventarcPipeline#message_binding_template}
 
 ---
 
@@ -2078,7 +2078,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsNetworkConfig {
 	NetworkAttachment: *string,
@@ -2103,7 +2103,7 @@ NetworkAttachment *string
 
 Name of the NetworkAttachment that allows access to the consumer VPC. Format: 'projects/{PROJECT_ID}/regions/{REGION}/networkAttachments/{NETWORK_ATTACHMENT_NAME}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#network_attachment EventarcPipeline#network_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#network_attachment EventarcPipeline#network_attachment}
 
 ---
 
@@ -2112,12 +2112,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormat.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsOutputPayloadFormat {
-	Avro: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatAvro,
-	Json: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatJson,
-	Protobuf: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatProtobuf,
+	Avro: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatAvro,
+	Json: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatJson,
+	Protobuf: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatProtobuf,
 }
 ```
 
@@ -2141,7 +2141,7 @@ Avro EventarcPipelineDestinationsOutputPayloadFormatAvro
 
 avro block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#avro EventarcPipeline#avro}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#avro EventarcPipeline#avro}
 
 ---
 
@@ -2155,7 +2155,7 @@ Json EventarcPipelineDestinationsOutputPayloadFormatJson
 
 json block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#json EventarcPipeline#json}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#json EventarcPipeline#json}
 
 ---
 
@@ -2169,7 +2169,7 @@ Protobuf EventarcPipelineDestinationsOutputPayloadFormatProtobuf
 
 protobuf block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#protobuf EventarcPipeline#protobuf}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#protobuf EventarcPipeline#protobuf}
 
 ---
 
@@ -2178,7 +2178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatAvro.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsOutputPayloadFormatAvro {
 	SchemaDefinition: *string,
@@ -2203,7 +2203,7 @@ SchemaDefinition *string
 
 The entire schema definition is stored in this field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
 
 ---
 
@@ -2212,7 +2212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatJson.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsOutputPayloadFormatJson {
 
@@ -2225,7 +2225,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatProtobuf.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineDestinationsOutputPayloadFormatProtobuf {
 	SchemaDefinition: *string,
@@ -2250,7 +2250,7 @@ SchemaDefinition *string
 
 The entire schema definition is stored in this field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
 
 ---
 
@@ -2259,12 +2259,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormat.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineInputPayloadFormat {
-	Avro: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineInputPayloadFormatAvro,
-	Json: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineInputPayloadFormatJson,
-	Protobuf: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineInputPayloadFormatProtobuf,
+	Avro: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineInputPayloadFormatAvro,
+	Json: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineInputPayloadFormatJson,
+	Protobuf: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineInputPayloadFormatProtobuf,
 }
 ```
 
@@ -2288,7 +2288,7 @@ Avro EventarcPipelineInputPayloadFormatAvro
 
 avro block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#avro EventarcPipeline#avro}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#avro EventarcPipeline#avro}
 
 ---
 
@@ -2302,7 +2302,7 @@ Json EventarcPipelineInputPayloadFormatJson
 
 json block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#json EventarcPipeline#json}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#json EventarcPipeline#json}
 
 ---
 
@@ -2316,7 +2316,7 @@ Protobuf EventarcPipelineInputPayloadFormatProtobuf
 
 protobuf block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#protobuf EventarcPipeline#protobuf}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#protobuf EventarcPipeline#protobuf}
 
 ---
 
@@ -2325,7 +2325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormatAvro.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineInputPayloadFormatAvro {
 	SchemaDefinition: *string,
@@ -2350,7 +2350,7 @@ SchemaDefinition *string
 
 The entire schema definition is stored in this field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
 
 ---
 
@@ -2359,7 +2359,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormatJson.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineInputPayloadFormatJson {
 
@@ -2372,7 +2372,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormatProtobuf.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineInputPayloadFormatProtobuf {
 	SchemaDefinition: *string,
@@ -2397,7 +2397,7 @@ SchemaDefinition *string
 
 The entire schema definition is stored in this field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
 
 ---
 
@@ -2406,7 +2406,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineLoggingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineLoggingConfig {
 	LogSeverity: *string,
@@ -2433,7 +2433,7 @@ The minimum severity of logs that will be sent to Stackdriver/Platform Telemetry
 
 Logs at severitiy ≥ this value will be sent, unless it is NONE. Possible values: ["NONE", "DEBUG", "INFO", "NOTICE", "WARNING", "ERROR", "CRITICAL", "ALERT", "EMERGENCY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#log_severity EventarcPipeline#log_severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#log_severity EventarcPipeline#log_severity}
 
 ---
 
@@ -2442,10 +2442,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineMediations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineMediations {
-	Transformation: github.com/cdktf/cdktf-provider-google-go/google/v14.eventarcPipeline.EventarcPipelineMediationsTransformation,
+	Transformation: github.com/cdktf/cdktf-provider-google-go/google.eventarcPipeline.EventarcPipelineMediationsTransformation,
 }
 ```
 
@@ -2467,7 +2467,7 @@ Transformation EventarcPipelineMediationsTransformation
 
 transformation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#transformation EventarcPipeline#transformation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#transformation EventarcPipeline#transformation}
 
 ---
 
@@ -2476,7 +2476,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineMediationsTransformation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineMediationsTransformation {
 	TransformationTemplate: *string,
@@ -2578,7 +2578,7 @@ use in this CEL expression:
   representation of the CloudEvent. To convert that data to a JSON
   string it can be chained with the toJsonString function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#transformation_template EventarcPipeline#transformation_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#transformation_template EventarcPipeline#transformation_template}
 
 ---
 
@@ -2587,7 +2587,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineRetryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineRetryPolicy {
 	MaxAttempts: *f64,
@@ -2620,7 +2620,7 @@ The value must
 be between 1 and 100.
 The default value for this field is 5.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#max_attempts EventarcPipeline#max_attempts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#max_attempts EventarcPipeline#max_attempts}
 
 ---
 
@@ -2638,7 +2638,7 @@ The value
 must be between 1 and 600.
 The default value for this field is 60.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#max_retry_delay EventarcPipeline#max_retry_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#max_retry_delay EventarcPipeline#max_retry_delay}
 
 ---
 
@@ -2656,7 +2656,7 @@ The value
 must be between 1 and 600.
 The default value for this field is 5.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#min_retry_delay EventarcPipeline#min_retry_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#min_retry_delay EventarcPipeline#min_retry_delay}
 
 ---
 
@@ -2665,7 +2665,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 &eventarcpipeline.EventarcPipelineTimeouts {
 	Create: *string,
@@ -2678,9 +2678,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#create EventarcPipeline#create}. |
-| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#delete EventarcPipeline#delete}. |
-| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#update EventarcPipeline#update}. |
+| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#create EventarcPipeline#create}. |
+| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#delete EventarcPipeline#delete}. |
+| <code><a href="#@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#update EventarcPipeline#update}. |
 
 ---
 
@@ -2692,7 +2692,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#create EventarcPipeline#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#create EventarcPipeline#create}.
 
 ---
 
@@ -2704,7 +2704,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#delete EventarcPipeline#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#delete EventarcPipeline#delete}.
 
 ---
 
@@ -2716,7 +2716,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/eventarc_pipeline#update EventarcPipeline#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/eventarc_pipeline#update EventarcPipeline#update}.
 
 ---
 
@@ -2727,7 +2727,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigGoogleOidcOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsAuthenticationConfigGoogleOidcOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsAuthenticationConfigGoogleOidcOutputReference
 ```
@@ -3027,7 +3027,7 @@ func InternalValue() EventarcPipelineDestinationsAuthenticationConfigGoogleOidc
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigOauthTokenOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsAuthenticationConfigOauthTokenOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsAuthenticationConfigOauthTokenOutputReference
 ```
@@ -3327,7 +3327,7 @@ func InternalValue() EventarcPipelineDestinationsAuthenticationConfigOauthToken
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsAuthenticationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsAuthenticationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsAuthenticationConfigOutputReference
 ```
@@ -3660,7 +3660,7 @@ func InternalValue() EventarcPipelineDestinationsAuthenticationConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsHttpEndpointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsHttpEndpointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsHttpEndpointOutputReference
 ```
@@ -3960,7 +3960,7 @@ func InternalValue() EventarcPipelineDestinationsHttpEndpoint
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventarcPipelineDestinationsList
 ```
@@ -4120,7 +4120,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsNetworkConfigOutputReference
 ```
@@ -4391,7 +4391,7 @@ func InternalValue() EventarcPipelineDestinationsNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatAvroOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsOutputPayloadFormatAvroOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsOutputPayloadFormatAvroOutputReference
 ```
@@ -4669,7 +4669,7 @@ func InternalValue() EventarcPipelineDestinationsOutputPayloadFormatAvro
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatJsonOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsOutputPayloadFormatJsonOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsOutputPayloadFormatJsonOutputReference
 ```
@@ -4918,7 +4918,7 @@ func InternalValue() EventarcPipelineDestinationsOutputPayloadFormatJson
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsOutputPayloadFormatOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsOutputPayloadFormatOutputReference
 ```
@@ -5293,7 +5293,7 @@ func InternalValue() EventarcPipelineDestinationsOutputPayloadFormat
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputPayloadFormatProtobufOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsOutputPayloadFormatProtobufOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineDestinationsOutputPayloadFormatProtobufOutputReference
 ```
@@ -5571,7 +5571,7 @@ func InternalValue() EventarcPipelineDestinationsOutputPayloadFormatProtobuf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineDestinationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineDestinationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventarcPipelineDestinationsOutputReference
 ```
@@ -6093,7 +6093,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormatAvroOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineInputPayloadFormatAvroOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineInputPayloadFormatAvroOutputReference
 ```
@@ -6371,7 +6371,7 @@ func InternalValue() EventarcPipelineInputPayloadFormatAvro
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormatJsonOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineInputPayloadFormatJsonOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineInputPayloadFormatJsonOutputReference
 ```
@@ -6620,7 +6620,7 @@ func InternalValue() EventarcPipelineInputPayloadFormatJson
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormatOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineInputPayloadFormatOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineInputPayloadFormatOutputReference
 ```
@@ -6995,7 +6995,7 @@ func InternalValue() EventarcPipelineInputPayloadFormat
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineInputPayloadFormatProtobufOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineInputPayloadFormatProtobufOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineInputPayloadFormatProtobufOutputReference
 ```
@@ -7273,7 +7273,7 @@ func InternalValue() EventarcPipelineInputPayloadFormatProtobuf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineLoggingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineLoggingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineLoggingConfigOutputReference
 ```
@@ -7551,7 +7551,7 @@ func InternalValue() EventarcPipelineLoggingConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineMediationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineMediationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventarcPipelineMediationsList
 ```
@@ -7711,7 +7711,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineMediationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineMediationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventarcPipelineMediationsOutputReference
 ```
@@ -8020,7 +8020,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineMediationsTransformationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineMediationsTransformationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineMediationsTransformationOutputReference
 ```
@@ -8298,7 +8298,7 @@ func InternalValue() EventarcPipelineMediationsTransformation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineRetryPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineRetryPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineRetryPolicyOutputReference
 ```
@@ -8634,7 +8634,7 @@ func InternalValue() EventarcPipelineRetryPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcPipeline.EventarcPipelineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/eventarcpipeline"
+import "github.com/cdktf/cdktf-provider-google-go/google/eventarcpipeline"
 
 eventarcpipeline.NewEventarcPipelineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcPipelineTimeoutsOutputReference
 ```

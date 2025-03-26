@@ -4,12 +4,12 @@
 
 ### ClouddeployTarget <a name="ClouddeployTarget" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTarget"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target google_clouddeploy_target}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target google_clouddeploy_target}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTarget(scope Construct, id *string, config ClouddeployTargetConfig) ClouddeployTarget
 ```
@@ -587,7 +587,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTarget.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.ClouddeployTarget_IsConstruct(x interface{}) *bool
 ```
@@ -619,7 +619,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTarget.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.ClouddeployTarget_IsTerraformElement(x interface{}) *bool
 ```
@@ -633,7 +633,7 @@ clouddeploytarget.ClouddeployTarget_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTarget.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.ClouddeployTarget_IsTerraformResource(x interface{}) *bool
 ```
@@ -647,7 +647,7 @@ clouddeploytarget.ClouddeployTarget_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTarget.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.ClouddeployTarget_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -676,7 +676,7 @@ The construct id used in the generated config for the ClouddeployTarget to impor
 
 The id of the existing ClouddeployTarget that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1338,7 +1338,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAnthosCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetAnthosCluster {
 	Membership: *string,
@@ -1363,7 +1363,7 @@ Membership *string
 
 Membership of the GKE Hub-registered cluster to which to apply the Skaffold configuration. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#membership ClouddeployTarget#membership}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#membership ClouddeployTarget#membership}
 
 ---
 
@@ -1372,7 +1372,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntities.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetAssociatedEntities {
 	EntityId: *string,
@@ -1401,7 +1401,7 @@ EntityId *string
 
 The name for the key in the map for which this object is mapped to in the API.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#entity_id ClouddeployTarget#entity_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#entity_id ClouddeployTarget#entity_id}
 
 ---
 
@@ -1415,7 +1415,7 @@ AnthosClusters interface{}
 
 anthos_clusters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#anthos_clusters ClouddeployTarget#anthos_clusters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#anthos_clusters ClouddeployTarget#anthos_clusters}
 
 ---
 
@@ -1429,7 +1429,7 @@ GkeClusters interface{}
 
 gke_clusters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#gke_clusters ClouddeployTarget#gke_clusters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#gke_clusters ClouddeployTarget#gke_clusters}
 
 ---
 
@@ -1438,7 +1438,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntitiesAnthosClusters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetAssociatedEntitiesAnthosClusters {
 	Membership: *string,
@@ -1463,7 +1463,7 @@ Membership *string
 
 Optional. Membership of the GKE Hub-registered cluster to which to apply the Skaffold configuration. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#membership ClouddeployTarget#membership}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#membership ClouddeployTarget#membership}
 
 ---
 
@@ -1472,7 +1472,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntitiesGkeClusters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetAssociatedEntitiesGkeClusters {
 	Cluster: *string,
@@ -1501,7 +1501,7 @@ Cluster *string
 
 Optional. Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#cluster ClouddeployTarget#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#cluster ClouddeployTarget#cluster}
 
 ---
 
@@ -1517,7 +1517,7 @@ Optional.
 
 If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#internal_ip ClouddeployTarget#internal_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#internal_ip ClouddeployTarget#internal_ip}
 
 ---
 
@@ -1531,7 +1531,7 @@ ProxyUrl *string
 
 Optional. If set, used to configure a [proxy](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/#proxy) to the Kubernetes server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#proxy_url ClouddeployTarget#proxy_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#proxy_url ClouddeployTarget#proxy_url}
 
 ---
 
@@ -1540,7 +1540,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetConfig {
 	Connection: interface{},
@@ -1553,20 +1553,20 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
 	Location: *string,
 	Name: *string,
 	Annotations: *map[string]*string,
-	AnthosCluster: github.com/cdktf/cdktf-provider-google-go/google/v14.clouddeployTarget.ClouddeployTargetAnthosCluster,
+	AnthosCluster: github.com/cdktf/cdktf-provider-google-go/google.clouddeployTarget.ClouddeployTargetAnthosCluster,
 	AssociatedEntities: interface{},
-	CustomTarget: github.com/cdktf/cdktf-provider-google-go/google/v14.clouddeployTarget.ClouddeployTargetCustomTarget,
+	CustomTarget: github.com/cdktf/cdktf-provider-google-go/google.clouddeployTarget.ClouddeployTargetCustomTarget,
 	DeployParameters: *map[string]*string,
 	Description: *string,
 	ExecutionConfigs: interface{},
-	Gke: github.com/cdktf/cdktf-provider-google-go/google/v14.clouddeployTarget.ClouddeployTargetGke,
+	Gke: github.com/cdktf/cdktf-provider-google-go/google.clouddeployTarget.ClouddeployTargetGke,
 	Id: *string,
 	Labels: *map[string]*string,
-	MultiTarget: github.com/cdktf/cdktf-provider-google-go/google/v14.clouddeployTarget.ClouddeployTargetMultiTarget,
+	MultiTarget: github.com/cdktf/cdktf-provider-google-go/google.clouddeployTarget.ClouddeployTargetMultiTarget,
 	Project: *string,
 	RequireApproval: interface{},
-	Run: github.com/cdktf/cdktf-provider-google-go/google/v14.clouddeployTarget.ClouddeployTargetRun,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.clouddeployTarget.ClouddeployTargetTimeouts,
+	Run: github.com/cdktf/cdktf-provider-google-go/google.clouddeployTarget.ClouddeployTargetRun,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.clouddeployTarget.ClouddeployTargetTimeouts,
 }
 ```
 
@@ -1591,7 +1591,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
 | <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.property.description">Description</a></code> | <code>*string</code> | Optional. Description of the `Target`. Max length is 255 characters. |
 | <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.property.executionConfigs">ExecutionConfigs</a></code> | <code>interface{}</code> | execution_configs block. |
 | <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.property.gke">Gke</a></code> | <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetGke">ClouddeployTargetGke</a></code> | gke block. |
-| <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#id ClouddeployTarget#id}. |
+| <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#id ClouddeployTarget#id}. |
 | <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.property.multiTarget">MultiTarget</a></code> | <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetMultiTarget">ClouddeployTargetMultiTarget</a></code> | multi_target block. |
 | <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetConfig.property.project">Project</a></code> | <code>*string</code> | The project for the resource. |
@@ -1681,7 +1681,7 @@ Location *string
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#location ClouddeployTarget#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#location ClouddeployTarget#location}
 
 ---
 
@@ -1695,7 +1695,7 @@ Name *string
 
 Name of the `Target`. Format is `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#name ClouddeployTarget#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#name ClouddeployTarget#name}
 
 ---
 
@@ -1714,7 +1714,7 @@ User annotations. These attributes can only be set and used by the user, and not
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field `effective_annotations` for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#annotations ClouddeployTarget#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#annotations ClouddeployTarget#annotations}
 
 ---
 
@@ -1728,7 +1728,7 @@ AnthosCluster ClouddeployTargetAnthosCluster
 
 anthos_cluster block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#anthos_cluster ClouddeployTarget#anthos_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#anthos_cluster ClouddeployTarget#anthos_cluster}
 
 ---
 
@@ -1742,7 +1742,7 @@ AssociatedEntities interface{}
 
 associated_entities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#associated_entities ClouddeployTarget#associated_entities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#associated_entities ClouddeployTarget#associated_entities}
 
 ---
 
@@ -1756,7 +1756,7 @@ CustomTarget ClouddeployTargetCustomTarget
 
 custom_target block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#custom_target ClouddeployTarget#custom_target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#custom_target ClouddeployTarget#custom_target}
 
 ---
 
@@ -1770,7 +1770,7 @@ DeployParameters *map[string]*string
 
 Optional. The deploy parameters to use for this target.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#deploy_parameters ClouddeployTarget#deploy_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#deploy_parameters ClouddeployTarget#deploy_parameters}
 
 ---
 
@@ -1784,7 +1784,7 @@ Description *string
 
 Optional. Description of the `Target`. Max length is 255 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#description ClouddeployTarget#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#description ClouddeployTarget#description}
 
 ---
 
@@ -1798,7 +1798,7 @@ ExecutionConfigs interface{}
 
 execution_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#execution_configs ClouddeployTarget#execution_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#execution_configs ClouddeployTarget#execution_configs}
 
 ---
 
@@ -1812,7 +1812,7 @@ Gke ClouddeployTargetGke
 
 gke block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#gke ClouddeployTarget#gke}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#gke ClouddeployTarget#gke}
 
 ---
 
@@ -1824,7 +1824,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#id ClouddeployTarget#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#id ClouddeployTarget#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1846,7 +1846,7 @@ Labels are attributes that can be set and used by both the user and by Google Cl
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field `effective_labels` for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#labels ClouddeployTarget#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#labels ClouddeployTarget#labels}
 
 ---
 
@@ -1860,7 +1860,7 @@ MultiTarget ClouddeployTargetMultiTarget
 
 multi_target block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#multi_target ClouddeployTarget#multi_target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#multi_target ClouddeployTarget#multi_target}
 
 ---
 
@@ -1874,7 +1874,7 @@ Project *string
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#project ClouddeployTarget#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#project ClouddeployTarget#project}
 
 ---
 
@@ -1888,7 +1888,7 @@ RequireApproval interface{}
 
 Optional. Whether or not the `Target` requires approval.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#require_approval ClouddeployTarget#require_approval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#require_approval ClouddeployTarget#require_approval}
 
 ---
 
@@ -1902,7 +1902,7 @@ Run ClouddeployTargetRun
 
 run block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#run ClouddeployTarget#run}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#run ClouddeployTarget#run}
 
 ---
 
@@ -1916,7 +1916,7 @@ Timeouts ClouddeployTargetTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#timeouts ClouddeployTarget#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#timeouts ClouddeployTarget#timeouts}
 
 ---
 
@@ -1925,7 +1925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetCustomTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetCustomTarget {
 	CustomTargetType: *string,
@@ -1950,7 +1950,7 @@ CustomTargetType *string
 
 Required. The name of the CustomTargetType. Format must be `projects/{project}/locations/{location}/customTargetTypes/{custom_target_type}`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#custom_target_type ClouddeployTarget#custom_target_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#custom_target_type ClouddeployTarget#custom_target_type}
 
 ---
 
@@ -1959,7 +1959,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetExecutionConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetExecutionConfigs {
 	Usages: *[]*string,
@@ -1994,7 +1994,7 @@ Usages *[]*string
 
 Required. Usages when this configuration should be applied.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#usages ClouddeployTarget#usages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#usages ClouddeployTarget#usages}
 
 ---
 
@@ -2010,7 +2010,7 @@ Optional.
 
 Cloud Storage location in which to store execution outputs. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#artifact_storage ClouddeployTarget#artifact_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#artifact_storage ClouddeployTarget#artifact_storage}
 
 ---
 
@@ -2026,7 +2026,7 @@ Optional.
 
 Execution timeout for a Cloud Build Execution. This must be between 10m and 24h in seconds format. If unspecified, a default timeout of 1h is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#execution_timeout ClouddeployTarget#execution_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#execution_timeout ClouddeployTarget#execution_timeout}
 
 ---
 
@@ -2040,7 +2040,7 @@ ServiceAccount *string
 
 Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#service_account ClouddeployTarget#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#service_account ClouddeployTarget#service_account}
 
 ---
 
@@ -2054,7 +2054,7 @@ Verbose interface{}
 
 Optional. If true, additional logging will be enabled when running builds in this execution environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#verbose ClouddeployTarget#verbose}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#verbose ClouddeployTarget#verbose}
 
 ---
 
@@ -2070,7 +2070,7 @@ Optional.
 
 The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#worker_pool ClouddeployTarget#worker_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#worker_pool ClouddeployTarget#worker_pool}
 
 ---
 
@@ -2079,7 +2079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetGke.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetGke {
 	Cluster: *string,
@@ -2110,7 +2110,7 @@ Cluster *string
 
 Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#cluster ClouddeployTarget#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#cluster ClouddeployTarget#cluster}
 
 ---
 
@@ -2126,7 +2126,7 @@ Optional.
 
 If set, the cluster will be accessed using the DNS endpoint. Note that both `dns_endpoint` and `internal_ip` cannot be set to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#dns_endpoint ClouddeployTarget#dns_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#dns_endpoint ClouddeployTarget#dns_endpoint}
 
 ---
 
@@ -2142,7 +2142,7 @@ Optional.
 
 If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#internal_ip ClouddeployTarget#internal_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#internal_ip ClouddeployTarget#internal_ip}
 
 ---
 
@@ -2156,7 +2156,7 @@ ProxyUrl *string
 
 Optional. If set, used to configure a [proxy](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/#proxy) to the Kubernetes server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#proxy_url ClouddeployTarget#proxy_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#proxy_url ClouddeployTarget#proxy_url}
 
 ---
 
@@ -2165,7 +2165,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetMultiTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetMultiTarget {
 	TargetIds: *[]*string,
@@ -2190,7 +2190,7 @@ TargetIds *[]*string
 
 Required. The target_ids of this multiTarget.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#target_ids ClouddeployTarget#target_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#target_ids ClouddeployTarget#target_ids}
 
 ---
 
@@ -2199,7 +2199,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetRun.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetRun {
 	Location: *string,
@@ -2224,7 +2224,7 @@ Location *string
 
 Required. The location where the Cloud Run Service should be located. Format is `projects/{project}/locations/{location}`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#location ClouddeployTarget#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#location ClouddeployTarget#location}
 
 ---
 
@@ -2233,7 +2233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 &clouddeploytarget.ClouddeployTargetTimeouts {
 	Create: *string,
@@ -2246,9 +2246,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#create ClouddeployTarget#create}. |
-| <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#delete ClouddeployTarget#delete}. |
-| <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#update ClouddeployTarget#update}. |
+| <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#create ClouddeployTarget#create}. |
+| <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#delete ClouddeployTarget#delete}. |
+| <code><a href="#@cdktf/provider-google.clouddeployTarget.ClouddeployTargetTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#update ClouddeployTarget#update}. |
 
 ---
 
@@ -2260,7 +2260,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#create ClouddeployTarget#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#create ClouddeployTarget#create}.
 
 ---
 
@@ -2272,7 +2272,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#delete ClouddeployTarget#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#delete ClouddeployTarget#delete}.
 
 ---
 
@@ -2284,7 +2284,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/clouddeploy_target#update ClouddeployTarget#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/clouddeploy_target#update ClouddeployTarget#update}.
 
 ---
 
@@ -2295,7 +2295,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAnthosClusterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetAnthosClusterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployTargetAnthosClusterOutputReference
 ```
@@ -2573,7 +2573,7 @@ func InternalValue() ClouddeployTargetAnthosCluster
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntitiesAnthosClustersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetAssociatedEntitiesAnthosClustersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ClouddeployTargetAssociatedEntitiesAnthosClustersList
 ```
@@ -2733,7 +2733,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntitiesAnthosClustersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetAssociatedEntitiesAnthosClustersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ClouddeployTargetAssociatedEntitiesAnthosClustersOutputReference
 ```
@@ -3029,7 +3029,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntitiesGkeClustersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetAssociatedEntitiesGkeClustersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ClouddeployTargetAssociatedEntitiesGkeClustersList
 ```
@@ -3189,7 +3189,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntitiesGkeClustersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetAssociatedEntitiesGkeClustersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ClouddeployTargetAssociatedEntitiesGkeClustersOutputReference
 ```
@@ -3543,7 +3543,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntitiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetAssociatedEntitiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ClouddeployTargetAssociatedEntitiesList
 ```
@@ -3703,7 +3703,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetAssociatedEntitiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetAssociatedEntitiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ClouddeployTargetAssociatedEntitiesOutputReference
 ```
@@ -4076,7 +4076,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetCustomTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetCustomTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployTargetCustomTargetOutputReference
 ```
@@ -4347,7 +4347,7 @@ func InternalValue() ClouddeployTargetCustomTarget
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetExecutionConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetExecutionConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ClouddeployTargetExecutionConfigsList
 ```
@@ -4507,7 +4507,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetExecutionConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetExecutionConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ClouddeployTargetExecutionConfigsOutputReference
 ```
@@ -4941,7 +4941,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetGkeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetGkeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployTargetGkeOutputReference
 ```
@@ -5306,7 +5306,7 @@ func InternalValue() ClouddeployTargetGke
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetMultiTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetMultiTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployTargetMultiTargetOutputReference
 ```
@@ -5577,7 +5577,7 @@ func InternalValue() ClouddeployTargetMultiTarget
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetRunOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetRunOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployTargetRunOutputReference
 ```
@@ -5848,7 +5848,7 @@ func InternalValue() ClouddeployTargetRun
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.clouddeployTarget.ClouddeployTargetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/clouddeploytarget"
+import "github.com/cdktf/cdktf-provider-google-go/google/clouddeploytarget"
 
 clouddeploytarget.NewClouddeployTargetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ClouddeployTargetTimeoutsOutputReference
 ```

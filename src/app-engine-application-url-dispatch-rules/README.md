@@ -1,3 +1,3 @@
 # `google_app_engine_application_url_dispatch_rules`
 
-Refer to the Terraform Registry for docs: [`google_app_engine_application_url_dispatch_rules`](https://registry.terraform.io/providers/hashicorp/google/6.26.0/docs/resources/app_engine_application_url_dispatch_rules).
+Refer to the Terraform Registry for docs: [`google_app_engine_application_url_dispatch_rules`](https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/app_engine_application_url_dispatch_rules).
