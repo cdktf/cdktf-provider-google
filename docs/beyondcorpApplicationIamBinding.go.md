@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/beyondcorpapplicationiambinding"
 
 beyondcorpapplicationiambinding.NewBeyondcorpApplicationIamBinding(scope Construct, id *string, config BeyondcorpApplicationIamBindingConfig) BeyondcorpApplicationIamBinding
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/beyondcorpapplicationiambinding"
 
 beyondcorpapplicationiambinding.BeyondcorpApplicationIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/beyondcorpapplicationiambinding"
 
 beyondcorpapplicationiambinding.BeyondcorpApplicationIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ beyondcorpapplicationiambinding.BeyondcorpApplicationIamBinding_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/beyondcorpapplicationiambinding"
 
 beyondcorpapplicationiambinding.BeyondcorpApplicationIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ beyondcorpapplicationiambinding.BeyondcorpApplicationIamBinding_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/beyondcorpapplicationiambinding"
 
 beyondcorpapplicationiambinding.BeyondcorpApplicationIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/beyondcorpapplicationiambinding"
 
 &beyondcorpapplicationiambinding.BeyondcorpApplicationIamBindingCondition {
 	Expression: *string,
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/beyondcorpapplicationiambinding"
 
 &beyondcorpapplicationiambinding.BeyondcorpApplicationIamBindingConfig {
 	Connection: interface{},
@@ -940,7 +940,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicati
 	Members: *[]*string,
 	Role: *string,
 	SecurityGatewaysId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.beyondcorpApplicationIamBinding.BeyondcorpApplicationIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/beyondcorpapplicationiambinding"
 
 beyondcorpapplicationiambinding.NewBeyondcorpApplicationIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BeyondcorpApplicationIamBindingConditionOutputReference
 ```

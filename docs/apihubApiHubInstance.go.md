@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.NewApihubApiHubInstance(scope Construct, id *string, config ApihubApiHubInstanceConfig) ApihubApiHubInstance
 ```
@@ -446,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.ApihubApiHubInstance_IsConstruct(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.ApihubApiHubInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ apihubapihubinstance.ApihubApiHubInstance_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.ApihubApiHubInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ apihubapihubinstance.ApihubApiHubInstance_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.ApihubApiHubInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -988,7 +988,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 &apihubapihubinstance.ApihubApiHubInstanceConfig {
 	Connection: interface{},
@@ -998,14 +998,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstanc
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Config: github.com/cdktf/cdktf-provider-google-go/google/v14.apihubApiHubInstance.ApihubApiHubInstanceConfigA,
+	Config: github.com/cdktf/cdktf-provider-google-go/google.apihubApiHubInstance.ApihubApiHubInstanceConfigA,
 	Location: *string,
 	ApiHubInstanceId: *string,
 	Description: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.apihubApiHubInstance.ApihubApiHubInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts,
 }
 ```
 
@@ -1227,7 +1227,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfigA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 &apihubapihubinstance.ApihubApiHubInstanceConfigA {
 	CmekKeyName: *string,
@@ -1323,7 +1323,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 &apihubapihubinstance.ApihubApiHubInstanceTimeouts {
 	Create: *string,
@@ -1385,7 +1385,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceConfigAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.NewApihubApiHubInstanceConfigAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApihubApiHubInstanceConfigAOutputReference
 ```
@@ -1750,7 +1750,7 @@ func InternalValue() ApihubApiHubInstanceConfigA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apihubApiHubInstance.ApihubApiHubInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/apihubapihubinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/apihubapihubinstance"
 
 apihubapihubinstance.NewApihubApiHubInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApihubApiHubInstanceTimeoutsOutputReference
 ```
