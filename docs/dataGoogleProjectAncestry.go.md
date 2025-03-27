@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 datagoogleprojectancestry.NewDataGoogleProjectAncestry(scope Construct, id *string, config DataGoogleProjectAncestryConfig) DataGoogleProjectAncestry
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestry.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 datagoogleprojectancestry.DataGoogleProjectAncestry_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestry.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 datagoogleprojectancestry.DataGoogleProjectAncestry_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagoogleprojectancestry.DataGoogleProjectAncestry_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestry.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 datagoogleprojectancestry.DataGoogleProjectAncestry_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagoogleprojectancestry.DataGoogleProjectAncestry_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestry.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 datagoogleprojectancestry.DataGoogleProjectAncestry_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -645,7 +645,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestryAncestors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 &datagoogleprojectancestry.DataGoogleProjectAncestryAncestors {
 
@@ -658,7 +658,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancest
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 &datagoogleprojectancestry.DataGoogleProjectAncestryConfig {
 	Connection: interface{},
@@ -793,7 +793,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestryAncestorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 datagoogleprojectancestry.NewDataGoogleProjectAncestryAncestorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleProjectAncestryAncestorsList
 ```
@@ -942,7 +942,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjectAncestry.DataGoogleProjectAncestryAncestorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleprojectancestry"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprojectancestry"
 
 datagoogleprojectancestry.NewDataGoogleProjectAncestryAncestorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleProjectAncestryAncestorsOutputReference
 ```

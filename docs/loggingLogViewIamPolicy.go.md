@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiampolicy"
 
 logginglogviewiampolicy.NewLoggingLogViewIamPolicy(scope Construct, id *string, config LoggingLogViewIamPolicyConfig) LoggingLogViewIamPolicy
 ```
@@ -392,7 +392,7 @@ func ResetLocation()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiampolicy"
 
 logginglogviewiampolicy.LoggingLogViewIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -424,7 +424,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiampolicy"
 
 logginglogviewiampolicy.LoggingLogViewIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -438,7 +438,7 @@ logginglogviewiampolicy.LoggingLogViewIamPolicy_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiampolicy"
 
 logginglogviewiampolicy.LoggingLogViewIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -452,7 +452,7 @@ logginglogviewiampolicy.LoggingLogViewIamPolicy_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiampolicy"
 
 logginglogviewiampolicy.LoggingLogViewIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -824,7 +824,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingLogViewIamPolicy.LoggingLogViewIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/logginglogviewiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/logginglogviewiampolicy"
 
 &logginglogviewiampolicy.LoggingLogViewIamPolicyConfig {
 	Connection: interface{},
