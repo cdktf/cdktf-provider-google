@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.NewBackupDrManagementServer(scope Construct, id *string, config BackupDrManagementServerConfig) BackupDrManagementServer
 ```
@@ -439,7 +439,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.BackupDrManagementServer_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.BackupDrManagementServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ backupdrmanagementserver.BackupDrManagementServer_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.BackupDrManagementServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ backupdrmanagementserver.BackupDrManagementServer_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.BackupDrManagementServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -904,7 +904,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 &backupdrmanagementserver.BackupDrManagementServerConfig {
 	Connection: interface{},
@@ -919,7 +919,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagements
 	Id: *string,
 	Networks: interface{},
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.backupDrManagementServer.BackupDrManagementServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.backupDrManagementServer.BackupDrManagementServerTimeouts,
 	Type: *string,
 }
 ```
@@ -1117,7 +1117,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerManagementUri.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 &backupdrmanagementserver.BackupDrManagementServerManagementUri {
 
@@ -1130,7 +1130,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagements
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerNetworks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 &backupdrmanagementserver.BackupDrManagementServerNetworks {
 	Network: *string,
@@ -1180,7 +1180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 &backupdrmanagementserver.BackupDrManagementServerTimeouts {
 	Create: *string,
@@ -1228,7 +1228,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerManagementUriList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.NewBackupDrManagementServerManagementUriList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BackupDrManagementServerManagementUriList
 ```
@@ -1377,7 +1377,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerManagementUriOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.NewBackupDrManagementServerManagementUriOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BackupDrManagementServerManagementUriOutputReference
 ```
@@ -1666,7 +1666,7 @@ func InternalValue() BackupDrManagementServerManagementUri
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerNetworksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.NewBackupDrManagementServerNetworksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BackupDrManagementServerNetworksList
 ```
@@ -1826,7 +1826,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerNetworksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.NewBackupDrManagementServerNetworksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BackupDrManagementServerNetworksOutputReference
 ```
@@ -2144,7 +2144,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.backupDrManagementServer.BackupDrManagementServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/backupdrmanagementserver"
+import "github.com/cdktf/cdktf-provider-google-go/google/backupdrmanagementserver"
 
 backupdrmanagementserver.NewBackupDrManagementServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupDrManagementServerTimeoutsOutputReference
 ```

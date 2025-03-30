@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnections.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.NewRedisClusterUserCreatedConnections(scope Construct, id *string, config RedisClusterUserCreatedConnectionsConfig) RedisClusterUserCreatedConnections
 ```
@@ -432,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnections.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.RedisClusterUserCreatedConnections_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnections.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.RedisClusterUserCreatedConnections_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ redisclusterusercreatedconnections.RedisClusterUserCreatedConnections_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnections.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.RedisClusterUserCreatedConnections_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ redisclusterusercreatedconnections.RedisClusterUserCreatedConnections_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnections.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.RedisClusterUserCreatedConnections_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -853,7 +853,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpoints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 &redisclusterusercreatedconnections.RedisClusterUserCreatedConnectionsClusterEndpoints {
 	Connections: interface{},
@@ -887,10 +887,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnections.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 &redisclusterusercreatedconnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnections {
-	PscConnection: github.com/cdktf/cdktf-provider-google-go/google/v14.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPscConnection,
+	PscConnection: github.com/cdktf/cdktf-provider-google-go/google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPscConnection,
 }
 ```
 
@@ -921,7 +921,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPscConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 &redisclusterusercreatedconnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPscConnection {
 	Address: *string,
@@ -1035,7 +1035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 &redisclusterusercreatedconnections.RedisClusterUserCreatedConnectionsConfig {
 	Connection: interface{},
@@ -1050,7 +1050,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercre
 	ClusterEndpoints: interface{},
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsTimeouts,
 }
 ```
 
@@ -1232,7 +1232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 &redisclusterusercreatedconnections.RedisClusterUserCreatedConnectionsTimeouts {
 	Create: *string,
@@ -1294,7 +1294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.NewRedisClusterUserCreatedConnectionsClusterEndpointsConnectionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsList
 ```
@@ -1454,7 +1454,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.NewRedisClusterUserCreatedConnectionsClusterEndpointsConnectionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsOutputReference
 ```
@@ -1763,7 +1763,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPscConnectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.NewRedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPscConnectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPscConnectionOutputReference
 ```
@@ -2173,7 +2173,7 @@ func InternalValue() RedisClusterUserCreatedConnectionsClusterEndpointsConnectio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.NewRedisClusterUserCreatedConnectionsClusterEndpointsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisClusterUserCreatedConnectionsClusterEndpointsList
 ```
@@ -2333,7 +2333,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsClusterEndpointsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.NewRedisClusterUserCreatedConnectionsClusterEndpointsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisClusterUserCreatedConnectionsClusterEndpointsOutputReference
 ```
@@ -2642,7 +2642,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisClusterUserCreatedConnections.RedisClusterUserCreatedConnectionsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/redisclusterusercreatedconnections"
+import "github.com/cdktf/cdktf-provider-google-go/google/redisclusterusercreatedconnections"
 
 redisclusterusercreatedconnections.NewRedisClusterUserCreatedConnectionsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisClusterUserCreatedConnectionsTimeoutsOutputReference
 ```
