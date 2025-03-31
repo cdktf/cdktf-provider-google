@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplateiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancetemplateiambinding"
 
 computeinstancetemplateiambinding.NewComputeInstanceTemplateIamBinding(scope Construct, id *string, config ComputeInstanceTemplateIamBindingConfig) ComputeInstanceTemplateIamBinding
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplateiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancetemplateiambinding"
 
 computeinstancetemplateiambinding.ComputeInstanceTemplateIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplateiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancetemplateiambinding"
 
 computeinstancetemplateiambinding.ComputeInstanceTemplateIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ computeinstancetemplateiambinding.ComputeInstanceTemplateIamBinding_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplateiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancetemplateiambinding"
 
 computeinstancetemplateiambinding.ComputeInstanceTemplateIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ computeinstancetemplateiambinding.ComputeInstanceTemplateIamBinding_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplateiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancetemplateiambinding"
 
 computeinstancetemplateiambinding.ComputeInstanceTemplateIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -844,7 +844,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplateiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancetemplateiambinding"
 
 &computeinstancetemplateiambinding.ComputeInstanceTemplateIamBindingCondition {
 	Expression: *string,
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplateiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancetemplateiambinding"
 
 &computeinstancetemplateiambinding.ComputeInstanceTemplateIamBindingConfig {
 	Connection: interface{},
@@ -917,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplate
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancetemplateiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v14/computeinstancetemplateiambinding"
 
 computeinstancetemplateiambinding.NewComputeInstanceTemplateIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceTemplateIamBindingConditionOutputReference
 ```
