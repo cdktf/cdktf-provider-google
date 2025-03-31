@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.NewDataprocGdcApplicationEnvironment(scope Construct, id *string, config DataprocGdcApplicationEnvironmentConfig) DataprocGdcApplicationEnvironment
 ```
@@ -467,7 +467,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -527,7 +527,7 @@ dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1075,7 +1075,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 &dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironmentConfig {
 	Connection: interface{},
@@ -1094,8 +1094,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicat
 	Labels: *map[string]*string,
 	Namespace: *string,
 	Project: *string,
-	SparkApplicationEnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts,
+	SparkApplicationEnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts,
 }
 ```
 
@@ -1360,7 +1360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 &dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfig {
 	DefaultProperties: *map[string]*string,
@@ -1412,7 +1412,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 &dataprocgdcapplicationenvironment.DataprocGdcApplicationEnvironmentTimeouts {
 	Create: *string,
@@ -1474,7 +1474,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.NewDataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocGdcApplicationEnvironmentSparkApplicationEnvironmentConfigOutputReference
 ```
@@ -1781,7 +1781,7 @@ func InternalValue() DataprocGdcApplicationEnvironmentSparkApplicationEnvironmen
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocGdcApplicationEnvironment.DataprocGdcApplicationEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/dataprocgdcapplicationenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocgdcapplicationenvironment"
 
 dataprocgdcapplicationenvironment.NewDataprocGdcApplicationEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocGdcApplicationEnvironmentTimeoutsOutputReference
 ```
