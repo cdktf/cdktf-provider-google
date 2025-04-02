@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/memorystore_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/memorystore_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleMemorystoreInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/memorystore_instance#id DataGoogleMemorystoreInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/memorystore_instance#id DataGoogleMemorystoreInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,19 +26,519 @@ export interface DataGoogleMemorystoreInstanceConfig extends cdktf.TerraformMeta
   * * Must not end with a hyphen
   * * Must be unique within a location
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/memorystore_instance#instance_id DataGoogleMemorystoreInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/memorystore_instance#instance_id DataGoogleMemorystoreInstance#instance_id}
   */
   readonly instanceId: string;
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122. See documentation for resource type 'memorystore.googleapis.com/CertificateAuthority'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/memorystore_instance#location DataGoogleMemorystoreInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/memorystore_instance#location DataGoogleMemorystoreInstance#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/memorystore_instance#project DataGoogleMemorystoreInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/memorystore_instance#project DataGoogleMemorystoreInstance#project}
   */
   readonly project?: string;
+}
+export interface DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstance {
+}
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstanceToTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstanceToHclTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstanceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstance | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstance | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // instance - computed: true, optional: false, required: false
+  public get instance() {
+    return this.getStringAttribute('instance');
+  }
+
+  // uid - computed: true, optional: false, required: false
+  public get uid() {
+    return this.getStringAttribute('uid');
+  }
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstanceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstanceOutputReference {
+    return new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstanceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstance {
+}
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstanceToTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstanceToHclTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstanceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstance | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstance | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // instance - computed: true, optional: false, required: false
+  public get instance() {
+    return this.getStringAttribute('instance');
+  }
+
+  // uid - computed: true, optional: false, required: false
+  public get uid() {
+    return this.getStringAttribute('uid');
+  }
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstanceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstanceOutputReference {
+    return new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstanceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembership {
+}
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipToTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembership): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipToHclTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembership): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembership | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembership | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // primary_instance - computed: true, optional: false, required: false
+  private _primaryInstance = new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipPrimaryInstanceList(this, "primary_instance", false);
+  public get primaryInstance() {
+    return this._primaryInstance;
+  }
+
+  // secondary_instance - computed: true, optional: false, required: false
+  private _secondaryInstance = new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipSecondaryInstanceList(this, "secondary_instance", false);
+  public get secondaryInstance() {
+    return this._secondaryInstance;
+  }
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipOutputReference {
+    return new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstance {
+}
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstanceToTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstanceToHclTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstanceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstance | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstance | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // instance - computed: true, optional: false, required: false
+  public get instance() {
+    return this.getStringAttribute('instance');
+  }
+
+  // uid - computed: true, optional: false, required: false
+  public get uid() {
+    return this.getStringAttribute('uid');
+  }
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstanceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstanceOutputReference {
+    return new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstanceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstances {
+}
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstancesToTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstances): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstancesToHclTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstances): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstancesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstances | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstances | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // instance - computed: true, optional: false, required: false
+  public get instance() {
+    return this.getStringAttribute('instance');
+  }
+
+  // uid - computed: true, optional: false, required: false
+  public get uid() {
+    return this.getStringAttribute('uid');
+  }
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstancesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstancesOutputReference {
+    return new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstancesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleMemorystoreInstanceCrossInstanceReplicationConfig {
+}
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigToTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleMemorystoreInstanceCrossInstanceReplicationConfigToHclTerraform(struct?: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleMemorystoreInstanceCrossInstanceReplicationConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // instance_role - computed: true, optional: false, required: false
+  public get instanceRole() {
+    return this.getStringAttribute('instance_role');
+  }
+
+  // membership - computed: true, optional: false, required: false
+  private _membership = new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigMembershipList(this, "membership", false);
+  public get membership() {
+    return this._membership;
+  }
+
+  // primary_instance - computed: true, optional: false, required: false
+  private _primaryInstance = new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigPrimaryInstanceList(this, "primary_instance", false);
+  public get primaryInstance() {
+    return this._primaryInstance;
+  }
+
+  // secondary_instances - computed: true, optional: false, required: false
+  private _secondaryInstances = new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigSecondaryInstancesList(this, "secondary_instances", false);
+  public get secondaryInstances() {
+    return this._secondaryInstances;
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+}
+
+export class DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigOutputReference {
+    return new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataGoogleMemorystoreInstanceDesiredPscAutoConnections {
 }
@@ -1136,6 +1631,86 @@ export class DataGoogleMemorystoreInstancePersistenceConfigList extends cdktf.Co
     return new DataGoogleMemorystoreInstancePersistenceConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleMemorystoreInstancePscAttachmentDetails {
+}
+
+export function dataGoogleMemorystoreInstancePscAttachmentDetailsToTerraform(struct?: DataGoogleMemorystoreInstancePscAttachmentDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleMemorystoreInstancePscAttachmentDetailsToHclTerraform(struct?: DataGoogleMemorystoreInstancePscAttachmentDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleMemorystoreInstancePscAttachmentDetailsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleMemorystoreInstancePscAttachmentDetails | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleMemorystoreInstancePscAttachmentDetails | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // connection_type - computed: true, optional: false, required: false
+  public get connectionType() {
+    return this.getStringAttribute('connection_type');
+  }
+
+  // service_attachment - computed: true, optional: false, required: false
+  public get serviceAttachment() {
+    return this.getStringAttribute('service_attachment');
+  }
+}
+
+export class DataGoogleMemorystoreInstancePscAttachmentDetailsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleMemorystoreInstancePscAttachmentDetailsOutputReference {
+    return new DataGoogleMemorystoreInstancePscAttachmentDetailsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleMemorystoreInstancePscAutoConnections {
 }
 
@@ -1300,6 +1875,16 @@ export class DataGoogleMemorystoreInstanceStateInfoUpdateInfoOutputReference ext
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // target_engine_version - computed: true, optional: false, required: false
+  public get targetEngineVersion() {
+    return this.getStringAttribute('target_engine_version');
+  }
+
+  // target_node_type - computed: true, optional: false, required: false
+  public get targetNodeType() {
+    return this.getStringAttribute('target_node_type');
   }
 
   // target_replica_count - computed: true, optional: false, required: false
@@ -1489,7 +2074,7 @@ export class DataGoogleMemorystoreInstanceZoneDistributionConfigList extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/memorystore_instance google_memorystore_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/memorystore_instance google_memorystore_instance}
 */
 export class DataGoogleMemorystoreInstance extends cdktf.TerraformDataSource {
 
@@ -1505,7 +2090,7 @@ export class DataGoogleMemorystoreInstance extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleMemorystoreInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleMemorystoreInstance to import
-  * @param importFromId The id of the existing DataGoogleMemorystoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/memorystore_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleMemorystoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/memorystore_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleMemorystoreInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1517,7 +2102,7 @@ export class DataGoogleMemorystoreInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/memorystore_instance google_memorystore_instance} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/memorystore_instance google_memorystore_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1528,7 +2113,7 @@ export class DataGoogleMemorystoreInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_memorystore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1557,6 +2142,12 @@ export class DataGoogleMemorystoreInstance extends cdktf.TerraformDataSource {
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
+  }
+
+  // cross_instance_replication_config - computed: true, optional: false, required: false
+  private _crossInstanceReplicationConfig = new DataGoogleMemorystoreInstanceCrossInstanceReplicationConfigList(this, "cross_instance_replication_config", false);
+  public get crossInstanceReplicationConfig() {
+    return this._crossInstanceReplicationConfig;
   }
 
   // deletion_protection_enabled - computed: true, optional: false, required: false
@@ -1703,6 +2294,12 @@ export class DataGoogleMemorystoreInstance extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project;
+  }
+
+  // psc_attachment_details - computed: true, optional: false, required: false
+  private _pscAttachmentDetails = new DataGoogleMemorystoreInstancePscAttachmentDetailsList(this, "psc_attachment_details", false);
+  public get pscAttachmentDetails() {
+    return this._pscAttachmentDetails;
   }
 
   // psc_auto_connections - computed: true, optional: false, required: false

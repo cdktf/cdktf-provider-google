@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance#id DataGoogleComputeInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance#id DataGoogleComputeInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,25 +17,25 @@ export interface DataGoogleComputeInstanceConfig extends cdktf.TerraformMetaArgu
   /**
   * The name of the instance. One of name or self_link must be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance#name DataGoogleComputeInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance#name DataGoogleComputeInstance#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance#project DataGoogleComputeInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance#project DataGoogleComputeInstance#project}
   */
   readonly project?: string;
   /**
   * The URI of the created resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance#self_link DataGoogleComputeInstance#self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance#self_link DataGoogleComputeInstance#self_link}
   */
   readonly selfLink?: string;
   /**
   * The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance#zone DataGoogleComputeInstance#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance#zone DataGoogleComputeInstance#zone}
   */
   readonly zone?: string;
 }
@@ -205,9 +200,19 @@ export class DataGoogleComputeInstanceAttachedDiskOutputReference extends cdktf.
     return this.getStringAttribute('disk_encryption_key_raw');
   }
 
+  // disk_encryption_key_rsa - computed: true, optional: false, required: false
+  public get diskEncryptionKeyRsa() {
+    return this.getStringAttribute('disk_encryption_key_rsa');
+  }
+
   // disk_encryption_key_sha256 - computed: true, optional: false, required: false
   public get diskEncryptionKeySha256() {
     return this.getStringAttribute('disk_encryption_key_sha256');
+  }
+
+  // disk_encryption_service_account - computed: true, optional: false, required: false
+  public get diskEncryptionServiceAccount() {
+    return this.getStringAttribute('disk_encryption_service_account');
   }
 
   // kms_key_self_link - computed: true, optional: false, required: false
@@ -242,6 +247,196 @@ export class DataGoogleComputeInstanceAttachedDiskList extends cdktf.ComplexList
   */
   public get(index: number): DataGoogleComputeInstanceAttachedDiskOutputReference {
     return new DataGoogleComputeInstanceAttachedDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey {
+}
+
+export function dataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyToTerraform(struct?: DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyToHclTerraform(struct?: DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // kms_key_self_link - computed: true, optional: false, required: false
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+
+  // kms_key_service_account - computed: true, optional: false, required: false
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+
+  // raw_key - computed: true, optional: false, required: false
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+
+  // rsa_encrypted_key - computed: true, optional: false, required: false
+  public get rsaEncryptedKey() {
+    return this.getStringAttribute('rsa_encrypted_key');
+  }
+
+  // sha256 - computed: true, optional: false, required: false
+  public get sha256() {
+    return this.getStringAttribute('sha256');
+  }
+}
+
+export class DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference {
+    return new DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey {
+}
+
+export function dataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyToTerraform(struct?: DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyToHclTerraform(struct?: DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // kms_key_self_link - computed: true, optional: false, required: false
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+
+  // kms_key_service_account - computed: true, optional: false, required: false
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+
+  // raw_key - computed: true, optional: false, required: false
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+
+  // rsa_encrypted_key - computed: true, optional: false, required: false
+  public get rsaEncryptedKey() {
+    return this.getStringAttribute('rsa_encrypted_key');
+  }
+
+  // sha256 - computed: true, optional: false, required: false
+  public get sha256() {
+    return this.getStringAttribute('sha256');
+  }
+}
+
+export class DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference {
+    return new DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleComputeInstanceBootDiskInitializeParams {
@@ -342,6 +537,23 @@ export class DataGoogleComputeInstanceBootDiskInitializeParamsOutputReference ex
     return this.getNumberAttribute('size');
   }
 
+  // snapshot - computed: true, optional: false, required: false
+  public get snapshot() {
+    return this.getStringAttribute('snapshot');
+  }
+
+  // source_image_encryption_key - computed: true, optional: false, required: false
+  private _sourceImageEncryptionKey = new DataGoogleComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyList(this, "source_image_encryption_key", false);
+  public get sourceImageEncryptionKey() {
+    return this._sourceImageEncryptionKey;
+  }
+
+  // source_snapshot_encryption_key - computed: true, optional: false, required: false
+  private _sourceSnapshotEncryptionKey = new DataGoogleComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyList(this, "source_snapshot_encryption_key", false);
+  public get sourceSnapshotEncryptionKey() {
+    return this._sourceSnapshotEncryptionKey;
+  }
+
   // storage_pool - computed: true, optional: false, required: false
   public get storagePool() {
     return this.getStringAttribute('storage_pool');
@@ -437,9 +649,19 @@ export class DataGoogleComputeInstanceBootDiskOutputReference extends cdktf.Comp
     return this.getStringAttribute('disk_encryption_key_raw');
   }
 
+  // disk_encryption_key_rsa - computed: true, optional: false, required: false
+  public get diskEncryptionKeyRsa() {
+    return this.getStringAttribute('disk_encryption_key_rsa');
+  }
+
   // disk_encryption_key_sha256 - computed: true, optional: false, required: false
   public get diskEncryptionKeySha256() {
     return this.getStringAttribute('disk_encryption_key_sha256');
+  }
+
+  // disk_encryption_service_account - computed: true, optional: false, required: false
+  public get diskEncryptionServiceAccount() {
+    return this.getStringAttribute('disk_encryption_service_account');
   }
 
   // guest_os_features - computed: true, optional: false, required: false
@@ -650,6 +872,91 @@ export class DataGoogleComputeInstanceGuestAcceleratorList extends cdktf.Complex
   */
   public get(index: number): DataGoogleComputeInstanceGuestAcceleratorOutputReference {
     return new DataGoogleComputeInstanceGuestAcceleratorOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeInstanceInstanceEncryptionKey {
+}
+
+export function dataGoogleComputeInstanceInstanceEncryptionKeyToTerraform(struct?: DataGoogleComputeInstanceInstanceEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleComputeInstanceInstanceEncryptionKeyToHclTerraform(struct?: DataGoogleComputeInstanceInstanceEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleComputeInstanceInstanceEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeInstanceInstanceEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeInstanceInstanceEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // kms_key_self_link - computed: true, optional: false, required: false
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+
+  // kms_key_service_account - computed: true, optional: false, required: false
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+
+  // sha256 - computed: true, optional: false, required: false
+  public get sha256() {
+    return this.getStringAttribute('sha256');
+  }
+}
+
+export class DataGoogleComputeInstanceInstanceEncryptionKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeInstanceInstanceEncryptionKeyOutputReference {
+    return new DataGoogleComputeInstanceInstanceEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleComputeInstanceNetworkInterfaceAccessConfig {
@@ -2078,7 +2385,7 @@ export class DataGoogleComputeInstanceShieldedInstanceConfigList extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance google_compute_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance google_compute_instance}
 */
 export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
@@ -2094,7 +2401,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleComputeInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeInstance to import
-  * @param importFromId The id of the existing DataGoogleComputeInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2106,7 +2413,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/compute_instance google_compute_instance} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/compute_instance google_compute_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2117,7 +2424,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -2239,6 +2546,12 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // instance_encryption_key - computed: true, optional: false, required: false
+  private _instanceEncryptionKey = new DataGoogleComputeInstanceInstanceEncryptionKeyList(this, "instance_encryption_key", false);
+  public get instanceEncryptionKey() {
+    return this._instanceEncryptionKey;
   }
 
   // instance_id - computed: true, optional: false, required: false

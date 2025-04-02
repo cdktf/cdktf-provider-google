@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface RedisClusterUserCreatedConnectionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#id RedisClusterUserCreatedConnections#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#id RedisClusterUserCreatedConnections#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,29 +17,29 @@ export interface RedisClusterUserCreatedConnectionsConfig extends cdktf.Terrafor
   /**
   * The name of the Redis cluster these endpoints should be added to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#name RedisClusterUserCreatedConnections#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#name RedisClusterUserCreatedConnections#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#project RedisClusterUserCreatedConnections#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#project RedisClusterUserCreatedConnections#project}
   */
   readonly project?: string;
   /**
   * The name of the region of the Redis cluster these endpoints should be added to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#region RedisClusterUserCreatedConnections#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#region RedisClusterUserCreatedConnections#region}
   */
   readonly region: string;
   /**
   * cluster_endpoints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#cluster_endpoints RedisClusterUserCreatedConnections#cluster_endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#cluster_endpoints RedisClusterUserCreatedConnections#cluster_endpoints}
   */
   readonly clusterEndpoints?: RedisClusterUserCreatedConnectionsClusterEndpoints[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#timeouts RedisClusterUserCreatedConnections#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#timeouts RedisClusterUserCreatedConnections#timeouts}
   */
   readonly timeouts?: RedisClusterUserCreatedConnectionsTimeouts;
 }
@@ -52,7 +47,7 @@ export interface RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPs
   /**
   * The IP allocated on the consumer network for the PSC forwarding rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#address RedisClusterUserCreatedConnections#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#address RedisClusterUserCreatedConnections#address}
   */
   readonly address: string;
   /**
@@ -60,33 +55,33 @@ export interface RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPs
   * Format:
   * projects/{project}/regions/{region}/forwardingRules/{forwarding_rule}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#forwarding_rule RedisClusterUserCreatedConnections#forwarding_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#forwarding_rule RedisClusterUserCreatedConnections#forwarding_rule}
   */
   readonly forwardingRule: string;
   /**
   * The consumer network where the IP address resides, in the form of
   * projects/{project_id}/global/networks/{network_id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#network RedisClusterUserCreatedConnections#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#network RedisClusterUserCreatedConnections#network}
   */
   readonly network: string;
   /**
   * The consumer project_id where the forwarding rule is created from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#project_id RedisClusterUserCreatedConnections#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#project_id RedisClusterUserCreatedConnections#project_id}
   */
   readonly projectId?: string;
   /**
   * The PSC connection id of the forwarding rule connected to the
   * service attachment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#psc_connection_id RedisClusterUserCreatedConnections#psc_connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#psc_connection_id RedisClusterUserCreatedConnections#psc_connection_id}
   */
   readonly pscConnectionId: string;
   /**
   * The service attachment which is the target of the PSC connection, in the form of projects/{project-id}/regions/{region}/serviceAttachments/{service-attachment-id}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#service_attachment RedisClusterUserCreatedConnections#service_attachment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#service_attachment RedisClusterUserCreatedConnections#service_attachment}
   */
   readonly serviceAttachment: string;
 }
@@ -312,7 +307,7 @@ export interface RedisClusterUserCreatedConnectionsClusterEndpointsConnections {
   /**
   * psc_connection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#psc_connection RedisClusterUserCreatedConnections#psc_connection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#psc_connection RedisClusterUserCreatedConnections#psc_connection}
   */
   readonly pscConnection?: RedisClusterUserCreatedConnectionsClusterEndpointsConnectionsPscConnection;
 }
@@ -430,7 +425,7 @@ export interface RedisClusterUserCreatedConnectionsClusterEndpoints {
   /**
   * connections block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#connections RedisClusterUserCreatedConnections#connections}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#connections RedisClusterUserCreatedConnections#connections}
   */
   readonly connections?: RedisClusterUserCreatedConnectionsClusterEndpointsConnections[] | cdktf.IResolvable;
 }
@@ -546,15 +541,15 @@ export class RedisClusterUserCreatedConnectionsClusterEndpointsList extends cdkt
 }
 export interface RedisClusterUserCreatedConnectionsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#create RedisClusterUserCreatedConnections#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#create RedisClusterUserCreatedConnections#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#delete RedisClusterUserCreatedConnections#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#delete RedisClusterUserCreatedConnections#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#update RedisClusterUserCreatedConnections#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#update RedisClusterUserCreatedConnections#update}
   */
   readonly update?: string;
 }
@@ -706,7 +701,7 @@ export class RedisClusterUserCreatedConnectionsTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections google_redis_cluster_user_created_connections}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections google_redis_cluster_user_created_connections}
 */
 export class RedisClusterUserCreatedConnections extends cdktf.TerraformResource {
 
@@ -722,7 +717,7 @@ export class RedisClusterUserCreatedConnections extends cdktf.TerraformResource 
   * Generates CDKTF code for importing a RedisClusterUserCreatedConnections resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the RedisClusterUserCreatedConnections to import
-  * @param importFromId The id of the existing RedisClusterUserCreatedConnections that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing RedisClusterUserCreatedConnections that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the RedisClusterUserCreatedConnections to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -734,7 +729,7 @@ export class RedisClusterUserCreatedConnections extends cdktf.TerraformResource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/redis_cluster_user_created_connections google_redis_cluster_user_created_connections} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/redis_cluster_user_created_connections google_redis_cluster_user_created_connections} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -745,7 +740,7 @@ export class RedisClusterUserCreatedConnections extends cdktf.TerraformResource 
       terraformResourceType: 'google_redis_cluster_user_created_connections',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

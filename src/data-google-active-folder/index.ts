@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/active_folder
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/active_folder
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,28 +10,28 @@ export interface DataGoogleActiveFolderConfig extends cdktf.TerraformMetaArgumen
   /**
   * Provides the REST method through which to find the folder. LIST is recommended as it is strongly consistent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/active_folder#api_method DataGoogleActiveFolder#api_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/active_folder#api_method DataGoogleActiveFolder#api_method}
   */
   readonly apiMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}
   */
   readonly parent: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/active_folder google_active_folder}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/active_folder google_active_folder}
 */
 export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
 
@@ -52,7 +47,7 @@ export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleActiveFolder resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleActiveFolder to import
-  * @param importFromId The id of the existing DataGoogleActiveFolder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/active_folder#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleActiveFolder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/active_folder#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleActiveFolder to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -64,7 +59,7 @@ export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/active_folder google_active_folder} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/active_folder google_active_folder} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -75,7 +70,7 @@ export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_active_folder',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

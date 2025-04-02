@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface IdentityPlatformTenantConfig extends cdktf.TerraformMetaArgumen
   /**
   * Whether to allow email/password user authentication.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#allow_password_signup IdentityPlatformTenant#allow_password_signup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#allow_password_signup IdentityPlatformTenant#allow_password_signup}
   */
   readonly allowPasswordSignup?: boolean | cdktf.IResolvable;
   /**
@@ -23,50 +18,263 @@ export interface IdentityPlatformTenantConfig extends cdktf.TerraformMetaArgumen
   * the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
   * are not able to manage its users.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#disable_auth IdentityPlatformTenant#disable_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#disable_auth IdentityPlatformTenant#disable_auth}
   */
   readonly disableAuth?: boolean | cdktf.IResolvable;
   /**
   * Human friendly display name of the tenant.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#display_name IdentityPlatformTenant#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#display_name IdentityPlatformTenant#display_name}
   */
   readonly displayName: string;
   /**
   * Whether to enable email link user authentication.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#enable_email_link_signin IdentityPlatformTenant#enable_email_link_signin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#enable_email_link_signin IdentityPlatformTenant#enable_email_link_signin}
   */
   readonly enableEmailLinkSignin?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#id IdentityPlatformTenant#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#id IdentityPlatformTenant#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#project IdentityPlatformTenant#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#project IdentityPlatformTenant#project}
   */
   readonly project?: string;
   /**
+  * client block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#client IdentityPlatformTenant#client}
+  */
+  readonly client?: IdentityPlatformTenantClient;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#timeouts IdentityPlatformTenant#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#timeouts IdentityPlatformTenant#timeouts}
   */
   readonly timeouts?: IdentityPlatformTenantTimeouts;
 }
+export interface IdentityPlatformTenantClientPermissions {
+  /**
+  * When true, end users cannot delete their account on the associated project through any of our API methods.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#disabled_user_deletion IdentityPlatformTenant#disabled_user_deletion}
+  */
+  readonly disabledUserDeletion?: boolean | cdktf.IResolvable;
+  /**
+  * When true, end users cannot sign up for a new account on the associated project through any of our API methods.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#disabled_user_signup IdentityPlatformTenant#disabled_user_signup}
+  */
+  readonly disabledUserSignup?: boolean | cdktf.IResolvable;
+}
+
+export function identityPlatformTenantClientPermissionsToTerraform(struct?: IdentityPlatformTenantClientPermissionsOutputReference | IdentityPlatformTenantClientPermissions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disabled_user_deletion: cdktf.booleanToTerraform(struct!.disabledUserDeletion),
+    disabled_user_signup: cdktf.booleanToTerraform(struct!.disabledUserSignup),
+  }
+}
+
+
+export function identityPlatformTenantClientPermissionsToHclTerraform(struct?: IdentityPlatformTenantClientPermissionsOutputReference | IdentityPlatformTenantClientPermissions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disabled_user_deletion: {
+      value: cdktf.booleanToHclTerraform(struct!.disabledUserDeletion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    disabled_user_signup: {
+      value: cdktf.booleanToHclTerraform(struct!.disabledUserSignup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class IdentityPlatformTenantClientPermissionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformTenantClientPermissions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._disabledUserDeletion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disabledUserDeletion = this._disabledUserDeletion;
+    }
+    if (this._disabledUserSignup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disabledUserSignup = this._disabledUserSignup;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformTenantClientPermissions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._disabledUserDeletion = undefined;
+      this._disabledUserSignup = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._disabledUserDeletion = value.disabledUserDeletion;
+      this._disabledUserSignup = value.disabledUserSignup;
+    }
+  }
+
+  // disabled_user_deletion - computed: false, optional: true, required: false
+  private _disabledUserDeletion?: boolean | cdktf.IResolvable; 
+  public get disabledUserDeletion() {
+    return this.getBooleanAttribute('disabled_user_deletion');
+  }
+  public set disabledUserDeletion(value: boolean | cdktf.IResolvable) {
+    this._disabledUserDeletion = value;
+  }
+  public resetDisabledUserDeletion() {
+    this._disabledUserDeletion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledUserDeletionInput() {
+    return this._disabledUserDeletion;
+  }
+
+  // disabled_user_signup - computed: false, optional: true, required: false
+  private _disabledUserSignup?: boolean | cdktf.IResolvable; 
+  public get disabledUserSignup() {
+    return this.getBooleanAttribute('disabled_user_signup');
+  }
+  public set disabledUserSignup(value: boolean | cdktf.IResolvable) {
+    this._disabledUserSignup = value;
+  }
+  public resetDisabledUserSignup() {
+    this._disabledUserSignup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledUserSignupInput() {
+    return this._disabledUserSignup;
+  }
+}
+export interface IdentityPlatformTenantClient {
+  /**
+  * permissions block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#permissions IdentityPlatformTenant#permissions}
+  */
+  readonly permissions?: IdentityPlatformTenantClientPermissions;
+}
+
+export function identityPlatformTenantClientToTerraform(struct?: IdentityPlatformTenantClientOutputReference | IdentityPlatformTenantClient): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    permissions: identityPlatformTenantClientPermissionsToTerraform(struct!.permissions),
+  }
+}
+
+
+export function identityPlatformTenantClientToHclTerraform(struct?: IdentityPlatformTenantClientOutputReference | IdentityPlatformTenantClient): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    permissions: {
+      value: identityPlatformTenantClientPermissionsToHclTerraform(struct!.permissions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "IdentityPlatformTenantClientPermissionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class IdentityPlatformTenantClientOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformTenantClient | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._permissions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permissions = this._permissions?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformTenantClient | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._permissions.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._permissions.internalValue = value.permissions;
+    }
+  }
+
+  // permissions - computed: false, optional: true, required: false
+  private _permissions = new IdentityPlatformTenantClientPermissionsOutputReference(this, "permissions");
+  public get permissions() {
+    return this._permissions;
+  }
+  public putPermissions(value: IdentityPlatformTenantClientPermissions) {
+    this._permissions.internalValue = value;
+  }
+  public resetPermissions() {
+    this._permissions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions.internalValue;
+  }
+}
 export interface IdentityPlatformTenantTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#create IdentityPlatformTenant#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#create IdentityPlatformTenant#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#delete IdentityPlatformTenant#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#delete IdentityPlatformTenant#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#update IdentityPlatformTenant#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#update IdentityPlatformTenant#update}
   */
   readonly update?: string;
 }
@@ -218,7 +426,7 @@ export class IdentityPlatformTenantTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant google_identity_platform_tenant}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant google_identity_platform_tenant}
 */
 export class IdentityPlatformTenant extends cdktf.TerraformResource {
 
@@ -234,7 +442,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IdentityPlatformTenant resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IdentityPlatformTenant to import
-  * @param importFromId The id of the existing IdentityPlatformTenant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IdentityPlatformTenant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IdentityPlatformTenant to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -246,7 +454,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant google_identity_platform_tenant} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant google_identity_platform_tenant} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -257,7 +465,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
       terraformResourceType: 'google_identity_platform_tenant',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -274,6 +482,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
     this._enableEmailLinkSignin = config.enableEmailLinkSignin;
     this._id = config.id;
     this._project = config.project;
+    this._client.internalValue = config.client;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -379,6 +588,22 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // client - computed: false, optional: true, required: false
+  private _client = new IdentityPlatformTenantClientOutputReference(this, "client");
+  public get client() {
+    return this._client;
+  }
+  public putClient(value: IdentityPlatformTenantClient) {
+    this._client.internalValue = value;
+  }
+  public resetClient() {
+    this._client.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientInput() {
+    return this._client.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new IdentityPlatformTenantTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -407,6 +632,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
       enable_email_link_signin: cdktf.booleanToTerraform(this._enableEmailLinkSignin),
       id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
+      client: identityPlatformTenantClientToTerraform(this._client.internalValue),
       timeouts: identityPlatformTenantTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -448,6 +674,12 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      client: {
+        value: identityPlatformTenantClientToHclTerraform(this._client.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IdentityPlatformTenantClientList",
       },
       timeouts: {
         value: identityPlatformTenantTimeoutsToHclTerraform(this._timeouts.internalValue),

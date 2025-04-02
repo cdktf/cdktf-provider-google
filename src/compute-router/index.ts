@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,18 +10,18 @@ export interface ComputeRouterConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#description ComputeRouter#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#description ComputeRouter#description}
   */
   readonly description?: string;
   /**
   * Indicates if a router is dedicated for use with encrypted VLAN
   * attachments (interconnectAttachments).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
   */
   readonly encryptedInterconnectRouter?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#id ComputeRouter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#id ComputeRouter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,35 +35,41 @@ export interface ComputeRouterConfig extends cdktf.TerraformMetaArguments {
   * following characters must be a dash, lowercase letter, or digit,
   * except the last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#name ComputeRouter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#name ComputeRouter#name}
   */
   readonly name: string;
   /**
   * A reference to the network to which this router belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#network ComputeRouter#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#network ComputeRouter#network}
   */
   readonly network: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#project ComputeRouter#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#project ComputeRouter#project}
   */
   readonly project?: string;
   /**
   * Region where the router resides.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#region ComputeRouter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#region ComputeRouter#region}
   */
   readonly region?: string;
   /**
   * bgp block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#bgp ComputeRouter#bgp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#bgp ComputeRouter#bgp}
   */
   readonly bgp?: ComputeRouterBgp;
   /**
+  * md5_authentication_keys block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#md5_authentication_keys ComputeRouter#md5_authentication_keys}
+  */
+  readonly md5AuthenticationKeys?: ComputeRouterMd5AuthenticationKeys;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#timeouts ComputeRouter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#timeouts ComputeRouter#timeouts}
   */
   readonly timeouts?: ComputeRouterTimeouts;
 }
@@ -76,14 +77,14 @@ export interface ComputeRouterBgpAdvertisedIpRanges {
   /**
   * User-specified description for the IP range.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#description ComputeRouter#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#description ComputeRouter#description}
   */
   readonly description?: string;
   /**
   * The IP range to advertise. The value must be a
   * CIDR-formatted string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#range ComputeRouter#range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#range ComputeRouter#range}
   */
   readonly range: string;
 }
@@ -227,7 +228,7 @@ export interface ComputeRouterBgp {
   /**
   * User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertise_mode ComputeRouter#advertise_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertise_mode ComputeRouter#advertise_mode}
   */
   readonly advertiseMode?: string;
   /**
@@ -239,7 +240,7 @@ export interface ComputeRouterBgp {
   * 
   * This enum field has the one valid value: ALL_SUBNETS
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertised_groups ComputeRouter#advertised_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertised_groups ComputeRouter#advertised_groups}
   */
   readonly advertisedGroups?: string[];
   /**
@@ -248,7 +249,7 @@ export interface ComputeRouterBgp {
   * this router resource. All VPN tunnels that link to this router
   * will have the same local ASN.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#asn ComputeRouter#asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#asn ComputeRouter#asn}
   */
   readonly asn: number;
   /**
@@ -258,7 +259,7 @@ export interface ComputeRouterBgp {
   * not overlap with any IPv4 BGP session ranges. Other vendors commonly
   * call this router ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#identifier_range ComputeRouter#identifier_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#identifier_range ComputeRouter#identifier_range}
   */
   readonly identifierRange?: string;
   /**
@@ -273,13 +274,13 @@ export interface ComputeRouterBgp {
   * between the two peers. If set, this value must be between 20 and 60.
   * The default is 20.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
   */
   readonly keepaliveInterval?: number;
   /**
   * advertised_ip_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
   */
   readonly advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable;
 }
@@ -503,17 +504,133 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
     return this._advertisedIpRanges.internalValue;
   }
 }
+export interface ComputeRouterMd5AuthenticationKeys {
+  /**
+  * Value of the key used for MD5 authentication.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#key ComputeRouter#key}
+  */
+  readonly key: string;
+  /**
+  * Name used to identify the key. Must be unique within a router.
+  * Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#name ComputeRouter#name}
+  */
+  readonly name: string;
+}
+
+export function computeRouterMd5AuthenticationKeysToTerraform(struct?: ComputeRouterMd5AuthenticationKeysOutputReference | ComputeRouterMd5AuthenticationKeys): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function computeRouterMd5AuthenticationKeysToHclTerraform(struct?: ComputeRouterMd5AuthenticationKeysOutputReference | ComputeRouterMd5AuthenticationKeys): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeRouterMd5AuthenticationKeysOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeRouterMd5AuthenticationKeys | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterMd5AuthenticationKeys | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._key = undefined;
+      this._name = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._key = value.key;
+      this._name = value.name;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
 export interface ComputeRouterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#create ComputeRouter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#create ComputeRouter#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#delete ComputeRouter#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#delete ComputeRouter#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#update ComputeRouter#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#update ComputeRouter#update}
   */
   readonly update?: string;
 }
@@ -665,7 +782,7 @@ export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router google_compute_router}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router google_compute_router}
 */
 export class ComputeRouter extends cdktf.TerraformResource {
 
@@ -681,7 +798,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRouter resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRouter to import
-  * @param importFromId The id of the existing ComputeRouter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRouter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRouter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -693,7 +810,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router google_compute_router} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router google_compute_router} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -704,7 +821,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -723,6 +840,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._bgp.internalValue = config.bgp;
+    this._md5AuthenticationKeys.internalValue = config.md5AuthenticationKeys;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -862,6 +980,22 @@ export class ComputeRouter extends cdktf.TerraformResource {
     return this._bgp.internalValue;
   }
 
+  // md5_authentication_keys - computed: false, optional: true, required: false
+  private _md5AuthenticationKeys = new ComputeRouterMd5AuthenticationKeysOutputReference(this, "md5_authentication_keys");
+  public get md5AuthenticationKeys() {
+    return this._md5AuthenticationKeys;
+  }
+  public putMd5AuthenticationKeys(value: ComputeRouterMd5AuthenticationKeys) {
+    this._md5AuthenticationKeys.internalValue = value;
+  }
+  public resetMd5AuthenticationKeys() {
+    this._md5AuthenticationKeys.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get md5AuthenticationKeysInput() {
+    return this._md5AuthenticationKeys.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ComputeRouterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -892,6 +1026,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       bgp: computeRouterBgpToTerraform(this._bgp.internalValue),
+      md5_authentication_keys: computeRouterMd5AuthenticationKeysToTerraform(this._md5AuthenticationKeys.internalValue),
       timeouts: computeRouterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -945,6 +1080,12 @@ export class ComputeRouter extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "ComputeRouterBgpList",
+      },
+      md5_authentication_keys: {
+        value: computeRouterMd5AuthenticationKeysToHclTerraform(this._md5AuthenticationKeys.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeRouterMd5AuthenticationKeysList",
       },
       timeouts: {
         value: computeRouterTimeoutsToHclTerraform(this._timeouts.internalValue),
