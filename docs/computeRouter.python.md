@@ -4,7 +4,7 @@
 
 ### ComputeRouter <a name="ComputeRouter" id="@cdktf/provider-google.computeRouter.ComputeRouter"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router google_compute_router}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router google_compute_router}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouter.ComputeRouter.Initializer"></a>
 
@@ -27,6 +27,7 @@ computeRouter.ComputeRouter(
   description: str = None,
   encrypted_interconnect_router: typing.Union[bool, IResolvable] = None,
   id: str = None,
+  md5_authentication_keys: ComputeRouterMd5AuthenticationKeys = None,
   project: str = None,
   region: str = None,
   timeouts: ComputeRouterTimeouts = None
@@ -49,8 +50,9 @@ computeRouter.ComputeRouter(
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.bgp">bgp</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterBgp">ComputeRouterBgp</a></code> | bgp block. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.description">description</a></code> | <code>str</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.encryptedInterconnectRouter">encrypted_interconnect_router</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). |
-| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#id ComputeRouter#id}. |
-| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#project ComputeRouter#project}. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#id ComputeRouter#id}. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.md5AuthenticationKeys">md5_authentication_keys</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys">ComputeRouterMd5AuthenticationKeys</a></code> | md5_authentication_keys block. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#project ComputeRouter#project}. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.region">region</a></code> | <code>str</code> | Region where the router resides. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeouts">ComputeRouterTimeouts</a></code> | timeouts block. |
 
@@ -129,7 +131,7 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#name ComputeRouter#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#name ComputeRouter#name}
 
 ---
 
@@ -139,7 +141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A reference to the network to which this router belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#network ComputeRouter#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#network ComputeRouter#network}
 
 ---
 
@@ -149,7 +151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 bgp block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#bgp ComputeRouter#bgp}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#bgp ComputeRouter#bgp}
 
 ---
 
@@ -159,7 +161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#description ComputeRouter#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#description ComputeRouter#description}
 
 ---
 
@@ -169,7 +171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
 
 ---
 
@@ -177,10 +179,20 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#id ComputeRouter#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#id ComputeRouter#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `md5_authentication_keys`<sup>Optional</sup> <a name="md5_authentication_keys" id="@cdktf/provider-google.computeRouter.ComputeRouter.Initializer.parameter.md5AuthenticationKeys"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys">ComputeRouterMd5AuthenticationKeys</a>
+
+md5_authentication_keys block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#md5_authentication_keys ComputeRouter#md5_authentication_keys}
 
 ---
 
@@ -188,7 +200,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#project ComputeRouter#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#project ComputeRouter#project}.
 
 ---
 
@@ -198,7 +210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Region where the router resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#region ComputeRouter#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#region ComputeRouter#region}
 
 ---
 
@@ -208,7 +220,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#timeouts ComputeRouter#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#timeouts ComputeRouter#timeouts}
 
 ---
 
@@ -240,11 +252,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.putBgp">put_bgp</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.putMd5AuthenticationKeys">put_md5_authentication_keys</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.putTimeouts">put_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.resetBgp">reset_bgp</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.resetDescription">reset_description</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.resetEncryptedInterconnectRouter">reset_encrypted_interconnect_router</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.resetMd5AuthenticationKeys">reset_md5_authentication_keys</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.resetProject">reset_project</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.resetRegion">reset_region</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.resetTimeouts">reset_timeouts</a></code> | *No description.* |
@@ -600,7 +614,7 @@ private ASN, either 16-bit or 32-bit. The value will be fixed for
 this router resource. All VPN tunnels that link to this router
 will have the same local ASN.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#asn ComputeRouter#asn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#asn ComputeRouter#asn}
 
 ---
 
@@ -617,7 +631,7 @@ blank to advertise no custom groups.
 
 This enum field has the one valid value: ALL_SUBNETS
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertised_groups ComputeRouter#advertised_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertised_groups ComputeRouter#advertised_groups}
 
 ---
 
@@ -627,7 +641,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 advertised_ip_ranges block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
 
 ---
 
@@ -637,7 +651,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertise_mode ComputeRouter#advertise_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertise_mode ComputeRouter#advertise_mode}
 
 ---
 
@@ -652,7 +666,7 @@ size at least /30, even if the BGP sessions are over IPv6. It must
 not overlap with any IPv4 BGP session ranges. Other vendors commonly
 call this router ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#identifier_range ComputeRouter#identifier_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#identifier_range ComputeRouter#identifier_range}
 
 ---
 
@@ -672,7 +686,39 @@ peer's hold time value as the hold time for the BGP connection
 between the two peers. If set, this value must be between 20 and 60.
 The default is 20.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
+
+---
+
+##### `put_md5_authentication_keys` <a name="put_md5_authentication_keys" id="@cdktf/provider-google.computeRouter.ComputeRouter.putMd5AuthenticationKeys"></a>
+
+```python
+def put_md5_authentication_keys(
+  key: str,
+  name: str
+) -> None
+```
+
+###### `key`<sup>Required</sup> <a name="key" id="@cdktf/provider-google.computeRouter.ComputeRouter.putMd5AuthenticationKeys.parameter.key"></a>
+
+- *Type:* str
+
+Value of the key used for MD5 authentication.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#key ComputeRouter#key}
+
+---
+
+###### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-google.computeRouter.ComputeRouter.putMd5AuthenticationKeys.parameter.name"></a>
+
+- *Type:* str
+
+Name used to identify the key.
+
+Must be unique within a router.
+Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#name ComputeRouter#name}
 
 ---
 
@@ -690,7 +736,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#create ComputeRouter#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#create ComputeRouter#create}.
 
 ---
 
@@ -698,7 +744,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#delete ComputeRouter#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#delete ComputeRouter#delete}.
 
 ---
 
@@ -706,7 +752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#update ComputeRouter#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#update ComputeRouter#update}.
 
 ---
 
@@ -732,6 +778,12 @@ def reset_encrypted_interconnect_router() -> None
 
 ```python
 def reset_id() -> None
+```
+
+##### `reset_md5_authentication_keys` <a name="reset_md5_authentication_keys" id="@cdktf/provider-google.computeRouter.ComputeRouter.resetMd5AuthenticationKeys"></a>
+
+```python
+def reset_md5_authentication_keys() -> None
 ```
 
 ##### `reset_project` <a name="reset_project" id="@cdktf/provider-google.computeRouter.ComputeRouter.resetProject"></a>
@@ -866,7 +918,7 @@ The construct id used in the generated config for the ComputeRouter to import.
 
 The id of the existing ComputeRouter that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -898,12 +950,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.bgp">bgp</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterBgpOutputReference">ComputeRouterBgpOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.creationTimestamp">creation_timestamp</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.md5AuthenticationKeys">md5_authentication_keys</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference">ComputeRouterMd5AuthenticationKeysOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.selfLink">self_link</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeoutsOutputReference">ComputeRouterTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.bgpInput">bgp_input</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterBgp">ComputeRouterBgp</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.encryptedInterconnectRouterInput">encrypted_interconnect_router_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.md5AuthenticationKeysInput">md5_authentication_keys_input</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys">ComputeRouterMd5AuthenticationKeys</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.networkInput">network_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouter.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
@@ -1081,6 +1135,16 @@ creation_timestamp: str
 
 ---
 
+##### `md5_authentication_keys`<sup>Required</sup> <a name="md5_authentication_keys" id="@cdktf/provider-google.computeRouter.ComputeRouter.property.md5AuthenticationKeys"></a>
+
+```python
+md5_authentication_keys: ComputeRouterMd5AuthenticationKeysOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference">ComputeRouterMd5AuthenticationKeysOutputReference</a>
+
+---
+
 ##### `self_link`<sup>Required</sup> <a name="self_link" id="@cdktf/provider-google.computeRouter.ComputeRouter.property.selfLink"></a>
 
 ```python
@@ -1138,6 +1202,16 @@ id_input: str
 ```
 
 - *Type:* str
+
+---
+
+##### `md5_authentication_keys_input`<sup>Optional</sup> <a name="md5_authentication_keys_input" id="@cdktf/provider-google.computeRouter.ComputeRouter.property.md5AuthenticationKeysInput"></a>
+
+```python
+md5_authentication_keys_input: ComputeRouterMd5AuthenticationKeys
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys">ComputeRouterMd5AuthenticationKeys</a>
 
 ---
 
@@ -1326,7 +1400,7 @@ private ASN, either 16-bit or 32-bit. The value will be fixed for
 this router resource. All VPN tunnels that link to this router
 will have the same local ASN.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#asn ComputeRouter#asn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#asn ComputeRouter#asn}
 
 ---
 
@@ -1347,7 +1421,7 @@ blank to advertise no custom groups.
 
 This enum field has the one valid value: ALL_SUBNETS
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertised_groups ComputeRouter#advertised_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertised_groups ComputeRouter#advertised_groups}
 
 ---
 
@@ -1361,7 +1435,7 @@ advertised_ip_ranges: typing.Union[IResolvable, typing.List[ComputeRouterBgpAdve
 
 advertised_ip_ranges block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
 
 ---
 
@@ -1375,7 +1449,7 @@ advertise_mode: str
 
 User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#advertise_mode ComputeRouter#advertise_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#advertise_mode ComputeRouter#advertise_mode}
 
 ---
 
@@ -1394,7 +1468,7 @@ size at least /30, even if the BGP sessions are over IPv6. It must
 not overlap with any IPv4 BGP session ranges. Other vendors commonly
 call this router ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#identifier_range ComputeRouter#identifier_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#identifier_range ComputeRouter#identifier_range}
 
 ---
 
@@ -1418,7 +1492,7 @@ peer's hold time value as the hold time for the BGP connection
 between the two peers. If set, this value must be between 20 and 60.
 The default is 20.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
 
 ---
 
@@ -1454,7 +1528,7 @@ range: str
 
 The IP range to advertise. The value must be a CIDR-formatted string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#range ComputeRouter#range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#range ComputeRouter#range}
 
 ---
 
@@ -1468,7 +1542,7 @@ description: str
 
 User-specified description for the IP range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#description ComputeRouter#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#description ComputeRouter#description}
 
 ---
 
@@ -1493,6 +1567,7 @@ computeRouter.ComputeRouterConfig(
   description: str = None,
   encrypted_interconnect_router: typing.Union[bool, IResolvable] = None,
   id: str = None,
+  md5_authentication_keys: ComputeRouterMd5AuthenticationKeys = None,
   project: str = None,
   region: str = None,
   timeouts: ComputeRouterTimeouts = None
@@ -1515,8 +1590,9 @@ computeRouter.ComputeRouterConfig(
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.bgp">bgp</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterBgp">ComputeRouterBgp</a></code> | bgp block. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.description">description</a></code> | <code>str</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.encryptedInterconnectRouter">encrypted_interconnect_router</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). |
-| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#id ComputeRouter#id}. |
-| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#project ComputeRouter#project}. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#id ComputeRouter#id}. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.md5AuthenticationKeys">md5_authentication_keys</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys">ComputeRouterMd5AuthenticationKeys</a></code> | md5_authentication_keys block. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#project ComputeRouter#project}. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.region">region</a></code> | <code>str</code> | Region where the router resides. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeouts">ComputeRouterTimeouts</a></code> | timeouts block. |
 
@@ -1609,7 +1685,7 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#name ComputeRouter#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#name ComputeRouter#name}
 
 ---
 
@@ -1623,7 +1699,7 @@ network: str
 
 A reference to the network to which this router belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#network ComputeRouter#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#network ComputeRouter#network}
 
 ---
 
@@ -1637,7 +1713,7 @@ bgp: ComputeRouterBgp
 
 bgp block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#bgp ComputeRouter#bgp}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#bgp ComputeRouter#bgp}
 
 ---
 
@@ -1651,7 +1727,7 @@ description: str
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#description ComputeRouter#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#description ComputeRouter#description}
 
 ---
 
@@ -1665,7 +1741,7 @@ encrypted_interconnect_router: typing.Union[bool, IResolvable]
 
 Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
 
 ---
 
@@ -1677,10 +1753,24 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#id ComputeRouter#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#id ComputeRouter#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `md5_authentication_keys`<sup>Optional</sup> <a name="md5_authentication_keys" id="@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.md5AuthenticationKeys"></a>
+
+```python
+md5_authentication_keys: ComputeRouterMd5AuthenticationKeys
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys">ComputeRouterMd5AuthenticationKeys</a>
+
+md5_authentication_keys block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#md5_authentication_keys ComputeRouter#md5_authentication_keys}
 
 ---
 
@@ -1692,7 +1782,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#project ComputeRouter#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#project ComputeRouter#project}.
 
 ---
 
@@ -1706,7 +1796,7 @@ region: str
 
 Region where the router resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#region ComputeRouter#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#region ComputeRouter#region}
 
 ---
 
@@ -1720,7 +1810,60 @@ timeouts: ComputeRouterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#timeouts ComputeRouter#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#timeouts ComputeRouter#timeouts}
+
+---
+
+### ComputeRouterMd5AuthenticationKeys <a name="ComputeRouterMd5AuthenticationKeys" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import compute_router
+
+computeRouter.ComputeRouterMd5AuthenticationKeys(
+  key: str,
+  name: str
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys.property.key">key</a></code> | <code>str</code> | Value of the key used for MD5 authentication. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys.property.name">name</a></code> | <code>str</code> | Name used to identify the key. |
+
+---
+
+##### `key`<sup>Required</sup> <a name="key" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys.property.key"></a>
+
+```python
+key: str
+```
+
+- *Type:* str
+
+Value of the key used for MD5 authentication.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#key ComputeRouter#key}
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys.property.name"></a>
+
+```python
+name: str
+```
+
+- *Type:* str
+
+Name used to identify the key.
+
+Must be unique within a router.
+Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#name ComputeRouter#name}
 
 ---
 
@@ -1742,9 +1885,9 @@ computeRouter.ComputeRouterTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#create ComputeRouter#create}. |
-| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#delete ComputeRouter#delete}. |
-| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#update ComputeRouter#update}. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#create ComputeRouter#create}. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#delete ComputeRouter#delete}. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#update ComputeRouter#update}. |
 
 ---
 
@@ -1756,7 +1899,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#create ComputeRouter#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#create ComputeRouter#create}.
 
 ---
 
@@ -1768,7 +1911,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#delete ComputeRouter#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#delete ComputeRouter#delete}.
 
 ---
 
@@ -1780,7 +1923,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_router#update ComputeRouter#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_router#update ComputeRouter#update}.
 
 ---
 
@@ -2753,6 +2896,324 @@ internal_value: ComputeRouterBgp
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeRouter.ComputeRouterBgp">ComputeRouterBgp</a>
+
+---
+
+
+### ComputeRouterMd5AuthenticationKeysOutputReference <a name="ComputeRouterMd5AuthenticationKeysOutputReference" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import compute_router
+
+computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys">ComputeRouterMd5AuthenticationKeys</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `key_input`<sup>Optional</sup> <a name="key_input" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.keyInput"></a>
+
+```python
+key_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `name_input`<sup>Optional</sup> <a name="name_input" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.nameInput"></a>
+
+```python
+name_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `key`<sup>Required</sup> <a name="key" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.key"></a>
+
+```python
+key: str
+```
+
+- *Type:* str
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.name"></a>
+
+```python
+name: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeysOutputReference.property.internalValue"></a>
+
+```python
+internal_value: ComputeRouterMd5AuthenticationKeys
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeRouter.ComputeRouterMd5AuthenticationKeys">ComputeRouterMd5AuthenticationKeys</a>
 
 ---
 

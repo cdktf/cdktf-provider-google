@@ -4,7 +4,7 @@
 
 ### ComputeInstance <a name="ComputeInstance" id="@cdktf/provider-google.computeInstance.ComputeInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance google_compute_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance google_compute_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstance.ComputeInstance.Initializer"></a>
 
@@ -78,6 +78,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.putBootDisk">putBootDisk</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.putConfidentialInstanceConfig">putConfidentialInstanceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.putGuestAccelerator">putGuestAccelerator</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.putInstanceEncryptionKey">putInstanceEncryptionKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.putNetworkInterface">putNetworkInterface</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.putNetworkPerformanceConfig">putNetworkPerformanceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.putParams">putParams</a></code> | *No description.* |
@@ -99,6 +100,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.resetGuestAccelerator">resetGuestAccelerator</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.resetHostname">resetHostname</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.resetInstanceEncryptionKey">resetInstanceEncryptionKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.resetKeyRevocationActionType">resetKeyRevocationActionType</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.resetLabels">resetLabels</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.resetMetadata">resetMetadata</a></code> | *No description.* |
@@ -467,6 +469,18 @@ public putGuestAccelerator(value: IResolvable | ComputeInstanceGuestAccelerator[
 
 ---
 
+##### `putInstanceEncryptionKey` <a name="putInstanceEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstance.putInstanceEncryptionKey"></a>
+
+```typescript
+public putInstanceEncryptionKey(value: ComputeInstanceInstanceEncryptionKey): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeInstance.ComputeInstance.putInstanceEncryptionKey.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey">ComputeInstanceInstanceEncryptionKey</a>
+
+---
+
 ##### `putNetworkInterface` <a name="putNetworkInterface" id="@cdktf/provider-google.computeInstance.ComputeInstance.putNetworkInterface"></a>
 
 ```typescript
@@ -645,6 +659,12 @@ public resetHostname(): void
 
 ```typescript
 public resetId(): void
+```
+
+##### `resetInstanceEncryptionKey` <a name="resetInstanceEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstance.resetInstanceEncryptionKey"></a>
+
+```typescript
+public resetInstanceEncryptionKey(): void
 ```
 
 ##### `resetKeyRevocationActionType` <a name="resetKeyRevocationActionType" id="@cdktf/provider-google.computeInstance.ComputeInstance.resetKeyRevocationActionType"></a>
@@ -852,7 +872,7 @@ The construct id used in the generated config for the ComputeInstance to import.
 
 The id of the existing ComputeInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -891,6 +911,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.currentStatus">currentStatus</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.effectiveLabels">effectiveLabels</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.guestAccelerator">guestAccelerator</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAcceleratorList">ComputeInstanceGuestAcceleratorList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.instanceEncryptionKey">instanceEncryptionKey</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference">ComputeInstanceInstanceEncryptionKeyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.instanceId">instanceId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.labelFingerprint">labelFingerprint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.metadataFingerprint">metadataFingerprint</a></code> | <code>string</code> | *No description.* |
@@ -919,6 +940,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.guestAcceleratorInput">guestAcceleratorInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAccelerator">ComputeInstanceGuestAccelerator</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.hostnameInput">hostnameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.instanceEncryptionKeyInput">instanceEncryptionKeyInput</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey">ComputeInstanceInstanceEncryptionKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.keyRevocationActionTypeInput">keyRevocationActionTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.labelsInput">labelsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstance.property.machineTypeInput">machineTypeInput</a></code> | <code>string</code> | *No description.* |
@@ -1190,6 +1212,16 @@ public readonly guestAccelerator: ComputeInstanceGuestAcceleratorList;
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAcceleratorList">ComputeInstanceGuestAcceleratorList</a>
+
+---
+
+##### `instanceEncryptionKey`<sup>Required</sup> <a name="instanceEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstance.property.instanceEncryptionKey"></a>
+
+```typescript
+public readonly instanceEncryptionKey: ComputeInstanceInstanceEncryptionKeyOutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference">ComputeInstanceInstanceEncryptionKeyOutputReference</a>
 
 ---
 
@@ -1470,6 +1502,16 @@ public readonly idInput: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `instanceEncryptionKeyInput`<sup>Optional</sup> <a name="instanceEncryptionKeyInput" id="@cdktf/provider-google.computeInstance.ComputeInstance.property.instanceEncryptionKeyInput"></a>
+
+```typescript
+public readonly instanceEncryptionKeyInput: ComputeInstanceInstanceEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey">ComputeInstanceInstanceEncryptionKey</a>
 
 ---
 
@@ -1916,7 +1958,7 @@ public readonly enableNestedVirtualization: boolean | IResolvable;
 
 Whether to enable nested virtualization or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#enable_nested_virtualization ComputeInstance#enable_nested_virtualization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#enable_nested_virtualization ComputeInstance#enable_nested_virtualization}
 
 ---
 
@@ -1930,7 +1972,7 @@ public readonly enableUefiNetworking: boolean | IResolvable;
 
 Whether to enable UEFI networking for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#enable_uefi_networking ComputeInstance#enable_uefi_networking}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#enable_uefi_networking ComputeInstance#enable_uefi_networking}
 
 ---
 
@@ -1946,7 +1988,7 @@ The PMU is a hardware component within the CPU core that monitors how the proces
 
 Valid values for the level of PMU are "STANDARD", "ENHANCED", and "ARCHITECTURAL".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#performance_monitoring_unit ComputeInstance#performance_monitoring_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#performance_monitoring_unit ComputeInstance#performance_monitoring_unit}
 
 ---
 
@@ -1962,7 +2004,7 @@ The number of threads per physical core.
 
 To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#threads_per_core ComputeInstance#threads_per_core}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#threads_per_core ComputeInstance#threads_per_core}
 
 ---
 
@@ -1976,7 +2018,7 @@ public readonly turboMode: string;
 
 Turbo frequency mode to use for the instance. Currently supported modes is "ALL_CORE_MAX".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#turbo_mode ComputeInstance#turbo_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#turbo_mode ComputeInstance#turbo_mode}
 
 ---
 
@@ -1992,7 +2034,7 @@ The number of physical cores to expose to an instance.
 
 Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance\'s nominal CPU count and the underlying platform\'s SMT width.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#visible_core_count ComputeInstance#visible_core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#visible_core_count ComputeInstance#visible_core_count}
 
 ---
 
@@ -2013,6 +2055,8 @@ const computeInstanceAttachedDisk: computeInstance.ComputeInstanceAttachedDisk =
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.source">source</a></code> | <code>string</code> | The name or self_link of the disk attached to this instance. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.deviceName">deviceName</a></code> | <code>string</code> | Name with which the attached disk is accessible under /dev/disk/by-id/. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.diskEncryptionKeyRaw">diskEncryptionKeyRaw</a></code> | <code>string</code> | A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.diskEncryptionKeyRsa">diskEncryptionKeyRsa</a></code> | <code>string</code> | Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.diskEncryptionServiceAccount">diskEncryptionServiceAccount</a></code> | <code>string</code> | The service account being used for the encryption request for the given KMS key. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.mode">mode</a></code> | <code>string</code> | Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE". |
 
@@ -2028,7 +2072,7 @@ public readonly source: string;
 
 The name or self_link of the disk attached to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#source ComputeInstance#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#source ComputeInstance#source}
 
 ---
 
@@ -2042,7 +2086,7 @@ public readonly deviceName: string;
 
 Name with which the attached disk is accessible under /dev/disk/by-id/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
 
 ---
 
@@ -2056,9 +2100,41 @@ public readonly diskEncryptionKeyRaw: string;
 
 A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk.
 
-Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
+
+---
+
+##### `diskEncryptionKeyRsa`<sup>Optional</sup> <a name="diskEncryptionKeyRsa" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.diskEncryptionKeyRsa"></a>
+
+```typescript
+public readonly diskEncryptionKeyRsa: string;
+```
+
+- *Type:* string
+
+Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
+
+Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#disk_encryption_key_rsa ComputeInstance#disk_encryption_key_rsa}
+
+---
+
+##### `diskEncryptionServiceAccount`<sup>Optional</sup> <a name="diskEncryptionServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDisk.property.diskEncryptionServiceAccount"></a>
+
+```typescript
+public readonly diskEncryptionServiceAccount: string;
+```
+
+- *Type:* string
+
+The service account being used for the encryption request for the given KMS key.
+
+If absent, the Compute Engine default service account is used
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#disk_encryption_service_account ComputeInstance#disk_encryption_service_account}
 
 ---
 
@@ -2072,9 +2148,9 @@ public readonly kmsKeySelfLink: string;
 
 The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk.
 
-Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
 
 ---
 
@@ -2088,7 +2164,7 @@ public readonly mode: string;
 
 Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#mode ComputeInstance#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#mode ComputeInstance#mode}
 
 ---
 
@@ -2109,6 +2185,8 @@ const computeInstanceBootDisk: computeInstance.ComputeInstanceBootDisk = { ... }
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.autoDelete">autoDelete</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether the disk will be auto-deleted when the instance is deleted. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.deviceName">deviceName</a></code> | <code>string</code> | Name with which attached disk will be accessible under /dev/disk/by-id/. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.diskEncryptionKeyRaw">diskEncryptionKeyRaw</a></code> | <code>string</code> | A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.diskEncryptionKeyRsa">diskEncryptionKeyRsa</a></code> | <code>string</code> | Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.diskEncryptionServiceAccount">diskEncryptionServiceAccount</a></code> | <code>string</code> | The service account being used for the encryption request for the given KMS key. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.guestOsFeatures">guestOsFeatures</a></code> | <code>string[]</code> | A list of features to enable on the guest operating system. Applicable only for bootable images. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.initializeParams">initializeParams</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams">ComputeInstanceBootDiskInitializeParams</a></code> | initialize_params block. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.interface">interface</a></code> | <code>string</code> | The disk interface used for attaching this disk. |
@@ -2128,7 +2206,7 @@ public readonly autoDelete: boolean | IResolvable;
 
 Whether the disk will be auto-deleted when the instance is deleted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#auto_delete ComputeInstance#auto_delete}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#auto_delete ComputeInstance#auto_delete}
 
 ---
 
@@ -2142,7 +2220,7 @@ public readonly deviceName: string;
 
 Name with which attached disk will be accessible under /dev/disk/by-id/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
 
 ---
 
@@ -2156,9 +2234,41 @@ public readonly diskEncryptionKeyRaw: string;
 
 A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk.
 
-Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+Only one of kms_key_self_link, disk_encryption_key_raw and disk_encryption_key_rsa may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
+
+---
+
+##### `diskEncryptionKeyRsa`<sup>Optional</sup> <a name="diskEncryptionKeyRsa" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.diskEncryptionKeyRsa"></a>
+
+```typescript
+public readonly diskEncryptionKeyRsa: string;
+```
+
+- *Type:* string
+
+Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
+
+Only one of kms_key_self_link, disk_encryption_key_raw and disk_encryption_key_rsa may be set.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#disk_encryption_key_rsa ComputeInstance#disk_encryption_key_rsa}
+
+---
+
+##### `diskEncryptionServiceAccount`<sup>Optional</sup> <a name="diskEncryptionServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDisk.property.diskEncryptionServiceAccount"></a>
+
+```typescript
+public readonly diskEncryptionServiceAccount: string;
+```
+
+- *Type:* string
+
+The service account being used for the encryption request for the given KMS key.
+
+If absent, the Compute Engine default service account is used
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#disk_encryption_service_account ComputeInstance#disk_encryption_service_account}
 
 ---
 
@@ -2172,7 +2282,7 @@ public readonly guestOsFeatures: string[];
 
 A list of features to enable on the guest operating system. Applicable only for bootable images.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#guest_os_features ComputeInstance#guest_os_features}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#guest_os_features ComputeInstance#guest_os_features}
 
 ---
 
@@ -2186,7 +2296,7 @@ public readonly initializeParams: ComputeInstanceBootDiskInitializeParams;
 
 initialize_params block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#initialize_params ComputeInstance#initialize_params}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#initialize_params ComputeInstance#initialize_params}
 
 ---
 
@@ -2202,7 +2312,7 @@ The disk interface used for attaching this disk.
 
 One of SCSI or NVME. (This field is shared with attached_disk and only used for specific cases, please don't specify this field without advice from Google.)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#interface ComputeInstance#interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#interface ComputeInstance#interface}
 
 ---
 
@@ -2216,9 +2326,9 @@ public readonly kmsKeySelfLink: string;
 
 The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk.
 
-Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+Only one of kms_key_self_link, disk_encryption_key_raw and disk_encryption_key_rsa may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
 
 ---
 
@@ -2232,7 +2342,7 @@ public readonly mode: string;
 
 Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#mode ComputeInstance#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#mode ComputeInstance#mode}
 
 ---
 
@@ -2246,7 +2356,7 @@ public readonly source: string;
 
 The name or self_link of the disk attached to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#source ComputeInstance#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#source ComputeInstance#source}
 
 ---
 
@@ -2273,6 +2383,9 @@ const computeInstanceBootDiskInitializeParams: computeInstance.ComputeInstanceBo
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.resourceManagerTags">resourceManagerTags</a></code> | <code>{[ key: string ]: string}</code> | A map of resource manager tags. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.resourcePolicies">resourcePolicies</a></code> | <code>string[]</code> | A list of self_links of resource policies to attach to the instance's boot disk. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.size">size</a></code> | <code>number</code> | The size of the image in gigabytes. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.snapshot">snapshot</a></code> | <code>string</code> | The snapshot from which this disk was initialised. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.sourceImageEncryptionKey">sourceImageEncryptionKey</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey</a></code> | source_image_encryption_key block. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.sourceSnapshotEncryptionKey">sourceSnapshotEncryptionKey</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey</a></code> | source_snapshot_encryption_key block. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.storagePool">storagePool</a></code> | <code>string</code> | The URL of the storage pool in which the new disk is created. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.type">type</a></code> | <code>string</code> | The Google Compute Engine disk type. Such as pd-standard, pd-ssd or pd-balanced. |
 
@@ -2288,7 +2401,7 @@ public readonly architecture: string;
 
 The architecture of the disk. One of "X86_64" or "ARM64".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#architecture ComputeInstance#architecture}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#architecture ComputeInstance#architecture}
 
 ---
 
@@ -2302,7 +2415,7 @@ public readonly enableConfidentialCompute: boolean | IResolvable;
 
 A flag to enable confidential compute mode on boot disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#enable_confidential_compute ComputeInstance#enable_confidential_compute}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#enable_confidential_compute ComputeInstance#enable_confidential_compute}
 
 ---
 
@@ -2316,7 +2429,7 @@ public readonly image: string;
 
 The image from which this disk was initialised.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#image ComputeInstance#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#image ComputeInstance#image}
 
 ---
 
@@ -2330,7 +2443,7 @@ public readonly labels: {[ key: string ]: string};
 
 A set of key/value label pairs assigned to the disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#labels ComputeInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#labels ComputeInstance#labels}
 
 ---
 
@@ -2346,7 +2459,7 @@ Indicates how many IOPS to provision for the disk.
 
 This sets the number of I/O operations per second that the disk can handle.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#provisioned_iops ComputeInstance#provisioned_iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#provisioned_iops ComputeInstance#provisioned_iops}
 
 ---
 
@@ -2362,7 +2475,7 @@ Indicates how much throughput to provision for the disk.
 
 This sets the number of throughput mb per second that the disk can handle.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#provisioned_throughput ComputeInstance#provisioned_throughput}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#provisioned_throughput ComputeInstance#provisioned_throughput}
 
 ---
 
@@ -2378,7 +2491,7 @@ A map of resource manager tags.
 
 Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT & PATCH) when empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#resource_manager_tags ComputeInstance#resource_manager_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#resource_manager_tags ComputeInstance#resource_manager_tags}
 
 ---
 
@@ -2394,7 +2507,7 @@ A list of self_links of resource policies to attach to the instance's boot disk.
 
 Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#resource_policies ComputeInstance#resource_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#resource_policies ComputeInstance#resource_policies}
 
 ---
 
@@ -2408,7 +2521,49 @@ public readonly size: number;
 
 The size of the image in gigabytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#size ComputeInstance#size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#size ComputeInstance#size}
+
+---
+
+##### `snapshot`<sup>Optional</sup> <a name="snapshot" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.snapshot"></a>
+
+```typescript
+public readonly snapshot: string;
+```
+
+- *Type:* string
+
+The snapshot from which this disk was initialised.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#snapshot ComputeInstance#snapshot}
+
+---
+
+##### `sourceImageEncryptionKey`<sup>Optional</sup> <a name="sourceImageEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.sourceImageEncryptionKey"></a>
+
+```typescript
+public readonly sourceImageEncryptionKey: ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey</a>
+
+source_image_encryption_key block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#source_image_encryption_key ComputeInstance#source_image_encryption_key}
+
+---
+
+##### `sourceSnapshotEncryptionKey`<sup>Optional</sup> <a name="sourceSnapshotEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams.property.sourceSnapshotEncryptionKey"></a>
+
+```typescript
+public readonly sourceSnapshotEncryptionKey: ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey</a>
+
+source_snapshot_encryption_key block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#source_snapshot_encryption_key ComputeInstance#source_snapshot_encryption_key}
 
 ---
 
@@ -2422,7 +2577,7 @@ public readonly storagePool: string;
 
 The URL of the storage pool in which the new disk is created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#storage_pool ComputeInstance#storage_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#storage_pool ComputeInstance#storage_pool}
 
 ---
 
@@ -2436,7 +2591,177 @@ public readonly type: string;
 
 The Google Compute Engine disk type. Such as pd-standard, pd-ssd or pd-balanced.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#type ComputeInstance#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#type ComputeInstance#type}
+
+---
+
+### ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey <a name="ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.Initializer"></a>
+
+```typescript
+import { computeInstance } from '@cdktf/provider-google'
+
+const computeInstanceBootDiskInitializeParamsSourceImageEncryptionKey: computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | The self link of the encryption key that is stored in Google Cloud KMS. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.property.kmsKeyServiceAccount">kmsKeyServiceAccount</a></code> | <code>string</code> | The service account being used for the encryption request for the given KMS key. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.property.rawKey">rawKey</a></code> | <code>string</code> | Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.property.rsaEncryptedKey">rsaEncryptedKey</a></code> | <code>string</code> | Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. |
+
+---
+
+##### `kmsKeySelfLink`<sup>Optional</sup> <a name="kmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.property.kmsKeySelfLink"></a>
+
+```typescript
+public readonly kmsKeySelfLink: string;
+```
+
+- *Type:* string
+
+The self link of the encryption key that is stored in Google Cloud KMS.
+
+Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
+
+---
+
+##### `kmsKeyServiceAccount`<sup>Optional</sup> <a name="kmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.property.kmsKeyServiceAccount"></a>
+
+```typescript
+public readonly kmsKeyServiceAccount: string;
+```
+
+- *Type:* string
+
+The service account being used for the encryption request for the given KMS key.
+
+If absent, the Compute Engine default service account is used.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#kms_key_service_account ComputeInstance#kms_key_service_account}
+
+---
+
+##### `rawKey`<sup>Optional</sup> <a name="rawKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.property.rawKey"></a>
+
+```typescript
+public readonly rawKey: string;
+```
+
+- *Type:* string
+
+Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
+
+Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#raw_key ComputeInstance#raw_key}
+
+---
+
+##### `rsaEncryptedKey`<sup>Optional</sup> <a name="rsaEncryptedKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey.property.rsaEncryptedKey"></a>
+
+```typescript
+public readonly rsaEncryptedKey: string;
+```
+
+- *Type:* string
+
+Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
+
+Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#rsa_encrypted_key ComputeInstance#rsa_encrypted_key}
+
+---
+
+### ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey <a name="ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.Initializer"></a>
+
+```typescript
+import { computeInstance } from '@cdktf/provider-google'
+
+const computeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey: computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | The self link of the encryption key that is stored in Google Cloud KMS. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.property.kmsKeyServiceAccount">kmsKeyServiceAccount</a></code> | <code>string</code> | The service account being used for the encryption request for the given KMS key. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.property.rawKey">rawKey</a></code> | <code>string</code> | Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.property.rsaEncryptedKey">rsaEncryptedKey</a></code> | <code>string</code> | Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. |
+
+---
+
+##### `kmsKeySelfLink`<sup>Optional</sup> <a name="kmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.property.kmsKeySelfLink"></a>
+
+```typescript
+public readonly kmsKeySelfLink: string;
+```
+
+- *Type:* string
+
+The self link of the encryption key that is stored in Google Cloud KMS.
+
+Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
+
+---
+
+##### `kmsKeyServiceAccount`<sup>Optional</sup> <a name="kmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.property.kmsKeyServiceAccount"></a>
+
+```typescript
+public readonly kmsKeyServiceAccount: string;
+```
+
+- *Type:* string
+
+The service account being used for the encryption request for the given KMS key.
+
+If absent, the Compute Engine default service account is used.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#kms_key_service_account ComputeInstance#kms_key_service_account}
+
+---
+
+##### `rawKey`<sup>Optional</sup> <a name="rawKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.property.rawKey"></a>
+
+```typescript
+public readonly rawKey: string;
+```
+
+- *Type:* string
+
+Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
+
+Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#raw_key ComputeInstance#raw_key}
+
+---
+
+##### `rsaEncryptedKey`<sup>Optional</sup> <a name="rsaEncryptedKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey.property.rsaEncryptedKey"></a>
+
+```typescript
+public readonly rsaEncryptedKey: string;
+```
+
+- *Type:* string
+
+Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
+
+Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#rsa_encrypted_key ComputeInstance#rsa_encrypted_key}
 
 ---
 
@@ -2473,7 +2798,7 @@ SEV is an AMD feature. TDX is an Intel feature. One of the following
 values is required: SEV, SEV_SNP, TDX. If SEV_SNP, min_cpu_platform =
 "AMD Milan" is currently required.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#confidential_instance_type ComputeInstance#confidential_instance_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#confidential_instance_type ComputeInstance#confidential_instance_type}
 
 ---
 
@@ -2487,7 +2812,7 @@ public readonly enableConfidentialCompute: boolean | IResolvable;
 
 Defines whether the instance should have confidential compute enabled. Field will be deprecated in a future release.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#enable_confidential_compute ComputeInstance#enable_confidential_compute}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#enable_confidential_compute ComputeInstance#enable_confidential_compute}
 
 ---
 
@@ -2527,7 +2852,8 @@ const computeInstanceConfig: computeInstance.ComputeInstanceConfig = { ... }
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.enableDisplay">enableDisplay</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether the instance has virtual displays enabled. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.guestAccelerator">guestAccelerator</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAccelerator">ComputeInstanceGuestAccelerator</a>[]</code> | guest_accelerator block. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.hostname">hostname</a></code> | <code>string</code> | A custom hostname for the instance. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#id ComputeInstance#id}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#id ComputeInstance#id}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.instanceEncryptionKey">instanceEncryptionKey</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey">ComputeInstanceInstanceEncryptionKey</a></code> | instance_encryption_key block. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.keyRevocationActionType">keyRevocationActionType</a></code> | <code>string</code> | Action to be taken when a customer's encryption key is revoked. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | A set of key/value label pairs assigned to the instance. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.metadata">metadata</a></code> | <code>{[ key: string ]: string}</code> | Metadata key/value pairs made available within the instance. |
@@ -2628,7 +2954,7 @@ public readonly bootDisk: ComputeInstanceBootDisk;
 
 boot_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#boot_disk ComputeInstance#boot_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#boot_disk ComputeInstance#boot_disk}
 
 ---
 
@@ -2642,7 +2968,7 @@ public readonly machineType: string;
 
 The machine type to create.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#machine_type ComputeInstance#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#machine_type ComputeInstance#machine_type}
 
 ---
 
@@ -2656,7 +2982,7 @@ public readonly name: string;
 
 The name of the instance. One of name or self_link must be provided.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#name ComputeInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#name ComputeInstance#name}
 
 ---
 
@@ -2670,7 +2996,7 @@ public readonly networkInterface: IResolvable | ComputeInstanceNetworkInterface[
 
 network_interface block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#network_interface ComputeInstance#network_interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#network_interface ComputeInstance#network_interface}
 
 ---
 
@@ -2684,7 +3010,7 @@ public readonly advancedMachineFeatures: ComputeInstanceAdvancedMachineFeatures;
 
 advanced_machine_features block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#advanced_machine_features ComputeInstance#advanced_machine_features}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#advanced_machine_features ComputeInstance#advanced_machine_features}
 
 ---
 
@@ -2700,7 +3026,7 @@ If true, allows Terraform to stop the instance to update its properties.
 
 If you try to update a property that requires stopping the instance without setting this field, the update will fail.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#allow_stopping_for_update ComputeInstance#allow_stopping_for_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#allow_stopping_for_update ComputeInstance#allow_stopping_for_update}
 
 ---
 
@@ -2714,7 +3040,7 @@ public readonly attachedDisk: IResolvable | ComputeInstanceAttachedDisk[];
 
 attached_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#attached_disk ComputeInstance#attached_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#attached_disk ComputeInstance#attached_disk}
 
 ---
 
@@ -2728,7 +3054,7 @@ public readonly canIpForward: boolean | IResolvable;
 
 Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#can_ip_forward ComputeInstance#can_ip_forward}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#can_ip_forward ComputeInstance#can_ip_forward}
 
 ---
 
@@ -2742,7 +3068,7 @@ public readonly confidentialInstanceConfig: ComputeInstanceConfidentialInstanceC
 
 confidential_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#confidential_instance_config ComputeInstance#confidential_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#confidential_instance_config ComputeInstance#confidential_instance_config}
 
 ---
 
@@ -2756,7 +3082,7 @@ public readonly deletionProtection: boolean | IResolvable;
 
 Whether deletion protection is enabled on this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#deletion_protection ComputeInstance#deletion_protection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#deletion_protection ComputeInstance#deletion_protection}
 
 ---
 
@@ -2770,7 +3096,7 @@ public readonly description: string;
 
 A brief description of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#description ComputeInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#description ComputeInstance#description}
 
 ---
 
@@ -2784,7 +3110,7 @@ public readonly desiredStatus: string;
 
 Desired status of the instance. Either "RUNNING", "SUSPENDED" or "TERMINATED".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#desired_status ComputeInstance#desired_status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#desired_status ComputeInstance#desired_status}
 
 ---
 
@@ -2798,7 +3124,7 @@ public readonly enableDisplay: boolean | IResolvable;
 
 Whether the instance has virtual displays enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#enable_display ComputeInstance#enable_display}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#enable_display ComputeInstance#enable_display}
 
 ---
 
@@ -2812,7 +3138,7 @@ public readonly guestAccelerator: IResolvable | ComputeInstanceGuestAccelerator[
 
 guest_accelerator block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#guest_accelerator ComputeInstance#guest_accelerator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#guest_accelerator ComputeInstance#guest_accelerator}
 
 ---
 
@@ -2828,7 +3154,7 @@ A custom hostname for the instance.
 
 Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#hostname ComputeInstance#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#hostname ComputeInstance#hostname}
 
 ---
 
@@ -2840,10 +3166,24 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#id ComputeInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#id ComputeInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `instanceEncryptionKey`<sup>Optional</sup> <a name="instanceEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.instanceEncryptionKey"></a>
+
+```typescript
+public readonly instanceEncryptionKey: ComputeInstanceInstanceEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey">ComputeInstanceInstanceEncryptionKey</a>
+
+instance_encryption_key block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#instance_encryption_key ComputeInstance#instance_encryption_key}
 
 ---
 
@@ -2859,7 +3199,7 @@ Action to be taken when a customer's encryption key is revoked.
 
 Supports "STOP" and "NONE", with "NONE" being the default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#key_revocation_action_type ComputeInstance#key_revocation_action_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#key_revocation_action_type ComputeInstance#key_revocation_action_type}
 
 ---
 
@@ -2876,7 +3216,7 @@ A set of key/value label pairs assigned to the instance.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 				Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#labels ComputeInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#labels ComputeInstance#labels}
 
 ---
 
@@ -2890,7 +3230,7 @@ public readonly metadata: {[ key: string ]: string};
 
 Metadata key/value pairs made available within the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#metadata ComputeInstance#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#metadata ComputeInstance#metadata}
 
 ---
 
@@ -2904,7 +3244,7 @@ public readonly metadataStartupScript: string;
 
 Metadata startup scripts made available within the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#metadata_startup_script ComputeInstance#metadata_startup_script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#metadata_startup_script ComputeInstance#metadata_startup_script}
 
 ---
 
@@ -2918,7 +3258,7 @@ public readonly minCpuPlatform: string;
 
 The minimum CPU platform specified for the VM instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#min_cpu_platform ComputeInstance#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#min_cpu_platform ComputeInstance#min_cpu_platform}
 
 ---
 
@@ -2932,7 +3272,7 @@ public readonly networkPerformanceConfig: ComputeInstanceNetworkPerformanceConfi
 
 network_performance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#network_performance_config ComputeInstance#network_performance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#network_performance_config ComputeInstance#network_performance_config}
 
 ---
 
@@ -2946,7 +3286,7 @@ public readonly params: ComputeInstanceParams;
 
 params block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#params ComputeInstance#params}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#params ComputeInstance#params}
 
 ---
 
@@ -2962,7 +3302,7 @@ The ID of the project in which the resource belongs.
 
 If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#project ComputeInstance#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#project ComputeInstance#project}
 
 ---
 
@@ -2976,7 +3316,7 @@ public readonly reservationAffinity: ComputeInstanceReservationAffinity;
 
 reservation_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#reservation_affinity ComputeInstance#reservation_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#reservation_affinity ComputeInstance#reservation_affinity}
 
 ---
 
@@ -2992,7 +3332,7 @@ A list of self_links of resource policies to attach to the instance.
 
 Currently a max of 1 resource policy is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#resource_policies ComputeInstance#resource_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#resource_policies ComputeInstance#resource_policies}
 
 ---
 
@@ -3006,7 +3346,7 @@ public readonly scheduling: ComputeInstanceScheduling;
 
 scheduling block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#scheduling ComputeInstance#scheduling}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#scheduling ComputeInstance#scheduling}
 
 ---
 
@@ -3020,7 +3360,7 @@ public readonly scratchDisk: IResolvable | ComputeInstanceScratchDisk[];
 
 scratch_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#scratch_disk ComputeInstance#scratch_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#scratch_disk ComputeInstance#scratch_disk}
 
 ---
 
@@ -3034,7 +3374,7 @@ public readonly serviceAccount: ComputeInstanceServiceAccount;
 
 service_account block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#service_account ComputeInstance#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#service_account ComputeInstance#service_account}
 
 ---
 
@@ -3048,7 +3388,7 @@ public readonly shieldedInstanceConfig: ComputeInstanceShieldedInstanceConfig;
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#shielded_instance_config ComputeInstance#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#shielded_instance_config ComputeInstance#shielded_instance_config}
 
 ---
 
@@ -3062,7 +3402,7 @@ public readonly tags: string[];
 
 The list of tags attached to the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#tags ComputeInstance#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#tags ComputeInstance#tags}
 
 ---
 
@@ -3076,7 +3416,7 @@ public readonly timeouts: ComputeInstanceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#timeouts ComputeInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#timeouts ComputeInstance#timeouts}
 
 ---
 
@@ -3092,7 +3432,7 @@ The zone of the instance.
 
 If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#zone ComputeInstance#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#zone ComputeInstance#zone}
 
 ---
 
@@ -3125,7 +3465,7 @@ public readonly count: number;
 
 The number of the guest accelerator cards exposed to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#count ComputeInstance#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#count ComputeInstance#count}
 
 ---
 
@@ -3139,7 +3479,56 @@ public readonly type: string;
 
 The accelerator type resource exposed to this instance. E.g. nvidia-tesla-k80.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#type ComputeInstance#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#type ComputeInstance#type}
+
+---
+
+### ComputeInstanceInstanceEncryptionKey <a name="ComputeInstanceInstanceEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey.Initializer"></a>
+
+```typescript
+import { computeInstance } from '@cdktf/provider-google'
+
+const computeInstanceInstanceEncryptionKey: computeInstance.ComputeInstanceInstanceEncryptionKey = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | The self link of the encryption key that is stored in Google Cloud KMS. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey.property.kmsKeyServiceAccount">kmsKeyServiceAccount</a></code> | <code>string</code> | The service account being used for the encryption request for the given KMS key. |
+
+---
+
+##### `kmsKeySelfLink`<sup>Optional</sup> <a name="kmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey.property.kmsKeySelfLink"></a>
+
+```typescript
+public readonly kmsKeySelfLink: string;
+```
+
+- *Type:* string
+
+The self link of the encryption key that is stored in Google Cloud KMS.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
+
+---
+
+##### `kmsKeyServiceAccount`<sup>Optional</sup> <a name="kmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey.property.kmsKeyServiceAccount"></a>
+
+```typescript
+public readonly kmsKeyServiceAccount: string;
+```
+
+- *Type:* string
+
+The service account being used for the encryption request for the given KMS key.
+
+If absent, the Compute Engine default service account is used.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#kms_key_service_account ComputeInstance#kms_key_service_account}
 
 ---
 
@@ -3183,7 +3572,7 @@ public readonly accessConfig: IResolvable | ComputeInstanceNetworkInterfaceAcces
 
 access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#access_config ComputeInstance#access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#access_config ComputeInstance#access_config}
 
 ---
 
@@ -3197,7 +3586,7 @@ public readonly aliasIpRange: IResolvable | ComputeInstanceNetworkInterfaceAlias
 
 alias_ip_range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#alias_ip_range ComputeInstance#alias_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#alias_ip_range ComputeInstance#alias_ip_range}
 
 ---
 
@@ -3211,7 +3600,7 @@ public readonly internalIpv6PrefixLength: number;
 
 The prefix length of the primary internal IPv6 range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#internal_ipv6_prefix_length ComputeInstance#internal_ipv6_prefix_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#internal_ipv6_prefix_length ComputeInstance#internal_ipv6_prefix_length}
 
 ---
 
@@ -3225,7 +3614,7 @@ public readonly ipv6AccessConfig: IResolvable | ComputeInstanceNetworkInterfaceI
 
 ipv6_access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#ipv6_access_config ComputeInstance#ipv6_access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#ipv6_access_config ComputeInstance#ipv6_access_config}
 
 ---
 
@@ -3241,7 +3630,7 @@ An IPv6 internal network address for this network interface.
 
 If not specified, Google Cloud will automatically assign an internal IPv6 address from the instance's subnetwork.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#ipv6_address ComputeInstance#ipv6_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#ipv6_address ComputeInstance#ipv6_address}
 
 ---
 
@@ -3255,7 +3644,7 @@ public readonly network: string;
 
 The name or self_link of the network attached to this interface.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#network ComputeInstance#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#network ComputeInstance#network}
 
 ---
 
@@ -3269,7 +3658,7 @@ public readonly networkAttachment: string;
 
 The URL of the network attachment that this interface should connect to in the following format: projects/{projectNumber}/regions/{region_name}/networkAttachments/{network_attachment_name}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#network_attachment ComputeInstance#network_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#network_attachment ComputeInstance#network_attachment}
 
 ---
 
@@ -3283,7 +3672,7 @@ public readonly networkIp: string;
 
 The private IP address assigned to the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#network_ip ComputeInstance#network_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#network_ip ComputeInstance#network_ip}
 
 ---
 
@@ -3297,7 +3686,7 @@ public readonly nicType: string;
 
 The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET, IDPF, MRDMA, and IRDMA.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#nic_type ComputeInstance#nic_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#nic_type ComputeInstance#nic_type}
 
 ---
 
@@ -3313,7 +3702,7 @@ The networking queue count that's specified by users for the network interface.
 
 Both Rx and Tx queues will be set to this number. It will be empty if not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#queue_count ComputeInstance#queue_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#queue_count ComputeInstance#queue_count}
 
 ---
 
@@ -3329,7 +3718,7 @@ The stack type for this network interface to identify whether the IPv6 feature i
 
 If not specified, IPV4_ONLY will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#stack_type ComputeInstance#stack_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#stack_type ComputeInstance#stack_type}
 
 ---
 
@@ -3343,7 +3732,7 @@ public readonly subnetwork: string;
 
 The name or self_link of the subnetwork attached to this interface.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#subnetwork ComputeInstance#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#subnetwork ComputeInstance#subnetwork}
 
 ---
 
@@ -3357,7 +3746,7 @@ public readonly subnetworkProject: string;
 
 The project in which the subnetwork belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#subnetwork_project ComputeInstance#subnetwork_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#subnetwork_project ComputeInstance#subnetwork_project}
 
 ---
 
@@ -3391,7 +3780,7 @@ public readonly natIp: string;
 
 The IP address that is be 1:1 mapped to the instance's network ip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#nat_ip ComputeInstance#nat_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#nat_ip ComputeInstance#nat_ip}
 
 ---
 
@@ -3405,7 +3794,7 @@ public readonly networkTier: string;
 
 The networking tier used for configuring this instance. One of PREMIUM or STANDARD.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#network_tier ComputeInstance#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#network_tier ComputeInstance#network_tier}
 
 ---
 
@@ -3419,7 +3808,7 @@ public readonly publicPtrDomainName: string;
 
 The DNS domain name for the public PTR record.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
 
 ---
 
@@ -3452,7 +3841,7 @@ public readonly ipCidrRange: string;
 
 The IP CIDR range represented by this alias IP range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#ip_cidr_range ComputeInstance#ip_cidr_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#ip_cidr_range ComputeInstance#ip_cidr_range}
 
 ---
 
@@ -3466,7 +3855,7 @@ public readonly subnetworkRangeName: string;
 
 The subnetwork secondary range name specifying the secondary range from which to allocate the IP CIDR range for this alias IP range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#subnetwork_range_name ComputeInstance#subnetwork_range_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#subnetwork_range_name ComputeInstance#subnetwork_range_name}
 
 ---
 
@@ -3504,7 +3893,7 @@ The service-level to be provided for IPv6 traffic when the subnet has an externa
 
 Only PREMIUM tier is valid for IPv6
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#network_tier ComputeInstance#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#network_tier ComputeInstance#network_tier}
 
 ---
 
@@ -3520,7 +3909,7 @@ The first IPv6 address of the external IPv6 range associated with this instance,
 
 To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#external_ipv6 ComputeInstance#external_ipv6}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#external_ipv6 ComputeInstance#external_ipv6}
 
 ---
 
@@ -3534,7 +3923,7 @@ public readonly externalIpv6PrefixLength: string;
 
 The prefix length of the external IPv6 range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#external_ipv6_prefix_length ComputeInstance#external_ipv6_prefix_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#external_ipv6_prefix_length ComputeInstance#external_ipv6_prefix_length}
 
 ---
 
@@ -3548,7 +3937,7 @@ public readonly name: string;
 
 The name of this access configuration. In ipv6AccessConfigs, the recommended name is External IPv6.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#name ComputeInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#name ComputeInstance#name}
 
 ---
 
@@ -3562,7 +3951,7 @@ public readonly publicPtrDomainName: string;
 
 The domain name to be used when creating DNSv6 records for the external IPv6 ranges.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
 
 ---
 
@@ -3594,7 +3983,7 @@ public readonly totalEgressBandwidthTier: string;
 
 The egress bandwidth tier to enable. Possible values:TIER_1, DEFAULT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#total_egress_bandwidth_tier ComputeInstance#total_egress_bandwidth_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#total_egress_bandwidth_tier ComputeInstance#total_egress_bandwidth_tier}
 
 ---
 
@@ -3628,7 +4017,7 @@ A map of resource manager tags.
 
 Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT & PATCH) when empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#resource_manager_tags ComputeInstance#resource_manager_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#resource_manager_tags ComputeInstance#resource_manager_tags}
 
 ---
 
@@ -3661,7 +4050,7 @@ public readonly type: string;
 
 The type of reservation from which this instance can consume resources.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#type ComputeInstance#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#type ComputeInstance#type}
 
 ---
 
@@ -3675,7 +4064,7 @@ public readonly specificReservation: ComputeInstanceReservationAffinitySpecificR
 
 specific_reservation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#specific_reservation ComputeInstance#specific_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#specific_reservation ComputeInstance#specific_reservation}
 
 ---
 
@@ -3710,7 +4099,7 @@ Corresponds to the label key of a reservation resource.
 
 To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#key ComputeInstance#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#key ComputeInstance#key}
 
 ---
 
@@ -3724,7 +4113,7 @@ public readonly values: string[];
 
 Corresponds to the label values of a reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#values ComputeInstance#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#values ComputeInstance#values}
 
 ---
 
@@ -3747,7 +4136,7 @@ const computeInstanceScheduling: computeInstance.ComputeInstanceScheduling = { .
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.instanceTerminationAction">instanceTerminationAction</a></code> | <code>string</code> | Specifies the action GCE should take when SPOT VM is preempted. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.localSsdRecoveryTimeout">localSsdRecoveryTimeout</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout">ComputeInstanceSchedulingLocalSsdRecoveryTimeout</a></code> | local_ssd_recovery_timeout block. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.maxRunDuration">maxRunDuration</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingMaxRunDuration">ComputeInstanceSchedulingMaxRunDuration</a></code> | max_run_duration block. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.minNodeCpus">minNodeCpus</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#min_node_cpus ComputeInstance#min_node_cpus}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.minNodeCpus">minNodeCpus</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#min_node_cpus ComputeInstance#min_node_cpus}. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.nodeAffinities">nodeAffinities</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities">ComputeInstanceSchedulingNodeAffinities</a>[]</code> | node_affinities block. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.onHostMaintenance">onHostMaintenance</a></code> | <code>string</code> | Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE,. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.onInstanceStopAction">onInstanceStopAction</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOnInstanceStopAction">ComputeInstanceSchedulingOnInstanceStopAction</a></code> | on_instance_stop_action block. |
@@ -3767,7 +4156,7 @@ public readonly automaticRestart: boolean | IResolvable;
 
 Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#automatic_restart ComputeInstance#automatic_restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#automatic_restart ComputeInstance#automatic_restart}
 
 ---
 
@@ -3781,7 +4170,7 @@ public readonly availabilityDomain: number;
 
 Specifies the availability domain, which this instance should be scheduled on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#availability_domain ComputeInstance#availability_domain}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#availability_domain ComputeInstance#availability_domain}
 
 ---
 
@@ -3795,7 +4184,7 @@ public readonly instanceTerminationAction: string;
 
 Specifies the action GCE should take when SPOT VM is preempted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#instance_termination_action ComputeInstance#instance_termination_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#instance_termination_action ComputeInstance#instance_termination_action}
 
 ---
 
@@ -3809,7 +4198,7 @@ public readonly localSsdRecoveryTimeout: ComputeInstanceSchedulingLocalSsdRecove
 
 local_ssd_recovery_timeout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#local_ssd_recovery_timeout ComputeInstance#local_ssd_recovery_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#local_ssd_recovery_timeout ComputeInstance#local_ssd_recovery_timeout}
 
 ---
 
@@ -3823,7 +4212,7 @@ public readonly maxRunDuration: ComputeInstanceSchedulingMaxRunDuration;
 
 max_run_duration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#max_run_duration ComputeInstance#max_run_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#max_run_duration ComputeInstance#max_run_duration}
 
 ---
 
@@ -3835,7 +4224,7 @@ public readonly minNodeCpus: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#min_node_cpus ComputeInstance#min_node_cpus}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#min_node_cpus ComputeInstance#min_node_cpus}.
 
 ---
 
@@ -3849,7 +4238,7 @@ public readonly nodeAffinities: IResolvable | ComputeInstanceSchedulingNodeAffin
 
 node_affinities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#node_affinities ComputeInstance#node_affinities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#node_affinities ComputeInstance#node_affinities}
 
 ---
 
@@ -3863,7 +4252,7 @@ public readonly onHostMaintenance: string;
 
 Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE,.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#on_host_maintenance ComputeInstance#on_host_maintenance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#on_host_maintenance ComputeInstance#on_host_maintenance}
 
 ---
 
@@ -3877,7 +4266,7 @@ public readonly onInstanceStopAction: ComputeInstanceSchedulingOnInstanceStopAct
 
 on_instance_stop_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#on_instance_stop_action ComputeInstance#on_instance_stop_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#on_instance_stop_action ComputeInstance#on_instance_stop_action}
 
 ---
 
@@ -3891,7 +4280,7 @@ public readonly preemptible: boolean | IResolvable;
 
 Whether the instance is preemptible.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#preemptible ComputeInstance#preemptible}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#preemptible ComputeInstance#preemptible}
 
 ---
 
@@ -3905,7 +4294,7 @@ public readonly provisioningModel: string;
 
 Whether the instance is spot. If this is set as SPOT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#provisioning_model ComputeInstance#provisioning_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#provisioning_model ComputeInstance#provisioning_model}
 
 ---
 
@@ -3922,7 +4311,7 @@ Specifies the timestamp, when the instance will be terminated, in RFC3339 text f
 If specified, the instance termination action
 will be performed at the termination time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#termination_time ComputeInstance#termination_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#termination_time ComputeInstance#termination_time}
 
 ---
 
@@ -3955,7 +4344,7 @@ public readonly seconds: number;
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#seconds ComputeInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#seconds ComputeInstance#seconds}
 
 ---
 
@@ -3973,7 +4362,7 @@ Durations less than one second are represented
 with a 0 seconds field and a positive nanos field. Must
 be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#nanos ComputeInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#nanos ComputeInstance#nanos}
 
 ---
 
@@ -4006,7 +4395,7 @@ public readonly seconds: number;
 
 Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#seconds ComputeInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#seconds ComputeInstance#seconds}
 
 ---
 
@@ -4024,7 +4413,7 @@ Durations less than one second are represented
 with a 0 seconds field and a positive nanos field. Must
 be from 0 to 999,999,999 inclusive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#nanos ComputeInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#nanos ComputeInstance#nanos}
 
 ---
 
@@ -4042,9 +4431,9 @@ const computeInstanceSchedulingNodeAffinities: computeInstance.ComputeInstanceSc
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.key">key</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#key ComputeInstance#key}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.operator">operator</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#operator ComputeInstance#operator}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.values">values</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#values ComputeInstance#values}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.key">key</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#key ComputeInstance#key}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.operator">operator</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#operator ComputeInstance#operator}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.values">values</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#values ComputeInstance#values}. |
 
 ---
 
@@ -4056,7 +4445,7 @@ public readonly key: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#key ComputeInstance#key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#key ComputeInstance#key}.
 
 ---
 
@@ -4068,7 +4457,7 @@ public readonly operator: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#operator ComputeInstance#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#operator ComputeInstance#operator}.
 
 ---
 
@@ -4080,7 +4469,7 @@ public readonly values: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#values ComputeInstance#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#values ComputeInstance#values}.
 
 ---
 
@@ -4112,7 +4501,7 @@ public readonly discardLocalSsd: boolean | IResolvable;
 
 If true, the contents of any attached Local SSD disks will be discarded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#discard_local_ssd ComputeInstance#discard_local_ssd}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#discard_local_ssd ComputeInstance#discard_local_ssd}
 
 ---
 
@@ -4146,7 +4535,7 @@ public readonly interface: string;
 
 The disk interface used for attaching this disk. One of SCSI or NVME.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#interface ComputeInstance#interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#interface ComputeInstance#interface}
 
 ---
 
@@ -4160,7 +4549,7 @@ public readonly deviceName: string;
 
 Name with which the attached disk is accessible under /dev/disk/by-id/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
 
 ---
 
@@ -4174,7 +4563,7 @@ public readonly size: number;
 
 The size of the disk in gigabytes. One of 375 or 3000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#size ComputeInstance#size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#size ComputeInstance#size}
 
 ---
 
@@ -4207,7 +4596,7 @@ public readonly scopes: string[];
 
 A list of service scopes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#scopes ComputeInstance#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#scopes ComputeInstance#scopes}
 
 ---
 
@@ -4221,7 +4610,7 @@ public readonly email: string;
 
 The service account e-mail address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#email ComputeInstance#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#email ComputeInstance#email}
 
 ---
 
@@ -4255,7 +4644,7 @@ public readonly enableIntegrityMonitoring: boolean | IResolvable;
 
 Whether integrity monitoring is enabled for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#enable_integrity_monitoring ComputeInstance#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#enable_integrity_monitoring ComputeInstance#enable_integrity_monitoring}
 
 ---
 
@@ -4269,7 +4658,7 @@ public readonly enableSecureBoot: boolean | IResolvable;
 
 Whether secure boot is enabled for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#enable_secure_boot ComputeInstance#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#enable_secure_boot ComputeInstance#enable_secure_boot}
 
 ---
 
@@ -4283,7 +4672,7 @@ public readonly enableVtpm: boolean | IResolvable;
 
 Whether the instance uses vTPM.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#enable_vtpm ComputeInstance#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#enable_vtpm ComputeInstance#enable_vtpm}
 
 ---
 
@@ -4301,9 +4690,9 @@ const computeInstanceTimeouts: computeInstance.ComputeInstanceTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#create ComputeInstance#create}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#delete ComputeInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#update ComputeInstance#update}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#create ComputeInstance#create}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#delete ComputeInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#update ComputeInstance#update}. |
 
 ---
 
@@ -4315,7 +4704,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#create ComputeInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#create ComputeInstance#create}.
 
 ---
 
@@ -4327,7 +4716,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#delete ComputeInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#delete ComputeInstance#delete}.
 
 ---
 
@@ -4339,7 +4728,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance#update ComputeInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance#update ComputeInstance#update}.
 
 ---
 
@@ -4998,6 +5387,8 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetDeviceName">resetDeviceName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetDiskEncryptionKeyRaw">resetDiskEncryptionKeyRaw</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetDiskEncryptionKeyRsa">resetDiskEncryptionKeyRsa</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetDiskEncryptionServiceAccount">resetDiskEncryptionServiceAccount</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetKmsKeySelfLink">resetKmsKeySelfLink</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetMode">resetMode</a></code> | *No description.* |
 
@@ -5165,6 +5556,18 @@ public resetDeviceName(): void
 public resetDiskEncryptionKeyRaw(): void
 ```
 
+##### `resetDiskEncryptionKeyRsa` <a name="resetDiskEncryptionKeyRsa" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetDiskEncryptionKeyRsa"></a>
+
+```typescript
+public resetDiskEncryptionKeyRsa(): void
+```
+
+##### `resetDiskEncryptionServiceAccount` <a name="resetDiskEncryptionServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetDiskEncryptionServiceAccount"></a>
+
+```typescript
+public resetDiskEncryptionServiceAccount(): void
+```
+
 ##### `resetKmsKeySelfLink` <a name="resetKmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.resetKmsKeySelfLink"></a>
 
 ```typescript
@@ -5187,11 +5590,15 @@ public resetMode(): void
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionKeySha256">diskEncryptionKeySha256</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.deviceNameInput">deviceNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionKeyRawInput">diskEncryptionKeyRawInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionKeyRsaInput">diskEncryptionKeyRsaInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionServiceAccountInput">diskEncryptionServiceAccountInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.kmsKeySelfLinkInput">kmsKeySelfLinkInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.modeInput">modeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.sourceInput">sourceInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.deviceName">deviceName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionKeyRaw">diskEncryptionKeyRaw</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionKeyRsa">diskEncryptionKeyRsa</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionServiceAccount">diskEncryptionServiceAccount</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.mode">mode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.source">source</a></code> | <code>string</code> | *No description.* |
@@ -5253,6 +5660,26 @@ public readonly diskEncryptionKeyRawInput: string;
 
 ---
 
+##### `diskEncryptionKeyRsaInput`<sup>Optional</sup> <a name="diskEncryptionKeyRsaInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionKeyRsaInput"></a>
+
+```typescript
+public readonly diskEncryptionKeyRsaInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `diskEncryptionServiceAccountInput`<sup>Optional</sup> <a name="diskEncryptionServiceAccountInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionServiceAccountInput"></a>
+
+```typescript
+public readonly diskEncryptionServiceAccountInput: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `kmsKeySelfLinkInput`<sup>Optional</sup> <a name="kmsKeySelfLinkInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.kmsKeySelfLinkInput"></a>
 
 ```typescript
@@ -5297,6 +5724,26 @@ public readonly deviceName: string;
 
 ```typescript
 public readonly diskEncryptionKeyRaw: string;
+```
+
+- *Type:* string
+
+---
+
+##### `diskEncryptionKeyRsa`<sup>Required</sup> <a name="diskEncryptionKeyRsa" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionKeyRsa"></a>
+
+```typescript
+public readonly diskEncryptionKeyRsa: string;
+```
+
+- *Type:* string
+
+---
+
+##### `diskEncryptionServiceAccount`<sup>Required</sup> <a name="diskEncryptionServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceAttachedDiskOutputReference.property.diskEncryptionServiceAccount"></a>
+
+```typescript
+public readonly diskEncryptionServiceAccount: string;
 ```
 
 - *Type:* string
@@ -5394,6 +5841,8 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.putSourceImageEncryptionKey">putSourceImageEncryptionKey</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.putSourceSnapshotEncryptionKey">putSourceSnapshotEncryptionKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetArchitecture">resetArchitecture</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetEnableConfidentialCompute">resetEnableConfidentialCompute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetImage">resetImage</a></code> | *No description.* |
@@ -5403,6 +5852,9 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetResourceManagerTags">resetResourceManagerTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetResourcePolicies">resetResourcePolicies</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetSize">resetSize</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetSnapshot">resetSnapshot</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetSourceImageEncryptionKey">resetSourceImageEncryptionKey</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetSourceSnapshotEncryptionKey">resetSourceSnapshotEncryptionKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetStoragePool">resetStoragePool</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetType">resetType</a></code> | *No description.* |
 
@@ -5558,6 +6010,30 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `putSourceImageEncryptionKey` <a name="putSourceImageEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.putSourceImageEncryptionKey"></a>
+
+```typescript
+public putSourceImageEncryptionKey(value: ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.putSourceImageEncryptionKey.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey</a>
+
+---
+
+##### `putSourceSnapshotEncryptionKey` <a name="putSourceSnapshotEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.putSourceSnapshotEncryptionKey"></a>
+
+```typescript
+public putSourceSnapshotEncryptionKey(value: ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.putSourceSnapshotEncryptionKey.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey</a>
+
+---
+
 ##### `resetArchitecture` <a name="resetArchitecture" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetArchitecture"></a>
 
 ```typescript
@@ -5612,6 +6088,24 @@ public resetResourcePolicies(): void
 public resetSize(): void
 ```
 
+##### `resetSnapshot` <a name="resetSnapshot" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetSnapshot"></a>
+
+```typescript
+public resetSnapshot(): void
+```
+
+##### `resetSourceImageEncryptionKey` <a name="resetSourceImageEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetSourceImageEncryptionKey"></a>
+
+```typescript
+public resetSourceImageEncryptionKey(): void
+```
+
+##### `resetSourceSnapshotEncryptionKey` <a name="resetSourceSnapshotEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetSourceSnapshotEncryptionKey"></a>
+
+```typescript
+public resetSourceSnapshotEncryptionKey(): void
+```
+
 ##### `resetStoragePool` <a name="resetStoragePool" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.resetStoragePool"></a>
 
 ```typescript
@@ -5631,6 +6125,8 @@ public resetType(): void
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sourceImageEncryptionKey">sourceImageEncryptionKey</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sourceSnapshotEncryptionKey">sourceSnapshotEncryptionKey</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.architectureInput">architectureInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.enableConfidentialComputeInput">enableConfidentialComputeInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.imageInput">imageInput</a></code> | <code>string</code> | *No description.* |
@@ -5640,6 +6136,9 @@ public resetType(): void
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.resourceManagerTagsInput">resourceManagerTagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.resourcePoliciesInput">resourcePoliciesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sizeInput">sizeInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.snapshotInput">snapshotInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sourceImageEncryptionKeyInput">sourceImageEncryptionKeyInput</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sourceSnapshotEncryptionKeyInput">sourceSnapshotEncryptionKeyInput</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.storagePoolInput">storagePoolInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.typeInput">typeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.architecture">architecture</a></code> | <code>string</code> | *No description.* |
@@ -5651,6 +6150,7 @@ public resetType(): void
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.resourceManagerTags">resourceManagerTags</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.resourcePolicies">resourcePolicies</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.size">size</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.snapshot">snapshot</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.storagePool">storagePool</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams">ComputeInstanceBootDiskInitializeParams</a></code> | *No description.* |
@@ -5678,6 +6178,26 @@ public readonly fqn: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `sourceImageEncryptionKey`<sup>Required</sup> <a name="sourceImageEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sourceImageEncryptionKey"></a>
+
+```typescript
+public readonly sourceImageEncryptionKey: ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference</a>
+
+---
+
+##### `sourceSnapshotEncryptionKey`<sup>Required</sup> <a name="sourceSnapshotEncryptionKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sourceSnapshotEncryptionKey"></a>
+
+```typescript
+public readonly sourceSnapshotEncryptionKey: ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference</a>
 
 ---
 
@@ -5768,6 +6288,36 @@ public readonly sizeInput: number;
 ```
 
 - *Type:* number
+
+---
+
+##### `snapshotInput`<sup>Optional</sup> <a name="snapshotInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.snapshotInput"></a>
+
+```typescript
+public readonly snapshotInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `sourceImageEncryptionKeyInput`<sup>Optional</sup> <a name="sourceImageEncryptionKeyInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sourceImageEncryptionKeyInput"></a>
+
+```typescript
+public readonly sourceImageEncryptionKeyInput: ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey</a>
+
+---
+
+##### `sourceSnapshotEncryptionKeyInput`<sup>Optional</sup> <a name="sourceSnapshotEncryptionKeyInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.sourceSnapshotEncryptionKeyInput"></a>
+
+```typescript
+public readonly sourceSnapshotEncryptionKeyInput: ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey</a>
 
 ---
 
@@ -5881,6 +6431,16 @@ public readonly size: number;
 
 ---
 
+##### `snapshot`<sup>Required</sup> <a name="snapshot" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.snapshot"></a>
+
+```typescript
+public readonly snapshot: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `storagePool`<sup>Required</sup> <a name="storagePool" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsOutputReference.property.storagePool"></a>
 
 ```typescript
@@ -5908,6 +6468,758 @@ public readonly internalValue: ComputeInstanceBootDiskInitializeParams;
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams">ComputeInstanceBootDiskInitializeParams</a>
+
+---
+
+
+### ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference <a name="ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.Initializer"></a>
+
+```typescript
+import { computeInstance } from '@cdktf/provider-google'
+
+new computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resetKmsKeySelfLink">resetKmsKeySelfLink</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resetKmsKeyServiceAccount">resetKmsKeyServiceAccount</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resetRawKey">resetRawKey</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resetRsaEncryptedKey">resetRsaEncryptedKey</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetKmsKeySelfLink` <a name="resetKmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resetKmsKeySelfLink"></a>
+
+```typescript
+public resetKmsKeySelfLink(): void
+```
+
+##### `resetKmsKeyServiceAccount` <a name="resetKmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resetKmsKeyServiceAccount"></a>
+
+```typescript
+public resetKmsKeyServiceAccount(): void
+```
+
+##### `resetRawKey` <a name="resetRawKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resetRawKey"></a>
+
+```typescript
+public resetRawKey(): void
+```
+
+##### `resetRsaEncryptedKey` <a name="resetRsaEncryptedKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.resetRsaEncryptedKey"></a>
+
+```typescript
+public resetRsaEncryptedKey(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.sha256">sha256</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.kmsKeySelfLinkInput">kmsKeySelfLinkInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.kmsKeyServiceAccountInput">kmsKeyServiceAccountInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.rawKeyInput">rawKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.rsaEncryptedKeyInput">rsaEncryptedKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.kmsKeyServiceAccount">kmsKeyServiceAccount</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.rawKey">rawKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.rsaEncryptedKey">rsaEncryptedKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `sha256`<sup>Required</sup> <a name="sha256" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.sha256"></a>
+
+```typescript
+public readonly sha256: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeySelfLinkInput`<sup>Optional</sup> <a name="kmsKeySelfLinkInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.kmsKeySelfLinkInput"></a>
+
+```typescript
+public readonly kmsKeySelfLinkInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeyServiceAccountInput`<sup>Optional</sup> <a name="kmsKeyServiceAccountInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.kmsKeyServiceAccountInput"></a>
+
+```typescript
+public readonly kmsKeyServiceAccountInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `rawKeyInput`<sup>Optional</sup> <a name="rawKeyInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.rawKeyInput"></a>
+
+```typescript
+public readonly rawKeyInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `rsaEncryptedKeyInput`<sup>Optional</sup> <a name="rsaEncryptedKeyInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.rsaEncryptedKeyInput"></a>
+
+```typescript
+public readonly rsaEncryptedKeyInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeySelfLink`<sup>Required</sup> <a name="kmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.kmsKeySelfLink"></a>
+
+```typescript
+public readonly kmsKeySelfLink: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeyServiceAccount`<sup>Required</sup> <a name="kmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.kmsKeyServiceAccount"></a>
+
+```typescript
+public readonly kmsKeyServiceAccount: string;
+```
+
+- *Type:* string
+
+---
+
+##### `rawKey`<sup>Required</sup> <a name="rawKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.rawKey"></a>
+
+```typescript
+public readonly rawKey: string;
+```
+
+- *Type:* string
+
+---
+
+##### `rsaEncryptedKey`<sup>Required</sup> <a name="rsaEncryptedKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.rsaEncryptedKey"></a>
+
+```typescript
+public readonly rsaEncryptedKey: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceImageEncryptionKey</a>
+
+---
+
+
+### ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference <a name="ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.Initializer"></a>
+
+```typescript
+import { computeInstance } from '@cdktf/provider-google'
+
+new computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resetKmsKeySelfLink">resetKmsKeySelfLink</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resetKmsKeyServiceAccount">resetKmsKeyServiceAccount</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resetRawKey">resetRawKey</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resetRsaEncryptedKey">resetRsaEncryptedKey</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetKmsKeySelfLink` <a name="resetKmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resetKmsKeySelfLink"></a>
+
+```typescript
+public resetKmsKeySelfLink(): void
+```
+
+##### `resetKmsKeyServiceAccount` <a name="resetKmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resetKmsKeyServiceAccount"></a>
+
+```typescript
+public resetKmsKeyServiceAccount(): void
+```
+
+##### `resetRawKey` <a name="resetRawKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resetRawKey"></a>
+
+```typescript
+public resetRawKey(): void
+```
+
+##### `resetRsaEncryptedKey` <a name="resetRsaEncryptedKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.resetRsaEncryptedKey"></a>
+
+```typescript
+public resetRsaEncryptedKey(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.sha256">sha256</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.kmsKeySelfLinkInput">kmsKeySelfLinkInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.kmsKeyServiceAccountInput">kmsKeyServiceAccountInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.rawKeyInput">rawKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.rsaEncryptedKeyInput">rsaEncryptedKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.kmsKeyServiceAccount">kmsKeyServiceAccount</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.rawKey">rawKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.rsaEncryptedKey">rsaEncryptedKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `sha256`<sup>Required</sup> <a name="sha256" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.sha256"></a>
+
+```typescript
+public readonly sha256: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeySelfLinkInput`<sup>Optional</sup> <a name="kmsKeySelfLinkInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.kmsKeySelfLinkInput"></a>
+
+```typescript
+public readonly kmsKeySelfLinkInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeyServiceAccountInput`<sup>Optional</sup> <a name="kmsKeyServiceAccountInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.kmsKeyServiceAccountInput"></a>
+
+```typescript
+public readonly kmsKeyServiceAccountInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `rawKeyInput`<sup>Optional</sup> <a name="rawKeyInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.rawKeyInput"></a>
+
+```typescript
+public readonly rawKeyInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `rsaEncryptedKeyInput`<sup>Optional</sup> <a name="rsaEncryptedKeyInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.rsaEncryptedKeyInput"></a>
+
+```typescript
+public readonly rsaEncryptedKeyInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeySelfLink`<sup>Required</sup> <a name="kmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.kmsKeySelfLink"></a>
+
+```typescript
+public readonly kmsKeySelfLink: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeyServiceAccount`<sup>Required</sup> <a name="kmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.kmsKeyServiceAccount"></a>
+
+```typescript
+public readonly kmsKeyServiceAccount: string;
+```
+
+- *Type:* string
+
+---
+
+##### `rawKey`<sup>Required</sup> <a name="rawKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.rawKey"></a>
+
+```typescript
+public readonly rawKey: string;
+```
+
+- *Type:* string
+
+---
+
+##### `rsaEncryptedKey`<sup>Required</sup> <a name="rsaEncryptedKey" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.rsaEncryptedKey"></a>
+
+```typescript
+public readonly rsaEncryptedKey: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey">ComputeInstanceBootDiskInitializeParamsSourceSnapshotEncryptionKey</a>
 
 ---
 
@@ -5966,6 +7278,8 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetAutoDelete">resetAutoDelete</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetDeviceName">resetDeviceName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetDiskEncryptionKeyRaw">resetDiskEncryptionKeyRaw</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetDiskEncryptionKeyRsa">resetDiskEncryptionKeyRsa</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetDiskEncryptionServiceAccount">resetDiskEncryptionServiceAccount</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetGuestOsFeatures">resetGuestOsFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetInitializeParams">resetInitializeParams</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetInterface">resetInterface</a></code> | *No description.* |
@@ -6155,6 +7469,18 @@ public resetDeviceName(): void
 public resetDiskEncryptionKeyRaw(): void
 ```
 
+##### `resetDiskEncryptionKeyRsa` <a name="resetDiskEncryptionKeyRsa" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetDiskEncryptionKeyRsa"></a>
+
+```typescript
+public resetDiskEncryptionKeyRsa(): void
+```
+
+##### `resetDiskEncryptionServiceAccount` <a name="resetDiskEncryptionServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetDiskEncryptionServiceAccount"></a>
+
+```typescript
+public resetDiskEncryptionServiceAccount(): void
+```
+
 ##### `resetGuestOsFeatures` <a name="resetGuestOsFeatures" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.resetGuestOsFeatures"></a>
 
 ```typescript
@@ -6203,6 +7529,8 @@ public resetSource(): void
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.autoDeleteInput">autoDeleteInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.deviceNameInput">deviceNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionKeyRawInput">diskEncryptionKeyRawInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionKeyRsaInput">diskEncryptionKeyRsaInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionServiceAccountInput">diskEncryptionServiceAccountInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.guestOsFeaturesInput">guestOsFeaturesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.initializeParamsInput">initializeParamsInput</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskInitializeParams">ComputeInstanceBootDiskInitializeParams</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.interfaceInput">interfaceInput</a></code> | <code>string</code> | *No description.* |
@@ -6212,6 +7540,8 @@ public resetSource(): void
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.autoDelete">autoDelete</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.deviceName">deviceName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionKeyRaw">diskEncryptionKeyRaw</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionKeyRsa">diskEncryptionKeyRsa</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionServiceAccount">diskEncryptionServiceAccount</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.guestOsFeatures">guestOsFeatures</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.interface">interface</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | *No description.* |
@@ -6289,6 +7619,26 @@ public readonly deviceNameInput: string;
 
 ```typescript
 public readonly diskEncryptionKeyRawInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `diskEncryptionKeyRsaInput`<sup>Optional</sup> <a name="diskEncryptionKeyRsaInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionKeyRsaInput"></a>
+
+```typescript
+public readonly diskEncryptionKeyRsaInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `diskEncryptionServiceAccountInput`<sup>Optional</sup> <a name="diskEncryptionServiceAccountInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionServiceAccountInput"></a>
+
+```typescript
+public readonly diskEncryptionServiceAccountInput: string;
 ```
 
 - *Type:* string
@@ -6379,6 +7729,26 @@ public readonly deviceName: string;
 
 ```typescript
 public readonly diskEncryptionKeyRaw: string;
+```
+
+- *Type:* string
+
+---
+
+##### `diskEncryptionKeyRsa`<sup>Required</sup> <a name="diskEncryptionKeyRsa" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionKeyRsa"></a>
+
+```typescript
+public readonly diskEncryptionKeyRsa: string;
+```
+
+- *Type:* string
+
+---
+
+##### `diskEncryptionServiceAccount`<sup>Required</sup> <a name="diskEncryptionServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceBootDiskOutputReference.property.diskEncryptionServiceAccount"></a>
+
+```typescript
+public readonly diskEncryptionServiceAccount: string;
 ```
 
 - *Type:* string
@@ -7220,6 +8590,324 @@ public readonly internalValue: IResolvable | ComputeInstanceGuestAccelerator;
 ```
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAccelerator">ComputeInstanceGuestAccelerator</a>
+
+---
+
+
+### ComputeInstanceInstanceEncryptionKeyOutputReference <a name="ComputeInstanceInstanceEncryptionKeyOutputReference" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.Initializer"></a>
+
+```typescript
+import { computeInstance } from '@cdktf/provider-google'
+
+new computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.resetKmsKeySelfLink">resetKmsKeySelfLink</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.resetKmsKeyServiceAccount">resetKmsKeyServiceAccount</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetKmsKeySelfLink` <a name="resetKmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.resetKmsKeySelfLink"></a>
+
+```typescript
+public resetKmsKeySelfLink(): void
+```
+
+##### `resetKmsKeyServiceAccount` <a name="resetKmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.resetKmsKeyServiceAccount"></a>
+
+```typescript
+public resetKmsKeyServiceAccount(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.sha256">sha256</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.kmsKeySelfLinkInput">kmsKeySelfLinkInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.kmsKeyServiceAccountInput">kmsKeyServiceAccountInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.kmsKeySelfLink">kmsKeySelfLink</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.kmsKeyServiceAccount">kmsKeyServiceAccount</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey">ComputeInstanceInstanceEncryptionKey</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `sha256`<sup>Required</sup> <a name="sha256" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.sha256"></a>
+
+```typescript
+public readonly sha256: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeySelfLinkInput`<sup>Optional</sup> <a name="kmsKeySelfLinkInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.kmsKeySelfLinkInput"></a>
+
+```typescript
+public readonly kmsKeySelfLinkInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeyServiceAccountInput`<sup>Optional</sup> <a name="kmsKeyServiceAccountInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.kmsKeyServiceAccountInput"></a>
+
+```typescript
+public readonly kmsKeyServiceAccountInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeySelfLink`<sup>Required</sup> <a name="kmsKeySelfLink" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.kmsKeySelfLink"></a>
+
+```typescript
+public readonly kmsKeySelfLink: string;
+```
+
+- *Type:* string
+
+---
+
+##### `kmsKeyServiceAccount`<sup>Required</sup> <a name="kmsKeyServiceAccount" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.kmsKeyServiceAccount"></a>
+
+```typescript
+public readonly kmsKeyServiceAccount: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKeyOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: ComputeInstanceInstanceEncryptionKey;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceInstanceEncryptionKey">ComputeInstanceInstanceEncryptionKey</a>
 
 ---
 

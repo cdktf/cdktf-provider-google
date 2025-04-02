@@ -4,7 +4,7 @@
 
 ### DataprocWorkflowTemplate <a name="DataprocWorkflowTemplate" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template google_dataproc_workflow_template}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template google_dataproc_workflow_template}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer"></a>
 
@@ -53,7 +53,7 @@ dataprocWorkflowTemplate.DataprocWorkflowTemplate(
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.placement">placement</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacement">DataprocWorkflowTemplatePlacement</a></code> | placement block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.dagTimeout">dag_timeout</a></code> | <code>str</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.encryptionConfig">encryption_config</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateEncryptionConfig">DataprocWorkflowTemplateEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.parameters">parameters</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>]]</code> | parameters block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.Initializer.parameter.project">project</a></code> | <code>str</code> | The project for the resource. |
@@ -128,7 +128,7 @@ Must be unique amongst siblings in the same scope
 
 jobs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jobs DataprocWorkflowTemplate#jobs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jobs DataprocWorkflowTemplate#jobs}
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#location DataprocWorkflowTemplate#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#location DataprocWorkflowTemplate#location}
 
 ---
 
@@ -150,7 +150,7 @@ Output only.
 
 The resource name of the workflow template, as described in https://cloud.google.com/apis/design/resource_names. * For `projects.regions.workflowTemplates`, the resource name of the template has the following format: `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}` * For `projects.locations.workflowTemplates`, the resource name of the template has the following format: `projects/{project_id}/locations/{location}/workflowTemplates/{template_id}`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#name DataprocWorkflowTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#name DataprocWorkflowTemplate#name}
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 placement block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#placement DataprocWorkflowTemplate#placement}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#placement DataprocWorkflowTemplate#placement}
 
 ---
 
@@ -172,7 +172,7 @@ Optional.
 
 Timeout duration for the DAG of jobs, expressed in seconds (see [JSON representation of duration](https://developers.google.com/protocol-buffers/docs/proto3#json)). The timeout duration must be from 10 minutes ("600s") to 24 hours ("86400s"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a [managed cluster](/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#dag_timeout DataprocWorkflowTemplate#dag_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#dag_timeout DataprocWorkflowTemplate#dag_timeout}
 
 ---
 
@@ -182,7 +182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#encryption_config DataprocWorkflowTemplate#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#encryption_config DataprocWorkflowTemplate#encryption_config}
 
 ---
 
@@ -190,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -208,7 +208,7 @@ The labels to associate with this template. These labels will be propagated to a
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field `effective_labels` for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
 
 ---
 
@@ -218,7 +218,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#parameters DataprocWorkflowTemplate#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#parameters DataprocWorkflowTemplate#parameters}
 
 ---
 
@@ -228,7 +228,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#project DataprocWorkflowTemplate#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#project DataprocWorkflowTemplate#project}
 
 ---
 
@@ -238,7 +238,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#timeouts DataprocWorkflowTemplate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#timeouts DataprocWorkflowTemplate#timeouts}
 
 ---
 
@@ -248,7 +248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Output only. The current version of this workflow template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#version DataprocWorkflowTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#version DataprocWorkflowTemplate#version}
 
 ---
 
@@ -634,7 +634,7 @@ def put_encryption_config(
 
 Optional. The Cloud KMS key name to use for encryption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#kms_key DataprocWorkflowTemplate#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#kms_key DataprocWorkflowTemplate#kms_key}
 
 ---
 
@@ -681,7 +681,7 @@ def put_placement(
 
 cluster_selector block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cluster_selector DataprocWorkflowTemplate#cluster_selector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cluster_selector DataprocWorkflowTemplate#cluster_selector}
 
 ---
 
@@ -691,7 +691,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 managed_cluster block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#managed_cluster DataprocWorkflowTemplate#managed_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#managed_cluster DataprocWorkflowTemplate#managed_cluster}
 
 ---
 
@@ -709,7 +709,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#create DataprocWorkflowTemplate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#create DataprocWorkflowTemplate#create}.
 
 ---
 
@@ -717,7 +717,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#delete DataprocWorkflowTemplate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#delete DataprocWorkflowTemplate#delete}.
 
 ---
 
@@ -725,7 +725,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#update DataprocWorkflowTemplate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#update DataprocWorkflowTemplate#update}.
 
 ---
 
@@ -891,7 +891,7 @@ The construct id used in the generated config for the DataprocWorkflowTemplate t
 
 The id of the existing DataprocWorkflowTemplate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1441,7 +1441,7 @@ dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig(
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.placement">placement</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacement">DataprocWorkflowTemplatePlacement</a></code> | placement block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.dagTimeout">dag_timeout</a></code> | <code>str</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.encryptionConfig">encryption_config</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateEncryptionConfig">DataprocWorkflowTemplateEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.parameters">parameters</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>]]</code> | parameters block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateConfig.property.project">project</a></code> | <code>str</code> | The project for the resource. |
@@ -1530,7 +1530,7 @@ jobs: typing.Union[IResolvable, typing.List[DataprocWorkflowTemplateJobs]]
 
 jobs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jobs DataprocWorkflowTemplate#jobs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jobs DataprocWorkflowTemplate#jobs}
 
 ---
 
@@ -1544,7 +1544,7 @@ location: str
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#location DataprocWorkflowTemplate#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#location DataprocWorkflowTemplate#location}
 
 ---
 
@@ -1560,7 +1560,7 @@ Output only.
 
 The resource name of the workflow template, as described in https://cloud.google.com/apis/design/resource_names. * For `projects.regions.workflowTemplates`, the resource name of the template has the following format: `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}` * For `projects.locations.workflowTemplates`, the resource name of the template has the following format: `projects/{project_id}/locations/{location}/workflowTemplates/{template_id}`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#name DataprocWorkflowTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#name DataprocWorkflowTemplate#name}
 
 ---
 
@@ -1574,7 +1574,7 @@ placement: DataprocWorkflowTemplatePlacement
 
 placement block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#placement DataprocWorkflowTemplate#placement}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#placement DataprocWorkflowTemplate#placement}
 
 ---
 
@@ -1590,7 +1590,7 @@ Optional.
 
 Timeout duration for the DAG of jobs, expressed in seconds (see [JSON representation of duration](https://developers.google.com/protocol-buffers/docs/proto3#json)). The timeout duration must be from 10 minutes ("600s") to 24 hours ("86400s"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a [managed cluster](/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#dag_timeout DataprocWorkflowTemplate#dag_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#dag_timeout DataprocWorkflowTemplate#dag_timeout}
 
 ---
 
@@ -1604,7 +1604,7 @@ encryption_config: DataprocWorkflowTemplateEncryptionConfig
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#encryption_config DataprocWorkflowTemplate#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#encryption_config DataprocWorkflowTemplate#encryption_config}
 
 ---
 
@@ -1616,7 +1616,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#id DataprocWorkflowTemplate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1638,7 +1638,7 @@ The labels to associate with this template. These labels will be propagated to a
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field `effective_labels` for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
 
 ---
 
@@ -1652,7 +1652,7 @@ parameters: typing.Union[IResolvable, typing.List[DataprocWorkflowTemplateParame
 
 parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#parameters DataprocWorkflowTemplate#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#parameters DataprocWorkflowTemplate#parameters}
 
 ---
 
@@ -1666,7 +1666,7 @@ project: str
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#project DataprocWorkflowTemplate#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#project DataprocWorkflowTemplate#project}
 
 ---
 
@@ -1680,7 +1680,7 @@ timeouts: DataprocWorkflowTemplateTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#timeouts DataprocWorkflowTemplate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#timeouts DataprocWorkflowTemplate#timeouts}
 
 ---
 
@@ -1694,7 +1694,7 @@ version: typing.Union[int, float]
 
 Output only. The current version of this workflow template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#version DataprocWorkflowTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#version DataprocWorkflowTemplate#version}
 
 ---
 
@@ -1728,7 +1728,7 @@ kms_key: str
 
 Optional. The Cloud KMS key name to use for encryption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#kms_key DataprocWorkflowTemplate#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#kms_key DataprocWorkflowTemplate#kms_key}
 
 ---
 
@@ -1786,7 +1786,7 @@ Required.
 
 The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in prerequisiteStepIds field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#step_id DataprocWorkflowTemplate#step_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#step_id DataprocWorkflowTemplate#step_id}
 
 ---
 
@@ -1800,7 +1800,7 @@ hadoop_job: DataprocWorkflowTemplateJobsHadoopJob
 
 hadoop_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#hadoop_job DataprocWorkflowTemplate#hadoop_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#hadoop_job DataprocWorkflowTemplate#hadoop_job}
 
 ---
 
@@ -1814,7 +1814,7 @@ hive_job: DataprocWorkflowTemplateJobsHiveJob
 
 hive_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#hive_job DataprocWorkflowTemplate#hive_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#hive_job DataprocWorkflowTemplate#hive_job}
 
 ---
 
@@ -1830,7 +1830,7 @@ Optional.
 
 The labels to associate with this job. Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: p{Ll}p{Lo}{0,62} Label values must be between 1 and 63 characters long, and must conform to the following regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 32 labels can be associated with a given job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
 
 ---
 
@@ -1844,7 +1844,7 @@ pig_job: DataprocWorkflowTemplateJobsPigJob
 
 pig_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#pig_job DataprocWorkflowTemplate#pig_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#pig_job DataprocWorkflowTemplate#pig_job}
 
 ---
 
@@ -1860,7 +1860,7 @@ Optional.
 
 The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#prerequisite_step_ids DataprocWorkflowTemplate#prerequisite_step_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#prerequisite_step_ids DataprocWorkflowTemplate#prerequisite_step_ids}
 
 ---
 
@@ -1874,7 +1874,7 @@ presto_job: DataprocWorkflowTemplateJobsPrestoJob
 
 presto_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#presto_job DataprocWorkflowTemplate#presto_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#presto_job DataprocWorkflowTemplate#presto_job}
 
 ---
 
@@ -1888,7 +1888,7 @@ pyspark_job: DataprocWorkflowTemplateJobsPysparkJob
 
 pyspark_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#pyspark_job DataprocWorkflowTemplate#pyspark_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#pyspark_job DataprocWorkflowTemplate#pyspark_job}
 
 ---
 
@@ -1902,7 +1902,7 @@ scheduling: DataprocWorkflowTemplateJobsScheduling
 
 scheduling block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#scheduling DataprocWorkflowTemplate#scheduling}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#scheduling DataprocWorkflowTemplate#scheduling}
 
 ---
 
@@ -1916,7 +1916,7 @@ spark_job: DataprocWorkflowTemplateJobsSparkJob
 
 spark_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#spark_job DataprocWorkflowTemplate#spark_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#spark_job DataprocWorkflowTemplate#spark_job}
 
 ---
 
@@ -1930,7 +1930,7 @@ spark_r_job: DataprocWorkflowTemplateJobsSparkRJob
 
 spark_r_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#spark_r_job DataprocWorkflowTemplate#spark_r_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#spark_r_job DataprocWorkflowTemplate#spark_r_job}
 
 ---
 
@@ -1944,7 +1944,7 @@ spark_sql_job: DataprocWorkflowTemplateJobsSparkSqlJob
 
 spark_sql_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#spark_sql_job DataprocWorkflowTemplate#spark_sql_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#spark_sql_job DataprocWorkflowTemplate#spark_sql_job}
 
 ---
 
@@ -1994,7 +1994,7 @@ Optional.
 
 HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
 
 ---
 
@@ -2010,7 +2010,7 @@ Optional.
 
 The arguments to pass to the driver. Do not include arguments, such as `-libjars` or `-Dfoo=bar`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
 
 ---
 
@@ -2026,7 +2026,7 @@ Optional.
 
 HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
 
 ---
 
@@ -2040,7 +2040,7 @@ jar_file_uris: typing.List[str]
 
 Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -2054,7 +2054,7 @@ logging_config: DataprocWorkflowTemplateJobsHadoopJobLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -2070,7 +2070,7 @@ The name of the driver's main class.
 
 The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_class DataprocWorkflowTemplate#main_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_class DataprocWorkflowTemplate#main_class}
 
 ---
 
@@ -2084,7 +2084,7 @@ main_jar_file_uri: str
 
 The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
 
 ---
 
@@ -2100,7 +2100,7 @@ Optional.
 
 A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -2136,7 +2136,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -2182,7 +2182,7 @@ Optional.
 
 Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
 
 ---
 
@@ -2198,7 +2198,7 @@ Optional.
 
 HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -2214,7 +2214,7 @@ Optional.
 
 A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -2228,7 +2228,7 @@ query_file_uri: str
 
 The HCFS URI of the script that contains Hive queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
 
 ---
 
@@ -2242,7 +2242,7 @@ query_list: DataprocWorkflowTemplateJobsHiveJobQueryListStruct
 
 query_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
 
 ---
 
@@ -2256,7 +2256,7 @@ script_variables: typing.Mapping[str]
 
 Optional. Mapping of query variable names to values (equivalent to the Hive command: `SET name="value";`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
 
 ---
 
@@ -2292,7 +2292,7 @@ Required.
 
 The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
 
 ---
 
@@ -2340,7 +2340,7 @@ Optional.
 
 Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
 
 ---
 
@@ -2356,7 +2356,7 @@ Optional.
 
 HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -2370,7 +2370,7 @@ logging_config: DataprocWorkflowTemplateJobsPigJobLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -2386,7 +2386,7 @@ Optional.
 
 A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -2400,7 +2400,7 @@ query_file_uri: str
 
 The HCFS URI of the script that contains the Pig queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
 
 ---
 
@@ -2414,7 +2414,7 @@ query_list: DataprocWorkflowTemplateJobsPigJobQueryListStruct
 
 query_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
 
 ---
 
@@ -2428,7 +2428,7 @@ script_variables: typing.Mapping[str]
 
 Optional. Mapping of query variable names to values (equivalent to the Pig command: `name=[value]`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
 
 ---
 
@@ -2464,7 +2464,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -2500,7 +2500,7 @@ Required.
 
 The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
 
 ---
 
@@ -2546,7 +2546,7 @@ client_tags: typing.List[str]
 
 Optional. Presto client tags to attach to this query.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#client_tags DataprocWorkflowTemplate#client_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#client_tags DataprocWorkflowTemplate#client_tags}
 
 ---
 
@@ -2562,7 +2562,7 @@ Optional.
 
 Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
 
 ---
 
@@ -2576,7 +2576,7 @@ logging_config: DataprocWorkflowTemplateJobsPrestoJobLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -2590,7 +2590,7 @@ output_format: str
 
 Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#output_format DataprocWorkflowTemplate#output_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#output_format DataprocWorkflowTemplate#output_format}
 
 ---
 
@@ -2606,7 +2606,7 @@ Optional.
 
 A mapping of property names to values. Used to set Presto [session properties](https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -2620,7 +2620,7 @@ query_file_uri: str
 
 The HCFS URI of the script that contains SQL queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
 
 ---
 
@@ -2634,7 +2634,7 @@ query_list: DataprocWorkflowTemplateJobsPrestoJobQueryListStruct
 
 query_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
 
 ---
 
@@ -2670,7 +2670,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -2706,7 +2706,7 @@ Required.
 
 The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
 
 ---
 
@@ -2754,7 +2754,7 @@ main_python_file_uri: str
 
 Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_python_file_uri DataprocWorkflowTemplate#main_python_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_python_file_uri DataprocWorkflowTemplate#main_python_file_uri}
 
 ---
 
@@ -2770,7 +2770,7 @@ Optional.
 
 HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
 
 ---
 
@@ -2786,7 +2786,7 @@ Optional.
 
 The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
 
 ---
 
@@ -2802,7 +2802,7 @@ Optional.
 
 HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
 
 ---
 
@@ -2816,7 +2816,7 @@ jar_file_uris: typing.List[str]
 
 Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -2830,7 +2830,7 @@ logging_config: DataprocWorkflowTemplateJobsPysparkJobLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -2846,7 +2846,7 @@ Optional.
 
 A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -2862,7 +2862,7 @@ Optional.
 
 HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#python_file_uris DataprocWorkflowTemplate#python_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#python_file_uris DataprocWorkflowTemplate#python_file_uris}
 
 ---
 
@@ -2898,7 +2898,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -2936,7 +2936,7 @@ Optional.
 
 Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#max_failures_per_hour DataprocWorkflowTemplate#max_failures_per_hour}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#max_failures_per_hour DataprocWorkflowTemplate#max_failures_per_hour}
 
 ---
 
@@ -2952,7 +2952,7 @@ Optional.
 
 Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#max_failures_total DataprocWorkflowTemplate#max_failures_total}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#max_failures_total DataprocWorkflowTemplate#max_failures_total}
 
 ---
 
@@ -3002,7 +3002,7 @@ Optional.
 
 HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
 
 ---
 
@@ -3018,7 +3018,7 @@ Optional.
 
 The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
 
 ---
 
@@ -3034,7 +3034,7 @@ Optional.
 
 HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
 
 ---
 
@@ -3048,7 +3048,7 @@ jar_file_uris: typing.List[str]
 
 Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -3062,7 +3062,7 @@ logging_config: DataprocWorkflowTemplateJobsSparkJobLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -3078,7 +3078,7 @@ The name of the driver's main class.
 
 The jar file that contains the class must be in the default CLASSPATH or specified in `jar_file_uris`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_class DataprocWorkflowTemplate#main_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_class DataprocWorkflowTemplate#main_class}
 
 ---
 
@@ -3092,7 +3092,7 @@ main_jar_file_uri: str
 
 The HCFS URI of the jar file that contains the main class.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
 
 ---
 
@@ -3108,7 +3108,7 @@ Optional.
 
 A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -3144,7 +3144,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -3188,7 +3188,7 @@ main_r_file_uri: str
 
 Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_r_file_uri DataprocWorkflowTemplate#main_r_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_r_file_uri DataprocWorkflowTemplate#main_r_file_uri}
 
 ---
 
@@ -3204,7 +3204,7 @@ Optional.
 
 HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
 
 ---
 
@@ -3220,7 +3220,7 @@ Optional.
 
 The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
 
 ---
 
@@ -3236,7 +3236,7 @@ Optional.
 
 HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
 
 ---
 
@@ -3250,7 +3250,7 @@ logging_config: DataprocWorkflowTemplateJobsSparkRJobLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -3266,7 +3266,7 @@ Optional.
 
 A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -3302,7 +3302,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -3346,7 +3346,7 @@ jar_file_uris: typing.List[str]
 
 Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -3360,7 +3360,7 @@ logging_config: DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -3376,7 +3376,7 @@ Optional.
 
 A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -3390,7 +3390,7 @@ query_file_uri: str
 
 The HCFS URI of the script that contains SQL queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
 
 ---
 
@@ -3404,7 +3404,7 @@ query_list: DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct
 
 query_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
 
 ---
 
@@ -3418,7 +3418,7 @@ script_variables: typing.Mapping[str]
 
 Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
 
 ---
 
@@ -3454,7 +3454,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -3490,7 +3490,7 @@ Required.
 
 The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
 
 ---
 
@@ -3532,7 +3532,7 @@ Required.
 
 Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths. A field path is similar in syntax to a google.protobuf.FieldMask. For example, a field path that references the zone field of a workflow template's cluster selector would be specified as `placement.clusterSelector.zone`. Also, field paths can reference fields using the following syntax: * Values in maps can be referenced by key: * labels['key'] * placement.clusterSelector.clusterLabels['key'] * placement.managedCluster.labels['key'] * placement.clusterSelector.clusterLabels['key'] * jobs['step-id'].labels['key'] * Jobs in the jobs list can be referenced by step-id: * jobs['step-id'].hadoopJob.mainJarFileUri * jobs['step-id'].hiveJob.queryFileUri * jobs['step-id'].pySparkJob.mainPythonFileUri * jobs['step-id'].hadoopJob.jarFileUris[0] * jobs['step-id'].hadoopJob.archiveUris[0] * jobs['step-id'].hadoopJob.fileUris[0] * jobs['step-id'].pySparkJob.pythonFileUris[0] * Items in repeated fields can be referenced by a zero-based index: * jobs['step-id'].sparkJob.args[0] * Other examples: * jobs['step-id'].hadoopJob.properties['key'] * jobs['step-id'].hadoopJob.args[0] * jobs['step-id'].hiveJob.scriptVariables['key'] * jobs['step-id'].hadoopJob.mainJarFileUri * placement.clusterSelector.zone It may not be possible to parameterize maps and repeated fields in their entirety since only individual map values and individual items in repeated fields can be referenced. For example, the following field paths are invalid: - placement.clusterSelector.clusterLabels - jobs['step-id'].sparkJob.args
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#fields DataprocWorkflowTemplate#fields}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#fields DataprocWorkflowTemplate#fields}
 
 ---
 
@@ -3548,7 +3548,7 @@ Required.
 
 Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#name DataprocWorkflowTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#name DataprocWorkflowTemplate#name}
 
 ---
 
@@ -3562,7 +3562,7 @@ description: str
 
 Optional. Brief description of the parameter. Must not exceed 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#description DataprocWorkflowTemplate#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#description DataprocWorkflowTemplate#description}
 
 ---
 
@@ -3576,7 +3576,7 @@ validation: DataprocWorkflowTemplateParametersValidation
 
 validation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#validation DataprocWorkflowTemplate#validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#validation DataprocWorkflowTemplate#validation}
 
 ---
 
@@ -3612,7 +3612,7 @@ regex: DataprocWorkflowTemplateParametersValidationRegex
 
 regex block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#regex DataprocWorkflowTemplate#regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#regex DataprocWorkflowTemplate#regex}
 
 ---
 
@@ -3626,7 +3626,7 @@ values: DataprocWorkflowTemplateParametersValidationValues
 
 values block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
 
 ---
 
@@ -3662,7 +3662,7 @@ Required.
 
 RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#regexes DataprocWorkflowTemplate#regexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#regexes DataprocWorkflowTemplate#regexes}
 
 ---
 
@@ -3696,7 +3696,7 @@ values: typing.List[str]
 
 Required. List of allowed values for the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
 
 ---
 
@@ -3732,7 +3732,7 @@ cluster_selector: DataprocWorkflowTemplatePlacementClusterSelector
 
 cluster_selector block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cluster_selector DataprocWorkflowTemplate#cluster_selector}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cluster_selector DataprocWorkflowTemplate#cluster_selector}
 
 ---
 
@@ -3746,7 +3746,7 @@ managed_cluster: DataprocWorkflowTemplatePlacementManagedCluster
 
 managed_cluster block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#managed_cluster DataprocWorkflowTemplate#managed_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#managed_cluster DataprocWorkflowTemplate#managed_cluster}
 
 ---
 
@@ -3782,7 +3782,7 @@ cluster_labels: typing.Mapping[str]
 
 Required. The cluster labels. Cluster must have all labels to match.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cluster_labels DataprocWorkflowTemplate#cluster_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cluster_labels DataprocWorkflowTemplate#cluster_labels}
 
 ---
 
@@ -3798,7 +3798,7 @@ Optional.
 
 The zone where workflow process executes. This parameter does not affect the selection of the cluster. If unspecified, the zone of the first cluster matching the selector is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#zone DataprocWorkflowTemplate#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#zone DataprocWorkflowTemplate#zone}
 
 ---
 
@@ -3838,7 +3838,7 @@ Required.
 
 The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cluster_name DataprocWorkflowTemplate#cluster_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cluster_name DataprocWorkflowTemplate#cluster_name}
 
 ---
 
@@ -3852,7 +3852,7 @@ config: DataprocWorkflowTemplatePlacementManagedClusterConfig
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#config DataprocWorkflowTemplate#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#config DataprocWorkflowTemplate#config}
 
 ---
 
@@ -3868,7 +3868,7 @@ Optional.
 
 The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: p{Ll}p{Lo}{0,62} Label values must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 32 labels can be associated with a given cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
 
 ---
 
@@ -3926,7 +3926,7 @@ autoscaling_config: DataprocWorkflowTemplatePlacementManagedClusterConfigAutosca
 
 autoscaling_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#autoscaling_config DataprocWorkflowTemplate#autoscaling_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#autoscaling_config DataprocWorkflowTemplate#autoscaling_config}
 
 ---
 
@@ -3940,7 +3940,7 @@ encryption_config: DataprocWorkflowTemplatePlacementManagedClusterConfigEncrypti
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#encryption_config DataprocWorkflowTemplate#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#encryption_config DataprocWorkflowTemplate#encryption_config}
 
 ---
 
@@ -3954,7 +3954,7 @@ endpoint_config: DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointCo
 
 endpoint_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#endpoint_config DataprocWorkflowTemplate#endpoint_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#endpoint_config DataprocWorkflowTemplate#endpoint_config}
 
 ---
 
@@ -3968,7 +3968,7 @@ gce_cluster_config: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClus
 
 gce_cluster_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#gce_cluster_config DataprocWorkflowTemplate#gce_cluster_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#gce_cluster_config DataprocWorkflowTemplate#gce_cluster_config}
 
 ---
 
@@ -3982,7 +3982,7 @@ initialization_actions: typing.Union[IResolvable, typing.List[DataprocWorkflowTe
 
 initialization_actions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#initialization_actions DataprocWorkflowTemplate#initialization_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#initialization_actions DataprocWorkflowTemplate#initialization_actions}
 
 ---
 
@@ -3996,7 +3996,7 @@ lifecycle_config: DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycle
 
 lifecycle_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#lifecycle_config DataprocWorkflowTemplate#lifecycle_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#lifecycle_config DataprocWorkflowTemplate#lifecycle_config}
 
 ---
 
@@ -4010,7 +4010,7 @@ master_config: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig
 
 master_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#master_config DataprocWorkflowTemplate#master_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#master_config DataprocWorkflowTemplate#master_config}
 
 ---
 
@@ -4024,7 +4024,7 @@ secondary_worker_config: DataprocWorkflowTemplatePlacementManagedClusterConfigSe
 
 secondary_worker_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#secondary_worker_config DataprocWorkflowTemplate#secondary_worker_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#secondary_worker_config DataprocWorkflowTemplate#secondary_worker_config}
 
 ---
 
@@ -4038,7 +4038,7 @@ security_config: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityCo
 
 security_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#security_config DataprocWorkflowTemplate#security_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#security_config DataprocWorkflowTemplate#security_config}
 
 ---
 
@@ -4052,7 +4052,7 @@ software_config: DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareCo
 
 software_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#software_config DataprocWorkflowTemplate#software_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#software_config DataprocWorkflowTemplate#software_config}
 
 ---
 
@@ -4068,7 +4068,7 @@ Optional.
 
 A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see [Dataproc staging bucket](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#staging_bucket DataprocWorkflowTemplate#staging_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#staging_bucket DataprocWorkflowTemplate#staging_bucket}
 
 ---
 
@@ -4084,7 +4084,7 @@ Optional.
 
 A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#temp_bucket DataprocWorkflowTemplate#temp_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#temp_bucket DataprocWorkflowTemplate#temp_bucket}
 
 ---
 
@@ -4098,7 +4098,7 @@ worker_config: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig
 
 worker_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#worker_config DataprocWorkflowTemplate#worker_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#worker_config DataprocWorkflowTemplate#worker_config}
 
 ---
 
@@ -4134,7 +4134,7 @@ Optional.
 
 The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` * `projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` Note that the policy must be in the same project and Dataproc region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#policy DataprocWorkflowTemplate#policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#policy DataprocWorkflowTemplate#policy}
 
 ---
 
@@ -4168,7 +4168,7 @@ gce_pd_kms_key_name: str
 
 Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#gce_pd_kms_key_name DataprocWorkflowTemplate#gce_pd_kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#gce_pd_kms_key_name DataprocWorkflowTemplate#gce_pd_kms_key_name}
 
 ---
 
@@ -4202,7 +4202,7 @@ enable_http_port_access: typing.Union[bool, IResolvable]
 
 Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_http_port_access DataprocWorkflowTemplate#enable_http_port_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_http_port_access DataprocWorkflowTemplate#enable_http_port_access}
 
 ---
 
@@ -4260,7 +4260,7 @@ Optional.
 
 If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#internal_ip_only DataprocWorkflowTemplate#internal_ip_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#internal_ip_only DataprocWorkflowTemplate#internal_ip_only}
 
 ---
 
@@ -4274,7 +4274,7 @@ metadata: typing.Mapping[str]
 
 The Compute Engine metadata entries to add to all instances (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#metadata DataprocWorkflowTemplate#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#metadata DataprocWorkflowTemplate#metadata}
 
 ---
 
@@ -4290,7 +4290,7 @@ Optional.
 
 The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see [Using Subnetworks](https://cloud.google.com/compute/docs/subnetworks) for more information). A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` * `default`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#network DataprocWorkflowTemplate#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#network DataprocWorkflowTemplate#network}
 
 ---
 
@@ -4304,7 +4304,7 @@ node_group_affinity: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClu
 
 node_group_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#node_group_affinity DataprocWorkflowTemplate#node_group_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#node_group_affinity DataprocWorkflowTemplate#node_group_affinity}
 
 ---
 
@@ -4318,7 +4318,7 @@ private_ipv6_google_access: str
 
 Optional. The type of IPv6 access for a cluster. Possible values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED, INHERIT_FROM_SUBNETWORK, OUTBOUND, BIDIRECTIONAL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#private_ipv6_google_access DataprocWorkflowTemplate#private_ipv6_google_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#private_ipv6_google_access DataprocWorkflowTemplate#private_ipv6_google_access}
 
 ---
 
@@ -4332,7 +4332,7 @@ reservation_affinity: DataprocWorkflowTemplatePlacementManagedClusterConfigGceCl
 
 reservation_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#reservation_affinity DataprocWorkflowTemplate#reservation_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#reservation_affinity DataprocWorkflowTemplate#reservation_affinity}
 
 ---
 
@@ -4348,7 +4348,7 @@ Optional.
 
 The [Dataproc service account](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see [VM Data Plane identity](https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#service_account DataprocWorkflowTemplate#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#service_account DataprocWorkflowTemplate#service_account}
 
 ---
 
@@ -4364,7 +4364,7 @@ Optional.
 
 The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: * https://www.googleapis.com/auth/cloud.useraccounts.readonly * https://www.googleapis.com/auth/devstorage.read_write * https://www.googleapis.com/auth/logging.write If no scopes are specified, the following defaults are also provided: * https://www.googleapis.com/auth/bigquery * https://www.googleapis.com/auth/bigtable.admin.table * https://www.googleapis.com/auth/bigtable.data * https://www.googleapis.com/auth/devstorage.full_control
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#service_account_scopes DataprocWorkflowTemplate#service_account_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#service_account_scopes DataprocWorkflowTemplate#service_account_scopes}
 
 ---
 
@@ -4378,7 +4378,7 @@ shielded_instance_config: DataprocWorkflowTemplatePlacementManagedClusterConfigG
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#shielded_instance_config DataprocWorkflowTemplate#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#shielded_instance_config DataprocWorkflowTemplate#shielded_instance_config}
 
 ---
 
@@ -4394,7 +4394,7 @@ Optional.
 
 The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0` * `sub0`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#subnetwork DataprocWorkflowTemplate#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#subnetwork DataprocWorkflowTemplate#subnetwork}
 
 ---
 
@@ -4408,7 +4408,7 @@ tags: typing.List[str]
 
 The Compute Engine tags to add to all instances (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#tags DataprocWorkflowTemplate#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#tags DataprocWorkflowTemplate#tags}
 
 ---
 
@@ -4424,7 +4424,7 @@ Optional.
 
 The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]` * `projects/[project_id]/zones/[zone]` * `us-central1-f`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#zone DataprocWorkflowTemplate#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#zone DataprocWorkflowTemplate#zone}
 
 ---
 
@@ -4460,7 +4460,7 @@ Required.
 
 The URI of a sole-tenant [node group resource](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on. A full URL, partial URI, or node group name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#node_group DataprocWorkflowTemplate#node_group}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#node_group DataprocWorkflowTemplate#node_group}
 
 ---
 
@@ -4498,7 +4498,7 @@ consume_reservation_type: str
 
 Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#consume_reservation_type DataprocWorkflowTemplate#consume_reservation_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#consume_reservation_type DataprocWorkflowTemplate#consume_reservation_type}
 
 ---
 
@@ -4512,7 +4512,7 @@ key: str
 
 Optional. Corresponds to the label key of reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#key DataprocWorkflowTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#key DataprocWorkflowTemplate#key}
 
 ---
 
@@ -4526,7 +4526,7 @@ values: typing.List[str]
 
 Optional. Corresponds to the label values of reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
 
 ---
 
@@ -4566,7 +4566,7 @@ Optional.
 
 Defines whether instances have integrity monitoring enabled. Integrity monitoring compares the most recent boot measurements to the integrity policy baseline and returns a pair of pass/fail results depending on whether they match or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_integrity_monitoring DataprocWorkflowTemplate#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_integrity_monitoring DataprocWorkflowTemplate#enable_integrity_monitoring}
 
 ---
 
@@ -4582,7 +4582,7 @@ Optional.
 
 Defines whether the instances have Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_secure_boot DataprocWorkflowTemplate#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_secure_boot DataprocWorkflowTemplate#enable_secure_boot}
 
 ---
 
@@ -4598,7 +4598,7 @@ Optional.
 
 Defines whether the instance have the vTPM enabled. Virtual Trusted Platform Module protects objects like keys, certificates and enables Measured Boot by performing the measurements needed to create a known good boot baseline, called the integrity policy baseline.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_vtpm DataprocWorkflowTemplate#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_vtpm DataprocWorkflowTemplate#enable_vtpm}
 
 ---
 
@@ -4634,7 +4634,7 @@ executable_file: str
 
 Required. Cloud Storage URI of executable file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#executable_file DataprocWorkflowTemplate#executable_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#executable_file DataprocWorkflowTemplate#executable_file}
 
 ---
 
@@ -4650,7 +4650,7 @@ Optional.
 
 Amount of time executable has to complete. Default is 10 minutes (see JSON representation of [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#execution_timeout DataprocWorkflowTemplate#execution_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#execution_timeout DataprocWorkflowTemplate#execution_timeout}
 
 ---
 
@@ -4688,7 +4688,7 @@ auto_delete_time: str
 
 Optional. The time when cluster will be auto-deleted (see JSON representation of [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#auto_delete_time DataprocWorkflowTemplate#auto_delete_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#auto_delete_time DataprocWorkflowTemplate#auto_delete_time}
 
 ---
 
@@ -4704,7 +4704,7 @@ Optional.
 
 The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#auto_delete_ttl DataprocWorkflowTemplate#auto_delete_ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#auto_delete_ttl DataprocWorkflowTemplate#auto_delete_ttl}
 
 ---
 
@@ -4720,7 +4720,7 @@ Optional.
 
 The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#idle_delete_ttl DataprocWorkflowTemplate#idle_delete_ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#idle_delete_ttl DataprocWorkflowTemplate#idle_delete_ttl}
 
 ---
 
@@ -4766,7 +4766,7 @@ accelerators: typing.Union[IResolvable, typing.List[DataprocWorkflowTemplatePlac
 
 accelerators block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
 
 ---
 
@@ -4780,7 +4780,7 @@ disk_config: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDi
 
 disk_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
 
 ---
 
@@ -4796,7 +4796,7 @@ Optional.
 
 The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
 
 ---
 
@@ -4812,7 +4812,7 @@ Optional.
 
 The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
 
 ---
 
@@ -4826,7 +4826,7 @@ min_cpu_platform: str
 
 Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
 
 ---
 
@@ -4842,7 +4842,7 @@ Optional.
 
 The number of VM instances in the instance group. For [HA cluster](/dataproc/docs/concepts/configuring-clusters/high-availability) [master_config](#FIELDS.master_config) groups, **must be set to 3**. For standard cluster [master_config](#FIELDS.master_config) groups, **must be set to 1**.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
 
 ---
 
@@ -4858,7 +4858,7 @@ Optional.
 
 Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
 
 ---
 
@@ -4894,7 +4894,7 @@ accelerator_count: typing.Union[int, float]
 
 The number of the accelerator cards of this type exposed to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerator_count DataprocWorkflowTemplate#accelerator_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerator_count DataprocWorkflowTemplate#accelerator_count}
 
 ---
 
@@ -4910,7 +4910,7 @@ Full URL, partial URI, or short name of the accelerator type resource to expose 
 
 See [Compute Engine AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes). Examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80` * `projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80` * `nvidia-tesla-k80` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerator_type DataprocWorkflowTemplate#accelerator_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerator_type DataprocWorkflowTemplate#accelerator_type}
 
 ---
 
@@ -4948,7 +4948,7 @@ boot_disk_size_gb: typing.Union[int, float]
 
 Optional. Size in GB of the boot disk (default is 500GB).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
 
 ---
 
@@ -4964,7 +4964,7 @@ Optional.
 
 Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See [Disk types](https://cloud.google.com/compute/docs/disks#disk-types).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
 
 ---
 
@@ -4980,7 +4980,7 @@ Optional.
 
 Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
 
 ---
 
@@ -5037,7 +5037,7 @@ accelerators: typing.Union[IResolvable, typing.List[DataprocWorkflowTemplatePlac
 
 accelerators block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
 
 ---
 
@@ -5051,7 +5051,7 @@ disk_config: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
 
 disk_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
 
 ---
 
@@ -5067,7 +5067,7 @@ Optional.
 
 The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
 
 ---
 
@@ -5083,7 +5083,7 @@ Optional.
 
 The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
 
 ---
 
@@ -5097,7 +5097,7 @@ min_cpu_platform: str
 
 Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
 
 ---
 
@@ -5113,7 +5113,7 @@ Optional.
 
 The number of VM instances in the instance group. For [HA cluster](/dataproc/docs/concepts/configuring-clusters/high-availability) [master_config](#FIELDS.master_config) groups, **must be set to 3**. For standard cluster [master_config](#FIELDS.master_config) groups, **must be set to 1**.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
 
 ---
 
@@ -5129,7 +5129,7 @@ Optional.
 
 Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
 
 ---
 
@@ -5165,7 +5165,7 @@ accelerator_count: typing.Union[int, float]
 
 The number of the accelerator cards of this type exposed to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerator_count DataprocWorkflowTemplate#accelerator_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerator_count DataprocWorkflowTemplate#accelerator_count}
 
 ---
 
@@ -5181,7 +5181,7 @@ Full URL, partial URI, or short name of the accelerator type resource to expose 
 
 See [Compute Engine AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes). Examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80` * `projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80` * `nvidia-tesla-k80` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerator_type DataprocWorkflowTemplate#accelerator_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerator_type DataprocWorkflowTemplate#accelerator_type}
 
 ---
 
@@ -5219,7 +5219,7 @@ boot_disk_size_gb: typing.Union[int, float]
 
 Optional. Size in GB of the boot disk (default is 500GB).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
 
 ---
 
@@ -5235,7 +5235,7 @@ Optional.
 
 Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See [Disk types](https://cloud.google.com/compute/docs/disks#disk-types).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
 
 ---
 
@@ -5251,7 +5251,7 @@ Optional.
 
 Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
 
 ---
 
@@ -5296,7 +5296,7 @@ kerberos_config: DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityCo
 
 kerberos_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#kerberos_config DataprocWorkflowTemplate#kerberos_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#kerberos_config DataprocWorkflowTemplate#kerberos_config}
 
 ---
 
@@ -5358,7 +5358,7 @@ cross_realm_trust_admin_server: str
 
 Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cross_realm_trust_admin_server DataprocWorkflowTemplate#cross_realm_trust_admin_server}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cross_realm_trust_admin_server DataprocWorkflowTemplate#cross_realm_trust_admin_server}
 
 ---
 
@@ -5372,7 +5372,7 @@ cross_realm_trust_kdc: str
 
 Optional. The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cross_realm_trust_kdc DataprocWorkflowTemplate#cross_realm_trust_kdc}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cross_realm_trust_kdc DataprocWorkflowTemplate#cross_realm_trust_kdc}
 
 ---
 
@@ -5386,7 +5386,7 @@ cross_realm_trust_realm: str
 
 Optional. The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cross_realm_trust_realm DataprocWorkflowTemplate#cross_realm_trust_realm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cross_realm_trust_realm DataprocWorkflowTemplate#cross_realm_trust_realm}
 
 ---
 
@@ -5402,7 +5402,7 @@ Optional.
 
 The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster Kerberos realm and the remote trusted realm, in a cross realm trust relationship.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cross_realm_trust_shared_password DataprocWorkflowTemplate#cross_realm_trust_shared_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cross_realm_trust_shared_password DataprocWorkflowTemplate#cross_realm_trust_shared_password}
 
 ---
 
@@ -5418,7 +5418,7 @@ Optional.
 
 Flag to indicate whether to Kerberize the cluster (default: false). Set this field to true to enable Kerberos on a cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_kerberos DataprocWorkflowTemplate#enable_kerberos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_kerberos DataprocWorkflowTemplate#enable_kerberos}
 
 ---
 
@@ -5432,7 +5432,7 @@ kdc_db_key: str
 
 Optional. The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#kdc_db_key DataprocWorkflowTemplate#kdc_db_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#kdc_db_key DataprocWorkflowTemplate#kdc_db_key}
 
 ---
 
@@ -5448,7 +5448,7 @@ Optional.
 
 The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. For the self-signed certificate, this password is generated by Dataproc.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#key_password DataprocWorkflowTemplate#key_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#key_password DataprocWorkflowTemplate#key_password}
 
 ---
 
@@ -5464,7 +5464,7 @@ Optional.
 
 The Cloud Storage URI of the keystore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#keystore DataprocWorkflowTemplate#keystore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#keystore DataprocWorkflowTemplate#keystore}
 
 ---
 
@@ -5480,7 +5480,7 @@ Optional.
 
 The Cloud Storage URI of a KMS encrypted file containing the password to the user provided keystore. For the self-signed certificate, this password is generated by Dataproc.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#keystore_password DataprocWorkflowTemplate#keystore_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#keystore_password DataprocWorkflowTemplate#keystore_password}
 
 ---
 
@@ -5494,7 +5494,7 @@ kms_key: str
 
 Optional. The uri of the KMS key used to encrypt various sensitive files.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#kms_key DataprocWorkflowTemplate#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#kms_key DataprocWorkflowTemplate#kms_key}
 
 ---
 
@@ -5510,7 +5510,7 @@ Optional.
 
 The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#realm DataprocWorkflowTemplate#realm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#realm DataprocWorkflowTemplate#realm}
 
 ---
 
@@ -5524,7 +5524,7 @@ root_principal_password: str
 
 Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#root_principal_password DataprocWorkflowTemplate#root_principal_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#root_principal_password DataprocWorkflowTemplate#root_principal_password}
 
 ---
 
@@ -5540,7 +5540,7 @@ Optional.
 
 The lifetime of the ticket granting ticket, in hours. If not specified, or user specifies 0, then default value 10 will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#tgt_lifetime_hours DataprocWorkflowTemplate#tgt_lifetime_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#tgt_lifetime_hours DataprocWorkflowTemplate#tgt_lifetime_hours}
 
 ---
 
@@ -5556,7 +5556,7 @@ Optional.
 
 The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#truststore DataprocWorkflowTemplate#truststore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#truststore DataprocWorkflowTemplate#truststore}
 
 ---
 
@@ -5572,7 +5572,7 @@ Optional.
 
 The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#truststore_password DataprocWorkflowTemplate#truststore_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#truststore_password DataprocWorkflowTemplate#truststore_password}
 
 ---
 
@@ -5612,7 +5612,7 @@ Optional.
 
 The version of software inside the cluster. It must be one of the supported [Dataproc Versions](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the ["preview" version](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#image_version DataprocWorkflowTemplate#image_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#image_version DataprocWorkflowTemplate#image_version}
 
 ---
 
@@ -5626,7 +5626,7 @@ optional_components: typing.List[str]
 
 Optional. The set of components to activate on the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#optional_components DataprocWorkflowTemplate#optional_components}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#optional_components DataprocWorkflowTemplate#optional_components}
 
 ---
 
@@ -5642,7 +5642,7 @@ Optional.
 
 The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -5688,7 +5688,7 @@ accelerators: typing.Union[IResolvable, typing.List[DataprocWorkflowTemplatePlac
 
 accelerators block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
 
 ---
 
@@ -5702,7 +5702,7 @@ disk_config: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDi
 
 disk_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
 
 ---
 
@@ -5718,7 +5718,7 @@ Optional.
 
 The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
 
 ---
 
@@ -5734,7 +5734,7 @@ Optional.
 
 The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
 
 ---
 
@@ -5748,7 +5748,7 @@ min_cpu_platform: str
 
 Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
 
 ---
 
@@ -5764,7 +5764,7 @@ Optional.
 
 The number of VM instances in the instance group. For [HA cluster](/dataproc/docs/concepts/configuring-clusters/high-availability) [master_config](#FIELDS.master_config) groups, **must be set to 3**. For standard cluster [master_config](#FIELDS.master_config) groups, **must be set to 1**.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
 
 ---
 
@@ -5780,7 +5780,7 @@ Optional.
 
 Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
 
 ---
 
@@ -5816,7 +5816,7 @@ accelerator_count: typing.Union[int, float]
 
 The number of the accelerator cards of this type exposed to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerator_count DataprocWorkflowTemplate#accelerator_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerator_count DataprocWorkflowTemplate#accelerator_count}
 
 ---
 
@@ -5832,7 +5832,7 @@ Full URL, partial URI, or short name of the accelerator type resource to expose 
 
 See [Compute Engine AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes). Examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80` * `projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80` * `nvidia-tesla-k80` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerator_type DataprocWorkflowTemplate#accelerator_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerator_type DataprocWorkflowTemplate#accelerator_type}
 
 ---
 
@@ -5870,7 +5870,7 @@ boot_disk_size_gb: typing.Union[int, float]
 
 Optional. Size in GB of the boot disk (default is 500GB).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
 
 ---
 
@@ -5886,7 +5886,7 @@ Optional.
 
 Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See [Disk types](https://cloud.google.com/compute/docs/disks#disk-types).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
 
 ---
 
@@ -5902,7 +5902,7 @@ Optional.
 
 Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
 
 ---
 
@@ -5935,9 +5935,9 @@ dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#create DataprocWorkflowTemplate#create}. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#delete DataprocWorkflowTemplate#delete}. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#update DataprocWorkflowTemplate#update}. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#create DataprocWorkflowTemplate#create}. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#delete DataprocWorkflowTemplate#delete}. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#update DataprocWorkflowTemplate#update}. |
 
 ---
 
@@ -5949,7 +5949,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#create DataprocWorkflowTemplate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#create DataprocWorkflowTemplate#create}.
 
 ---
 
@@ -5961,7 +5961,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#delete DataprocWorkflowTemplate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#delete DataprocWorkflowTemplate#delete}.
 
 ---
 
@@ -5973,7 +5973,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#update DataprocWorkflowTemplate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#update DataprocWorkflowTemplate#update}.
 
 ---
 
@@ -6838,7 +6838,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -7363,7 +7363,7 @@ Required.
 
 The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
 
 ---
 
@@ -8338,7 +8338,7 @@ Optional.
 
 HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
 
 ---
 
@@ -8350,7 +8350,7 @@ Optional.
 
 The arguments to pass to the driver. Do not include arguments, such as `-libjars` or `-Dfoo=bar`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
 
 ---
 
@@ -8362,7 +8362,7 @@ Optional.
 
 HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
 
 ---
 
@@ -8372,7 +8372,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -8382,7 +8382,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -8394,7 +8394,7 @@ The name of the driver's main class.
 
 The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_class DataprocWorkflowTemplate#main_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_class DataprocWorkflowTemplate#main_class}
 
 ---
 
@@ -8404,7 +8404,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
 
 ---
 
@@ -8416,7 +8416,7 @@ Optional.
 
 A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -8441,7 +8441,7 @@ Optional.
 
 Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
 
 ---
 
@@ -8453,7 +8453,7 @@ Optional.
 
 HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -8465,7 +8465,7 @@ Optional.
 
 A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -8475,7 +8475,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The HCFS URI of the script that contains Hive queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
 
 ---
 
@@ -8485,7 +8485,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 query_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
 
 ---
 
@@ -8495,7 +8495,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Mapping of query variable names to values (equivalent to the Hive command: `SET name="value";`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
 
 ---
 
@@ -8521,7 +8521,7 @@ Optional.
 
 Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
 
 ---
 
@@ -8533,7 +8533,7 @@ Optional.
 
 HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -8543,7 +8543,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -8555,7 +8555,7 @@ Optional.
 
 A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -8565,7 +8565,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The HCFS URI of the script that contains the Pig queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
 
 ---
 
@@ -8575,7 +8575,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 query_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
 
 ---
 
@@ -8585,7 +8585,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Mapping of query variable names to values (equivalent to the Pig command: `name=[value]`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
 
 ---
 
@@ -8609,7 +8609,7 @@ def put_presto_job(
 
 Optional. Presto client tags to attach to this query.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#client_tags DataprocWorkflowTemplate#client_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#client_tags DataprocWorkflowTemplate#client_tags}
 
 ---
 
@@ -8621,7 +8621,7 @@ Optional.
 
 Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#continue_on_failure DataprocWorkflowTemplate#continue_on_failure}
 
 ---
 
@@ -8631,7 +8631,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -8641,7 +8641,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#output_format DataprocWorkflowTemplate#output_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#output_format DataprocWorkflowTemplate#output_format}
 
 ---
 
@@ -8653,7 +8653,7 @@ Optional.
 
 A mapping of property names to values. Used to set Presto [session properties](https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -8663,7 +8663,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The HCFS URI of the script that contains SQL queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
 
 ---
 
@@ -8673,7 +8673,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 query_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
 
 ---
 
@@ -8698,7 +8698,7 @@ def put_pyspark_job(
 
 Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_python_file_uri DataprocWorkflowTemplate#main_python_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_python_file_uri DataprocWorkflowTemplate#main_python_file_uri}
 
 ---
 
@@ -8710,7 +8710,7 @@ Optional.
 
 HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
 
 ---
 
@@ -8722,7 +8722,7 @@ Optional.
 
 The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
 
 ---
 
@@ -8734,7 +8734,7 @@ Optional.
 
 HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
 
 ---
 
@@ -8744,7 +8744,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -8754,7 +8754,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -8766,7 +8766,7 @@ Optional.
 
 A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -8778,7 +8778,7 @@ Optional.
 
 HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#python_file_uris DataprocWorkflowTemplate#python_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#python_file_uris DataprocWorkflowTemplate#python_file_uris}
 
 ---
 
@@ -8799,7 +8799,7 @@ Optional.
 
 Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#max_failures_per_hour DataprocWorkflowTemplate#max_failures_per_hour}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#max_failures_per_hour DataprocWorkflowTemplate#max_failures_per_hour}
 
 ---
 
@@ -8811,7 +8811,7 @@ Optional.
 
 Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#max_failures_total DataprocWorkflowTemplate#max_failures_total}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#max_failures_total DataprocWorkflowTemplate#max_failures_total}
 
 ---
 
@@ -8838,7 +8838,7 @@ Optional.
 
 HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
 
 ---
 
@@ -8850,7 +8850,7 @@ Optional.
 
 The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
 
 ---
 
@@ -8862,7 +8862,7 @@ Optional.
 
 HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
 
 ---
 
@@ -8872,7 +8872,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -8882,7 +8882,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -8894,7 +8894,7 @@ The name of the driver's main class.
 
 The jar file that contains the class must be in the default CLASSPATH or specified in `jar_file_uris`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_class DataprocWorkflowTemplate#main_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_class DataprocWorkflowTemplate#main_class}
 
 ---
 
@@ -8904,7 +8904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The HCFS URI of the jar file that contains the main class.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_jar_file_uri DataprocWorkflowTemplate#main_jar_file_uri}
 
 ---
 
@@ -8916,7 +8916,7 @@ Optional.
 
 A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -8939,7 +8939,7 @@ def put_spark_r_job(
 
 Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#main_r_file_uri DataprocWorkflowTemplate#main_r_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#main_r_file_uri DataprocWorkflowTemplate#main_r_file_uri}
 
 ---
 
@@ -8951,7 +8951,7 @@ Optional.
 
 HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#archive_uris DataprocWorkflowTemplate#archive_uris}
 
 ---
 
@@ -8963,7 +8963,7 @@ Optional.
 
 The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#args DataprocWorkflowTemplate#args}
 
 ---
 
@@ -8975,7 +8975,7 @@ Optional.
 
 HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#file_uris DataprocWorkflowTemplate#file_uris}
 
 ---
 
@@ -8985,7 +8985,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -8997,7 +8997,7 @@ Optional.
 
 A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -9020,7 +9020,7 @@ def put_spark_sql_job(
 
 Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#jar_file_uris DataprocWorkflowTemplate#jar_file_uris}
 
 ---
 
@@ -9030,7 +9030,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 logging_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#logging_config DataprocWorkflowTemplate#logging_config}
 
 ---
 
@@ -9042,7 +9042,7 @@ Optional.
 
 A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -9052,7 +9052,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The HCFS URI of the script that contains SQL queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_file_uri DataprocWorkflowTemplate#query_file_uri}
 
 ---
 
@@ -9062,7 +9062,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 query_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#query_list DataprocWorkflowTemplate#query_list}
 
 ---
 
@@ -9072,7 +9072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#script_variables DataprocWorkflowTemplate#script_variables}
 
 ---
 
@@ -10008,7 +10008,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -10028,7 +10028,7 @@ Required.
 
 The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
 
 ---
 
@@ -11126,7 +11126,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -11146,7 +11146,7 @@ Required.
 
 The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
 
 ---
 
@@ -12243,7 +12243,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -13399,7 +13399,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -14226,7 +14226,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -14993,7 +14993,7 @@ The per-package log levels for the driver.
 
 This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#driver_log_levels DataprocWorkflowTemplate#driver_log_levels}
 
 ---
 
@@ -15013,7 +15013,7 @@ Required.
 
 The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#queries DataprocWorkflowTemplate#queries}
 
 ---
 
@@ -15963,7 +15963,7 @@ def put_validation(
 
 regex block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#regex DataprocWorkflowTemplate#regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#regex DataprocWorkflowTemplate#regex}
 
 ---
 
@@ -15973,7 +15973,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 values block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
 
 ---
 
@@ -16371,7 +16371,7 @@ Required.
 
 RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#regexes DataprocWorkflowTemplate#regexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#regexes DataprocWorkflowTemplate#regexes}
 
 ---
 
@@ -16389,7 +16389,7 @@ def put_values(
 
 Required. List of allowed values for the parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
 
 ---
 
@@ -18887,7 +18887,7 @@ Required.
 
 The URI of a sole-tenant [node group resource](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on. A full URL, partial URI, or node group name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#node_group DataprocWorkflowTemplate#node_group}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#node_group DataprocWorkflowTemplate#node_group}
 
 ---
 
@@ -18907,7 +18907,7 @@ def put_reservation_affinity(
 
 Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#consume_reservation_type DataprocWorkflowTemplate#consume_reservation_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#consume_reservation_type DataprocWorkflowTemplate#consume_reservation_type}
 
 ---
 
@@ -18917,7 +18917,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Corresponds to the label key of reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#key DataprocWorkflowTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#key DataprocWorkflowTemplate#key}
 
 ---
 
@@ -18927,7 +18927,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Corresponds to the label values of reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#values DataprocWorkflowTemplate#values}
 
 ---
 
@@ -18949,7 +18949,7 @@ Optional.
 
 Defines whether instances have integrity monitoring enabled. Integrity monitoring compares the most recent boot measurements to the integrity policy baseline and returns a pair of pass/fail results depending on whether they match or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_integrity_monitoring DataprocWorkflowTemplate#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_integrity_monitoring DataprocWorkflowTemplate#enable_integrity_monitoring}
 
 ---
 
@@ -18961,7 +18961,7 @@ Optional.
 
 Defines whether the instances have Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_secure_boot DataprocWorkflowTemplate#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_secure_boot DataprocWorkflowTemplate#enable_secure_boot}
 
 ---
 
@@ -18973,7 +18973,7 @@ Optional.
 
 Defines whether the instance have the vTPM enabled. Virtual Trusted Platform Module protects objects like keys, certificates and enables Measured Boot by performing the measurements needed to create a known good boot baseline, called the integrity policy baseline.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_vtpm DataprocWorkflowTemplate#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_vtpm DataprocWorkflowTemplate#enable_vtpm}
 
 ---
 
@@ -22600,7 +22600,7 @@ def put_disk_config(
 
 Optional. Size in GB of the boot disk (default is 500GB).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
 
 ---
 
@@ -22612,7 +22612,7 @@ Optional.
 
 Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See [Disk types](https://cloud.google.com/compute/docs/disks#disk-types).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
 
 ---
 
@@ -22624,7 +22624,7 @@ Optional.
 
 Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
 
 ---
 
@@ -23171,7 +23171,7 @@ Optional.
 
 The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` * `projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` Note that the policy must be in the same project and Dataproc region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#policy DataprocWorkflowTemplate#policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#policy DataprocWorkflowTemplate#policy}
 
 ---
 
@@ -23189,7 +23189,7 @@ def put_encryption_config(
 
 Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#gce_pd_kms_key_name DataprocWorkflowTemplate#gce_pd_kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#gce_pd_kms_key_name DataprocWorkflowTemplate#gce_pd_kms_key_name}
 
 ---
 
@@ -23207,7 +23207,7 @@ def put_endpoint_config(
 
 Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_http_port_access DataprocWorkflowTemplate#enable_http_port_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_http_port_access DataprocWorkflowTemplate#enable_http_port_access}
 
 ---
 
@@ -23238,7 +23238,7 @@ Optional.
 
 If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#internal_ip_only DataprocWorkflowTemplate#internal_ip_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#internal_ip_only DataprocWorkflowTemplate#internal_ip_only}
 
 ---
 
@@ -23248,7 +23248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Compute Engine metadata entries to add to all instances (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#metadata DataprocWorkflowTemplate#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#metadata DataprocWorkflowTemplate#metadata}
 
 ---
 
@@ -23260,7 +23260,7 @@ Optional.
 
 The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see [Using Subnetworks](https://cloud.google.com/compute/docs/subnetworks) for more information). A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` * `default`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#network DataprocWorkflowTemplate#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#network DataprocWorkflowTemplate#network}
 
 ---
 
@@ -23270,7 +23270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 node_group_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#node_group_affinity DataprocWorkflowTemplate#node_group_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#node_group_affinity DataprocWorkflowTemplate#node_group_affinity}
 
 ---
 
@@ -23280,7 +23280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The type of IPv6 access for a cluster. Possible values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED, INHERIT_FROM_SUBNETWORK, OUTBOUND, BIDIRECTIONAL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#private_ipv6_google_access DataprocWorkflowTemplate#private_ipv6_google_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#private_ipv6_google_access DataprocWorkflowTemplate#private_ipv6_google_access}
 
 ---
 
@@ -23290,7 +23290,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 reservation_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#reservation_affinity DataprocWorkflowTemplate#reservation_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#reservation_affinity DataprocWorkflowTemplate#reservation_affinity}
 
 ---
 
@@ -23302,7 +23302,7 @@ Optional.
 
 The [Dataproc service account](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see [VM Data Plane identity](https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#service_account DataprocWorkflowTemplate#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#service_account DataprocWorkflowTemplate#service_account}
 
 ---
 
@@ -23314,7 +23314,7 @@ Optional.
 
 The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: * https://www.googleapis.com/auth/cloud.useraccounts.readonly * https://www.googleapis.com/auth/devstorage.read_write * https://www.googleapis.com/auth/logging.write If no scopes are specified, the following defaults are also provided: * https://www.googleapis.com/auth/bigquery * https://www.googleapis.com/auth/bigtable.admin.table * https://www.googleapis.com/auth/bigtable.data * https://www.googleapis.com/auth/devstorage.full_control
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#service_account_scopes DataprocWorkflowTemplate#service_account_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#service_account_scopes DataprocWorkflowTemplate#service_account_scopes}
 
 ---
 
@@ -23324,7 +23324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#shielded_instance_config DataprocWorkflowTemplate#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#shielded_instance_config DataprocWorkflowTemplate#shielded_instance_config}
 
 ---
 
@@ -23336,7 +23336,7 @@ Optional.
 
 The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0` * `sub0`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#subnetwork DataprocWorkflowTemplate#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#subnetwork DataprocWorkflowTemplate#subnetwork}
 
 ---
 
@@ -23346,7 +23346,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Compute Engine tags to add to all instances (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#tags DataprocWorkflowTemplate#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#tags DataprocWorkflowTemplate#tags}
 
 ---
 
@@ -23358,7 +23358,7 @@ Optional.
 
 The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]` * `projects/[project_id]/zones/[zone]` * `us-central1-f`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#zone DataprocWorkflowTemplate#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#zone DataprocWorkflowTemplate#zone}
 
 ---
 
@@ -23392,7 +23392,7 @@ def put_lifecycle_config(
 
 Optional. The time when cluster will be auto-deleted (see JSON representation of [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#auto_delete_time DataprocWorkflowTemplate#auto_delete_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#auto_delete_time DataprocWorkflowTemplate#auto_delete_time}
 
 ---
 
@@ -23404,7 +23404,7 @@ Optional.
 
 The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#auto_delete_ttl DataprocWorkflowTemplate#auto_delete_ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#auto_delete_ttl DataprocWorkflowTemplate#auto_delete_ttl}
 
 ---
 
@@ -23416,7 +23416,7 @@ Optional.
 
 The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#idle_delete_ttl DataprocWorkflowTemplate#idle_delete_ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#idle_delete_ttl DataprocWorkflowTemplate#idle_delete_ttl}
 
 ---
 
@@ -23440,7 +23440,7 @@ def put_master_config(
 
 accelerators block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
 
 ---
 
@@ -23450,7 +23450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 disk_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
 
 ---
 
@@ -23462,7 +23462,7 @@ Optional.
 
 The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
 
 ---
 
@@ -23474,7 +23474,7 @@ Optional.
 
 The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
 
 ---
 
@@ -23484,7 +23484,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
 
 ---
 
@@ -23496,7 +23496,7 @@ Optional.
 
 The number of VM instances in the instance group. For [HA cluster](/dataproc/docs/concepts/configuring-clusters/high-availability) [master_config](#FIELDS.master_config) groups, **must be set to 3**. For standard cluster [master_config](#FIELDS.master_config) groups, **must be set to 1**.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
 
 ---
 
@@ -23508,7 +23508,7 @@ Optional.
 
 Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
 
 ---
 
@@ -23532,7 +23532,7 @@ def put_secondary_worker_config(
 
 accelerators block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
 
 ---
 
@@ -23542,7 +23542,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 disk_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
 
 ---
 
@@ -23554,7 +23554,7 @@ Optional.
 
 The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
 
 ---
 
@@ -23566,7 +23566,7 @@ Optional.
 
 The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
 
 ---
 
@@ -23576,7 +23576,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
 
 ---
 
@@ -23588,7 +23588,7 @@ Optional.
 
 The number of VM instances in the instance group. For [HA cluster](/dataproc/docs/concepts/configuring-clusters/high-availability) [master_config](#FIELDS.master_config) groups, **must be set to 3**. For standard cluster [master_config](#FIELDS.master_config) groups, **must be set to 1**.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
 
 ---
 
@@ -23600,7 +23600,7 @@ Optional.
 
 Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
 
 ---
 
@@ -23618,7 +23618,7 @@ def put_security_config(
 
 kerberos_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#kerberos_config DataprocWorkflowTemplate#kerberos_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#kerberos_config DataprocWorkflowTemplate#kerberos_config}
 
 ---
 
@@ -23640,7 +23640,7 @@ Optional.
 
 The version of software inside the cluster. It must be one of the supported [Dataproc Versions](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the ["preview" version](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#image_version DataprocWorkflowTemplate#image_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#image_version DataprocWorkflowTemplate#image_version}
 
 ---
 
@@ -23650,7 +23650,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The set of components to activate on the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#optional_components DataprocWorkflowTemplate#optional_components}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#optional_components DataprocWorkflowTemplate#optional_components}
 
 ---
 
@@ -23662,7 +23662,7 @@ Optional.
 
 The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#properties DataprocWorkflowTemplate#properties}
 
 ---
 
@@ -23686,7 +23686,7 @@ def put_worker_config(
 
 accelerators block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#accelerators DataprocWorkflowTemplate#accelerators}
 
 ---
 
@@ -23696,7 +23696,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 disk_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#disk_config DataprocWorkflowTemplate#disk_config}
 
 ---
 
@@ -23708,7 +23708,7 @@ Optional.
 
 The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#image DataprocWorkflowTemplate#image}
 
 ---
 
@@ -23720,7 +23720,7 @@ Optional.
 
 The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#machine_type DataprocWorkflowTemplate#machine_type}
 
 ---
 
@@ -23730,7 +23730,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#min_cpu_platform DataprocWorkflowTemplate#min_cpu_platform}
 
 ---
 
@@ -23742,7 +23742,7 @@ Optional.
 
 The number of VM instances in the instance group. For [HA cluster](/dataproc/docs/concepts/configuring-clusters/high-availability) [master_config](#FIELDS.master_config) groups, **must be set to 3**. For standard cluster [master_config](#FIELDS.master_config) groups, **must be set to 1**.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_instances DataprocWorkflowTemplate#num_instances}
 
 ---
 
@@ -23754,7 +23754,7 @@ Optional.
 
 Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#preemptibility DataprocWorkflowTemplate#preemptibility}
 
 ---
 
@@ -25793,7 +25793,7 @@ def put_disk_config(
 
 Optional. Size in GB of the boot disk (default is 500GB).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
 
 ---
 
@@ -25805,7 +25805,7 @@ Optional.
 
 Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See [Disk types](https://cloud.google.com/compute/docs/disks#disk-types).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
 
 ---
 
@@ -25817,7 +25817,7 @@ Optional.
 
 Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
 
 ---
 
@@ -27063,7 +27063,7 @@ def put_kerberos_config(
 
 Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cross_realm_trust_admin_server DataprocWorkflowTemplate#cross_realm_trust_admin_server}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cross_realm_trust_admin_server DataprocWorkflowTemplate#cross_realm_trust_admin_server}
 
 ---
 
@@ -27073,7 +27073,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cross_realm_trust_kdc DataprocWorkflowTemplate#cross_realm_trust_kdc}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cross_realm_trust_kdc DataprocWorkflowTemplate#cross_realm_trust_kdc}
 
 ---
 
@@ -27083,7 +27083,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cross_realm_trust_realm DataprocWorkflowTemplate#cross_realm_trust_realm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cross_realm_trust_realm DataprocWorkflowTemplate#cross_realm_trust_realm}
 
 ---
 
@@ -27095,7 +27095,7 @@ Optional.
 
 The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster Kerberos realm and the remote trusted realm, in a cross realm trust relationship.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cross_realm_trust_shared_password DataprocWorkflowTemplate#cross_realm_trust_shared_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cross_realm_trust_shared_password DataprocWorkflowTemplate#cross_realm_trust_shared_password}
 
 ---
 
@@ -27107,7 +27107,7 @@ Optional.
 
 Flag to indicate whether to Kerberize the cluster (default: false). Set this field to true to enable Kerberos on a cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#enable_kerberos DataprocWorkflowTemplate#enable_kerberos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#enable_kerberos DataprocWorkflowTemplate#enable_kerberos}
 
 ---
 
@@ -27117,7 +27117,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#kdc_db_key DataprocWorkflowTemplate#kdc_db_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#kdc_db_key DataprocWorkflowTemplate#kdc_db_key}
 
 ---
 
@@ -27129,7 +27129,7 @@ Optional.
 
 The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. For the self-signed certificate, this password is generated by Dataproc.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#key_password DataprocWorkflowTemplate#key_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#key_password DataprocWorkflowTemplate#key_password}
 
 ---
 
@@ -27141,7 +27141,7 @@ Optional.
 
 The Cloud Storage URI of the keystore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#keystore DataprocWorkflowTemplate#keystore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#keystore DataprocWorkflowTemplate#keystore}
 
 ---
 
@@ -27153,7 +27153,7 @@ Optional.
 
 The Cloud Storage URI of a KMS encrypted file containing the password to the user provided keystore. For the self-signed certificate, this password is generated by Dataproc.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#keystore_password DataprocWorkflowTemplate#keystore_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#keystore_password DataprocWorkflowTemplate#keystore_password}
 
 ---
 
@@ -27163,7 +27163,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The uri of the KMS key used to encrypt various sensitive files.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#kms_key DataprocWorkflowTemplate#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#kms_key DataprocWorkflowTemplate#kms_key}
 
 ---
 
@@ -27175,7 +27175,7 @@ Optional.
 
 The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#realm DataprocWorkflowTemplate#realm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#realm DataprocWorkflowTemplate#realm}
 
 ---
 
@@ -27185,7 +27185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#root_principal_password DataprocWorkflowTemplate#root_principal_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#root_principal_password DataprocWorkflowTemplate#root_principal_password}
 
 ---
 
@@ -27197,7 +27197,7 @@ Optional.
 
 The lifetime of the ticket granting ticket, in hours. If not specified, or user specifies 0, then default value 10 will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#tgt_lifetime_hours DataprocWorkflowTemplate#tgt_lifetime_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#tgt_lifetime_hours DataprocWorkflowTemplate#tgt_lifetime_hours}
 
 ---
 
@@ -27209,7 +27209,7 @@ Optional.
 
 The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#truststore DataprocWorkflowTemplate#truststore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#truststore DataprocWorkflowTemplate#truststore}
 
 ---
 
@@ -27221,7 +27221,7 @@ Optional.
 
 The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#truststore_password DataprocWorkflowTemplate#truststore_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#truststore_password DataprocWorkflowTemplate#truststore_password}
 
 ---
 
@@ -29285,7 +29285,7 @@ def put_disk_config(
 
 Optional. Size in GB of the boot disk (default is 500GB).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_size_gb DataprocWorkflowTemplate#boot_disk_size_gb}
 
 ---
 
@@ -29297,7 +29297,7 @@ Optional.
 
 Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See [Disk types](https://cloud.google.com/compute/docs/disks#disk-types).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#boot_disk_type DataprocWorkflowTemplate#boot_disk_type}
 
 ---
 
@@ -29309,7 +29309,7 @@ Optional.
 
 Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#num_local_ssds DataprocWorkflowTemplate#num_local_ssds}
 
 ---
 
@@ -29844,7 +29844,7 @@ def put_config(
 
 autoscaling_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#autoscaling_config DataprocWorkflowTemplate#autoscaling_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#autoscaling_config DataprocWorkflowTemplate#autoscaling_config}
 
 ---
 
@@ -29854,7 +29854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#encryption_config DataprocWorkflowTemplate#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#encryption_config DataprocWorkflowTemplate#encryption_config}
 
 ---
 
@@ -29864,7 +29864,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 endpoint_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#endpoint_config DataprocWorkflowTemplate#endpoint_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#endpoint_config DataprocWorkflowTemplate#endpoint_config}
 
 ---
 
@@ -29874,7 +29874,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 gce_cluster_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#gce_cluster_config DataprocWorkflowTemplate#gce_cluster_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#gce_cluster_config DataprocWorkflowTemplate#gce_cluster_config}
 
 ---
 
@@ -29884,7 +29884,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 initialization_actions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#initialization_actions DataprocWorkflowTemplate#initialization_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#initialization_actions DataprocWorkflowTemplate#initialization_actions}
 
 ---
 
@@ -29894,7 +29894,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 lifecycle_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#lifecycle_config DataprocWorkflowTemplate#lifecycle_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#lifecycle_config DataprocWorkflowTemplate#lifecycle_config}
 
 ---
 
@@ -29904,7 +29904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 master_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#master_config DataprocWorkflowTemplate#master_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#master_config DataprocWorkflowTemplate#master_config}
 
 ---
 
@@ -29914,7 +29914,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 secondary_worker_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#secondary_worker_config DataprocWorkflowTemplate#secondary_worker_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#secondary_worker_config DataprocWorkflowTemplate#secondary_worker_config}
 
 ---
 
@@ -29924,7 +29924,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 security_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#security_config DataprocWorkflowTemplate#security_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#security_config DataprocWorkflowTemplate#security_config}
 
 ---
 
@@ -29934,7 +29934,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 software_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#software_config DataprocWorkflowTemplate#software_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#software_config DataprocWorkflowTemplate#software_config}
 
 ---
 
@@ -29946,7 +29946,7 @@ Optional.
 
 A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see [Dataproc staging bucket](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#staging_bucket DataprocWorkflowTemplate#staging_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#staging_bucket DataprocWorkflowTemplate#staging_bucket}
 
 ---
 
@@ -29958,7 +29958,7 @@ Optional.
 
 A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#temp_bucket DataprocWorkflowTemplate#temp_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#temp_bucket DataprocWorkflowTemplate#temp_bucket}
 
 ---
 
@@ -29968,7 +29968,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 worker_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#worker_config DataprocWorkflowTemplate#worker_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#worker_config DataprocWorkflowTemplate#worker_config}
 
 ---
 
@@ -30337,7 +30337,7 @@ def put_cluster_selector(
 
 Required. The cluster labels. Cluster must have all labels to match.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cluster_labels DataprocWorkflowTemplate#cluster_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cluster_labels DataprocWorkflowTemplate#cluster_labels}
 
 ---
 
@@ -30349,7 +30349,7 @@ Optional.
 
 The zone where workflow process executes. This parameter does not affect the selection of the cluster. If unspecified, the zone of the first cluster matching the selector is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#zone DataprocWorkflowTemplate#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#zone DataprocWorkflowTemplate#zone}
 
 ---
 
@@ -30371,7 +30371,7 @@ Required.
 
 The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#cluster_name DataprocWorkflowTemplate#cluster_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#cluster_name DataprocWorkflowTemplate#cluster_name}
 
 ---
 
@@ -30381,7 +30381,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#config DataprocWorkflowTemplate#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#config DataprocWorkflowTemplate#config}
 
 ---
 
@@ -30393,7 +30393,7 @@ Optional.
 
 The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: p{Ll}p{Lo}{0,62} Label values must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 32 labels can be associated with a given cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/dataproc_workflow_template#labels DataprocWorkflowTemplate#labels}
 
 ---
 

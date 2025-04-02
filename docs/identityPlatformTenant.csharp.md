@@ -4,7 +4,7 @@
 
 ### IdentityPlatformTenant <a name="IdentityPlatformTenant" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant google_identity_platform_tenant}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant google_identity_platform_tenant}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.Initializer"></a>
 
@@ -73,8 +73,10 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.moveFromId">MoveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.putClient">PutClient</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.resetAllowPasswordSignup">ResetAllowPasswordSignup</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.resetClient">ResetClient</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.resetDisableAuth">ResetDisableAuth</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.resetEnableEmailLinkSignin">ResetEnableEmailLinkSignin</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.resetId">ResetId</a></code> | *No description.* |
@@ -371,6 +373,18 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
+##### `PutClient` <a name="PutClient" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.putClient"></a>
+
+```csharp
+private void PutClient(IdentityPlatformTenantClient Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.putClient.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient">IdentityPlatformTenantClient</a>
+
+---
+
 ##### `PutTimeouts` <a name="PutTimeouts" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.putTimeouts"></a>
 
 ```csharp
@@ -387,6 +401,12 @@ private void PutTimeouts(IdentityPlatformTenantTimeouts Value)
 
 ```csharp
 private void ResetAllowPasswordSignup()
+```
+
+##### `ResetClient` <a name="ResetClient" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.resetClient"></a>
+
+```csharp
+private void ResetClient()
 ```
 
 ##### `ResetDisableAuth` <a name="ResetDisableAuth" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.resetDisableAuth"></a>
@@ -522,7 +542,7 @@ The construct id used in the generated config for the IdentityPlatformTenant to 
 
 The id of the existing IdentityPlatformTenant that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -552,9 +572,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.2
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.client">Client</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference">IdentityPlatformTenantClientOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeoutsOutputReference">IdentityPlatformTenantTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.allowPasswordSignupInput">AllowPasswordSignupInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.clientInput">ClientInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient">IdentityPlatformTenantClient</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.disableAuthInput">DisableAuthInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.displayNameInput">DisplayNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.enableEmailLinkSigninInput">EnableEmailLinkSigninInput</a></code> | <code>object</code> | *No description.* |
@@ -712,6 +734,16 @@ public object[] Provisioners { get; }
 
 ---
 
+##### `Client`<sup>Required</sup> <a name="Client" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.client"></a>
+
+```csharp
+public IdentityPlatformTenantClientOutputReference Client { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference">IdentityPlatformTenantClientOutputReference</a>
+
+---
+
 ##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.name"></a>
 
 ```csharp
@@ -739,6 +771,16 @@ public object AllowPasswordSignupInput { get; }
 ```
 
 - *Type:* object
+
+---
+
+##### `ClientInput`<sup>Optional</sup> <a name="ClientInput" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenant.property.clientInput"></a>
+
+```csharp
+public IdentityPlatformTenantClient ClientInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient">IdentityPlatformTenantClient</a>
 
 ---
 
@@ -882,6 +924,90 @@ public string TfResourceType { get; }
 
 ## Structs <a name="Structs" id="Structs"></a>
 
+### IdentityPlatformTenantClient <a name="IdentityPlatformTenantClient" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new IdentityPlatformTenantClient {
+    IdentityPlatformTenantClientPermissions Permissions = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient.property.permissions">Permissions</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions">IdentityPlatformTenantClientPermissions</a></code> | permissions block. |
+
+---
+
+##### `Permissions`<sup>Optional</sup> <a name="Permissions" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient.property.permissions"></a>
+
+```csharp
+public IdentityPlatformTenantClientPermissions Permissions { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions">IdentityPlatformTenantClientPermissions</a>
+
+permissions block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#permissions IdentityPlatformTenant#permissions}
+
+---
+
+### IdentityPlatformTenantClientPermissions <a name="IdentityPlatformTenantClientPermissions" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new IdentityPlatformTenantClientPermissions {
+    object DisabledUserDeletion = null,
+    object DisabledUserSignup = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions.property.disabledUserDeletion">DisabledUserDeletion</a></code> | <code>object</code> | When true, end users cannot delete their account on the associated project through any of our API methods. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions.property.disabledUserSignup">DisabledUserSignup</a></code> | <code>object</code> | When true, end users cannot sign up for a new account on the associated project through any of our API methods. |
+
+---
+
+##### `DisabledUserDeletion`<sup>Optional</sup> <a name="DisabledUserDeletion" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions.property.disabledUserDeletion"></a>
+
+```csharp
+public object DisabledUserDeletion { get; set; }
+```
+
+- *Type:* object
+
+When true, end users cannot delete their account on the associated project through any of our API methods.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#disabled_user_deletion IdentityPlatformTenant#disabled_user_deletion}
+
+---
+
+##### `DisabledUserSignup`<sup>Optional</sup> <a name="DisabledUserSignup" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions.property.disabledUserSignup"></a>
+
+```csharp
+public object DisabledUserSignup { get; set; }
+```
+
+- *Type:* object
+
+When true, end users cannot sign up for a new account on the associated project through any of our API methods.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#disabled_user_signup IdentityPlatformTenant#disabled_user_signup}
+
+---
+
 ### IdentityPlatformTenantConfig <a name="IdentityPlatformTenantConfig" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig"></a>
 
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.Initializer"></a>
@@ -899,6 +1025,7 @@ new IdentityPlatformTenantConfig {
     object[] Provisioners = null,
     string DisplayName,
     object AllowPasswordSignup = null,
+    IdentityPlatformTenantClient Client = null,
     object DisableAuth = null,
     object EnableEmailLinkSignin = null,
     string Id = null,
@@ -920,10 +1047,11 @@ new IdentityPlatformTenantConfig {
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Human friendly display name of the tenant. |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.allowPasswordSignup">AllowPasswordSignup</a></code> | <code>object</code> | Whether to allow email/password user authentication. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.client">Client</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient">IdentityPlatformTenantClient</a></code> | client block. |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.disableAuth">DisableAuth</a></code> | <code>object</code> | Whether authentication is disabled for the tenant. |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.enableEmailLinkSignin">EnableEmailLinkSignin</a></code> | <code>object</code> | Whether to enable email link user authentication. |
-| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#id IdentityPlatformTenant#id}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#project IdentityPlatformTenant#project}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#id IdentityPlatformTenant#id}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#project IdentityPlatformTenant#project}. |
 | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeouts">IdentityPlatformTenantTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1008,7 +1136,7 @@ public string DisplayName { get; set; }
 
 Human friendly display name of the tenant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#display_name IdentityPlatformTenant#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#display_name IdentityPlatformTenant#display_name}
 
 ---
 
@@ -1022,7 +1150,21 @@ public object AllowPasswordSignup { get; set; }
 
 Whether to allow email/password user authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#allow_password_signup IdentityPlatformTenant#allow_password_signup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#allow_password_signup IdentityPlatformTenant#allow_password_signup}
+
+---
+
+##### `Client`<sup>Optional</sup> <a name="Client" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantConfig.property.client"></a>
+
+```csharp
+public IdentityPlatformTenantClient Client { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient">IdentityPlatformTenantClient</a>
+
+client block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#client IdentityPlatformTenant#client}
 
 ---
 
@@ -1040,7 +1182,7 @@ If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#disable_auth IdentityPlatformTenant#disable_auth}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#disable_auth IdentityPlatformTenant#disable_auth}
 
 ---
 
@@ -1054,7 +1196,7 @@ public object EnableEmailLinkSignin { get; set; }
 
 Whether to enable email link user authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#enable_email_link_signin IdentityPlatformTenant#enable_email_link_signin}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#enable_email_link_signin IdentityPlatformTenant#enable_email_link_signin}
 
 ---
 
@@ -1066,7 +1208,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#id IdentityPlatformTenant#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#id IdentityPlatformTenant#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1081,7 +1223,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#project IdentityPlatformTenant#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#project IdentityPlatformTenant#project}.
 
 ---
 
@@ -1095,7 +1237,7 @@ public IdentityPlatformTenantTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#timeouts IdentityPlatformTenant#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#timeouts IdentityPlatformTenant#timeouts}
 
 ---
 
@@ -1117,9 +1259,9 @@ new IdentityPlatformTenantTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#create IdentityPlatformTenant#create}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#delete IdentityPlatformTenant#delete}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#update IdentityPlatformTenant#update}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#create IdentityPlatformTenant#create}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#delete IdentityPlatformTenant#delete}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#update IdentityPlatformTenant#update}. |
 
 ---
 
@@ -1131,7 +1273,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#create IdentityPlatformTenant#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#create IdentityPlatformTenant#create}.
 
 ---
 
@@ -1143,7 +1285,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#delete IdentityPlatformTenant#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#delete IdentityPlatformTenant#delete}.
 
 ---
 
@@ -1155,11 +1297,609 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/identity_platform_tenant#update IdentityPlatformTenant#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/identity_platform_tenant#update IdentityPlatformTenant#update}.
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### IdentityPlatformTenantClientOutputReference <a name="IdentityPlatformTenantClientOutputReference" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new IdentityPlatformTenantClientOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.putPermissions">PutPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.resetPermissions">ResetPermissions</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutPermissions` <a name="PutPermissions" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.putPermissions"></a>
+
+```csharp
+private void PutPermissions(IdentityPlatformTenantClientPermissions Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.putPermissions.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions">IdentityPlatformTenantClientPermissions</a>
+
+---
+
+##### `ResetPermissions` <a name="ResetPermissions" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.resetPermissions"></a>
+
+```csharp
+private void ResetPermissions()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.permissions">Permissions</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference">IdentityPlatformTenantClientPermissionsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.permissionsInput">PermissionsInput</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions">IdentityPlatformTenantClientPermissions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient">IdentityPlatformTenantClient</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Permissions`<sup>Required</sup> <a name="Permissions" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.permissions"></a>
+
+```csharp
+public IdentityPlatformTenantClientPermissionsOutputReference Permissions { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference">IdentityPlatformTenantClientPermissionsOutputReference</a>
+
+---
+
+##### `PermissionsInput`<sup>Optional</sup> <a name="PermissionsInput" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.permissionsInput"></a>
+
+```csharp
+public IdentityPlatformTenantClientPermissions PermissionsInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions">IdentityPlatformTenantClientPermissions</a>
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientOutputReference.property.internalValue"></a>
+
+```csharp
+public IdentityPlatformTenantClient InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClient">IdentityPlatformTenantClient</a>
+
+---
+
+
+### IdentityPlatformTenantClientPermissionsOutputReference <a name="IdentityPlatformTenantClientPermissionsOutputReference" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new IdentityPlatformTenantClientPermissionsOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.resetDisabledUserDeletion">ResetDisabledUserDeletion</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.resetDisabledUserSignup">ResetDisabledUserSignup</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetDisabledUserDeletion` <a name="ResetDisabledUserDeletion" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.resetDisabledUserDeletion"></a>
+
+```csharp
+private void ResetDisabledUserDeletion()
+```
+
+##### `ResetDisabledUserSignup` <a name="ResetDisabledUserSignup" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.resetDisabledUserSignup"></a>
+
+```csharp
+private void ResetDisabledUserSignup()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.disabledUserDeletionInput">DisabledUserDeletionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.disabledUserSignupInput">DisabledUserSignupInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.disabledUserDeletion">DisabledUserDeletion</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.disabledUserSignup">DisabledUserSignup</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions">IdentityPlatformTenantClientPermissions</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `DisabledUserDeletionInput`<sup>Optional</sup> <a name="DisabledUserDeletionInput" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.disabledUserDeletionInput"></a>
+
+```csharp
+public object DisabledUserDeletionInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `DisabledUserSignupInput`<sup>Optional</sup> <a name="DisabledUserSignupInput" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.disabledUserSignupInput"></a>
+
+```csharp
+public object DisabledUserSignupInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `DisabledUserDeletion`<sup>Required</sup> <a name="DisabledUserDeletion" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.disabledUserDeletion"></a>
+
+```csharp
+public object DisabledUserDeletion { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `DisabledUserSignup`<sup>Required</sup> <a name="DisabledUserSignup" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.disabledUserSignup"></a>
+
+```csharp
+public object DisabledUserSignup { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissionsOutputReference.property.internalValue"></a>
+
+```csharp
+public IdentityPlatformTenantClientPermissions InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantClientPermissions">IdentityPlatformTenantClientPermissions</a>
+
+---
+
 
 ### IdentityPlatformTenantTimeoutsOutputReference <a name="IdentityPlatformTenantTimeoutsOutputReference" id="@cdktf/provider-google.identityPlatformTenant.IdentityPlatformTenantTimeoutsOutputReference"></a>
 

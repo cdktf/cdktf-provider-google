@@ -4,7 +4,7 @@
 
 ### DatastreamConnectionProfile <a name="DatastreamConnectionProfile" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfile"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile google_datastream_connection_profile}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile google_datastream_connection_profile}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfile.Initializer"></a>
 
@@ -675,7 +675,7 @@ The construct id used in the generated config for the DatastreamConnectionProfil
 
 The id of the existing DatastreamConnectionProfile that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1320,13 +1320,13 @@ new DatastreamConnectionProfileConfig {
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.createWithoutValidation">CreateWithoutValidation</a></code> | <code>object</code> | Create the connection profile without validating it. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.forwardSshConnectivity">ForwardSshConnectivity</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileForwardSshConnectivity">DatastreamConnectionProfileForwardSshConnectivity</a></code> | forward_ssh_connectivity block. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.gcsProfile">GcsProfile</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileGcsProfile">DatastreamConnectionProfileGcsProfile</a></code> | gcs_profile block. |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#id DatastreamConnectionProfile#id}. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#id DatastreamConnectionProfile#id}. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Labels. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.mysqlProfile">MysqlProfile</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile">DatastreamConnectionProfileMysqlProfile</a></code> | mysql_profile block. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.oracleProfile">OracleProfile</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile">DatastreamConnectionProfileOracleProfile</a></code> | oracle_profile block. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.postgresqlProfile">PostgresqlProfile</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile">DatastreamConnectionProfilePostgresqlProfile</a></code> | postgresql_profile block. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.privateConnectivity">PrivateConnectivity</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePrivateConnectivity">DatastreamConnectionProfilePrivateConnectivity</a></code> | private_connectivity block. |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#project DatastreamConnectionProfile#project}. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#project DatastreamConnectionProfile#project}. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.sqlServerProfile">SqlServerProfile</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile">DatastreamConnectionProfileSqlServerProfile</a></code> | sql_server_profile block. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileTimeouts">DatastreamConnectionProfileTimeouts</a></code> | timeouts block. |
 
@@ -1412,7 +1412,7 @@ public string ConnectionProfileId { get; set; }
 
 The connection profile identifier.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#connection_profile_id DatastreamConnectionProfile#connection_profile_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#connection_profile_id DatastreamConnectionProfile#connection_profile_id}
 
 ---
 
@@ -1426,7 +1426,7 @@ public string DisplayName { get; set; }
 
 Display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#display_name DatastreamConnectionProfile#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#display_name DatastreamConnectionProfile#display_name}
 
 ---
 
@@ -1440,7 +1440,7 @@ public string Location { get; set; }
 
 The name of the location this connection profile is located in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#location DatastreamConnectionProfile#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#location DatastreamConnectionProfile#location}
 
 ---
 
@@ -1454,7 +1454,7 @@ public DatastreamConnectionProfileBigqueryProfile BigqueryProfile { get; set; }
 
 bigquery_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#bigquery_profile DatastreamConnectionProfile#bigquery_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#bigquery_profile DatastreamConnectionProfile#bigquery_profile}
 
 ---
 
@@ -1468,7 +1468,7 @@ public object CreateWithoutValidation { get; set; }
 
 Create the connection profile without validating it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#create_without_validation DatastreamConnectionProfile#create_without_validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#create_without_validation DatastreamConnectionProfile#create_without_validation}
 
 ---
 
@@ -1482,7 +1482,7 @@ public DatastreamConnectionProfileForwardSshConnectivity ForwardSshConnectivity 
 
 forward_ssh_connectivity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#forward_ssh_connectivity DatastreamConnectionProfile#forward_ssh_connectivity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#forward_ssh_connectivity DatastreamConnectionProfile#forward_ssh_connectivity}
 
 ---
 
@@ -1496,7 +1496,7 @@ public DatastreamConnectionProfileGcsProfile GcsProfile { get; set; }
 
 gcs_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#gcs_profile DatastreamConnectionProfile#gcs_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#gcs_profile DatastreamConnectionProfile#gcs_profile}
 
 ---
 
@@ -1508,7 +1508,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#id DatastreamConnectionProfile#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#id DatastreamConnectionProfile#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1528,7 +1528,7 @@ Labels.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#labels DatastreamConnectionProfile#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#labels DatastreamConnectionProfile#labels}
 
 ---
 
@@ -1542,7 +1542,7 @@ public DatastreamConnectionProfileMysqlProfile MysqlProfile { get; set; }
 
 mysql_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#mysql_profile DatastreamConnectionProfile#mysql_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#mysql_profile DatastreamConnectionProfile#mysql_profile}
 
 ---
 
@@ -1556,7 +1556,7 @@ public DatastreamConnectionProfileOracleProfile OracleProfile { get; set; }
 
 oracle_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#oracle_profile DatastreamConnectionProfile#oracle_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#oracle_profile DatastreamConnectionProfile#oracle_profile}
 
 ---
 
@@ -1570,7 +1570,7 @@ public DatastreamConnectionProfilePostgresqlProfile PostgresqlProfile { get; set
 
 postgresql_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#postgresql_profile DatastreamConnectionProfile#postgresql_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#postgresql_profile DatastreamConnectionProfile#postgresql_profile}
 
 ---
 
@@ -1584,7 +1584,7 @@ public DatastreamConnectionProfilePrivateConnectivity PrivateConnectivity { get;
 
 private_connectivity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#private_connectivity DatastreamConnectionProfile#private_connectivity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#private_connectivity DatastreamConnectionProfile#private_connectivity}
 
 ---
 
@@ -1596,7 +1596,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#project DatastreamConnectionProfile#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#project DatastreamConnectionProfile#project}.
 
 ---
 
@@ -1610,7 +1610,7 @@ public DatastreamConnectionProfileSqlServerProfile SqlServerProfile { get; set; 
 
 sql_server_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#sql_server_profile DatastreamConnectionProfile#sql_server_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#sql_server_profile DatastreamConnectionProfile#sql_server_profile}
 
 ---
 
@@ -1624,7 +1624,7 @@ public DatastreamConnectionProfileTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#timeouts DatastreamConnectionProfile#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#timeouts DatastreamConnectionProfile#timeouts}
 
 ---
 
@@ -1666,7 +1666,7 @@ public string Hostname { get; set; }
 
 Hostname for the SSH tunnel.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
 
 ---
 
@@ -1680,7 +1680,7 @@ public string Username { get; set; }
 
 Username for the SSH tunnel.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
 
 ---
 
@@ -1694,7 +1694,7 @@ public string Password { get; set; }
 
 SSH password.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
 
 ---
 
@@ -1708,7 +1708,7 @@ public double Port { get; set; }
 
 Port for the SSH tunnel.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
 
 ---
 
@@ -1722,7 +1722,7 @@ public string PrivateKey { get; set; }
 
 SSH private key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#private_key DatastreamConnectionProfile#private_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#private_key DatastreamConnectionProfile#private_key}
 
 ---
 
@@ -1758,7 +1758,7 @@ public string Bucket { get; set; }
 
 The Cloud Storage bucket name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#bucket DatastreamConnectionProfile#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#bucket DatastreamConnectionProfile#bucket}
 
 ---
 
@@ -1772,7 +1772,7 @@ public string RootPath { get; set; }
 
 The root path inside the Cloud Storage bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#root_path DatastreamConnectionProfile#root_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#root_path DatastreamConnectionProfile#root_path}
 
 ---
 
@@ -1785,9 +1785,10 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DatastreamConnectionProfileMysqlProfile {
     string Hostname,
-    string Password,
     string Username,
+    string Password = null,
     double Port = null,
+    string SecretManagerStoredPassword = null,
     DatastreamConnectionProfileMysqlProfileSslConfig SslConfig = null
 };
 ```
@@ -1797,9 +1798,10 @@ new DatastreamConnectionProfileMysqlProfile {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.hostname">Hostname</a></code> | <code>string</code> | Hostname for the MySQL connection. |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.password">Password</a></code> | <code>string</code> | Password for the MySQL connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.username">Username</a></code> | <code>string</code> | Username for the MySQL connection. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.password">Password</a></code> | <code>string</code> | Password for the MySQL connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.port">Port</a></code> | <code>double</code> | Port for the MySQL connection. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.secretManagerStoredPassword">SecretManagerStoredPassword</a></code> | <code>string</code> | A reference to a Secret Manager resource name storing the user's password. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.sslConfig">SslConfig</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileSslConfig">DatastreamConnectionProfileMysqlProfileSslConfig</a></code> | ssl_config block. |
 
 ---
@@ -1814,21 +1816,7 @@ public string Hostname { get; set; }
 
 Hostname for the MySQL connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
-
----
-
-##### `Password`<sup>Required</sup> <a name="Password" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.password"></a>
-
-```csharp
-public string Password { get; set; }
-```
-
-- *Type:* string
-
-Password for the MySQL connection.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
 
 ---
 
@@ -1842,7 +1830,21 @@ public string Username { get; set; }
 
 Username for the MySQL connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+
+---
+
+##### `Password`<sup>Optional</sup> <a name="Password" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.password"></a>
+
+```csharp
+public string Password { get; set; }
+```
+
+- *Type:* string
+
+Password for the MySQL connection.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
 
 ---
 
@@ -1856,7 +1858,21 @@ public double Port { get; set; }
 
 Port for the MySQL connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+
+---
+
+##### `SecretManagerStoredPassword`<sup>Optional</sup> <a name="SecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile.property.secretManagerStoredPassword"></a>
+
+```csharp
+public string SecretManagerStoredPassword { get; set; }
+```
+
+- *Type:* string
+
+A reference to a Secret Manager resource name storing the user's password.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#secret_manager_stored_password DatastreamConnectionProfile#secret_manager_stored_password}
 
 ---
 
@@ -1870,7 +1886,7 @@ public DatastreamConnectionProfileMysqlProfileSslConfig SslConfig { get; set; }
 
 ssl_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#ssl_config DatastreamConnectionProfile#ssl_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#ssl_config DatastreamConnectionProfile#ssl_config}
 
 ---
 
@@ -1908,7 +1924,7 @@ public string CaCertificate { get; set; }
 
 PEM-encoded certificate of the CA that signed the source database server's certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#ca_certificate DatastreamConnectionProfile#ca_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#ca_certificate DatastreamConnectionProfile#ca_certificate}
 
 ---
 
@@ -1926,7 +1942,7 @@ If this field
 is used then the 'clientKey' and the 'caCertificate' fields are
 mandatory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#client_certificate DatastreamConnectionProfile#client_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#client_certificate DatastreamConnectionProfile#client_certificate}
 
 ---
 
@@ -1943,7 +1959,7 @@ PEM-encoded private key associated with the Client Certificate.
 If this field is used then the 'client_certificate' and the
 'ca_certificate' fields are mandatory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#client_key DatastreamConnectionProfile#client_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#client_key DatastreamConnectionProfile#client_key}
 
 ---
 
@@ -1957,10 +1973,11 @@ using HashiCorp.Cdktf.Providers.Google;
 new DatastreamConnectionProfileOracleProfile {
     string DatabaseService,
     string Hostname,
-    string Password,
     string Username,
     System.Collections.Generic.IDictionary<string, string> ConnectionAttributes = null,
-    double Port = null
+    string Password = null,
+    double Port = null,
+    string SecretManagerStoredPassword = null
 };
 ```
 
@@ -1970,10 +1987,11 @@ new DatastreamConnectionProfileOracleProfile {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.databaseService">DatabaseService</a></code> | <code>string</code> | Database for the Oracle connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.hostname">Hostname</a></code> | <code>string</code> | Hostname for the Oracle connection. |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.password">Password</a></code> | <code>string</code> | Password for the Oracle connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.username">Username</a></code> | <code>string</code> | Username for the Oracle connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.connectionAttributes">ConnectionAttributes</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Connection string attributes. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.password">Password</a></code> | <code>string</code> | Password for the Oracle connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.port">Port</a></code> | <code>double</code> | Port for the Oracle connection. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.secretManagerStoredPassword">SecretManagerStoredPassword</a></code> | <code>string</code> | A reference to a Secret Manager resource name storing the user's password. |
 
 ---
 
@@ -1987,7 +2005,7 @@ public string DatabaseService { get; set; }
 
 Database for the Oracle connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#database_service DatastreamConnectionProfile#database_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#database_service DatastreamConnectionProfile#database_service}
 
 ---
 
@@ -2001,21 +2019,7 @@ public string Hostname { get; set; }
 
 Hostname for the Oracle connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
-
----
-
-##### `Password`<sup>Required</sup> <a name="Password" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.password"></a>
-
-```csharp
-public string Password { get; set; }
-```
-
-- *Type:* string
-
-Password for the Oracle connection.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
 
 ---
 
@@ -2029,7 +2033,7 @@ public string Username { get; set; }
 
 Username for the Oracle connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
 
 ---
 
@@ -2043,7 +2047,21 @@ public System.Collections.Generic.IDictionary<string, string> ConnectionAttribut
 
 Connection string attributes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#connection_attributes DatastreamConnectionProfile#connection_attributes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#connection_attributes DatastreamConnectionProfile#connection_attributes}
+
+---
+
+##### `Password`<sup>Optional</sup> <a name="Password" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.password"></a>
+
+```csharp
+public string Password { get; set; }
+```
+
+- *Type:* string
+
+Password for the Oracle connection.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
 
 ---
 
@@ -2057,7 +2075,21 @@ public double Port { get; set; }
 
 Port for the Oracle connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+
+---
+
+##### `SecretManagerStoredPassword`<sup>Optional</sup> <a name="SecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile.property.secretManagerStoredPassword"></a>
+
+```csharp
+public string SecretManagerStoredPassword { get; set; }
+```
+
+- *Type:* string
+
+A reference to a Secret Manager resource name storing the user's password.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#secret_manager_stored_password DatastreamConnectionProfile#secret_manager_stored_password}
 
 ---
 
@@ -2071,9 +2103,10 @@ using HashiCorp.Cdktf.Providers.Google;
 new DatastreamConnectionProfilePostgresqlProfile {
     string Database,
     string Hostname,
-    string Password,
     string Username,
-    double Port = null
+    string Password = null,
+    double Port = null,
+    string SecretManagerStoredPassword = null
 };
 ```
 
@@ -2083,9 +2116,10 @@ new DatastreamConnectionProfilePostgresqlProfile {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.database">Database</a></code> | <code>string</code> | Database for the PostgreSQL connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.hostname">Hostname</a></code> | <code>string</code> | Hostname for the PostgreSQL connection. |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.password">Password</a></code> | <code>string</code> | Password for the PostgreSQL connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.username">Username</a></code> | <code>string</code> | Username for the PostgreSQL connection. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.password">Password</a></code> | <code>string</code> | Password for the PostgreSQL connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.port">Port</a></code> | <code>double</code> | Port for the PostgreSQL connection. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.secretManagerStoredPassword">SecretManagerStoredPassword</a></code> | <code>string</code> | A reference to a Secret Manager resource name storing the user's password. |
 
 ---
 
@@ -2099,7 +2133,7 @@ public string Database { get; set; }
 
 Database for the PostgreSQL connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#database DatastreamConnectionProfile#database}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#database DatastreamConnectionProfile#database}
 
 ---
 
@@ -2113,21 +2147,7 @@ public string Hostname { get; set; }
 
 Hostname for the PostgreSQL connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
-
----
-
-##### `Password`<sup>Required</sup> <a name="Password" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.password"></a>
-
-```csharp
-public string Password { get; set; }
-```
-
-- *Type:* string
-
-Password for the PostgreSQL connection.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
 
 ---
 
@@ -2141,7 +2161,21 @@ public string Username { get; set; }
 
 Username for the PostgreSQL connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+
+---
+
+##### `Password`<sup>Optional</sup> <a name="Password" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.password"></a>
+
+```csharp
+public string Password { get; set; }
+```
+
+- *Type:* string
+
+Password for the PostgreSQL connection.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
 
 ---
 
@@ -2155,7 +2189,21 @@ public double Port { get; set; }
 
 Port for the PostgreSQL connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+
+---
+
+##### `SecretManagerStoredPassword`<sup>Optional</sup> <a name="SecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile.property.secretManagerStoredPassword"></a>
+
+```csharp
+public string SecretManagerStoredPassword { get; set; }
+```
+
+- *Type:* string
+
+A reference to a Secret Manager resource name storing the user's password.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#secret_manager_stored_password DatastreamConnectionProfile#secret_manager_stored_password}
 
 ---
 
@@ -2189,7 +2237,7 @@ public string PrivateConnection { get; set; }
 
 A reference to a private connection resource. Format: 'projects/{project}/locations/{location}/privateConnections/{name}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#private_connection DatastreamConnectionProfile#private_connection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#private_connection DatastreamConnectionProfile#private_connection}
 
 ---
 
@@ -2203,9 +2251,10 @@ using HashiCorp.Cdktf.Providers.Google;
 new DatastreamConnectionProfileSqlServerProfile {
     string Database,
     string Hostname,
-    string Password,
     string Username,
-    double Port = null
+    string Password = null,
+    double Port = null,
+    string SecretManagerStoredPassword = null
 };
 ```
 
@@ -2215,9 +2264,10 @@ new DatastreamConnectionProfileSqlServerProfile {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.database">Database</a></code> | <code>string</code> | Database for the SQL Server connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.hostname">Hostname</a></code> | <code>string</code> | Hostname for the SQL Server connection. |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.password">Password</a></code> | <code>string</code> | Password for the SQL Server connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.username">Username</a></code> | <code>string</code> | Username for the SQL Server connection. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.password">Password</a></code> | <code>string</code> | Password for the SQL Server connection. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.port">Port</a></code> | <code>double</code> | Port for the SQL Server connection. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.secretManagerStoredPassword">SecretManagerStoredPassword</a></code> | <code>string</code> | A reference to a Secret Manager resource name storing the user's password. |
 
 ---
 
@@ -2231,7 +2281,7 @@ public string Database { get; set; }
 
 Database for the SQL Server connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#database DatastreamConnectionProfile#database}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#database DatastreamConnectionProfile#database}
 
 ---
 
@@ -2245,21 +2295,7 @@ public string Hostname { get; set; }
 
 Hostname for the SQL Server connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
-
----
-
-##### `Password`<sup>Required</sup> <a name="Password" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.password"></a>
-
-```csharp
-public string Password { get; set; }
-```
-
-- *Type:* string
-
-Password for the SQL Server connection.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
 
 ---
 
@@ -2273,7 +2309,21 @@ public string Username { get; set; }
 
 Username for the SQL Server connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+
+---
+
+##### `Password`<sup>Optional</sup> <a name="Password" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.password"></a>
+
+```csharp
+public string Password { get; set; }
+```
+
+- *Type:* string
+
+Password for the SQL Server connection.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
 
 ---
 
@@ -2287,7 +2337,21 @@ public double Port { get; set; }
 
 Port for the SQL Server connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+
+---
+
+##### `SecretManagerStoredPassword`<sup>Optional</sup> <a name="SecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile.property.secretManagerStoredPassword"></a>
+
+```csharp
+public string SecretManagerStoredPassword { get; set; }
+```
+
+- *Type:* string
+
+A reference to a Secret Manager resource name storing the user's password.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#secret_manager_stored_password DatastreamConnectionProfile#secret_manager_stored_password}
 
 ---
 
@@ -2309,9 +2373,9 @@ new DatastreamConnectionProfileTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#create DatastreamConnectionProfile#create}. |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#delete DatastreamConnectionProfile#delete}. |
-| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#update DatastreamConnectionProfile#update}. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#create DatastreamConnectionProfile#create}. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#delete DatastreamConnectionProfile#delete}. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#update DatastreamConnectionProfile#update}. |
 
 ---
 
@@ -2323,7 +2387,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#create DatastreamConnectionProfile#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#create DatastreamConnectionProfile#create}.
 
 ---
 
@@ -2335,7 +2399,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#delete DatastreamConnectionProfile#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#delete DatastreamConnectionProfile#delete}.
 
 ---
 
@@ -2347,7 +2411,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#update DatastreamConnectionProfile#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#update DatastreamConnectionProfile#update}.
 
 ---
 
@@ -3333,7 +3397,9 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.putSslConfig">PutSslConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resetPassword">ResetPassword</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resetPort">ResetPort</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resetSecretManagerStoredPassword">ResetSecretManagerStoredPassword</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resetSslConfig">ResetSslConfig</a></code> | *No description.* |
 
 ---
@@ -3500,10 +3566,22 @@ private void PutSslConfig(DatastreamConnectionProfileMysqlProfileSslConfig Value
 
 ---
 
+##### `ResetPassword` <a name="ResetPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resetPassword"></a>
+
+```csharp
+private void ResetPassword()
+```
+
 ##### `ResetPort` <a name="ResetPort" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resetPort"></a>
 
 ```csharp
 private void ResetPort()
+```
+
+##### `ResetSecretManagerStoredPassword` <a name="ResetSecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resetSecretManagerStoredPassword"></a>
+
+```csharp
+private void ResetSecretManagerStoredPassword()
 ```
 
 ##### `ResetSslConfig` <a name="ResetSslConfig" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.resetSslConfig"></a>
@@ -3523,11 +3601,13 @@ private void ResetSslConfig()
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.hostnameInput">HostnameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.passwordInput">PasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.portInput">PortInput</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.secretManagerStoredPasswordInput">SecretManagerStoredPasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.sslConfigInput">SslConfigInput</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileSslConfig">DatastreamConnectionProfileMysqlProfileSslConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.usernameInput">UsernameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.hostname">Hostname</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.password">Password</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.port">Port</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.secretManagerStoredPassword">SecretManagerStoredPassword</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.username">Username</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfile">DatastreamConnectionProfileMysqlProfile</a></code> | *No description.* |
 
@@ -3597,6 +3677,16 @@ public double PortInput { get; }
 
 ---
 
+##### `SecretManagerStoredPasswordInput`<sup>Optional</sup> <a name="SecretManagerStoredPasswordInput" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.secretManagerStoredPasswordInput"></a>
+
+```csharp
+public string SecretManagerStoredPasswordInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `SslConfigInput`<sup>Optional</sup> <a name="SslConfigInput" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.sslConfigInput"></a>
 
 ```csharp
@@ -3644,6 +3734,16 @@ public double Port { get; }
 ```
 
 - *Type:* double
+
+---
+
+##### `SecretManagerStoredPassword`<sup>Required</sup> <a name="SecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileMysqlProfileOutputReference.property.secretManagerStoredPassword"></a>
+
+```csharp
+public string SecretManagerStoredPassword { get; }
+```
+
+- *Type:* string
 
 ---
 
@@ -4088,7 +4188,9 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.resetConnectionAttributes">ResetConnectionAttributes</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.resetPassword">ResetPassword</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.resetPort">ResetPort</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.resetSecretManagerStoredPassword">ResetSecretManagerStoredPassword</a></code> | *No description.* |
 
 ---
 
@@ -4248,10 +4350,22 @@ Returns a reversible string representation.
 private void ResetConnectionAttributes()
 ```
 
+##### `ResetPassword` <a name="ResetPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.resetPassword"></a>
+
+```csharp
+private void ResetPassword()
+```
+
 ##### `ResetPort` <a name="ResetPort" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.resetPort"></a>
 
 ```csharp
 private void ResetPort()
+```
+
+##### `ResetSecretManagerStoredPassword` <a name="ResetSecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.resetSecretManagerStoredPassword"></a>
+
+```csharp
+private void ResetSecretManagerStoredPassword()
 ```
 
 
@@ -4266,12 +4380,14 @@ private void ResetPort()
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.hostnameInput">HostnameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.passwordInput">PasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.portInput">PortInput</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.secretManagerStoredPasswordInput">SecretManagerStoredPasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.usernameInput">UsernameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.connectionAttributes">ConnectionAttributes</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.databaseService">DatabaseService</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.hostname">Hostname</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.password">Password</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.port">Port</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.secretManagerStoredPassword">SecretManagerStoredPassword</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.username">Username</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfile">DatastreamConnectionProfileOracleProfile</a></code> | *No description.* |
 
@@ -4351,6 +4467,16 @@ public double PortInput { get; }
 
 ---
 
+##### `SecretManagerStoredPasswordInput`<sup>Optional</sup> <a name="SecretManagerStoredPasswordInput" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.secretManagerStoredPasswordInput"></a>
+
+```csharp
+public string SecretManagerStoredPasswordInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `UsernameInput`<sup>Optional</sup> <a name="UsernameInput" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.usernameInput"></a>
 
 ```csharp
@@ -4408,6 +4534,16 @@ public double Port { get; }
 ```
 
 - *Type:* double
+
+---
+
+##### `SecretManagerStoredPassword`<sup>Required</sup> <a name="SecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileOracleProfileOutputReference.property.secretManagerStoredPassword"></a>
+
+```csharp
+public string SecretManagerStoredPassword { get; }
+```
+
+- *Type:* string
 
 ---
 
@@ -4482,7 +4618,9 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.resetPassword">ResetPassword</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.resetPort">ResetPort</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.resetSecretManagerStoredPassword">ResetSecretManagerStoredPassword</a></code> | *No description.* |
 
 ---
 
@@ -4636,10 +4774,22 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetPassword` <a name="ResetPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.resetPassword"></a>
+
+```csharp
+private void ResetPassword()
+```
+
 ##### `ResetPort` <a name="ResetPort" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.resetPort"></a>
 
 ```csharp
 private void ResetPort()
+```
+
+##### `ResetSecretManagerStoredPassword` <a name="ResetSecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.resetSecretManagerStoredPassword"></a>
+
+```csharp
+private void ResetSecretManagerStoredPassword()
 ```
 
 
@@ -4653,11 +4803,13 @@ private void ResetPort()
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.hostnameInput">HostnameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.passwordInput">PasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.portInput">PortInput</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.secretManagerStoredPasswordInput">SecretManagerStoredPasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.usernameInput">UsernameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.database">Database</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.hostname">Hostname</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.password">Password</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.port">Port</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.secretManagerStoredPassword">SecretManagerStoredPassword</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.username">Username</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfile">DatastreamConnectionProfilePostgresqlProfile</a></code> | *No description.* |
 
@@ -4727,6 +4879,16 @@ public double PortInput { get; }
 
 ---
 
+##### `SecretManagerStoredPasswordInput`<sup>Optional</sup> <a name="SecretManagerStoredPasswordInput" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.secretManagerStoredPasswordInput"></a>
+
+```csharp
+public string SecretManagerStoredPasswordInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `UsernameInput`<sup>Optional</sup> <a name="UsernameInput" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.usernameInput"></a>
 
 ```csharp
@@ -4774,6 +4936,16 @@ public double Port { get; }
 ```
 
 - *Type:* double
+
+---
+
+##### `SecretManagerStoredPassword`<sup>Required</sup> <a name="SecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfilePostgresqlProfileOutputReference.property.secretManagerStoredPassword"></a>
+
+```csharp
+public string SecretManagerStoredPassword { get; }
+```
+
+- *Type:* string
 
 ---
 
@@ -5119,7 +5291,9 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.resetPassword">ResetPassword</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.resetPort">ResetPort</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.resetSecretManagerStoredPassword">ResetSecretManagerStoredPassword</a></code> | *No description.* |
 
 ---
 
@@ -5273,10 +5447,22 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetPassword` <a name="ResetPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.resetPassword"></a>
+
+```csharp
+private void ResetPassword()
+```
+
 ##### `ResetPort` <a name="ResetPort" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.resetPort"></a>
 
 ```csharp
 private void ResetPort()
+```
+
+##### `ResetSecretManagerStoredPassword` <a name="ResetSecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.resetSecretManagerStoredPassword"></a>
+
+```csharp
+private void ResetSecretManagerStoredPassword()
 ```
 
 
@@ -5290,11 +5476,13 @@ private void ResetPort()
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.hostnameInput">HostnameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.passwordInput">PasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.portInput">PortInput</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.secretManagerStoredPasswordInput">SecretManagerStoredPasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.usernameInput">UsernameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.database">Database</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.hostname">Hostname</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.password">Password</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.port">Port</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.secretManagerStoredPassword">SecretManagerStoredPassword</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.username">Username</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfile">DatastreamConnectionProfileSqlServerProfile</a></code> | *No description.* |
 
@@ -5364,6 +5552,16 @@ public double PortInput { get; }
 
 ---
 
+##### `SecretManagerStoredPasswordInput`<sup>Optional</sup> <a name="SecretManagerStoredPasswordInput" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.secretManagerStoredPasswordInput"></a>
+
+```csharp
+public string SecretManagerStoredPasswordInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `UsernameInput`<sup>Optional</sup> <a name="UsernameInput" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.usernameInput"></a>
 
 ```csharp
@@ -5411,6 +5609,16 @@ public double Port { get; }
 ```
 
 - *Type:* double
+
+---
+
+##### `SecretManagerStoredPassword`<sup>Required</sup> <a name="SecretManagerStoredPassword" id="@cdktf/provider-google.datastreamConnectionProfile.DatastreamConnectionProfileSqlServerProfileOutputReference.property.secretManagerStoredPassword"></a>
+
+```csharp
+public string SecretManagerStoredPassword { get; }
+```
+
+- *Type:* string
 
 ---
 

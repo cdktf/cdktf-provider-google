@@ -4,7 +4,7 @@
 
 ### DataGoogleContainerRegistryRepository <a name="DataGoogleContainerRegistryRepository" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository google_container_registry_repository}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository google_container_registry_repository}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer"></a>
 
@@ -40,9 +40,9 @@ DataGoogleContainerRegistryRepository.Builder.create(Construct scope, java.lang.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -121,7 +121,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
 
 ---
 
@@ -129,7 +129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
 
 ---
 
@@ -473,7 +473,7 @@ The construct id used in the generated config for the DataGoogleContainerRegistr
 
 The id of the existing DataGoogleContainerRegistryRepository that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -759,9 +759,9 @@ DataGoogleContainerRegistryRepositoryConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
 
 ---
 
@@ -843,7 +843,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -858,7 +858,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
 
 ---
 
@@ -870,7 +870,7 @@ public java.lang.String getRegion();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
 
 ---
 

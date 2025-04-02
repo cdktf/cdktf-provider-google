@@ -4,7 +4,7 @@
 
 ### DataGoogleLoggingProjectSettings <a name="DataGoogleLoggingProjectSettings" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/logging_project_settings google_logging_project_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/logging_project_settings google_logging_project_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettings.Initializer"></a>
 
@@ -372,7 +372,7 @@ The construct id used in the generated config for the DataGoogleLoggingProjectSe
 
 The id of the existing DataGoogleLoggingProjectSettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/logging_project_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/logging_project_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -677,7 +677,7 @@ const dataGoogleLoggingProjectSettingsConfig: dataGoogleLoggingProjectSettings.D
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.project">project</a></code> | <code>string</code> | The project for which to retrieve settings. |
-| <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/logging_project_settings#id DataGoogleLoggingProjectSettings#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingProjectSettings.DataGoogleLoggingProjectSettingsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/logging_project_settings#id DataGoogleLoggingProjectSettings#id}. |
 
 ---
 
@@ -761,7 +761,7 @@ public readonly project: string;
 
 The project for which to retrieve settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/logging_project_settings#project DataGoogleLoggingProjectSettings#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/logging_project_settings#project DataGoogleLoggingProjectSettings#project}
 
 ---
 
@@ -773,7 +773,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/logging_project_settings#id DataGoogleLoggingProjectSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/logging_project_settings#id DataGoogleLoggingProjectSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
