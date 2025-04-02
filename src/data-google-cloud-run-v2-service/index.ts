@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/cloud_run_v2_service
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/cloud_run_v2_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudRunV2ServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/cloud_run_v2_service#id DataGoogleCloudRunV2Service#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/cloud_run_v2_service#id DataGoogleCloudRunV2Service#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,17 +22,17 @@ export interface DataGoogleCloudRunV2ServiceConfig extends cdktf.TerraformMetaAr
   /**
   * The location of the cloud run service
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/cloud_run_v2_service#location DataGoogleCloudRunV2Service#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/cloud_run_v2_service#location DataGoogleCloudRunV2Service#location}
   */
   readonly location?: string;
   /**
   * Name of the Service.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/cloud_run_v2_service#name DataGoogleCloudRunV2Service#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/cloud_run_v2_service#name DataGoogleCloudRunV2Service#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/cloud_run_v2_service#project DataGoogleCloudRunV2Service#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/cloud_run_v2_service#project DataGoogleCloudRunV2Service#project}
   */
   readonly project?: string;
 }
@@ -1995,6 +1995,81 @@ export class DataGoogleCloudRunV2ServiceTemplateContainersList extends cdktf.Com
     return new DataGoogleCloudRunV2ServiceTemplateContainersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleCloudRunV2ServiceTemplateNodeSelector {
+}
+
+export function dataGoogleCloudRunV2ServiceTemplateNodeSelectorToTerraform(struct?: DataGoogleCloudRunV2ServiceTemplateNodeSelector): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleCloudRunV2ServiceTemplateNodeSelectorToHclTerraform(struct?: DataGoogleCloudRunV2ServiceTemplateNodeSelector): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleCloudRunV2ServiceTemplateNodeSelectorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudRunV2ServiceTemplateNodeSelector | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudRunV2ServiceTemplateNodeSelector | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // accelerator - computed: true, optional: false, required: false
+  public get accelerator() {
+    return this.getStringAttribute('accelerator');
+  }
+}
+
+export class DataGoogleCloudRunV2ServiceTemplateNodeSelectorList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudRunV2ServiceTemplateNodeSelectorOutputReference {
+    return new DataGoogleCloudRunV2ServiceTemplateNodeSelectorOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleCloudRunV2ServiceTemplateScaling {
 }
 
@@ -2915,6 +2990,11 @@ export class DataGoogleCloudRunV2ServiceTemplateOutputReference extends cdktf.Co
     return this.getStringAttribute('execution_environment');
   }
 
+  // gpu_zonal_redundancy_disabled - computed: true, optional: false, required: false
+  public get gpuZonalRedundancyDisabled() {
+    return this.getBooleanAttribute('gpu_zonal_redundancy_disabled');
+  }
+
   // labels - computed: true, optional: false, required: false
   private _labels = new cdktf.StringMap(this, "labels");
   public get labels() {
@@ -2924,6 +3004,12 @@ export class DataGoogleCloudRunV2ServiceTemplateOutputReference extends cdktf.Co
   // max_instance_request_concurrency - computed: true, optional: false, required: false
   public get maxInstanceRequestConcurrency() {
     return this.getNumberAttribute('max_instance_request_concurrency');
+  }
+
+  // node_selector - computed: true, optional: false, required: false
+  private _nodeSelector = new DataGoogleCloudRunV2ServiceTemplateNodeSelectorList(this, "node_selector", false);
+  public get nodeSelector() {
+    return this._nodeSelector;
   }
 
   // revision - computed: true, optional: false, required: false
@@ -3280,7 +3366,7 @@ export class DataGoogleCloudRunV2ServiceTrafficStatusesList extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/cloud_run_v2_service google_cloud_run_v2_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/cloud_run_v2_service google_cloud_run_v2_service}
 */
 export class DataGoogleCloudRunV2Service extends cdktf.TerraformDataSource {
 
@@ -3296,7 +3382,7 @@ export class DataGoogleCloudRunV2Service extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleCloudRunV2Service resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleCloudRunV2Service to import
-  * @param importFromId The id of the existing DataGoogleCloudRunV2Service that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/cloud_run_v2_service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleCloudRunV2Service that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/cloud_run_v2_service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleCloudRunV2Service to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -3308,7 +3394,7 @@ export class DataGoogleCloudRunV2Service extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/cloud_run_v2_service google_cloud_run_v2_service} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/cloud_run_v2_service google_cloud_run_v2_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3319,7 +3405,7 @@ export class DataGoogleCloudRunV2Service extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloud_run_v2_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

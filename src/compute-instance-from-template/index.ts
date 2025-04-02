@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,47 +15,47 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   /**
   * If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires stopping the instance without setting this field, the update will fail.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#allow_stopping_for_update ComputeInstanceFromTemplate#allow_stopping_for_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#allow_stopping_for_update ComputeInstanceFromTemplate#allow_stopping_for_update}
   */
   readonly allowStoppingForUpdate?: boolean | cdktf.IResolvable;
   /**
   * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#can_ip_forward ComputeInstanceFromTemplate#can_ip_forward}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#can_ip_forward ComputeInstanceFromTemplate#can_ip_forward}
   */
   readonly canIpForward?: boolean | cdktf.IResolvable;
   /**
   * Whether deletion protection is enabled on this instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#deletion_protection ComputeInstanceFromTemplate#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#deletion_protection ComputeInstanceFromTemplate#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * A brief description of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#description ComputeInstanceFromTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#description ComputeInstanceFromTemplate#description}
   */
   readonly description?: string;
   /**
   * Desired status of the instance. Either "RUNNING", "SUSPENDED" or "TERMINATED".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#desired_status ComputeInstanceFromTemplate#desired_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#desired_status ComputeInstanceFromTemplate#desired_status}
   */
   readonly desiredStatus?: string;
   /**
   * Whether the instance has virtual displays enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#enable_display ComputeInstanceFromTemplate#enable_display}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#enable_display ComputeInstanceFromTemplate#enable_display}
   */
   readonly enableDisplay?: boolean | cdktf.IResolvable;
   /**
   * A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#hostname ComputeInstanceFromTemplate#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#hostname ComputeInstanceFromTemplate#hostname}
   */
   readonly hostname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#id ComputeInstanceFromTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#id ComputeInstanceFromTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -64,7 +64,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   /**
   * Action to be taken when a customer's encryption key is revoked. Supports "STOP" and "NONE", with "NONE" being the default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#key_revocation_action_type ComputeInstanceFromTemplate#key_revocation_action_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#key_revocation_action_type ComputeInstanceFromTemplate#key_revocation_action_type}
   */
   readonly keyRevocationActionType?: string;
   /**
@@ -73,151 +73,157 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * 				Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#labels ComputeInstanceFromTemplate#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#labels ComputeInstanceFromTemplate#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The machine type to create.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#machine_type ComputeInstanceFromTemplate#machine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#machine_type ComputeInstanceFromTemplate#machine_type}
   */
   readonly machineType?: string;
   /**
   * Metadata key/value pairs made available within the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#metadata ComputeInstanceFromTemplate#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#metadata ComputeInstanceFromTemplate#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
   * Metadata startup scripts made available within the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#metadata_startup_script ComputeInstanceFromTemplate#metadata_startup_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#metadata_startup_script ComputeInstanceFromTemplate#metadata_startup_script}
   */
   readonly metadataStartupScript?: string;
   /**
   * The minimum CPU platform specified for the VM instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#min_cpu_platform ComputeInstanceFromTemplate#min_cpu_platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#min_cpu_platform ComputeInstanceFromTemplate#min_cpu_platform}
   */
   readonly minCpuPlatform?: string;
   /**
   * The name of the instance. One of name or self_link must be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#name ComputeInstanceFromTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#name ComputeInstanceFromTemplate#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#project ComputeInstanceFromTemplate#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#project ComputeInstanceFromTemplate#project}
   */
   readonly project?: string;
   /**
   * A list of self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#resource_policies ComputeInstanceFromTemplate#resource_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#resource_policies ComputeInstanceFromTemplate#resource_policies}
   */
   readonly resourcePolicies?: string[];
   /**
   * Name or self link of an instance template to create the instance based on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#source_instance_template ComputeInstanceFromTemplate#source_instance_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#source_instance_template ComputeInstanceFromTemplate#source_instance_template}
   */
   readonly sourceInstanceTemplate: string;
   /**
   * The list of tags attached to the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#tags ComputeInstanceFromTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#tags ComputeInstanceFromTemplate#tags}
   */
   readonly tags?: string[];
   /**
   * The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#zone ComputeInstanceFromTemplate#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#zone ComputeInstanceFromTemplate#zone}
   */
   readonly zone?: string;
   /**
   * advanced_machine_features block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#advanced_machine_features ComputeInstanceFromTemplate#advanced_machine_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#advanced_machine_features ComputeInstanceFromTemplate#advanced_machine_features}
   */
   readonly advancedMachineFeatures?: ComputeInstanceFromTemplateAdvancedMachineFeatures;
   /**
   * attached_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#attached_disk ComputeInstanceFromTemplate#attached_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#attached_disk ComputeInstanceFromTemplate#attached_disk}
   */
   readonly attachedDisk?: ComputeInstanceFromTemplateAttachedDisk[] | cdktf.IResolvable;
   /**
   * boot_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#boot_disk ComputeInstanceFromTemplate#boot_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#boot_disk ComputeInstanceFromTemplate#boot_disk}
   */
   readonly bootDisk?: ComputeInstanceFromTemplateBootDisk;
   /**
   * confidential_instance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#confidential_instance_config ComputeInstanceFromTemplate#confidential_instance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#confidential_instance_config ComputeInstanceFromTemplate#confidential_instance_config}
   */
   readonly confidentialInstanceConfig?: ComputeInstanceFromTemplateConfidentialInstanceConfig;
   /**
   * guest_accelerator block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#guest_accelerator ComputeInstanceFromTemplate#guest_accelerator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#guest_accelerator ComputeInstanceFromTemplate#guest_accelerator}
   */
   readonly guestAccelerator?: ComputeInstanceFromTemplateGuestAccelerator[] | cdktf.IResolvable;
   /**
+  * instance_encryption_key block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#instance_encryption_key ComputeInstanceFromTemplate#instance_encryption_key}
+  */
+  readonly instanceEncryptionKey?: ComputeInstanceFromTemplateInstanceEncryptionKey;
+  /**
   * network_interface block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#network_interface ComputeInstanceFromTemplate#network_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#network_interface ComputeInstanceFromTemplate#network_interface}
   */
   readonly networkInterface?: ComputeInstanceFromTemplateNetworkInterface[] | cdktf.IResolvable;
   /**
   * network_performance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#network_performance_config ComputeInstanceFromTemplate#network_performance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#network_performance_config ComputeInstanceFromTemplate#network_performance_config}
   */
   readonly networkPerformanceConfig?: ComputeInstanceFromTemplateNetworkPerformanceConfig;
   /**
   * params block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#params ComputeInstanceFromTemplate#params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#params ComputeInstanceFromTemplate#params}
   */
   readonly params?: ComputeInstanceFromTemplateParams;
   /**
   * reservation_affinity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#reservation_affinity ComputeInstanceFromTemplate#reservation_affinity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#reservation_affinity ComputeInstanceFromTemplate#reservation_affinity}
   */
   readonly reservationAffinity?: ComputeInstanceFromTemplateReservationAffinity;
   /**
   * scheduling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#scheduling ComputeInstanceFromTemplate#scheduling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#scheduling ComputeInstanceFromTemplate#scheduling}
   */
   readonly scheduling?: ComputeInstanceFromTemplateScheduling;
   /**
   * scratch_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#scratch_disk ComputeInstanceFromTemplate#scratch_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#scratch_disk ComputeInstanceFromTemplate#scratch_disk}
   */
   readonly scratchDisk?: ComputeInstanceFromTemplateScratchDisk[] | cdktf.IResolvable;
   /**
   * service_account block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#service_account ComputeInstanceFromTemplate#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#service_account ComputeInstanceFromTemplate#service_account}
   */
   readonly serviceAccount?: ComputeInstanceFromTemplateServiceAccount;
   /**
   * shielded_instance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#shielded_instance_config ComputeInstanceFromTemplate#shielded_instance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#shielded_instance_config ComputeInstanceFromTemplate#shielded_instance_config}
   */
   readonly shieldedInstanceConfig?: ComputeInstanceFromTemplateShieldedInstanceConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#timeouts ComputeInstanceFromTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#timeouts ComputeInstanceFromTemplate#timeouts}
   */
   readonly timeouts?: ComputeInstanceFromTemplateTimeouts;
 }
@@ -225,37 +231,37 @@ export interface ComputeInstanceFromTemplateAdvancedMachineFeatures {
   /**
   * Whether to enable nested virtualization or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#enable_nested_virtualization ComputeInstanceFromTemplate#enable_nested_virtualization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#enable_nested_virtualization ComputeInstanceFromTemplate#enable_nested_virtualization}
   */
   readonly enableNestedVirtualization?: boolean | cdktf.IResolvable;
   /**
   * Whether to enable UEFI networking for the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#enable_uefi_networking ComputeInstanceFromTemplate#enable_uefi_networking}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#enable_uefi_networking ComputeInstanceFromTemplate#enable_uefi_networking}
   */
   readonly enableUefiNetworking?: boolean | cdktf.IResolvable;
   /**
   * The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are "STANDARD", "ENHANCED", and "ARCHITECTURAL".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#performance_monitoring_unit ComputeInstanceFromTemplate#performance_monitoring_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#performance_monitoring_unit ComputeInstanceFromTemplate#performance_monitoring_unit}
   */
   readonly performanceMonitoringUnit?: string;
   /**
   * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#threads_per_core ComputeInstanceFromTemplate#threads_per_core}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#threads_per_core ComputeInstanceFromTemplate#threads_per_core}
   */
   readonly threadsPerCore?: number;
   /**
   * Turbo frequency mode to use for the instance. Currently supported modes is "ALL_CORE_MAX".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#turbo_mode ComputeInstanceFromTemplate#turbo_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#turbo_mode ComputeInstanceFromTemplate#turbo_mode}
   */
   readonly turboMode?: string;
   /**
   * The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance\'s nominal CPU count and the underlying platform\'s SMT width.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#visible_core_count ComputeInstanceFromTemplate#visible_core_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#visible_core_count ComputeInstanceFromTemplate#visible_core_count}
   */
   readonly visibleCoreCount?: number;
 }
@@ -486,31 +492,43 @@ export interface ComputeInstanceFromTemplateAttachedDisk {
   /**
   * Name with which the attached disk is accessible under /dev/disk/by-id/
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#device_name ComputeInstanceFromTemplate#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#device_name ComputeInstanceFromTemplate#device_name}
   */
   readonly deviceName?: string;
   /**
-  * A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+  * A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#disk_encryption_key_raw ComputeInstanceFromTemplate#disk_encryption_key_raw}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#disk_encryption_key_raw ComputeInstanceFromTemplate#disk_encryption_key_raw}
   */
   readonly diskEncryptionKeyRaw?: string;
   /**
-  * The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+  * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#kms_key_self_link ComputeInstanceFromTemplate#kms_key_self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#disk_encryption_key_rsa ComputeInstanceFromTemplate#disk_encryption_key_rsa}
+  */
+  readonly diskEncryptionKeyRsa?: string;
+  /**
+  * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#disk_encryption_service_account ComputeInstanceFromTemplate#disk_encryption_service_account}
+  */
+  readonly diskEncryptionServiceAccount?: string;
+  /**
+  * The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#kms_key_self_link ComputeInstanceFromTemplate#kms_key_self_link}
   */
   readonly kmsKeySelfLink?: string;
   /**
   * Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#mode ComputeInstanceFromTemplate#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#mode ComputeInstanceFromTemplate#mode}
   */
   readonly mode?: string;
   /**
   * The name or self_link of the disk attached to this instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#source ComputeInstanceFromTemplate#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#source ComputeInstanceFromTemplate#source}
   */
   readonly source: string;
 }
@@ -523,6 +541,8 @@ export function computeInstanceFromTemplateAttachedDiskToTerraform(struct?: Comp
   return {
     device_name: cdktf.stringToTerraform(struct!.deviceName),
     disk_encryption_key_raw: cdktf.stringToTerraform(struct!.diskEncryptionKeyRaw),
+    disk_encryption_key_rsa: cdktf.stringToTerraform(struct!.diskEncryptionKeyRsa),
+    disk_encryption_service_account: cdktf.stringToTerraform(struct!.diskEncryptionServiceAccount),
     kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
     mode: cdktf.stringToTerraform(struct!.mode),
     source: cdktf.stringToTerraform(struct!.source),
@@ -544,6 +564,18 @@ export function computeInstanceFromTemplateAttachedDiskToHclTerraform(struct?: C
     },
     disk_encryption_key_raw: {
       value: cdktf.stringToHclTerraform(struct!.diskEncryptionKeyRaw),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_encryption_key_rsa: {
+      value: cdktf.stringToHclTerraform(struct!.diskEncryptionKeyRsa),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_encryption_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.diskEncryptionServiceAccount),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -600,6 +632,14 @@ export class ComputeInstanceFromTemplateAttachedDiskOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.diskEncryptionKeyRaw = this._diskEncryptionKeyRaw;
     }
+    if (this._diskEncryptionKeyRsa !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionKeyRsa = this._diskEncryptionKeyRsa;
+    }
+    if (this._diskEncryptionServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionServiceAccount = this._diskEncryptionServiceAccount;
+    }
     if (this._kmsKeySelfLink !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
@@ -621,6 +661,8 @@ export class ComputeInstanceFromTemplateAttachedDiskOutputReference extends cdkt
       this.resolvableValue = undefined;
       this._deviceName = undefined;
       this._diskEncryptionKeyRaw = undefined;
+      this._diskEncryptionKeyRsa = undefined;
+      this._diskEncryptionServiceAccount = undefined;
       this._kmsKeySelfLink = undefined;
       this._mode = undefined;
       this._source = undefined;
@@ -634,6 +676,8 @@ export class ComputeInstanceFromTemplateAttachedDiskOutputReference extends cdkt
       this.resolvableValue = undefined;
       this._deviceName = value.deviceName;
       this._diskEncryptionKeyRaw = value.diskEncryptionKeyRaw;
+      this._diskEncryptionKeyRsa = value.diskEncryptionKeyRsa;
+      this._diskEncryptionServiceAccount = value.diskEncryptionServiceAccount;
       this._kmsKeySelfLink = value.kmsKeySelfLink;
       this._mode = value.mode;
       this._source = value.source;
@@ -672,9 +716,41 @@ export class ComputeInstanceFromTemplateAttachedDiskOutputReference extends cdkt
     return this._diskEncryptionKeyRaw;
   }
 
+  // disk_encryption_key_rsa - computed: true, optional: true, required: false
+  private _diskEncryptionKeyRsa?: string; 
+  public get diskEncryptionKeyRsa() {
+    return this.getStringAttribute('disk_encryption_key_rsa');
+  }
+  public set diskEncryptionKeyRsa(value: string) {
+    this._diskEncryptionKeyRsa = value;
+  }
+  public resetDiskEncryptionKeyRsa() {
+    this._diskEncryptionKeyRsa = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionKeyRsaInput() {
+    return this._diskEncryptionKeyRsa;
+  }
+
   // disk_encryption_key_sha256 - computed: true, optional: false, required: false
   public get diskEncryptionKeySha256() {
     return this.getStringAttribute('disk_encryption_key_sha256');
+  }
+
+  // disk_encryption_service_account - computed: true, optional: true, required: false
+  private _diskEncryptionServiceAccount?: string; 
+  public get diskEncryptionServiceAccount() {
+    return this.getStringAttribute('disk_encryption_service_account');
+  }
+  public set diskEncryptionServiceAccount(value: string) {
+    this._diskEncryptionServiceAccount = value;
+  }
+  public resetDiskEncryptionServiceAccount() {
+    this._diskEncryptionServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionServiceAccountInput() {
+    return this._diskEncryptionServiceAccount;
   }
 
   // kms_key_self_link - computed: true, optional: true, required: false
@@ -742,73 +818,483 @@ export class ComputeInstanceFromTemplateAttachedDiskList extends cdktf.ComplexLi
     return new ComputeInstanceFromTemplateAttachedDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKey {
+  /**
+  * The self link of the encryption key that is stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#kms_key_self_link ComputeInstanceFromTemplate#kms_key_self_link}
+  */
+  readonly kmsKeySelfLink?: string;
+  /**
+  * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#kms_key_service_account ComputeInstanceFromTemplate#kms_key_service_account}
+  */
+  readonly kmsKeyServiceAccount?: string;
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#raw_key ComputeInstanceFromTemplate#raw_key}
+  */
+  readonly rawKey?: string;
+  /**
+  * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#rsa_encrypted_key ComputeInstanceFromTemplate#rsa_encrypted_key}
+  */
+  readonly rsaEncryptedKey?: string;
+}
+
+export function computeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyToTerraform(struct?: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference | ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+    rsa_encrypted_key: cdktf.stringToTerraform(struct!.rsaEncryptedKey),
+  }
+}
+
+
+export function computeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyToHclTerraform(struct?: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference | ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_self_link: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeySelfLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyServiceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    raw_key: {
+      value: cdktf.stringToHclTerraform(struct!.rawKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rsa_encrypted_key: {
+      value: cdktf.stringToHclTerraform(struct!.rsaEncryptedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    if (this._rawKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rawKey = this._rawKey;
+    }
+    if (this._rsaEncryptedKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rsaEncryptedKey = this._rsaEncryptedKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+      this._rawKey = undefined;
+      this._rsaEncryptedKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+      this._rawKey = value.rawKey;
+      this._rsaEncryptedKey = value.rsaEncryptedKey;
+    }
+  }
+
+  // kms_key_self_link - computed: true, optional: true, required: false
+  private _kmsKeySelfLink?: string; 
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+  public set kmsKeySelfLink(value: string) {
+    this._kmsKeySelfLink = value;
+  }
+  public resetKmsKeySelfLink() {
+    this._kmsKeySelfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeySelfLinkInput() {
+    return this._kmsKeySelfLink;
+  }
+
+  // kms_key_service_account - computed: true, optional: true, required: false
+  private _kmsKeyServiceAccount?: string; 
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+  public set kmsKeyServiceAccount(value: string) {
+    this._kmsKeyServiceAccount = value;
+  }
+  public resetKmsKeyServiceAccount() {
+    this._kmsKeyServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyServiceAccountInput() {
+    return this._kmsKeyServiceAccount;
+  }
+
+  // raw_key - computed: true, optional: true, required: false
+  private _rawKey?: string; 
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+  public set rawKey(value: string) {
+    this._rawKey = value;
+  }
+  public resetRawKey() {
+    this._rawKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rawKeyInput() {
+    return this._rawKey;
+  }
+
+  // rsa_encrypted_key - computed: true, optional: true, required: false
+  private _rsaEncryptedKey?: string; 
+  public get rsaEncryptedKey() {
+    return this.getStringAttribute('rsa_encrypted_key');
+  }
+  public set rsaEncryptedKey(value: string) {
+    this._rsaEncryptedKey = value;
+  }
+  public resetRsaEncryptedKey() {
+    this._rsaEncryptedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rsaEncryptedKeyInput() {
+    return this._rsaEncryptedKey;
+  }
+
+  // sha256 - computed: true, optional: false, required: false
+  public get sha256() {
+    return this.getStringAttribute('sha256');
+  }
+}
+export interface ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKey {
+  /**
+  * The self link of the encryption key that is stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#kms_key_self_link ComputeInstanceFromTemplate#kms_key_self_link}
+  */
+  readonly kmsKeySelfLink?: string;
+  /**
+  * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#kms_key_service_account ComputeInstanceFromTemplate#kms_key_service_account}
+  */
+  readonly kmsKeyServiceAccount?: string;
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#raw_key ComputeInstanceFromTemplate#raw_key}
+  */
+  readonly rawKey?: string;
+  /**
+  * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#rsa_encrypted_key ComputeInstanceFromTemplate#rsa_encrypted_key}
+  */
+  readonly rsaEncryptedKey?: string;
+}
+
+export function computeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference | ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+    rsa_encrypted_key: cdktf.stringToTerraform(struct!.rsaEncryptedKey),
+  }
+}
+
+
+export function computeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyToHclTerraform(struct?: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference | ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_self_link: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeySelfLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyServiceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    raw_key: {
+      value: cdktf.stringToHclTerraform(struct!.rawKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rsa_encrypted_key: {
+      value: cdktf.stringToHclTerraform(struct!.rsaEncryptedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    if (this._rawKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rawKey = this._rawKey;
+    }
+    if (this._rsaEncryptedKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rsaEncryptedKey = this._rsaEncryptedKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+      this._rawKey = undefined;
+      this._rsaEncryptedKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+      this._rawKey = value.rawKey;
+      this._rsaEncryptedKey = value.rsaEncryptedKey;
+    }
+  }
+
+  // kms_key_self_link - computed: true, optional: true, required: false
+  private _kmsKeySelfLink?: string; 
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+  public set kmsKeySelfLink(value: string) {
+    this._kmsKeySelfLink = value;
+  }
+  public resetKmsKeySelfLink() {
+    this._kmsKeySelfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeySelfLinkInput() {
+    return this._kmsKeySelfLink;
+  }
+
+  // kms_key_service_account - computed: true, optional: true, required: false
+  private _kmsKeyServiceAccount?: string; 
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+  public set kmsKeyServiceAccount(value: string) {
+    this._kmsKeyServiceAccount = value;
+  }
+  public resetKmsKeyServiceAccount() {
+    this._kmsKeyServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyServiceAccountInput() {
+    return this._kmsKeyServiceAccount;
+  }
+
+  // raw_key - computed: true, optional: true, required: false
+  private _rawKey?: string; 
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+  public set rawKey(value: string) {
+    this._rawKey = value;
+  }
+  public resetRawKey() {
+    this._rawKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rawKeyInput() {
+    return this._rawKey;
+  }
+
+  // rsa_encrypted_key - computed: true, optional: true, required: false
+  private _rsaEncryptedKey?: string; 
+  public get rsaEncryptedKey() {
+    return this.getStringAttribute('rsa_encrypted_key');
+  }
+  public set rsaEncryptedKey(value: string) {
+    this._rsaEncryptedKey = value;
+  }
+  public resetRsaEncryptedKey() {
+    this._rsaEncryptedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rsaEncryptedKeyInput() {
+    return this._rsaEncryptedKey;
+  }
+
+  // sha256 - computed: true, optional: false, required: false
+  public get sha256() {
+    return this.getStringAttribute('sha256');
+  }
+}
 export interface ComputeInstanceFromTemplateBootDiskInitializeParams {
   /**
   * The architecture of the disk. One of "X86_64" or "ARM64".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#architecture ComputeInstanceFromTemplate#architecture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#architecture ComputeInstanceFromTemplate#architecture}
   */
   readonly architecture?: string;
   /**
   * A flag to enable confidential compute mode on boot disk
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#enable_confidential_compute ComputeInstanceFromTemplate#enable_confidential_compute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#enable_confidential_compute ComputeInstanceFromTemplate#enable_confidential_compute}
   */
   readonly enableConfidentialCompute?: boolean | cdktf.IResolvable;
   /**
   * The image from which this disk was initialised.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#image ComputeInstanceFromTemplate#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#image ComputeInstanceFromTemplate#image}
   */
   readonly image?: string;
   /**
   * A set of key/value label pairs assigned to the disk.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#labels ComputeInstanceFromTemplate#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#labels ComputeInstanceFromTemplate#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#provisioned_iops ComputeInstanceFromTemplate#provisioned_iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#provisioned_iops ComputeInstanceFromTemplate#provisioned_iops}
   */
   readonly provisionedIops?: number;
   /**
   * Indicates how much throughput to provision for the disk. This sets the number of throughput mb per second that the disk can handle.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#provisioned_throughput ComputeInstanceFromTemplate#provisioned_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#provisioned_throughput ComputeInstanceFromTemplate#provisioned_throughput}
   */
   readonly provisionedThroughput?: number;
   /**
   * A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT & PATCH) when empty.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#resource_manager_tags ComputeInstanceFromTemplate#resource_manager_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#resource_manager_tags ComputeInstanceFromTemplate#resource_manager_tags}
   */
   readonly resourceManagerTags?: { [key: string]: string };
   /**
   * A list of self_links of resource policies to attach to the instance's boot disk. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#resource_policies ComputeInstanceFromTemplate#resource_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#resource_policies ComputeInstanceFromTemplate#resource_policies}
   */
   readonly resourcePolicies?: string[];
   /**
   * The size of the image in gigabytes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#size ComputeInstanceFromTemplate#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#size ComputeInstanceFromTemplate#size}
   */
   readonly size?: number;
   /**
+  * The snapshot from which this disk was initialised.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#snapshot ComputeInstanceFromTemplate#snapshot}
+  */
+  readonly snapshot?: string;
+  /**
   * The URL of the storage pool in which the new disk is created
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#storage_pool ComputeInstanceFromTemplate#storage_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#storage_pool ComputeInstanceFromTemplate#storage_pool}
   */
   readonly storagePool?: string;
   /**
   * The Google Compute Engine disk type. Such as pd-standard, pd-ssd or pd-balanced.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#type ComputeInstanceFromTemplate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#type ComputeInstanceFromTemplate#type}
   */
   readonly type?: string;
+  /**
+  * source_image_encryption_key block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#source_image_encryption_key ComputeInstanceFromTemplate#source_image_encryption_key}
+  */
+  readonly sourceImageEncryptionKey?: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKey;
+  /**
+  * source_snapshot_encryption_key block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#source_snapshot_encryption_key ComputeInstanceFromTemplate#source_snapshot_encryption_key}
+  */
+  readonly sourceSnapshotEncryptionKey?: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKey;
 }
 
 export function computeInstanceFromTemplateBootDiskInitializeParamsToTerraform(struct?: ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference | ComputeInstanceFromTemplateBootDiskInitializeParams): any {
@@ -826,8 +1312,11 @@ export function computeInstanceFromTemplateBootDiskInitializeParamsToTerraform(s
     resource_manager_tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.resourceManagerTags),
     resource_policies: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resourcePolicies),
     size: cdktf.numberToTerraform(struct!.size),
+    snapshot: cdktf.stringToTerraform(struct!.snapshot),
     storage_pool: cdktf.stringToTerraform(struct!.storagePool),
     type: cdktf.stringToTerraform(struct!.type),
+    source_image_encryption_key: computeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyToTerraform(struct!.sourceImageEncryptionKey),
+    source_snapshot_encryption_key: computeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyToTerraform(struct!.sourceSnapshotEncryptionKey),
   }
 }
 
@@ -892,6 +1381,12 @@ export function computeInstanceFromTemplateBootDiskInitializeParamsToHclTerrafor
       type: "simple",
       storageClassType: "number",
     },
+    snapshot: {
+      value: cdktf.stringToHclTerraform(struct!.snapshot),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
     storage_pool: {
       value: cdktf.stringToHclTerraform(struct!.storagePool),
       isBlock: false,
@@ -903,6 +1398,18 @@ export function computeInstanceFromTemplateBootDiskInitializeParamsToHclTerrafor
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    source_image_encryption_key: {
+      value: computeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyToHclTerraform(struct!.sourceImageEncryptionKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyList",
+    },
+    source_snapshot_encryption_key: {
+      value: computeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyToHclTerraform(struct!.sourceSnapshotEncryptionKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyList",
     },
   };
 
@@ -960,6 +1467,10 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
       hasAnyValues = true;
       internalValueResult.size = this._size;
     }
+    if (this._snapshot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.snapshot = this._snapshot;
+    }
     if (this._storagePool !== undefined) {
       hasAnyValues = true;
       internalValueResult.storagePool = this._storagePool;
@@ -967,6 +1478,14 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
+    }
+    if (this._sourceImageEncryptionKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceImageEncryptionKey = this._sourceImageEncryptionKey?.internalValue;
+    }
+    if (this._sourceSnapshotEncryptionKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceSnapshotEncryptionKey = this._sourceSnapshotEncryptionKey?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -983,8 +1502,11 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
       this._resourceManagerTags = undefined;
       this._resourcePolicies = undefined;
       this._size = undefined;
+      this._snapshot = undefined;
       this._storagePool = undefined;
       this._type = undefined;
+      this._sourceImageEncryptionKey.internalValue = undefined;
+      this._sourceSnapshotEncryptionKey.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -997,8 +1519,11 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
       this._resourceManagerTags = value.resourceManagerTags;
       this._resourcePolicies = value.resourcePolicies;
       this._size = value.size;
+      this._snapshot = value.snapshot;
       this._storagePool = value.storagePool;
       this._type = value.type;
+      this._sourceImageEncryptionKey.internalValue = value.sourceImageEncryptionKey;
+      this._sourceSnapshotEncryptionKey.internalValue = value.sourceSnapshotEncryptionKey;
     }
   }
 
@@ -1146,6 +1671,22 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
     return this._size;
   }
 
+  // snapshot - computed: true, optional: true, required: false
+  private _snapshot?: string; 
+  public get snapshot() {
+    return this.getStringAttribute('snapshot');
+  }
+  public set snapshot(value: string) {
+    this._snapshot = value;
+  }
+  public resetSnapshot() {
+    this._snapshot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotInput() {
+    return this._snapshot;
+  }
+
   // storage_pool - computed: true, optional: true, required: false
   private _storagePool?: string; 
   public get storagePool() {
@@ -1177,60 +1718,104 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
   public get typeInput() {
     return this._type;
   }
+
+  // source_image_encryption_key - computed: false, optional: true, required: false
+  private _sourceImageEncryptionKey = new ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKeyOutputReference(this, "source_image_encryption_key");
+  public get sourceImageEncryptionKey() {
+    return this._sourceImageEncryptionKey;
+  }
+  public putSourceImageEncryptionKey(value: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceImageEncryptionKey) {
+    this._sourceImageEncryptionKey.internalValue = value;
+  }
+  public resetSourceImageEncryptionKey() {
+    this._sourceImageEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageEncryptionKeyInput() {
+    return this._sourceImageEncryptionKey.internalValue;
+  }
+
+  // source_snapshot_encryption_key - computed: false, optional: true, required: false
+  private _sourceSnapshotEncryptionKey = new ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKeyOutputReference(this, "source_snapshot_encryption_key");
+  public get sourceSnapshotEncryptionKey() {
+    return this._sourceSnapshotEncryptionKey;
+  }
+  public putSourceSnapshotEncryptionKey(value: ComputeInstanceFromTemplateBootDiskInitializeParamsSourceSnapshotEncryptionKey) {
+    this._sourceSnapshotEncryptionKey.internalValue = value;
+  }
+  public resetSourceSnapshotEncryptionKey() {
+    this._sourceSnapshotEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSnapshotEncryptionKeyInput() {
+    return this._sourceSnapshotEncryptionKey.internalValue;
+  }
 }
 export interface ComputeInstanceFromTemplateBootDisk {
   /**
   * Whether the disk will be auto-deleted when the instance is deleted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#auto_delete ComputeInstanceFromTemplate#auto_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#auto_delete ComputeInstanceFromTemplate#auto_delete}
   */
   readonly autoDelete?: boolean | cdktf.IResolvable;
   /**
   * Name with which attached disk will be accessible under /dev/disk/by-id/
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#device_name ComputeInstanceFromTemplate#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#device_name ComputeInstanceFromTemplate#device_name}
   */
   readonly deviceName?: string;
   /**
-  * A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+  * A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_raw and disk_encryption_key_rsa may be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#disk_encryption_key_raw ComputeInstanceFromTemplate#disk_encryption_key_raw}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#disk_encryption_key_raw ComputeInstanceFromTemplate#disk_encryption_key_raw}
   */
   readonly diskEncryptionKeyRaw?: string;
   /**
+  * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. Only one of kms_key_self_link, disk_encryption_key_raw and disk_encryption_key_rsa may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#disk_encryption_key_rsa ComputeInstanceFromTemplate#disk_encryption_key_rsa}
+  */
+  readonly diskEncryptionKeyRsa?: string;
+  /**
+  * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#disk_encryption_service_account ComputeInstanceFromTemplate#disk_encryption_service_account}
+  */
+  readonly diskEncryptionServiceAccount?: string;
+  /**
   * A list of features to enable on the guest operating system. Applicable only for bootable images.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#guest_os_features ComputeInstanceFromTemplate#guest_os_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#guest_os_features ComputeInstanceFromTemplate#guest_os_features}
   */
   readonly guestOsFeatures?: string[];
   /**
   * The disk interface used for attaching this disk. One of SCSI or NVME. (This field is shared with attached_disk and only used for specific cases, please don't specify this field without advice from Google.)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#interface ComputeInstanceFromTemplate#interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#interface ComputeInstanceFromTemplate#interface}
   */
   readonly interface?: string;
   /**
-  * The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.
+  * The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_raw and disk_encryption_key_rsa may be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#kms_key_self_link ComputeInstanceFromTemplate#kms_key_self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#kms_key_self_link ComputeInstanceFromTemplate#kms_key_self_link}
   */
   readonly kmsKeySelfLink?: string;
   /**
   * Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#mode ComputeInstanceFromTemplate#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#mode ComputeInstanceFromTemplate#mode}
   */
   readonly mode?: string;
   /**
   * The name or self_link of the disk attached to this instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#source ComputeInstanceFromTemplate#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#source ComputeInstanceFromTemplate#source}
   */
   readonly source?: string;
   /**
   * initialize_params block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#initialize_params ComputeInstanceFromTemplate#initialize_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#initialize_params ComputeInstanceFromTemplate#initialize_params}
   */
   readonly initializeParams?: ComputeInstanceFromTemplateBootDiskInitializeParams;
 }
@@ -1244,6 +1829,8 @@ export function computeInstanceFromTemplateBootDiskToTerraform(struct?: ComputeI
     auto_delete: cdktf.booleanToTerraform(struct!.autoDelete),
     device_name: cdktf.stringToTerraform(struct!.deviceName),
     disk_encryption_key_raw: cdktf.stringToTerraform(struct!.diskEncryptionKeyRaw),
+    disk_encryption_key_rsa: cdktf.stringToTerraform(struct!.diskEncryptionKeyRsa),
+    disk_encryption_service_account: cdktf.stringToTerraform(struct!.diskEncryptionServiceAccount),
     guest_os_features: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.guestOsFeatures),
     interface: cdktf.stringToTerraform(struct!.interface),
     kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
@@ -1274,6 +1861,18 @@ export function computeInstanceFromTemplateBootDiskToHclTerraform(struct?: Compu
     },
     disk_encryption_key_raw: {
       value: cdktf.stringToHclTerraform(struct!.diskEncryptionKeyRaw),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_encryption_key_rsa: {
+      value: cdktf.stringToHclTerraform(struct!.diskEncryptionKeyRsa),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_encryption_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.diskEncryptionServiceAccount),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -1346,6 +1945,14 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.diskEncryptionKeyRaw = this._diskEncryptionKeyRaw;
     }
+    if (this._diskEncryptionKeyRsa !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionKeyRsa = this._diskEncryptionKeyRsa;
+    }
+    if (this._diskEncryptionServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionServiceAccount = this._diskEncryptionServiceAccount;
+    }
     if (this._guestOsFeatures !== undefined) {
       hasAnyValues = true;
       internalValueResult.guestOsFeatures = this._guestOsFeatures;
@@ -1379,6 +1986,8 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
       this._autoDelete = undefined;
       this._deviceName = undefined;
       this._diskEncryptionKeyRaw = undefined;
+      this._diskEncryptionKeyRsa = undefined;
+      this._diskEncryptionServiceAccount = undefined;
       this._guestOsFeatures = undefined;
       this._interface = undefined;
       this._kmsKeySelfLink = undefined;
@@ -1391,6 +2000,8 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
       this._autoDelete = value.autoDelete;
       this._deviceName = value.deviceName;
       this._diskEncryptionKeyRaw = value.diskEncryptionKeyRaw;
+      this._diskEncryptionKeyRsa = value.diskEncryptionKeyRsa;
+      this._diskEncryptionServiceAccount = value.diskEncryptionServiceAccount;
       this._guestOsFeatures = value.guestOsFeatures;
       this._interface = value.interface;
       this._kmsKeySelfLink = value.kmsKeySelfLink;
@@ -1448,9 +2059,41 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
     return this._diskEncryptionKeyRaw;
   }
 
+  // disk_encryption_key_rsa - computed: true, optional: true, required: false
+  private _diskEncryptionKeyRsa?: string; 
+  public get diskEncryptionKeyRsa() {
+    return this.getStringAttribute('disk_encryption_key_rsa');
+  }
+  public set diskEncryptionKeyRsa(value: string) {
+    this._diskEncryptionKeyRsa = value;
+  }
+  public resetDiskEncryptionKeyRsa() {
+    this._diskEncryptionKeyRsa = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionKeyRsaInput() {
+    return this._diskEncryptionKeyRsa;
+  }
+
   // disk_encryption_key_sha256 - computed: true, optional: false, required: false
   public get diskEncryptionKeySha256() {
     return this.getStringAttribute('disk_encryption_key_sha256');
+  }
+
+  // disk_encryption_service_account - computed: true, optional: true, required: false
+  private _diskEncryptionServiceAccount?: string; 
+  public get diskEncryptionServiceAccount() {
+    return this.getStringAttribute('disk_encryption_service_account');
+  }
+  public set diskEncryptionServiceAccount(value: string) {
+    this._diskEncryptionServiceAccount = value;
+  }
+  public resetDiskEncryptionServiceAccount() {
+    this._diskEncryptionServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionServiceAccountInput() {
+    return this._diskEncryptionServiceAccount;
   }
 
   // guest_os_features - computed: true, optional: true, required: false
@@ -1557,13 +2200,13 @@ export interface ComputeInstanceFromTemplateConfidentialInstanceConfig {
   * 								values is required: SEV, SEV_SNP, TDX. If SEV_SNP, min_cpu_platform =
   * 								"AMD Milan" is currently required.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#confidential_instance_type ComputeInstanceFromTemplate#confidential_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#confidential_instance_type ComputeInstanceFromTemplate#confidential_instance_type}
   */
   readonly confidentialInstanceType?: string;
   /**
   * Defines whether the instance should have confidential compute enabled. Field will be deprecated in a future release
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#enable_confidential_compute ComputeInstanceFromTemplate#enable_confidential_compute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#enable_confidential_compute ComputeInstanceFromTemplate#enable_confidential_compute}
   */
   readonly enableConfidentialCompute?: boolean | cdktf.IResolvable;
 }
@@ -1678,13 +2321,13 @@ export interface ComputeInstanceFromTemplateGuestAccelerator {
   /**
   * The number of the guest accelerator cards exposed to this instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#count ComputeInstanceFromTemplate#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#count ComputeInstanceFromTemplate#count}
   */
   readonly count: number;
   /**
   * The accelerator type resource exposed to this instance. E.g. nvidia-tesla-k80.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#type ComputeInstanceFromTemplate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#type ComputeInstanceFromTemplate#type}
   */
   readonly type: string;
 }
@@ -1821,23 +2464,149 @@ export class ComputeInstanceFromTemplateGuestAcceleratorList extends cdktf.Compl
     return new ComputeInstanceFromTemplateGuestAcceleratorOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ComputeInstanceFromTemplateInstanceEncryptionKey {
+  /**
+  * The self link of the encryption key that is stored in Google Cloud KMS.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#kms_key_self_link ComputeInstanceFromTemplate#kms_key_self_link}
+  */
+  readonly kmsKeySelfLink?: string;
+  /**
+  * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#kms_key_service_account ComputeInstanceFromTemplate#kms_key_service_account}
+  */
+  readonly kmsKeyServiceAccount?: string;
+}
+
+export function computeInstanceFromTemplateInstanceEncryptionKeyToTerraform(struct?: ComputeInstanceFromTemplateInstanceEncryptionKeyOutputReference | ComputeInstanceFromTemplateInstanceEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+  }
+}
+
+
+export function computeInstanceFromTemplateInstanceEncryptionKeyToHclTerraform(struct?: ComputeInstanceFromTemplateInstanceEncryptionKeyOutputReference | ComputeInstanceFromTemplateInstanceEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_self_link: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeySelfLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyServiceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeInstanceFromTemplateInstanceEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeInstanceFromTemplateInstanceEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceFromTemplateInstanceEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+    }
+  }
+
+  // kms_key_self_link - computed: true, optional: true, required: false
+  private _kmsKeySelfLink?: string; 
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+  public set kmsKeySelfLink(value: string) {
+    this._kmsKeySelfLink = value;
+  }
+  public resetKmsKeySelfLink() {
+    this._kmsKeySelfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeySelfLinkInput() {
+    return this._kmsKeySelfLink;
+  }
+
+  // kms_key_service_account - computed: true, optional: true, required: false
+  private _kmsKeyServiceAccount?: string; 
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+  public set kmsKeyServiceAccount(value: string) {
+    this._kmsKeyServiceAccount = value;
+  }
+  public resetKmsKeyServiceAccount() {
+    this._kmsKeyServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyServiceAccountInput() {
+    return this._kmsKeyServiceAccount;
+  }
+
+  // sha256 - computed: true, optional: false, required: false
+  public get sha256() {
+    return this.getStringAttribute('sha256');
+  }
+}
 export interface ComputeInstanceFromTemplateNetworkInterfaceAccessConfig {
   /**
   * The IP address that is be 1:1 mapped to the instance's network ip.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#nat_ip ComputeInstanceFromTemplate#nat_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#nat_ip ComputeInstanceFromTemplate#nat_ip}
   */
   readonly natIp?: string;
   /**
   * The networking tier used for configuring this instance. One of PREMIUM or STANDARD.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#network_tier ComputeInstanceFromTemplate#network_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#network_tier ComputeInstanceFromTemplate#network_tier}
   */
   readonly networkTier?: string;
   /**
   * The DNS domain name for the public PTR record.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#public_ptr_domain_name ComputeInstanceFromTemplate#public_ptr_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#public_ptr_domain_name ComputeInstanceFromTemplate#public_ptr_domain_name}
   */
   readonly publicPtrDomainName?: string;
 }
@@ -2013,13 +2782,13 @@ export interface ComputeInstanceFromTemplateNetworkInterfaceAliasIpRange {
   /**
   * The IP CIDR range represented by this alias IP range.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#ip_cidr_range ComputeInstanceFromTemplate#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#ip_cidr_range ComputeInstanceFromTemplate#ip_cidr_range}
   */
   readonly ipCidrRange: string;
   /**
   * The subnetwork secondary range name specifying the secondary range from which to allocate the IP CIDR range for this alias IP range.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#subnetwork_range_name ComputeInstanceFromTemplate#subnetwork_range_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#subnetwork_range_name ComputeInstanceFromTemplate#subnetwork_range_name}
   */
   readonly subnetworkRangeName?: string;
 }
@@ -2163,31 +2932,31 @@ export interface ComputeInstanceFromTemplateNetworkInterfaceIpv6AccessConfig {
   /**
   * The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#external_ipv6 ComputeInstanceFromTemplate#external_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#external_ipv6 ComputeInstanceFromTemplate#external_ipv6}
   */
   readonly externalIpv6?: string;
   /**
   * The prefix length of the external IPv6 range.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#external_ipv6_prefix_length ComputeInstanceFromTemplate#external_ipv6_prefix_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#external_ipv6_prefix_length ComputeInstanceFromTemplate#external_ipv6_prefix_length}
   */
   readonly externalIpv6PrefixLength?: string;
   /**
   * The name of this access configuration. In ipv6AccessConfigs, the recommended name is External IPv6.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#name ComputeInstanceFromTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#name ComputeInstanceFromTemplate#name}
   */
   readonly name?: string;
   /**
   * The service-level to be provided for IPv6 traffic when the subnet has an external subnet. Only PREMIUM tier is valid for IPv6
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#network_tier ComputeInstanceFromTemplate#network_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#network_tier ComputeInstanceFromTemplate#network_tier}
   */
   readonly networkTier: string;
   /**
   * The domain name to be used when creating DNSv6 records for the external IPv6 ranges.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#public_ptr_domain_name ComputeInstanceFromTemplate#public_ptr_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#public_ptr_domain_name ComputeInstanceFromTemplate#public_ptr_domain_name}
   */
   readonly publicPtrDomainName?: string;
 }
@@ -2418,79 +3187,79 @@ export interface ComputeInstanceFromTemplateNetworkInterface {
   /**
   * The prefix length of the primary internal IPv6 range.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#internal_ipv6_prefix_length ComputeInstanceFromTemplate#internal_ipv6_prefix_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#internal_ipv6_prefix_length ComputeInstanceFromTemplate#internal_ipv6_prefix_length}
   */
   readonly internalIpv6PrefixLength?: number;
   /**
   * An IPv6 internal network address for this network interface. If not specified, Google Cloud will automatically assign an internal IPv6 address from the instance's subnetwork.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#ipv6_address ComputeInstanceFromTemplate#ipv6_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#ipv6_address ComputeInstanceFromTemplate#ipv6_address}
   */
   readonly ipv6Address?: string;
   /**
   * The name or self_link of the network attached to this interface.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#network ComputeInstanceFromTemplate#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#network ComputeInstanceFromTemplate#network}
   */
   readonly network?: string;
   /**
   * The URL of the network attachment that this interface should connect to in the following format: projects/{projectNumber}/regions/{region_name}/networkAttachments/{network_attachment_name}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#network_attachment ComputeInstanceFromTemplate#network_attachment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#network_attachment ComputeInstanceFromTemplate#network_attachment}
   */
   readonly networkAttachment?: string;
   /**
   * The private IP address assigned to the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#network_ip ComputeInstanceFromTemplate#network_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#network_ip ComputeInstanceFromTemplate#network_ip}
   */
   readonly networkIp?: string;
   /**
   * The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET, IDPF, MRDMA, and IRDMA
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#nic_type ComputeInstanceFromTemplate#nic_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#nic_type ComputeInstanceFromTemplate#nic_type}
   */
   readonly nicType?: string;
   /**
   * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#queue_count ComputeInstanceFromTemplate#queue_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#queue_count ComputeInstanceFromTemplate#queue_count}
   */
   readonly queueCount?: number;
   /**
   * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#stack_type ComputeInstanceFromTemplate#stack_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#stack_type ComputeInstanceFromTemplate#stack_type}
   */
   readonly stackType?: string;
   /**
   * The name or self_link of the subnetwork attached to this interface.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#subnetwork ComputeInstanceFromTemplate#subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#subnetwork ComputeInstanceFromTemplate#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * The project in which the subnetwork belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#subnetwork_project ComputeInstanceFromTemplate#subnetwork_project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#subnetwork_project ComputeInstanceFromTemplate#subnetwork_project}
   */
   readonly subnetworkProject?: string;
   /**
   * access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#access_config ComputeInstanceFromTemplate#access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#access_config ComputeInstanceFromTemplate#access_config}
   */
   readonly accessConfig?: ComputeInstanceFromTemplateNetworkInterfaceAccessConfig[] | cdktf.IResolvable;
   /**
   * alias_ip_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#alias_ip_range ComputeInstanceFromTemplate#alias_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#alias_ip_range ComputeInstanceFromTemplate#alias_ip_range}
   */
   readonly aliasIpRange?: ComputeInstanceFromTemplateNetworkInterfaceAliasIpRange[] | cdktf.IResolvable;
   /**
   * ipv6_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#ipv6_access_config ComputeInstanceFromTemplate#ipv6_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#ipv6_access_config ComputeInstanceFromTemplate#ipv6_access_config}
   */
   readonly ipv6AccessConfig?: ComputeInstanceFromTemplateNetworkInterfaceIpv6AccessConfig[] | cdktf.IResolvable;
 }
@@ -2966,7 +3735,7 @@ export interface ComputeInstanceFromTemplateNetworkPerformanceConfig {
   /**
   * The egress bandwidth tier to enable. Possible values:TIER_1, DEFAULT
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#total_egress_bandwidth_tier ComputeInstanceFromTemplate#total_egress_bandwidth_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#total_egress_bandwidth_tier ComputeInstanceFromTemplate#total_egress_bandwidth_tier}
   */
   readonly totalEgressBandwidthTier: string;
 }
@@ -3049,7 +3818,7 @@ export interface ComputeInstanceFromTemplateParams {
   /**
   * A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT & PATCH) when empty.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#resource_manager_tags ComputeInstanceFromTemplate#resource_manager_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#resource_manager_tags ComputeInstanceFromTemplate#resource_manager_tags}
   */
   readonly resourceManagerTags?: { [key: string]: string };
 }
@@ -3135,13 +3904,13 @@ export interface ComputeInstanceFromTemplateReservationAffinitySpecificReservati
   /**
   * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#key ComputeInstanceFromTemplate#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#key ComputeInstanceFromTemplate#key}
   */
   readonly key: string;
   /**
   * Corresponds to the label values of a reservation resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#values ComputeInstanceFromTemplate#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#values ComputeInstanceFromTemplate#values}
   */
   readonly values: string[];
 }
@@ -3250,13 +4019,13 @@ export interface ComputeInstanceFromTemplateReservationAffinity {
   /**
   * The type of reservation from which this instance can consume resources.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#type ComputeInstanceFromTemplate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#type ComputeInstanceFromTemplate#type}
   */
   readonly type: string;
   /**
   * specific_reservation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#specific_reservation ComputeInstanceFromTemplate#specific_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#specific_reservation ComputeInstanceFromTemplate#specific_reservation}
   */
   readonly specificReservation?: ComputeInstanceFromTemplateReservationAffinitySpecificReservation;
 }
@@ -3371,14 +4140,14 @@ export interface ComputeInstanceFromTemplateSchedulingLocalSsdRecoveryTimeout {
   * with a 0 seconds field and a positive nanos field. Must
   * be from 0 to 999,999,999 inclusive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#nanos ComputeInstanceFromTemplate#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#nanos ComputeInstanceFromTemplate#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second.
   * Must be from 0 to 315,576,000,000 inclusive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#seconds ComputeInstanceFromTemplate#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#seconds ComputeInstanceFromTemplate#seconds}
   */
   readonly seconds: number;
 }
@@ -3493,14 +4262,14 @@ export interface ComputeInstanceFromTemplateSchedulingMaxRunDuration {
   * with a 0 seconds field and a positive nanos field. Must
   * be from 0 to 999,999,999 inclusive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#nanos ComputeInstanceFromTemplate#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#nanos ComputeInstanceFromTemplate#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second.
   * Must be from 0 to 315,576,000,000 inclusive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#seconds ComputeInstanceFromTemplate#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#seconds ComputeInstanceFromTemplate#seconds}
   */
   readonly seconds: number;
 }
@@ -3610,15 +4379,15 @@ export class ComputeInstanceFromTemplateSchedulingMaxRunDurationOutputReference 
 }
 export interface ComputeInstanceFromTemplateSchedulingNodeAffinities {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#key ComputeInstanceFromTemplate#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#key ComputeInstanceFromTemplate#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#operator ComputeInstanceFromTemplate#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#operator ComputeInstanceFromTemplate#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#values ComputeInstanceFromTemplate#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#values ComputeInstanceFromTemplate#values}
   */
   readonly values: string[];
 }
@@ -3785,7 +4554,7 @@ export interface ComputeInstanceFromTemplateSchedulingOnInstanceStopAction {
   /**
   * If true, the contents of any attached Local SSD disks will be discarded.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#discard_local_ssd ComputeInstanceFromTemplate#discard_local_ssd}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#discard_local_ssd ComputeInstanceFromTemplate#discard_local_ssd}
   */
   readonly discardLocalSsd?: boolean | cdktf.IResolvable;
 }
@@ -3871,41 +4640,41 @@ export interface ComputeInstanceFromTemplateScheduling {
   /**
   * Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#automatic_restart ComputeInstanceFromTemplate#automatic_restart}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#automatic_restart ComputeInstanceFromTemplate#automatic_restart}
   */
   readonly automaticRestart?: boolean | cdktf.IResolvable;
   /**
   * Specifies the availability domain, which this instance should be scheduled on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#availability_domain ComputeInstanceFromTemplate#availability_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#availability_domain ComputeInstanceFromTemplate#availability_domain}
   */
   readonly availabilityDomain?: number;
   /**
   * Specifies the action GCE should take when SPOT VM is preempted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#instance_termination_action ComputeInstanceFromTemplate#instance_termination_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#instance_termination_action ComputeInstanceFromTemplate#instance_termination_action}
   */
   readonly instanceTerminationAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#min_node_cpus ComputeInstanceFromTemplate#min_node_cpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#min_node_cpus ComputeInstanceFromTemplate#min_node_cpus}
   */
   readonly minNodeCpus?: number;
   /**
   * Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE,
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#on_host_maintenance ComputeInstanceFromTemplate#on_host_maintenance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#on_host_maintenance ComputeInstanceFromTemplate#on_host_maintenance}
   */
   readonly onHostMaintenance?: string;
   /**
   * Whether the instance is preemptible.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#preemptible ComputeInstanceFromTemplate#preemptible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#preemptible ComputeInstanceFromTemplate#preemptible}
   */
   readonly preemptible?: boolean | cdktf.IResolvable;
   /**
   * Whether the instance is spot. If this is set as SPOT.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#provisioning_model ComputeInstanceFromTemplate#provisioning_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#provisioning_model ComputeInstanceFromTemplate#provisioning_model}
   */
   readonly provisioningModel?: string;
   /**
@@ -3913,31 +4682,31 @@ export interface ComputeInstanceFromTemplateScheduling {
   * in RFC3339 text format. If specified, the instance termination action
   * will be performed at the termination time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#termination_time ComputeInstanceFromTemplate#termination_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#termination_time ComputeInstanceFromTemplate#termination_time}
   */
   readonly terminationTime?: string;
   /**
   * local_ssd_recovery_timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#local_ssd_recovery_timeout ComputeInstanceFromTemplate#local_ssd_recovery_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#local_ssd_recovery_timeout ComputeInstanceFromTemplate#local_ssd_recovery_timeout}
   */
   readonly localSsdRecoveryTimeout?: ComputeInstanceFromTemplateSchedulingLocalSsdRecoveryTimeout;
   /**
   * max_run_duration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#max_run_duration ComputeInstanceFromTemplate#max_run_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#max_run_duration ComputeInstanceFromTemplate#max_run_duration}
   */
   readonly maxRunDuration?: ComputeInstanceFromTemplateSchedulingMaxRunDuration;
   /**
   * node_affinities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#node_affinities ComputeInstanceFromTemplate#node_affinities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#node_affinities ComputeInstanceFromTemplate#node_affinities}
   */
   readonly nodeAffinities?: ComputeInstanceFromTemplateSchedulingNodeAffinities[] | cdktf.IResolvable;
   /**
   * on_instance_stop_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#on_instance_stop_action ComputeInstanceFromTemplate#on_instance_stop_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#on_instance_stop_action ComputeInstanceFromTemplate#on_instance_stop_action}
   */
   readonly onInstanceStopAction?: ComputeInstanceFromTemplateSchedulingOnInstanceStopAction;
 }
@@ -4342,19 +5111,19 @@ export interface ComputeInstanceFromTemplateScratchDisk {
   /**
   * Name with which the attached disk is accessible under /dev/disk/by-id/
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#device_name ComputeInstanceFromTemplate#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#device_name ComputeInstanceFromTemplate#device_name}
   */
   readonly deviceName?: string;
   /**
   * The disk interface used for attaching this disk. One of SCSI or NVME.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#interface ComputeInstanceFromTemplate#interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#interface ComputeInstanceFromTemplate#interface}
   */
   readonly interface: string;
   /**
   * The size of the disk in gigabytes. One of 375 or 3000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#size ComputeInstanceFromTemplate#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#size ComputeInstanceFromTemplate#size}
   */
   readonly size?: number;
 }
@@ -4527,13 +5296,13 @@ export interface ComputeInstanceFromTemplateServiceAccount {
   /**
   * The service account e-mail address.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#email ComputeInstanceFromTemplate#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#email ComputeInstanceFromTemplate#email}
   */
   readonly email?: string;
   /**
   * A list of service scopes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#scopes ComputeInstanceFromTemplate#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#scopes ComputeInstanceFromTemplate#scopes}
   */
   readonly scopes: string[];
 }
@@ -4645,19 +5414,19 @@ export interface ComputeInstanceFromTemplateShieldedInstanceConfig {
   /**
   * Whether integrity monitoring is enabled for the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#enable_integrity_monitoring ComputeInstanceFromTemplate#enable_integrity_monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#enable_integrity_monitoring ComputeInstanceFromTemplate#enable_integrity_monitoring}
   */
   readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Whether secure boot is enabled for the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#enable_secure_boot ComputeInstanceFromTemplate#enable_secure_boot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#enable_secure_boot ComputeInstanceFromTemplate#enable_secure_boot}
   */
   readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Whether the instance uses vTPM.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#enable_vtpm ComputeInstanceFromTemplate#enable_vtpm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#enable_vtpm ComputeInstanceFromTemplate#enable_vtpm}
   */
   readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
@@ -4799,15 +5568,15 @@ export class ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference ex
 }
 export interface ComputeInstanceFromTemplateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#create ComputeInstanceFromTemplate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#create ComputeInstanceFromTemplate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#delete ComputeInstanceFromTemplate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#delete ComputeInstanceFromTemplate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#update ComputeInstanceFromTemplate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#update ComputeInstanceFromTemplate#update}
   */
   readonly update?: string;
 }
@@ -4959,7 +5728,7 @@ export class ComputeInstanceFromTemplateTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template google_compute_instance_from_template}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template google_compute_instance_from_template}
 */
 export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
 
@@ -4975,7 +5744,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeInstanceFromTemplate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeInstanceFromTemplate to import
-  * @param importFromId The id of the existing ComputeInstanceFromTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeInstanceFromTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeInstanceFromTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -4987,7 +5756,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/compute_instance_from_template google_compute_instance_from_template} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/compute_instance_from_template google_compute_instance_from_template} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4998,7 +5767,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_from_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -5034,6 +5803,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
     this._bootDisk.internalValue = config.bootDisk;
     this._confidentialInstanceConfig.internalValue = config.confidentialInstanceConfig;
     this._guestAccelerator.internalValue = config.guestAccelerator;
+    this._instanceEncryptionKey.internalValue = config.instanceEncryptionKey;
     this._networkInterface.internalValue = config.networkInterface;
     this._networkPerformanceConfig.internalValue = config.networkPerformanceConfig;
     this._params.internalValue = config.params;
@@ -5495,6 +6265,22 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
     return this._guestAccelerator.internalValue;
   }
 
+  // instance_encryption_key - computed: false, optional: true, required: false
+  private _instanceEncryptionKey = new ComputeInstanceFromTemplateInstanceEncryptionKeyOutputReference(this, "instance_encryption_key");
+  public get instanceEncryptionKey() {
+    return this._instanceEncryptionKey;
+  }
+  public putInstanceEncryptionKey(value: ComputeInstanceFromTemplateInstanceEncryptionKey) {
+    this._instanceEncryptionKey.internalValue = value;
+  }
+  public resetInstanceEncryptionKey() {
+    this._instanceEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceEncryptionKeyInput() {
+    return this._instanceEncryptionKey.internalValue;
+  }
+
   // network_interface - computed: false, optional: true, required: false
   private _networkInterface = new ComputeInstanceFromTemplateNetworkInterfaceList(this, "network_interface", false);
   public get networkInterface() {
@@ -5670,6 +6456,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       boot_disk: computeInstanceFromTemplateBootDiskToTerraform(this._bootDisk.internalValue),
       confidential_instance_config: computeInstanceFromTemplateConfidentialInstanceConfigToTerraform(this._confidentialInstanceConfig.internalValue),
       guest_accelerator: cdktf.listMapper(computeInstanceFromTemplateGuestAcceleratorToTerraform, true)(this._guestAccelerator.internalValue),
+      instance_encryption_key: computeInstanceFromTemplateInstanceEncryptionKeyToTerraform(this._instanceEncryptionKey.internalValue),
       network_interface: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceToTerraform, true)(this._networkInterface.internalValue),
       network_performance_config: computeInstanceFromTemplateNetworkPerformanceConfigToTerraform(this._networkPerformanceConfig.internalValue),
       params: computeInstanceFromTemplateParamsToTerraform(this._params.internalValue),
@@ -5833,6 +6620,12 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "ComputeInstanceFromTemplateGuestAcceleratorList",
+      },
+      instance_encryption_key: {
+        value: computeInstanceFromTemplateInstanceEncryptionKeyToHclTerraform(this._instanceEncryptionKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeInstanceFromTemplateInstanceEncryptionKeyList",
       },
       network_interface: {
         value: cdktf.listMapperHcl(computeInstanceFromTemplateNetworkInterfaceToHclTerraform, true)(this._networkInterface.internalValue),

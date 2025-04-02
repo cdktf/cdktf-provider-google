@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/storage_control_project_intelligence_config
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/storage_control_project_intelligence_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleStorageControlProjectIntelligenceConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/storage_control_project_intelligence_config#id DataGoogleStorageControlProjectIntelligenceConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/storage_control_project_intelligence_config#id DataGoogleStorageControlProjectIntelligenceConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,7 +22,7 @@ export interface DataGoogleStorageControlProjectIntelligenceConfigConfig extends
   /**
   * Identifier of the GCP project. For GCP project, this field can be project name or project number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/storage_control_project_intelligence_config#name DataGoogleStorageControlProjectIntelligenceConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/storage_control_project_intelligence_config#name DataGoogleStorageControlProjectIntelligenceConfig#name}
   */
   readonly name: string;
 }
@@ -502,7 +502,7 @@ export class DataGoogleStorageControlProjectIntelligenceConfigFilterList extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/storage_control_project_intelligence_config google_storage_control_project_intelligence_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/storage_control_project_intelligence_config google_storage_control_project_intelligence_config}
 */
 export class DataGoogleStorageControlProjectIntelligenceConfig extends cdktf.TerraformDataSource {
 
@@ -518,7 +518,7 @@ export class DataGoogleStorageControlProjectIntelligenceConfig extends cdktf.Ter
   * Generates CDKTF code for importing a DataGoogleStorageControlProjectIntelligenceConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleStorageControlProjectIntelligenceConfig to import
-  * @param importFromId The id of the existing DataGoogleStorageControlProjectIntelligenceConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/storage_control_project_intelligence_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleStorageControlProjectIntelligenceConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/storage_control_project_intelligence_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleStorageControlProjectIntelligenceConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -530,7 +530,7 @@ export class DataGoogleStorageControlProjectIntelligenceConfig extends cdktf.Ter
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/storage_control_project_intelligence_config google_storage_control_project_intelligence_config} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/storage_control_project_intelligence_config google_storage_control_project_intelligence_config} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -541,7 +541,7 @@ export class DataGoogleStorageControlProjectIntelligenceConfig extends cdktf.Ter
       terraformResourceType: 'google_storage_control_project_intelligence_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

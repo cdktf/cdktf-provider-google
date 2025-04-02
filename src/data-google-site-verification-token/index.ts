@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSiteVerificationTokenConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token#id DataGoogleSiteVerificationToken#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token#id DataGoogleSiteVerificationToken#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,32 +23,32 @@ export interface DataGoogleSiteVerificationTokenConfig extends cdktf.TerraformMe
   * The site identifier. If the type is set to SITE, the identifier is a URL. If the type is
   * set to INET_DOMAIN, the identifier is a domain name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token#identifier DataGoogleSiteVerificationToken#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token#identifier DataGoogleSiteVerificationToken#identifier}
   */
   readonly identifier: string;
   /**
   * The type of resource to be verified, either a domain or a web site. Possible values: ["INET_DOMAIN", "SITE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token#type DataGoogleSiteVerificationToken#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token#type DataGoogleSiteVerificationToken#type}
   */
   readonly type: string;
   /**
   * The verification method for the Site Verification system to use to verify
   * this site or domain. Possible values: ["ANALYTICS", "DNS_CNAME", "DNS_TXT", "FILE", "META", "TAG_MANAGER"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token#verification_method DataGoogleSiteVerificationToken#verification_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token#verification_method DataGoogleSiteVerificationToken#verification_method}
   */
   readonly verificationMethod: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token#timeouts DataGoogleSiteVerificationToken#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token#timeouts DataGoogleSiteVerificationToken#timeouts}
   */
   readonly timeouts?: DataGoogleSiteVerificationTokenTimeouts;
 }
 export interface DataGoogleSiteVerificationTokenTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token#read DataGoogleSiteVerificationToken#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token#read DataGoogleSiteVerificationToken#read}
   */
   readonly read?: string;
 }
@@ -142,7 +142,7 @@ export class DataGoogleSiteVerificationTokenTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token google_site_verification_token}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token google_site_verification_token}
 */
 export class DataGoogleSiteVerificationToken extends cdktf.TerraformDataSource {
 
@@ -158,7 +158,7 @@ export class DataGoogleSiteVerificationToken extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleSiteVerificationToken resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleSiteVerificationToken to import
-  * @param importFromId The id of the existing DataGoogleSiteVerificationToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleSiteVerificationToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleSiteVerificationToken to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -170,7 +170,7 @@ export class DataGoogleSiteVerificationToken extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/site_verification_token google_site_verification_token} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/site_verification_token google_site_verification_token} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -181,7 +181,7 @@ export class DataGoogleSiteVerificationToken extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_site_verification_token',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

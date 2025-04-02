@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile
+// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +15,23 @@ export interface DatastreamConnectionProfileConfig extends cdktf.TerraformMetaAr
   /**
   * The connection profile identifier.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#connection_profile_id DatastreamConnectionProfile#connection_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#connection_profile_id DatastreamConnectionProfile#connection_profile_id}
   */
   readonly connectionProfileId: string;
   /**
   * Create the connection profile without validating it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#create_without_validation DatastreamConnectionProfile#create_without_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#create_without_validation DatastreamConnectionProfile#create_without_validation}
   */
   readonly createWithoutValidation?: boolean | cdktf.IResolvable;
   /**
   * Display name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#display_name DatastreamConnectionProfile#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#display_name DatastreamConnectionProfile#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#id DatastreamConnectionProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#id DatastreamConnectionProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -43,71 +43,71 @@ export interface DatastreamConnectionProfileConfig extends cdktf.TerraformMetaAr
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#labels DatastreamConnectionProfile#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#labels DatastreamConnectionProfile#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the location this connection profile is located in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#location DatastreamConnectionProfile#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#location DatastreamConnectionProfile#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#project DatastreamConnectionProfile#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#project DatastreamConnectionProfile#project}
   */
   readonly project?: string;
   /**
   * bigquery_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#bigquery_profile DatastreamConnectionProfile#bigquery_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#bigquery_profile DatastreamConnectionProfile#bigquery_profile}
   */
   readonly bigqueryProfile?: DatastreamConnectionProfileBigqueryProfile;
   /**
   * forward_ssh_connectivity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#forward_ssh_connectivity DatastreamConnectionProfile#forward_ssh_connectivity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#forward_ssh_connectivity DatastreamConnectionProfile#forward_ssh_connectivity}
   */
   readonly forwardSshConnectivity?: DatastreamConnectionProfileForwardSshConnectivity;
   /**
   * gcs_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#gcs_profile DatastreamConnectionProfile#gcs_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#gcs_profile DatastreamConnectionProfile#gcs_profile}
   */
   readonly gcsProfile?: DatastreamConnectionProfileGcsProfile;
   /**
   * mysql_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#mysql_profile DatastreamConnectionProfile#mysql_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#mysql_profile DatastreamConnectionProfile#mysql_profile}
   */
   readonly mysqlProfile?: DatastreamConnectionProfileMysqlProfile;
   /**
   * oracle_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#oracle_profile DatastreamConnectionProfile#oracle_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#oracle_profile DatastreamConnectionProfile#oracle_profile}
   */
   readonly oracleProfile?: DatastreamConnectionProfileOracleProfile;
   /**
   * postgresql_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#postgresql_profile DatastreamConnectionProfile#postgresql_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#postgresql_profile DatastreamConnectionProfile#postgresql_profile}
   */
   readonly postgresqlProfile?: DatastreamConnectionProfilePostgresqlProfile;
   /**
   * private_connectivity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#private_connectivity DatastreamConnectionProfile#private_connectivity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#private_connectivity DatastreamConnectionProfile#private_connectivity}
   */
   readonly privateConnectivity?: DatastreamConnectionProfilePrivateConnectivity;
   /**
   * sql_server_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#sql_server_profile DatastreamConnectionProfile#sql_server_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#sql_server_profile DatastreamConnectionProfile#sql_server_profile}
   */
   readonly sqlServerProfile?: DatastreamConnectionProfileSqlServerProfile;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#timeouts DatastreamConnectionProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#timeouts DatastreamConnectionProfile#timeouts}
   */
   readonly timeouts?: DatastreamConnectionProfileTimeouts;
 }
@@ -164,31 +164,31 @@ export interface DatastreamConnectionProfileForwardSshConnectivity {
   /**
   * Hostname for the SSH tunnel.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
   */
   readonly hostname: string;
   /**
   * SSH password.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
   */
   readonly password?: string;
   /**
   * Port for the SSH tunnel.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
   */
   readonly port?: number;
   /**
   * SSH private key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#private_key DatastreamConnectionProfile#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#private_key DatastreamConnectionProfile#private_key}
   */
   readonly privateKey?: string;
   /**
   * Username for the SSH tunnel.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
   */
   readonly username: string;
 }
@@ -384,13 +384,13 @@ export interface DatastreamConnectionProfileGcsProfile {
   /**
   * The Cloud Storage bucket name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#bucket DatastreamConnectionProfile#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#bucket DatastreamConnectionProfile#bucket}
   */
   readonly bucket: string;
   /**
   * The root path inside the Cloud Storage bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#root_path DatastreamConnectionProfile#root_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#root_path DatastreamConnectionProfile#root_path}
   */
   readonly rootPath?: string;
 }
@@ -503,7 +503,7 @@ export interface DatastreamConnectionProfileMysqlProfileSslConfig {
   * PEM-encoded certificate of the CA that signed the source database
   * server's certificate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#ca_certificate DatastreamConnectionProfile#ca_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#ca_certificate DatastreamConnectionProfile#ca_certificate}
   */
   readonly caCertificate?: string;
   /**
@@ -512,7 +512,7 @@ export interface DatastreamConnectionProfileMysqlProfileSslConfig {
   * is used then the 'clientKey' and the 'caCertificate' fields are
   * mandatory.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#client_certificate DatastreamConnectionProfile#client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#client_certificate DatastreamConnectionProfile#client_certificate}
   */
   readonly clientCertificate?: string;
   /**
@@ -520,7 +520,7 @@ export interface DatastreamConnectionProfileMysqlProfileSslConfig {
   * If this field is used then the 'client_certificate' and the
   * 'ca_certificate' fields are mandatory.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#client_key DatastreamConnectionProfile#client_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#client_key DatastreamConnectionProfile#client_key}
   */
   readonly clientKey?: string;
 }
@@ -679,31 +679,37 @@ export interface DatastreamConnectionProfileMysqlProfile {
   /**
   * Hostname for the MySQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
   */
   readonly hostname: string;
   /**
   * Password for the MySQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
   */
-  readonly password: string;
+  readonly password?: string;
   /**
   * Port for the MySQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
   */
   readonly port?: number;
   /**
+  * A reference to a Secret Manager resource name storing the user's password.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#secret_manager_stored_password DatastreamConnectionProfile#secret_manager_stored_password}
+  */
+  readonly secretManagerStoredPassword?: string;
+  /**
   * Username for the MySQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
   */
   readonly username: string;
   /**
   * ssl_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#ssl_config DatastreamConnectionProfile#ssl_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#ssl_config DatastreamConnectionProfile#ssl_config}
   */
   readonly sslConfig?: DatastreamConnectionProfileMysqlProfileSslConfig;
 }
@@ -717,6 +723,7 @@ export function datastreamConnectionProfileMysqlProfileToTerraform(struct?: Data
     hostname: cdktf.stringToTerraform(struct!.hostname),
     password: cdktf.stringToTerraform(struct!.password),
     port: cdktf.numberToTerraform(struct!.port),
+    secret_manager_stored_password: cdktf.stringToTerraform(struct!.secretManagerStoredPassword),
     username: cdktf.stringToTerraform(struct!.username),
     ssl_config: datastreamConnectionProfileMysqlProfileSslConfigToTerraform(struct!.sslConfig),
   }
@@ -746,6 +753,12 @@ export function datastreamConnectionProfileMysqlProfileToHclTerraform(struct?: D
       isBlock: false,
       type: "simple",
       storageClassType: "number",
+    },
+    secret_manager_stored_password: {
+      value: cdktf.stringToHclTerraform(struct!.secretManagerStoredPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
     },
     username: {
       value: cdktf.stringToHclTerraform(struct!.username),
@@ -791,6 +804,10 @@ export class DatastreamConnectionProfileMysqlProfileOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
+    if (this._secretManagerStoredPassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretManagerStoredPassword = this._secretManagerStoredPassword;
+    }
     if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
@@ -808,6 +825,7 @@ export class DatastreamConnectionProfileMysqlProfileOutputReference extends cdkt
       this._hostname = undefined;
       this._password = undefined;
       this._port = undefined;
+      this._secretManagerStoredPassword = undefined;
       this._username = undefined;
       this._sslConfig.internalValue = undefined;
     }
@@ -816,6 +834,7 @@ export class DatastreamConnectionProfileMysqlProfileOutputReference extends cdkt
       this._hostname = value.hostname;
       this._password = value.password;
       this._port = value.port;
+      this._secretManagerStoredPassword = value.secretManagerStoredPassword;
       this._username = value.username;
       this._sslConfig.internalValue = value.sslConfig;
     }
@@ -834,13 +853,16 @@ export class DatastreamConnectionProfileMysqlProfileOutputReference extends cdkt
     return this._hostname;
   }
 
-  // password - computed: false, optional: false, required: true
+  // password - computed: false, optional: true, required: false
   private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
@@ -861,6 +883,22 @@ export class DatastreamConnectionProfileMysqlProfileOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get portInput() {
     return this._port;
+  }
+
+  // secret_manager_stored_password - computed: false, optional: true, required: false
+  private _secretManagerStoredPassword?: string; 
+  public get secretManagerStoredPassword() {
+    return this.getStringAttribute('secret_manager_stored_password');
+  }
+  public set secretManagerStoredPassword(value: string) {
+    this._secretManagerStoredPassword = value;
+  }
+  public resetSecretManagerStoredPassword() {
+    this._secretManagerStoredPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretManagerStoredPasswordInput() {
+    return this._secretManagerStoredPassword;
   }
 
   // username - computed: false, optional: false, required: true
@@ -896,37 +934,43 @@ export interface DatastreamConnectionProfileOracleProfile {
   /**
   * Connection string attributes
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#connection_attributes DatastreamConnectionProfile#connection_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#connection_attributes DatastreamConnectionProfile#connection_attributes}
   */
   readonly connectionAttributes?: { [key: string]: string };
   /**
   * Database for the Oracle connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#database_service DatastreamConnectionProfile#database_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#database_service DatastreamConnectionProfile#database_service}
   */
   readonly databaseService: string;
   /**
   * Hostname for the Oracle connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
   */
   readonly hostname: string;
   /**
   * Password for the Oracle connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
   */
-  readonly password: string;
+  readonly password?: string;
   /**
   * Port for the Oracle connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
   */
   readonly port?: number;
   /**
+  * A reference to a Secret Manager resource name storing the user's password.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#secret_manager_stored_password DatastreamConnectionProfile#secret_manager_stored_password}
+  */
+  readonly secretManagerStoredPassword?: string;
+  /**
   * Username for the Oracle connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
   */
   readonly username: string;
 }
@@ -942,6 +986,7 @@ export function datastreamConnectionProfileOracleProfileToTerraform(struct?: Dat
     hostname: cdktf.stringToTerraform(struct!.hostname),
     password: cdktf.stringToTerraform(struct!.password),
     port: cdktf.numberToTerraform(struct!.port),
+    secret_manager_stored_password: cdktf.stringToTerraform(struct!.secretManagerStoredPassword),
     username: cdktf.stringToTerraform(struct!.username),
   }
 }
@@ -982,6 +1027,12 @@ export function datastreamConnectionProfileOracleProfileToHclTerraform(struct?: 
       isBlock: false,
       type: "simple",
       storageClassType: "number",
+    },
+    secret_manager_stored_password: {
+      value: cdktf.stringToHclTerraform(struct!.secretManagerStoredPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
     },
     username: {
       value: cdktf.stringToHclTerraform(struct!.username),
@@ -1029,6 +1080,10 @@ export class DatastreamConnectionProfileOracleProfileOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
+    if (this._secretManagerStoredPassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretManagerStoredPassword = this._secretManagerStoredPassword;
+    }
     if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
@@ -1044,6 +1099,7 @@ export class DatastreamConnectionProfileOracleProfileOutputReference extends cdk
       this._hostname = undefined;
       this._password = undefined;
       this._port = undefined;
+      this._secretManagerStoredPassword = undefined;
       this._username = undefined;
     }
     else {
@@ -1053,6 +1109,7 @@ export class DatastreamConnectionProfileOracleProfileOutputReference extends cdk
       this._hostname = value.hostname;
       this._password = value.password;
       this._port = value.port;
+      this._secretManagerStoredPassword = value.secretManagerStoredPassword;
       this._username = value.username;
     }
   }
@@ -1099,13 +1156,16 @@ export class DatastreamConnectionProfileOracleProfileOutputReference extends cdk
     return this._hostname;
   }
 
-  // password - computed: false, optional: false, required: true
+  // password - computed: false, optional: true, required: false
   private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
@@ -1128,6 +1188,22 @@ export class DatastreamConnectionProfileOracleProfileOutputReference extends cdk
     return this._port;
   }
 
+  // secret_manager_stored_password - computed: false, optional: true, required: false
+  private _secretManagerStoredPassword?: string; 
+  public get secretManagerStoredPassword() {
+    return this.getStringAttribute('secret_manager_stored_password');
+  }
+  public set secretManagerStoredPassword(value: string) {
+    this._secretManagerStoredPassword = value;
+  }
+  public resetSecretManagerStoredPassword() {
+    this._secretManagerStoredPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretManagerStoredPasswordInput() {
+    return this._secretManagerStoredPassword;
+  }
+
   // username - computed: false, optional: false, required: true
   private _username?: string; 
   public get username() {
@@ -1145,31 +1221,37 @@ export interface DatastreamConnectionProfilePostgresqlProfile {
   /**
   * Database for the PostgreSQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#database DatastreamConnectionProfile#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#database DatastreamConnectionProfile#database}
   */
   readonly database: string;
   /**
   * Hostname for the PostgreSQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
   */
   readonly hostname: string;
   /**
   * Password for the PostgreSQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
   */
-  readonly password: string;
+  readonly password?: string;
   /**
   * Port for the PostgreSQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
   */
   readonly port?: number;
   /**
+  * A reference to a Secret Manager resource name storing the user's password.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#secret_manager_stored_password DatastreamConnectionProfile#secret_manager_stored_password}
+  */
+  readonly secretManagerStoredPassword?: string;
+  /**
   * Username for the PostgreSQL connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
   */
   readonly username: string;
 }
@@ -1184,6 +1266,7 @@ export function datastreamConnectionProfilePostgresqlProfileToTerraform(struct?:
     hostname: cdktf.stringToTerraform(struct!.hostname),
     password: cdktf.stringToTerraform(struct!.password),
     port: cdktf.numberToTerraform(struct!.port),
+    secret_manager_stored_password: cdktf.stringToTerraform(struct!.secretManagerStoredPassword),
     username: cdktf.stringToTerraform(struct!.username),
   }
 }
@@ -1218,6 +1301,12 @@ export function datastreamConnectionProfilePostgresqlProfileToHclTerraform(struc
       isBlock: false,
       type: "simple",
       storageClassType: "number",
+    },
+    secret_manager_stored_password: {
+      value: cdktf.stringToHclTerraform(struct!.secretManagerStoredPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
     },
     username: {
       value: cdktf.stringToHclTerraform(struct!.username),
@@ -1261,6 +1350,10 @@ export class DatastreamConnectionProfilePostgresqlProfileOutputReference extends
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
+    if (this._secretManagerStoredPassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretManagerStoredPassword = this._secretManagerStoredPassword;
+    }
     if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
@@ -1275,6 +1368,7 @@ export class DatastreamConnectionProfilePostgresqlProfileOutputReference extends
       this._hostname = undefined;
       this._password = undefined;
       this._port = undefined;
+      this._secretManagerStoredPassword = undefined;
       this._username = undefined;
     }
     else {
@@ -1283,6 +1377,7 @@ export class DatastreamConnectionProfilePostgresqlProfileOutputReference extends
       this._hostname = value.hostname;
       this._password = value.password;
       this._port = value.port;
+      this._secretManagerStoredPassword = value.secretManagerStoredPassword;
       this._username = value.username;
     }
   }
@@ -1313,13 +1408,16 @@ export class DatastreamConnectionProfilePostgresqlProfileOutputReference extends
     return this._hostname;
   }
 
-  // password - computed: false, optional: false, required: true
+  // password - computed: false, optional: true, required: false
   private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
@@ -1342,6 +1440,22 @@ export class DatastreamConnectionProfilePostgresqlProfileOutputReference extends
     return this._port;
   }
 
+  // secret_manager_stored_password - computed: false, optional: true, required: false
+  private _secretManagerStoredPassword?: string; 
+  public get secretManagerStoredPassword() {
+    return this.getStringAttribute('secret_manager_stored_password');
+  }
+  public set secretManagerStoredPassword(value: string) {
+    this._secretManagerStoredPassword = value;
+  }
+  public resetSecretManagerStoredPassword() {
+    this._secretManagerStoredPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretManagerStoredPasswordInput() {
+    return this._secretManagerStoredPassword;
+  }
+
   // username - computed: false, optional: false, required: true
   private _username?: string; 
   public get username() {
@@ -1359,7 +1473,7 @@ export interface DatastreamConnectionProfilePrivateConnectivity {
   /**
   * A reference to a private connection resource. Format: 'projects/{project}/locations/{location}/privateConnections/{name}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#private_connection DatastreamConnectionProfile#private_connection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#private_connection DatastreamConnectionProfile#private_connection}
   */
   readonly privateConnection: string;
 }
@@ -1442,31 +1556,37 @@ export interface DatastreamConnectionProfileSqlServerProfile {
   /**
   * Database for the SQL Server connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#database DatastreamConnectionProfile#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#database DatastreamConnectionProfile#database}
   */
   readonly database: string;
   /**
   * Hostname for the SQL Server connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#hostname DatastreamConnectionProfile#hostname}
   */
   readonly hostname: string;
   /**
   * Password for the SQL Server connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#password DatastreamConnectionProfile#password}
   */
-  readonly password: string;
+  readonly password?: string;
   /**
   * Port for the SQL Server connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#port DatastreamConnectionProfile#port}
   */
   readonly port?: number;
   /**
+  * A reference to a Secret Manager resource name storing the user's password.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#secret_manager_stored_password DatastreamConnectionProfile#secret_manager_stored_password}
+  */
+  readonly secretManagerStoredPassword?: string;
+  /**
   * Username for the SQL Server connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#username DatastreamConnectionProfile#username}
   */
   readonly username: string;
 }
@@ -1481,6 +1601,7 @@ export function datastreamConnectionProfileSqlServerProfileToTerraform(struct?: 
     hostname: cdktf.stringToTerraform(struct!.hostname),
     password: cdktf.stringToTerraform(struct!.password),
     port: cdktf.numberToTerraform(struct!.port),
+    secret_manager_stored_password: cdktf.stringToTerraform(struct!.secretManagerStoredPassword),
     username: cdktf.stringToTerraform(struct!.username),
   }
 }
@@ -1515,6 +1636,12 @@ export function datastreamConnectionProfileSqlServerProfileToHclTerraform(struct
       isBlock: false,
       type: "simple",
       storageClassType: "number",
+    },
+    secret_manager_stored_password: {
+      value: cdktf.stringToHclTerraform(struct!.secretManagerStoredPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
     },
     username: {
       value: cdktf.stringToHclTerraform(struct!.username),
@@ -1558,6 +1685,10 @@ export class DatastreamConnectionProfileSqlServerProfileOutputReference extends 
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
+    if (this._secretManagerStoredPassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretManagerStoredPassword = this._secretManagerStoredPassword;
+    }
     if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
@@ -1572,6 +1703,7 @@ export class DatastreamConnectionProfileSqlServerProfileOutputReference extends 
       this._hostname = undefined;
       this._password = undefined;
       this._port = undefined;
+      this._secretManagerStoredPassword = undefined;
       this._username = undefined;
     }
     else {
@@ -1580,6 +1712,7 @@ export class DatastreamConnectionProfileSqlServerProfileOutputReference extends 
       this._hostname = value.hostname;
       this._password = value.password;
       this._port = value.port;
+      this._secretManagerStoredPassword = value.secretManagerStoredPassword;
       this._username = value.username;
     }
   }
@@ -1610,13 +1743,16 @@ export class DatastreamConnectionProfileSqlServerProfileOutputReference extends 
     return this._hostname;
   }
 
-  // password - computed: false, optional: false, required: true
+  // password - computed: false, optional: true, required: false
   private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
@@ -1639,6 +1775,22 @@ export class DatastreamConnectionProfileSqlServerProfileOutputReference extends 
     return this._port;
   }
 
+  // secret_manager_stored_password - computed: false, optional: true, required: false
+  private _secretManagerStoredPassword?: string; 
+  public get secretManagerStoredPassword() {
+    return this.getStringAttribute('secret_manager_stored_password');
+  }
+  public set secretManagerStoredPassword(value: string) {
+    this._secretManagerStoredPassword = value;
+  }
+  public resetSecretManagerStoredPassword() {
+    this._secretManagerStoredPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretManagerStoredPasswordInput() {
+    return this._secretManagerStoredPassword;
+  }
+
   // username - computed: false, optional: false, required: true
   private _username?: string; 
   public get username() {
@@ -1654,15 +1806,15 @@ export class DatastreamConnectionProfileSqlServerProfileOutputReference extends 
 }
 export interface DatastreamConnectionProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#create DatastreamConnectionProfile#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#create DatastreamConnectionProfile#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#delete DatastreamConnectionProfile#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#delete DatastreamConnectionProfile#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#update DatastreamConnectionProfile#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#update DatastreamConnectionProfile#update}
   */
   readonly update?: string;
 }
@@ -1814,7 +1966,7 @@ export class DatastreamConnectionProfileTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile google_datastream_connection_profile}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile google_datastream_connection_profile}
 */
 export class DatastreamConnectionProfile extends cdktf.TerraformResource {
 
@@ -1830,7 +1982,7 @@ export class DatastreamConnectionProfile extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DatastreamConnectionProfile resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DatastreamConnectionProfile to import
-  * @param importFromId The id of the existing DatastreamConnectionProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DatastreamConnectionProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DatastreamConnectionProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1842,7 +1994,7 @@ export class DatastreamConnectionProfile extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/resources/datastream_connection_profile google_datastream_connection_profile} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/datastream_connection_profile google_datastream_connection_profile} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1853,7 +2005,7 @@ export class DatastreamConnectionProfile extends cdktf.TerraformResource {
       terraformResourceType: 'google_datastream_connection_profile',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.27.0',
+        providerVersion: '6.28.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

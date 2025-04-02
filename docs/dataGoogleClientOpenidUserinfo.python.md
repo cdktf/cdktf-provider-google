@@ -4,7 +4,7 @@
 
 ### DataGoogleClientOpenidUserinfo <a name="DataGoogleClientOpenidUserinfo" id="@cdktf/provider-google.dataGoogleClientOpenidUserinfo.DataGoogleClientOpenidUserinfo"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/client_openid_userinfo google_client_openid_userinfo}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/client_openid_userinfo google_client_openid_userinfo}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClientOpenidUserinfo.DataGoogleClientOpenidUserinfo.Initializer"></a>
 
@@ -453,7 +453,7 @@ The construct id used in the generated config for the DataGoogleClientOpenidUser
 
 The id of the existing DataGoogleClientOpenidUserinfo that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.27.0/docs/data-sources/client_openid_userinfo#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/data-sources/client_openid_userinfo#import import section} in the documentation of this resource for the id to use
 
 ---
 
