@@ -32,6 +32,7 @@ Object.defineProperty(exports, 'alloydbUser', { get: function () { return requir
 Object.defineProperty(exports, 'apigeeAddonsConfig', { get: function () { return require('./apigee-addons-config'); } });
 Object.defineProperty(exports, 'apigeeApi', { get: function () { return require('./apigee-api'); } });
 Object.defineProperty(exports, 'apigeeAppGroup', { get: function () { return require('./apigee-app-group'); } });
+Object.defineProperty(exports, 'apigeeControlPlaneAccess', { get: function () { return require('./apigee-control-plane-access'); } });
 Object.defineProperty(exports, 'apigeeDeveloper', { get: function () { return require('./apigee-developer'); } });
 Object.defineProperty(exports, 'apigeeDnsZone', { get: function () { return require('./apigee-dns-zone'); } });
 Object.defineProperty(exports, 'apigeeEndpointAttachment', { get: function () { return require('./apigee-endpoint-attachment'); } });
@@ -207,6 +208,7 @@ Object.defineProperty(exports, 'clouddeployDeliveryPipeline', { get: function ()
 Object.defineProperty(exports, 'clouddeployDeliveryPipelineIamBinding', { get: function () { return require('./clouddeploy-delivery-pipeline-iam-binding'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipelineIamMember', { get: function () { return require('./clouddeploy-delivery-pipeline-iam-member'); } });
 Object.defineProperty(exports, 'clouddeployDeliveryPipelineIamPolicy', { get: function () { return require('./clouddeploy-delivery-pipeline-iam-policy'); } });
+Object.defineProperty(exports, 'clouddeployDeployPolicy', { get: function () { return require('./clouddeploy-deploy-policy'); } });
 Object.defineProperty(exports, 'clouddeployTarget', { get: function () { return require('./clouddeploy-target'); } });
 Object.defineProperty(exports, 'clouddeployTargetIamBinding', { get: function () { return require('./clouddeploy-target-iam-binding'); } });
 Object.defineProperty(exports, 'clouddeployTargetIamMember', { get: function () { return require('./clouddeploy-target-iam-member'); } });
@@ -556,6 +558,8 @@ Object.defineProperty(exports, 'folderIamMember', { get: function () { return re
 Object.defineProperty(exports, 'folderIamPolicy', { get: function () { return require('./folder-iam-policy'); } });
 Object.defineProperty(exports, 'folderOrganizationPolicy', { get: function () { return require('./folder-organization-policy'); } });
 Object.defineProperty(exports, 'geminiCodeRepositoryIndex', { get: function () { return require('./gemini-code-repository-index'); } });
+Object.defineProperty(exports, 'geminiCodeToolsSetting', { get: function () { return require('./gemini-code-tools-setting'); } });
+Object.defineProperty(exports, 'geminiCodeToolsSettingBinding', { get: function () { return require('./gemini-code-tools-setting-binding'); } });
 Object.defineProperty(exports, 'geminiDataSharingWithGoogleSetting', { get: function () { return require('./gemini-data-sharing-with-google-setting'); } });
 Object.defineProperty(exports, 'geminiDataSharingWithGoogleSettingBinding', { get: function () { return require('./gemini-data-sharing-with-google-setting-binding'); } });
 Object.defineProperty(exports, 'geminiGeminiGcpEnablementSetting', { get: function () { return require('./gemini-gemini-gcp-enablement-setting'); } });

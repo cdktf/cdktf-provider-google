@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration
+// https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,7 +17,7 @@ export interface ApihubHostProjectRegistrationConfig extends cdktf.TerraformMeta
   * As input, project name with either project id or number are accepted.
   * As output, this field will contain project number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#gcp_project ApihubHostProjectRegistration#gcp_project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#gcp_project ApihubHostProjectRegistration#gcp_project}
   */
   readonly gcpProject: string;
   /**
@@ -26,11 +26,11 @@ export interface ApihubHostProjectRegistrationConfig extends cdktf.TerraformMeta
   * must be the same as the Google cloud project specified in the
   * host_project_registration.gcp_project field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#host_project_registration_id ApihubHostProjectRegistration#host_project_registration_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#host_project_registration_id ApihubHostProjectRegistration#host_project_registration_id}
   */
   readonly hostProjectRegistrationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#id ApihubHostProjectRegistration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#id ApihubHostProjectRegistration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -39,27 +39,27 @@ export interface ApihubHostProjectRegistrationConfig extends cdktf.TerraformMeta
   /**
   * Part of 'parent'. See documentation of 'projectsId'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#location ApihubHostProjectRegistration#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#location ApihubHostProjectRegistration#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#project ApihubHostProjectRegistration#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#project ApihubHostProjectRegistration#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#timeouts ApihubHostProjectRegistration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#timeouts ApihubHostProjectRegistration#timeouts}
   */
   readonly timeouts?: ApihubHostProjectRegistrationTimeouts;
 }
 export interface ApihubHostProjectRegistrationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#create ApihubHostProjectRegistration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#create ApihubHostProjectRegistration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#delete ApihubHostProjectRegistration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#delete ApihubHostProjectRegistration#delete}
   */
   readonly delete?: string;
 }
@@ -182,7 +182,7 @@ export class ApihubHostProjectRegistrationTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration google_apihub_host_project_registration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration google_apihub_host_project_registration}
 */
 export class ApihubHostProjectRegistration extends cdktf.TerraformResource {
 
@@ -198,7 +198,7 @@ export class ApihubHostProjectRegistration extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApihubHostProjectRegistration resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApihubHostProjectRegistration to import
-  * @param importFromId The id of the existing ApihubHostProjectRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApihubHostProjectRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApihubHostProjectRegistration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -210,7 +210,7 @@ export class ApihubHostProjectRegistration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/apihub_host_project_registration google_apihub_host_project_registration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/apihub_host_project_registration google_apihub_host_project_registration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -221,7 +221,7 @@ export class ApihubHostProjectRegistration extends cdktf.TerraformResource {
       terraformResourceType: 'google_apihub_host_project_registration',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.28.0',
+        providerVersion: '6.29.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
