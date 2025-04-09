@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter
+// https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,16 +10,23 @@ export interface ParameterManagerRegionalParameterConfig extends cdktf.Terraform
   /**
   * The format type of the regional parameter. Default value: "UNFORMATTED" Possible values: ["UNFORMATTED", "YAML", "JSON"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#format ParameterManagerRegionalParameter#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#format ParameterManagerRegionalParameter#format}
   */
   readonly format?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#id ParameterManagerRegionalParameter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#id ParameterManagerRegionalParameter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
+  /**
+  * The resource name of the Cloud KMS CryptoKey used to encrypt regional parameter version payload. Format
+  * 'projects/{{project}}/locations/{{location}}/keyRings/{{key_ring}}/cryptoKeys/{{crypto_key}}'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#kms_key ParameterManagerRegionalParameter#kms_key}
+  */
+  readonly kmsKey?: string;
   /**
   * The labels assigned to this regional Parameter.
   * 
@@ -43,29 +45,29 @@ export interface ParameterManagerRegionalParameterConfig extends cdktf.Terraform
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#labels ParameterManagerRegionalParameter#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#labels ParameterManagerRegionalParameter#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the regional parameter. eg us-central1
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#location ParameterManagerRegionalParameter#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#location ParameterManagerRegionalParameter#location}
   */
   readonly location: string;
   /**
   * This must be unique within the project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#parameter_id ParameterManagerRegionalParameter#parameter_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#parameter_id ParameterManagerRegionalParameter#parameter_id}
   */
   readonly parameterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#project ParameterManagerRegionalParameter#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#project ParameterManagerRegionalParameter#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#timeouts ParameterManagerRegionalParameter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#timeouts ParameterManagerRegionalParameter#timeouts}
   */
   readonly timeouts?: ParameterManagerRegionalParameterTimeouts;
 }
@@ -151,15 +153,15 @@ export class ParameterManagerRegionalParameterPolicyMemberList extends cdktf.Com
 }
 export interface ParameterManagerRegionalParameterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#create ParameterManagerRegionalParameter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#create ParameterManagerRegionalParameter#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#delete ParameterManagerRegionalParameter#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#delete ParameterManagerRegionalParameter#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#update ParameterManagerRegionalParameter#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#update ParameterManagerRegionalParameter#update}
   */
   readonly update?: string;
 }
@@ -311,7 +313,7 @@ export class ParameterManagerRegionalParameterTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter google_parameter_manager_regional_parameter}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter google_parameter_manager_regional_parameter}
 */
 export class ParameterManagerRegionalParameter extends cdktf.TerraformResource {
 
@@ -327,7 +329,7 @@ export class ParameterManagerRegionalParameter extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ParameterManagerRegionalParameter resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ParameterManagerRegionalParameter to import
-  * @param importFromId The id of the existing ParameterManagerRegionalParameter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ParameterManagerRegionalParameter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ParameterManagerRegionalParameter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -339,7 +341,7 @@ export class ParameterManagerRegionalParameter extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.28.0/docs/resources/parameter_manager_regional_parameter google_parameter_manager_regional_parameter} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/parameter_manager_regional_parameter google_parameter_manager_regional_parameter} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -350,7 +352,7 @@ export class ParameterManagerRegionalParameter extends cdktf.TerraformResource {
       terraformResourceType: 'google_parameter_manager_regional_parameter',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.28.0',
+        providerVersion: '6.29.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -363,6 +365,7 @@ export class ParameterManagerRegionalParameter extends cdktf.TerraformResource {
     });
     this._format = config.format;
     this._id = config.id;
+    this._kmsKey = config.kmsKey;
     this._labels = config.labels;
     this._location = config.location;
     this._parameterId = config.parameterId;
@@ -415,6 +418,22 @@ export class ParameterManagerRegionalParameter extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // kms_key - computed: false, optional: true, required: false
+  private _kmsKey?: string; 
+  public get kmsKey() {
+    return this.getStringAttribute('kms_key');
+  }
+  public set kmsKey(value: string) {
+    this._kmsKey = value;
+  }
+  public resetKmsKey() {
+    this._kmsKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyInput() {
+    return this._kmsKey;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -521,6 +540,7 @@ export class ParameterManagerRegionalParameter extends cdktf.TerraformResource {
     return {
       format: cdktf.stringToTerraform(this._format),
       id: cdktf.stringToTerraform(this._id),
+      kms_key: cdktf.stringToTerraform(this._kmsKey),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       parameter_id: cdktf.stringToTerraform(this._parameterId),
@@ -539,6 +559,12 @@ export class ParameterManagerRegionalParameter extends cdktf.TerraformResource {
       },
       id: {
         value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key: {
+        value: cdktf.stringToHclTerraform(this._kmsKey),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
