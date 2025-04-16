@@ -475,6 +475,7 @@ Object.defineProperty(exports, 'datastreamConnectionProfile', { get: function ()
 Object.defineProperty(exports, 'datastreamPrivateConnection', { get: function () { return require('./datastream-private-connection'); } });
 Object.defineProperty(exports, 'datastreamStream', { get: function () { return require('./datastream-stream'); } });
 Object.defineProperty(exports, 'deploymentManagerDeployment', { get: function () { return require('./deployment-manager-deployment'); } });
+Object.defineProperty(exports, 'developerConnectAccountConnector', { get: function () { return require('./developer-connect-account-connector'); } });
 Object.defineProperty(exports, 'developerConnectConnection', { get: function () { return require('./developer-connect-connection'); } });
 Object.defineProperty(exports, 'developerConnectGitRepositoryLink', { get: function () { return require('./developer-connect-git-repository-link'); } });
 Object.defineProperty(exports, 'dialogflowAgent', { get: function () { return require('./dialogflow-agent'); } });
@@ -815,6 +816,8 @@ Object.defineProperty(exports, 'organizationIamPolicy', { get: function () { ret
 Object.defineProperty(exports, 'organizationPolicy', { get: function () { return require('./organization-policy'); } });
 Object.defineProperty(exports, 'osConfigOsPolicyAssignment', { get: function () { return require('./os-config-os-policy-assignment'); } });
 Object.defineProperty(exports, 'osConfigPatchDeployment', { get: function () { return require('./os-config-patch-deployment'); } });
+Object.defineProperty(exports, 'osConfigV2PolicyOrchestrator', { get: function () { return require('./os-config-v2-policy-orchestrator'); } });
+Object.defineProperty(exports, 'osConfigV2PolicyOrchestratorForOrganization', { get: function () { return require('./os-config-v2-policy-orchestrator-for-organization'); } });
 Object.defineProperty(exports, 'osLoginSshPublicKey', { get: function () { return require('./os-login-ssh-public-key'); } });
 Object.defineProperty(exports, 'parallelstoreInstance', { get: function () { return require('./parallelstore-instance'); } });
 Object.defineProperty(exports, 'parameterManagerParameter', { get: function () { return require('./parameter-manager-parameter'); } });

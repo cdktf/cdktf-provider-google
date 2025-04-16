@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image
+// https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,13 +16,13 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * An optional description of this resource. Provide this property when
   * you create the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#description ComputeImage#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#description ComputeImage#description}
   */
   readonly description?: string;
   /**
   * Size of the image when restored onto a persistent disk (in GB).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#disk_size_gb ComputeImage#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#disk_size_gb ComputeImage#disk_size_gb}
   */
   readonly diskSizeGb?: number;
   /**
@@ -32,11 +32,11 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * not deprecated. The name of the image family must comply with
   * RFC1035.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#family ComputeImage#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#family ComputeImage#family}
   */
   readonly family?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#id ComputeImage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#id ComputeImage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -48,13 +48,13 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#labels ComputeImage#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#labels ComputeImage#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Any applicable license URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#licenses ComputeImage#licenses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#licenses ComputeImage#licenses}
   */
   readonly licenses?: string[];
   /**
@@ -66,11 +66,11 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * characters must be a dash, lowercase letter, or digit, except the
   * last character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#name ComputeImage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#name ComputeImage#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#project ComputeImage#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#project ComputeImage#project}
   */
   readonly project?: string;
   /**
@@ -78,7 +78,7 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * You must provide either this property or the
   * rawDisk.source property but not both to create an image.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#source_disk ComputeImage#source_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#source_disk ComputeImage#source_disk}
   */
   readonly sourceDisk?: string;
   /**
@@ -90,7 +90,7 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * * The rawDisk.source URL
   * * The sourceDisk URL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#source_image ComputeImage#source_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#source_image ComputeImage#source_image}
   */
   readonly sourceImage?: string;
   /**
@@ -104,7 +104,7 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * * The rawDisk.source URL
   * * The sourceDisk URL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#source_snapshot ComputeImage#source_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#source_snapshot ComputeImage#source_snapshot}
   */
   readonly sourceSnapshot?: string;
   /**
@@ -112,37 +112,55 @@ export interface ComputeImageConfig extends cdktf.TerraformMetaArguments {
   * (regional or multi-regional).
   * Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#storage_locations ComputeImage#storage_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#storage_locations ComputeImage#storage_locations}
   */
   readonly storageLocations?: string[];
   /**
   * guest_os_features block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#guest_os_features ComputeImage#guest_os_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#guest_os_features ComputeImage#guest_os_features}
   */
   readonly guestOsFeatures?: ComputeImageGuestOsFeatures[] | cdktf.IResolvable;
   /**
   * image_encryption_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#image_encryption_key ComputeImage#image_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#image_encryption_key ComputeImage#image_encryption_key}
   */
   readonly imageEncryptionKey?: ComputeImageImageEncryptionKey;
   /**
   * raw_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#raw_disk ComputeImage#raw_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#raw_disk ComputeImage#raw_disk}
   */
   readonly rawDisk?: ComputeImageRawDisk;
   /**
   * shielded_instance_initial_state block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#shielded_instance_initial_state ComputeImage#shielded_instance_initial_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#shielded_instance_initial_state ComputeImage#shielded_instance_initial_state}
   */
   readonly shieldedInstanceInitialState?: ComputeImageShieldedInstanceInitialState;
   /**
+  * source_disk_encryption_key block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#source_disk_encryption_key ComputeImage#source_disk_encryption_key}
+  */
+  readonly sourceDiskEncryptionKey?: ComputeImageSourceDiskEncryptionKey;
+  /**
+  * source_image_encryption_key block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#source_image_encryption_key ComputeImage#source_image_encryption_key}
+  */
+  readonly sourceImageEncryptionKey?: ComputeImageSourceImageEncryptionKey;
+  /**
+  * source_snapshot_encryption_key block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#source_snapshot_encryption_key ComputeImage#source_snapshot_encryption_key}
+  */
+  readonly sourceSnapshotEncryptionKey?: ComputeImageSourceSnapshotEncryptionKey;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#timeouts ComputeImage#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#timeouts ComputeImage#timeouts}
   */
   readonly timeouts?: ComputeImageTimeouts;
 }
@@ -150,7 +168,7 @@ export interface ComputeImageGuestOsFeatures {
   /**
   * The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC", "IDPF", "SEV_LIVE_MIGRATABLE", "SEV_SNP_CAPABLE", "SUSPEND_RESUME_COMPATIBLE", "TDX_CAPABLE", "SEV_LIVE_MIGRATABLE_V2"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#type ComputeImage#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#type ComputeImage#type}
   */
   readonly type: string;
 }
@@ -266,7 +284,7 @@ export interface ComputeImageImageEncryptionKey {
   * The self link of the encryption key that is stored in Google Cloud
   * KMS.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#kms_key_self_link ComputeImage#kms_key_self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#kms_key_self_link ComputeImage#kms_key_self_link}
   */
   readonly kmsKeySelfLink?: string;
   /**
@@ -274,21 +292,21 @@ export interface ComputeImageImageEncryptionKey {
   * given KMS key. If absent, the Compute Engine default service
   * account is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#kms_key_service_account ComputeImage#kms_key_service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#kms_key_service_account ComputeImage#kms_key_service_account}
   */
   readonly kmsKeyServiceAccount?: string;
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
   * RFC 4648 base64 to either encrypt or decrypt this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#raw_key ComputeImage#raw_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#raw_key ComputeImage#raw_key}
   */
   readonly rawKey?: string;
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
   * RFC 4648 base64 to either encrypt or decrypt this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#rsa_encrypted_key ComputeImage#rsa_encrypted_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#rsa_encrypted_key ComputeImage#rsa_encrypted_key}
   */
   readonly rsaEncryptedKey?: string;
 }
@@ -464,14 +482,14 @@ export interface ComputeImageRawDisk {
   * and not a runtime format. Provided by the client when the disk
   * image is created. Default value: "TAR" Possible values: ["TAR"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#container_type ComputeImage#container_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#container_type ComputeImage#container_type}
   */
   readonly containerType?: string;
   /**
   * An optional SHA1 checksum of the disk image before unpackaging.
   * This is provided by the client when the disk image is created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#sha1 ComputeImage#sha1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#sha1 ComputeImage#sha1}
   */
   readonly sha1?: string;
   /**
@@ -479,7 +497,7 @@ export interface ComputeImageRawDisk {
   * You must provide either this property or the sourceDisk property
   * but not both.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#source ComputeImage#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#source ComputeImage#source}
   */
   readonly source: string;
 }
@@ -622,13 +640,13 @@ export interface ComputeImageShieldedInstanceInitialStateDbs {
   * 
   * A base64-encoded string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#content ComputeImage#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#content ComputeImage#content}
   */
   readonly content: string;
   /**
   * The file type of source file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#file_type ComputeImage#file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#file_type ComputeImage#file_type}
   */
   readonly fileType?: string;
 }
@@ -774,13 +792,13 @@ export interface ComputeImageShieldedInstanceInitialStateDbxs {
   * 
   * A base64-encoded string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#content ComputeImage#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#content ComputeImage#content}
   */
   readonly content: string;
   /**
   * The file type of source file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#file_type ComputeImage#file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#file_type ComputeImage#file_type}
   */
   readonly fileType?: string;
 }
@@ -926,13 +944,13 @@ export interface ComputeImageShieldedInstanceInitialStateKeks {
   * 
   * A base64-encoded string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#content ComputeImage#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#content ComputeImage#content}
   */
   readonly content: string;
   /**
   * The file type of source file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#file_type ComputeImage#file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#file_type ComputeImage#file_type}
   */
   readonly fileType?: string;
 }
@@ -1078,13 +1096,13 @@ export interface ComputeImageShieldedInstanceInitialStatePk {
   * 
   * A base64-encoded string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#content ComputeImage#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#content ComputeImage#content}
   */
   readonly content: string;
   /**
   * The file type of source file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#file_type ComputeImage#file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#file_type ComputeImage#file_type}
   */
   readonly fileType?: string;
 }
@@ -1196,25 +1214,25 @@ export interface ComputeImageShieldedInstanceInitialState {
   /**
   * dbs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#dbs ComputeImage#dbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#dbs ComputeImage#dbs}
   */
   readonly dbs?: ComputeImageShieldedInstanceInitialStateDbs[] | cdktf.IResolvable;
   /**
   * dbxs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#dbxs ComputeImage#dbxs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#dbxs ComputeImage#dbxs}
   */
   readonly dbxs?: ComputeImageShieldedInstanceInitialStateDbxs[] | cdktf.IResolvable;
   /**
   * keks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#keks ComputeImage#keks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#keks ComputeImage#keks}
   */
   readonly keks?: ComputeImageShieldedInstanceInitialStateKeks[] | cdktf.IResolvable;
   /**
   * pk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#pk ComputeImage#pk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#pk ComputeImage#pk}
   */
   readonly pk?: ComputeImageShieldedInstanceInitialStatePk;
 }
@@ -1383,17 +1401,617 @@ export class ComputeImageShieldedInstanceInitialStateOutputReference extends cdk
     return this._pk.internalValue;
   }
 }
+export interface ComputeImageSourceDiskEncryptionKey {
+  /**
+  * The self link of the encryption key used to decrypt this resource. Also called KmsKeyName
+  * in the cloud console. Your project's Compute Engine System service account
+  * ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
+  * 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
+  * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#kms_key_self_link ComputeImage#kms_key_self_link}
+  */
+  readonly kmsKeySelfLink?: string;
+  /**
+  * The service account being used for the encryption request for the
+  * given KMS key. If absent, the Compute Engine default service
+  * account is used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#kms_key_service_account ComputeImage#kms_key_service_account}
+  */
+  readonly kmsKeyServiceAccount?: string;
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in
+  * RFC 4648 base64 to either encrypt or decrypt this resource.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#raw_key ComputeImage#raw_key}
+  */
+  readonly rawKey?: string;
+  /**
+  * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit
+  * customer-supplied encryption key to either encrypt or decrypt
+  * this resource. You can provide either the rawKey or the rsaEncryptedKey.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#rsa_encrypted_key ComputeImage#rsa_encrypted_key}
+  */
+  readonly rsaEncryptedKey?: string;
+}
+
+export function computeImageSourceDiskEncryptionKeyToTerraform(struct?: ComputeImageSourceDiskEncryptionKeyOutputReference | ComputeImageSourceDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+    rsa_encrypted_key: cdktf.stringToTerraform(struct!.rsaEncryptedKey),
+  }
+}
+
+
+export function computeImageSourceDiskEncryptionKeyToHclTerraform(struct?: ComputeImageSourceDiskEncryptionKeyOutputReference | ComputeImageSourceDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_self_link: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeySelfLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyServiceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    raw_key: {
+      value: cdktf.stringToHclTerraform(struct!.rawKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rsa_encrypted_key: {
+      value: cdktf.stringToHclTerraform(struct!.rsaEncryptedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeImageSourceDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeImageSourceDiskEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    if (this._rawKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rawKey = this._rawKey;
+    }
+    if (this._rsaEncryptedKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rsaEncryptedKey = this._rsaEncryptedKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeImageSourceDiskEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+      this._rawKey = undefined;
+      this._rsaEncryptedKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+      this._rawKey = value.rawKey;
+      this._rsaEncryptedKey = value.rsaEncryptedKey;
+    }
+  }
+
+  // kms_key_self_link - computed: false, optional: true, required: false
+  private _kmsKeySelfLink?: string; 
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+  public set kmsKeySelfLink(value: string) {
+    this._kmsKeySelfLink = value;
+  }
+  public resetKmsKeySelfLink() {
+    this._kmsKeySelfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeySelfLinkInput() {
+    return this._kmsKeySelfLink;
+  }
+
+  // kms_key_service_account - computed: false, optional: true, required: false
+  private _kmsKeyServiceAccount?: string; 
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+  public set kmsKeyServiceAccount(value: string) {
+    this._kmsKeyServiceAccount = value;
+  }
+  public resetKmsKeyServiceAccount() {
+    this._kmsKeyServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyServiceAccountInput() {
+    return this._kmsKeyServiceAccount;
+  }
+
+  // raw_key - computed: false, optional: true, required: false
+  private _rawKey?: string; 
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+  public set rawKey(value: string) {
+    this._rawKey = value;
+  }
+  public resetRawKey() {
+    this._rawKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rawKeyInput() {
+    return this._rawKey;
+  }
+
+  // rsa_encrypted_key - computed: false, optional: true, required: false
+  private _rsaEncryptedKey?: string; 
+  public get rsaEncryptedKey() {
+    return this.getStringAttribute('rsa_encrypted_key');
+  }
+  public set rsaEncryptedKey(value: string) {
+    this._rsaEncryptedKey = value;
+  }
+  public resetRsaEncryptedKey() {
+    this._rsaEncryptedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rsaEncryptedKeyInput() {
+    return this._rsaEncryptedKey;
+  }
+}
+export interface ComputeImageSourceImageEncryptionKey {
+  /**
+  * The self link of the encryption key used to decrypt this resource. Also called KmsKeyName
+  * in the cloud console. Your project's Compute Engine System service account
+  * ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
+  * 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
+  * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#kms_key_self_link ComputeImage#kms_key_self_link}
+  */
+  readonly kmsKeySelfLink?: string;
+  /**
+  * The service account being used for the encryption request for the
+  * given KMS key. If absent, the Compute Engine default service
+  * account is used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#kms_key_service_account ComputeImage#kms_key_service_account}
+  */
+  readonly kmsKeyServiceAccount?: string;
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in
+  * RFC 4648 base64 to either encrypt or decrypt this resource.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#raw_key ComputeImage#raw_key}
+  */
+  readonly rawKey?: string;
+  /**
+  * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit
+  * customer-supplied encryption key to either encrypt or decrypt
+  * this resource. You can provide either the rawKey or the rsaEncryptedKey.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#rsa_encrypted_key ComputeImage#rsa_encrypted_key}
+  */
+  readonly rsaEncryptedKey?: string;
+}
+
+export function computeImageSourceImageEncryptionKeyToTerraform(struct?: ComputeImageSourceImageEncryptionKeyOutputReference | ComputeImageSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+    rsa_encrypted_key: cdktf.stringToTerraform(struct!.rsaEncryptedKey),
+  }
+}
+
+
+export function computeImageSourceImageEncryptionKeyToHclTerraform(struct?: ComputeImageSourceImageEncryptionKeyOutputReference | ComputeImageSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_self_link: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeySelfLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyServiceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    raw_key: {
+      value: cdktf.stringToHclTerraform(struct!.rawKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rsa_encrypted_key: {
+      value: cdktf.stringToHclTerraform(struct!.rsaEncryptedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeImageSourceImageEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeImageSourceImageEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    if (this._rawKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rawKey = this._rawKey;
+    }
+    if (this._rsaEncryptedKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rsaEncryptedKey = this._rsaEncryptedKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeImageSourceImageEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+      this._rawKey = undefined;
+      this._rsaEncryptedKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+      this._rawKey = value.rawKey;
+      this._rsaEncryptedKey = value.rsaEncryptedKey;
+    }
+  }
+
+  // kms_key_self_link - computed: false, optional: true, required: false
+  private _kmsKeySelfLink?: string; 
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+  public set kmsKeySelfLink(value: string) {
+    this._kmsKeySelfLink = value;
+  }
+  public resetKmsKeySelfLink() {
+    this._kmsKeySelfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeySelfLinkInput() {
+    return this._kmsKeySelfLink;
+  }
+
+  // kms_key_service_account - computed: false, optional: true, required: false
+  private _kmsKeyServiceAccount?: string; 
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+  public set kmsKeyServiceAccount(value: string) {
+    this._kmsKeyServiceAccount = value;
+  }
+  public resetKmsKeyServiceAccount() {
+    this._kmsKeyServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyServiceAccountInput() {
+    return this._kmsKeyServiceAccount;
+  }
+
+  // raw_key - computed: false, optional: true, required: false
+  private _rawKey?: string; 
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+  public set rawKey(value: string) {
+    this._rawKey = value;
+  }
+  public resetRawKey() {
+    this._rawKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rawKeyInput() {
+    return this._rawKey;
+  }
+
+  // rsa_encrypted_key - computed: false, optional: true, required: false
+  private _rsaEncryptedKey?: string; 
+  public get rsaEncryptedKey() {
+    return this.getStringAttribute('rsa_encrypted_key');
+  }
+  public set rsaEncryptedKey(value: string) {
+    this._rsaEncryptedKey = value;
+  }
+  public resetRsaEncryptedKey() {
+    this._rsaEncryptedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rsaEncryptedKeyInput() {
+    return this._rsaEncryptedKey;
+  }
+}
+export interface ComputeImageSourceSnapshotEncryptionKey {
+  /**
+  * The self link of the encryption key used to decrypt this resource. Also called KmsKeyName
+  * in the cloud console. Your project's Compute Engine System service account
+  * ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
+  * 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
+  * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#kms_key_self_link ComputeImage#kms_key_self_link}
+  */
+  readonly kmsKeySelfLink?: string;
+  /**
+  * The service account being used for the encryption request for the
+  * given KMS key. If absent, the Compute Engine default service
+  * account is used.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#kms_key_service_account ComputeImage#kms_key_service_account}
+  */
+  readonly kmsKeyServiceAccount?: string;
+  /**
+  * Specifies a 256-bit customer-supplied encryption key, encoded in
+  * RFC 4648 base64 to either encrypt or decrypt this resource.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#raw_key ComputeImage#raw_key}
+  */
+  readonly rawKey?: string;
+  /**
+  * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit
+  * customer-supplied encryption key to either encrypt or decrypt
+  * this resource. You can provide either the rawKey or the rsaEncryptedKey.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#rsa_encrypted_key ComputeImage#rsa_encrypted_key}
+  */
+  readonly rsaEncryptedKey?: string;
+}
+
+export function computeImageSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeImageSourceSnapshotEncryptionKeyOutputReference | ComputeImageSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+    raw_key: cdktf.stringToTerraform(struct!.rawKey),
+    rsa_encrypted_key: cdktf.stringToTerraform(struct!.rsaEncryptedKey),
+  }
+}
+
+
+export function computeImageSourceSnapshotEncryptionKeyToHclTerraform(struct?: ComputeImageSourceSnapshotEncryptionKeyOutputReference | ComputeImageSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kms_key_self_link: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeySelfLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_service_account: {
+      value: cdktf.stringToHclTerraform(struct!.kmsKeyServiceAccount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    raw_key: {
+      value: cdktf.stringToHclTerraform(struct!.rawKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rsa_encrypted_key: {
+      value: cdktf.stringToHclTerraform(struct!.rsaEncryptedKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeImageSourceSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeImageSourceSnapshotEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    if (this._rawKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rawKey = this._rawKey;
+    }
+    if (this._rsaEncryptedKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rsaEncryptedKey = this._rsaEncryptedKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeImageSourceSnapshotEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+      this._rawKey = undefined;
+      this._rsaEncryptedKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+      this._rawKey = value.rawKey;
+      this._rsaEncryptedKey = value.rsaEncryptedKey;
+    }
+  }
+
+  // kms_key_self_link - computed: false, optional: true, required: false
+  private _kmsKeySelfLink?: string; 
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+  public set kmsKeySelfLink(value: string) {
+    this._kmsKeySelfLink = value;
+  }
+  public resetKmsKeySelfLink() {
+    this._kmsKeySelfLink = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeySelfLinkInput() {
+    return this._kmsKeySelfLink;
+  }
+
+  // kms_key_service_account - computed: false, optional: true, required: false
+  private _kmsKeyServiceAccount?: string; 
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+  public set kmsKeyServiceAccount(value: string) {
+    this._kmsKeyServiceAccount = value;
+  }
+  public resetKmsKeyServiceAccount() {
+    this._kmsKeyServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyServiceAccountInput() {
+    return this._kmsKeyServiceAccount;
+  }
+
+  // raw_key - computed: false, optional: true, required: false
+  private _rawKey?: string; 
+  public get rawKey() {
+    return this.getStringAttribute('raw_key');
+  }
+  public set rawKey(value: string) {
+    this._rawKey = value;
+  }
+  public resetRawKey() {
+    this._rawKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rawKeyInput() {
+    return this._rawKey;
+  }
+
+  // rsa_encrypted_key - computed: false, optional: true, required: false
+  private _rsaEncryptedKey?: string; 
+  public get rsaEncryptedKey() {
+    return this.getStringAttribute('rsa_encrypted_key');
+  }
+  public set rsaEncryptedKey(value: string) {
+    this._rsaEncryptedKey = value;
+  }
+  public resetRsaEncryptedKey() {
+    this._rsaEncryptedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rsaEncryptedKeyInput() {
+    return this._rsaEncryptedKey;
+  }
+}
 export interface ComputeImageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#create ComputeImage#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#create ComputeImage#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#delete ComputeImage#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#delete ComputeImage#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#update ComputeImage#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#update ComputeImage#update}
   */
   readonly update?: string;
 }
@@ -1545,7 +2163,7 @@ export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image google_compute_image}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image google_compute_image}
 */
 export class ComputeImage extends cdktf.TerraformResource {
 
@@ -1561,7 +2179,7 @@ export class ComputeImage extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeImage resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeImage to import
-  * @param importFromId The id of the existing ComputeImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeImage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1573,7 +2191,7 @@ export class ComputeImage extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/compute_image google_compute_image} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/compute_image google_compute_image} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1584,7 +2202,7 @@ export class ComputeImage extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_image',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.29.0',
+        providerVersion: '6.30.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1611,6 +2229,9 @@ export class ComputeImage extends cdktf.TerraformResource {
     this._imageEncryptionKey.internalValue = config.imageEncryptionKey;
     this._rawDisk.internalValue = config.rawDisk;
     this._shieldedInstanceInitialState.internalValue = config.shieldedInstanceInitialState;
+    this._sourceDiskEncryptionKey.internalValue = config.sourceDiskEncryptionKey;
+    this._sourceImageEncryptionKey.internalValue = config.sourceImageEncryptionKey;
+    this._sourceSnapshotEncryptionKey.internalValue = config.sourceSnapshotEncryptionKey;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1903,6 +2524,54 @@ export class ComputeImage extends cdktf.TerraformResource {
     return this._shieldedInstanceInitialState.internalValue;
   }
 
+  // source_disk_encryption_key - computed: false, optional: true, required: false
+  private _sourceDiskEncryptionKey = new ComputeImageSourceDiskEncryptionKeyOutputReference(this, "source_disk_encryption_key");
+  public get sourceDiskEncryptionKey() {
+    return this._sourceDiskEncryptionKey;
+  }
+  public putSourceDiskEncryptionKey(value: ComputeImageSourceDiskEncryptionKey) {
+    this._sourceDiskEncryptionKey.internalValue = value;
+  }
+  public resetSourceDiskEncryptionKey() {
+    this._sourceDiskEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDiskEncryptionKeyInput() {
+    return this._sourceDiskEncryptionKey.internalValue;
+  }
+
+  // source_image_encryption_key - computed: false, optional: true, required: false
+  private _sourceImageEncryptionKey = new ComputeImageSourceImageEncryptionKeyOutputReference(this, "source_image_encryption_key");
+  public get sourceImageEncryptionKey() {
+    return this._sourceImageEncryptionKey;
+  }
+  public putSourceImageEncryptionKey(value: ComputeImageSourceImageEncryptionKey) {
+    this._sourceImageEncryptionKey.internalValue = value;
+  }
+  public resetSourceImageEncryptionKey() {
+    this._sourceImageEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageEncryptionKeyInput() {
+    return this._sourceImageEncryptionKey.internalValue;
+  }
+
+  // source_snapshot_encryption_key - computed: false, optional: true, required: false
+  private _sourceSnapshotEncryptionKey = new ComputeImageSourceSnapshotEncryptionKeyOutputReference(this, "source_snapshot_encryption_key");
+  public get sourceSnapshotEncryptionKey() {
+    return this._sourceSnapshotEncryptionKey;
+  }
+  public putSourceSnapshotEncryptionKey(value: ComputeImageSourceSnapshotEncryptionKey) {
+    this._sourceSnapshotEncryptionKey.internalValue = value;
+  }
+  public resetSourceSnapshotEncryptionKey() {
+    this._sourceSnapshotEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSnapshotEncryptionKeyInput() {
+    return this._sourceSnapshotEncryptionKey.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ComputeImageTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1941,6 +2610,9 @@ export class ComputeImage extends cdktf.TerraformResource {
       image_encryption_key: computeImageImageEncryptionKeyToTerraform(this._imageEncryptionKey.internalValue),
       raw_disk: computeImageRawDiskToTerraform(this._rawDisk.internalValue),
       shielded_instance_initial_state: computeImageShieldedInstanceInitialStateToTerraform(this._shieldedInstanceInitialState.internalValue),
+      source_disk_encryption_key: computeImageSourceDiskEncryptionKeyToTerraform(this._sourceDiskEncryptionKey.internalValue),
+      source_image_encryption_key: computeImageSourceImageEncryptionKeyToTerraform(this._sourceImageEncryptionKey.internalValue),
+      source_snapshot_encryption_key: computeImageSourceSnapshotEncryptionKeyToTerraform(this._sourceSnapshotEncryptionKey.internalValue),
       timeouts: computeImageTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -2042,6 +2714,24 @@ export class ComputeImage extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "ComputeImageShieldedInstanceInitialStateList",
+      },
+      source_disk_encryption_key: {
+        value: computeImageSourceDiskEncryptionKeyToHclTerraform(this._sourceDiskEncryptionKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeImageSourceDiskEncryptionKeyList",
+      },
+      source_image_encryption_key: {
+        value: computeImageSourceImageEncryptionKeyToHclTerraform(this._sourceImageEncryptionKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeImageSourceImageEncryptionKeyList",
+      },
+      source_snapshot_encryption_key: {
+        value: computeImageSourceSnapshotEncryptionKeyToHclTerraform(this._sourceSnapshotEncryptionKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeImageSourceSnapshotEncryptionKeyList",
       },
       timeouts: {
         value: computeImageTimeoutsToHclTerraform(this._timeouts.internalValue),
