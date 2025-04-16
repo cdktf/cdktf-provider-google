@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic
+// https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +10,17 @@ export interface ManagedKafkaTopicConfig extends cdktf.TerraformMetaArguments {
   /**
   * The cluster name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#cluster ManagedKafkaTopic#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#cluster ManagedKafkaTopic#cluster}
   */
   readonly cluster: string;
   /**
   * Configuration for the topic that are overridden from the cluster defaults. The key of the map is a Kafka topic property name, for example: 'cleanup.policy=compact', 'compression.type=producer'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#configs ManagedKafkaTopic#configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#configs ManagedKafkaTopic#configs}
   */
   readonly configs?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#id ManagedKafkaTopic#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#id ManagedKafkaTopic#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,49 +29,49 @@ export interface ManagedKafkaTopicConfig extends cdktf.TerraformMetaArguments {
   /**
   * ID of the location of the Kafka resource. See https://cloud.google.com/managed-kafka/docs/locations for a list of supported locations.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#location ManagedKafkaTopic#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#location ManagedKafkaTopic#location}
   */
   readonly location: string;
   /**
   * The number of partitions in a topic. You can increase the partition count for a topic, but you cannot decrease it. Increasing partitions for a topic that uses a key might change how messages are distributed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#partition_count ManagedKafkaTopic#partition_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#partition_count ManagedKafkaTopic#partition_count}
   */
   readonly partitionCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#project ManagedKafkaTopic#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#project ManagedKafkaTopic#project}
   */
   readonly project?: string;
   /**
   * The number of replicas of each partition. A replication factor of 3 is recommended for high availability.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#replication_factor ManagedKafkaTopic#replication_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#replication_factor ManagedKafkaTopic#replication_factor}
   */
   readonly replicationFactor: number;
   /**
   * The ID to use for the topic, which will become the final component of the topic's name. This value is structured like: 'my-topic-name'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#topic_id ManagedKafkaTopic#topic_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#topic_id ManagedKafkaTopic#topic_id}
   */
   readonly topicId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#timeouts ManagedKafkaTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#timeouts ManagedKafkaTopic#timeouts}
   */
   readonly timeouts?: ManagedKafkaTopicTimeouts;
 }
 export interface ManagedKafkaTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#create ManagedKafkaTopic#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#create ManagedKafkaTopic#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#delete ManagedKafkaTopic#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#delete ManagedKafkaTopic#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#update ManagedKafkaTopic#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#update ManagedKafkaTopic#update}
   */
   readonly update?: string;
 }
@@ -228,7 +223,7 @@ export class ManagedKafkaTopicTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic google_managed_kafka_topic}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic google_managed_kafka_topic}
 */
 export class ManagedKafkaTopic extends cdktf.TerraformResource {
 
@@ -244,7 +239,7 @@ export class ManagedKafkaTopic extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ManagedKafkaTopic resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ManagedKafkaTopic to import
-  * @param importFromId The id of the existing ManagedKafkaTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ManagedKafkaTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ManagedKafkaTopic to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -256,7 +251,7 @@ export class ManagedKafkaTopic extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/managed_kafka_topic google_managed_kafka_topic} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/managed_kafka_topic google_managed_kafka_topic} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -267,7 +262,7 @@ export class ManagedKafkaTopic extends cdktf.TerraformResource {
       terraformResourceType: 'google_managed_kafka_topic',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.29.0',
+        providerVersion: '6.30.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

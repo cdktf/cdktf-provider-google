@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation
+// https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,23 +13,23 @@ export interface ClouddeployAutomationConfig extends cdktf.TerraformMetaArgument
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#annotations ClouddeployAutomation#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#annotations ClouddeployAutomation#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * The delivery_pipeline for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#delivery_pipeline ClouddeployAutomation#delivery_pipeline}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#delivery_pipeline ClouddeployAutomation#delivery_pipeline}
   */
   readonly deliveryPipeline: string;
   /**
   * Optional. Description of the 'Automation'. Max length is 255 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#description ClouddeployAutomation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#description ClouddeployAutomation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -46,53 +41,53 @@ export interface ClouddeployAutomationConfig extends cdktf.TerraformMetaArgument
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#labels ClouddeployAutomation#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#labels ClouddeployAutomation#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#location ClouddeployAutomation#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#location ClouddeployAutomation#location}
   */
   readonly location: string;
   /**
   * Name of the 'Automation'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#name ClouddeployAutomation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#name ClouddeployAutomation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#project ClouddeployAutomation#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#project ClouddeployAutomation#project}
   */
   readonly project?: string;
   /**
   * Required. Email address of the user-managed IAM service account that creates Cloud Deploy release and rollout resources.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#service_account ClouddeployAutomation#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#service_account ClouddeployAutomation#service_account}
   */
   readonly serviceAccount: string;
   /**
   * Optional. When Suspended, automation is deactivated from execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#suspended ClouddeployAutomation#suspended}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#suspended ClouddeployAutomation#suspended}
   */
   readonly suspended?: boolean | cdktf.IResolvable;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#rules ClouddeployAutomation#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#rules ClouddeployAutomation#rules}
   */
   readonly rules: ClouddeployAutomationRules[] | cdktf.IResolvable;
   /**
   * selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#selector ClouddeployAutomation#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#selector ClouddeployAutomation#selector}
   */
   readonly selector: ClouddeployAutomationSelector;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#timeouts ClouddeployAutomation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#timeouts ClouddeployAutomation#timeouts}
   */
   readonly timeouts?: ClouddeployAutomationTimeouts;
 }
@@ -100,7 +95,7 @@ export interface ClouddeployAutomationRulesAdvanceRolloutRule {
   /**
   * Required. ID of the rule. This id must be unique in the 'Automation' resource to which this rule belongs. The format is 'a-z{0,62}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -109,13 +104,13 @@ export interface ClouddeployAutomationRulesAdvanceRolloutRule {
   /**
   * Optional. Proceeds only after phase name matched any one in the list. This value must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a letter or a number, and have a max length of 63 characters. In other words, it must match the following regex: '^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#source_phases ClouddeployAutomation#source_phases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#source_phases ClouddeployAutomation#source_phases}
   */
   readonly sourcePhases?: string[];
   /**
   * Optional. How long to wait after a rollout is finished.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#wait ClouddeployAutomation#wait}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#wait ClouddeployAutomation#wait}
   */
   readonly wait?: string;
 }
@@ -256,19 +251,19 @@ export interface ClouddeployAutomationRulesPromoteReleaseRule {
   /**
   * Optional. The starting phase of the rollout created by this operation. Default to the first phase.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#destination_phase ClouddeployAutomation#destination_phase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#destination_phase ClouddeployAutomation#destination_phase}
   */
   readonly destinationPhase?: string;
   /**
   * Optional. The ID of the stage in the pipeline to which this 'Release' is deploying. If unspecified, default it to the next stage in the promotion flow. The value of this field could be one of the following: * The last segment of a target name. It only needs the ID to determine if the target is one of the stages in the promotion sequence defined in the pipeline. * "@next", the next target in the promotion sequence.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#destination_target_id ClouddeployAutomation#destination_target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#destination_target_id ClouddeployAutomation#destination_target_id}
   */
   readonly destinationTargetId?: string;
   /**
   * Required. ID of the rule. This id must be unique in the 'Automation' resource to which this rule belongs. The format is 'a-z{0,62}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -277,7 +272,7 @@ export interface ClouddeployAutomationRulesPromoteReleaseRule {
   /**
   * Optional. How long the release need to be paused until being promoted to the next target.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#wait ClouddeployAutomation#wait}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#wait ClouddeployAutomation#wait}
   */
   readonly wait?: string;
 }
@@ -447,19 +442,19 @@ export interface ClouddeployAutomationRulesRepairRolloutRuleRepairPhasesRetry {
   /**
   * Required. Total number of retries. Retry is skipped if set to 0; The minimum value is 1, and the maximum value is 10.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#attempts ClouddeployAutomation#attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#attempts ClouddeployAutomation#attempts}
   */
   readonly attempts: string;
   /**
   * Optional. The pattern of how wait time will be increased. Default is linear. Backoff mode will be ignored if wait is 0. Possible values: ["BACKOFF_MODE_UNSPECIFIED", "BACKOFF_MODE_LINEAR", "BACKOFF_MODE_EXPONENTIAL"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#backoff_mode ClouddeployAutomation#backoff_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#backoff_mode ClouddeployAutomation#backoff_mode}
   */
   readonly backoffMode?: string;
   /**
   * Optional. How long to wait for the first retry. Default is 0, and the maximum value is 14d. A duration in seconds with up to nine fractional digits, ending with 's'. Example: '3.5s'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#wait ClouddeployAutomation#wait}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#wait ClouddeployAutomation#wait}
   */
   readonly wait?: string;
 }
@@ -600,13 +595,13 @@ export interface ClouddeployAutomationRulesRepairRolloutRuleRepairPhasesRollback
   /**
   * Optional. The starting phase ID for the Rollout. If unspecified, the Rollout will start in the stable phase.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#destination_phase ClouddeployAutomation#destination_phase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#destination_phase ClouddeployAutomation#destination_phase}
   */
   readonly destinationPhase?: string;
   /**
   * Optional. If pending rollout exists on the target, the rollback operation will be aborted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#disable_rollback_if_rollout_pending ClouddeployAutomation#disable_rollback_if_rollout_pending}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#disable_rollback_if_rollout_pending ClouddeployAutomation#disable_rollback_if_rollout_pending}
   */
   readonly disableRollbackIfRolloutPending?: boolean | cdktf.IResolvable;
 }
@@ -721,13 +716,13 @@ export interface ClouddeployAutomationRulesRepairRolloutRuleRepairPhases {
   /**
   * retry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#retry ClouddeployAutomation#retry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#retry ClouddeployAutomation#retry}
   */
   readonly retry?: ClouddeployAutomationRulesRepairRolloutRuleRepairPhasesRetry;
   /**
   * rollback block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#rollback ClouddeployAutomation#rollback}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#rollback ClouddeployAutomation#rollback}
   */
   readonly rollback?: ClouddeployAutomationRulesRepairRolloutRuleRepairPhasesRollback;
 }
@@ -874,7 +869,7 @@ export interface ClouddeployAutomationRulesRepairRolloutRule {
   /**
   * Required. ID of the rule. This id must be unique in the 'Automation' resource to which this rule belongs. The format is 'a-z{0,62}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -883,19 +878,19 @@ export interface ClouddeployAutomationRulesRepairRolloutRule {
   /**
   * Optional. Jobs to repair. Proceeds only after job name matched any one in the list, or for all jobs if unspecified or empty. The phase that includes the job must match the phase ID specified in sourcePhase. This value must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a letter or a number, and have a max length of 63 characters. In other words, it must match the following regex: ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#jobs ClouddeployAutomation#jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#jobs ClouddeployAutomation#jobs}
   */
   readonly jobs?: string[];
   /**
   * Optional. Phases within which jobs are subject to automatic repair actions on failure. Proceeds only after phase name matched any one in the list, or for all phases if unspecified. This value must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a letter or a number, and have a max length of 63 characters. In other words, it must match the following regex: ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#phases ClouddeployAutomation#phases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#phases ClouddeployAutomation#phases}
   */
   readonly phases?: string[];
   /**
   * repair_phases block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#repair_phases ClouddeployAutomation#repair_phases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#repair_phases ClouddeployAutomation#repair_phases}
   */
   readonly repairPhases?: ClouddeployAutomationRulesRepairRolloutRuleRepairPhases[] | cdktf.IResolvable;
 }
@@ -1065,7 +1060,7 @@ export interface ClouddeployAutomationRulesTimedPromoteReleaseRule {
   /**
   * Optional. The starting phase of the rollout created by this rule. Default to the first phase.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#destination_phase ClouddeployAutomation#destination_phase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#destination_phase ClouddeployAutomation#destination_phase}
   */
   readonly destinationPhase?: string;
   /**
@@ -1073,13 +1068,13 @@ export interface ClouddeployAutomationRulesTimedPromoteReleaseRule {
   *   - The last segment of a target name
   *   - "@next", the next target in the promotion sequence"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#destination_target_id ClouddeployAutomation#destination_target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#destination_target_id ClouddeployAutomation#destination_target_id}
   */
   readonly destinationTargetId?: string;
   /**
   * Required. ID of the rule. This id must be unique in the 'Automation' resource to which this rule belongs. The format is 'a-z{0,62}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1088,13 +1083,13 @@ export interface ClouddeployAutomationRulesTimedPromoteReleaseRule {
   /**
   * Required. Schedule in crontab format. e.g. '0 9 * * 1' for every Monday at 9am.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#schedule ClouddeployAutomation#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#schedule ClouddeployAutomation#schedule}
   */
   readonly schedule: string;
   /**
   * Required. The time zone in IANA format IANA Time Zone Database (e.g. America/New_York).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#time_zone ClouddeployAutomation#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#time_zone ClouddeployAutomation#time_zone}
   */
   readonly timeZone: string;
 }
@@ -1287,25 +1282,25 @@ export interface ClouddeployAutomationRules {
   /**
   * advance_rollout_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#advance_rollout_rule ClouddeployAutomation#advance_rollout_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#advance_rollout_rule ClouddeployAutomation#advance_rollout_rule}
   */
   readonly advanceRolloutRule?: ClouddeployAutomationRulesAdvanceRolloutRule;
   /**
   * promote_release_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#promote_release_rule ClouddeployAutomation#promote_release_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#promote_release_rule ClouddeployAutomation#promote_release_rule}
   */
   readonly promoteReleaseRule?: ClouddeployAutomationRulesPromoteReleaseRule;
   /**
   * repair_rollout_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#repair_rollout_rule ClouddeployAutomation#repair_rollout_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#repair_rollout_rule ClouddeployAutomation#repair_rollout_rule}
   */
   readonly repairRolloutRule?: ClouddeployAutomationRulesRepairRolloutRule;
   /**
   * timed_promote_release_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#timed_promote_release_rule ClouddeployAutomation#timed_promote_release_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#timed_promote_release_rule ClouddeployAutomation#timed_promote_release_rule}
   */
   readonly timedPromoteReleaseRule?: ClouddeployAutomationRulesTimedPromoteReleaseRule;
 }
@@ -1510,7 +1505,7 @@ export interface ClouddeployAutomationSelectorTargets {
   /**
   * ID of the 'Target'. The value of this field could be one of the following: * The last segment of a target name. It only needs the ID to determine which target is being referred to * "*", all targets in a location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#id ClouddeployAutomation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1519,7 +1514,7 @@ export interface ClouddeployAutomationSelectorTargets {
   /**
   * Target labels.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#labels ClouddeployAutomation#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#labels ClouddeployAutomation#labels}
   */
   readonly labels?: { [key: string]: string };
 }
@@ -1666,7 +1661,7 @@ export interface ClouddeployAutomationSelector {
   /**
   * targets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#targets ClouddeployAutomation#targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#targets ClouddeployAutomation#targets}
   */
   readonly targets: ClouddeployAutomationSelectorTargets[] | cdktf.IResolvable;
 }
@@ -1747,15 +1742,15 @@ export class ClouddeployAutomationSelectorOutputReference extends cdktf.ComplexO
 }
 export interface ClouddeployAutomationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#create ClouddeployAutomation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#create ClouddeployAutomation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#delete ClouddeployAutomation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#delete ClouddeployAutomation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#update ClouddeployAutomation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#update ClouddeployAutomation#update}
   */
   readonly update?: string;
 }
@@ -1907,7 +1902,7 @@ export class ClouddeployAutomationTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation google_clouddeploy_automation}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation google_clouddeploy_automation}
 */
 export class ClouddeployAutomation extends cdktf.TerraformResource {
 
@@ -1923,7 +1918,7 @@ export class ClouddeployAutomation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ClouddeployAutomation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ClouddeployAutomation to import
-  * @param importFromId The id of the existing ClouddeployAutomation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ClouddeployAutomation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ClouddeployAutomation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1935,7 +1930,7 @@ export class ClouddeployAutomation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/clouddeploy_automation google_clouddeploy_automation} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/clouddeploy_automation google_clouddeploy_automation} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1946,7 +1941,7 @@ export class ClouddeployAutomation extends cdktf.TerraformResource {
       terraformResourceType: 'google_clouddeploy_automation',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.29.0',
+        providerVersion: '6.30.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

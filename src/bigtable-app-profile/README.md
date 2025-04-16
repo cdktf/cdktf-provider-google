@@ -1,3 +1,3 @@
 # `google_bigtable_app_profile`
 
-Refer to the Terraform Registry for docs: [`google_bigtable_app_profile`](https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/bigtable_app_profile).
+Refer to the Terraform Registry for docs: [`google_bigtable_app_profile`](https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigtable_app_profile).

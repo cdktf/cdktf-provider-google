@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index
+// https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,62 @@ import * as cdktf from 'cdktf';
 
 export interface FirestoreIndexConfig extends cdktf.TerraformMetaArguments {
   /**
-  * The API scope at which a query is run. Default value: "ANY_API" Possible values: ["ANY_API", "DATASTORE_MODE_API"]
+  * The API scope at which a query is run. Default value: "ANY_API" Possible values: ["ANY_API", "DATASTORE_MODE_API", "MONGODB_COMPATIBLE_API"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#api_scope FirestoreIndex#api_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#api_scope FirestoreIndex#api_scope}
   */
   readonly apiScope?: string;
   /**
   * The collection being indexed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#collection FirestoreIndex#collection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#collection FirestoreIndex#collection}
   */
   readonly collection: string;
   /**
   * The Firestore database id. Defaults to '"(default)"'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#database FirestoreIndex#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#database FirestoreIndex#database}
   */
   readonly database?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#id FirestoreIndex#id}
+  * The density configuration for this index. Possible values: ["SPARSE_ALL", "SPARSE_ANY", "DENSE"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#density FirestoreIndex#density}
+  */
+  readonly density?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#id FirestoreIndex#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#project FirestoreIndex#project}
+  * Optional. Whether the index is multikey. By default, the index is not multikey. For non-multikey indexes, none of the paths in the index definition reach or traverse an array, except via an explicit array index. For multikey indexes, at most one of the paths in the index definition reach or traverse an array, except via an explicit array index. Violations will result in errors. Note this field only applies to indexes with MONGODB_COMPATIBLE_API ApiScope.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#multikey FirestoreIndex#multikey}
+  */
+  readonly multikey?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#project FirestoreIndex#project}
   */
   readonly project?: string;
   /**
   * The scope at which a query is run. Default value: "COLLECTION" Possible values: ["COLLECTION", "COLLECTION_GROUP", "COLLECTION_RECURSIVE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#query_scope FirestoreIndex#query_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#query_scope FirestoreIndex#query_scope}
   */
   readonly queryScope?: string;
   /**
   * fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#fields FirestoreIndex#fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#fields FirestoreIndex#fields}
   */
   readonly fields: FirestoreIndexFields[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#timeouts FirestoreIndex#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#timeouts FirestoreIndex#timeouts}
   */
   readonly timeouts?: FirestoreIndexTimeouts;
 }
@@ -114,13 +121,13 @@ export interface FirestoreIndexFieldsVectorConfig {
   * The resulting index will only include vectors of this dimension, and can be used for vector search
   * with the same dimension.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#dimension FirestoreIndex#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#dimension FirestoreIndex#dimension}
   */
   readonly dimension?: number;
   /**
   * flat block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#flat FirestoreIndex#flat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#flat FirestoreIndex#flat}
   */
   readonly flat?: FirestoreIndexFieldsVectorConfigFlat;
 }
@@ -236,26 +243,26 @@ export interface FirestoreIndexFields {
   * Indicates that this field supports operations on arrayValues. Only one of 'order', 'arrayConfig', and
   * 'vectorConfig' can be specified. Possible values: ["CONTAINS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#array_config FirestoreIndex#array_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#array_config FirestoreIndex#array_config}
   */
   readonly arrayConfig?: string;
   /**
   * Name of the field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#field_path FirestoreIndex#field_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#field_path FirestoreIndex#field_path}
   */
   readonly fieldPath?: string;
   /**
   * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
   * Only one of 'order', 'arrayConfig', and 'vectorConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#order FirestoreIndex#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#order FirestoreIndex#order}
   */
   readonly order?: string;
   /**
   * vector_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#vector_config FirestoreIndex#vector_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#vector_config FirestoreIndex#vector_config}
   */
   readonly vectorConfig?: FirestoreIndexFieldsVectorConfig;
 }
@@ -458,11 +465,11 @@ export class FirestoreIndexFieldsList extends cdktf.ComplexList {
 }
 export interface FirestoreIndexTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#create FirestoreIndex#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#create FirestoreIndex#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#delete FirestoreIndex#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#delete FirestoreIndex#delete}
   */
   readonly delete?: string;
 }
@@ -585,7 +592,7 @@ export class FirestoreIndexTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index google_firestore_index}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index google_firestore_index}
 */
 export class FirestoreIndex extends cdktf.TerraformResource {
 
@@ -601,7 +608,7 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FirestoreIndex resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FirestoreIndex to import
-  * @param importFromId The id of the existing FirestoreIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FirestoreIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FirestoreIndex to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -613,7 +620,7 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/firestore_index google_firestore_index} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/firestore_index google_firestore_index} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -624,7 +631,7 @@ export class FirestoreIndex extends cdktf.TerraformResource {
       terraformResourceType: 'google_firestore_index',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.29.0',
+        providerVersion: '6.30.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -638,7 +645,9 @@ export class FirestoreIndex extends cdktf.TerraformResource {
     this._apiScope = config.apiScope;
     this._collection = config.collection;
     this._database = config.database;
+    this._density = config.density;
     this._id = config.id;
+    this._multikey = config.multikey;
     this._project = config.project;
     this._queryScope = config.queryScope;
     this._fields.internalValue = config.fields;
@@ -694,6 +703,22 @@ export class FirestoreIndex extends cdktf.TerraformResource {
     return this._database;
   }
 
+  // density - computed: true, optional: true, required: false
+  private _density?: string; 
+  public get density() {
+    return this.getStringAttribute('density');
+  }
+  public set density(value: string) {
+    this._density = value;
+  }
+  public resetDensity() {
+    this._density = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get densityInput() {
+    return this._density;
+  }
+
   // id - computed: true, optional: true, required: false
   private _id?: string; 
   public get id() {
@@ -708,6 +733,22 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // multikey - computed: false, optional: true, required: false
+  private _multikey?: boolean | cdktf.IResolvable; 
+  public get multikey() {
+    return this.getBooleanAttribute('multikey');
+  }
+  public set multikey(value: boolean | cdktf.IResolvable) {
+    this._multikey = value;
+  }
+  public resetMultikey() {
+    this._multikey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multikeyInput() {
+    return this._multikey;
   }
 
   // name - computed: true, optional: false, required: false
@@ -785,7 +826,9 @@ export class FirestoreIndex extends cdktf.TerraformResource {
       api_scope: cdktf.stringToTerraform(this._apiScope),
       collection: cdktf.stringToTerraform(this._collection),
       database: cdktf.stringToTerraform(this._database),
+      density: cdktf.stringToTerraform(this._density),
       id: cdktf.stringToTerraform(this._id),
+      multikey: cdktf.booleanToTerraform(this._multikey),
       project: cdktf.stringToTerraform(this._project),
       query_scope: cdktf.stringToTerraform(this._queryScope),
       fields: cdktf.listMapper(firestoreIndexFieldsToTerraform, true)(this._fields.internalValue),
@@ -813,11 +856,23 @@ export class FirestoreIndex extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      density: {
+        value: cdktf.stringToHclTerraform(this._density),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       id: {
         value: cdktf.stringToHclTerraform(this._id),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      multikey: {
+        value: cdktf.booleanToHclTerraform(this._multikey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       project: {
         value: cdktf.stringToHclTerraform(this._project),
