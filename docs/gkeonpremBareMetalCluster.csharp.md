@@ -4,7 +4,7 @@
 
 ### GkeonpremBareMetalCluster <a name="GkeonpremBareMetalCluster" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster google_gkeonprem_bare_metal_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster google_gkeonprem_bare_metal_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalCluster.Initializer"></a>
 
@@ -747,7 +747,7 @@ The construct id used in the generated config for the GkeonpremBareMetalCluster 
 
 The id of the existing GkeonpremBareMetalCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1599,7 +1599,7 @@ public string EvaluationMode { get; set; }
 
 Mode of operation for binauthz policy evaluation. If unspecified, defaults to DISABLED. Possible values: ["DISABLED", "PROJECT_SINGLETON_POLICY_ENFORCE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#evaluation_mode GkeonpremBareMetalCluster#evaluation_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#evaluation_mode GkeonpremBareMetalCluster#evaluation_mode}
 
 ---
 
@@ -1633,7 +1633,7 @@ public object EnableApplicationLogs { get; set; }
 
 Whether collection of application logs/metrics should be enabled (in addition to system logs/metrics).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#enable_application_logs GkeonpremBareMetalCluster#enable_application_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#enable_application_logs GkeonpremBareMetalCluster#enable_application_logs}
 
 ---
 
@@ -1700,12 +1700,12 @@ new GkeonpremBareMetalClusterConfig {
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.binaryAuthorization">BinaryAuthorization</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterBinaryAuthorization">GkeonpremBareMetalClusterBinaryAuthorization</a></code> | binary_authorization block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.clusterOperations">ClusterOperations</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterClusterOperations">GkeonpremBareMetalClusterClusterOperations</a></code> | cluster_operations block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.description">Description</a></code> | <code>string</code> | A human readable description of this Bare Metal User Cluster. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#id GkeonpremBareMetalCluster#id}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#id GkeonpremBareMetalCluster#id}. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.maintenanceConfig">MaintenanceConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterMaintenanceConfig">GkeonpremBareMetalClusterMaintenanceConfig</a></code> | maintenance_config block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.nodeAccessConfig">NodeAccessConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNodeAccessConfig">GkeonpremBareMetalClusterNodeAccessConfig</a></code> | node_access_config block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.nodeConfig">NodeConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterNodeConfig">GkeonpremBareMetalClusterNodeConfig</a></code> | node_config block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.osEnvironmentConfig">OsEnvironmentConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterOsEnvironmentConfig">GkeonpremBareMetalClusterOsEnvironmentConfig</a></code> | os_environment_config block. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#project GkeonpremBareMetalCluster#project}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#project GkeonpremBareMetalCluster#project}. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.proxy">Proxy</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterProxy">GkeonpremBareMetalClusterProxy</a></code> | proxy block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.securityConfig">SecurityConfig</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterSecurityConfig">GkeonpremBareMetalClusterSecurityConfig</a></code> | security_config block. |
 | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts">GkeonpremBareMetalClusterTimeouts</a></code> | timeouts block. |
@@ -1795,7 +1795,7 @@ The Admin Cluster this Bare Metal User Cluster belongs to.
 
 This is the full resource name of the Admin Cluster's hub membership.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#admin_cluster_membership GkeonpremBareMetalCluster#admin_cluster_membership}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#admin_cluster_membership GkeonpremBareMetalCluster#admin_cluster_membership}
 
 ---
 
@@ -1809,7 +1809,7 @@ public string BareMetalVersion { get; set; }
 
 A human readable description of this Bare Metal User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#bare_metal_version GkeonpremBareMetalCluster#bare_metal_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#bare_metal_version GkeonpremBareMetalCluster#bare_metal_version}
 
 ---
 
@@ -1823,7 +1823,7 @@ public GkeonpremBareMetalClusterControlPlane ControlPlane { get; set; }
 
 control_plane block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane GkeonpremBareMetalCluster#control_plane}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane GkeonpremBareMetalCluster#control_plane}
 
 ---
 
@@ -1837,7 +1837,7 @@ public GkeonpremBareMetalClusterLoadBalancer LoadBalancer { get; set; }
 
 load_balancer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#load_balancer GkeonpremBareMetalCluster#load_balancer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#load_balancer GkeonpremBareMetalCluster#load_balancer}
 
 ---
 
@@ -1851,7 +1851,7 @@ public string Location { get; set; }
 
 The location of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#location GkeonpremBareMetalCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#location GkeonpremBareMetalCluster#location}
 
 ---
 
@@ -1865,7 +1865,7 @@ public string Name { get; set; }
 
 The bare metal cluster name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#name GkeonpremBareMetalCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#name GkeonpremBareMetalCluster#name}
 
 ---
 
@@ -1879,7 +1879,7 @@ public GkeonpremBareMetalClusterNetworkConfig NetworkConfig { get; set; }
 
 network_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#network_config GkeonpremBareMetalCluster#network_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#network_config GkeonpremBareMetalCluster#network_config}
 
 ---
 
@@ -1893,7 +1893,7 @@ public GkeonpremBareMetalClusterStorage Storage { get; set; }
 
 storage block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#storage GkeonpremBareMetalCluster#storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#storage GkeonpremBareMetalCluster#storage}
 
 ---
 
@@ -1918,7 +1918,7 @@ with dashes (-), underscores (_), dots (.), and alphanumerics between.
 **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
 Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#annotations GkeonpremBareMetalCluster#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#annotations GkeonpremBareMetalCluster#annotations}
 
 ---
 
@@ -1932,7 +1932,7 @@ public GkeonpremBareMetalClusterBinaryAuthorization BinaryAuthorization { get; s
 
 binary_authorization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#binary_authorization GkeonpremBareMetalCluster#binary_authorization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#binary_authorization GkeonpremBareMetalCluster#binary_authorization}
 
 ---
 
@@ -1946,7 +1946,7 @@ public GkeonpremBareMetalClusterClusterOperations ClusterOperations { get; set; 
 
 cluster_operations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#cluster_operations GkeonpremBareMetalCluster#cluster_operations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#cluster_operations GkeonpremBareMetalCluster#cluster_operations}
 
 ---
 
@@ -1960,7 +1960,7 @@ public string Description { get; set; }
 
 A human readable description of this Bare Metal User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#description GkeonpremBareMetalCluster#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#description GkeonpremBareMetalCluster#description}
 
 ---
 
@@ -1972,7 +1972,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#id GkeonpremBareMetalCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#id GkeonpremBareMetalCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1989,7 +1989,7 @@ public GkeonpremBareMetalClusterMaintenanceConfig MaintenanceConfig { get; set; 
 
 maintenance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#maintenance_config GkeonpremBareMetalCluster#maintenance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#maintenance_config GkeonpremBareMetalCluster#maintenance_config}
 
 ---
 
@@ -2003,7 +2003,7 @@ public GkeonpremBareMetalClusterNodeAccessConfig NodeAccessConfig { get; set; }
 
 node_access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_access_config GkeonpremBareMetalCluster#node_access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_access_config GkeonpremBareMetalCluster#node_access_config}
 
 ---
 
@@ -2017,7 +2017,7 @@ public GkeonpremBareMetalClusterNodeConfig NodeConfig { get; set; }
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_config GkeonpremBareMetalCluster#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_config GkeonpremBareMetalCluster#node_config}
 
 ---
 
@@ -2031,7 +2031,7 @@ public GkeonpremBareMetalClusterOsEnvironmentConfig OsEnvironmentConfig { get; s
 
 os_environment_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#os_environment_config GkeonpremBareMetalCluster#os_environment_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#os_environment_config GkeonpremBareMetalCluster#os_environment_config}
 
 ---
 
@@ -2043,7 +2043,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#project GkeonpremBareMetalCluster#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#project GkeonpremBareMetalCluster#project}.
 
 ---
 
@@ -2057,7 +2057,7 @@ public GkeonpremBareMetalClusterProxy Proxy { get; set; }
 
 proxy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#proxy GkeonpremBareMetalCluster#proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#proxy GkeonpremBareMetalCluster#proxy}
 
 ---
 
@@ -2071,7 +2071,7 @@ public GkeonpremBareMetalClusterSecurityConfig SecurityConfig { get; set; }
 
 security_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#security_config GkeonpremBareMetalCluster#security_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#security_config GkeonpremBareMetalCluster#security_config}
 
 ---
 
@@ -2085,7 +2085,7 @@ public GkeonpremBareMetalClusterTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#timeouts GkeonpremBareMetalCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#timeouts GkeonpremBareMetalCluster#timeouts}
 
 ---
 
@@ -2099,7 +2099,7 @@ public GkeonpremBareMetalClusterUpgradePolicy UpgradePolicy { get; set; }
 
 upgrade_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#upgrade_policy GkeonpremBareMetalCluster#upgrade_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#upgrade_policy GkeonpremBareMetalCluster#upgrade_policy}
 
 ---
 
@@ -2135,7 +2135,7 @@ public GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfig ControlPl
 
 control_plane_node_pool_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane_node_pool_config GkeonpremBareMetalCluster#control_plane_node_pool_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane_node_pool_config GkeonpremBareMetalCluster#control_plane_node_pool_config}
 
 ---
 
@@ -2149,7 +2149,7 @@ public object ApiServerArgs { get; set; }
 
 api_server_args block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#api_server_args GkeonpremBareMetalCluster#api_server_args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#api_server_args GkeonpremBareMetalCluster#api_server_args}
 
 ---
 
@@ -2185,7 +2185,7 @@ public string Argument { get; set; }
 
 The argument name as it appears on the API Server command line please make sure to remove the leading dashes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#argument GkeonpremBareMetalCluster#argument}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#argument GkeonpremBareMetalCluster#argument}
 
 ---
 
@@ -2199,7 +2199,7 @@ public string Value { get; set; }
 
 The value of the arg as it will be passed to the API Server command line.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#value GkeonpremBareMetalCluster#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#value GkeonpremBareMetalCluster#value}
 
 ---
 
@@ -2233,7 +2233,7 @@ public GkeonpremBareMetalClusterControlPlaneControlPlaneNodePoolConfigNodePoolCo
 
 node_pool_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_pool_config GkeonpremBareMetalCluster#node_pool_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_pool_config GkeonpremBareMetalCluster#node_pool_config}
 
 ---
 
@@ -2284,7 +2284,7 @@ and the valid values, see:
   An object containing a list of "key": value pairs.
   For example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
 
 ---
 
@@ -2298,7 +2298,7 @@ public object NodeConfigs { get; set; }
 
 node_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_configs GkeonpremBareMetalCluster#node_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_configs GkeonpremBareMetalCluster#node_configs}
 
 ---
 
@@ -2312,7 +2312,7 @@ public string OperatingSystem { get; set; }
 
 Specifies the nodes operating system (default: LINUX).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#operating_system GkeonpremBareMetalCluster#operating_system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#operating_system GkeonpremBareMetalCluster#operating_system}
 
 ---
 
@@ -2326,7 +2326,7 @@ public object Taints { get; set; }
 
 taints block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#taints GkeonpremBareMetalCluster#taints}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#taints GkeonpremBareMetalCluster#taints}
 
 ---
 
@@ -2373,7 +2373,7 @@ and the valid values, see:
   An object containing a list of "key": value pairs.
   Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
 
 ---
 
@@ -2387,7 +2387,7 @@ public string NodeIp { get; set; }
 
 The default IPv4 address for SSH access and Kubernetes node. Example: 192.168.0.1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_ip GkeonpremBareMetalCluster#node_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_ip GkeonpremBareMetalCluster#node_ip}
 
 ---
 
@@ -2425,7 +2425,7 @@ public string Effect { get; set; }
 
 Specifies the nodes operating system (default: LINUX). Possible values: ["EFFECT_UNSPECIFIED", "PREFER_NO_SCHEDULE", "NO_EXECUTE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#effect GkeonpremBareMetalCluster#effect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#effect GkeonpremBareMetalCluster#effect}
 
 ---
 
@@ -2439,7 +2439,7 @@ public string Key { get; set; }
 
 Key associated with the effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#key GkeonpremBareMetalCluster#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#key GkeonpremBareMetalCluster#key}
 
 ---
 
@@ -2453,7 +2453,7 @@ public string Value { get; set; }
 
 Value associated with the effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#value GkeonpremBareMetalCluster#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#value GkeonpremBareMetalCluster#value}
 
 ---
 
@@ -2508,7 +2508,7 @@ public GkeonpremBareMetalClusterLoadBalancerPortConfig PortConfig { get; set; }
 
 port_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#port_config GkeonpremBareMetalCluster#port_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#port_config GkeonpremBareMetalCluster#port_config}
 
 ---
 
@@ -2522,7 +2522,7 @@ public GkeonpremBareMetalClusterLoadBalancerVipConfig VipConfig { get; set; }
 
 vip_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#vip_config GkeonpremBareMetalCluster#vip_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#vip_config GkeonpremBareMetalCluster#vip_config}
 
 ---
 
@@ -2536,7 +2536,7 @@ public GkeonpremBareMetalClusterLoadBalancerBgpLbConfig BgpLbConfig { get; set; 
 
 bgp_lb_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#bgp_lb_config GkeonpremBareMetalCluster#bgp_lb_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#bgp_lb_config GkeonpremBareMetalCluster#bgp_lb_config}
 
 ---
 
@@ -2550,7 +2550,7 @@ public GkeonpremBareMetalClusterLoadBalancerManualLbConfig ManualLbConfig { get;
 
 manual_lb_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#manual_lb_config GkeonpremBareMetalCluster#manual_lb_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#manual_lb_config GkeonpremBareMetalCluster#manual_lb_config}
 
 ---
 
@@ -2564,7 +2564,7 @@ public GkeonpremBareMetalClusterLoadBalancerMetalLbConfig MetalLbConfig { get; s
 
 metal_lb_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#metal_lb_config GkeonpremBareMetalCluster#metal_lb_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#metal_lb_config GkeonpremBareMetalCluster#metal_lb_config}
 
 ---
 
@@ -2604,7 +2604,7 @@ public object AddressPools { get; set; }
 
 address_pools block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#address_pools GkeonpremBareMetalCluster#address_pools}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#address_pools GkeonpremBareMetalCluster#address_pools}
 
 ---
 
@@ -2618,7 +2618,7 @@ public double Asn { get; set; }
 
 BGP autonomous system number (ASN) of the cluster. This field can be updated after cluster creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#asn GkeonpremBareMetalCluster#asn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#asn GkeonpremBareMetalCluster#asn}
 
 ---
 
@@ -2632,7 +2632,7 @@ public object BgpPeerConfigs { get; set; }
 
 bgp_peer_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#bgp_peer_configs GkeonpremBareMetalCluster#bgp_peer_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#bgp_peer_configs GkeonpremBareMetalCluster#bgp_peer_configs}
 
 ---
 
@@ -2646,7 +2646,7 @@ public GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfi
 
 load_balancer_node_pool_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#load_balancer_node_pool_config GkeonpremBareMetalCluster#load_balancer_node_pool_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#load_balancer_node_pool_config GkeonpremBareMetalCluster#load_balancer_node_pool_config}
 
 ---
 
@@ -2688,7 +2688,7 @@ The addresses that are part of this pool.
 
 Each address must be either in the CIDR form (1.2.3.0/24) or range form (1.2.3.1-1.2.3.5).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#addresses GkeonpremBareMetalCluster#addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#addresses GkeonpremBareMetalCluster#addresses}
 
 ---
 
@@ -2702,7 +2702,7 @@ public string Pool { get; set; }
 
 The name of the address pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#pool GkeonpremBareMetalCluster#pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#pool GkeonpremBareMetalCluster#pool}
 
 ---
 
@@ -2716,7 +2716,7 @@ public object AvoidBuggyIps { get; set; }
 
 If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#avoid_buggy_ips GkeonpremBareMetalCluster#avoid_buggy_ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#avoid_buggy_ips GkeonpremBareMetalCluster#avoid_buggy_ips}
 
 ---
 
@@ -2730,7 +2730,7 @@ public string ManualAssign { get; set; }
 
 If true, prevent IP addresses from being automatically assigned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#manual_assign GkeonpremBareMetalCluster#manual_assign}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#manual_assign GkeonpremBareMetalCluster#manual_assign}
 
 ---
 
@@ -2768,7 +2768,7 @@ public double Asn { get; set; }
 
 BGP autonomous system number (ASN) for the network that contains the external peer device.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#asn GkeonpremBareMetalCluster#asn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#asn GkeonpremBareMetalCluster#asn}
 
 ---
 
@@ -2782,7 +2782,7 @@ public string IpAddress { get; set; }
 
 The IP address of the external peer device.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#ip_address GkeonpremBareMetalCluster#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#ip_address GkeonpremBareMetalCluster#ip_address}
 
 ---
 
@@ -2800,7 +2800,7 @@ If you don't specify any control plane nodes, all control plane nodes
 can connect to the external peer. If you specify one or more IP addresses,
 only the nodes specified participate in peering sessions.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane_nodes GkeonpremBareMetalCluster#control_plane_nodes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane_nodes GkeonpremBareMetalCluster#control_plane_nodes}
 
 ---
 
@@ -2834,7 +2834,7 @@ public GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfi
 
 node_pool_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_pool_config GkeonpremBareMetalCluster#node_pool_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_pool_config GkeonpremBareMetalCluster#node_pool_config}
 
 ---
 
@@ -2876,7 +2876,7 @@ public GkeonpremBareMetalClusterLoadBalancerBgpLbConfigLoadBalancerNodePoolConfi
 
 kubelet_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#kubelet_config GkeonpremBareMetalCluster#kubelet_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#kubelet_config GkeonpremBareMetalCluster#kubelet_config}
 
 ---
 
@@ -2901,7 +2901,7 @@ and the valid values, see:
   An object containing a list of "key": value pairs.
   For example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
 
 ---
 
@@ -2915,7 +2915,7 @@ public object NodeConfigs { get; set; }
 
 node_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_configs GkeonpremBareMetalCluster#node_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_configs GkeonpremBareMetalCluster#node_configs}
 
 ---
 
@@ -2929,7 +2929,7 @@ public string OperatingSystem { get; set; }
 
 Specifies the nodes operating system (default: LINUX).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#operating_system GkeonpremBareMetalCluster#operating_system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#operating_system GkeonpremBareMetalCluster#operating_system}
 
 ---
 
@@ -2943,7 +2943,7 @@ public object Taints { get; set; }
 
 taints block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#taints GkeonpremBareMetalCluster#taints}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#taints GkeonpremBareMetalCluster#taints}
 
 ---
 
@@ -2986,7 +2986,7 @@ Updating this field may impact scalability by changing the amount of
 traffic produced by image pulls.
 Defaults to 10.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#registry_burst GkeonpremBareMetalCluster#registry_burst}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#registry_burst GkeonpremBareMetalCluster#registry_burst}
 
 ---
 
@@ -3005,7 +3005,7 @@ Updating this field may impact scalability by changing the amount of
 traffic produced by image pulls.
 Defaults to 5.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#registry_pull_qps GkeonpremBareMetalCluster#registry_pull_qps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#registry_pull_qps GkeonpremBareMetalCluster#registry_pull_qps}
 
 ---
 
@@ -3024,7 +3024,7 @@ daemon with version  < 1.9 or an Another Union File System (Aufs) storage
 backend. Issue https://github.com/kubernetes/kubernetes/issues/10959 has
 more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#serialize_image_pulls_disabled GkeonpremBareMetalCluster#serialize_image_pulls_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#serialize_image_pulls_disabled GkeonpremBareMetalCluster#serialize_image_pulls_disabled}
 
 ---
 
@@ -3071,7 +3071,7 @@ and the valid values, see:
   An object containing a list of "key": value pairs.
   For example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
 
 ---
 
@@ -3085,7 +3085,7 @@ public string NodeIp { get; set; }
 
 The default IPv4 address for SSH access and Kubernetes node. Example: 192.168.0.1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_ip GkeonpremBareMetalCluster#node_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_ip GkeonpremBareMetalCluster#node_ip}
 
 ---
 
@@ -3123,7 +3123,7 @@ public string Effect { get; set; }
 
 Specifies the nodes operating system (default: LINUX). Possible values: ["EFFECT_UNSPECIFIED", "PREFER_NO_SCHEDULE", "NO_EXECUTE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#effect GkeonpremBareMetalCluster#effect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#effect GkeonpremBareMetalCluster#effect}
 
 ---
 
@@ -3137,7 +3137,7 @@ public string Key { get; set; }
 
 Key associated with the effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#key GkeonpremBareMetalCluster#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#key GkeonpremBareMetalCluster#key}
 
 ---
 
@@ -3151,7 +3151,7 @@ public string Value { get; set; }
 
 Value associated with the effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#value GkeonpremBareMetalCluster#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#value GkeonpremBareMetalCluster#value}
 
 ---
 
@@ -3185,7 +3185,7 @@ public object Enabled { get; set; }
 
 Whether manual load balancing is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#enabled GkeonpremBareMetalCluster#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#enabled GkeonpremBareMetalCluster#enabled}
 
 ---
 
@@ -3221,7 +3221,7 @@ public object AddressPools { get; set; }
 
 address_pools block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#address_pools GkeonpremBareMetalCluster#address_pools}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#address_pools GkeonpremBareMetalCluster#address_pools}
 
 ---
 
@@ -3235,7 +3235,7 @@ public GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolCon
 
 load_balancer_node_pool_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#load_balancer_node_pool_config GkeonpremBareMetalCluster#load_balancer_node_pool_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#load_balancer_node_pool_config GkeonpremBareMetalCluster#load_balancer_node_pool_config}
 
 ---
 
@@ -3277,7 +3277,7 @@ The addresses that are part of this pool.
 
 Each address must be either in the CIDR form (1.2.3.0/24) or range form (1.2.3.1-1.2.3.5).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#addresses GkeonpremBareMetalCluster#addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#addresses GkeonpremBareMetalCluster#addresses}
 
 ---
 
@@ -3291,7 +3291,7 @@ public string Pool { get; set; }
 
 The name of the address pool.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#pool GkeonpremBareMetalCluster#pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#pool GkeonpremBareMetalCluster#pool}
 
 ---
 
@@ -3305,7 +3305,7 @@ public object AvoidBuggyIps { get; set; }
 
 If true, avoid using IPs ending in .0 or .255. This avoids buggy consumer devices mistakenly dropping IPv4 traffic for those special IP addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#avoid_buggy_ips GkeonpremBareMetalCluster#avoid_buggy_ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#avoid_buggy_ips GkeonpremBareMetalCluster#avoid_buggy_ips}
 
 ---
 
@@ -3319,7 +3319,7 @@ public object ManualAssign { get; set; }
 
 If true, prevent IP addresses from being automatically assigned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#manual_assign GkeonpremBareMetalCluster#manual_assign}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#manual_assign GkeonpremBareMetalCluster#manual_assign}
 
 ---
 
@@ -3353,7 +3353,7 @@ public GkeonpremBareMetalClusterLoadBalancerMetalLbConfigLoadBalancerNodePoolCon
 
 node_pool_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_pool_config GkeonpremBareMetalCluster#node_pool_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_pool_config GkeonpremBareMetalCluster#node_pool_config}
 
 ---
 
@@ -3404,7 +3404,7 @@ and the valid values, see:
   An object containing a list of "key": value pairs.
   For example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
 
 ---
 
@@ -3418,7 +3418,7 @@ public object NodeConfigs { get; set; }
 
 node_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_configs GkeonpremBareMetalCluster#node_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_configs GkeonpremBareMetalCluster#node_configs}
 
 ---
 
@@ -3432,7 +3432,7 @@ public string OperatingSystem { get; set; }
 
 Specifies the nodes operating system (default: LINUX).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#operating_system GkeonpremBareMetalCluster#operating_system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#operating_system GkeonpremBareMetalCluster#operating_system}
 
 ---
 
@@ -3446,7 +3446,7 @@ public object Taints { get; set; }
 
 taints block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#taints GkeonpremBareMetalCluster#taints}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#taints GkeonpremBareMetalCluster#taints}
 
 ---
 
@@ -3493,7 +3493,7 @@ and the valid values, see:
   An object containing a list of "key": value pairs.
   For example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#labels GkeonpremBareMetalCluster#labels}
 
 ---
 
@@ -3507,7 +3507,7 @@ public string NodeIp { get; set; }
 
 The default IPv4 address for SSH access and Kubernetes node. Example: 192.168.0.1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#node_ip GkeonpremBareMetalCluster#node_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#node_ip GkeonpremBareMetalCluster#node_ip}
 
 ---
 
@@ -3545,7 +3545,7 @@ public string Effect { get; set; }
 
 Specifies the nodes operating system (default: LINUX). Possible values: ["EFFECT_UNSPECIFIED", "PREFER_NO_SCHEDULE", "NO_EXECUTE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#effect GkeonpremBareMetalCluster#effect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#effect GkeonpremBareMetalCluster#effect}
 
 ---
 
@@ -3559,7 +3559,7 @@ public string Key { get; set; }
 
 Key associated with the effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#key GkeonpremBareMetalCluster#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#key GkeonpremBareMetalCluster#key}
 
 ---
 
@@ -3573,7 +3573,7 @@ public string Value { get; set; }
 
 Value associated with the effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#value GkeonpremBareMetalCluster#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#value GkeonpremBareMetalCluster#value}
 
 ---
 
@@ -3607,7 +3607,7 @@ public double ControlPlaneLoadBalancerPort { get; set; }
 
 The port that control plane hosted load balancers will listen on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane_load_balancer_port GkeonpremBareMetalCluster#control_plane_load_balancer_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane_load_balancer_port GkeonpremBareMetalCluster#control_plane_load_balancer_port}
 
 ---
 
@@ -3643,7 +3643,7 @@ public string ControlPlaneVip { get; set; }
 
 The VIP which you previously set aside for the Kubernetes API of this Bare Metal User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane_vip GkeonpremBareMetalCluster#control_plane_vip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#control_plane_vip GkeonpremBareMetalCluster#control_plane_vip}
 
 ---
 
@@ -3657,7 +3657,7 @@ public string IngressVip { get; set; }
 
 The VIP which you previously set aside for ingress traffic into this Bare Metal User Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#ingress_vip GkeonpremBareMetalCluster#ingress_vip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#ingress_vip GkeonpremBareMetalCluster#ingress_vip}
 
 ---
 
@@ -3695,7 +3695,7 @@ Nodes in maintenance mode will be cordoned and drained. When both of these
 are true, the "baremetal.cluster.gke.io/maintenance" annotation will be set
 on the node resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#maintenance_address_cidr_blocks GkeonpremBareMetalCluster#maintenance_address_cidr_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#maintenance_address_cidr_blocks GkeonpremBareMetalCluster#maintenance_address_cidr_blocks}
 
 ---
 
@@ -3738,7 +3738,7 @@ Enables the use of advanced Anthos networking features, such as Bundled Load Bal
 Setting configuration for advanced networking features will automatically
 set this flag.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#advanced_networking GkeonpremBareMetalCluster#advanced_networking}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#advanced_networking GkeonpremBareMetalCluster#advanced_networking}
 
 ---
 
@@ -3752,7 +3752,7 @@ public GkeonpremBareMetalClusterNetworkConfigIslandModeCidr IslandModeCidr { get
 
 island_mode_cidr block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#island_mode_cidr GkeonpremBareMetalCluster#island_mode_cidr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#island_mode_cidr GkeonpremBareMetalCluster#island_mode_cidr}
 
 ---
 
@@ -3766,7 +3766,7 @@ public GkeonpremBareMetalClusterNetworkConfigMultipleNetworkInterfacesConfig Mul
 
 multiple_network_interfaces_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#multiple_network_interfaces_config GkeonpremBareMetalCluster#multiple_network_interfaces_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#multiple_network_interfaces_config GkeonpremBareMetalCluster#multiple_network_interfaces_config}
 
 ---
 
@@ -3780,7 +3780,7 @@ public GkeonpremBareMetalClusterNetworkConfigSrIovConfig SrIovConfig { get; set;
 
 sr_iov_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#sr_iov_config GkeonpremBareMetalCluster#sr_iov_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#sr_iov_config GkeonpremBareMetalCluster#sr_iov_config}
 
 ---
 
@@ -3818,7 +3818,7 @@ All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges.
 
 This field cannot be changed after creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#pod_address_cidr_blocks GkeonpremBareMetalCluster#pod_address_cidr_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#pod_address_cidr_blocks GkeonpremBareMetalCluster#pod_address_cidr_blocks}
 
 ---
 
@@ -3834,7 +3834,7 @@ All services in the cluster are assigned an RFC1918 IPv4 address from these rang
 
 This field cannot be changed after creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#service_address_cidr_blocks GkeonpremBareMetalCluster#service_address_cidr_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#service_address_cidr_blocks GkeonpremBareMetalCluster#service_address_cidr_blocks}
 
 ---
 
@@ -3868,7 +3868,7 @@ public object Enabled { get; set; }
 
 Whether to enable multiple network interfaces for your pods. When set network_config.advanced_networking is automatically set to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#enabled GkeonpremBareMetalCluster#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#enabled GkeonpremBareMetalCluster#enabled}
 
 ---
 
@@ -3902,7 +3902,7 @@ public object Enabled { get; set; }
 
 Whether to install the SR-IOV operator.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#enabled GkeonpremBareMetalCluster#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#enabled GkeonpremBareMetalCluster#enabled}
 
 ---
 
@@ -3936,7 +3936,7 @@ public string LoginUser { get; set; }
 
 LoginUser is the user name used to access node machines. It defaults to "root" if not set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#login_user GkeonpremBareMetalCluster#login_user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#login_user GkeonpremBareMetalCluster#login_user}
 
 ---
 
@@ -3974,7 +3974,7 @@ The available runtimes that can be used to run containers in a Bare Metal User C
 
 Possible values: ["CONTAINER_RUNTIME_UNSPECIFIED", "DOCKER", "CONTAINERD"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#container_runtime GkeonpremBareMetalCluster#container_runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#container_runtime GkeonpremBareMetalCluster#container_runtime}
 
 ---
 
@@ -3991,7 +3991,7 @@ The maximum number of pods a node can run.
 The size of the CIDR range
 assigned to the node will be derived from this parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#max_pods_per_node GkeonpremBareMetalCluster#max_pods_per_node}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#max_pods_per_node GkeonpremBareMetalCluster#max_pods_per_node}
 
 ---
 
@@ -4025,7 +4025,7 @@ public object PackageRepoExcluded { get; set; }
 
 Whether the package repo should not be included when initializing bare metal machines.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#package_repo_excluded GkeonpremBareMetalCluster#package_repo_excluded}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#package_repo_excluded GkeonpremBareMetalCluster#package_repo_excluded}
 
 ---
 
@@ -4065,7 +4065,7 @@ For example: http://domain
 WARNING: Do not provide credentials in the format
 of http://(username:password@)domain these will be rejected by the server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#uri GkeonpremBareMetalCluster#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#uri GkeonpremBareMetalCluster#uri}
 
 ---
 
@@ -4079,7 +4079,7 @@ public string[] NoProxy { get; set; }
 
 A list of IPs, hostnames, and domains that should skip the proxy. For example ["127.0.0.1", "example.com", ".corp", "localhost"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#no_proxy GkeonpremBareMetalCluster#no_proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#no_proxy GkeonpremBareMetalCluster#no_proxy}
 
 ---
 
@@ -4113,7 +4113,7 @@ public GkeonpremBareMetalClusterSecurityConfigAuthorization Authorization { get;
 
 authorization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#authorization GkeonpremBareMetalCluster#authorization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#authorization GkeonpremBareMetalCluster#authorization}
 
 ---
 
@@ -4147,7 +4147,7 @@ public object AdminUsers { get; set; }
 
 admin_users block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#admin_users GkeonpremBareMetalCluster#admin_users}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#admin_users GkeonpremBareMetalCluster#admin_users}
 
 ---
 
@@ -4181,7 +4181,7 @@ public string Username { get; set; }
 
 The name of the user, e.g. 'my-gcp-id@gmail.com'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#username GkeonpremBareMetalCluster#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#username GkeonpremBareMetalCluster#username}
 
 ---
 
@@ -4243,7 +4243,7 @@ public GkeonpremBareMetalClusterStorageLvpNodeMountsConfig LvpNodeMountsConfig {
 
 lvp_node_mounts_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#lvp_node_mounts_config GkeonpremBareMetalCluster#lvp_node_mounts_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#lvp_node_mounts_config GkeonpremBareMetalCluster#lvp_node_mounts_config}
 
 ---
 
@@ -4257,7 +4257,7 @@ public GkeonpremBareMetalClusterStorageLvpShareConfig LvpShareConfig { get; set;
 
 lvp_share_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#lvp_share_config GkeonpremBareMetalCluster#lvp_share_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#lvp_share_config GkeonpremBareMetalCluster#lvp_share_config}
 
 ---
 
@@ -4293,7 +4293,7 @@ public string Path { get; set; }
 
 The host machine path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#path GkeonpremBareMetalCluster#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#path GkeonpremBareMetalCluster#path}
 
 ---
 
@@ -4307,7 +4307,7 @@ public string StorageClass { get; set; }
 
 The StorageClass name that PVs will be created with.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#storage_class GkeonpremBareMetalCluster#storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#storage_class GkeonpremBareMetalCluster#storage_class}
 
 ---
 
@@ -4343,7 +4343,7 @@ public GkeonpremBareMetalClusterStorageLvpShareConfigLvpConfig LvpConfig { get; 
 
 lvp_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#lvp_config GkeonpremBareMetalCluster#lvp_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#lvp_config GkeonpremBareMetalCluster#lvp_config}
 
 ---
 
@@ -4357,7 +4357,7 @@ public double SharedPathPvCount { get; set; }
 
 The number of subdirectories to create under path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#shared_path_pv_count GkeonpremBareMetalCluster#shared_path_pv_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#shared_path_pv_count GkeonpremBareMetalCluster#shared_path_pv_count}
 
 ---
 
@@ -4393,7 +4393,7 @@ public string Path { get; set; }
 
 The host machine path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#path GkeonpremBareMetalCluster#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#path GkeonpremBareMetalCluster#path}
 
 ---
 
@@ -4407,7 +4407,7 @@ public string StorageClass { get; set; }
 
 The StorageClass name that PVs will be created with.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#storage_class GkeonpremBareMetalCluster#storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#storage_class GkeonpremBareMetalCluster#storage_class}
 
 ---
 
@@ -4429,9 +4429,9 @@ new GkeonpremBareMetalClusterTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#create GkeonpremBareMetalCluster#create}. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#delete GkeonpremBareMetalCluster#delete}. |
-| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#update GkeonpremBareMetalCluster#update}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#create GkeonpremBareMetalCluster#create}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#delete GkeonpremBareMetalCluster#delete}. |
+| <code><a href="#@cdktf/provider-google.gkeonpremBareMetalCluster.GkeonpremBareMetalClusterTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#update GkeonpremBareMetalCluster#update}. |
 
 ---
 
@@ -4443,7 +4443,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#create GkeonpremBareMetalCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#create GkeonpremBareMetalCluster#create}.
 
 ---
 
@@ -4455,7 +4455,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#delete GkeonpremBareMetalCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#delete GkeonpremBareMetalCluster#delete}.
 
 ---
 
@@ -4467,7 +4467,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#update GkeonpremBareMetalCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#update GkeonpremBareMetalCluster#update}.
 
 ---
 
@@ -4501,7 +4501,7 @@ public string Policy { get; set; }
 
 Specifies which upgrade policy to use. Possible values: ["SERIAL", "CONCURRENT"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.29.0/docs/resources/gkeonprem_bare_metal_cluster#policy GkeonpremBareMetalCluster#policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/gkeonprem_bare_metal_cluster#policy GkeonpremBareMetalCluster#policy}
 
 ---
 
