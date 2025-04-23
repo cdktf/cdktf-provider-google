@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment
+// https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,7 +11,7 @@ export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
   * Optional. API Proxy type supported by the environment. The type can be set when creating
   * the Environment and cannot be changed. Possible values: ["API_PROXY_TYPE_UNSPECIFIED", "PROGRAMMABLE", "CONFIGURABLE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#api_proxy_type ApigeeEnvironment#api_proxy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#api_proxy_type ApigeeEnvironment#api_proxy_type}
   */
   readonly apiProxyType?: string;
   /**
@@ -28,29 +23,29 @@ export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
   * Creating, updating, or deleting resource files;
   * Creating, updating, or deleting target servers. Possible values: ["DEPLOYMENT_TYPE_UNSPECIFIED", "PROXY", "ARCHIVE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#deployment_type ApigeeEnvironment#deployment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#deployment_type ApigeeEnvironment#deployment_type}
   */
   readonly deploymentType?: string;
   /**
   * Description of the environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#description ApigeeEnvironment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#description ApigeeEnvironment#description}
   */
   readonly description?: string;
   /**
   * Display name of the environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#display_name ApigeeEnvironment#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#display_name ApigeeEnvironment#display_name}
   */
   readonly displayName?: string;
   /**
   * Optional. URI of the forward proxy to be applied to the runtime instances in this environment. Must be in the format of {scheme}://{hostname}:{port}. Note that the scheme must be one of "http" or "https", and the port must be supplied.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#forward_proxy_uri ApigeeEnvironment#forward_proxy_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#forward_proxy_uri ApigeeEnvironment#forward_proxy_uri}
   */
   readonly forwardProxyUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#id ApigeeEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#id ApigeeEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -59,14 +54,14 @@ export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The resource ID of the environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#name ApigeeEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#name ApigeeEnvironment#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee environment,
   * in the format 'organizations/{{org_name}}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#org_id ApigeeEnvironment#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#org_id ApigeeEnvironment#org_id}
   */
   readonly orgId: string;
   /**
@@ -75,25 +70,25 @@ export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
   * to understand about each of these types in details.
   * An Apigee org can support heterogeneous Environments. Possible values: ["ENVIRONMENT_TYPE_UNSPECIFIED", "BASE", "INTERMEDIATE", "COMPREHENSIVE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#type ApigeeEnvironment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#type ApigeeEnvironment#type}
   */
   readonly type?: string;
   /**
   * node_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#node_config ApigeeEnvironment#node_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#node_config ApigeeEnvironment#node_config}
   */
   readonly nodeConfig?: ApigeeEnvironmentNodeConfig;
   /**
   * properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#properties ApigeeEnvironment#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#properties ApigeeEnvironment#properties}
   */
   readonly properties?: ApigeeEnvironmentProperties;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#timeouts ApigeeEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#timeouts ApigeeEnvironment#timeouts}
   */
   readonly timeouts?: ApigeeEnvironmentTimeouts;
 }
@@ -103,7 +98,7 @@ export interface ApigeeEnvironmentNodeConfig {
   * has the specified environment. If not specified, the default is determined by the
   * recommended maximum number of nodes for that gateway.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#max_node_count ApigeeEnvironment#max_node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#max_node_count ApigeeEnvironment#max_node_count}
   */
   readonly maxNodeCount?: string;
   /**
@@ -111,7 +106,7 @@ export interface ApigeeEnvironmentNodeConfig {
   * has the specified environment. If not specified, the default is determined by the
   * recommended minimum number of nodes for that gateway.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#min_node_count ApigeeEnvironment#min_node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#min_node_count ApigeeEnvironment#min_node_count}
   */
   readonly minNodeCount?: string;
 }
@@ -231,13 +226,13 @@ export interface ApigeeEnvironmentPropertiesProperty {
   /**
   * The property key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#name ApigeeEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#name ApigeeEnvironment#name}
   */
   readonly name?: string;
   /**
   * The property value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#value ApigeeEnvironment#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#value ApigeeEnvironment#value}
   */
   readonly value?: string;
 }
@@ -384,7 +379,7 @@ export interface ApigeeEnvironmentProperties {
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#property ApigeeEnvironment#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#property ApigeeEnvironment#property}
   */
   readonly property?: ApigeeEnvironmentPropertiesProperty[] | cdktf.IResolvable;
 }
@@ -468,15 +463,15 @@ export class ApigeeEnvironmentPropertiesOutputReference extends cdktf.ComplexObj
 }
 export interface ApigeeEnvironmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#create ApigeeEnvironment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#create ApigeeEnvironment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#delete ApigeeEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#delete ApigeeEnvironment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#update ApigeeEnvironment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#update ApigeeEnvironment#update}
   */
   readonly update?: string;
 }
@@ -628,7 +623,7 @@ export class ApigeeEnvironmentTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment google_apigee_environment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment google_apigee_environment}
 */
 export class ApigeeEnvironment extends cdktf.TerraformResource {
 
@@ -644,7 +639,7 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeEnvironment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeEnvironment to import
-  * @param importFromId The id of the existing ApigeeEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -656,7 +651,7 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/apigee_environment google_apigee_environment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_environment google_apigee_environment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -667,7 +662,7 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.30.0',
+        providerVersion: '6.31.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
