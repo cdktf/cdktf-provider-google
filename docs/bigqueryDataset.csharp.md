@@ -4,7 +4,7 @@
 
 ### BigqueryDataset <a name="BigqueryDataset" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset google_bigquery_dataset}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset google_bigquery_dataset}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.Initializer"></a>
 
@@ -75,6 +75,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.putAccess">PutAccess</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.putDefaultEncryptionConfiguration">PutDefaultEncryptionConfiguration</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.putExternalCatalogDatasetOptions">PutExternalCatalogDatasetOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.putExternalDatasetReference">PutExternalDatasetReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetAccess">ResetAccess</a></code> | *No description.* |
@@ -84,6 +85,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetDefaultTableExpirationMs">ResetDefaultTableExpirationMs</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetDeleteContentsOnDestroy">ResetDeleteContentsOnDestroy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetDescription">ResetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetExternalCatalogDatasetOptions">ResetExternalCatalogDatasetOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetExternalDatasetReference">ResetExternalDatasetReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetFriendlyName">ResetFriendlyName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetId">ResetId</a></code> | *No description.* |
@@ -410,6 +412,18 @@ private void PutDefaultEncryptionConfiguration(BigqueryDatasetDefaultEncryptionC
 
 ---
 
+##### `PutExternalCatalogDatasetOptions` <a name="PutExternalCatalogDatasetOptions" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.putExternalCatalogDatasetOptions"></a>
+
+```csharp
+private void PutExternalCatalogDatasetOptions(BigqueryDatasetExternalCatalogDatasetOptions Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.putExternalCatalogDatasetOptions.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions">BigqueryDatasetExternalCatalogDatasetOptions</a>
+
+---
+
 ##### `PutExternalDatasetReference` <a name="PutExternalDatasetReference" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.putExternalDatasetReference"></a>
 
 ```csharp
@@ -474,6 +488,12 @@ private void ResetDeleteContentsOnDestroy()
 
 ```csharp
 private void ResetDescription()
+```
+
+##### `ResetExternalCatalogDatasetOptions` <a name="ResetExternalCatalogDatasetOptions" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetExternalCatalogDatasetOptions"></a>
+
+```csharp
+private void ResetExternalCatalogDatasetOptions()
 ```
 
 ##### `ResetExternalDatasetReference` <a name="ResetExternalDatasetReference" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.resetExternalDatasetReference"></a>
@@ -645,7 +665,7 @@ The construct id used in the generated config for the BigqueryDataset to import.
 
 The id of the existing BigqueryDataset that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -680,6 +700,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.defaultEncryptionConfiguration">DefaultEncryptionConfiguration</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetDefaultEncryptionConfigurationOutputReference">BigqueryDatasetDefaultEncryptionConfigurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.effectiveLabels">EffectiveLabels</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.etag">Etag</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.externalCatalogDatasetOptions">ExternalCatalogDatasetOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference">BigqueryDatasetExternalCatalogDatasetOptionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.externalDatasetReference">ExternalDatasetReference</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalDatasetReferenceOutputReference">BigqueryDatasetExternalDatasetReferenceOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.lastModifiedTime">LastModifiedTime</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.selfLink">SelfLink</a></code> | <code>string</code> | *No description.* |
@@ -693,6 +714,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.defaultTableExpirationMsInput">DefaultTableExpirationMsInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.deleteContentsOnDestroyInput">DeleteContentsOnDestroyInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.externalCatalogDatasetOptionsInput">ExternalCatalogDatasetOptionsInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions">BigqueryDatasetExternalCatalogDatasetOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.externalDatasetReferenceInput">ExternalDatasetReferenceInput</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalDatasetReference">BigqueryDatasetExternalDatasetReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.friendlyNameInput">FriendlyNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
@@ -914,6 +936,16 @@ public string Etag { get; }
 
 ---
 
+##### `ExternalCatalogDatasetOptions`<sup>Required</sup> <a name="ExternalCatalogDatasetOptions" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.externalCatalogDatasetOptions"></a>
+
+```csharp
+public BigqueryDatasetExternalCatalogDatasetOptionsOutputReference ExternalCatalogDatasetOptions { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference">BigqueryDatasetExternalCatalogDatasetOptionsOutputReference</a>
+
+---
+
 ##### `ExternalDatasetReference`<sup>Required</sup> <a name="ExternalDatasetReference" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.externalDatasetReference"></a>
 
 ```csharp
@@ -1041,6 +1073,16 @@ public string DescriptionInput { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `ExternalCatalogDatasetOptionsInput`<sup>Optional</sup> <a name="ExternalCatalogDatasetOptionsInput" id="@cdktf/provider-google.bigqueryDataset.BigqueryDataset.property.externalCatalogDatasetOptionsInput"></a>
+
+```csharp
+public BigqueryDatasetExternalCatalogDatasetOptions ExternalCatalogDatasetOptionsInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions">BigqueryDatasetExternalCatalogDatasetOptions</a>
 
 ---
 
@@ -1372,7 +1414,7 @@ public BigqueryDatasetAccessCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#condition BigqueryDataset#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#condition BigqueryDataset#condition}
 
 ---
 
@@ -1386,7 +1428,7 @@ public BigqueryDatasetAccessDataset Dataset { get; set; }
 
 dataset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
 
 ---
 
@@ -1400,7 +1442,7 @@ public string Domain { get; set; }
 
 A domain to grant access to. Any users signed in with the domain specified will be granted the specified access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#domain BigqueryDataset#domain}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#domain BigqueryDataset#domain}
 
 ---
 
@@ -1414,7 +1456,7 @@ public string GroupByEmail { get; set; }
 
 An email address of a Google Group to grant access to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#group_by_email BigqueryDataset#group_by_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#group_by_email BigqueryDataset#group_by_email}
 
 ---
 
@@ -1430,7 +1472,7 @@ Some other type of member that appears in the IAM Policy but isn't a user, group
 
 For example: 'allUsers'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#iam_member BigqueryDataset#iam_member}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#iam_member BigqueryDataset#iam_member}
 
 ---
 
@@ -1449,7 +1491,7 @@ are supported. Predefined roles that have equivalent basic roles
 are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#role BigqueryDataset#role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#role BigqueryDataset#role}
 
 ---
 
@@ -1463,7 +1505,7 @@ public BigqueryDatasetAccessRoutine Routine { get; set; }
 
 routine block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#routine BigqueryDataset#routine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#routine BigqueryDataset#routine}
 
 ---
 
@@ -1484,7 +1526,7 @@ Possible values include:
 * 'projectWriters': Writers of the enclosing project.
 * 'allAuthenticatedUsers': All authenticated BigQuery users.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#special_group BigqueryDataset#special_group}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#special_group BigqueryDataset#special_group}
 
 ---
 
@@ -1498,7 +1540,7 @@ public string UserByEmail { get; set; }
 
 An email address of a user to grant access to. For example: fred@example.com.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#user_by_email BigqueryDataset#user_by_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#user_by_email BigqueryDataset#user_by_email}
 
 ---
 
@@ -1512,7 +1554,7 @@ public BigqueryDatasetAccessView View { get; set; }
 
 view block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#view BigqueryDataset#view}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#view BigqueryDataset#view}
 
 ---
 
@@ -1552,7 +1594,7 @@ public string Expression { get; set; }
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#expression BigqueryDataset#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#expression BigqueryDataset#expression}
 
 ---
 
@@ -1569,7 +1611,7 @@ Description of the expression.
 This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
 
 ---
 
@@ -1583,7 +1625,7 @@ public string Location { get; set; }
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
 
 ---
 
@@ -1597,7 +1639,7 @@ public string Title { get; set; }
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#title BigqueryDataset#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#title BigqueryDataset#title}
 
 ---
 
@@ -1633,7 +1675,7 @@ public BigqueryDatasetAccessDatasetDataset Dataset { get; set; }
 
 dataset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
 
 ---
 
@@ -1650,7 +1692,7 @@ Which resources in the dataset this entry applies to.
 Currently, only views are supported,
 but additional target types may be added in the future. Possible values: VIEWS
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#target_types BigqueryDataset#target_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#target_types BigqueryDataset#target_types}
 
 ---
 
@@ -1686,7 +1728,7 @@ public string DatasetId { get; set; }
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -1700,7 +1742,7 @@ public string ProjectId { get; set; }
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -1738,7 +1780,7 @@ public string DatasetId { get; set; }
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -1752,7 +1794,7 @@ public string ProjectId { get; set; }
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -1770,7 +1812,7 @@ The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 256 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#routine_id BigqueryDataset#routine_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#routine_id BigqueryDataset#routine_id}
 
 ---
 
@@ -1808,7 +1850,7 @@ public string DatasetId { get; set; }
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -1822,7 +1864,7 @@ public string ProjectId { get; set; }
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
 
 ---
 
@@ -1840,7 +1882,7 @@ The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#table_id BigqueryDataset#table_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#table_id BigqueryDataset#table_id}
 
 ---
 
@@ -1867,6 +1909,7 @@ new BigqueryDatasetConfig {
     double DefaultTableExpirationMs = null,
     object DeleteContentsOnDestroy = null,
     string Description = null,
+    BigqueryDatasetExternalCatalogDatasetOptions ExternalCatalogDatasetOptions = null,
     BigqueryDatasetExternalDatasetReference ExternalDatasetReference = null,
     string FriendlyName = null,
     string Id = null,
@@ -1900,14 +1943,15 @@ new BigqueryDatasetConfig {
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.defaultTableExpirationMs">DefaultTableExpirationMs</a></code> | <code>double</code> | The default lifetime of all tables in the dataset, in milliseconds. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.deleteContentsOnDestroy">DeleteContentsOnDestroy</a></code> | <code>object</code> | If set to 'true', delete all the tables in the dataset when destroying the resource; |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.description">Description</a></code> | <code>string</code> | A user-friendly description of the dataset. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.externalCatalogDatasetOptions">ExternalCatalogDatasetOptions</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions">BigqueryDatasetExternalCatalogDatasetOptions</a></code> | external_catalog_dataset_options block. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.externalDatasetReference">ExternalDatasetReference</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalDatasetReference">BigqueryDatasetExternalDatasetReference</a></code> | external_dataset_reference block. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.friendlyName">FriendlyName</a></code> | <code>string</code> | A descriptive name for the dataset. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.isCaseInsensitive">IsCaseInsensitive</a></code> | <code>object</code> | TRUE if the dataset and its table names are case-insensitive, otherwise FALSE. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | The labels associated with this dataset. You can use these to organize and group your datasets. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.location">Location</a></code> | <code>string</code> | The geographic location where the dataset should reside. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.maxTimeTravelHours">MaxTimeTravelHours</a></code> | <code>string</code> | Defines the time travel window in hours. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.resourceTags">ResourceTags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | The tags attached to this table. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.storageBillingModel">StorageBillingModel</a></code> | <code>string</code> | Specifies the storage billing model for the dataset. |
 | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts">BigqueryDatasetTimeouts</a></code> | timeouts block. |
@@ -1998,7 +2042,7 @@ The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
 
 ---
 
@@ -2012,7 +2056,7 @@ public object Access { get; set; }
 
 access block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#access BigqueryDataset#access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#access BigqueryDataset#access}
 
 ---
 
@@ -2037,7 +2081,7 @@ The following values are supported:
 * 'und:ci': undetermined locale, case insensitive.
 * '': empty string. Default to case-sensitive behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#default_collation BigqueryDataset#default_collation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#default_collation BigqueryDataset#default_collation}
 
 ---
 
@@ -2051,7 +2095,7 @@ public BigqueryDatasetDefaultEncryptionConfiguration DefaultEncryptionConfigurat
 
 default_encryption_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
 
 ---
 
@@ -2077,7 +2121,7 @@ table. If you provide an explicit 'timePartitioning.expirationMs' when
 creating or updating a partitioned table, that value takes precedence
 over the default partition expiration time indicated by this property.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
 
 ---
 
@@ -2102,7 +2146,7 @@ table expires, or if you provide an explicit 'expirationTime' when
 creating a table, that value takes precedence over the default
 expiration time indicated by this property.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
 
 ---
 
@@ -2119,7 +2163,7 @@ If set to 'true', delete all the tables in the dataset when destroying the resou
 otherwise,
 destroying the resource will fail if tables are present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
 
 ---
 
@@ -2133,7 +2177,21 @@ public string Description { get; set; }
 
 A user-friendly description of the dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
+
+---
+
+##### `ExternalCatalogDatasetOptions`<sup>Optional</sup> <a name="ExternalCatalogDatasetOptions" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetConfig.property.externalCatalogDatasetOptions"></a>
+
+```csharp
+public BigqueryDatasetExternalCatalogDatasetOptions ExternalCatalogDatasetOptions { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions">BigqueryDatasetExternalCatalogDatasetOptions</a>
+
+external_catalog_dataset_options block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#external_catalog_dataset_options BigqueryDataset#external_catalog_dataset_options}
 
 ---
 
@@ -2147,7 +2205,7 @@ public BigqueryDatasetExternalDatasetReference ExternalDatasetReference { get; s
 
 external_dataset_reference block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#external_dataset_reference BigqueryDataset#external_dataset_reference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#external_dataset_reference BigqueryDataset#external_dataset_reference}
 
 ---
 
@@ -2161,7 +2219,7 @@ public string FriendlyName { get; set; }
 
 A descriptive name for the dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#friendly_name BigqueryDataset#friendly_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#friendly_name BigqueryDataset#friendly_name}
 
 ---
 
@@ -2173,7 +2231,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#id BigqueryDataset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2193,7 +2251,7 @@ TRUE if the dataset and its table names are case-insensitive, otherwise FALSE.
 By default, this is FALSE, which means the dataset and its table names are
 case-sensitive. This field does not affect routine references.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
 
 ---
 
@@ -2210,7 +2268,7 @@ The labels associated with this dataset. You can use these to organize and group
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
 
 ---
 
@@ -2232,7 +2290,7 @@ contains at least two geographic places.
 The default value is multi-regional location 'US'.
 Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
 
 ---
 
@@ -2248,7 +2306,7 @@ Defines the time travel window in hours.
 
 The value can be from 48 to 168 hours (2 to 7 days).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#max_time_travel_hours BigqueryDataset#max_time_travel_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#max_time_travel_hours BigqueryDataset#max_time_travel_hours}
 
 ---
 
@@ -2260,7 +2318,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#project BigqueryDataset#project}.
 
 ---
 
@@ -2280,7 +2338,7 @@ ID of the parent organization or project resource for this tag key. Tag value is
 to be the short name, for example "Production". See [Tag definitions](https://cloud.google.com/iam/docs/tags-access-control#definitions)
 for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#resource_tags BigqueryDataset#resource_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#resource_tags BigqueryDataset#resource_tags}
 
 ---
 
@@ -2299,7 +2357,7 @@ or to PHYSICAL to use physical bytes instead.
 
 LOGICAL is the default if this flag isn't specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#storage_billing_model BigqueryDataset#storage_billing_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#storage_billing_model BigqueryDataset#storage_billing_model}
 
 ---
 
@@ -2313,7 +2371,7 @@ public BigqueryDatasetTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#timeouts BigqueryDataset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#timeouts BigqueryDataset#timeouts}
 
 ---
 
@@ -2350,7 +2408,60 @@ Describes the Cloud KMS encryption key that will be used to protect destination 
 The BigQuery Service Account associated with your project requires
 access to this encryption key.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
+
+---
+
+### BigqueryDatasetExternalCatalogDatasetOptions <a name="BigqueryDatasetExternalCatalogDatasetOptions" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new BigqueryDatasetExternalCatalogDatasetOptions {
+    string DefaultStorageLocationUri = null,
+    System.Collections.Generic.IDictionary<string, string> Parameters = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions.property.defaultStorageLocationUri">DefaultStorageLocationUri</a></code> | <code>string</code> | The storage location URI for all tables in the dataset. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions.property.parameters">Parameters</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | A map of key value pairs defining the parameters and properties of the open source schema. Maximum size of 2Mib. |
+
+---
+
+##### `DefaultStorageLocationUri`<sup>Optional</sup> <a name="DefaultStorageLocationUri" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions.property.defaultStorageLocationUri"></a>
+
+```csharp
+public string DefaultStorageLocationUri { get; set; }
+```
+
+- *Type:* string
+
+The storage location URI for all tables in the dataset.
+
+Equivalent to hive metastore's
+database locationUri. Maximum length of 1024 characters.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#default_storage_location_uri BigqueryDataset#default_storage_location_uri}
+
+---
+
+##### `Parameters`<sup>Optional</sup> <a name="Parameters" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions.property.parameters"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, string> Parameters { get; set; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary<string, string>
+
+A map of key value pairs defining the parameters and properties of the open source schema. Maximum size of 2Mib.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#parameters BigqueryDataset#parameters}
 
 ---
 
@@ -2386,7 +2497,7 @@ public string Connection { get; set; }
 
 The connection id that is used to access the externalSource. Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#connection BigqueryDataset#connection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#connection BigqueryDataset#connection}
 
 ---
 
@@ -2400,7 +2511,7 @@ public string ExternalSource { get; set; }
 
 External source that backs this dataset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#external_source BigqueryDataset#external_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#external_source BigqueryDataset#external_source}
 
 ---
 
@@ -2422,9 +2533,9 @@ new BigqueryDatasetTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}. |
 
 ---
 
@@ -2436,7 +2547,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#create BigqueryDataset#create}.
 
 ---
 
@@ -2448,7 +2559,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#delete BigqueryDataset#delete}.
 
 ---
 
@@ -2460,7 +2571,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/bigquery_dataset#update BigqueryDataset#update}.
 
 ---
 
@@ -5089,6 +5200,313 @@ public BigqueryDatasetDefaultEncryptionConfiguration InternalValue { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetDefaultEncryptionConfiguration">BigqueryDatasetDefaultEncryptionConfiguration</a>
+
+---
+
+
+### BigqueryDatasetExternalCatalogDatasetOptionsOutputReference <a name="BigqueryDatasetExternalCatalogDatasetOptionsOutputReference" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new BigqueryDatasetExternalCatalogDatasetOptionsOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.resetDefaultStorageLocationUri">ResetDefaultStorageLocationUri</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.resetParameters">ResetParameters</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetDefaultStorageLocationUri` <a name="ResetDefaultStorageLocationUri" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.resetDefaultStorageLocationUri"></a>
+
+```csharp
+private void ResetDefaultStorageLocationUri()
+```
+
+##### `ResetParameters` <a name="ResetParameters" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.resetParameters"></a>
+
+```csharp
+private void ResetParameters()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.defaultStorageLocationUriInput">DefaultStorageLocationUriInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.parametersInput">ParametersInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.defaultStorageLocationUri">DefaultStorageLocationUri</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.parameters">Parameters</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions">BigqueryDatasetExternalCatalogDatasetOptions</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `DefaultStorageLocationUriInput`<sup>Optional</sup> <a name="DefaultStorageLocationUriInput" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.defaultStorageLocationUriInput"></a>
+
+```csharp
+public string DefaultStorageLocationUriInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ParametersInput`<sup>Optional</sup> <a name="ParametersInput" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.parametersInput"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, string> ParametersInput { get; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary<string, string>
+
+---
+
+##### `DefaultStorageLocationUri`<sup>Required</sup> <a name="DefaultStorageLocationUri" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.defaultStorageLocationUri"></a>
+
+```csharp
+public string DefaultStorageLocationUri { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Parameters`<sup>Required</sup> <a name="Parameters" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.parameters"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, string> Parameters { get; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary<string, string>
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptionsOutputReference.property.internalValue"></a>
+
+```csharp
+public BigqueryDatasetExternalCatalogDatasetOptions InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.bigqueryDataset.BigqueryDatasetExternalCatalogDatasetOptions">BigqueryDatasetExternalCatalogDatasetOptions</a>
 
 ---
 

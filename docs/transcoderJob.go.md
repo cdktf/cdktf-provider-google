@@ -4,7 +4,7 @@
 
 ### TranscoderJob <a name="TranscoderJob" id="@cdktf/provider-google.transcoderJob.TranscoderJob"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job google_transcoder_job}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job google_transcoder_job}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.transcoderJob.TranscoderJob.Initializer"></a>
 
@@ -535,7 +535,7 @@ The construct id used in the generated config for the TranscoderJob to import.
 
 The id of the existing TranscoderJob that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -999,9 +999,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/transcoderjob"
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.location">Location</a></code> | <code>*string</code> | The location of the transcoding job resource. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.config">Config</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfigA">TranscoderJobConfigA</a></code> | config block. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#id TranscoderJob#id}. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#id TranscoderJob#id}. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The labels associated with this job. You can use these to organize and group your jobs. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#project TranscoderJob#project}. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#project TranscoderJob#project}. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.templateId">TemplateId</a></code> | <code>*string</code> | Specify the templateId to use for populating Job.config. The default is preset/web-hd, which is the only supported preset. |
 | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts">TranscoderJobTimeouts</a></code> | timeouts block. |
 
@@ -1087,7 +1087,7 @@ Location *string
 
 The location of the transcoding job resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#location TranscoderJob#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#location TranscoderJob#location}
 
 ---
 
@@ -1101,7 +1101,7 @@ Config TranscoderJobConfigA
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#config TranscoderJob#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#config TranscoderJob#config}
 
 ---
 
@@ -1113,7 +1113,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#id TranscoderJob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#id TranscoderJob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1133,7 +1133,7 @@ The labels associated with this job. You can use these to organize and group you
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#labels TranscoderJob#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#labels TranscoderJob#labels}
 
 ---
 
@@ -1145,7 +1145,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#project TranscoderJob#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#project TranscoderJob#project}.
 
 ---
 
@@ -1159,7 +1159,7 @@ TemplateId *string
 
 Specify the templateId to use for populating Job.config. The default is preset/web-hd, which is the only supported preset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#template_id TranscoderJob#template_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#template_id TranscoderJob#template_id}
 
 ---
 
@@ -1173,7 +1173,7 @@ Timeouts TranscoderJobTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#timeouts TranscoderJob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#timeouts TranscoderJob#timeouts}
 
 ---
 
@@ -1225,7 +1225,7 @@ AdBreaks interface{}
 
 ad_breaks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#ad_breaks TranscoderJob#ad_breaks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#ad_breaks TranscoderJob#ad_breaks}
 
 ---
 
@@ -1239,7 +1239,7 @@ EditList interface{}
 
 edit_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#edit_list TranscoderJob#edit_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#edit_list TranscoderJob#edit_list}
 
 ---
 
@@ -1253,7 +1253,7 @@ ElementaryStreams interface{}
 
 elementary_streams block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#elementary_streams TranscoderJob#elementary_streams}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#elementary_streams TranscoderJob#elementary_streams}
 
 ---
 
@@ -1267,7 +1267,7 @@ Encryptions interface{}
 
 encryptions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#encryptions TranscoderJob#encryptions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#encryptions TranscoderJob#encryptions}
 
 ---
 
@@ -1281,7 +1281,7 @@ Inputs interface{}
 
 inputs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#inputs TranscoderJob#inputs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#inputs TranscoderJob#inputs}
 
 ---
 
@@ -1295,7 +1295,7 @@ Manifests interface{}
 
 manifests block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#manifests TranscoderJob#manifests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#manifests TranscoderJob#manifests}
 
 ---
 
@@ -1309,7 +1309,7 @@ MuxStreams interface{}
 
 mux_streams block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#mux_streams TranscoderJob#mux_streams}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#mux_streams TranscoderJob#mux_streams}
 
 ---
 
@@ -1323,7 +1323,7 @@ Output TranscoderJobConfigOutput
 
 output block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#output TranscoderJob#output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#output TranscoderJob#output}
 
 ---
 
@@ -1337,7 +1337,7 @@ Overlays interface{}
 
 overlays block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#overlays TranscoderJob#overlays}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#overlays TranscoderJob#overlays}
 
 ---
 
@@ -1351,7 +1351,7 @@ PubsubDestination TranscoderJobConfigPubsubDestination
 
 pubsub_destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#pubsub_destination TranscoderJob#pubsub_destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#pubsub_destination TranscoderJob#pubsub_destination}
 
 ---
 
@@ -1385,7 +1385,7 @@ StartTimeOffset *string
 
 Start time in seconds for the ad break, relative to the output file timeline.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#start_time_offset TranscoderJob#start_time_offset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#start_time_offset TranscoderJob#start_time_offset}
 
 ---
 
@@ -1423,7 +1423,7 @@ Inputs *[]*string
 
 List of values identifying files that should be used in this atom.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#inputs TranscoderJob#inputs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#inputs TranscoderJob#inputs}
 
 ---
 
@@ -1437,7 +1437,7 @@ Key *string
 
 A unique key for this atom.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#key TranscoderJob#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#key TranscoderJob#key}
 
 ---
 
@@ -1451,7 +1451,7 @@ StartTimeOffset *string
 
 Start time in seconds for the atom, relative to the input file timeline. The default is '0s'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#start_time_offset TranscoderJob#start_time_offset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#start_time_offset TranscoderJob#start_time_offset}
 
 ---
 
@@ -1489,7 +1489,7 @@ AudioStream TranscoderJobConfigElementaryStreamsAudioStream
 
 audio_stream block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#audio_stream TranscoderJob#audio_stream}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#audio_stream TranscoderJob#audio_stream}
 
 ---
 
@@ -1503,7 +1503,7 @@ Key *string
 
 A unique key for this atom.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#key TranscoderJob#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#key TranscoderJob#key}
 
 ---
 
@@ -1517,7 +1517,7 @@ VideoStream TranscoderJobConfigElementaryStreamsVideoStream
 
 video_stream block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#video_stream TranscoderJob#video_stream}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#video_stream TranscoderJob#video_stream}
 
 ---
 
@@ -1559,7 +1559,7 @@ BitrateBps *f64
 
 Audio bitrate in bits per second.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#bitrate_bps TranscoderJob#bitrate_bps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#bitrate_bps TranscoderJob#bitrate_bps}
 
 ---
 
@@ -1573,7 +1573,7 @@ ChannelCount *f64
 
 Number of audio channels. The default is '2'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#channel_count TranscoderJob#channel_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#channel_count TranscoderJob#channel_count}
 
 ---
 
@@ -1587,7 +1587,7 @@ ChannelLayout *[]*string
 
 A list of channel names specifying layout of the audio channels. The default is ["fl", "fr"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#channel_layout TranscoderJob#channel_layout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#channel_layout TranscoderJob#channel_layout}
 
 ---
 
@@ -1601,7 +1601,7 @@ Codec *string
 
 The codec for this audio stream. The default is 'aac'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#codec TranscoderJob#codec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#codec TranscoderJob#codec}
 
 ---
 
@@ -1615,7 +1615,7 @@ SampleRateHertz *f64
 
 The audio sample rate in Hertz. The default is '48000'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#sample_rate_hertz TranscoderJob#sample_rate_hertz}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#sample_rate_hertz TranscoderJob#sample_rate_hertz}
 
 ---
 
@@ -1649,7 +1649,7 @@ H264 TranscoderJobConfigElementaryStreamsVideoStreamH264
 
 h264 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#h264 TranscoderJob#h264}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#h264 TranscoderJob#h264}
 
 ---
 
@@ -1711,7 +1711,7 @@ BitrateBps *f64
 
 The video bitrate in bits per second.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#bitrate_bps TranscoderJob#bitrate_bps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#bitrate_bps TranscoderJob#bitrate_bps}
 
 ---
 
@@ -1725,7 +1725,7 @@ FrameRate *f64
 
 The target video frame rate in frames per second (FPS).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#frame_rate TranscoderJob#frame_rate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#frame_rate TranscoderJob#frame_rate}
 
 ---
 
@@ -1739,7 +1739,7 @@ CrfLevel *f64
 
 Target CRF level. The default is '21'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#crf_level TranscoderJob#crf_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#crf_level TranscoderJob#crf_level}
 
 ---
 
@@ -1753,7 +1753,7 @@ EntropyCoder *string
 
 The entropy coder to use. The default is 'cabac'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#entropy_coder TranscoderJob#entropy_coder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#entropy_coder TranscoderJob#entropy_coder}
 
 ---
 
@@ -1767,7 +1767,7 @@ GopDuration *string
 
 Select the GOP size based on the specified duration. The default is '3s'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#gop_duration TranscoderJob#gop_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#gop_duration TranscoderJob#gop_duration}
 
 ---
 
@@ -1781,7 +1781,7 @@ HeightPixels *f64
 
 The height of the video in pixels.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#height_pixels TranscoderJob#height_pixels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#height_pixels TranscoderJob#height_pixels}
 
 ---
 
@@ -1795,7 +1795,7 @@ Hlg TranscoderJobConfigElementaryStreamsVideoStreamH264Hlg
 
 hlg block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#hlg TranscoderJob#hlg}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#hlg TranscoderJob#hlg}
 
 ---
 
@@ -1809,7 +1809,7 @@ PixelFormat *string
 
 Pixel format to use. The default is 'yuv420p'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#pixel_format TranscoderJob#pixel_format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#pixel_format TranscoderJob#pixel_format}
 
 ---
 
@@ -1823,7 +1823,7 @@ Preset *string
 
 Enforces the specified codec preset. The default is 'veryfast'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#preset TranscoderJob#preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#preset TranscoderJob#preset}
 
 ---
 
@@ -1837,7 +1837,7 @@ Profile *string
 
 Enforces the specified codec profile.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#profile TranscoderJob#profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#profile TranscoderJob#profile}
 
 ---
 
@@ -1851,7 +1851,7 @@ RateControlMode *string
 
 Specify the mode. The default is 'vbr'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#rate_control_mode TranscoderJob#rate_control_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#rate_control_mode TranscoderJob#rate_control_mode}
 
 ---
 
@@ -1865,7 +1865,7 @@ Sdr TranscoderJobConfigElementaryStreamsVideoStreamH264Sdr
 
 sdr block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#sdr TranscoderJob#sdr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#sdr TranscoderJob#sdr}
 
 ---
 
@@ -1879,7 +1879,7 @@ VbvFullnessBits *f64
 
 Initial fullness of the Video Buffering Verifier (VBV) buffer in bits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#vbv_fullness_bits TranscoderJob#vbv_fullness_bits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#vbv_fullness_bits TranscoderJob#vbv_fullness_bits}
 
 ---
 
@@ -1893,7 +1893,7 @@ VbvSizeBits *f64
 
 Size of the Video Buffering Verifier (VBV) buffer in bits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#vbv_size_bits TranscoderJob#vbv_size_bits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#vbv_size_bits TranscoderJob#vbv_size_bits}
 
 ---
 
@@ -1907,7 +1907,7 @@ WidthPixels *f64
 
 The width of the video in pixels.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#width_pixels TranscoderJob#width_pixels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#width_pixels TranscoderJob#width_pixels}
 
 ---
 
@@ -1977,7 +1977,7 @@ Id *string
 
 Identifier for this set of encryption options.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#id TranscoderJob#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#id TranscoderJob#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1994,7 +1994,7 @@ Aes128 TranscoderJobConfigEncryptionsAes128
 
 aes128 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#aes128 TranscoderJob#aes128}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#aes128 TranscoderJob#aes128}
 
 ---
 
@@ -2008,7 +2008,7 @@ DrmSystems TranscoderJobConfigEncryptionsDrmSystems
 
 drm_systems block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#drm_systems TranscoderJob#drm_systems}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#drm_systems TranscoderJob#drm_systems}
 
 ---
 
@@ -2022,7 +2022,7 @@ MpegCenc TranscoderJobConfigEncryptionsMpegCenc
 
 mpeg_cenc block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#mpeg_cenc TranscoderJob#mpeg_cenc}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#mpeg_cenc TranscoderJob#mpeg_cenc}
 
 ---
 
@@ -2036,7 +2036,7 @@ SampleAes TranscoderJobConfigEncryptionsSampleAes
 
 sample_aes block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#sample_aes TranscoderJob#sample_aes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#sample_aes TranscoderJob#sample_aes}
 
 ---
 
@@ -2050,7 +2050,7 @@ SecretManagerKeySource TranscoderJobConfigEncryptionsSecretManagerKeySource
 
 secret_manager_key_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#secret_manager_key_source TranscoderJob#secret_manager_key_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#secret_manager_key_source TranscoderJob#secret_manager_key_source}
 
 ---
 
@@ -2103,7 +2103,7 @@ Clearkey TranscoderJobConfigEncryptionsDrmSystemsClearkey
 
 clearkey block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#clearkey TranscoderJob#clearkey}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#clearkey TranscoderJob#clearkey}
 
 ---
 
@@ -2117,7 +2117,7 @@ Fairplay TranscoderJobConfigEncryptionsDrmSystemsFairplay
 
 fairplay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#fairplay TranscoderJob#fairplay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#fairplay TranscoderJob#fairplay}
 
 ---
 
@@ -2131,7 +2131,7 @@ Playready TranscoderJobConfigEncryptionsDrmSystemsPlayready
 
 playready block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#playready TranscoderJob#playready}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#playready TranscoderJob#playready}
 
 ---
 
@@ -2145,7 +2145,7 @@ Widevine TranscoderJobConfigEncryptionsDrmSystemsWidevine
 
 widevine block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#widevine TranscoderJob#widevine}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#widevine TranscoderJob#widevine}
 
 ---
 
@@ -2231,7 +2231,7 @@ Scheme *string
 
 Specify the encryption scheme.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#scheme TranscoderJob#scheme}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#scheme TranscoderJob#scheme}
 
 ---
 
@@ -2278,7 +2278,7 @@ SecretVersion *string
 
 The name of the Secret Version containing the encryption key in the following format: projects/{project}/secrets/{secret_id}/versions/{version_number}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#secret_version TranscoderJob#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#secret_version TranscoderJob#secret_version}
 
 ---
 
@@ -2314,7 +2314,7 @@ Key *string
 
 A unique key for this input. Must be specified when using advanced mapping and edit lists.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#key TranscoderJob#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#key TranscoderJob#key}
 
 ---
 
@@ -2331,7 +2331,7 @@ URI of the media.
 Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, gs://bucket/inputs/file.mp4).
 If empty, the value is populated from Job.input_uri.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#uri TranscoderJob#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#uri TranscoderJob#uri}
 
 ---
 
@@ -2369,7 +2369,7 @@ FileName *string
 
 The name of the generated file. The default is 'manifest'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#file_name TranscoderJob#file_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#file_name TranscoderJob#file_name}
 
 ---
 
@@ -2383,7 +2383,7 @@ MuxStreams *[]*string
 
 List of user supplied MuxStream.key values that should appear in this manifest.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#mux_streams TranscoderJob#mux_streams}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#mux_streams TranscoderJob#mux_streams}
 
 ---
 
@@ -2397,7 +2397,7 @@ Type *string
 
 Type of the manifest. Possible values: ["MANIFEST_TYPE_UNSPECIFIED", "HLS", "DASH"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#type TranscoderJob#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#type TranscoderJob#type}
 
 ---
 
@@ -2441,7 +2441,7 @@ Container *string
 
 The container format. The default is 'mp4'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#container TranscoderJob#container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#container TranscoderJob#container}
 
 ---
 
@@ -2455,7 +2455,7 @@ ElementaryStreams *[]*string
 
 List of ElementaryStream.key values multiplexed in this stream.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#elementary_streams TranscoderJob#elementary_streams}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#elementary_streams TranscoderJob#elementary_streams}
 
 ---
 
@@ -2469,7 +2469,7 @@ EncryptionId *string
 
 Identifier of the encryption configuration to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#encryption_id TranscoderJob#encryption_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#encryption_id TranscoderJob#encryption_id}
 
 ---
 
@@ -2483,7 +2483,7 @@ FileName *string
 
 The name of the generated file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#file_name TranscoderJob#file_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#file_name TranscoderJob#file_name}
 
 ---
 
@@ -2497,7 +2497,7 @@ Key *string
 
 A unique key for this multiplexed stream.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#key TranscoderJob#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#key TranscoderJob#key}
 
 ---
 
@@ -2511,7 +2511,7 @@ SegmentSettings TranscoderJobConfigMuxStreamsSegmentSettings
 
 segment_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#segment_settings TranscoderJob#segment_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#segment_settings TranscoderJob#segment_settings}
 
 ---
 
@@ -2545,7 +2545,7 @@ SegmentDuration *string
 
 Duration of the segments in seconds. The default is '6.0s'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#segment_duration TranscoderJob#segment_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#segment_duration TranscoderJob#segment_duration}
 
 ---
 
@@ -2579,7 +2579,7 @@ Uri *string
 
 URI for the output file(s). For example, gs://my-bucket/outputs/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#uri TranscoderJob#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#uri TranscoderJob#uri}
 
 ---
 
@@ -2615,7 +2615,7 @@ Animations interface{}
 
 animations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#animations TranscoderJob#animations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#animations TranscoderJob#animations}
 
 ---
 
@@ -2629,7 +2629,7 @@ Image TranscoderJobConfigOverlaysImage
 
 image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#image TranscoderJob#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#image TranscoderJob#image}
 
 ---
 
@@ -2663,7 +2663,7 @@ AnimationFade TranscoderJobConfigOverlaysAnimationsAnimationFade
 
 animation_fade block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#animation_fade TranscoderJob#animation_fade}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#animation_fade TranscoderJob#animation_fade}
 
 ---
 
@@ -2707,7 +2707,7 @@ Required. Type of fade animation: 'FADE_IN' or 'FADE_OUT'. The possible values a
 * 'FADE_IN': Fade the overlay object into view.
 * 'FADE_OUT': Fade the overlay object out of view. Possible values: ["FADE_TYPE_UNSPECIFIED", "FADE_IN", "FADE_OUT"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#fade_type TranscoderJob#fade_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#fade_type TranscoderJob#fade_type}
 
 ---
 
@@ -2721,7 +2721,7 @@ EndTimeOffset *string
 
 The time to end the fade animation, in seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#end_time_offset TranscoderJob#end_time_offset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#end_time_offset TranscoderJob#end_time_offset}
 
 ---
 
@@ -2735,7 +2735,7 @@ StartTimeOffset *string
 
 The time to start the fade animation, in seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#start_time_offset TranscoderJob#start_time_offset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#start_time_offset TranscoderJob#start_time_offset}
 
 ---
 
@@ -2749,7 +2749,7 @@ Xy TranscoderJobConfigOverlaysAnimationsAnimationFadeXy
 
 xy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#xy TranscoderJob#xy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#xy TranscoderJob#xy}
 
 ---
 
@@ -2785,7 +2785,7 @@ X *f64
 
 Normalized x coordinate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#x TranscoderJob#x}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#x TranscoderJob#x}
 
 ---
 
@@ -2799,7 +2799,7 @@ Y *f64
 
 Normalized y coordinate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#y TranscoderJob#y}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#y TranscoderJob#y}
 
 ---
 
@@ -2833,7 +2833,7 @@ Uri *string
 
 URI of the image in Cloud Storage. For example, gs://bucket/inputs/image.png.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#uri TranscoderJob#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#uri TranscoderJob#uri}
 
 ---
 
@@ -2867,7 +2867,7 @@ Topic *string
 
 The name of the Pub/Sub topic to publish job completion notification to. For example: projects/{project}/topics/{topic}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#topic TranscoderJob#topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#topic TranscoderJob#topic}
 
 ---
 
@@ -2889,9 +2889,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/transcoderjob"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#create TranscoderJob#create}. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#delete TranscoderJob#delete}. |
-| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#update TranscoderJob#update}. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#create TranscoderJob#create}. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#delete TranscoderJob#delete}. |
+| <code><a href="#@cdktf/provider-google.transcoderJob.TranscoderJobTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#update TranscoderJob#update}. |
 
 ---
 
@@ -2903,7 +2903,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#create TranscoderJob#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#create TranscoderJob#create}.
 
 ---
 
@@ -2915,7 +2915,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#delete TranscoderJob#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#delete TranscoderJob#delete}.
 
 ---
 
@@ -2927,7 +2927,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/transcoder_job#update TranscoderJob#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/transcoder_job#update TranscoderJob#update}.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ### NetworkConnectivityInternalRange <a name="NetworkConnectivityInternalRange" id="@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range google_network_connectivity_internal_range}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range google_network_connectivity_internal_range}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.Initializer"></a>
 
@@ -76,6 +76,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.putMigration">PutMigration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.resetDescription">ResetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.resetExcludeCidrRanges">ResetExcludeCidrRanges</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.resetIpCidrRange">ResetIpCidrRange</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.resetLabels">ResetLabels</a></code> | *No description.* |
@@ -406,6 +407,12 @@ private void PutTimeouts(NetworkConnectivityInternalRangeTimeouts Value)
 private void ResetDescription()
 ```
 
+##### `ResetExcludeCidrRanges` <a name="ResetExcludeCidrRanges" id="@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.resetExcludeCidrRanges"></a>
+
+```csharp
+private void ResetExcludeCidrRanges()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.resetId"></a>
 
 ```csharp
@@ -563,7 +570,7 @@ The construct id used in the generated config for the NetworkConnectivityInterna
 
 The id of the existing NetworkConnectivityInternalRange that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -599,6 +606,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeTimeoutsOutputReference">NetworkConnectivityInternalRangeTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.users">Users</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.excludeCidrRangesInput">ExcludeCidrRangesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.ipCidrRangeInput">IpCidrRangeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.labelsInput">LabelsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
@@ -613,6 +621,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.usageInput">UsageInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.description">Description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.excludeCidrRanges">ExcludeCidrRanges</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.ipCidrRange">IpCidrRange</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
@@ -829,6 +838,16 @@ public string DescriptionInput { get; }
 
 ---
 
+##### `ExcludeCidrRangesInput`<sup>Optional</sup> <a name="ExcludeCidrRangesInput" id="@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.excludeCidrRangesInput"></a>
+
+```csharp
+public string[] ExcludeCidrRangesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
 ##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.idInput"></a>
 
 ```csharp
@@ -966,6 +985,16 @@ public string Description { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `ExcludeCidrRanges`<sup>Required</sup> <a name="ExcludeCidrRanges" id="@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRange.property.excludeCidrRanges"></a>
+
+```csharp
+public string[] ExcludeCidrRanges { get; }
+```
+
+- *Type:* string[]
 
 ---
 
@@ -1119,6 +1148,7 @@ new NetworkConnectivityInternalRangeConfig {
     string Peering,
     string Usage,
     string Description = null,
+    string[] ExcludeCidrRanges = null,
     string Id = null,
     string IpCidrRange = null,
     System.Collections.Generic.IDictionary<string, string> Labels = null,
@@ -1147,13 +1177,14 @@ new NetworkConnectivityInternalRangeConfig {
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.peering">Peering</a></code> | <code>string</code> | The type of peering set for this internal range. Possible values: ["FOR_SELF", "FOR_PEER", "NOT_SHARED"]. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.usage">Usage</a></code> | <code>string</code> | The type of usage set for this InternalRange. Possible values: ["FOR_VPC", "EXTERNAL_TO_VPC", "FOR_MIGRATION"]. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.description">Description</a></code> | <code>string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#id NetworkConnectivityInternalRange#id}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.excludeCidrRanges">ExcludeCidrRanges</a></code> | <code>string[]</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#id NetworkConnectivityInternalRange#id}. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.ipCidrRange">IpCidrRange</a></code> | <code>string</code> | The IP range that this internal range defines. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | User-defined labels. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.migration">Migration</a></code> | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeMigration">NetworkConnectivityInternalRangeMigration</a></code> | migration block. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.overlaps">Overlaps</a></code> | <code>string[]</code> | Optional. Types of resources that are allowed to overlap with the current internal range. Possible values: ["OVERLAP_ROUTE_RANGE", "OVERLAP_EXISTING_SUBNET_RANGE"]. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.prefixLength">PrefixLength</a></code> | <code>double</code> | An alternate to ipCidrRange. |
-| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#project NetworkConnectivityInternalRange#project}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#project NetworkConnectivityInternalRange#project}. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.targetCidrRange">TargetCidrRange</a></code> | <code>string[]</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeTimeouts">NetworkConnectivityInternalRangeTimeouts</a></code> | timeouts block. |
 
@@ -1239,7 +1270,7 @@ public string Name { get; set; }
 
 The name of the policy based route.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#name NetworkConnectivityInternalRange#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#name NetworkConnectivityInternalRange#name}
 
 ---
 
@@ -1253,7 +1284,7 @@ public string Network { get; set; }
 
 Fully-qualified URL of the network that this route applies to, for example: projects/my-project/global/networks/my-network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#network NetworkConnectivityInternalRange#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#network NetworkConnectivityInternalRange#network}
 
 ---
 
@@ -1267,7 +1298,7 @@ public string Peering { get; set; }
 
 The type of peering set for this internal range. Possible values: ["FOR_SELF", "FOR_PEER", "NOT_SHARED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#peering NetworkConnectivityInternalRange#peering}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#peering NetworkConnectivityInternalRange#peering}
 
 ---
 
@@ -1281,7 +1312,7 @@ public string Usage { get; set; }
 
 The type of usage set for this InternalRange. Possible values: ["FOR_VPC", "EXTERNAL_TO_VPC", "FOR_MIGRATION"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#usage NetworkConnectivityInternalRange#usage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#usage NetworkConnectivityInternalRange#usage}
 
 ---
 
@@ -1295,7 +1326,24 @@ public string Description { get; set; }
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#description NetworkConnectivityInternalRange#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#description NetworkConnectivityInternalRange#description}
+
+---
+
+##### `ExcludeCidrRanges`<sup>Optional</sup> <a name="ExcludeCidrRanges" id="@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeConfig.property.excludeCidrRanges"></a>
+
+```csharp
+public string[] ExcludeCidrRanges { get; set; }
+```
+
+- *Type:* string[]
+
+Optional.
+
+List of IP CIDR ranges to be excluded. Resulting reserved Internal Range will not overlap with any CIDR blocks mentioned in this list.
+Only IPv4 CIDR ranges are supported.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#exclude_cidr_ranges NetworkConnectivityInternalRange#exclude_cidr_ranges}
 
 ---
 
@@ -1307,7 +1355,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#id NetworkConnectivityInternalRange#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#id NetworkConnectivityInternalRange#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1324,7 +1372,10 @@ public string IpCidrRange { get; set; }
 
 The IP range that this internal range defines.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#ip_cidr_range NetworkConnectivityInternalRange#ip_cidr_range}
+NOTE: IPv6 ranges are limited to usage=EXTERNAL_TO_VPC and peering=FOR_SELF
+NOTE: For IPv6 Ranges this field is compulsory, i.e. the address range must be specified explicitly.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#ip_cidr_range NetworkConnectivityInternalRange#ip_cidr_range}
 
 ---
 
@@ -1341,7 +1392,7 @@ User-defined labels.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#labels NetworkConnectivityInternalRange#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#labels NetworkConnectivityInternalRange#labels}
 
 ---
 
@@ -1355,7 +1406,7 @@ public NetworkConnectivityInternalRangeMigration Migration { get; set; }
 
 migration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#migration NetworkConnectivityInternalRange#migration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#migration NetworkConnectivityInternalRange#migration}
 
 ---
 
@@ -1369,7 +1420,7 @@ public string[] Overlaps { get; set; }
 
 Optional. Types of resources that are allowed to overlap with the current internal range. Possible values: ["OVERLAP_ROUTE_RANGE", "OVERLAP_EXISTING_SUBNET_RANGE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#overlaps NetworkConnectivityInternalRange#overlaps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#overlaps NetworkConnectivityInternalRange#overlaps}
 
 ---
 
@@ -1385,8 +1436,10 @@ An alternate to ipCidrRange.
 
 Can be set when trying to create a reservation that automatically finds a free range of the given size.
 If both ipCidrRange and prefixLength are set, there is an error if the range sizes do not match. Can also be used during updates to change the range size.
+NOTE: For IPv6 this field only works if ip_cidr_range is set as well, and both fields must match. In other words, with IPv6 this field only works as
+a redundant parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#prefix_length NetworkConnectivityInternalRange#prefix_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#prefix_length NetworkConnectivityInternalRange#prefix_length}
 
 ---
 
@@ -1398,7 +1451,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#project NetworkConnectivityInternalRange#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#project NetworkConnectivityInternalRange#project}.
 
 ---
 
@@ -1415,7 +1468,7 @@ Optional.
 Can be set to narrow down or pick a different address space while searching for a free range.
 If not set, defaults to the "10.0.0.0/8" address space. This can be used to search in other rfc-1918 address spaces like "172.16.0.0/12" and "192.168.0.0/16" or non-rfc-1918 address spaces used in the VPC.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#target_cidr_range NetworkConnectivityInternalRange#target_cidr_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#target_cidr_range NetworkConnectivityInternalRange#target_cidr_range}
 
 ---
 
@@ -1429,7 +1482,7 @@ public NetworkConnectivityInternalRangeTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#timeouts NetworkConnectivityInternalRange#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#timeouts NetworkConnectivityInternalRange#timeouts}
 
 ---
 
@@ -1469,7 +1522,7 @@ The project for the source resource should match the project for the
 InternalRange.
 An example /projects/{project}/regions/{region}/subnetworks/{subnet}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#source NetworkConnectivityInternalRange#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#source NetworkConnectivityInternalRange#source}
 
 ---
 
@@ -1488,7 +1541,7 @@ different, as in the cases when migrating to peer networks. The resource
 may not exist yet.
 For example /projects/{project}/regions/{region}/subnetworks/{subnet}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#target NetworkConnectivityInternalRange#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#target NetworkConnectivityInternalRange#target}
 
 ---
 
@@ -1510,9 +1563,9 @@ new NetworkConnectivityInternalRangeTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#create NetworkConnectivityInternalRange#create}. |
-| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#delete NetworkConnectivityInternalRange#delete}. |
-| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#update NetworkConnectivityInternalRange#update}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#create NetworkConnectivityInternalRange#create}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#delete NetworkConnectivityInternalRange#delete}. |
+| <code><a href="#@cdktf/provider-google.networkConnectivityInternalRange.NetworkConnectivityInternalRangeTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#update NetworkConnectivityInternalRange#update}. |
 
 ---
 
@@ -1524,7 +1577,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#create NetworkConnectivityInternalRange#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#create NetworkConnectivityInternalRange#create}.
 
 ---
 
@@ -1536,7 +1589,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#delete NetworkConnectivityInternalRange#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#delete NetworkConnectivityInternalRange#delete}.
 
 ---
 
@@ -1548,7 +1601,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/network_connectivity_internal_range#update NetworkConnectivityInternalRange#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/network_connectivity_internal_range#update NetworkConnectivityInternalRange#update}.
 
 ---
 
