@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent
+// https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#description DialogflowCxIntent#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#description DialogflowCxIntent#description}
   */
   readonly description?: string;
   /**
   * The human-readable name of the intent, unique within the agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#display_name DialogflowCxIntent#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#display_name DialogflowCxIntent#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,7 +37,7 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   * 
   * ~> Avoid having multiple 'google_dialogflow_cx_intent' resources linked to the same agent with 'is_default_negative_intent = true' because they will compete to control a single Default Negative Intent resource in GCP.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#is_default_negative_intent DialogflowCxIntent#is_default_negative_intent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#is_default_negative_intent DialogflowCxIntent#is_default_negative_intent}
   */
   readonly isDefaultNegativeIntent?: boolean | cdktf.IResolvable;
   /**
@@ -46,7 +46,7 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   * 
   * ~> Avoid having multiple 'google_dialogflow_cx_intent' resources linked to the same agent with 'is_default_welcome_intent = true' because they will compete to control a single Default Welcome Intent resource in GCP.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#is_default_welcome_intent DialogflowCxIntent#is_default_welcome_intent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#is_default_welcome_intent DialogflowCxIntent#is_default_welcome_intent}
   */
   readonly isDefaultWelcomeIntent?: boolean | cdktf.IResolvable;
   /**
@@ -54,7 +54,7 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   * Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
   * To manage the fallback intent, set 'is_default_negative_intent = true'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#is_fallback DialogflowCxIntent#is_fallback}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#is_fallback DialogflowCxIntent#is_fallback}
   */
   readonly isFallback?: boolean | cdktf.IResolvable;
   /**
@@ -66,7 +66,7 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#labels DialogflowCxIntent#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#labels DialogflowCxIntent#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -74,14 +74,14 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   * Intent.training_phrases.parts.text
   * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#language_code DialogflowCxIntent#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#language_code DialogflowCxIntent#language_code}
   */
   readonly languageCode?: string;
   /**
   * The agent to create an intent for.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#parent DialogflowCxIntent#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#parent DialogflowCxIntent#parent}
   */
   readonly parent?: string;
   /**
@@ -89,25 +89,25 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   * If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
   * If the supplied value is negative, the intent is ignored in runtime detect intent requests.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#priority DialogflowCxIntent#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#priority DialogflowCxIntent#priority}
   */
   readonly priority?: number;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#parameters DialogflowCxIntent#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#parameters DialogflowCxIntent#parameters}
   */
   readonly parameters?: DialogflowCxIntentParameters[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#timeouts DialogflowCxIntent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#timeouts DialogflowCxIntent#timeouts}
   */
   readonly timeouts?: DialogflowCxIntentTimeouts;
   /**
   * training_phrases block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#training_phrases DialogflowCxIntent#training_phrases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#training_phrases DialogflowCxIntent#training_phrases}
   */
   readonly trainingPhrases?: DialogflowCxIntentTrainingPhrases[] | cdktf.IResolvable;
 }
@@ -116,13 +116,13 @@ export interface DialogflowCxIntentParameters {
   * The entity type of the parameter.
   * Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#entity_type DialogflowCxIntent#entity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#entity_type DialogflowCxIntent#entity_type}
   */
   readonly entityType: string;
   /**
   * The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -131,14 +131,14 @@ export interface DialogflowCxIntentParameters {
   /**
   * Indicates whether the parameter represents a list of values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#is_list DialogflowCxIntent#is_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#is_list DialogflowCxIntent#is_list}
   */
   readonly isList?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging.
   * Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#redact DialogflowCxIntent#redact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#redact DialogflowCxIntent#redact}
   */
   readonly redact?: boolean | cdktf.IResolvable;
 }
@@ -335,15 +335,15 @@ export class DialogflowCxIntentParametersList extends cdktf.ComplexList {
 }
 export interface DialogflowCxIntentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#create DialogflowCxIntent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#create DialogflowCxIntent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#delete DialogflowCxIntent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#delete DialogflowCxIntent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#update DialogflowCxIntent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#update DialogflowCxIntent#update}
   */
   readonly update?: string;
 }
@@ -497,13 +497,13 @@ export interface DialogflowCxIntentTrainingPhrasesParts {
   /**
   * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#parameter_id DialogflowCxIntent#parameter_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#parameter_id DialogflowCxIntent#parameter_id}
   */
   readonly parameterId?: string;
   /**
   * The text for this part.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#text DialogflowCxIntent#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#text DialogflowCxIntent#text}
   */
   readonly text: string;
 }
@@ -647,13 +647,13 @@ export interface DialogflowCxIntentTrainingPhrases {
   /**
   * Indicates how many times this example was added to the intent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#repeat_count DialogflowCxIntent#repeat_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#repeat_count DialogflowCxIntent#repeat_count}
   */
   readonly repeatCount?: number;
   /**
   * parts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#parts DialogflowCxIntent#parts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#parts DialogflowCxIntent#parts}
   */
   readonly parts: DialogflowCxIntentTrainingPhrasesParts[] | cdktf.IResolvable;
 }
@@ -800,7 +800,7 @@ export class DialogflowCxIntentTrainingPhrasesList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent google_dialogflow_cx_intent}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent google_dialogflow_cx_intent}
 */
 export class DialogflowCxIntent extends cdktf.TerraformResource {
 
@@ -816,7 +816,7 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DialogflowCxIntent resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DialogflowCxIntent to import
-  * @param importFromId The id of the existing DialogflowCxIntent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DialogflowCxIntent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DialogflowCxIntent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -828,7 +828,7 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/dialogflow_cx_intent google_dialogflow_cx_intent} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/dialogflow_cx_intent google_dialogflow_cx_intent} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -839,7 +839,7 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_intent',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.30.0',
+        providerVersion: '6.31.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

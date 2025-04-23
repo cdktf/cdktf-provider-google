@@ -4,7 +4,7 @@
 
 ### ColabRuntimeTemplateIamPolicy <a name="ColabRuntimeTemplateIamPolicy" id="@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy google_colab_runtime_template_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy google_colab_runtime_template_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicy.Initializer"></a>
 
@@ -488,7 +488,7 @@ The construct id used in the generated config for the ColabRuntimeTemplateIamPol
 
 The id of the existing ColabRuntimeTemplateIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -825,11 +825,11 @@ const colabRuntimeTemplateIamPolicyConfig: colabRuntimeTemplateIamPolicy.ColabRu
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#policy_data ColabRuntimeTemplateIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.runtimeTemplate">runtimeTemplate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#runtime_template ColabRuntimeTemplateIamPolicy#runtime_template}. |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#id ColabRuntimeTemplateIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#location ColabRuntimeTemplateIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#project ColabRuntimeTemplateIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#policy_data ColabRuntimeTemplateIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.runtimeTemplate">runtimeTemplate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#runtime_template ColabRuntimeTemplateIamPolicy#runtime_template}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#id ColabRuntimeTemplateIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#location ColabRuntimeTemplateIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.colabRuntimeTemplateIamPolicy.ColabRuntimeTemplateIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#project ColabRuntimeTemplateIamPolicy#project}. |
 
 ---
 
@@ -911,7 +911,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#policy_data ColabRuntimeTemplateIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#policy_data ColabRuntimeTemplateIamPolicy#policy_data}.
 
 ---
 
@@ -923,7 +923,7 @@ public readonly runtimeTemplate: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#runtime_template ColabRuntimeTemplateIamPolicy#runtime_template}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#runtime_template ColabRuntimeTemplateIamPolicy#runtime_template}.
 
 ---
 
@@ -935,7 +935,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#id ColabRuntimeTemplateIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#id ColabRuntimeTemplateIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -950,7 +950,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#location ColabRuntimeTemplateIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#location ColabRuntimeTemplateIamPolicy#location}.
 
 ---
 
@@ -962,7 +962,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.30.0/docs/resources/colab_runtime_template_iam_policy#project ColabRuntimeTemplateIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_policy#project ColabRuntimeTemplateIamPolicy#project}.
 
 ---
 
