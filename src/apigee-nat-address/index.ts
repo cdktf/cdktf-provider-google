@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address
+// https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface ApigeeNatAddressConfig extends cdktf.TerraformMetaArguments {
   /**
   * Flag that specifies whether the reserved NAT address should be activate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#activate ApigeeNatAddress#activate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#activate ApigeeNatAddress#activate}
   */
   readonly activate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#id ApigeeNatAddress#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#id ApigeeNatAddress#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,33 +24,33 @@ export interface ApigeeNatAddressConfig extends cdktf.TerraformMetaArguments {
   * The Apigee instance associated with the Apigee environment,
   * in the format 'organizations/{{org_name}}/instances/{{instance_name}}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#instance_id ApigeeNatAddress#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#instance_id ApigeeNatAddress#instance_id}
   */
   readonly instanceId: string;
   /**
   * Resource ID of the NAT address.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#name ApigeeNatAddress#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#name ApigeeNatAddress#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#timeouts ApigeeNatAddress#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#timeouts ApigeeNatAddress#timeouts}
   */
   readonly timeouts?: ApigeeNatAddressTimeouts;
 }
 export interface ApigeeNatAddressTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#create ApigeeNatAddress#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#create ApigeeNatAddress#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#delete ApigeeNatAddress#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#delete ApigeeNatAddress#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#update ApigeeNatAddress#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#update ApigeeNatAddress#update}
   */
   readonly update?: string;
 }
@@ -207,7 +202,7 @@ export class ApigeeNatAddressTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address google_apigee_nat_address}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address google_apigee_nat_address}
 */
 export class ApigeeNatAddress extends cdktf.TerraformResource {
 
@@ -223,7 +218,7 @@ export class ApigeeNatAddress extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeNatAddress resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeNatAddress to import
-  * @param importFromId The id of the existing ApigeeNatAddress that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeNatAddress that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeNatAddress to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -235,7 +230,7 @@ export class ApigeeNatAddress extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/apigee_nat_address google_apigee_nat_address} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/apigee_nat_address google_apigee_nat_address} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -246,7 +241,7 @@ export class ApigeeNatAddress extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_nat_address',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.31.0',
+        providerVersion: '6.32.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

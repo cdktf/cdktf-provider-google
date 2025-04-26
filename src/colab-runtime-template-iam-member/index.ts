@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface ColabRuntimeTemplateIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#id ColabRuntimeTemplateIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#id ColabRuntimeTemplateIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#location ColabRuntimeTemplateIamMember#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#location ColabRuntimeTemplateIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#member ColabRuntimeTemplateIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#member ColabRuntimeTemplateIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#project ColabRuntimeTemplateIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#project ColabRuntimeTemplateIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#role ColabRuntimeTemplateIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#role ColabRuntimeTemplateIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#runtime_template ColabRuntimeTemplateIamMember#runtime_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#runtime_template ColabRuntimeTemplateIamMember#runtime_template}
   */
   readonly runtimeTemplate: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#condition ColabRuntimeTemplateIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#condition ColabRuntimeTemplateIamMember#condition}
   */
   readonly condition?: ColabRuntimeTemplateIamMemberCondition;
 }
 export interface ColabRuntimeTemplateIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#description ColabRuntimeTemplateIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#description ColabRuntimeTemplateIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#expression ColabRuntimeTemplateIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#expression ColabRuntimeTemplateIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#title ColabRuntimeTemplateIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#title ColabRuntimeTemplateIamMember#title}
   */
   readonly title: string;
 }
@@ -192,7 +187,7 @@ export class ColabRuntimeTemplateIamMemberConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member google_colab_runtime_template_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member google_colab_runtime_template_iam_member}
 */
 export class ColabRuntimeTemplateIamMember extends cdktf.TerraformResource {
 
@@ -208,7 +203,7 @@ export class ColabRuntimeTemplateIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ColabRuntimeTemplateIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ColabRuntimeTemplateIamMember to import
-  * @param importFromId The id of the existing ColabRuntimeTemplateIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ColabRuntimeTemplateIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ColabRuntimeTemplateIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +215,7 @@ export class ColabRuntimeTemplateIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/colab_runtime_template_iam_member google_colab_runtime_template_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/colab_runtime_template_iam_member google_colab_runtime_template_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +226,7 @@ export class ColabRuntimeTemplateIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_colab_runtime_template_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.31.0',
+        providerVersion: '6.32.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

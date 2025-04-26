@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config
+// https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,78 +10,78 @@ export interface IdentityPlatformConfigConfig extends cdktf.TerraformMetaArgumen
   /**
   * List of domains authorized for OAuth redirects.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
   */
   readonly authorizedDomains?: string[];
   /**
   * Whether anonymous users will be auto-deleted after a period of 30 days
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
   */
   readonly autodeleteAnonymousUsers?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}
   */
   readonly project?: string;
   /**
   * blocking_functions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
   */
   readonly blockingFunctions?: IdentityPlatformConfigBlockingFunctions;
   /**
   * client block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#client IdentityPlatformConfig#client}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#client IdentityPlatformConfig#client}
   */
   readonly client?: IdentityPlatformConfigClient;
   /**
   * mfa block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#mfa IdentityPlatformConfig#mfa}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#mfa IdentityPlatformConfig#mfa}
   */
   readonly mfa?: IdentityPlatformConfigMfa;
   /**
   * monitoring block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#monitoring IdentityPlatformConfig#monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#monitoring IdentityPlatformConfig#monitoring}
   */
   readonly monitoring?: IdentityPlatformConfigMonitoring;
   /**
   * multi_tenant block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#multi_tenant IdentityPlatformConfig#multi_tenant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#multi_tenant IdentityPlatformConfig#multi_tenant}
   */
   readonly multiTenant?: IdentityPlatformConfigMultiTenant;
   /**
   * quota block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
   */
   readonly quota?: IdentityPlatformConfigQuota;
   /**
   * sign_in block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#sign_in IdentityPlatformConfig#sign_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#sign_in IdentityPlatformConfig#sign_in}
   */
   readonly signIn?: IdentityPlatformConfigSignIn;
   /**
   * sms_region_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#sms_region_config IdentityPlatformConfig#sms_region_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#sms_region_config IdentityPlatformConfig#sms_region_config}
   */
   readonly smsRegionConfig?: IdentityPlatformConfigSmsRegionConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformConfigTimeouts;
 }
@@ -94,19 +89,19 @@ export interface IdentityPlatformConfigBlockingFunctionsForwardInboundCredential
   /**
   * Whether to pass the user's OAuth identity provider's access token.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
   */
   readonly accessToken?: boolean | cdktf.IResolvable;
   /**
   * Whether to pass the user's OIDC identity provider's ID token.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
   */
   readonly idToken?: boolean | cdktf.IResolvable;
   /**
   * Whether to pass the user's OAuth identity provider's refresh token.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
   */
   readonly refreshToken?: boolean | cdktf.IResolvable;
 }
@@ -248,13 +243,13 @@ export class IdentityPlatformConfigBlockingFunctionsForwardInboundCredentialsOut
 }
 export interface IdentityPlatformConfigBlockingFunctionsTriggers {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}
   */
   readonly eventType: string;
   /**
   * HTTP URI trigger for the Cloud Function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
   */
   readonly functionUri: string;
 }
@@ -400,13 +395,13 @@ export interface IdentityPlatformConfigBlockingFunctions {
   /**
   * forward_inbound_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
   */
   readonly forwardInboundCredentials?: IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials;
   /**
   * triggers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
   */
   readonly triggers: IdentityPlatformConfigBlockingFunctionsTriggers[] | cdktf.IResolvable;
 }
@@ -518,13 +513,13 @@ export interface IdentityPlatformConfigClientPermissions {
   /**
   * When true, end users cannot delete their account on the associated project through any of our API methods
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#disabled_user_deletion IdentityPlatformConfig#disabled_user_deletion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#disabled_user_deletion IdentityPlatformConfig#disabled_user_deletion}
   */
   readonly disabledUserDeletion?: boolean | cdktf.IResolvable;
   /**
   * When true, end users cannot sign up for a new account on the associated project through any of our API methods
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#disabled_user_signup IdentityPlatformConfig#disabled_user_signup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#disabled_user_signup IdentityPlatformConfig#disabled_user_signup}
   */
   readonly disabledUserSignup?: boolean | cdktf.IResolvable;
 }
@@ -639,7 +634,7 @@ export interface IdentityPlatformConfigClient {
   /**
   * permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#permissions IdentityPlatformConfig#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#permissions IdentityPlatformConfig#permissions}
   */
   readonly permissions?: IdentityPlatformConfigClientPermissions;
 }
@@ -735,7 +730,7 @@ export interface IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig {
   /**
   * The allowed number of adjacent intervals that will be used for verification to avoid clock skew.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#adjacent_intervals IdentityPlatformConfig#adjacent_intervals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#adjacent_intervals IdentityPlatformConfig#adjacent_intervals}
   */
   readonly adjacentIntervals?: number;
 }
@@ -821,13 +816,13 @@ export interface IdentityPlatformConfigMfaProviderConfigs {
   /**
   * Whether MultiFactor Authentication has been enabled for this project. Possible values: ["DISABLED", "ENABLED", "MANDATORY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#state IdentityPlatformConfig#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#state IdentityPlatformConfig#state}
   */
   readonly state?: string;
   /**
   * totp_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#totp_provider_config IdentityPlatformConfig#totp_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#totp_provider_config IdentityPlatformConfig#totp_provider_config}
   */
   readonly totpProviderConfig?: IdentityPlatformConfigMfaProviderConfigsTotpProviderConfig;
 }
@@ -974,19 +969,19 @@ export interface IdentityPlatformConfigMfa {
   /**
   * A list of usable second factors for this project. Possible values: ["PHONE_SMS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#enabled_providers IdentityPlatformConfig#enabled_providers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#enabled_providers IdentityPlatformConfig#enabled_providers}
   */
   readonly enabledProviders?: string[];
   /**
   * Whether MultiFactor Authentication has been enabled for this project. Possible values: ["DISABLED", "ENABLED", "MANDATORY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#state IdentityPlatformConfig#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#state IdentityPlatformConfig#state}
   */
   readonly state?: string;
   /**
   * provider_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#provider_configs IdentityPlatformConfig#provider_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#provider_configs IdentityPlatformConfig#provider_configs}
   */
   readonly providerConfigs?: IdentityPlatformConfigMfaProviderConfigs[] | cdktf.IResolvable;
 }
@@ -1130,7 +1125,7 @@ export interface IdentityPlatformConfigMonitoringRequestLogging {
   /**
   * Whether logging is enabled for this project or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
 }
@@ -1216,7 +1211,7 @@ export interface IdentityPlatformConfigMonitoring {
   /**
   * request_logging block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#request_logging IdentityPlatformConfig#request_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#request_logging IdentityPlatformConfig#request_logging}
   */
   readonly requestLogging?: IdentityPlatformConfigMonitoringRequestLogging;
 }
@@ -1302,7 +1297,7 @@ export interface IdentityPlatformConfigMultiTenant {
   /**
   * Whether this project can have tenants or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#allow_tenants IdentityPlatformConfig#allow_tenants}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#allow_tenants IdentityPlatformConfig#allow_tenants}
   */
   readonly allowTenants?: boolean | cdktf.IResolvable;
   /**
@@ -1310,7 +1305,7 @@ export interface IdentityPlatformConfigMultiTenant {
   * The parent resource name should be in the format of "/", such as "folders/123" or "organizations/456".
   * If the value is not set, the tenant will be created under the same organization or folder as the agent project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#default_tenant_location IdentityPlatformConfig#default_tenant_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#default_tenant_location IdentityPlatformConfig#default_tenant_location}
   */
   readonly defaultTenantLocation?: string;
 }
@@ -1425,19 +1420,19 @@ export interface IdentityPlatformConfigQuotaSignUpQuotaConfig {
   /**
   * A sign up APIs quota that customers can override temporarily. Value can be in between 1 and 1000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
   */
   readonly quota?: number;
   /**
   * How long this quota will be active for. It is measurred in seconds, e.g., Example: "9.615s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
   */
   readonly quotaDuration?: string;
   /**
   * When this quota will take affect.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
   */
   readonly startTime?: string;
 }
@@ -1581,7 +1576,7 @@ export interface IdentityPlatformConfigQuota {
   /**
   * sign_up_quota_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
   */
   readonly signUpQuotaConfig?: IdentityPlatformConfigQuotaSignUpQuotaConfig;
 }
@@ -1762,7 +1757,7 @@ export interface IdentityPlatformConfigSignInAnonymous {
   /**
   * Whether anonymous user auth is enabled for the project or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -1845,7 +1840,7 @@ export interface IdentityPlatformConfigSignInEmail {
   /**
   * Whether email auth is enabled for the project or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
@@ -1853,7 +1848,7 @@ export interface IdentityPlatformConfigSignInEmail {
   * password must be provided to sign in. If false, a user may sign in via either
   * email/password or email link.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#password_required IdentityPlatformConfig#password_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#password_required IdentityPlatformConfig#password_required}
   */
   readonly passwordRequired?: boolean | cdktf.IResolvable;
 }
@@ -1965,13 +1960,13 @@ export interface IdentityPlatformConfigSignInPhoneNumber {
   /**
   * Whether phone number auth is enabled for the project or not.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#enabled IdentityPlatformConfig#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
   * A map of <test phone number, fake code> that can be used for phone auth testing.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#test_phone_numbers IdentityPlatformConfig#test_phone_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#test_phone_numbers IdentityPlatformConfig#test_phone_numbers}
   */
   readonly testPhoneNumbers?: { [key: string]: string };
 }
@@ -2083,25 +2078,25 @@ export interface IdentityPlatformConfigSignIn {
   /**
   * Whether to allow more than one account to have the same email.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#allow_duplicate_emails IdentityPlatformConfig#allow_duplicate_emails}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#allow_duplicate_emails IdentityPlatformConfig#allow_duplicate_emails}
   */
   readonly allowDuplicateEmails?: boolean | cdktf.IResolvable;
   /**
   * anonymous block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#anonymous IdentityPlatformConfig#anonymous}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#anonymous IdentityPlatformConfig#anonymous}
   */
   readonly anonymous?: IdentityPlatformConfigSignInAnonymous;
   /**
   * email block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#email IdentityPlatformConfig#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#email IdentityPlatformConfig#email}
   */
   readonly email?: IdentityPlatformConfigSignInEmail;
   /**
   * phone_number block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#phone_number IdentityPlatformConfig#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#phone_number IdentityPlatformConfig#phone_number}
   */
   readonly phoneNumber?: IdentityPlatformConfigSignInPhoneNumber;
 }
@@ -2280,7 +2275,7 @@ export interface IdentityPlatformConfigSmsRegionConfigAllowByDefault {
   /**
   * Two letter unicode region codes to disallow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#disallowed_regions IdentityPlatformConfig#disallowed_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#disallowed_regions IdentityPlatformConfig#disallowed_regions}
   */
   readonly disallowedRegions?: string[];
 }
@@ -2366,7 +2361,7 @@ export interface IdentityPlatformConfigSmsRegionConfigAllowlistOnly {
   /**
   * Two letter unicode region codes to allow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#allowed_regions IdentityPlatformConfig#allowed_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#allowed_regions IdentityPlatformConfig#allowed_regions}
   */
   readonly allowedRegions?: string[];
 }
@@ -2452,13 +2447,13 @@ export interface IdentityPlatformConfigSmsRegionConfig {
   /**
   * allow_by_default block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#allow_by_default IdentityPlatformConfig#allow_by_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#allow_by_default IdentityPlatformConfig#allow_by_default}
   */
   readonly allowByDefault?: IdentityPlatformConfigSmsRegionConfigAllowByDefault;
   /**
   * allowlist_only block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#allowlist_only IdentityPlatformConfig#allowlist_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#allowlist_only IdentityPlatformConfig#allowlist_only}
   */
   readonly allowlistOnly?: IdentityPlatformConfigSmsRegionConfigAllowlistOnly;
 }
@@ -2571,15 +2566,15 @@ export class IdentityPlatformConfigSmsRegionConfigOutputReference extends cdktf.
 }
 export interface IdentityPlatformConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}
   */
   readonly update?: string;
 }
@@ -2731,7 +2726,7 @@ export class IdentityPlatformConfigTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config google_identity_platform_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config google_identity_platform_config}
 */
 export class IdentityPlatformConfig extends cdktf.TerraformResource {
 
@@ -2747,7 +2742,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IdentityPlatformConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IdentityPlatformConfig to import
-  * @param importFromId The id of the existing IdentityPlatformConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IdentityPlatformConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IdentityPlatformConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2759,7 +2754,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/identity_platform_config google_identity_platform_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_config google_identity_platform_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2770,7 +2765,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_identity_platform_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.31.0',
+        providerVersion: '6.32.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
