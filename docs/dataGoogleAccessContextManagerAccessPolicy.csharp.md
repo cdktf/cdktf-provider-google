@@ -4,7 +4,7 @@
 
 ### DataGoogleAccessContextManagerAccessPolicy <a name="DataGoogleAccessContextManagerAccessPolicy" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/data-sources/access_context_manager_access_policy google_access_context_manager_access_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/access_context_manager_access_policy google_access_context_manager_access_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicy.Initializer"></a>
 
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleAccessContextMan
 
 The id of the existing DataGoogleAccessContextManagerAccessPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/data-sources/access_context_manager_access_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/access_context_manager_access_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -672,9 +672,9 @@ new DataGoogleAccessContextManagerAccessPolicyConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/data-sources/access_context_manager_access_policy#parent DataGoogleAccessContextManagerAccessPolicy#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/data-sources/access_context_manager_access_policy#id DataGoogleAccessContextManagerAccessPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.scopes">Scopes</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/data-sources/access_context_manager_access_policy#scopes DataGoogleAccessContextManagerAccessPolicy#scopes}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/access_context_manager_access_policy#parent DataGoogleAccessContextManagerAccessPolicy#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/access_context_manager_access_policy#id DataGoogleAccessContextManagerAccessPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.property.scopes">Scopes</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/access_context_manager_access_policy#scopes DataGoogleAccessContextManagerAccessPolicy#scopes}. |
 
 ---
 
@@ -756,7 +756,7 @@ public string Parent { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/data-sources/access_context_manager_access_policy#parent DataGoogleAccessContextManagerAccessPolicy#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/access_context_manager_access_policy#parent DataGoogleAccessContextManagerAccessPolicy#parent}.
 
 ---
 
@@ -768,7 +768,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/data-sources/access_context_manager_access_policy#id DataGoogleAccessContextManagerAccessPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/access_context_manager_access_policy#id DataGoogleAccessContextManagerAccessPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -783,7 +783,7 @@ public string[] Scopes { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/data-sources/access_context_manager_access_policy#scopes DataGoogleAccessContextManagerAccessPolicy#scopes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/access_context_manager_access_policy#scopes DataGoogleAccessContextManagerAccessPolicy#scopes}.
 
 ---
 
