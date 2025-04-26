@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config
+// https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,17 +17,17 @@ export interface SpannerInstanceConfigAConfig extends cdktf.TerraformMetaArgumen
   * Only set for user managed configurations.
   * baseConfig must refer to a configuration of type GOOGLE_MANAGED in the same project as this configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#base_config SpannerInstanceConfigA#base_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#base_config SpannerInstanceConfigA#base_config}
   */
   readonly baseConfig?: string;
   /**
   * The name of this instance configuration as it appears in UIs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#display_name SpannerInstanceConfigA#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#display_name SpannerInstanceConfigA#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#id SpannerInstanceConfigA#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#id SpannerInstanceConfigA#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -41,30 +41,30 @@ export interface SpannerInstanceConfigAConfig extends cdktf.TerraformMetaArgumen
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#labels SpannerInstanceConfigA#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#labels SpannerInstanceConfigA#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * A unique identifier for the instance configuration. Values are of the
   * form projects/<project>/instanceConfigs/[a-z][-a-z0-9]*
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#name SpannerInstanceConfigA#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#name SpannerInstanceConfigA#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#project SpannerInstanceConfigA#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#project SpannerInstanceConfigA#project}
   */
   readonly project?: string;
   /**
   * replicas block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#replicas SpannerInstanceConfigA#replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#replicas SpannerInstanceConfigA#replicas}
   */
   readonly replicas: SpannerInstanceConfigReplicas[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#timeouts SpannerInstanceConfigA#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#timeouts SpannerInstanceConfigA#timeouts}
   */
   readonly timeouts?: SpannerInstanceConfigTimeouts;
 }
@@ -73,13 +73,13 @@ export interface SpannerInstanceConfigReplicas {
   * If true, this location is designated as the default leader location where
   * leader replicas are placed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#default_leader_location SpannerInstanceConfigA#default_leader_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#default_leader_location SpannerInstanceConfigA#default_leader_location}
   */
   readonly defaultLeaderLocation?: boolean | cdktf.IResolvable;
   /**
   * The location of the serving resources, e.g. "us-central1".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#location SpannerInstanceConfigA#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#location SpannerInstanceConfigA#location}
   */
   readonly location?: string;
   /**
@@ -87,7 +87,7 @@ export interface SpannerInstanceConfigReplicas {
   * documentation](https://cloud.google.com/spanner/docs/replication#replica_types)
   * for more details. Possible values: ["READ_WRITE", "READ_ONLY", "WITNESS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#type SpannerInstanceConfigA#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#type SpannerInstanceConfigA#type}
   */
   readonly type?: string;
 }
@@ -261,15 +261,15 @@ export class SpannerInstanceConfigReplicasList extends cdktf.ComplexList {
 }
 export interface SpannerInstanceConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#create SpannerInstanceConfigA#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#create SpannerInstanceConfigA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#delete SpannerInstanceConfigA#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#delete SpannerInstanceConfigA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#update SpannerInstanceConfigA#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#update SpannerInstanceConfigA#update}
   */
   readonly update?: string;
 }
@@ -421,7 +421,7 @@ export class SpannerInstanceConfigTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config google_spanner_instance_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config google_spanner_instance_config}
 */
 export class SpannerInstanceConfigA extends cdktf.TerraformResource {
 
@@ -437,7 +437,7 @@ export class SpannerInstanceConfigA extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SpannerInstanceConfigA resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SpannerInstanceConfigA to import
-  * @param importFromId The id of the existing SpannerInstanceConfigA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SpannerInstanceConfigA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SpannerInstanceConfigA to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -449,7 +449,7 @@ export class SpannerInstanceConfigA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.31.0/docs/resources/spanner_instance_config google_spanner_instance_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/spanner_instance_config google_spanner_instance_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -460,7 +460,7 @@ export class SpannerInstanceConfigA extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_instance_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.31.0',
+        providerVersion: '6.32.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
