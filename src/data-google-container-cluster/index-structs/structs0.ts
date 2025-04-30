@@ -5454,6 +5454,11 @@ export class DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigO
     }
   }
 
+  // data_cache_count - computed: true, optional: false, required: false
+  public get dataCacheCount() {
+    return this.getNumberAttribute('data_cache_count');
+  }
+
   // local_ssd_count - computed: true, optional: false, required: false
   public get localSsdCount() {
     return this.getNumberAttribute('local_ssd_count');

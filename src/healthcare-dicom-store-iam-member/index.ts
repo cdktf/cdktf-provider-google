@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareDicomStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#dicom_store_id HealthcareDicomStoreIamMember#dicom_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#dicom_store_id HealthcareDicomStoreIamMember#dicom_store_id}
   */
   readonly dicomStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#id HealthcareDicomStoreIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#id HealthcareDicomStoreIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#member HealthcareDicomStoreIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#member HealthcareDicomStoreIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#role HealthcareDicomStoreIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#role HealthcareDicomStoreIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#condition HealthcareDicomStoreIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#condition HealthcareDicomStoreIamMember#condition}
   */
   readonly condition?: HealthcareDicomStoreIamMemberCondition;
 }
 export interface HealthcareDicomStoreIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#description HealthcareDicomStoreIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#description HealthcareDicomStoreIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#expression HealthcareDicomStoreIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#expression HealthcareDicomStoreIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#title HealthcareDicomStoreIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#title HealthcareDicomStoreIamMember#title}
   */
   readonly title: string;
 }
@@ -184,7 +184,7 @@ export class HealthcareDicomStoreIamMemberConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member google_healthcare_dicom_store_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member google_healthcare_dicom_store_iam_member}
 */
 export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
 
@@ -200,7 +200,7 @@ export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HealthcareDicomStoreIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HealthcareDicomStoreIamMember to import
-  * @param importFromId The id of the existing HealthcareDicomStoreIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HealthcareDicomStoreIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HealthcareDicomStoreIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -212,7 +212,7 @@ export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/healthcare_dicom_store_iam_member google_healthcare_dicom_store_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/healthcare_dicom_store_iam_member google_healthcare_dicom_store_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -223,7 +223,7 @@ export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_dicom_store_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.32.0',
+        providerVersion: '6.33.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config
+// https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,29 +15,29 @@ export interface IdentityPlatformOauthIdpConfigConfig extends cdktf.TerraformMet
   /**
   * The client id of an OAuth client.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#client_id IdentityPlatformOauthIdpConfig#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#client_id IdentityPlatformOauthIdpConfig#client_id}
   */
   readonly clientId: string;
   /**
   * The client secret of the OAuth client, to enable OIDC code flow.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#client_secret IdentityPlatformOauthIdpConfig#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#client_secret IdentityPlatformOauthIdpConfig#client_secret}
   */
   readonly clientSecret?: string;
   /**
   * Human friendly display name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#display_name IdentityPlatformOauthIdpConfig#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#display_name IdentityPlatformOauthIdpConfig#display_name}
   */
   readonly displayName?: string;
   /**
   * If this config allows users to sign in with the provider.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#enabled IdentityPlatformOauthIdpConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#enabled IdentityPlatformOauthIdpConfig#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#id IdentityPlatformOauthIdpConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#id IdentityPlatformOauthIdpConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -46,37 +46,164 @@ export interface IdentityPlatformOauthIdpConfigConfig extends cdktf.TerraformMet
   /**
   * For OIDC Idps, the issuer identifier.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#issuer IdentityPlatformOauthIdpConfig#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#issuer IdentityPlatformOauthIdpConfig#issuer}
   */
   readonly issuer: string;
   /**
   * The name of the OauthIdpConfig. Must start with 'oidc.'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#name IdentityPlatformOauthIdpConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#name IdentityPlatformOauthIdpConfig#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#project IdentityPlatformOauthIdpConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#project IdentityPlatformOauthIdpConfig#project}
   */
   readonly project?: string;
   /**
+  * response_type block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#response_type IdentityPlatformOauthIdpConfig#response_type}
+  */
+  readonly responseType?: IdentityPlatformOauthIdpConfigResponseType;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#timeouts IdentityPlatformOauthIdpConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#timeouts IdentityPlatformOauthIdpConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformOauthIdpConfigTimeouts;
 }
+export interface IdentityPlatformOauthIdpConfigResponseType {
+  /**
+  * If true, authorization code is returned from IdP's authorization endpoint.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#code IdentityPlatformOauthIdpConfig#code}
+  */
+  readonly code?: boolean | cdktf.IResolvable;
+  /**
+  * If true, ID token is returned from IdP's authorization endpoint.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#id_token IdentityPlatformOauthIdpConfig#id_token}
+  */
+  readonly idToken?: boolean | cdktf.IResolvable;
+}
+
+export function identityPlatformOauthIdpConfigResponseTypeToTerraform(struct?: IdentityPlatformOauthIdpConfigResponseTypeOutputReference | IdentityPlatformOauthIdpConfigResponseType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    code: cdktf.booleanToTerraform(struct!.code),
+    id_token: cdktf.booleanToTerraform(struct!.idToken),
+  }
+}
+
+
+export function identityPlatformOauthIdpConfigResponseTypeToHclTerraform(struct?: IdentityPlatformOauthIdpConfigResponseTypeOutputReference | IdentityPlatformOauthIdpConfigResponseType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    code: {
+      value: cdktf.booleanToHclTerraform(struct!.code),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    id_token: {
+      value: cdktf.booleanToHclTerraform(struct!.idToken),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class IdentityPlatformOauthIdpConfigResponseTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformOauthIdpConfigResponseType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._code !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.code = this._code;
+    }
+    if (this._idToken !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.idToken = this._idToken;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformOauthIdpConfigResponseType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._code = undefined;
+      this._idToken = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._code = value.code;
+      this._idToken = value.idToken;
+    }
+  }
+
+  // code - computed: false, optional: true, required: false
+  private _code?: boolean | cdktf.IResolvable; 
+  public get code() {
+    return this.getBooleanAttribute('code');
+  }
+  public set code(value: boolean | cdktf.IResolvable) {
+    this._code = value;
+  }
+  public resetCode() {
+    this._code = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get codeInput() {
+    return this._code;
+  }
+
+  // id_token - computed: false, optional: true, required: false
+  private _idToken?: boolean | cdktf.IResolvable; 
+  public get idToken() {
+    return this.getBooleanAttribute('id_token');
+  }
+  public set idToken(value: boolean | cdktf.IResolvable) {
+    this._idToken = value;
+  }
+  public resetIdToken() {
+    this._idToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idTokenInput() {
+    return this._idToken;
+  }
+}
 export interface IdentityPlatformOauthIdpConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#create IdentityPlatformOauthIdpConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#create IdentityPlatformOauthIdpConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#delete IdentityPlatformOauthIdpConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#delete IdentityPlatformOauthIdpConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#update IdentityPlatformOauthIdpConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#update IdentityPlatformOauthIdpConfig#update}
   */
   readonly update?: string;
 }
@@ -228,7 +355,7 @@ export class IdentityPlatformOauthIdpConfigTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config google_identity_platform_oauth_idp_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config google_identity_platform_oauth_idp_config}
 */
 export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
 
@@ -244,7 +371,7 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IdentityPlatformOauthIdpConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IdentityPlatformOauthIdpConfig to import
-  * @param importFromId The id of the existing IdentityPlatformOauthIdpConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IdentityPlatformOauthIdpConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IdentityPlatformOauthIdpConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -256,7 +383,7 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/identity_platform_oauth_idp_config google_identity_platform_oauth_idp_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/identity_platform_oauth_idp_config google_identity_platform_oauth_idp_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -267,7 +394,7 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_identity_platform_oauth_idp_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.32.0',
+        providerVersion: '6.33.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -286,6 +413,7 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
     this._issuer = config.issuer;
     this._name = config.name;
     this._project = config.project;
+    this._responseType.internalValue = config.responseType;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -412,6 +540,22 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // response_type - computed: false, optional: true, required: false
+  private _responseType = new IdentityPlatformOauthIdpConfigResponseTypeOutputReference(this, "response_type");
+  public get responseType() {
+    return this._responseType;
+  }
+  public putResponseType(value: IdentityPlatformOauthIdpConfigResponseType) {
+    this._responseType.internalValue = value;
+  }
+  public resetResponseType() {
+    this._responseType.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseTypeInput() {
+    return this._responseType.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new IdentityPlatformOauthIdpConfigTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -442,6 +586,7 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
       issuer: cdktf.stringToTerraform(this._issuer),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      response_type: identityPlatformOauthIdpConfigResponseTypeToTerraform(this._responseType.internalValue),
       timeouts: identityPlatformOauthIdpConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -495,6 +640,12 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      response_type: {
+        value: identityPlatformOauthIdpConfigResponseTypeToHclTerraform(this._responseType.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IdentityPlatformOauthIdpConfigResponseTypeList",
       },
       timeouts: {
         value: identityPlatformOauthIdpConfigTimeoutsToHclTerraform(this._timeouts.internalValue),

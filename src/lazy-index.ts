@@ -137,6 +137,8 @@ Object.defineProperty(exports, 'bigtableInstance', { get: function () { return r
 Object.defineProperty(exports, 'bigtableInstanceIamBinding', { get: function () { return require('./bigtable-instance-iam-binding'); } });
 Object.defineProperty(exports, 'bigtableInstanceIamMember', { get: function () { return require('./bigtable-instance-iam-member'); } });
 Object.defineProperty(exports, 'bigtableInstanceIamPolicy', { get: function () { return require('./bigtable-instance-iam-policy'); } });
+Object.defineProperty(exports, 'bigtableLogicalView', { get: function () { return require('./bigtable-logical-view'); } });
+Object.defineProperty(exports, 'bigtableMaterializedView', { get: function () { return require('./bigtable-materialized-view'); } });
 Object.defineProperty(exports, 'bigtableTable', { get: function () { return require('./bigtable-table'); } });
 Object.defineProperty(exports, 'bigtableTableIamBinding', { get: function () { return require('./bigtable-table-iam-binding'); } });
 Object.defineProperty(exports, 'bigtableTableIamMember', { get: function () { return require('./bigtable-table-iam-member'); } });
@@ -321,6 +323,8 @@ Object.defineProperty(exports, 'computeRegionNetworkFirewallPolicy', { get: func
 Object.defineProperty(exports, 'computeRegionNetworkFirewallPolicyAssociation', { get: function () { return require('./compute-region-network-firewall-policy-association'); } });
 Object.defineProperty(exports, 'computeRegionNetworkFirewallPolicyRule', { get: function () { return require('./compute-region-network-firewall-policy-rule'); } });
 Object.defineProperty(exports, 'computeRegionPerInstanceConfig', { get: function () { return require('./compute-region-per-instance-config'); } });
+Object.defineProperty(exports, 'computeRegionSecurityPolicy', { get: function () { return require('./compute-region-security-policy'); } });
+Object.defineProperty(exports, 'computeRegionSecurityPolicyRule', { get: function () { return require('./compute-region-security-policy-rule'); } });
 Object.defineProperty(exports, 'computeRegionSslCertificate', { get: function () { return require('./compute-region-ssl-certificate'); } });
 Object.defineProperty(exports, 'computeRegionSslPolicy', { get: function () { return require('./compute-region-ssl-policy'); } });
 Object.defineProperty(exports, 'computeRegionTargetHttpProxy', { get: function () { return require('./compute-region-target-http-proxy'); } });
@@ -827,6 +831,7 @@ Object.defineProperty(exports, 'organizationPolicy', { get: function () { return
 Object.defineProperty(exports, 'osConfigOsPolicyAssignment', { get: function () { return require('./os-config-os-policy-assignment'); } });
 Object.defineProperty(exports, 'osConfigPatchDeployment', { get: function () { return require('./os-config-patch-deployment'); } });
 Object.defineProperty(exports, 'osConfigV2PolicyOrchestrator', { get: function () { return require('./os-config-v2-policy-orchestrator'); } });
+Object.defineProperty(exports, 'osConfigV2PolicyOrchestratorForFolder', { get: function () { return require('./os-config-v2-policy-orchestrator-for-folder'); } });
 Object.defineProperty(exports, 'osConfigV2PolicyOrchestratorForOrganization', { get: function () { return require('./os-config-v2-policy-orchestrator-for-organization'); } });
 Object.defineProperty(exports, 'osLoginSshPublicKey', { get: function () { return require('./os-login-ssh-public-key'); } });
 Object.defineProperty(exports, 'parallelstoreInstance', { get: function () { return require('./parallelstore-instance'); } });
@@ -1256,6 +1261,7 @@ Object.defineProperty(exports, 'dataGoogleLoggingOrganizationSettings', { get: f
 Object.defineProperty(exports, 'dataGoogleLoggingProjectCmekSettings', { get: function () { return require('./data-google-logging-project-cmek-settings'); } });
 Object.defineProperty(exports, 'dataGoogleLoggingProjectSettings', { get: function () { return require('./data-google-logging-project-settings'); } });
 Object.defineProperty(exports, 'dataGoogleLoggingSink', { get: function () { return require('./data-google-logging-sink'); } });
+Object.defineProperty(exports, 'dataGoogleMemcacheInstance', { get: function () { return require('./data-google-memcache-instance'); } });
 Object.defineProperty(exports, 'dataGoogleMemorystoreInstance', { get: function () { return require('./data-google-memorystore-instance'); } });
 Object.defineProperty(exports, 'dataGoogleMonitoringAppEngineService', { get: function () { return require('./data-google-monitoring-app-engine-service'); } });
 Object.defineProperty(exports, 'dataGoogleMonitoringClusterIstioService', { get: function () { return require('./data-google-monitoring-cluster-istio-service'); } });

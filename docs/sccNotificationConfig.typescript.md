@@ -4,7 +4,7 @@
 
 ### SccNotificationConfig <a name="SccNotificationConfig" id="@cdktf/provider-google.sccNotificationConfig.SccNotificationConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config google_scc_notification_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config google_scc_notification_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccNotificationConfig.SccNotificationConfig.Initializer"></a>
 
@@ -514,7 +514,7 @@ The construct id used in the generated config for the SccNotificationConfig to i
 
 The id of the existing SccNotificationConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -911,7 +911,7 @@ const sccNotificationConfigConfig: sccNotificationConfig.SccNotificationConfigCo
 | <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigConfig.property.pubsubTopic">pubsubTopic</a></code> | <code>string</code> | The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]". |
 | <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigConfig.property.streamingConfig">streamingConfig</a></code> | <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigStreamingConfig">SccNotificationConfigStreamingConfig</a></code> | streaming_config block. |
 | <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigConfig.property.description">description</a></code> | <code>string</code> | The description of the notification config (max of 1024 characters). |
-| <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#id SccNotificationConfig#id}. |
+| <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#id SccNotificationConfig#id}. |
 | <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigTimeouts">SccNotificationConfigTimeouts</a></code> | timeouts block. |
 
 ---
@@ -996,7 +996,7 @@ public readonly configId: string;
 
 This must be unique within the organization.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#config_id SccNotificationConfig#config_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#config_id SccNotificationConfig#config_id}
 
 ---
 
@@ -1010,7 +1010,7 @@ public readonly organization: string;
 
 The organization whose Cloud Security Command Center the Notification Config lives in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#organization SccNotificationConfig#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#organization SccNotificationConfig#organization}
 
 ---
 
@@ -1024,7 +1024,7 @@ public readonly pubsubTopic: string;
 
 The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#pubsub_topic SccNotificationConfig#pubsub_topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#pubsub_topic SccNotificationConfig#pubsub_topic}
 
 ---
 
@@ -1038,7 +1038,7 @@ public readonly streamingConfig: SccNotificationConfigStreamingConfig;
 
 streaming_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#streaming_config SccNotificationConfig#streaming_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#streaming_config SccNotificationConfig#streaming_config}
 
 ---
 
@@ -1052,7 +1052,7 @@ public readonly description: string;
 
 The description of the notification config (max of 1024 characters).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#description SccNotificationConfig#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#description SccNotificationConfig#description}
 
 ---
 
@@ -1064,7 +1064,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#id SccNotificationConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#id SccNotificationConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1081,7 +1081,7 @@ public readonly timeouts: SccNotificationConfigTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#timeouts SccNotificationConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#timeouts SccNotificationConfig#timeouts}
 
 ---
 
@@ -1138,7 +1138,7 @@ See
 [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
 for information on how to write a filter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#filter SccNotificationConfig#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#filter SccNotificationConfig#filter}
 
 ---
 
@@ -1156,9 +1156,9 @@ const sccNotificationConfigTimeouts: sccNotificationConfig.SccNotificationConfig
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#create SccNotificationConfig#create}. |
-| <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#delete SccNotificationConfig#delete}. |
-| <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#update SccNotificationConfig#update}. |
+| <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#create SccNotificationConfig#create}. |
+| <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#delete SccNotificationConfig#delete}. |
+| <code><a href="#@cdktf/provider-google.sccNotificationConfig.SccNotificationConfigTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#update SccNotificationConfig#update}. |
 
 ---
 
@@ -1170,7 +1170,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#create SccNotificationConfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#create SccNotificationConfig#create}.
 
 ---
 
@@ -1182,7 +1182,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#delete SccNotificationConfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#delete SccNotificationConfig#delete}.
 
 ---
 
@@ -1194,7 +1194,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/scc_notification_config#update SccNotificationConfig#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/scc_notification_config#update SccNotificationConfig#update}.
 
 ---
 

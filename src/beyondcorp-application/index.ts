@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application
+// https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,57 +18,63 @@ export interface BeyondcorpApplicationConfig extends cdktf.TerraformMetaArgument
   * * Must contain between 4-63 characters from '/a-z-/'.
   * * Must end with a number or letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#application_id BeyondcorpApplication#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#application_id BeyondcorpApplication#application_id}
   */
   readonly applicationId: string;
   /**
   * Optional. An arbitrary user-provided name for the Application resource.
   * Cannot exceed 64 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#display_name BeyondcorpApplication#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#display_name BeyondcorpApplication#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#id BeyondcorpApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#id BeyondcorpApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#project BeyondcorpApplication#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#project BeyondcorpApplication#project}
   */
   readonly project?: string;
   /**
   * Part of 'parent'. See documentation of 'projectsId'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#security_gateways_id BeyondcorpApplication#security_gateways_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#security_gateways_id BeyondcorpApplication#security_gateways_id}
   */
   readonly securityGatewaysId: string;
   /**
   * endpoint_matchers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#endpoint_matchers BeyondcorpApplication#endpoint_matchers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#endpoint_matchers BeyondcorpApplication#endpoint_matchers}
   */
   readonly endpointMatchers: BeyondcorpApplicationEndpointMatchers[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#timeouts BeyondcorpApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#timeouts BeyondcorpApplication#timeouts}
   */
   readonly timeouts?: BeyondcorpApplicationTimeouts;
+  /**
+  * upstreams block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#upstreams BeyondcorpApplication#upstreams}
+  */
+  readonly upstreams?: BeyondcorpApplicationUpstreams[] | cdktf.IResolvable;
 }
 export interface BeyondcorpApplicationEndpointMatchers {
   /**
   * Required. Hostname of the application.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#hostname BeyondcorpApplication#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#hostname BeyondcorpApplication#hostname}
   */
   readonly hostname: string;
   /**
   * Optional. Ports of the application.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#ports BeyondcorpApplication#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#ports BeyondcorpApplication#ports}
   */
   readonly ports?: number[];
 }
@@ -210,15 +216,15 @@ export class BeyondcorpApplicationEndpointMatchersList extends cdktf.ComplexList
 }
 export interface BeyondcorpApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#create BeyondcorpApplication#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#create BeyondcorpApplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#delete BeyondcorpApplication#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#delete BeyondcorpApplication#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#update BeyondcorpApplication#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#update BeyondcorpApplication#update}
   */
   readonly update?: string;
 }
@@ -368,9 +374,329 @@ export class BeyondcorpApplicationTimeoutsOutputReference extends cdktf.ComplexO
     return this._update;
   }
 }
+export interface BeyondcorpApplicationUpstreamsEgressPolicy {
+  /**
+  * Required. List of regions where the application sends traffic to.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#regions BeyondcorpApplication#regions}
+  */
+  readonly regions: string[];
+}
+
+export function beyondcorpApplicationUpstreamsEgressPolicyToTerraform(struct?: BeyondcorpApplicationUpstreamsEgressPolicyOutputReference | BeyondcorpApplicationUpstreamsEgressPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    regions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.regions),
+  }
+}
+
+
+export function beyondcorpApplicationUpstreamsEgressPolicyToHclTerraform(struct?: BeyondcorpApplicationUpstreamsEgressPolicyOutputReference | BeyondcorpApplicationUpstreamsEgressPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    regions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.regions),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class BeyondcorpApplicationUpstreamsEgressPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BeyondcorpApplicationUpstreamsEgressPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._regions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regions = this._regions;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BeyondcorpApplicationUpstreamsEgressPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._regions = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._regions = value.regions;
+    }
+  }
+
+  // regions - computed: false, optional: false, required: true
+  private _regions?: string[]; 
+  public get regions() {
+    return this.getListAttribute('regions');
+  }
+  public set regions(value: string[]) {
+    this._regions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionsInput() {
+    return this._regions;
+  }
+}
+export interface BeyondcorpApplicationUpstreamsNetwork {
+  /**
+  * Required. Network name is of the format:
+  * 'projects/{project}/global/networks/{network}'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#name BeyondcorpApplication#name}
+  */
+  readonly name: string;
+}
+
+export function beyondcorpApplicationUpstreamsNetworkToTerraform(struct?: BeyondcorpApplicationUpstreamsNetworkOutputReference | BeyondcorpApplicationUpstreamsNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function beyondcorpApplicationUpstreamsNetworkToHclTerraform(struct?: BeyondcorpApplicationUpstreamsNetworkOutputReference | BeyondcorpApplicationUpstreamsNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class BeyondcorpApplicationUpstreamsNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BeyondcorpApplicationUpstreamsNetwork | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BeyondcorpApplicationUpstreamsNetwork | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+export interface BeyondcorpApplicationUpstreams {
+  /**
+  * egress_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#egress_policy BeyondcorpApplication#egress_policy}
+  */
+  readonly egressPolicy?: BeyondcorpApplicationUpstreamsEgressPolicy;
+  /**
+  * network block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#network BeyondcorpApplication#network}
+  */
+  readonly network?: BeyondcorpApplicationUpstreamsNetwork;
+}
+
+export function beyondcorpApplicationUpstreamsToTerraform(struct?: BeyondcorpApplicationUpstreams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    egress_policy: beyondcorpApplicationUpstreamsEgressPolicyToTerraform(struct!.egressPolicy),
+    network: beyondcorpApplicationUpstreamsNetworkToTerraform(struct!.network),
+  }
+}
+
+
+export function beyondcorpApplicationUpstreamsToHclTerraform(struct?: BeyondcorpApplicationUpstreams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    egress_policy: {
+      value: beyondcorpApplicationUpstreamsEgressPolicyToHclTerraform(struct!.egressPolicy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BeyondcorpApplicationUpstreamsEgressPolicyList",
+    },
+    network: {
+      value: beyondcorpApplicationUpstreamsNetworkToHclTerraform(struct!.network),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BeyondcorpApplicationUpstreamsNetworkList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class BeyondcorpApplicationUpstreamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BeyondcorpApplicationUpstreams | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._egressPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.egressPolicy = this._egressPolicy?.internalValue;
+    }
+    if (this._network?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BeyondcorpApplicationUpstreams | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._egressPolicy.internalValue = undefined;
+      this._network.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._egressPolicy.internalValue = value.egressPolicy;
+      this._network.internalValue = value.network;
+    }
+  }
+
+  // egress_policy - computed: false, optional: true, required: false
+  private _egressPolicy = new BeyondcorpApplicationUpstreamsEgressPolicyOutputReference(this, "egress_policy");
+  public get egressPolicy() {
+    return this._egressPolicy;
+  }
+  public putEgressPolicy(value: BeyondcorpApplicationUpstreamsEgressPolicy) {
+    this._egressPolicy.internalValue = value;
+  }
+  public resetEgressPolicy() {
+    this._egressPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressPolicyInput() {
+    return this._egressPolicy.internalValue;
+  }
+
+  // network - computed: false, optional: true, required: false
+  private _network = new BeyondcorpApplicationUpstreamsNetworkOutputReference(this, "network");
+  public get network() {
+    return this._network;
+  }
+  public putNetwork(value: BeyondcorpApplicationUpstreamsNetwork) {
+    this._network.internalValue = value;
+  }
+  public resetNetwork() {
+    this._network.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network.internalValue;
+  }
+}
+
+export class BeyondcorpApplicationUpstreamsList extends cdktf.ComplexList {
+  public internalValue? : BeyondcorpApplicationUpstreams[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BeyondcorpApplicationUpstreamsOutputReference {
+    return new BeyondcorpApplicationUpstreamsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application google_beyondcorp_application}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application google_beyondcorp_application}
 */
 export class BeyondcorpApplication extends cdktf.TerraformResource {
 
@@ -386,7 +712,7 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BeyondcorpApplication resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BeyondcorpApplication to import
-  * @param importFromId The id of the existing BeyondcorpApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BeyondcorpApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BeyondcorpApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -398,7 +724,7 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/beyondcorp_application google_beyondcorp_application} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/beyondcorp_application google_beyondcorp_application} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -409,7 +735,7 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
       terraformResourceType: 'google_beyondcorp_application',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.32.0',
+        providerVersion: '6.33.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -427,6 +753,7 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
     this._securityGatewaysId = config.securityGatewaysId;
     this._endpointMatchers.internalValue = config.endpointMatchers;
     this._timeouts.internalValue = config.timeouts;
+    this._upstreams.internalValue = config.upstreams;
   }
 
   // ==========
@@ -551,6 +878,22 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
     return this._timeouts.internalValue;
   }
 
+  // upstreams - computed: false, optional: true, required: false
+  private _upstreams = new BeyondcorpApplicationUpstreamsList(this, "upstreams", false);
+  public get upstreams() {
+    return this._upstreams;
+  }
+  public putUpstreams(value: BeyondcorpApplicationUpstreams[] | cdktf.IResolvable) {
+    this._upstreams.internalValue = value;
+  }
+  public resetUpstreams() {
+    this._upstreams.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upstreamsInput() {
+    return this._upstreams.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -564,6 +907,7 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
       security_gateways_id: cdktf.stringToTerraform(this._securityGatewaysId),
       endpoint_matchers: cdktf.listMapper(beyondcorpApplicationEndpointMatchersToTerraform, true)(this._endpointMatchers.internalValue),
       timeouts: beyondcorpApplicationTimeoutsToTerraform(this._timeouts.internalValue),
+      upstreams: cdktf.listMapper(beyondcorpApplicationUpstreamsToTerraform, true)(this._upstreams.internalValue),
     };
   }
 
@@ -610,6 +954,12 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
         isBlock: true,
         type: "struct",
         storageClassType: "BeyondcorpApplicationTimeouts",
+      },
+      upstreams: {
+        value: cdktf.listMapperHcl(beyondcorpApplicationUpstreamsToHclTerraform, true)(this._upstreams.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BeyondcorpApplicationUpstreamsList",
       },
     };
 

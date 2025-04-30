@@ -4,7 +4,7 @@
 
 ### DataGoogleKmsEkmConnectionIamPolicy <a name="DataGoogleKmsEkmConnectionIamPolicy" id="@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy google_kms_ekm_connection_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy google_kms_ekm_connection_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicy.Initializer"></a>
 
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleKmsEkmConnection
 
 The id of the existing DataGoogleKmsEkmConnectionIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -702,10 +702,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglekmsekmcon
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#name DataGoogleKmsEkmConnectionIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#id DataGoogleKmsEkmConnectionIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#location DataGoogleKmsEkmConnectionIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#project DataGoogleKmsEkmConnectionIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#name DataGoogleKmsEkmConnectionIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#id DataGoogleKmsEkmConnectionIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#location DataGoogleKmsEkmConnectionIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsEkmConnectionIamPolicy.DataGoogleKmsEkmConnectionIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#project DataGoogleKmsEkmConnectionIamPolicy#project}. |
 
 ---
 
@@ -787,7 +787,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#name DataGoogleKmsEkmConnectionIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#name DataGoogleKmsEkmConnectionIamPolicy#name}.
 
 ---
 
@@ -799,7 +799,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#id DataGoogleKmsEkmConnectionIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#id DataGoogleKmsEkmConnectionIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -814,7 +814,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#location DataGoogleKmsEkmConnectionIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#location DataGoogleKmsEkmConnectionIamPolicy#location}.
 
 ---
 
@@ -826,7 +826,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/data-sources/kms_ekm_connection_iam_policy#project DataGoogleKmsEkmConnectionIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/kms_ekm_connection_iam_policy#project DataGoogleKmsEkmConnectionIamPolicy#project}.
 
 ---
 
