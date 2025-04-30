@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeInstanceTemplateIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#id ComputeInstanceTemplateIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#id ComputeInstanceTemplateIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#members ComputeInstanceTemplateIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#members ComputeInstanceTemplateIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#name ComputeInstanceTemplateIamBinding#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#name ComputeInstanceTemplateIamBinding#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#project ComputeInstanceTemplateIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#project ComputeInstanceTemplateIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#role ComputeInstanceTemplateIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#role ComputeInstanceTemplateIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#condition ComputeInstanceTemplateIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#condition ComputeInstanceTemplateIamBinding#condition}
   */
   readonly condition?: ComputeInstanceTemplateIamBindingCondition;
 }
 export interface ComputeInstanceTemplateIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#description ComputeInstanceTemplateIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#description ComputeInstanceTemplateIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#expression ComputeInstanceTemplateIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#expression ComputeInstanceTemplateIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#title ComputeInstanceTemplateIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#title ComputeInstanceTemplateIamBinding#title}
   */
   readonly title: string;
 }
@@ -188,7 +183,7 @@ export class ComputeInstanceTemplateIamBindingConditionOutputReference extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding google_compute_instance_template_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding google_compute_instance_template_iam_binding}
 */
 export class ComputeInstanceTemplateIamBinding extends cdktf.TerraformResource {
 
@@ -204,7 +199,7 @@ export class ComputeInstanceTemplateIamBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeInstanceTemplateIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeInstanceTemplateIamBinding to import
-  * @param importFromId The id of the existing ComputeInstanceTemplateIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeInstanceTemplateIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeInstanceTemplateIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -216,7 +211,7 @@ export class ComputeInstanceTemplateIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.32.0/docs/resources/compute_instance_template_iam_binding google_compute_instance_template_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/resources/compute_instance_template_iam_binding google_compute_instance_template_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -227,7 +222,7 @@ export class ComputeInstanceTemplateIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_template_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.32.0',
+        providerVersion: '6.33.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

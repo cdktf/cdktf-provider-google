@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 import * as cdktf from 'cdktf';
 export interface DataGoogleContainerClusterAddonsConfigCloudrunConfig {
 }
@@ -5452,6 +5447,11 @@ export class DataGoogleContainerClusterNodeConfigEphemeralStorageLocalSsdConfigO
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // data_cache_count - computed: true, optional: false, required: false
+  public get dataCacheCount() {
+    return this.getNumberAttribute('data_cache_count');
   }
 
   // local_ssd_count - computed: true, optional: false, required: false
