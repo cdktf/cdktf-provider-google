@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/compute_region_backend_service
+// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_region_backend_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeRegionBackendServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/compute_region_backend_service#id DataGoogleComputeRegionBackendService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_region_backend_service#id DataGoogleComputeRegionBackendService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,18 +23,18 @@ export interface DataGoogleComputeRegionBackendServiceConfig extends cdktf.Terra
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/compute_region_backend_service#name DataGoogleComputeRegionBackendService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_region_backend_service#name DataGoogleComputeRegionBackendService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/compute_region_backend_service#project DataGoogleComputeRegionBackendService#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_region_backend_service#project DataGoogleComputeRegionBackendService#project}
   */
   readonly project?: string;
   /**
   * The Region in which the created backend service should reside.
   * If it is not provided, the provider region is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/compute_region_backend_service#region DataGoogleComputeRegionBackendService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_region_backend_service#region DataGoogleComputeRegionBackendService#region}
   */
   readonly region?: string;
 }
@@ -1703,7 +1698,7 @@ export class DataGoogleComputeRegionBackendServiceStrongSessionAffinityCookieLis
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/compute_region_backend_service google_compute_region_backend_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_region_backend_service google_compute_region_backend_service}
 */
 export class DataGoogleComputeRegionBackendService extends cdktf.TerraformDataSource {
 
@@ -1719,7 +1714,7 @@ export class DataGoogleComputeRegionBackendService extends cdktf.TerraformDataSo
   * Generates CDKTF code for importing a DataGoogleComputeRegionBackendService resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeRegionBackendService to import
-  * @param importFromId The id of the existing DataGoogleComputeRegionBackendService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/compute_region_backend_service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeRegionBackendService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_region_backend_service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeRegionBackendService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1731,7 +1726,7 @@ export class DataGoogleComputeRegionBackendService extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.33.0/docs/data-sources/compute_region_backend_service google_compute_region_backend_service} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_region_backend_service google_compute_region_backend_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1742,7 +1737,7 @@ export class DataGoogleComputeRegionBackendService extends cdktf.TerraformDataSo
       terraformResourceType: 'google_compute_region_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.33.0',
+        providerVersion: '6.34.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
