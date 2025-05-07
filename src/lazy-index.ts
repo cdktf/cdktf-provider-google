@@ -55,6 +55,7 @@ Object.defineProperty(exports, 'apigeeKeystoresAliasesPkcs12', { get: function (
 Object.defineProperty(exports, 'apigeeKeystoresAliasesSelfSignedCert', { get: function () { return require('./apigee-keystores-aliases-self-signed-cert'); } });
 Object.defineProperty(exports, 'apigeeNatAddress', { get: function () { return require('./apigee-nat-address'); } });
 Object.defineProperty(exports, 'apigeeOrganization', { get: function () { return require('./apigee-organization'); } });
+Object.defineProperty(exports, 'apigeeSecurityProfileV2', { get: function () { return require('./apigee-security-profile-v2'); } });
 Object.defineProperty(exports, 'apigeeSharedflow', { get: function () { return require('./apigee-sharedflow'); } });
 Object.defineProperty(exports, 'apigeeSharedflowDeployment', { get: function () { return require('./apigee-sharedflow-deployment'); } });
 Object.defineProperty(exports, 'apigeeSyncAuthorization', { get: function () { return require('./apigee-sync-authorization'); } });

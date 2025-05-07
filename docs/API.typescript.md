@@ -55,6 +55,7 @@ The following submodules are available:
 - [apigeeKeystoresAliasesSelfSignedCert](./apigeeKeystoresAliasesSelfSignedCert.typescript.md)
 - [apigeeNatAddress](./apigeeNatAddress.typescript.md)
 - [apigeeOrganization](./apigeeOrganization.typescript.md)
+- [apigeeSecurityProfileV2](./apigeeSecurityProfileV2.typescript.md)
 - [apigeeSharedflow](./apigeeSharedflow.typescript.md)
 - [apigeeSharedflowDeployment](./apigeeSharedflowDeployment.typescript.md)
 - [apigeeSyncAuthorization](./apigeeSyncAuthorization.typescript.md)

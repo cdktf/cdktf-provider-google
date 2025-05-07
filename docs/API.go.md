@@ -55,6 +55,7 @@ The following submodules are available:
 - [apigeeKeystoresAliasesSelfSignedCert](./apigeeKeystoresAliasesSelfSignedCert.go.md)
 - [apigeeNatAddress](./apigeeNatAddress.go.md)
 - [apigeeOrganization](./apigeeOrganization.go.md)
+- [apigeeSecurityProfileV2](./apigeeSecurityProfileV2.go.md)
 - [apigeeSharedflow](./apigeeSharedflow.go.md)
 - [apigeeSharedflowDeployment](./apigeeSharedflowDeployment.go.md)
 - [apigeeSyncAuthorization](./apigeeSyncAuthorization.go.md)

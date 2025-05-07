@@ -55,6 +55,7 @@ export * as apigeeKeystoresAliasesPkcs12 from './apigee-keystores-aliases-pkcs12
 export * as apigeeKeystoresAliasesSelfSignedCert from './apigee-keystores-aliases-self-signed-cert';
 export * as apigeeNatAddress from './apigee-nat-address';
 export * as apigeeOrganization from './apigee-organization';
+export * as apigeeSecurityProfileV2 from './apigee-security-profile-v2';
 export * as apigeeSharedflow from './apigee-sharedflow';
 export * as apigeeSharedflowDeployment from './apigee-sharedflow-deployment';
 export * as apigeeSyncAuthorization from './apigee-sync-authorization';

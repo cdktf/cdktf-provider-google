@@ -55,6 +55,7 @@ The following submodules are available:
 - [apigeeKeystoresAliasesSelfSignedCert](./apigeeKeystoresAliasesSelfSignedCert.csharp.md)
 - [apigeeNatAddress](./apigeeNatAddress.csharp.md)
 - [apigeeOrganization](./apigeeOrganization.csharp.md)
+- [apigeeSecurityProfileV2](./apigeeSecurityProfileV2.csharp.md)
 - [apigeeSharedflow](./apigeeSharedflow.csharp.md)
 - [apigeeSharedflowDeployment](./apigeeSharedflowDeployment.csharp.md)
 - [apigeeSyncAuthorization](./apigeeSyncAuthorization.csharp.md)
