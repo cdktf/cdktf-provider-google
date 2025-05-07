@@ -55,6 +55,7 @@ The following submodules are available:
 - [apigeeKeystoresAliasesSelfSignedCert](./apigeeKeystoresAliasesSelfSignedCert.python.md)
 - [apigeeNatAddress](./apigeeNatAddress.python.md)
 - [apigeeOrganization](./apigeeOrganization.python.md)
+- [apigeeSecurityProfileV2](./apigeeSecurityProfileV2.python.md)
 - [apigeeSharedflow](./apigeeSharedflow.python.md)
 - [apigeeSharedflowDeployment](./apigeeSharedflowDeployment.python.md)
 - [apigeeSyncAuthorization](./apigeeSyncAuthorization.python.md)
