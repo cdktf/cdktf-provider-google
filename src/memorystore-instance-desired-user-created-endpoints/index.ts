@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/memorystore_instance_desired_user_created_endpoints
 // generated from terraform resource schema
 
