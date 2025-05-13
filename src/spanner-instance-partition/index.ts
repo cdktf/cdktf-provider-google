@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition
+// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,18 +11,18 @@ export interface SpannerInstancePartitionConfig extends cdktf.TerraformMetaArgum
   * The name of the instance partition's configuration (similar to a region) which
   * defines the geographic placement and replication of data in this instance partition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#config SpannerInstancePartition#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#config SpannerInstancePartition#config}
   */
   readonly config: string;
   /**
   * The descriptive name for this instance partition as it appears in UIs.
   * Must be unique per project and between 4 and 30 characters in length.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#display_name SpannerInstancePartition#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#display_name SpannerInstancePartition#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#id SpannerInstancePartition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#id SpannerInstancePartition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,7 +31,7 @@ export interface SpannerInstancePartitionConfig extends cdktf.TerraformMetaArgum
   /**
   * The instance to create the instance partition in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#instance SpannerInstancePartition#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#instance SpannerInstancePartition#instance}
   */
   readonly instance: string;
   /**
@@ -44,7 +39,7 @@ export interface SpannerInstancePartitionConfig extends cdktf.TerraformMetaArgum
   * the instance partition is created. The name must be between 2 and 64 characters
   * and match the regular expression [a-z][a-z0-9\\-]{0,61}[a-z0-9].
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#name SpannerInstancePartition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#name SpannerInstancePartition#name}
   */
   readonly name: string;
   /**
@@ -52,38 +47,38 @@ export interface SpannerInstancePartitionConfig extends cdktf.TerraformMetaArgum
   * 1000 processing units. Exactly one of either node_count or processing_units
   * must be present.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#node_count SpannerInstancePartition#node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#node_count SpannerInstancePartition#node_count}
   */
   readonly nodeCount?: number;
   /**
   * The number of processing units allocated to this instance partition.
   * Exactly one of either node_count or processing_units must be present.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#processing_units SpannerInstancePartition#processing_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#processing_units SpannerInstancePartition#processing_units}
   */
   readonly processingUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#project SpannerInstancePartition#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#project SpannerInstancePartition#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#timeouts SpannerInstancePartition#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#timeouts SpannerInstancePartition#timeouts}
   */
   readonly timeouts?: SpannerInstancePartitionTimeouts;
 }
 export interface SpannerInstancePartitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#create SpannerInstancePartition#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#create SpannerInstancePartition#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#delete SpannerInstancePartition#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#delete SpannerInstancePartition#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#update SpannerInstancePartition#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#update SpannerInstancePartition#update}
   */
   readonly update?: string;
 }
@@ -235,7 +230,7 @@ export class SpannerInstancePartitionTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition google_spanner_instance_partition}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition google_spanner_instance_partition}
 */
 export class SpannerInstancePartition extends cdktf.TerraformResource {
 
@@ -251,7 +246,7 @@ export class SpannerInstancePartition extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SpannerInstancePartition resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SpannerInstancePartition to import
-  * @param importFromId The id of the existing SpannerInstancePartition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SpannerInstancePartition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SpannerInstancePartition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -263,7 +258,7 @@ export class SpannerInstancePartition extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/spanner_instance_partition google_spanner_instance_partition} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/spanner_instance_partition google_spanner_instance_partition} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -274,7 +269,7 @@ export class SpannerInstancePartition extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_instance_partition',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.0',
+        providerVersion: '6.34.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

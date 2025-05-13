@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface VmwareengineNetworkPolicyConfig extends cdktf.TerraformMetaArgu
   /**
   * User-provided description for this network policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#description VmwareengineNetworkPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#description VmwareengineNetworkPolicy#description}
   */
   readonly description?: string;
   /**
@@ -23,11 +18,11 @@ export interface VmwareengineNetworkPolicyConfig extends cdktf.TerraformMetaArgu
   * An RFC 1918 CIDR block, with a "/26" prefix, is required. The range cannot overlap with any
   * prefixes either in the consumer VPC network or in use by the private clouds attached to that VPC network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#edge_services_cidr VmwareengineNetworkPolicy#edge_services_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#edge_services_cidr VmwareengineNetworkPolicy#edge_services_cidr}
   */
   readonly edgeServicesCidr: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#id VmwareengineNetworkPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#id VmwareengineNetworkPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -38,17 +33,17 @@ export interface VmwareengineNetworkPolicyConfig extends cdktf.TerraformMetaArgu
   * Resource names are schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
   * For example: projects/my-project/locations/us-central1
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#location VmwareengineNetworkPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#location VmwareengineNetworkPolicy#location}
   */
   readonly location: string;
   /**
   * The ID of the Network Policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#name VmwareengineNetworkPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#name VmwareengineNetworkPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#project VmwareengineNetworkPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#project VmwareengineNetworkPolicy#project}
   */
   readonly project?: string;
   /**
@@ -56,25 +51,25 @@ export interface VmwareengineNetworkPolicyConfig extends cdktf.TerraformMetaArgu
   * projects/{project}/locations/{location}/vmwareEngineNetworks/{vmwareEngineNetworkId} where {project}
   * can either be a project number or a project ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#vmware_engine_network VmwareengineNetworkPolicy#vmware_engine_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#vmware_engine_network VmwareengineNetworkPolicy#vmware_engine_network}
   */
   readonly vmwareEngineNetwork: string;
   /**
   * external_ip block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#external_ip VmwareengineNetworkPolicy#external_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#external_ip VmwareengineNetworkPolicy#external_ip}
   */
   readonly externalIp?: VmwareengineNetworkPolicyExternalIp;
   /**
   * internet_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#internet_access VmwareengineNetworkPolicy#internet_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#internet_access VmwareengineNetworkPolicy#internet_access}
   */
   readonly internetAccess?: VmwareengineNetworkPolicyInternetAccess;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#timeouts VmwareengineNetworkPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#timeouts VmwareengineNetworkPolicy#timeouts}
   */
   readonly timeouts?: VmwareengineNetworkPolicyTimeouts;
 }
@@ -82,7 +77,7 @@ export interface VmwareengineNetworkPolicyExternalIp {
   /**
   * True if the service is enabled; false otherwise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#enabled VmwareengineNetworkPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#enabled VmwareengineNetworkPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
 }
@@ -173,7 +168,7 @@ export interface VmwareengineNetworkPolicyInternetAccess {
   /**
   * True if the service is enabled; false otherwise.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#enabled VmwareengineNetworkPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#enabled VmwareengineNetworkPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
 }
@@ -262,15 +257,15 @@ export class VmwareengineNetworkPolicyInternetAccessOutputReference extends cdkt
 }
 export interface VmwareengineNetworkPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#create VmwareengineNetworkPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#create VmwareengineNetworkPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#delete VmwareengineNetworkPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#delete VmwareengineNetworkPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#update VmwareengineNetworkPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#update VmwareengineNetworkPolicy#update}
   */
   readonly update?: string;
 }
@@ -422,7 +417,7 @@ export class VmwareengineNetworkPolicyTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy google_vmwareengine_network_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy google_vmwareengine_network_policy}
 */
 export class VmwareengineNetworkPolicy extends cdktf.TerraformResource {
 
@@ -438,7 +433,7 @@ export class VmwareengineNetworkPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VmwareengineNetworkPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VmwareengineNetworkPolicy to import
-  * @param importFromId The id of the existing VmwareengineNetworkPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VmwareengineNetworkPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VmwareengineNetworkPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -450,7 +445,7 @@ export class VmwareengineNetworkPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/vmwareengine_network_policy google_vmwareengine_network_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/vmwareengine_network_policy google_vmwareengine_network_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -461,7 +456,7 @@ export class VmwareengineNetworkPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_vmwareengine_network_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.0',
+        providerVersion: '6.34.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

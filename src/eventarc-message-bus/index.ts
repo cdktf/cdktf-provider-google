@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus
+// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,7 +13,7 @@ export interface EventarcMessageBusConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#annotations EventarcMessageBus#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#annotations EventarcMessageBus#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
@@ -28,7 +23,7 @@ export interface EventarcMessageBusConfig extends cdktf.TerraformMetaArguments {
   * It must match the pattern
   * 'projects/* /locations/* /keyRings/* /cryptoKeys/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#crypto_key_name EventarcMessageBus#crypto_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#crypto_key_name EventarcMessageBus#crypto_key_name}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -36,11 +31,11 @@ export interface EventarcMessageBusConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. Resource display name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#display_name EventarcMessageBus#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#display_name EventarcMessageBus#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#id EventarcMessageBus#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#id EventarcMessageBus#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -52,36 +47,36 @@ export interface EventarcMessageBusConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#labels EventarcMessageBus#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#labels EventarcMessageBus#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#location EventarcMessageBus#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#location EventarcMessageBus#location}
   */
   readonly location: string;
   /**
   * Required. The user-provided ID to be assigned to the MessageBus. It should match the
   * format '^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#message_bus_id EventarcMessageBus#message_bus_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#message_bus_id EventarcMessageBus#message_bus_id}
   */
   readonly messageBusId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#project EventarcMessageBus#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#project EventarcMessageBus#project}
   */
   readonly project?: string;
   /**
   * logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#logging_config EventarcMessageBus#logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#logging_config EventarcMessageBus#logging_config}
   */
   readonly loggingConfig?: EventarcMessageBusLoggingConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#timeouts EventarcMessageBus#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#timeouts EventarcMessageBus#timeouts}
   */
   readonly timeouts?: EventarcMessageBusTimeouts;
 }
@@ -90,7 +85,7 @@ export interface EventarcMessageBusLoggingConfig {
   * Optional. The minimum severity of logs that will be sent to Stackdriver/Platform
   * Telemetry. Logs at severitiy ≥ this value will be sent, unless it is NONE. Possible values: ["NONE", "DEBUG", "INFO", "NOTICE", "WARNING", "ERROR", "CRITICAL", "ALERT", "EMERGENCY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#log_severity EventarcMessageBus#log_severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#log_severity EventarcMessageBus#log_severity}
   */
   readonly logSeverity?: string;
 }
@@ -174,15 +169,15 @@ export class EventarcMessageBusLoggingConfigOutputReference extends cdktf.Comple
 }
 export interface EventarcMessageBusTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#create EventarcMessageBus#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#create EventarcMessageBus#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#delete EventarcMessageBus#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#delete EventarcMessageBus#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#update EventarcMessageBus#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#update EventarcMessageBus#update}
   */
   readonly update?: string;
 }
@@ -334,7 +329,7 @@ export class EventarcMessageBusTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus google_eventarc_message_bus}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus google_eventarc_message_bus}
 */
 export class EventarcMessageBus extends cdktf.TerraformResource {
 
@@ -350,7 +345,7 @@ export class EventarcMessageBus extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a EventarcMessageBus resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the EventarcMessageBus to import
-  * @param importFromId The id of the existing EventarcMessageBus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing EventarcMessageBus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the EventarcMessageBus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -362,7 +357,7 @@ export class EventarcMessageBus extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/eventarc_message_bus google_eventarc_message_bus} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/eventarc_message_bus google_eventarc_message_bus} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -373,7 +368,7 @@ export class EventarcMessageBus extends cdktf.TerraformResource {
       terraformResourceType: 'google_eventarc_message_bus',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.0',
+        providerVersion: '6.34.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

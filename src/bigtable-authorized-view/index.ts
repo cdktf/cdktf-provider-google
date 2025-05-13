@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view
+// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +11,11 @@ export interface BigtableAuthorizedViewConfig extends cdktf.TerraformMetaArgumen
   * A field to make the authorized view protected against data loss i.e. when set to PROTECTED, deleting the authorized view, the table containing the authorized view, and the instance containing the authorized view would be prohibited.
   * If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. Note this field configs the deletion protection provided by the API in the backend, and should not be confused with Terraform-side deletion protection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#deletion_protection BigtableAuthorizedView#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#deletion_protection BigtableAuthorizedView#deletion_protection}
   */
   readonly deletionProtection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#id BigtableAuthorizedView#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#id BigtableAuthorizedView#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,37 +24,37 @@ export interface BigtableAuthorizedViewConfig extends cdktf.TerraformMetaArgumen
   /**
   * The name of the Bigtable instance in which the authorized view belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#instance_name BigtableAuthorizedView#instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#instance_name BigtableAuthorizedView#instance_name}
   */
   readonly instanceName: string;
   /**
   * The name of the authorized view. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#name BigtableAuthorizedView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#name BigtableAuthorizedView#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#project BigtableAuthorizedView#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#project BigtableAuthorizedView#project}
   */
   readonly project?: string;
   /**
   * The name of the Bigtable table in which the authorized view belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#table_name BigtableAuthorizedView#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#table_name BigtableAuthorizedView#table_name}
   */
   readonly tableName: string;
   /**
   * subset_view block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#subset_view BigtableAuthorizedView#subset_view}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#subset_view BigtableAuthorizedView#subset_view}
   */
   readonly subsetView?: BigtableAuthorizedViewSubsetView;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#timeouts BigtableAuthorizedView#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#timeouts BigtableAuthorizedView#timeouts}
   */
   readonly timeouts?: BigtableAuthorizedViewTimeouts;
 }
@@ -67,19 +62,19 @@ export interface BigtableAuthorizedViewSubsetViewFamilySubsets {
   /**
   * Name of the column family to be included in the authorized view.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#family_name BigtableAuthorizedView#family_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#family_name BigtableAuthorizedView#family_name}
   */
   readonly familyName: string;
   /**
   * Base64-encoded prefixes for qualifiers of the column family to be included in the authorized view. Every qualifier starting with one of these prefixes is included in the authorized view. To provide access to all qualifiers, include the empty string as a prefix ("").
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#qualifier_prefixes BigtableAuthorizedView#qualifier_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#qualifier_prefixes BigtableAuthorizedView#qualifier_prefixes}
   */
   readonly qualifierPrefixes?: string[];
   /**
   * Base64-encoded individual exact column qualifiers of the column family to be included in the authorized view.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#qualifiers BigtableAuthorizedView#qualifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#qualifiers BigtableAuthorizedView#qualifiers}
   */
   readonly qualifiers?: string[];
 }
@@ -252,13 +247,13 @@ export interface BigtableAuthorizedViewSubsetView {
   /**
   * Base64-encoded row prefixes to be included in the authorized view. To provide access to all rows, include the empty string as a prefix ("").
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#row_prefixes BigtableAuthorizedView#row_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#row_prefixes BigtableAuthorizedView#row_prefixes}
   */
   readonly rowPrefixes?: string[];
   /**
   * family_subsets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#family_subsets BigtableAuthorizedView#family_subsets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#family_subsets BigtableAuthorizedView#family_subsets}
   */
   readonly familySubsets?: BigtableAuthorizedViewSubsetViewFamilySubsets[] | cdktf.IResolvable;
 }
@@ -371,11 +366,11 @@ export class BigtableAuthorizedViewSubsetViewOutputReference extends cdktf.Compl
 }
 export interface BigtableAuthorizedViewTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#create BigtableAuthorizedView#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#create BigtableAuthorizedView#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#update BigtableAuthorizedView#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#update BigtableAuthorizedView#update}
   */
   readonly update?: string;
 }
@@ -498,7 +493,7 @@ export class BigtableAuthorizedViewTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view google_bigtable_authorized_view}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view google_bigtable_authorized_view}
 */
 export class BigtableAuthorizedView extends cdktf.TerraformResource {
 
@@ -514,7 +509,7 @@ export class BigtableAuthorizedView extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigtableAuthorizedView resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigtableAuthorizedView to import
-  * @param importFromId The id of the existing BigtableAuthorizedView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigtableAuthorizedView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigtableAuthorizedView to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -526,7 +521,7 @@ export class BigtableAuthorizedView extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/bigtable_authorized_view google_bigtable_authorized_view} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/bigtable_authorized_view google_bigtable_authorized_view} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -537,7 +532,7 @@ export class BigtableAuthorizedView extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_authorized_view',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.0',
+        providerVersion: '6.34.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

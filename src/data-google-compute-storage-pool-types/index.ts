@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_types
+// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_types
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeStoragePoolTypesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_types#project DataGoogleComputeStoragePoolTypes#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_types#project DataGoogleComputeStoragePoolTypes#project}
   */
   readonly project?: string;
   /**
   * Name of the storage pool type.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_types#storage_pool_type DataGoogleComputeStoragePoolTypes#storage_pool_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_types#storage_pool_type DataGoogleComputeStoragePoolTypes#storage_pool_type}
   */
   readonly storagePoolType: string;
   /**
   * The name of the zone.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_types#zone DataGoogleComputeStoragePoolTypes#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_types#zone DataGoogleComputeStoragePoolTypes#zone}
   */
   readonly zone: string;
 }
@@ -126,7 +121,7 @@ export class DataGoogleComputeStoragePoolTypesDeprecatedList extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_types google_compute_storage_pool_types}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_types google_compute_storage_pool_types}
 */
 export class DataGoogleComputeStoragePoolTypes extends cdktf.TerraformDataSource {
 
@@ -142,7 +137,7 @@ export class DataGoogleComputeStoragePoolTypes extends cdktf.TerraformDataSource
   * Generates CDKTF code for importing a DataGoogleComputeStoragePoolTypes resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeStoragePoolTypes to import
-  * @param importFromId The id of the existing DataGoogleComputeStoragePoolTypes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_types#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeStoragePoolTypes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_types#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeStoragePoolTypes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -154,7 +149,7 @@ export class DataGoogleComputeStoragePoolTypes extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_types google_compute_storage_pool_types} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_types google_compute_storage_pool_types} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -165,7 +160,7 @@ export class DataGoogleComputeStoragePoolTypes extends cdktf.TerraformDataSource
       terraformResourceType: 'google_compute_storage_pool_types',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.0',
+        providerVersion: '6.34.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
