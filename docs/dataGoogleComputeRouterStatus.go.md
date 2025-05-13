@@ -4,7 +4,7 @@
 
 ### DataGoogleComputeRouterStatus <a name="DataGoogleComputeRouterStatus" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_router_status google_compute_router_status}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_router_status google_compute_router_status}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatus.Initializer"></a>
 
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleComputeRouterSta
 
 The id of the existing DataGoogleComputeRouterStatus that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_router_status#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_router_status#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputero
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.name">Name</a></code> | <code>*string</code> | Name of the router to query. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.project">Project</a></code> | <code>*string</code> | Project ID of the target router. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeRouterStatus.DataGoogleComputeRouterStatusConfig.property.region">Region</a></code> | <code>*string</code> | Region of the target router. |
 
@@ -904,7 +904,7 @@ Name *string
 
 Name of the router to query.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_router_status#name DataGoogleComputeRouterStatus#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_router_status#name DataGoogleComputeRouterStatus#name}
 
 ---
 
@@ -916,7 +916,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -933,7 +933,7 @@ Project *string
 
 Project ID of the target router.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_router_status#project DataGoogleComputeRouterStatus#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_router_status#project DataGoogleComputeRouterStatus#project}
 
 ---
 
@@ -947,7 +947,7 @@ Region *string
 
 Region of the target router.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_router_status#region DataGoogleComputeRouterStatus#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_router_status#region DataGoogleComputeRouterStatus#region}
 
 ---
 

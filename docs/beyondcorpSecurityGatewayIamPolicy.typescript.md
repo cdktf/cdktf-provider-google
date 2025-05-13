@@ -4,7 +4,7 @@
 
 ### BeyondcorpSecurityGatewayIamPolicy <a name="BeyondcorpSecurityGatewayIamPolicy" id="@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy google_beyondcorp_security_gateway_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy google_beyondcorp_security_gateway_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicy.Initializer"></a>
 
@@ -488,7 +488,7 @@ The construct id used in the generated config for the BeyondcorpSecurityGatewayI
 
 The id of the existing BeyondcorpSecurityGatewayIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -825,11 +825,11 @@ const beyondcorpSecurityGatewayIamPolicyConfig: beyondcorpSecurityGatewayIamPoli
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#policy_data BeyondcorpSecurityGatewayIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.securityGatewayId">securityGatewayId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#security_gateway_id BeyondcorpSecurityGatewayIamPolicy#security_gateway_id}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#id BeyondcorpSecurityGatewayIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#location BeyondcorpSecurityGatewayIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#project BeyondcorpSecurityGatewayIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#policy_data BeyondcorpSecurityGatewayIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.securityGatewayId">securityGatewayId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#security_gateway_id BeyondcorpSecurityGatewayIamPolicy#security_gateway_id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#id BeyondcorpSecurityGatewayIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#location BeyondcorpSecurityGatewayIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamPolicy.BeyondcorpSecurityGatewayIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#project BeyondcorpSecurityGatewayIamPolicy#project}. |
 
 ---
 
@@ -911,7 +911,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#policy_data BeyondcorpSecurityGatewayIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#policy_data BeyondcorpSecurityGatewayIamPolicy#policy_data}.
 
 ---
 
@@ -923,7 +923,7 @@ public readonly securityGatewayId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#security_gateway_id BeyondcorpSecurityGatewayIamPolicy#security_gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#security_gateway_id BeyondcorpSecurityGatewayIamPolicy#security_gateway_id}.
 
 ---
 
@@ -935,7 +935,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#id BeyondcorpSecurityGatewayIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#id BeyondcorpSecurityGatewayIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -950,7 +950,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#location BeyondcorpSecurityGatewayIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#location BeyondcorpSecurityGatewayIamPolicy#location}.
 
 ---
 
@@ -962,7 +962,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_security_gateway_iam_policy#project BeyondcorpSecurityGatewayIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_security_gateway_iam_policy#project BeyondcorpSecurityGatewayIamPolicy#project}.
 
 ---
 

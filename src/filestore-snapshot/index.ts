@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot
+// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface FilestoreSnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#description FilestoreSnapshot#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#description FilestoreSnapshot#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#id FilestoreSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#id FilestoreSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +28,7 @@ export interface FilestoreSnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
   * The resource name of the filestore instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#instance FilestoreSnapshot#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#instance FilestoreSnapshot#instance}
   */
   readonly instance: string;
   /**
@@ -38,13 +38,13 @@ export interface FilestoreSnapshotConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#labels FilestoreSnapshot#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#labels FilestoreSnapshot#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#location FilestoreSnapshot#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#location FilestoreSnapshot#location}
   */
   readonly location: string;
   /**
@@ -57,31 +57,31 @@ export interface FilestoreSnapshotConfig extends cdktf.TerraformMetaArguments {
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#name FilestoreSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#name FilestoreSnapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#project FilestoreSnapshot#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#project FilestoreSnapshot#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#timeouts FilestoreSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#timeouts FilestoreSnapshot#timeouts}
   */
   readonly timeouts?: FilestoreSnapshotTimeouts;
 }
 export interface FilestoreSnapshotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#create FilestoreSnapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#create FilestoreSnapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#delete FilestoreSnapshot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#delete FilestoreSnapshot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#update FilestoreSnapshot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#update FilestoreSnapshot#update}
   */
   readonly update?: string;
 }
@@ -233,7 +233,7 @@ export class FilestoreSnapshotTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot google_filestore_snapshot}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot google_filestore_snapshot}
 */
 export class FilestoreSnapshot extends cdktf.TerraformResource {
 
@@ -249,7 +249,7 @@ export class FilestoreSnapshot extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FilestoreSnapshot resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FilestoreSnapshot to import
-  * @param importFromId The id of the existing FilestoreSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FilestoreSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FilestoreSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -261,7 +261,7 @@ export class FilestoreSnapshot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/filestore_snapshot google_filestore_snapshot} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/filestore_snapshot google_filestore_snapshot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -272,7 +272,7 @@ export class FilestoreSnapshot extends cdktf.TerraformResource {
       terraformResourceType: 'google_filestore_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.0',
+        providerVersion: '6.34.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

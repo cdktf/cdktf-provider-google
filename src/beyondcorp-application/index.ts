@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application
+// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,49 +18,49 @@ export interface BeyondcorpApplicationConfig extends cdktf.TerraformMetaArgument
   * * Must contain between 4-63 characters from '/a-z-/'.
   * * Must end with a number or letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#application_id BeyondcorpApplication#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#application_id BeyondcorpApplication#application_id}
   */
   readonly applicationId: string;
   /**
   * Optional. An arbitrary user-provided name for the Application resource.
   * Cannot exceed 64 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#display_name BeyondcorpApplication#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#display_name BeyondcorpApplication#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#id BeyondcorpApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#id BeyondcorpApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#project BeyondcorpApplication#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#project BeyondcorpApplication#project}
   */
   readonly project?: string;
   /**
   * Part of 'parent'. See documentation of 'projectsId'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#security_gateways_id BeyondcorpApplication#security_gateways_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#security_gateways_id BeyondcorpApplication#security_gateways_id}
   */
   readonly securityGatewaysId: string;
   /**
   * endpoint_matchers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#endpoint_matchers BeyondcorpApplication#endpoint_matchers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#endpoint_matchers BeyondcorpApplication#endpoint_matchers}
   */
   readonly endpointMatchers: BeyondcorpApplicationEndpointMatchers[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#timeouts BeyondcorpApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#timeouts BeyondcorpApplication#timeouts}
   */
   readonly timeouts?: BeyondcorpApplicationTimeouts;
   /**
   * upstreams block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#upstreams BeyondcorpApplication#upstreams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#upstreams BeyondcorpApplication#upstreams}
   */
   readonly upstreams?: BeyondcorpApplicationUpstreams[] | cdktf.IResolvable;
 }
@@ -68,13 +68,13 @@ export interface BeyondcorpApplicationEndpointMatchers {
   /**
   * Required. Hostname of the application.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#hostname BeyondcorpApplication#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#hostname BeyondcorpApplication#hostname}
   */
   readonly hostname: string;
   /**
   * Optional. Ports of the application.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#ports BeyondcorpApplication#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#ports BeyondcorpApplication#ports}
   */
   readonly ports?: number[];
 }
@@ -216,15 +216,15 @@ export class BeyondcorpApplicationEndpointMatchersList extends cdktf.ComplexList
 }
 export interface BeyondcorpApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#create BeyondcorpApplication#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#create BeyondcorpApplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#delete BeyondcorpApplication#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#delete BeyondcorpApplication#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#update BeyondcorpApplication#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#update BeyondcorpApplication#update}
   */
   readonly update?: string;
 }
@@ -378,7 +378,7 @@ export interface BeyondcorpApplicationUpstreamsEgressPolicy {
   /**
   * Required. List of regions where the application sends traffic to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#regions BeyondcorpApplication#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#regions BeyondcorpApplication#regions}
   */
   readonly regions: string[];
 }
@@ -462,7 +462,7 @@ export interface BeyondcorpApplicationUpstreamsNetwork {
   * Required. Network name is of the format:
   * 'projects/{project}/global/networks/{network}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#name BeyondcorpApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#name BeyondcorpApplication#name}
   */
   readonly name: string;
 }
@@ -545,13 +545,13 @@ export interface BeyondcorpApplicationUpstreams {
   /**
   * egress_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#egress_policy BeyondcorpApplication#egress_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#egress_policy BeyondcorpApplication#egress_policy}
   */
   readonly egressPolicy?: BeyondcorpApplicationUpstreamsEgressPolicy;
   /**
   * network block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#network BeyondcorpApplication#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#network BeyondcorpApplication#network}
   */
   readonly network?: BeyondcorpApplicationUpstreamsNetwork;
 }
@@ -696,7 +696,7 @@ export class BeyondcorpApplicationUpstreamsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application google_beyondcorp_application}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application google_beyondcorp_application}
 */
 export class BeyondcorpApplication extends cdktf.TerraformResource {
 
@@ -712,7 +712,7 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BeyondcorpApplication resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BeyondcorpApplication to import
-  * @param importFromId The id of the existing BeyondcorpApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BeyondcorpApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BeyondcorpApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -724,7 +724,7 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/beyondcorp_application google_beyondcorp_application} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/beyondcorp_application google_beyondcorp_application} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -735,7 +735,7 @@ export class BeyondcorpApplication extends cdktf.TerraformResource {
       terraformResourceType: 'google_beyondcorp_application',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.0',
+        providerVersion: '6.34.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

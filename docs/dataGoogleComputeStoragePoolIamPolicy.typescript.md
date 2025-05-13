@@ -4,7 +4,7 @@
 
 ### DataGoogleComputeStoragePoolIamPolicy <a name="DataGoogleComputeStoragePoolIamPolicy" id="@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy google_compute_storage_pool_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy google_compute_storage_pool_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicy.Initializer"></a>
 
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleComputeStoragePo
 
 The id of the existing DataGoogleComputeStoragePoolIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -690,10 +690,10 @@ const dataGoogleComputeStoragePoolIamPolicyConfig: dataGoogleComputeStoragePoolI
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#name DataGoogleComputeStoragePoolIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#id DataGoogleComputeStoragePoolIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#project DataGoogleComputeStoragePoolIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.zone">zone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#zone DataGoogleComputeStoragePoolIamPolicy#zone}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#name DataGoogleComputeStoragePoolIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#id DataGoogleComputeStoragePoolIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#project DataGoogleComputeStoragePoolIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.property.zone">zone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#zone DataGoogleComputeStoragePoolIamPolicy#zone}. |
 
 ---
 
@@ -775,7 +775,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#name DataGoogleComputeStoragePoolIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#name DataGoogleComputeStoragePoolIamPolicy#name}.
 
 ---
 
@@ -787,7 +787,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#id DataGoogleComputeStoragePoolIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#id DataGoogleComputeStoragePoolIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -802,7 +802,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#project DataGoogleComputeStoragePoolIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#project DataGoogleComputeStoragePoolIamPolicy#project}.
 
 ---
 
@@ -814,7 +814,7 @@ public readonly zone: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/data-sources/compute_storage_pool_iam_policy#zone DataGoogleComputeStoragePoolIamPolicy#zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/compute_storage_pool_iam_policy#zone DataGoogleComputeStoragePoolIamPolicy#zone}.
 
 ---
 

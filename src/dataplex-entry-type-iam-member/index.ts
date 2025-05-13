@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface DataplexEntryTypeIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#entry_type_id DataplexEntryTypeIamMember#entry_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#entry_type_id DataplexEntryTypeIamMember#entry_type_id}
   */
   readonly entryTypeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#id DataplexEntryTypeIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#id DataplexEntryTypeIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#location DataplexEntryTypeIamMember#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#location DataplexEntryTypeIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#member DataplexEntryTypeIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#member DataplexEntryTypeIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#project DataplexEntryTypeIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#project DataplexEntryTypeIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#role DataplexEntryTypeIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#role DataplexEntryTypeIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#condition DataplexEntryTypeIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#condition DataplexEntryTypeIamMember#condition}
   */
   readonly condition?: DataplexEntryTypeIamMemberCondition;
 }
 export interface DataplexEntryTypeIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#description DataplexEntryTypeIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#description DataplexEntryTypeIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#expression DataplexEntryTypeIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#expression DataplexEntryTypeIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#title DataplexEntryTypeIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#title DataplexEntryTypeIamMember#title}
   */
   readonly title: string;
 }
@@ -192,7 +192,7 @@ export class DataplexEntryTypeIamMemberConditionOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member google_dataplex_entry_type_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member google_dataplex_entry_type_iam_member}
 */
 export class DataplexEntryTypeIamMember extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class DataplexEntryTypeIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataplexEntryTypeIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataplexEntryTypeIamMember to import
-  * @param importFromId The id of the existing DataplexEntryTypeIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataplexEntryTypeIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataplexEntryTypeIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +220,7 @@ export class DataplexEntryTypeIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.0/docs/resources/dataplex_entry_type_iam_member google_dataplex_entry_type_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_entry_type_iam_member google_dataplex_entry_type_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +231,7 @@ export class DataplexEntryTypeIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_entry_type_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.0',
+        providerVersion: '6.34.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
