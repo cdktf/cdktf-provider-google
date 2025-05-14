@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   /**
   * A human-readable description of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#description NetworkServicesEdgeCacheOrigin#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#description NetworkServicesEdgeCacheOrigin#description}
   */
   readonly description?: string;
   /**
@@ -25,11 +20,11 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   * The value of timeout.maxAttemptsTimeout dictates the timeout across all origins.
   * A reference to a Topic resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#failover_origin NetworkServicesEdgeCacheOrigin#failover_origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#failover_origin NetworkServicesEdgeCacheOrigin#failover_origin}
   */
   readonly failoverOrigin?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#id NetworkServicesEdgeCacheOrigin#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#id NetworkServicesEdgeCacheOrigin#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -41,7 +36,7 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#labels NetworkServicesEdgeCacheOrigin#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#labels NetworkServicesEdgeCacheOrigin#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -58,7 +53,7 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   * 
   * Defaults to 1. Must be a value greater than 0 and less than 4.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#max_attempts NetworkServicesEdgeCacheOrigin#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#max_attempts NetworkServicesEdgeCacheOrigin#max_attempts}
   */
   readonly maxAttempts?: number;
   /**
@@ -66,7 +61,7 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
   * and all following characters must be a dash, underscore, letter or digit.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#name NetworkServicesEdgeCacheOrigin#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#name NetworkServicesEdgeCacheOrigin#name}
   */
   readonly name: string;
   /**
@@ -77,18 +72,18 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   * When providing an FQDN (hostname), it must be publicly resolvable (e.g. via Google public DNS) and IP addresses must be publicly routable.  It must not contain a protocol (e.g., https://) and it must not contain any slashes.
   * If a Cloud Storage bucket is provided, it must be in the canonical "gs://bucketname" format. Other forms, such as "storage.googleapis.com", will be rejected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#origin_address NetworkServicesEdgeCacheOrigin#origin_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#origin_address NetworkServicesEdgeCacheOrigin#origin_address}
   */
   readonly originAddress: string;
   /**
   * The port to connect to the origin on.
   * Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#port NetworkServicesEdgeCacheOrigin#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#port NetworkServicesEdgeCacheOrigin#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#project NetworkServicesEdgeCacheOrigin#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#project NetworkServicesEdgeCacheOrigin#project}
   */
   readonly project?: string;
   /**
@@ -96,7 +91,7 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   * 
   * When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: ["HTTP2", "HTTPS", "HTTP"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#protocol NetworkServicesEdgeCacheOrigin#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#protocol NetworkServicesEdgeCacheOrigin#protocol}
   */
   readonly protocol?: string;
   /**
@@ -119,37 +114,43 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   * - NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet.
   * - FORBIDDEN: Retry if the origin returns a HTTP 403 (Forbidden). Possible values: ["CONNECT_FAILURE", "HTTP_5XX", "GATEWAY_ERROR", "RETRIABLE_4XX", "NOT_FOUND", "FORBIDDEN"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#retry_conditions NetworkServicesEdgeCacheOrigin#retry_conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#retry_conditions NetworkServicesEdgeCacheOrigin#retry_conditions}
   */
   readonly retryConditions?: string[];
   /**
   * aws_v4_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#aws_v4_authentication NetworkServicesEdgeCacheOrigin#aws_v4_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#aws_v4_authentication NetworkServicesEdgeCacheOrigin#aws_v4_authentication}
   */
   readonly awsV4Authentication?: NetworkServicesEdgeCacheOriginAwsV4Authentication;
   /**
+  * flex_shielding block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#flex_shielding NetworkServicesEdgeCacheOrigin#flex_shielding}
+  */
+  readonly flexShielding?: NetworkServicesEdgeCacheOriginFlexShielding;
+  /**
   * origin_override_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#origin_override_action NetworkServicesEdgeCacheOrigin#origin_override_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#origin_override_action NetworkServicesEdgeCacheOrigin#origin_override_action}
   */
   readonly originOverrideAction?: NetworkServicesEdgeCacheOriginOriginOverrideAction;
   /**
   * origin_redirect block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#origin_redirect NetworkServicesEdgeCacheOrigin#origin_redirect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#origin_redirect NetworkServicesEdgeCacheOrigin#origin_redirect}
   */
   readonly originRedirect?: NetworkServicesEdgeCacheOriginOriginRedirect;
   /**
   * timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#timeout NetworkServicesEdgeCacheOrigin#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#timeout NetworkServicesEdgeCacheOrigin#timeout}
   */
   readonly timeout?: NetworkServicesEdgeCacheOriginTimeout;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#timeouts NetworkServicesEdgeCacheOrigin#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#timeouts NetworkServicesEdgeCacheOrigin#timeouts}
   */
   readonly timeouts?: NetworkServicesEdgeCacheOriginTimeouts;
 }
@@ -157,13 +158,13 @@ export interface NetworkServicesEdgeCacheOriginAwsV4Authentication {
   /**
   * The access key ID your origin uses to identify the key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#access_key_id NetworkServicesEdgeCacheOrigin#access_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#access_key_id NetworkServicesEdgeCacheOrigin#access_key_id}
   */
   readonly accessKeyId: string;
   /**
   * The name of the AWS region that your origin is in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#origin_region NetworkServicesEdgeCacheOrigin#origin_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#origin_region NetworkServicesEdgeCacheOrigin#origin_region}
   */
   readonly originRegion: string;
   /**
@@ -171,7 +172,7 @@ export interface NetworkServicesEdgeCacheOriginAwsV4Authentication {
   * 
   * This is the resource name of the secret version in the format 'projects/* /secrets/* /versions/*' where the '*' values are replaced by the project, secret, and version you require.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#secret_access_key_version NetworkServicesEdgeCacheOrigin#secret_access_key_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#secret_access_key_version NetworkServicesEdgeCacheOrigin#secret_access_key_version}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -304,17 +305,106 @@ export class NetworkServicesEdgeCacheOriginAwsV4AuthenticationOutputReference ex
     return this._secretAccessKeyVersion;
   }
 }
+export interface NetworkServicesEdgeCacheOriginFlexShielding {
+  /**
+  * Whenever possible, content will be fetched from origin and cached in or
+  * near the specified origin. Best effort.
+  * 
+  * You must specify exactly one FlexShieldingRegion. Possible values: ["AFRICA_SOUTH1", "ME_CENTRAL1"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#flex_shielding_regions NetworkServicesEdgeCacheOrigin#flex_shielding_regions}
+  */
+  readonly flexShieldingRegions?: string[];
+}
+
+export function networkServicesEdgeCacheOriginFlexShieldingToTerraform(struct?: NetworkServicesEdgeCacheOriginFlexShieldingOutputReference | NetworkServicesEdgeCacheOriginFlexShielding): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    flex_shielding_regions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.flexShieldingRegions),
+  }
+}
+
+
+export function networkServicesEdgeCacheOriginFlexShieldingToHclTerraform(struct?: NetworkServicesEdgeCacheOriginFlexShieldingOutputReference | NetworkServicesEdgeCacheOriginFlexShielding): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    flex_shielding_regions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.flexShieldingRegions),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NetworkServicesEdgeCacheOriginFlexShieldingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheOriginFlexShielding | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._flexShieldingRegions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.flexShieldingRegions = this._flexShieldingRegions;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginFlexShielding | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._flexShieldingRegions = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._flexShieldingRegions = value.flexShieldingRegions;
+    }
+  }
+
+  // flex_shielding_regions - computed: false, optional: true, required: false
+  private _flexShieldingRegions?: string[]; 
+  public get flexShieldingRegions() {
+    return this.getListAttribute('flex_shielding_regions');
+  }
+  public set flexShieldingRegions(value: string[]) {
+    this._flexShieldingRegions = value;
+  }
+  public resetFlexShieldingRegions() {
+    this._flexShieldingRegions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get flexShieldingRegionsInput() {
+    return this._flexShieldingRegions;
+  }
+}
 export interface NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd {
   /**
   * The name of the header to add.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#header_name NetworkServicesEdgeCacheOrigin#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#header_name NetworkServicesEdgeCacheOrigin#header_name}
   */
   readonly headerName: string;
   /**
   * The value of the header to add.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#header_value NetworkServicesEdgeCacheOrigin#header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#header_value NetworkServicesEdgeCacheOrigin#header_value}
   */
   readonly headerValue: string;
   /**
@@ -327,7 +417,7 @@ export interface NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionR
   * 
   * To overwrite existing values, set 'replace' to 'true'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#replace NetworkServicesEdgeCacheOrigin#replace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#replace NetworkServicesEdgeCacheOrigin#replace}
   */
   readonly replace?: boolean | cdktf.IResolvable;
 }
@@ -497,7 +587,7 @@ export interface NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderAction 
   /**
   * request_headers_to_add block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#request_headers_to_add NetworkServicesEdgeCacheOrigin#request_headers_to_add}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#request_headers_to_add NetworkServicesEdgeCacheOrigin#request_headers_to_add}
   */
   readonly requestHeadersToAdd?: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
 }
@@ -587,7 +677,7 @@ export interface NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite {
   * 
   * This value must be between 1 and 255 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#host_rewrite NetworkServicesEdgeCacheOrigin#host_rewrite}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#host_rewrite NetworkServicesEdgeCacheOrigin#host_rewrite}
   */
   readonly hostRewrite?: string;
 }
@@ -673,13 +763,13 @@ export interface NetworkServicesEdgeCacheOriginOriginOverrideAction {
   /**
   * header_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#header_action NetworkServicesEdgeCacheOrigin#header_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#header_action NetworkServicesEdgeCacheOrigin#header_action}
   */
   readonly headerAction?: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderAction;
   /**
   * url_rewrite block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#url_rewrite NetworkServicesEdgeCacheOrigin#url_rewrite}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#url_rewrite NetworkServicesEdgeCacheOrigin#url_rewrite}
   */
   readonly urlRewrite?: NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite;
 }
@@ -797,7 +887,7 @@ export interface NetworkServicesEdgeCacheOriginOriginRedirect {
   * [RedirectConditions](https://cloud.google.com/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheOrigins#redirectconditions)
   * are accepted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#redirect_conditions NetworkServicesEdgeCacheOrigin#redirect_conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#redirect_conditions NetworkServicesEdgeCacheOrigin#redirect_conditions}
   */
   readonly redirectConditions?: string[];
 }
@@ -887,7 +977,7 @@ export interface NetworkServicesEdgeCacheOriginTimeout {
   * 
   * The connectTimeout capped by the deadline set by the request's maxAttemptsTimeout.  The last connection attempt may have a smaller connectTimeout in order to adhere to the overall maxAttemptsTimeout.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#connect_timeout NetworkServicesEdgeCacheOrigin#connect_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#connect_timeout NetworkServicesEdgeCacheOrigin#connect_timeout}
   */
   readonly connectTimeout?: string;
   /**
@@ -897,7 +987,7 @@ export interface NetworkServicesEdgeCacheOriginTimeout {
   * 
   * If a failoverOrigin is specified, the maxAttemptsTimeout of the first configured origin sets the deadline for all connection attempts across all failoverOrigins.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#max_attempts_timeout NetworkServicesEdgeCacheOrigin#max_attempts_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#max_attempts_timeout NetworkServicesEdgeCacheOrigin#max_attempts_timeout}
   */
   readonly maxAttemptsTimeout?: string;
   /**
@@ -909,7 +999,7 @@ export interface NetworkServicesEdgeCacheOriginTimeout {
   * 
   * If the response headers have already been written to the connection, the response will be truncated and logged.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#read_timeout NetworkServicesEdgeCacheOrigin#read_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#read_timeout NetworkServicesEdgeCacheOrigin#read_timeout}
   */
   readonly readTimeout?: string;
   /**
@@ -923,7 +1013,7 @@ export interface NetworkServicesEdgeCacheOriginTimeout {
   * 
   * If the response headers have already been written to the connection, the response will be truncated and logged.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#response_timeout NetworkServicesEdgeCacheOrigin#response_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#response_timeout NetworkServicesEdgeCacheOrigin#response_timeout}
   */
   readonly responseTimeout?: string;
 }
@@ -1094,15 +1184,15 @@ export class NetworkServicesEdgeCacheOriginTimeoutOutputReference extends cdktf.
 }
 export interface NetworkServicesEdgeCacheOriginTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#create NetworkServicesEdgeCacheOrigin#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#create NetworkServicesEdgeCacheOrigin#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#delete NetworkServicesEdgeCacheOrigin#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#delete NetworkServicesEdgeCacheOrigin#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#update NetworkServicesEdgeCacheOrigin#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#update NetworkServicesEdgeCacheOrigin#update}
   */
   readonly update?: string;
 }
@@ -1254,7 +1344,7 @@ export class NetworkServicesEdgeCacheOriginTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin google_network_services_edge_cache_origin}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin google_network_services_edge_cache_origin}
 */
 export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
 
@@ -1270,7 +1360,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkServicesEdgeCacheOrigin resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkServicesEdgeCacheOrigin to import
-  * @param importFromId The id of the existing NetworkServicesEdgeCacheOrigin that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkServicesEdgeCacheOrigin that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkServicesEdgeCacheOrigin to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1282,7 +1372,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_services_edge_cache_origin google_network_services_edge_cache_origin} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_services_edge_cache_origin google_network_services_edge_cache_origin} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1293,7 +1383,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_origin',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1316,6 +1406,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
     this._protocol = config.protocol;
     this._retryConditions = config.retryConditions;
     this._awsV4Authentication.internalValue = config.awsV4Authentication;
+    this._flexShielding.internalValue = config.flexShielding;
     this._originOverrideAction.internalValue = config.originOverrideAction;
     this._originRedirect.internalValue = config.originRedirect;
     this._timeout.internalValue = config.timeout;
@@ -1524,6 +1615,22 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
     return this._awsV4Authentication.internalValue;
   }
 
+  // flex_shielding - computed: false, optional: true, required: false
+  private _flexShielding = new NetworkServicesEdgeCacheOriginFlexShieldingOutputReference(this, "flex_shielding");
+  public get flexShielding() {
+    return this._flexShielding;
+  }
+  public putFlexShielding(value: NetworkServicesEdgeCacheOriginFlexShielding) {
+    this._flexShielding.internalValue = value;
+  }
+  public resetFlexShielding() {
+    this._flexShielding.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get flexShieldingInput() {
+    return this._flexShielding.internalValue;
+  }
+
   // origin_override_action - computed: false, optional: true, required: false
   private _originOverrideAction = new NetworkServicesEdgeCacheOriginOriginOverrideActionOutputReference(this, "origin_override_action");
   public get originOverrideAction() {
@@ -1606,6 +1713,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       protocol: cdktf.stringToTerraform(this._protocol),
       retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._retryConditions),
       aws_v4_authentication: networkServicesEdgeCacheOriginAwsV4AuthenticationToTerraform(this._awsV4Authentication.internalValue),
+      flex_shielding: networkServicesEdgeCacheOriginFlexShieldingToTerraform(this._flexShielding.internalValue),
       origin_override_action: networkServicesEdgeCacheOriginOriginOverrideActionToTerraform(this._originOverrideAction.internalValue),
       origin_redirect: networkServicesEdgeCacheOriginOriginRedirectToTerraform(this._originRedirect.internalValue),
       timeout: networkServicesEdgeCacheOriginTimeoutToTerraform(this._timeout.internalValue),
@@ -1686,6 +1794,12 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "NetworkServicesEdgeCacheOriginAwsV4AuthenticationList",
+      },
+      flex_shielding: {
+        value: networkServicesEdgeCacheOriginFlexShieldingToHclTerraform(this._flexShielding.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkServicesEdgeCacheOriginFlexShieldingList",
       },
       origin_override_action: {
         value: networkServicesEdgeCacheOriginOriginOverrideActionToHclTerraform(this._originOverrideAction.internalValue),

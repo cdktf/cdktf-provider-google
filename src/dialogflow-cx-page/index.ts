@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface DialogflowCxPageConfig extends cdktf.TerraformMetaArguments {
   /**
   * The human-readable name of the page, unique within the agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#display_name DialogflowCxPage#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#display_name DialogflowCxPage#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#id DialogflowCxPage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#id DialogflowCxPage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,14 +35,14 @@ export interface DialogflowCxPageConfig extends cdktf.TerraformMetaArguments {
   * Page.transition_routes.trigger_fulfillment.conditional_cases
   * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#language_code DialogflowCxPage#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#language_code DialogflowCxPage#language_code}
   */
   readonly languageCode?: string;
   /**
   * The flow to create a page for.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#parent DialogflowCxPage#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#parent DialogflowCxPage#parent}
   */
   readonly parent?: string;
   /**
@@ -56,43 +51,49 @@ export interface DialogflowCxPageConfig extends cdktf.TerraformMetaArguments {
   * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence.
   * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#transition_route_groups DialogflowCxPage#transition_route_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#transition_route_groups DialogflowCxPage#transition_route_groups}
   */
   readonly transitionRouteGroups?: string[];
   /**
   * advanced_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
   */
   readonly advancedSettings?: DialogflowCxPageAdvancedSettings;
   /**
   * entry_fulfillment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#entry_fulfillment DialogflowCxPage#entry_fulfillment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#entry_fulfillment DialogflowCxPage#entry_fulfillment}
   */
   readonly entryFulfillment?: DialogflowCxPageEntryFulfillment;
   /**
   * event_handlers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#event_handlers DialogflowCxPage#event_handlers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#event_handlers DialogflowCxPage#event_handlers}
   */
   readonly eventHandlers?: DialogflowCxPageEventHandlers[] | cdktf.IResolvable;
   /**
   * form block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#form DialogflowCxPage#form}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#form DialogflowCxPage#form}
   */
   readonly form?: DialogflowCxPageForm;
   /**
+  * knowledge_connector_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#knowledge_connector_settings DialogflowCxPage#knowledge_connector_settings}
+  */
+  readonly knowledgeConnectorSettings?: DialogflowCxPageKnowledgeConnectorSettings;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#timeouts DialogflowCxPage#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#timeouts DialogflowCxPage#timeouts}
   */
   readonly timeouts?: DialogflowCxPageTimeouts;
   /**
   * transition_routes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#transition_routes DialogflowCxPage#transition_routes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#transition_routes DialogflowCxPage#transition_routes}
   */
   readonly transitionRoutes?: DialogflowCxPageTransitionRoutes[] | cdktf.IResolvable;
 }
@@ -100,19 +101,19 @@ export interface DialogflowCxPageAdvancedSettingsDtmfSettings {
   /**
   * If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The digit that terminates a DTMF digit sequence.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
   */
   readonly finishDigit?: string;
   /**
   * Max length of DTMF digits.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
   */
   readonly maxDigits?: number;
 }
@@ -256,7 +257,7 @@ export interface DialogflowCxPageAdvancedSettings {
   /**
   * dtmf_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
   */
   readonly dtmfSettings?: DialogflowCxPageAdvancedSettingsDtmfSettings;
 }
@@ -343,7 +344,7 @@ export interface DialogflowCxPageEntryFulfillmentConditionalCases {
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
   * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
   readonly cases?: string;
 }
@@ -461,7 +462,7 @@ export interface DialogflowCxPageEntryFulfillmentMessagesConversationSuccess {
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -547,7 +548,7 @@ export interface DialogflowCxPageEntryFulfillmentMessagesLiveAgentHandoff {
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -633,13 +634,13 @@ export interface DialogflowCxPageEntryFulfillmentMessagesOutputAudioText {
   /**
   * The SSML text to be synthesized. For more information, see SSML.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
   */
   readonly ssml?: string;
   /**
   * The raw text to be synthesized.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string;
 }
@@ -759,7 +760,7 @@ export interface DialogflowCxPageEntryFulfillmentMessagesPlayAudio {
   /**
   * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
   */
   readonly audioUri: string;
 }
@@ -847,7 +848,7 @@ export interface DialogflowCxPageEntryFulfillmentMessagesTelephonyTransferCall {
   /**
   * Transfer the call to a phone number in E.164 format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -930,7 +931,7 @@ export interface DialogflowCxPageEntryFulfillmentMessagesText {
   /**
   * A collection of text responses.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string[];
 }
@@ -1021,49 +1022,49 @@ export interface DialogflowCxPageEntryFulfillmentMessages {
   /**
   * The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
   */
   readonly channel?: string;
   /**
   * A custom, platform-specific payload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
   */
   readonly payload?: string;
   /**
   * conversation_success block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
   */
   readonly conversationSuccess?: DialogflowCxPageEntryFulfillmentMessagesConversationSuccess;
   /**
   * live_agent_handoff block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
   */
   readonly liveAgentHandoff?: DialogflowCxPageEntryFulfillmentMessagesLiveAgentHandoff;
   /**
   * output_audio_text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
   */
   readonly outputAudioText?: DialogflowCxPageEntryFulfillmentMessagesOutputAudioText;
   /**
   * play_audio block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
   */
   readonly playAudio?: DialogflowCxPageEntryFulfillmentMessagesPlayAudio;
   /**
   * telephony_transfer_call block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
   */
   readonly telephonyTransferCall?: DialogflowCxPageEntryFulfillmentMessagesTelephonyTransferCall;
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: DialogflowCxPageEntryFulfillmentMessagesText;
 }
@@ -1384,13 +1385,13 @@ export interface DialogflowCxPageEntryFulfillmentSetParameterActions {
   /**
   * Display name of the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
   */
   readonly parameter?: string;
   /**
   * The new JSON-encoded value of the parameter. A null value clears the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
   */
   readonly value?: string;
 }
@@ -1537,37 +1538,37 @@ export interface DialogflowCxPageEntryFulfillment {
   /**
   * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
   readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
   */
   readonly tag?: string;
   /**
   * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
   */
   readonly webhook?: string;
   /**
   * conditional_cases block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
   */
   readonly conditionalCases?: DialogflowCxPageEntryFulfillmentConditionalCases[] | cdktf.IResolvable;
   /**
   * messages block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
   */
   readonly messages?: DialogflowCxPageEntryFulfillmentMessages[] | cdktf.IResolvable;
   /**
   * set_parameter_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
   */
   readonly setParameterActions?: DialogflowCxPageEntryFulfillmentSetParameterActions[] | cdktf.IResolvable;
 }
@@ -1799,7 +1800,7 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
   * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
   readonly cases?: string;
 }
@@ -1917,7 +1918,7 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentMessagesConversa
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -2003,7 +2004,7 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentMessagesLiveAgen
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -2089,13 +2090,13 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputAu
   /**
   * The SSML text to be synthesized. For more information, see SSML.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
   */
   readonly ssml?: string;
   /**
   * The raw text to be synthesized.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string;
 }
@@ -2215,7 +2216,7 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentMessagesPlayAudi
   /**
   * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
   */
   readonly audioUri: string;
 }
@@ -2303,7 +2304,7 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTelephon
   /**
   * Transfer the call to a phone number in E.164 format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -2386,7 +2387,7 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText {
   /**
   * A collection of text responses.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string[];
 }
@@ -2477,49 +2478,49 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentMessages {
   /**
   * The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
   */
   readonly channel?: string;
   /**
   * A custom, platform-specific payload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
   */
   readonly payload?: string;
   /**
   * conversation_success block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
   */
   readonly conversationSuccess?: DialogflowCxPageEventHandlersTriggerFulfillmentMessagesConversationSuccess;
   /**
   * live_agent_handoff block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
   */
   readonly liveAgentHandoff?: DialogflowCxPageEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff;
   /**
   * output_audio_text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
   */
   readonly outputAudioText?: DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputAudioText;
   /**
   * play_audio block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
   */
   readonly playAudio?: DialogflowCxPageEventHandlersTriggerFulfillmentMessagesPlayAudio;
   /**
   * telephony_transfer_call block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
   */
   readonly telephonyTransferCall?: DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall;
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText;
 }
@@ -2840,13 +2841,13 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActi
   /**
   * Display name of the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
   */
   readonly parameter?: string;
   /**
   * The new JSON-encoded value of the parameter. A null value clears the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
   */
   readonly value?: string;
 }
@@ -2993,37 +2994,37 @@ export interface DialogflowCxPageEventHandlersTriggerFulfillment {
   /**
   * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
   readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
   */
   readonly tag?: string;
   /**
   * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
   */
   readonly webhook?: string;
   /**
   * conditional_cases block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
   */
   readonly conditionalCases?: DialogflowCxPageEventHandlersTriggerFulfillmentConditionalCases[] | cdktf.IResolvable;
   /**
   * messages block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
   */
   readonly messages?: DialogflowCxPageEventHandlersTriggerFulfillmentMessages[] | cdktf.IResolvable;
   /**
   * set_parameter_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
   */
   readonly setParameterActions?: DialogflowCxPageEventHandlersTriggerFulfillmentSetParameterActions[] | cdktf.IResolvable;
 }
@@ -3254,27 +3255,27 @@ export interface DialogflowCxPageEventHandlers {
   /**
   * The name of the event to handle.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#event DialogflowCxPage#event}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#event DialogflowCxPage#event}
   */
   readonly event?: string;
   /**
   * The target flow to transition to.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
   */
   readonly targetFlow?: string;
   /**
   * The target page to transition to.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
   */
   readonly targetPage?: string;
   /**
   * trigger_fulfillment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
   */
   readonly triggerFulfillment?: DialogflowCxPageEventHandlersTriggerFulfillment;
 }
@@ -3484,19 +3485,19 @@ export interface DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings {
   /**
   * If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The digit that terminates a DTMF digit sequence.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
   */
   readonly finishDigit?: string;
   /**
   * Max length of DTMF digits.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
   */
   readonly maxDigits?: number;
 }
@@ -3640,7 +3641,7 @@ export interface DialogflowCxPageFormParametersAdvancedSettings {
   /**
   * dtmf_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
   */
   readonly dtmfSettings?: DialogflowCxPageFormParametersAdvancedSettingsDtmfSettings;
 }
@@ -3727,7 +3728,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
   * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
   readonly cases?: string;
 }
@@ -3845,7 +3846,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -3931,7 +3932,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -4017,13 +4018,13 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * The SSML text to be synthesized. For more information, see SSML.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
   */
   readonly ssml?: string;
   /**
   * The raw text to be synthesized.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string;
 }
@@ -4143,7 +4144,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
   */
   readonly audioUri: string;
 }
@@ -4231,7 +4232,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * Transfer the call to a phone number in E.164 format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -4314,7 +4315,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * A collection of text responses.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string[];
 }
@@ -4405,49 +4406,49 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
   */
   readonly channel?: string;
   /**
   * A custom, platform-specific payload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
   */
   readonly payload?: string;
   /**
   * conversation_success block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
   */
   readonly conversationSuccess?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesConversationSuccess;
   /**
   * live_agent_handoff block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
   */
   readonly liveAgentHandoff?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesLiveAgentHandoff;
   /**
   * output_audio_text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
   */
   readonly outputAudioText?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputAudioText;
   /**
   * play_audio block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
   */
   readonly playAudio?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesPlayAudio;
   /**
   * telephony_transfer_call block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
   */
   readonly telephonyTransferCall?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesTelephonyTransferCall;
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText;
 }
@@ -4768,13 +4769,13 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * Display name of the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
   */
   readonly parameter?: string;
   /**
   * The new JSON-encoded value of the parameter. A null value clears the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
   */
   readonly value?: string;
 }
@@ -4921,37 +4922,37 @@ export interface DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillm
   /**
   * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
   readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
   */
   readonly tag?: string;
   /**
   * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
   */
   readonly webhook?: string;
   /**
   * conditional_cases block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
   */
   readonly conditionalCases?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases[] | cdktf.IResolvable;
   /**
   * messages block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
   */
   readonly messages?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages[] | cdktf.IResolvable;
   /**
   * set_parameter_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
   */
   readonly setParameterActions?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions[] | cdktf.IResolvable;
 }
@@ -5183,7 +5184,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
   * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
   readonly cases?: string;
 }
@@ -5301,7 +5302,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -5387,7 +5388,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -5473,13 +5474,13 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * The SSML text to be synthesized. For more information, see SSML.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
   */
   readonly ssml?: string;
   /**
   * The raw text to be synthesized.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string;
 }
@@ -5599,7 +5600,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
   */
   readonly audioUri: string;
 }
@@ -5687,7 +5688,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * Transfer the call to a phone number in E.164 format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -5770,7 +5771,7 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * A collection of text responses.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string[];
 }
@@ -5861,49 +5862,49 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
   */
   readonly channel?: string;
   /**
   * A custom, platform-specific payload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
   */
   readonly payload?: string;
   /**
   * conversation_success block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
   */
   readonly conversationSuccess?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesConversationSuccess;
   /**
   * live_agent_handoff block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
   */
   readonly liveAgentHandoff?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff;
   /**
   * output_audio_text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
   */
   readonly outputAudioText?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesOutputAudioText;
   /**
   * play_audio block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
   */
   readonly playAudio?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesPlayAudio;
   /**
   * telephony_transfer_call block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
   */
   readonly telephonyTransferCall?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall;
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesText;
 }
@@ -6224,13 +6225,13 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * Display name of the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
   */
   readonly parameter?: string;
   /**
   * The new JSON-encoded value of the parameter. A null value clears the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
   */
   readonly value?: string;
 }
@@ -6377,37 +6378,37 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
   readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
   */
   readonly tag?: string;
   /**
   * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
   */
   readonly webhook?: string;
   /**
   * conditional_cases block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
   */
   readonly conditionalCases?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases[] | cdktf.IResolvable;
   /**
   * messages block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
   */
   readonly messages?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages[] | cdktf.IResolvable;
   /**
   * set_parameter_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
   */
   readonly setParameterActions?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions[] | cdktf.IResolvable;
 }
@@ -6638,27 +6639,27 @@ export interface DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers
   /**
   * The name of the event to handle.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#event DialogflowCxPage#event}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#event DialogflowCxPage#event}
   */
   readonly event?: string;
   /**
   * The target flow to transition to.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
   */
   readonly targetFlow?: string;
   /**
   * The target page to transition to.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
   */
   readonly targetPage?: string;
   /**
   * trigger_fulfillment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
   */
   readonly triggerFulfillment?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment;
 }
@@ -6868,13 +6869,13 @@ export interface DialogflowCxPageFormParametersFillBehavior {
   /**
   * initial_prompt_fulfillment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#initial_prompt_fulfillment DialogflowCxPage#initial_prompt_fulfillment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#initial_prompt_fulfillment DialogflowCxPage#initial_prompt_fulfillment}
   */
   readonly initialPromptFulfillment?: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment;
   /**
   * reprompt_event_handlers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#reprompt_event_handlers DialogflowCxPage#reprompt_event_handlers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#reprompt_event_handlers DialogflowCxPage#reprompt_event_handlers}
   */
   readonly repromptEventHandlers?: DialogflowCxPageFormParametersFillBehaviorRepromptEventHandlers[] | cdktf.IResolvable;
 }
@@ -6989,52 +6990,52 @@ export interface DialogflowCxPageFormParameters {
   /**
   * The default value of an optional parameter. If the parameter is required, the default value will be ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#default_value DialogflowCxPage#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#default_value DialogflowCxPage#default_value}
   */
   readonly defaultValue?: string;
   /**
   * The human-readable name of the parameter, unique within the form.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#display_name DialogflowCxPage#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#display_name DialogflowCxPage#display_name}
   */
   readonly displayName?: string;
   /**
   * The entity type of the parameter.
   * Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#entity_type DialogflowCxPage#entity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#entity_type DialogflowCxPage#entity_type}
   */
   readonly entityType?: string;
   /**
   * Indicates whether the parameter represents a list of values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#is_list DialogflowCxPage#is_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#is_list DialogflowCxPage#is_list}
   */
   readonly isList?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter content should be redacted in log.
   * If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#redact DialogflowCxPage#redact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#redact DialogflowCxPage#redact}
   */
   readonly redact?: boolean | cdktf.IResolvable;
   /**
   * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them.
   * Required parameters must be filled before form filling concludes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#required DialogflowCxPage#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#required DialogflowCxPage#required}
   */
   readonly required?: boolean | cdktf.IResolvable;
   /**
   * advanced_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
   */
   readonly advancedSettings?: DialogflowCxPageFormParametersAdvancedSettings;
   /**
   * fill_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#fill_behavior DialogflowCxPage#fill_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#fill_behavior DialogflowCxPage#fill_behavior}
   */
   readonly fillBehavior?: DialogflowCxPageFormParametersFillBehavior;
 }
@@ -7355,7 +7356,7 @@ export interface DialogflowCxPageForm {
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#parameters DialogflowCxPage#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#parameters DialogflowCxPage#parameters}
   */
   readonly parameters?: DialogflowCxPageFormParameters[] | cdktf.IResolvable;
 }
@@ -7437,17 +7438,3029 @@ export class DialogflowCxPageFormOutputReference extends cdktf.ComplexObject {
     return this._parameters.internalValue;
   }
 }
+export interface DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections {
+  /**
+  * The full name of the referenced data store. Formats: projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore} projects/{project}/locations/{location}/dataStores/{dataStore}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#data_store DialogflowCxPage#data_store}
+  */
+  readonly dataStore?: string;
+  /**
+  * The type of the connected data store.
+  * * PUBLIC_WEB: A data store that contains public web content.
+  * * UNSTRUCTURED: A data store that contains unstructured private data.
+  * * STRUCTURED: A data store that contains structured data (for example FAQ). Possible values: ["PUBLIC_WEB", "UNSTRUCTURED", "STRUCTURED"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#data_store_type DialogflowCxPage#data_store_type}
+  */
+  readonly dataStoreType?: string;
+  /**
+  * The document processing mode for the data store connection. Should only be set for PUBLIC_WEB and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy mode.
+  * * DOCUMENTS: Documents are processed as documents.
+  * * CHUNKS: Documents are converted to chunks. Possible values: ["DOCUMENTS", "CHUNKS"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#document_processing_mode DialogflowCxPage#document_processing_mode}
+  */
+  readonly documentProcessingMode?: string;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    data_store: cdktf.stringToTerraform(struct!.dataStore),
+    data_store_type: cdktf.stringToTerraform(struct!.dataStoreType),
+    document_processing_mode: cdktf.stringToTerraform(struct!.documentProcessingMode),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    data_store: {
+      value: cdktf.stringToHclTerraform(struct!.dataStore),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_store_type: {
+      value: cdktf.stringToHclTerraform(struct!.dataStoreType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    document_processing_mode: {
+      value: cdktf.stringToHclTerraform(struct!.documentProcessingMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataStore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataStore = this._dataStore;
+    }
+    if (this._dataStoreType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataStoreType = this._dataStoreType;
+    }
+    if (this._documentProcessingMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.documentProcessingMode = this._documentProcessingMode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dataStore = undefined;
+      this._dataStoreType = undefined;
+      this._documentProcessingMode = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dataStore = value.dataStore;
+      this._dataStoreType = value.dataStoreType;
+      this._documentProcessingMode = value.documentProcessingMode;
+    }
+  }
+
+  // data_store - computed: false, optional: true, required: false
+  private _dataStore?: string; 
+  public get dataStore() {
+    return this.getStringAttribute('data_store');
+  }
+  public set dataStore(value: string) {
+    this._dataStore = value;
+  }
+  public resetDataStore() {
+    this._dataStore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataStoreInput() {
+    return this._dataStore;
+  }
+
+  // data_store_type - computed: false, optional: true, required: false
+  private _dataStoreType?: string; 
+  public get dataStoreType() {
+    return this.getStringAttribute('data_store_type');
+  }
+  public set dataStoreType(value: string) {
+    this._dataStoreType = value;
+  }
+  public resetDataStoreType() {
+    this._dataStoreType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataStoreTypeInput() {
+    return this._dataStoreType;
+  }
+
+  // document_processing_mode - computed: false, optional: true, required: false
+  private _documentProcessingMode?: string; 
+  public get documentProcessingMode() {
+    return this.getStringAttribute('document_processing_mode');
+  }
+  public set documentProcessingMode(value: string) {
+    this._documentProcessingMode = value;
+  }
+  public resetDocumentProcessingMode() {
+    this._documentProcessingMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentProcessingModeInput() {
+    return this._documentProcessingMode;
+  }
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList extends cdktf.ComplexList {
+  public internalValue? : DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference {
+    return new DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings {
+  /**
+  * If true, incoming audio is processed for DTMF (dual tone multi frequtectency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will de the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Endpoint timeout setting for matching dtmf input to regex.
+  * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#endpointing_timeout_duration DialogflowCxPage#endpointing_timeout_duration}
+  */
+  readonly endpointingTimeoutDuration?: string;
+  /**
+  * The digit that terminates a DTMF digit sequence.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#finish_digit DialogflowCxPage#finish_digit}
+  */
+  readonly finishDigit?: string;
+  /**
+  * Interdigit timeout setting for matching dtmf input to regex.
+  * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#interdigit_timeout_duration DialogflowCxPage#interdigit_timeout_duration}
+  */
+  readonly interdigitTimeoutDuration?: string;
+  /**
+  * Max length of DTMF digits.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#max_digits DialogflowCxPage#max_digits}
+  */
+  readonly maxDigits?: number;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    endpointing_timeout_duration: cdktf.stringToTerraform(struct!.endpointingTimeoutDuration),
+    finish_digit: cdktf.stringToTerraform(struct!.finishDigit),
+    interdigit_timeout_duration: cdktf.stringToTerraform(struct!.interdigitTimeoutDuration),
+    max_digits: cdktf.numberToTerraform(struct!.maxDigits),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    endpointing_timeout_duration: {
+      value: cdktf.stringToHclTerraform(struct!.endpointingTimeoutDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    finish_digit: {
+      value: cdktf.stringToHclTerraform(struct!.finishDigit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    interdigit_timeout_duration: {
+      value: cdktf.stringToHclTerraform(struct!.interdigitTimeoutDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_digits: {
+      value: cdktf.numberToHclTerraform(struct!.maxDigits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._endpointingTimeoutDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpointingTimeoutDuration = this._endpointingTimeoutDuration;
+    }
+    if (this._finishDigit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.finishDigit = this._finishDigit;
+    }
+    if (this._interdigitTimeoutDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interdigitTimeoutDuration = this._interdigitTimeoutDuration;
+    }
+    if (this._maxDigits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxDigits = this._maxDigits;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._endpointingTimeoutDuration = undefined;
+      this._finishDigit = undefined;
+      this._interdigitTimeoutDuration = undefined;
+      this._maxDigits = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._endpointingTimeoutDuration = value.endpointingTimeoutDuration;
+      this._finishDigit = value.finishDigit;
+      this._interdigitTimeoutDuration = value.interdigitTimeoutDuration;
+      this._maxDigits = value.maxDigits;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // endpointing_timeout_duration - computed: false, optional: true, required: false
+  private _endpointingTimeoutDuration?: string; 
+  public get endpointingTimeoutDuration() {
+    return this.getStringAttribute('endpointing_timeout_duration');
+  }
+  public set endpointingTimeoutDuration(value: string) {
+    this._endpointingTimeoutDuration = value;
+  }
+  public resetEndpointingTimeoutDuration() {
+    this._endpointingTimeoutDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointingTimeoutDurationInput() {
+    return this._endpointingTimeoutDuration;
+  }
+
+  // finish_digit - computed: false, optional: true, required: false
+  private _finishDigit?: string; 
+  public get finishDigit() {
+    return this.getStringAttribute('finish_digit');
+  }
+  public set finishDigit(value: string) {
+    this._finishDigit = value;
+  }
+  public resetFinishDigit() {
+    this._finishDigit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get finishDigitInput() {
+    return this._finishDigit;
+  }
+
+  // interdigit_timeout_duration - computed: false, optional: true, required: false
+  private _interdigitTimeoutDuration?: string; 
+  public get interdigitTimeoutDuration() {
+    return this.getStringAttribute('interdigit_timeout_duration');
+  }
+  public set interdigitTimeoutDuration(value: string) {
+    this._interdigitTimeoutDuration = value;
+  }
+  public resetInterdigitTimeoutDuration() {
+    this._interdigitTimeoutDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interdigitTimeoutDurationInput() {
+    return this._interdigitTimeoutDuration;
+  }
+
+  // max_digits - computed: false, optional: true, required: false
+  private _maxDigits?: number; 
+  public get maxDigits() {
+    return this.getNumberAttribute('max_digits');
+  }
+  public set maxDigits(value: number) {
+    this._maxDigits = value;
+  }
+  public resetMaxDigits() {
+    this._maxDigits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxDigitsInput() {
+    return this._maxDigits;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings {
+  /**
+  * Enables consent-based end-user input redaction, if true, a pre-defined session parameter **$session.params.conversation-redaction** will be used to determine if the utterance should be redacted.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#enable_consent_based_redaction DialogflowCxPage#enable_consent_based_redaction}
+  */
+  readonly enableConsentBasedRedaction?: boolean | cdktf.IResolvable;
+  /**
+  * Enables DF Interaction logging.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#enable_interaction_logging DialogflowCxPage#enable_interaction_logging}
+  */
+  readonly enableInteractionLogging?: boolean | cdktf.IResolvable;
+  /**
+  * Enables Google Cloud Logging.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#enable_stackdriver_logging DialogflowCxPage#enable_stackdriver_logging}
+  */
+  readonly enableStackdriverLogging?: boolean | cdktf.IResolvable;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_consent_based_redaction: cdktf.booleanToTerraform(struct!.enableConsentBasedRedaction),
+    enable_interaction_logging: cdktf.booleanToTerraform(struct!.enableInteractionLogging),
+    enable_stackdriver_logging: cdktf.booleanToTerraform(struct!.enableStackdriverLogging),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_consent_based_redaction: {
+      value: cdktf.booleanToHclTerraform(struct!.enableConsentBasedRedaction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_interaction_logging: {
+      value: cdktf.booleanToHclTerraform(struct!.enableInteractionLogging),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_stackdriver_logging: {
+      value: cdktf.booleanToHclTerraform(struct!.enableStackdriverLogging),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableConsentBasedRedaction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableConsentBasedRedaction = this._enableConsentBasedRedaction;
+    }
+    if (this._enableInteractionLogging !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableInteractionLogging = this._enableInteractionLogging;
+    }
+    if (this._enableStackdriverLogging !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableStackdriverLogging = this._enableStackdriverLogging;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableConsentBasedRedaction = undefined;
+      this._enableInteractionLogging = undefined;
+      this._enableStackdriverLogging = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableConsentBasedRedaction = value.enableConsentBasedRedaction;
+      this._enableInteractionLogging = value.enableInteractionLogging;
+      this._enableStackdriverLogging = value.enableStackdriverLogging;
+    }
+  }
+
+  // enable_consent_based_redaction - computed: false, optional: true, required: false
+  private _enableConsentBasedRedaction?: boolean | cdktf.IResolvable; 
+  public get enableConsentBasedRedaction() {
+    return this.getBooleanAttribute('enable_consent_based_redaction');
+  }
+  public set enableConsentBasedRedaction(value: boolean | cdktf.IResolvable) {
+    this._enableConsentBasedRedaction = value;
+  }
+  public resetEnableConsentBasedRedaction() {
+    this._enableConsentBasedRedaction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableConsentBasedRedactionInput() {
+    return this._enableConsentBasedRedaction;
+  }
+
+  // enable_interaction_logging - computed: false, optional: true, required: false
+  private _enableInteractionLogging?: boolean | cdktf.IResolvable; 
+  public get enableInteractionLogging() {
+    return this.getBooleanAttribute('enable_interaction_logging');
+  }
+  public set enableInteractionLogging(value: boolean | cdktf.IResolvable) {
+    this._enableInteractionLogging = value;
+  }
+  public resetEnableInteractionLogging() {
+    this._enableInteractionLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableInteractionLoggingInput() {
+    return this._enableInteractionLogging;
+  }
+
+  // enable_stackdriver_logging - computed: false, optional: true, required: false
+  private _enableStackdriverLogging?: boolean | cdktf.IResolvable; 
+  public get enableStackdriverLogging() {
+    return this.getBooleanAttribute('enable_stackdriver_logging');
+  }
+  public set enableStackdriverLogging(value: boolean | cdktf.IResolvable) {
+    this._enableStackdriverLogging = value;
+  }
+  public resetEnableStackdriverLogging() {
+    this._enableStackdriverLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableStackdriverLoggingInput() {
+    return this._enableStackdriverLogging;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings {
+  /**
+  * Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#endpointer_sensitivity DialogflowCxPage#endpointer_sensitivity}
+  */
+  readonly endpointerSensitivity?: number;
+  /**
+  * Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected for requests from its corresponding language. For more information, see [Speech models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
+  * An object containing a list of **"key": value** pairs. Example: **{ "name": "wrench", "mass": "1.3kg", "count": "3" }**.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#models DialogflowCxPage#models}
+  */
+  readonly models?: { [key: string]: string };
+  /**
+  * Timeout before detecting no speech.
+  * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#no_speech_timeout DialogflowCxPage#no_speech_timeout}
+  */
+  readonly noSpeechTimeout?: string;
+  /**
+  * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#use_timeout_based_endpointing DialogflowCxPage#use_timeout_based_endpointing}
+  */
+  readonly useTimeoutBasedEndpointing?: boolean | cdktf.IResolvable;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    endpointer_sensitivity: cdktf.numberToTerraform(struct!.endpointerSensitivity),
+    models: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.models),
+    no_speech_timeout: cdktf.stringToTerraform(struct!.noSpeechTimeout),
+    use_timeout_based_endpointing: cdktf.booleanToTerraform(struct!.useTimeoutBasedEndpointing),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    endpointer_sensitivity: {
+      value: cdktf.numberToHclTerraform(struct!.endpointerSensitivity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    models: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.models),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    no_speech_timeout: {
+      value: cdktf.stringToHclTerraform(struct!.noSpeechTimeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_timeout_based_endpointing: {
+      value: cdktf.booleanToHclTerraform(struct!.useTimeoutBasedEndpointing),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endpointerSensitivity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpointerSensitivity = this._endpointerSensitivity;
+    }
+    if (this._models !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.models = this._models;
+    }
+    if (this._noSpeechTimeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.noSpeechTimeout = this._noSpeechTimeout;
+    }
+    if (this._useTimeoutBasedEndpointing !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useTimeoutBasedEndpointing = this._useTimeoutBasedEndpointing;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._endpointerSensitivity = undefined;
+      this._models = undefined;
+      this._noSpeechTimeout = undefined;
+      this._useTimeoutBasedEndpointing = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._endpointerSensitivity = value.endpointerSensitivity;
+      this._models = value.models;
+      this._noSpeechTimeout = value.noSpeechTimeout;
+      this._useTimeoutBasedEndpointing = value.useTimeoutBasedEndpointing;
+    }
+  }
+
+  // endpointer_sensitivity - computed: false, optional: true, required: false
+  private _endpointerSensitivity?: number; 
+  public get endpointerSensitivity() {
+    return this.getNumberAttribute('endpointer_sensitivity');
+  }
+  public set endpointerSensitivity(value: number) {
+    this._endpointerSensitivity = value;
+  }
+  public resetEndpointerSensitivity() {
+    this._endpointerSensitivity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointerSensitivityInput() {
+    return this._endpointerSensitivity;
+  }
+
+  // models - computed: false, optional: true, required: false
+  private _models?: { [key: string]: string }; 
+  public get models() {
+    return this.getStringMapAttribute('models');
+  }
+  public set models(value: { [key: string]: string }) {
+    this._models = value;
+  }
+  public resetModels() {
+    this._models = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelsInput() {
+    return this._models;
+  }
+
+  // no_speech_timeout - computed: false, optional: true, required: false
+  private _noSpeechTimeout?: string; 
+  public get noSpeechTimeout() {
+    return this.getStringAttribute('no_speech_timeout');
+  }
+  public set noSpeechTimeout(value: string) {
+    this._noSpeechTimeout = value;
+  }
+  public resetNoSpeechTimeout() {
+    this._noSpeechTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noSpeechTimeoutInput() {
+    return this._noSpeechTimeout;
+  }
+
+  // use_timeout_based_endpointing - computed: false, optional: true, required: false
+  private _useTimeoutBasedEndpointing?: boolean | cdktf.IResolvable; 
+  public get useTimeoutBasedEndpointing() {
+    return this.getBooleanAttribute('use_timeout_based_endpointing');
+  }
+  public set useTimeoutBasedEndpointing(value: boolean | cdktf.IResolvable) {
+    this._useTimeoutBasedEndpointing = value;
+  }
+  public resetUseTimeoutBasedEndpointing() {
+    this._useTimeoutBasedEndpointing = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useTimeoutBasedEndpointingInput() {
+    return this._useTimeoutBasedEndpointing;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings {
+  /**
+  * dtmf_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#dtmf_settings DialogflowCxPage#dtmf_settings}
+  */
+  readonly dtmfSettings?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings;
+  /**
+  * logging_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#logging_settings DialogflowCxPage#logging_settings}
+  */
+  readonly loggingSettings?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings;
+  /**
+  * speech_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#speech_settings DialogflowCxPage#speech_settings}
+  */
+  readonly speechSettings?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dtmf_settings: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsToTerraform(struct!.dtmfSettings),
+    logging_settings: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsToTerraform(struct!.loggingSettings),
+    speech_settings: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsToTerraform(struct!.speechSettings),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dtmf_settings: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsToHclTerraform(struct!.dtmfSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsList",
+    },
+    logging_settings: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsToHclTerraform(struct!.loggingSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsList",
+    },
+    speech_settings: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsToHclTerraform(struct!.speechSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dtmfSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dtmfSettings = this._dtmfSettings?.internalValue;
+    }
+    if (this._loggingSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loggingSettings = this._loggingSettings?.internalValue;
+    }
+    if (this._speechSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.speechSettings = this._speechSettings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dtmfSettings.internalValue = undefined;
+      this._loggingSettings.internalValue = undefined;
+      this._speechSettings.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dtmfSettings.internalValue = value.dtmfSettings;
+      this._loggingSettings.internalValue = value.loggingSettings;
+      this._speechSettings.internalValue = value.speechSettings;
+    }
+  }
+
+  // dtmf_settings - computed: false, optional: true, required: false
+  private _dtmfSettings = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettingsOutputReference(this, "dtmf_settings");
+  public get dtmfSettings() {
+    return this._dtmfSettings;
+  }
+  public putDtmfSettings(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings) {
+    this._dtmfSettings.internalValue = value;
+  }
+  public resetDtmfSettings() {
+    this._dtmfSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dtmfSettingsInput() {
+    return this._dtmfSettings.internalValue;
+  }
+
+  // logging_settings - computed: false, optional: true, required: false
+  private _loggingSettings = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettingsOutputReference(this, "logging_settings");
+  public get loggingSettings() {
+    return this._loggingSettings;
+  }
+  public putLoggingSettings(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings) {
+    this._loggingSettings.internalValue = value;
+  }
+  public resetLoggingSettings() {
+    this._loggingSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingSettingsInput() {
+    return this._loggingSettings.internalValue;
+  }
+
+  // speech_settings - computed: false, optional: true, required: false
+  private _speechSettings = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettingsOutputReference(this, "speech_settings");
+  public get speechSettings() {
+    return this._speechSettings;
+  }
+  public putSpeechSettings(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings) {
+    this._speechSettings.internalValue = value;
+  }
+  public resetSpeechSettings() {
+    this._speechSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get speechSettingsInput() {
+    return this._speechSettings.internalValue;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases {
+  /**
+  * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
+  * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+  */
+  readonly cases?: string;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cases: cdktf.stringToTerraform(struct!.cases),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cases: {
+      value: cdktf.stringToHclTerraform(struct!.cases),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cases !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cases = this._cases;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._cases = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._cases = value.cases;
+    }
+  }
+
+  // cases - computed: false, optional: true, required: false
+  private _cases?: string; 
+  public get cases() {
+    return this.getStringAttribute('cases');
+  }
+  public set cases(value: string) {
+    this._cases = value;
+  }
+  public resetCases() {
+    this._cases = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get casesInput() {
+    return this._cases;
+  }
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesList extends cdktf.ComplexList {
+  public internalValue? : DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference {
+    return new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteraction {
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteractionToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteraction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteractionToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteraction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteractionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteraction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteraction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteractionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteractionOutputReference {
+    return new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteractionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments {
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegmentsToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegmentsToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegmentsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allow_playback_interruption - computed: true, optional: false, required: false
+  public get allowPlaybackInterruption() {
+    return this.getBooleanAttribute('allow_playback_interruption');
+  }
+
+  // audio - computed: true, optional: false, required: false
+  public get audio() {
+    return this.getStringAttribute('audio');
+  }
+
+  // uri - computed: true, optional: false, required: false
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegmentsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegmentsOutputReference {
+    return new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegmentsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudio {
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudio): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudio): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudio | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudio | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // segments - computed: true, optional: false, required: false
+  private _segments = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegmentsList(this, "segments", false);
+  public get segments() {
+    return this._segments;
+  }
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioOutputReference {
+    return new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess {
+  /**
+  * Custom metadata. Dialogflow doesn't impose any structure on this.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  */
+  readonly metadata?: string;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    metadata: cdktf.stringToTerraform(struct!.metadata),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metadata: {
+      value: cdktf.stringToHclTerraform(struct!.metadata),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._metadata !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._metadata = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._metadata = value.metadata;
+    }
+  }
+
+  // metadata - computed: false, optional: true, required: false
+  private _metadata?: string; 
+  public get metadata() {
+    return this.getStringAttribute('metadata');
+  }
+  public set metadata(value: string) {
+    this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard {
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff {
+  /**
+  * Custom metadata. Dialogflow doesn't impose any structure on this.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  */
+  readonly metadata?: string;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    metadata: cdktf.stringToTerraform(struct!.metadata),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metadata: {
+      value: cdktf.stringToHclTerraform(struct!.metadata),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._metadata !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._metadata = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._metadata = value.metadata;
+    }
+  }
+
+  // metadata - computed: false, optional: true, required: false
+  private _metadata?: string; 
+  public get metadata() {
+    return this.getStringAttribute('metadata');
+  }
+  public set metadata(value: string) {
+    this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText {
+  /**
+  * The SSML text to be synthesized. For more information, see SSML.
+  * This field is part of a union field 'source': Only one of 'text' or 'ssml' may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+  */
+  readonly ssml?: string;
+  /**
+  * The raw text to be synthesized.
+  * This field is part of a union field 'source': Only one of 'text' or 'ssml' may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  */
+  readonly text?: string;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ssml: cdktf.stringToTerraform(struct!.ssml),
+    text: cdktf.stringToTerraform(struct!.text),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ssml: {
+      value: cdktf.stringToHclTerraform(struct!.ssml),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    text: {
+      value: cdktf.stringToHclTerraform(struct!.text),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ssml !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ssml = this._ssml;
+    }
+    if (this._text !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.text = this._text;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._ssml = undefined;
+      this._text = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._ssml = value.ssml;
+      this._text = value.text;
+    }
+  }
+
+  // allow_playback_interruption - computed: true, optional: false, required: false
+  public get allowPlaybackInterruption() {
+    return this.getBooleanAttribute('allow_playback_interruption');
+  }
+
+  // ssml - computed: false, optional: true, required: false
+  private _ssml?: string; 
+  public get ssml() {
+    return this.getStringAttribute('ssml');
+  }
+  public set ssml(value: string) {
+    this._ssml = value;
+  }
+  public resetSsml() {
+    this._ssml = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ssmlInput() {
+    return this._ssml;
+  }
+
+  // text - computed: false, optional: true, required: false
+  private _text?: string; 
+  public get text() {
+    return this.getStringAttribute('text');
+  }
+  public set text(value: string) {
+    this._text = value;
+  }
+  public resetText() {
+    this._text = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get textInput() {
+    return this._text;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio {
+  /**
+  * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+  */
+  readonly audioUri: string;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    audio_uri: cdktf.stringToTerraform(struct!.audioUri),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    audio_uri: {
+      value: cdktf.stringToHclTerraform(struct!.audioUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._audioUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.audioUri = this._audioUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._audioUri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._audioUri = value.audioUri;
+    }
+  }
+
+  // allow_playback_interruption - computed: true, optional: false, required: false
+  public get allowPlaybackInterruption() {
+    return this.getBooleanAttribute('allow_playback_interruption');
+  }
+
+  // audio_uri - computed: false, optional: false, required: true
+  private _audioUri?: string; 
+  public get audioUri() {
+    return this.getStringAttribute('audio_uri');
+  }
+  public set audioUri(value: string) {
+    this._audioUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get audioUriInput() {
+    return this._audioUri;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall {
+  /**
+  * Transfer the call to a phone number in E.164 format.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+  */
+  readonly phoneNumber: string;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    phone_number: cdktf.stringToTerraform(struct!.phoneNumber),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    phone_number: {
+      value: cdktf.stringToHclTerraform(struct!.phoneNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._phoneNumber !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.phoneNumber = this._phoneNumber;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._phoneNumber = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._phoneNumber = value.phoneNumber;
+    }
+  }
+
+  // phone_number - computed: false, optional: false, required: true
+  private _phoneNumber?: string; 
+  public get phoneNumber() {
+    return this.getStringAttribute('phone_number');
+  }
+  public set phoneNumber(value: string) {
+    this._phoneNumber = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phoneNumberInput() {
+    return this._phoneNumber;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText {
+  /**
+  * A collection of text response variants. If multiple variants are defined, only one text response variant is returned at runtime.
+  * required: true
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  */
+  readonly text?: string[];
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    text: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.text),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    text: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.text),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._text !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.text = this._text;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._text = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._text = value.text;
+    }
+  }
+
+  // allow_playback_interruption - computed: true, optional: false, required: false
+  public get allowPlaybackInterruption() {
+    return this.getBooleanAttribute('allow_playback_interruption');
+  }
+
+  // text - computed: false, optional: true, required: false
+  private _text?: string[]; 
+  public get text() {
+    return this.getListAttribute('text');
+  }
+  public set text(value: string[]) {
+    this._text = value;
+  }
+  public resetText() {
+    this._text = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get textInput() {
+    return this._text;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages {
+  /**
+  * The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+  */
+  readonly channel?: string;
+  /**
+  * Returns a response containing a custom, platform-specific payload.
+  * This field is part of a union field 'message': Only one of 'text', 'payload', 'conversationSuccess', 'outputAudioText', 'liveAgentHandoff', 'endInteraction', 'playAudio', 'mixedAudio', 'telephonyTransferCall', or 'knowledgeInfoCard' may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+  */
+  readonly payload?: string;
+  /**
+  * conversation_success block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+  */
+  readonly conversationSuccess?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess;
+  /**
+  * knowledge_info_card block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#knowledge_info_card DialogflowCxPage#knowledge_info_card}
+  */
+  readonly knowledgeInfoCard?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard;
+  /**
+  * live_agent_handoff block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+  */
+  readonly liveAgentHandoff?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff;
+  /**
+  * output_audio_text block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+  */
+  readonly outputAudioText?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText;
+  /**
+  * play_audio block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+  */
+  readonly playAudio?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio;
+  /**
+  * telephony_transfer_call block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+  */
+  readonly telephonyTransferCall?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall;
+  /**
+  * text block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  */
+  readonly text?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    channel: cdktf.stringToTerraform(struct!.channel),
+    payload: cdktf.stringToTerraform(struct!.payload),
+    conversation_success: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessToTerraform(struct!.conversationSuccess),
+    knowledge_info_card: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardToTerraform(struct!.knowledgeInfoCard),
+    live_agent_handoff: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffToTerraform(struct!.liveAgentHandoff),
+    output_audio_text: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextToTerraform(struct!.outputAudioText),
+    play_audio: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioToTerraform(struct!.playAudio),
+    telephony_transfer_call: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallToTerraform(struct!.telephonyTransferCall),
+    text: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextToTerraform(struct!.text),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    channel: {
+      value: cdktf.stringToHclTerraform(struct!.channel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    payload: {
+      value: cdktf.stringToHclTerraform(struct!.payload),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conversation_success: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessToHclTerraform(struct!.conversationSuccess),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessList",
+    },
+    knowledge_info_card: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardToHclTerraform(struct!.knowledgeInfoCard),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardList",
+    },
+    live_agent_handoff: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffToHclTerraform(struct!.liveAgentHandoff),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffList",
+    },
+    output_audio_text: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextToHclTerraform(struct!.outputAudioText),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextList",
+    },
+    play_audio: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioToHclTerraform(struct!.playAudio),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioList",
+    },
+    telephony_transfer_call: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallToHclTerraform(struct!.telephonyTransferCall),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallList",
+    },
+    text: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextToHclTerraform(struct!.text),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._channel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.channel = this._channel;
+    }
+    if (this._payload !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.payload = this._payload;
+    }
+    if (this._conversationSuccess?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.conversationSuccess = this._conversationSuccess?.internalValue;
+    }
+    if (this._knowledgeInfoCard?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.knowledgeInfoCard = this._knowledgeInfoCard?.internalValue;
+    }
+    if (this._liveAgentHandoff?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.liveAgentHandoff = this._liveAgentHandoff?.internalValue;
+    }
+    if (this._outputAudioText?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outputAudioText = this._outputAudioText?.internalValue;
+    }
+    if (this._playAudio?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.playAudio = this._playAudio?.internalValue;
+    }
+    if (this._telephonyTransferCall?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.telephonyTransferCall = this._telephonyTransferCall?.internalValue;
+    }
+    if (this._text?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.text = this._text?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._channel = undefined;
+      this._payload = undefined;
+      this._conversationSuccess.internalValue = undefined;
+      this._knowledgeInfoCard.internalValue = undefined;
+      this._liveAgentHandoff.internalValue = undefined;
+      this._outputAudioText.internalValue = undefined;
+      this._playAudio.internalValue = undefined;
+      this._telephonyTransferCall.internalValue = undefined;
+      this._text.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._channel = value.channel;
+      this._payload = value.payload;
+      this._conversationSuccess.internalValue = value.conversationSuccess;
+      this._knowledgeInfoCard.internalValue = value.knowledgeInfoCard;
+      this._liveAgentHandoff.internalValue = value.liveAgentHandoff;
+      this._outputAudioText.internalValue = value.outputAudioText;
+      this._playAudio.internalValue = value.playAudio;
+      this._telephonyTransferCall.internalValue = value.telephonyTransferCall;
+      this._text.internalValue = value.text;
+    }
+  }
+
+  // channel - computed: false, optional: true, required: false
+  private _channel?: string; 
+  public get channel() {
+    return this.getStringAttribute('channel');
+  }
+  public set channel(value: string) {
+    this._channel = value;
+  }
+  public resetChannel() {
+    this._channel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get channelInput() {
+    return this._channel;
+  }
+
+  // end_interaction - computed: true, optional: false, required: false
+  private _endInteraction = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteractionList(this, "end_interaction", false);
+  public get endInteraction() {
+    return this._endInteraction;
+  }
+
+  // mixed_audio - computed: true, optional: false, required: false
+  private _mixedAudio = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioList(this, "mixed_audio", false);
+  public get mixedAudio() {
+    return this._mixedAudio;
+  }
+
+  // payload - computed: false, optional: true, required: false
+  private _payload?: string; 
+  public get payload() {
+    return this.getStringAttribute('payload');
+  }
+  public set payload(value: string) {
+    this._payload = value;
+  }
+  public resetPayload() {
+    this._payload = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get payloadInput() {
+    return this._payload;
+  }
+
+  // conversation_success - computed: false, optional: true, required: false
+  private _conversationSuccess = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccessOutputReference(this, "conversation_success");
+  public get conversationSuccess() {
+    return this._conversationSuccess;
+  }
+  public putConversationSuccess(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess) {
+    this._conversationSuccess.internalValue = value;
+  }
+  public resetConversationSuccess() {
+    this._conversationSuccess.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conversationSuccessInput() {
+    return this._conversationSuccess.internalValue;
+  }
+
+  // knowledge_info_card - computed: false, optional: true, required: false
+  private _knowledgeInfoCard = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCardOutputReference(this, "knowledge_info_card");
+  public get knowledgeInfoCard() {
+    return this._knowledgeInfoCard;
+  }
+  public putKnowledgeInfoCard(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard) {
+    this._knowledgeInfoCard.internalValue = value;
+  }
+  public resetKnowledgeInfoCard() {
+    this._knowledgeInfoCard.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get knowledgeInfoCardInput() {
+    return this._knowledgeInfoCard.internalValue;
+  }
+
+  // live_agent_handoff - computed: false, optional: true, required: false
+  private _liveAgentHandoff = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoffOutputReference(this, "live_agent_handoff");
+  public get liveAgentHandoff() {
+    return this._liveAgentHandoff;
+  }
+  public putLiveAgentHandoff(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff) {
+    this._liveAgentHandoff.internalValue = value;
+  }
+  public resetLiveAgentHandoff() {
+    this._liveAgentHandoff.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get liveAgentHandoffInput() {
+    return this._liveAgentHandoff.internalValue;
+  }
+
+  // output_audio_text - computed: false, optional: true, required: false
+  private _outputAudioText = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioTextOutputReference(this, "output_audio_text");
+  public get outputAudioText() {
+    return this._outputAudioText;
+  }
+  public putOutputAudioText(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText) {
+    this._outputAudioText.internalValue = value;
+  }
+  public resetOutputAudioText() {
+    this._outputAudioText.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputAudioTextInput() {
+    return this._outputAudioText.internalValue;
+  }
+
+  // play_audio - computed: false, optional: true, required: false
+  private _playAudio = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudioOutputReference(this, "play_audio");
+  public get playAudio() {
+    return this._playAudio;
+  }
+  public putPlayAudio(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio) {
+    this._playAudio.internalValue = value;
+  }
+  public resetPlayAudio() {
+    this._playAudio.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get playAudioInput() {
+    return this._playAudio.internalValue;
+  }
+
+  // telephony_transfer_call - computed: false, optional: true, required: false
+  private _telephonyTransferCall = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCallOutputReference(this, "telephony_transfer_call");
+  public get telephonyTransferCall() {
+    return this._telephonyTransferCall;
+  }
+  public putTelephonyTransferCall(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall) {
+    this._telephonyTransferCall.internalValue = value;
+  }
+  public resetTelephonyTransferCall() {
+    this._telephonyTransferCall.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get telephonyTransferCallInput() {
+    return this._telephonyTransferCall.internalValue;
+  }
+
+  // text - computed: false, optional: true, required: false
+  private _text = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesTextOutputReference(this, "text");
+  public get text() {
+    return this._text;
+  }
+  public putText(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesText) {
+    this._text.internalValue = value;
+  }
+  public resetText() {
+    this._text.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get textInput() {
+    return this._text.internalValue;
+  }
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList extends cdktf.ComplexList {
+  public internalValue? : DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference {
+    return new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions {
+  /**
+  * Display name of the parameter.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+  */
+  readonly parameter?: string;
+  /**
+  * The new JSON-encoded value of the parameter. A null value clears the parameter.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+  */
+  readonly value?: string;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    parameter: cdktf.stringToTerraform(struct!.parameter),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    parameter: {
+      value: cdktf.stringToHclTerraform(struct!.parameter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._parameter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameter = this._parameter;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._parameter = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._parameter = value.parameter;
+      this._value = value.value;
+    }
+  }
+
+  // parameter - computed: false, optional: true, required: false
+  private _parameter?: string; 
+  public get parameter() {
+    return this.getStringAttribute('parameter');
+  }
+  public set parameter(value: string) {
+    this._parameter = value;
+  }
+  public resetParameter() {
+    this._parameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parameterInput() {
+    return this._parameter;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList extends cdktf.ComplexList {
+  public internalValue? : DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference {
+    return new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment {
+  /**
+  * If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation fails, the defined responses in the fulfillment will be respected. This flag is only useful for fulfillments associated with no-match event handlers.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#enable_generative_fallback DialogflowCxPage#enable_generative_fallback}
+  */
+  readonly enableGenerativeFallback?: boolean | cdktf.IResolvable;
+  /**
+  * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+  */
+  readonly returnPartialResponses?: boolean | cdktf.IResolvable;
+  /**
+  * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+  */
+  readonly tag?: string;
+  /**
+  * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+  */
+  readonly webhook?: string;
+  /**
+  * advanced_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#advanced_settings DialogflowCxPage#advanced_settings}
+  */
+  readonly advancedSettings?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings;
+  /**
+  * conditional_cases block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+  */
+  readonly conditionalCases?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases[] | cdktf.IResolvable;
+  /**
+  * messages block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+  */
+  readonly messages?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages[] | cdktf.IResolvable;
+  /**
+  * set_parameter_actions block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+  */
+  readonly setParameterActions?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions[] | cdktf.IResolvable;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_generative_fallback: cdktf.booleanToTerraform(struct!.enableGenerativeFallback),
+    return_partial_responses: cdktf.booleanToTerraform(struct!.returnPartialResponses),
+    tag: cdktf.stringToTerraform(struct!.tag),
+    webhook: cdktf.stringToTerraform(struct!.webhook),
+    advanced_settings: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsToTerraform(struct!.advancedSettings),
+    conditional_cases: cdktf.listMapper(dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesToTerraform, true)(struct!.conditionalCases),
+    messages: cdktf.listMapper(dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesToTerraform, true)(struct!.messages),
+    set_parameter_actions: cdktf.listMapper(dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsToTerraform, true)(struct!.setParameterActions),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference | DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_generative_fallback: {
+      value: cdktf.booleanToHclTerraform(struct!.enableGenerativeFallback),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    return_partial_responses: {
+      value: cdktf.booleanToHclTerraform(struct!.returnPartialResponses),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    webhook: {
+      value: cdktf.stringToHclTerraform(struct!.webhook),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    advanced_settings: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsToHclTerraform(struct!.advancedSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsList",
+    },
+    conditional_cases: {
+      value: cdktf.listMapperHcl(dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesToHclTerraform, true)(struct!.conditionalCases),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesList",
+    },
+    messages: {
+      value: cdktf.listMapperHcl(dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesToHclTerraform, true)(struct!.messages),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList",
+    },
+    set_parameter_actions: {
+      value: cdktf.listMapperHcl(dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsToHclTerraform, true)(struct!.setParameterActions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableGenerativeFallback !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableGenerativeFallback = this._enableGenerativeFallback;
+    }
+    if (this._returnPartialResponses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.returnPartialResponses = this._returnPartialResponses;
+    }
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    if (this._webhook !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webhook = this._webhook;
+    }
+    if (this._advancedSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.advancedSettings = this._advancedSettings?.internalValue;
+    }
+    if (this._conditionalCases?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.conditionalCases = this._conditionalCases?.internalValue;
+    }
+    if (this._messages?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.messages = this._messages?.internalValue;
+    }
+    if (this._setParameterActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.setParameterActions = this._setParameterActions?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableGenerativeFallback = undefined;
+      this._returnPartialResponses = undefined;
+      this._tag = undefined;
+      this._webhook = undefined;
+      this._advancedSettings.internalValue = undefined;
+      this._conditionalCases.internalValue = undefined;
+      this._messages.internalValue = undefined;
+      this._setParameterActions.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableGenerativeFallback = value.enableGenerativeFallback;
+      this._returnPartialResponses = value.returnPartialResponses;
+      this._tag = value.tag;
+      this._webhook = value.webhook;
+      this._advancedSettings.internalValue = value.advancedSettings;
+      this._conditionalCases.internalValue = value.conditionalCases;
+      this._messages.internalValue = value.messages;
+      this._setParameterActions.internalValue = value.setParameterActions;
+    }
+  }
+
+  // enable_generative_fallback - computed: false, optional: true, required: false
+  private _enableGenerativeFallback?: boolean | cdktf.IResolvable; 
+  public get enableGenerativeFallback() {
+    return this.getBooleanAttribute('enable_generative_fallback');
+  }
+  public set enableGenerativeFallback(value: boolean | cdktf.IResolvable) {
+    this._enableGenerativeFallback = value;
+  }
+  public resetEnableGenerativeFallback() {
+    this._enableGenerativeFallback = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableGenerativeFallbackInput() {
+    return this._enableGenerativeFallback;
+  }
+
+  // return_partial_responses - computed: false, optional: true, required: false
+  private _returnPartialResponses?: boolean | cdktf.IResolvable; 
+  public get returnPartialResponses() {
+    return this.getBooleanAttribute('return_partial_responses');
+  }
+  public set returnPartialResponses(value: boolean | cdktf.IResolvable) {
+    this._returnPartialResponses = value;
+  }
+  public resetReturnPartialResponses() {
+    this._returnPartialResponses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get returnPartialResponsesInput() {
+    return this._returnPartialResponses;
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
+  }
+
+  // webhook - computed: false, optional: true, required: false
+  private _webhook?: string; 
+  public get webhook() {
+    return this.getStringAttribute('webhook');
+  }
+  public set webhook(value: string) {
+    this._webhook = value;
+  }
+  public resetWebhook() {
+    this._webhook = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookInput() {
+    return this._webhook;
+  }
+
+  // advanced_settings - computed: false, optional: true, required: false
+  private _advancedSettings = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsOutputReference(this, "advanced_settings");
+  public get advancedSettings() {
+    return this._advancedSettings;
+  }
+  public putAdvancedSettings(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings) {
+    this._advancedSettings.internalValue = value;
+  }
+  public resetAdvancedSettings() {
+    this._advancedSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedSettingsInput() {
+    return this._advancedSettings.internalValue;
+  }
+
+  // conditional_cases - computed: false, optional: true, required: false
+  private _conditionalCases = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCasesList(this, "conditional_cases", false);
+  public get conditionalCases() {
+    return this._conditionalCases;
+  }
+  public putConditionalCases(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases[] | cdktf.IResolvable) {
+    this._conditionalCases.internalValue = value;
+  }
+  public resetConditionalCases() {
+    this._conditionalCases.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionalCasesInput() {
+    return this._conditionalCases.internalValue;
+  }
+
+  // messages - computed: false, optional: true, required: false
+  private _messages = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessagesList(this, "messages", false);
+  public get messages() {
+    return this._messages;
+  }
+  public putMessages(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentMessages[] | cdktf.IResolvable) {
+    this._messages.internalValue = value;
+  }
+  public resetMessages() {
+    this._messages.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messagesInput() {
+    return this._messages.internalValue;
+  }
+
+  // set_parameter_actions - computed: false, optional: true, required: false
+  private _setParameterActions = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActionsList(this, "set_parameter_actions", false);
+  public get setParameterActions() {
+    return this._setParameterActions;
+  }
+  public putSetParameterActions(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions[] | cdktf.IResolvable) {
+    this._setParameterActions.internalValue = value;
+  }
+  public resetSetParameterActions() {
+    this._setParameterActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get setParameterActionsInput() {
+    return this._setParameterActions.internalValue;
+  }
+}
+export interface DialogflowCxPageKnowledgeConnectorSettings {
+  /**
+  * Whether Knowledge Connector is enabled or not.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#enabled DialogflowCxPage#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * The target flow to transition to. Format: projects/<ProjectID>/locations/<LocationID>/agents/<AgentID>/flows/<FlowID>.
+  * This field is part of a union field 'target': Only one of 'targetPage' or 'targetFlow' may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
+  */
+  readonly targetFlow?: string;
+  /**
+  * The target page to transition to. Format: projects/<ProjectID>/locations/<LocationID>/agents/<AgentID>/flows/<FlowID>/pages/<PageID>.
+  * The page must be in the same host flow (the flow that owns this 'KnowledgeConnectorSettings').
+  * This field is part of a union field 'target': Only one of 'targetPage' or 'targetFlow' may be set.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
+  */
+  readonly targetPage?: string;
+  /**
+  * data_store_connections block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#data_store_connections DialogflowCxPage#data_store_connections}
+  */
+  readonly dataStoreConnections?: DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections[] | cdktf.IResolvable;
+  /**
+  * trigger_fulfillment block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
+  */
+  readonly triggerFulfillment?: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment;
+}
+
+export function dialogflowCxPageKnowledgeConnectorSettingsToTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    target_flow: cdktf.stringToTerraform(struct!.targetFlow),
+    target_page: cdktf.stringToTerraform(struct!.targetPage),
+    data_store_connections: cdktf.listMapper(dialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsToTerraform, true)(struct!.dataStoreConnections),
+    trigger_fulfillment: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentToTerraform(struct!.triggerFulfillment),
+  }
+}
+
+
+export function dialogflowCxPageKnowledgeConnectorSettingsToHclTerraform(struct?: DialogflowCxPageKnowledgeConnectorSettingsOutputReference | DialogflowCxPageKnowledgeConnectorSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    target_flow: {
+      value: cdktf.stringToHclTerraform(struct!.targetFlow),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_page: {
+      value: cdktf.stringToHclTerraform(struct!.targetPage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_store_connections: {
+      value: cdktf.listMapperHcl(dialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsToHclTerraform, true)(struct!.dataStoreConnections),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList",
+    },
+    trigger_fulfillment: {
+      value: dialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentToHclTerraform(struct!.triggerFulfillment),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DialogflowCxPageKnowledgeConnectorSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DialogflowCxPageKnowledgeConnectorSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._targetFlow !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetFlow = this._targetFlow;
+    }
+    if (this._targetPage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetPage = this._targetPage;
+    }
+    if (this._dataStoreConnections?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataStoreConnections = this._dataStoreConnections?.internalValue;
+    }
+    if (this._triggerFulfillment?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.triggerFulfillment = this._triggerFulfillment?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxPageKnowledgeConnectorSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._targetFlow = undefined;
+      this._targetPage = undefined;
+      this._dataStoreConnections.internalValue = undefined;
+      this._triggerFulfillment.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._targetFlow = value.targetFlow;
+      this._targetPage = value.targetPage;
+      this._dataStoreConnections.internalValue = value.dataStoreConnections;
+      this._triggerFulfillment.internalValue = value.triggerFulfillment;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // target_flow - computed: false, optional: true, required: false
+  private _targetFlow?: string; 
+  public get targetFlow() {
+    return this.getStringAttribute('target_flow');
+  }
+  public set targetFlow(value: string) {
+    this._targetFlow = value;
+  }
+  public resetTargetFlow() {
+    this._targetFlow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetFlowInput() {
+    return this._targetFlow;
+  }
+
+  // target_page - computed: false, optional: true, required: false
+  private _targetPage?: string; 
+  public get targetPage() {
+    return this.getStringAttribute('target_page');
+  }
+  public set targetPage(value: string) {
+    this._targetPage = value;
+  }
+  public resetTargetPage() {
+    this._targetPage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetPageInput() {
+    return this._targetPage;
+  }
+
+  // data_store_connections - computed: false, optional: true, required: false
+  private _dataStoreConnections = new DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnectionsList(this, "data_store_connections", false);
+  public get dataStoreConnections() {
+    return this._dataStoreConnections;
+  }
+  public putDataStoreConnections(value: DialogflowCxPageKnowledgeConnectorSettingsDataStoreConnections[] | cdktf.IResolvable) {
+    this._dataStoreConnections.internalValue = value;
+  }
+  public resetDataStoreConnections() {
+    this._dataStoreConnections.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataStoreConnectionsInput() {
+    return this._dataStoreConnections.internalValue;
+  }
+
+  // trigger_fulfillment - computed: false, optional: true, required: false
+  private _triggerFulfillment = new DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillmentOutputReference(this, "trigger_fulfillment");
+  public get triggerFulfillment() {
+    return this._triggerFulfillment;
+  }
+  public putTriggerFulfillment(value: DialogflowCxPageKnowledgeConnectorSettingsTriggerFulfillment) {
+    this._triggerFulfillment.internalValue = value;
+  }
+  public resetTriggerFulfillment() {
+    this._triggerFulfillment.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerFulfillmentInput() {
+    return this._triggerFulfillment.internalValue;
+  }
+}
 export interface DialogflowCxPageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#create DialogflowCxPage#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#create DialogflowCxPage#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#delete DialogflowCxPage#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#delete DialogflowCxPage#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#update DialogflowCxPage#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#update DialogflowCxPage#update}
   */
   readonly update?: string;
 }
@@ -7602,7 +10615,7 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCa
   * A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
   * See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#cases DialogflowCxPage#cases}
   */
   readonly cases?: string;
 }
@@ -7720,7 +10733,7 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesConve
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -7806,7 +10819,7 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesLiveA
   /**
   * Custom metadata. Dialogflow doesn't impose any structure on this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#metadata DialogflowCxPage#metadata}
   */
   readonly metadata?: string;
 }
@@ -7892,13 +10905,13 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutpu
   /**
   * The SSML text to be synthesized. For more information, see SSML.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#ssml DialogflowCxPage#ssml}
   */
   readonly ssml?: string;
   /**
   * The raw text to be synthesized.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string;
 }
@@ -8018,7 +11031,7 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesPlayA
   /**
   * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#audio_uri DialogflowCxPage#audio_uri}
   */
   readonly audioUri: string;
 }
@@ -8106,7 +11119,7 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTelep
   /**
   * Transfer the call to a phone number in E.164 format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#phone_number DialogflowCxPage#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -8189,7 +11202,7 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText 
   /**
   * A collection of text responses.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: string[];
 }
@@ -8280,49 +11293,49 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages {
   /**
   * The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#channel DialogflowCxPage#channel}
   */
   readonly channel?: string;
   /**
   * A custom, platform-specific payload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#payload DialogflowCxPage#payload}
   */
   readonly payload?: string;
   /**
   * conversation_success block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conversation_success DialogflowCxPage#conversation_success}
   */
   readonly conversationSuccess?: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesConversationSuccess;
   /**
   * live_agent_handoff block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#live_agent_handoff DialogflowCxPage#live_agent_handoff}
   */
   readonly liveAgentHandoff?: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff;
   /**
   * output_audio_text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#output_audio_text DialogflowCxPage#output_audio_text}
   */
   readonly outputAudioText?: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputAudioText;
   /**
   * play_audio block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#play_audio DialogflowCxPage#play_audio}
   */
   readonly playAudio?: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesPlayAudio;
   /**
   * telephony_transfer_call block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#telephony_transfer_call DialogflowCxPage#telephony_transfer_call}
   */
   readonly telephonyTransferCall?: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall;
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#text DialogflowCxPage#text}
   */
   readonly text?: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText;
 }
@@ -8643,13 +11656,13 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterA
   /**
   * Display name of the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#parameter DialogflowCxPage#parameter}
   */
   readonly parameter?: string;
   /**
   * The new JSON-encoded value of the parameter. A null value clears the parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#value DialogflowCxPage#value}
   */
   readonly value?: string;
 }
@@ -8796,37 +11809,37 @@ export interface DialogflowCxPageTransitionRoutesTriggerFulfillment {
   /**
   * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#return_partial_responses DialogflowCxPage#return_partial_responses}
   */
   readonly returnPartialResponses?: boolean | cdktf.IResolvable;
   /**
   * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#tag DialogflowCxPage#tag}
   */
   readonly tag?: string;
   /**
   * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#webhook DialogflowCxPage#webhook}
   */
   readonly webhook?: string;
   /**
   * conditional_cases block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#conditional_cases DialogflowCxPage#conditional_cases}
   */
   readonly conditionalCases?: DialogflowCxPageTransitionRoutesTriggerFulfillmentConditionalCases[] | cdktf.IResolvable;
   /**
   * messages block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#messages DialogflowCxPage#messages}
   */
   readonly messages?: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages[] | cdktf.IResolvable;
   /**
   * set_parameter_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#set_parameter_actions DialogflowCxPage#set_parameter_actions}
   */
   readonly setParameterActions?: DialogflowCxPageTransitionRoutesTriggerFulfillmentSetParameterActions[] | cdktf.IResolvable;
 }
@@ -9058,34 +12071,34 @@ export interface DialogflowCxPageTransitionRoutes {
   * The condition to evaluate against form parameters or session parameters.
   * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#condition DialogflowCxPage#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#condition DialogflowCxPage#condition}
   */
   readonly condition?: string;
   /**
   * The unique identifier of an Intent.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#intent DialogflowCxPage#intent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#intent DialogflowCxPage#intent}
   */
   readonly intent?: string;
   /**
   * The target flow to transition to.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
   */
   readonly targetFlow?: string;
   /**
   * The target page to transition to.
   * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
   */
   readonly targetPage?: string;
   /**
   * trigger_fulfillment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#trigger_fulfillment DialogflowCxPage#trigger_fulfillment}
   */
   readonly triggerFulfillment?: DialogflowCxPageTransitionRoutesTriggerFulfillment;
 }
@@ -9322,7 +12335,7 @@ export class DialogflowCxPageTransitionRoutesList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page google_dialogflow_cx_page}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page google_dialogflow_cx_page}
 */
 export class DialogflowCxPage extends cdktf.TerraformResource {
 
@@ -9338,7 +12351,7 @@ export class DialogflowCxPage extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DialogflowCxPage resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DialogflowCxPage to import
-  * @param importFromId The id of the existing DialogflowCxPage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DialogflowCxPage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DialogflowCxPage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -9350,7 +12363,7 @@ export class DialogflowCxPage extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dialogflow_cx_page google_dialogflow_cx_page} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dialogflow_cx_page google_dialogflow_cx_page} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -9361,7 +12374,7 @@ export class DialogflowCxPage extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_page',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -9381,6 +12394,7 @@ export class DialogflowCxPage extends cdktf.TerraformResource {
     this._entryFulfillment.internalValue = config.entryFulfillment;
     this._eventHandlers.internalValue = config.eventHandlers;
     this._form.internalValue = config.form;
+    this._knowledgeConnectorSettings.internalValue = config.knowledgeConnectorSettings;
     this._timeouts.internalValue = config.timeouts;
     this._transitionRoutes.internalValue = config.transitionRoutes;
   }
@@ -9535,6 +12549,22 @@ export class DialogflowCxPage extends cdktf.TerraformResource {
     return this._form.internalValue;
   }
 
+  // knowledge_connector_settings - computed: false, optional: true, required: false
+  private _knowledgeConnectorSettings = new DialogflowCxPageKnowledgeConnectorSettingsOutputReference(this, "knowledge_connector_settings");
+  public get knowledgeConnectorSettings() {
+    return this._knowledgeConnectorSettings;
+  }
+  public putKnowledgeConnectorSettings(value: DialogflowCxPageKnowledgeConnectorSettings) {
+    this._knowledgeConnectorSettings.internalValue = value;
+  }
+  public resetKnowledgeConnectorSettings() {
+    this._knowledgeConnectorSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get knowledgeConnectorSettingsInput() {
+    return this._knowledgeConnectorSettings.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DialogflowCxPageTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -9582,6 +12612,7 @@ export class DialogflowCxPage extends cdktf.TerraformResource {
       entry_fulfillment: dialogflowCxPageEntryFulfillmentToTerraform(this._entryFulfillment.internalValue),
       event_handlers: cdktf.listMapper(dialogflowCxPageEventHandlersToTerraform, true)(this._eventHandlers.internalValue),
       form: dialogflowCxPageFormToTerraform(this._form.internalValue),
+      knowledge_connector_settings: dialogflowCxPageKnowledgeConnectorSettingsToTerraform(this._knowledgeConnectorSettings.internalValue),
       timeouts: dialogflowCxPageTimeoutsToTerraform(this._timeouts.internalValue),
       transition_routes: cdktf.listMapper(dialogflowCxPageTransitionRoutesToTerraform, true)(this._transitionRoutes.internalValue),
     };
@@ -9642,6 +12673,12 @@ export class DialogflowCxPage extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "DialogflowCxPageFormList",
+      },
+      knowledge_connector_settings: {
+        value: dialogflowCxPageKnowledgeConnectorSettingsToHclTerraform(this._knowledgeConnectorSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DialogflowCxPageKnowledgeConnectorSettingsList",
       },
       timeouts: {
         value: dialogflowCxPageTimeoutsToHclTerraform(this._timeouts.internalValue),

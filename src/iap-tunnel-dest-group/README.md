@@ -1,3 +1,3 @@
 # `google_iap_tunnel_dest_group`
 
-Refer to the Terraform Registry for docs: [`google_iap_tunnel_dest_group`](https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/iap_tunnel_dest_group).
+Refer to the Terraform Registry for docs: [`google_iap_tunnel_dest_group`](https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/iap_tunnel_dest_group).

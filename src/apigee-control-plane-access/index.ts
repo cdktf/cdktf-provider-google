@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,11 +14,11 @@ export interface ApigeeControlPlaneAccessConfig extends cdktf.TerraformMetaArgum
   * 
   * You might specify multiple service accounts, for example, if you have multiple environments and wish to assign a unique service account to each one.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#analytics_publisher_identities ApigeeControlPlaneAccess#analytics_publisher_identities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#analytics_publisher_identities ApigeeControlPlaneAccess#analytics_publisher_identities}
   */
   readonly analyticsPublisherIdentities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#id ApigeeControlPlaneAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#id ApigeeControlPlaneAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,7 +27,7 @@ export interface ApigeeControlPlaneAccessConfig extends cdktf.TerraformMetaArgum
   /**
   * Name of the Apigee organization.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#name ApigeeControlPlaneAccess#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#name ApigeeControlPlaneAccess#name}
   */
   readonly name: string;
   /**
@@ -44,27 +39,27 @@ export interface ApigeeControlPlaneAccessConfig extends cdktf.TerraformMetaArgum
   * 
   * The service accounts must have **Apigee Synchronizer Manager** role. See also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/v1.8/sa-about#create-the-service-accounts).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#synchronizer_identities ApigeeControlPlaneAccess#synchronizer_identities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#synchronizer_identities ApigeeControlPlaneAccess#synchronizer_identities}
   */
   readonly synchronizerIdentities?: string[];
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#timeouts ApigeeControlPlaneAccess#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#timeouts ApigeeControlPlaneAccess#timeouts}
   */
   readonly timeouts?: ApigeeControlPlaneAccessTimeouts;
 }
 export interface ApigeeControlPlaneAccessTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#create ApigeeControlPlaneAccess#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#create ApigeeControlPlaneAccess#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#delete ApigeeControlPlaneAccess#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#delete ApigeeControlPlaneAccess#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#update ApigeeControlPlaneAccess#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#update ApigeeControlPlaneAccess#update}
   */
   readonly update?: string;
 }
@@ -216,7 +211,7 @@ export class ApigeeControlPlaneAccessTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access google_apigee_control_plane_access}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access google_apigee_control_plane_access}
 */
 export class ApigeeControlPlaneAccess extends cdktf.TerraformResource {
 
@@ -232,7 +227,7 @@ export class ApigeeControlPlaneAccess extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeControlPlaneAccess resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeControlPlaneAccess to import
-  * @param importFromId The id of the existing ApigeeControlPlaneAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeControlPlaneAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeControlPlaneAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -244,7 +239,7 @@ export class ApigeeControlPlaneAccess extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/apigee_control_plane_access google_apigee_control_plane_access} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/apigee_control_plane_access google_apigee_control_plane_access} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -255,7 +250,7 @@ export class ApigeeControlPlaneAccess extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_control_plane_access',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

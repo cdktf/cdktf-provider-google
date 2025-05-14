@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/project_ancestry
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/data-sources/project_ancestry
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,14 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleProjectAncestryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/project_ancestry#id DataGoogleProjectAncestry#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/data-sources/project_ancestry#id DataGoogleProjectAncestry#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/project_ancestry#project DataGoogleProjectAncestry#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/data-sources/project_ancestry#project DataGoogleProjectAncestry#project}
   */
   readonly project?: string;
 }
@@ -106,7 +101,7 @@ export class DataGoogleProjectAncestryAncestorsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/project_ancestry google_project_ancestry}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/data-sources/project_ancestry google_project_ancestry}
 */
 export class DataGoogleProjectAncestry extends cdktf.TerraformDataSource {
 
@@ -122,7 +117,7 @@ export class DataGoogleProjectAncestry extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleProjectAncestry resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleProjectAncestry to import
-  * @param importFromId The id of the existing DataGoogleProjectAncestry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/project_ancestry#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleProjectAncestry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/data-sources/project_ancestry#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleProjectAncestry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -134,7 +129,7 @@ export class DataGoogleProjectAncestry extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/data-sources/project_ancestry google_project_ancestry} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/data-sources/project_ancestry google_project_ancestry} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -145,7 +140,7 @@ export class DataGoogleProjectAncestry extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_project_ancestry',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
