@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,13 +13,25 @@ import * as cdktf from 'cdktf';
 
 export interface NetappBackupVaultConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Region in which backup is stored.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#backup_region NetappBackupVault#backup_region}
+  */
+  readonly backupRegion?: string;
+  /**
+  * Type of the backup vault to be created. Default is IN_REGION. Possible values: ["BACKUP_VAULT_TYPE_UNSPECIFIED", "IN_REGION", "CROSS_REGION"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#backup_vault_type NetappBackupVault#backup_vault_type}
+  */
+  readonly backupVaultType?: string;
+  /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#description NetappBackupVault#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#description NetappBackupVault#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#id NetappBackupVault#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,43 +44,43 @@ export interface NetappBackupVaultConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#labels NetappBackupVault#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#labels NetappBackupVault#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Location (region) of the backup vault.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#location NetappBackupVault#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}
   */
   readonly location: string;
   /**
   * The resource name of the backup vault. Needs to be unique per location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#name NetappBackupVault#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#project NetappBackupVault#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#project NetappBackupVault#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#timeouts NetappBackupVault#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#timeouts NetappBackupVault#timeouts}
   */
   readonly timeouts?: NetappBackupVaultTimeouts;
 }
 export interface NetappBackupVaultTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#create NetappBackupVault#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#update NetappBackupVault#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}
   */
   readonly update?: string;
 }
@@ -220,7 +232,7 @@ export class NetappBackupVaultTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault google_netapp_backup_vault}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault google_netapp_backup_vault}
 */
 export class NetappBackupVault extends cdktf.TerraformResource {
 
@@ -236,7 +248,7 @@ export class NetappBackupVault extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappBackupVault resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappBackupVault to import
-  * @param importFromId The id of the existing NetappBackupVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappBackupVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappBackupVault to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -248,7 +260,7 @@ export class NetappBackupVault extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup_vault google_netapp_backup_vault} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup_vault google_netapp_backup_vault} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -259,7 +271,7 @@ export class NetappBackupVault extends cdktf.TerraformResource {
       terraformResourceType: 'google_netapp_backup_vault',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -270,6 +282,8 @@ export class NetappBackupVault extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._backupRegion = config.backupRegion;
+    this._backupVaultType = config.backupVaultType;
     this._description = config.description;
     this._id = config.id;
     this._labels = config.labels;
@@ -282,6 +296,38 @@ export class NetappBackupVault extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // backup_region - computed: false, optional: true, required: false
+  private _backupRegion?: string; 
+  public get backupRegion() {
+    return this.getStringAttribute('backup_region');
+  }
+  public set backupRegion(value: string) {
+    this._backupRegion = value;
+  }
+  public resetBackupRegion() {
+    this._backupRegion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupRegionInput() {
+    return this._backupRegion;
+  }
+
+  // backup_vault_type - computed: true, optional: true, required: false
+  private _backupVaultType?: string; 
+  public get backupVaultType() {
+    return this.getStringAttribute('backup_vault_type');
+  }
+  public set backupVaultType(value: string) {
+    this._backupVaultType = value;
+  }
+  public resetBackupVaultType() {
+    this._backupVaultType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupVaultTypeInput() {
+    return this._backupVaultType;
+  }
 
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
@@ -302,6 +348,11 @@ export class NetappBackupVault extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // destination_backup_vault - computed: true, optional: false, required: false
+  public get destinationBackupVault() {
+    return this.getStringAttribute('destination_backup_vault');
   }
 
   // effective_labels - computed: true, optional: false, required: false
@@ -384,6 +435,16 @@ export class NetappBackupVault extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // source_backup_vault - computed: true, optional: false, required: false
+  public get sourceBackupVault() {
+    return this.getStringAttribute('source_backup_vault');
+  }
+
+  // source_region - computed: true, optional: false, required: false
+  public get sourceRegion() {
+    return this.getStringAttribute('source_region');
+  }
+
   // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
@@ -417,6 +478,8 @@ export class NetappBackupVault extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      backup_region: cdktf.stringToTerraform(this._backupRegion),
+      backup_vault_type: cdktf.stringToTerraform(this._backupVaultType),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
@@ -429,6 +492,18 @@ export class NetappBackupVault extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      backup_region: {
+        value: cdktf.stringToHclTerraform(this._backupRegion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      backup_vault_type: {
+        value: cdktf.stringToHclTerraform(this._backupVaultType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       description: {
         value: cdktf.stringToHclTerraform(this._description),
         isBlock: false,

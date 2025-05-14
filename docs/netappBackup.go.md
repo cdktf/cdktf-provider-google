@@ -4,7 +4,7 @@
 
 ### NetappBackup <a name="NetappBackup" id="@cdktf/provider-google.netappBackup.NetappBackup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup google_netapp_backup}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup google_netapp_backup}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.netappBackup.NetappBackup.Initializer"></a>
 
@@ -529,7 +529,7 @@ The construct id used in the generated config for the NetappBackup to import.
 
 The id of the existing NetappBackup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -559,6 +559,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.backupRegion">BackupRegion</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.backupType">BackupType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.chainStorageBytes">ChainStorageBytes</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.createTime">CreateTime</a></code> | <code>*string</code> | *No description.* |
@@ -566,6 +567,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.state">State</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.terraformLabels">TerraformLabels</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeoutsOutputReference">NetappBackupTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.volumeRegion">VolumeRegion</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.volumeUsageBytes">VolumeUsageBytes</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.descriptionInput">DescriptionInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackup.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
@@ -731,6 +733,16 @@ func Provisioners() *[]interface{}
 
 ---
 
+##### `BackupRegion`<sup>Required</sup> <a name="BackupRegion" id="@cdktf/provider-google.netappBackup.NetappBackup.property.backupRegion"></a>
+
+```go
+func BackupRegion() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `BackupType`<sup>Required</sup> <a name="BackupType" id="@cdktf/provider-google.netappBackup.NetappBackup.property.backupType"></a>
 
 ```go
@@ -798,6 +810,16 @@ func Timeouts() NetappBackupTimeoutsOutputReference
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeoutsOutputReference">NetappBackupTimeoutsOutputReference</a>
+
+---
+
+##### `VolumeRegion`<sup>Required</sup> <a name="VolumeRegion" id="@cdktf/provider-google.netappBackup.NetappBackup.property.volumeRegion"></a>
+
+```go
+func VolumeRegion() *string
+```
+
+- *Type:* *string
 
 ---
 
@@ -1064,9 +1086,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/netappbackup"
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.name">Name</a></code> | <code>*string</code> | The resource name of the backup. Needs to be unique per location. |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.vaultName">VaultName</a></code> | <code>*string</code> | Name of the backup vault to store the backup in. |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.description">Description</a></code> | <code>*string</code> | A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected. |
-| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#id NetappBackup#id}. |
+| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#id NetappBackup#id}. |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", "purpose": "testing" }'. |
-| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#project NetappBackup#project}. |
+| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#project NetappBackup#project}. |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.sourceSnapshot">SourceSnapshot</a></code> | <code>*string</code> | If specified, backup will be created from the given snapshot. |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.sourceVolume">SourceVolume</a></code> | <code>*string</code> | ID of volumes this backup belongs to. Format: 'projects/{{projects_id}}/locations/{{location}}/volumes/{{name}}''. |
 | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeouts">NetappBackupTimeouts</a></code> | timeouts block. |
@@ -1153,7 +1175,7 @@ Location *string
 
 Location of the backup.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#location NetappBackup#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#location NetappBackup#location}
 
 ---
 
@@ -1167,7 +1189,7 @@ Name *string
 
 The resource name of the backup. Needs to be unique per location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#name NetappBackup#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#name NetappBackup#name}
 
 ---
 
@@ -1181,7 +1203,7 @@ VaultName *string
 
 Name of the backup vault to store the backup in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#vault_name NetappBackup#vault_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#vault_name NetappBackup#vault_name}
 
 ---
 
@@ -1195,7 +1217,7 @@ Description *string
 
 A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#description NetappBackup#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#description NetappBackup#description}
 
 ---
 
@@ -1207,7 +1229,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#id NetappBackup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#id NetappBackup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1227,7 +1249,7 @@ Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#labels NetappBackup#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#labels NetappBackup#labels}
 
 ---
 
@@ -1239,7 +1261,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#project NetappBackup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#project NetappBackup#project}.
 
 ---
 
@@ -1257,7 +1279,7 @@ If not specified,
 there will be a new snapshot taken to initiate the backup creation.
 Format: 'projects/{{projectId}}/locations/{{location}}/volumes/{{volumename}}/snapshots/{{snapshotname}}''
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#source_snapshot NetappBackup#source_snapshot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#source_snapshot NetappBackup#source_snapshot}
 
 ---
 
@@ -1271,7 +1293,7 @@ SourceVolume *string
 
 ID of volumes this backup belongs to. Format: 'projects/{{projects_id}}/locations/{{location}}/volumes/{{name}}''.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#source_volume NetappBackup#source_volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#source_volume NetappBackup#source_volume}
 
 ---
 
@@ -1285,7 +1307,7 @@ Timeouts NetappBackupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#timeouts NetappBackup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#timeouts NetappBackup#timeouts}
 
 ---
 
@@ -1307,9 +1329,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/netappbackup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#create NetappBackup#create}. |
-| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#delete NetappBackup#delete}. |
-| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#update NetappBackup#update}. |
+| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#create NetappBackup#create}. |
+| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#delete NetappBackup#delete}. |
+| <code><a href="#@cdktf/provider-google.netappBackup.NetappBackupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#update NetappBackup#update}. |
 
 ---
 
@@ -1321,7 +1343,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#create NetappBackup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#create NetappBackup#create}.
 
 ---
 
@@ -1333,7 +1355,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#delete NetappBackup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#delete NetappBackup#delete}.
 
 ---
 
@@ -1345,7 +1367,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/netapp_backup#update NetappBackup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_backup#update NetappBackup#update}.
 
 ---
 

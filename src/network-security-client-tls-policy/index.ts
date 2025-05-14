@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface NetworkSecurityClientTlsPolicyConfig extends cdktf.TerraformMet
   /**
   * A free-text description of the resource. Max length 1024 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#description NetworkSecurityClientTlsPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#description NetworkSecurityClientTlsPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#id NetworkSecurityClientTlsPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#id NetworkSecurityClientTlsPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,48 +31,48 @@ export interface NetworkSecurityClientTlsPolicyConfig extends cdktf.TerraformMet
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#labels NetworkSecurityClientTlsPolicy#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#labels NetworkSecurityClientTlsPolicy#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the client tls policy.
   * The default value is 'global'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#location NetworkSecurityClientTlsPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#location NetworkSecurityClientTlsPolicy#location}
   */
   readonly location?: string;
   /**
   * Name of the ClientTlsPolicy resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#name NetworkSecurityClientTlsPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#name NetworkSecurityClientTlsPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#project NetworkSecurityClientTlsPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#project NetworkSecurityClientTlsPolicy#project}
   */
   readonly project?: string;
   /**
   * Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#sni NetworkSecurityClientTlsPolicy#sni}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#sni NetworkSecurityClientTlsPolicy#sni}
   */
   readonly sni?: string;
   /**
   * client_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#client_certificate NetworkSecurityClientTlsPolicy#client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#client_certificate NetworkSecurityClientTlsPolicy#client_certificate}
   */
   readonly clientCertificate?: NetworkSecurityClientTlsPolicyClientCertificate;
   /**
   * server_validation_ca block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#server_validation_ca NetworkSecurityClientTlsPolicy#server_validation_ca}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#server_validation_ca NetworkSecurityClientTlsPolicy#server_validation_ca}
   */
   readonly serverValidationCa?: NetworkSecurityClientTlsPolicyServerValidationCa[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#timeouts NetworkSecurityClientTlsPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#timeouts NetworkSecurityClientTlsPolicy#timeouts}
   */
   readonly timeouts?: NetworkSecurityClientTlsPolicyTimeouts;
 }
@@ -80,7 +80,7 @@ export interface NetworkSecurityClientTlsPolicyClientCertificateCertificateProvi
   /**
   * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#plugin_instance NetworkSecurityClientTlsPolicy#plugin_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#plugin_instance NetworkSecurityClientTlsPolicy#plugin_instance}
   */
   readonly pluginInstance: string;
 }
@@ -163,7 +163,7 @@ export interface NetworkSecurityClientTlsPolicyClientCertificateGrpcEndpoint {
   /**
   * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with "unix:".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#target_uri NetworkSecurityClientTlsPolicy#target_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#target_uri NetworkSecurityClientTlsPolicy#target_uri}
   */
   readonly targetUri: string;
 }
@@ -246,13 +246,13 @@ export interface NetworkSecurityClientTlsPolicyClientCertificate {
   /**
   * certificate_provider_instance block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#certificate_provider_instance NetworkSecurityClientTlsPolicy#certificate_provider_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#certificate_provider_instance NetworkSecurityClientTlsPolicy#certificate_provider_instance}
   */
   readonly certificateProviderInstance?: NetworkSecurityClientTlsPolicyClientCertificateCertificateProviderInstance;
   /**
   * grpc_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#grpc_endpoint NetworkSecurityClientTlsPolicy#grpc_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#grpc_endpoint NetworkSecurityClientTlsPolicy#grpc_endpoint}
   */
   readonly grpcEndpoint?: NetworkSecurityClientTlsPolicyClientCertificateGrpcEndpoint;
 }
@@ -367,7 +367,7 @@ export interface NetworkSecurityClientTlsPolicyServerValidationCaCertificateProv
   /**
   * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#plugin_instance NetworkSecurityClientTlsPolicy#plugin_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#plugin_instance NetworkSecurityClientTlsPolicy#plugin_instance}
   */
   readonly pluginInstance: string;
 }
@@ -450,7 +450,7 @@ export interface NetworkSecurityClientTlsPolicyServerValidationCaGrpcEndpoint {
   /**
   * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with "unix:".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#target_uri NetworkSecurityClientTlsPolicy#target_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#target_uri NetworkSecurityClientTlsPolicy#target_uri}
   */
   readonly targetUri: string;
 }
@@ -533,13 +533,13 @@ export interface NetworkSecurityClientTlsPolicyServerValidationCa {
   /**
   * certificate_provider_instance block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#certificate_provider_instance NetworkSecurityClientTlsPolicy#certificate_provider_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#certificate_provider_instance NetworkSecurityClientTlsPolicy#certificate_provider_instance}
   */
   readonly certificateProviderInstance?: NetworkSecurityClientTlsPolicyServerValidationCaCertificateProviderInstance;
   /**
   * grpc_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#grpc_endpoint NetworkSecurityClientTlsPolicy#grpc_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#grpc_endpoint NetworkSecurityClientTlsPolicy#grpc_endpoint}
   */
   readonly grpcEndpoint?: NetworkSecurityClientTlsPolicyServerValidationCaGrpcEndpoint;
 }
@@ -684,15 +684,15 @@ export class NetworkSecurityClientTlsPolicyServerValidationCaList extends cdktf.
 }
 export interface NetworkSecurityClientTlsPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#create NetworkSecurityClientTlsPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#create NetworkSecurityClientTlsPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#delete NetworkSecurityClientTlsPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#delete NetworkSecurityClientTlsPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#update NetworkSecurityClientTlsPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#update NetworkSecurityClientTlsPolicy#update}
   */
   readonly update?: string;
 }
@@ -844,7 +844,7 @@ export class NetworkSecurityClientTlsPolicyTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy google_network_security_client_tls_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy google_network_security_client_tls_policy}
 */
 export class NetworkSecurityClientTlsPolicy extends cdktf.TerraformResource {
 
@@ -860,7 +860,7 @@ export class NetworkSecurityClientTlsPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkSecurityClientTlsPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkSecurityClientTlsPolicy to import
-  * @param importFromId The id of the existing NetworkSecurityClientTlsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkSecurityClientTlsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkSecurityClientTlsPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -872,7 +872,7 @@ export class NetworkSecurityClientTlsPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/network_security_client_tls_policy google_network_security_client_tls_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_security_client_tls_policy google_network_security_client_tls_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -883,7 +883,7 @@ export class NetworkSecurityClientTlsPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_security_client_tls_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -4,7 +4,7 @@
 
 ### PubsubSchemaIamPolicy <a name="PubsubSchemaIamPolicy" id="@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy google_pubsub_schema_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy google_pubsub_schema_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer"></a>
 
@@ -39,10 +39,10 @@ pubsubSchemaIamPolicy.PubsubSchemaIamPolicy(
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#policy_data PubsubSchemaIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.schema">schema</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#schema PubsubSchemaIamPolicy#schema}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#id PubsubSchemaIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#project PubsubSchemaIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#policy_data PubsubSchemaIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.schema">schema</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#schema PubsubSchemaIamPolicy#schema}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#id PubsubSchemaIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#project PubsubSchemaIamPolicy#project}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#policy_data PubsubSchemaIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#policy_data PubsubSchemaIamPolicy#policy_data}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#schema PubsubSchemaIamPolicy#schema}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#schema PubsubSchemaIamPolicy#schema}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#id PubsubSchemaIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#id PubsubSchemaIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -137,7 +137,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#project PubsubSchemaIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#project PubsubSchemaIamPolicy#project}.
 
 ---
 
@@ -624,7 +624,7 @@ The construct id used in the generated config for the PubsubSchemaIamPolicy to i
 
 The id of the existing PubsubSchemaIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -951,10 +951,10 @@ pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#policy_data PubsubSchemaIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.schema">schema</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#schema PubsubSchemaIamPolicy#schema}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#id PubsubSchemaIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#project PubsubSchemaIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#policy_data PubsubSchemaIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.schema">schema</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#schema PubsubSchemaIamPolicy#schema}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#id PubsubSchemaIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamPolicy.PubsubSchemaIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#project PubsubSchemaIamPolicy#project}. |
 
 ---
 
@@ -1036,7 +1036,7 @@ policy_data: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#policy_data PubsubSchemaIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#policy_data PubsubSchemaIamPolicy#policy_data}.
 
 ---
 
@@ -1048,7 +1048,7 @@ schema: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#schema PubsubSchemaIamPolicy#schema}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#schema PubsubSchemaIamPolicy#schema}.
 
 ---
 
@@ -1060,7 +1060,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#id PubsubSchemaIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#id PubsubSchemaIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1075,7 +1075,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/pubsub_schema_iam_policy#project PubsubSchemaIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/pubsub_schema_iam_policy#project PubsubSchemaIamPolicy#project}.
 
 ---
 

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface GeminiReleaseChannelSettingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#id GeminiReleaseChannelSetting#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#id GeminiReleaseChannelSetting#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -25,17 +25,17 @@ export interface GeminiReleaseChannelSettingConfig extends cdktf.TerraformMetaAr
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#labels GeminiReleaseChannelSetting#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#labels GeminiReleaseChannelSetting#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#location GeminiReleaseChannelSetting#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#location GeminiReleaseChannelSetting#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#project GeminiReleaseChannelSetting#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#project GeminiReleaseChannelSetting#project}
   */
   readonly project?: string;
   /**
@@ -44,33 +44,33 @@ export interface GeminiReleaseChannelSettingConfig extends cdktf.TerraformMetaAr
   * STABLE
   * EXPERIMENTAL
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#release_channel GeminiReleaseChannelSetting#release_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#release_channel GeminiReleaseChannelSetting#release_channel}
   */
   readonly releaseChannel?: string;
   /**
   * Id of the Release Channel Setting.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#release_channel_setting_id GeminiReleaseChannelSetting#release_channel_setting_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#release_channel_setting_id GeminiReleaseChannelSetting#release_channel_setting_id}
   */
   readonly releaseChannelSettingId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#timeouts GeminiReleaseChannelSetting#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#timeouts GeminiReleaseChannelSetting#timeouts}
   */
   readonly timeouts?: GeminiReleaseChannelSettingTimeouts;
 }
 export interface GeminiReleaseChannelSettingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#create GeminiReleaseChannelSetting#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#create GeminiReleaseChannelSetting#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#delete GeminiReleaseChannelSetting#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#delete GeminiReleaseChannelSetting#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#update GeminiReleaseChannelSetting#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#update GeminiReleaseChannelSetting#update}
   */
   readonly update?: string;
 }
@@ -222,7 +222,7 @@ export class GeminiReleaseChannelSettingTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting google_gemini_release_channel_setting}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting google_gemini_release_channel_setting}
 */
 export class GeminiReleaseChannelSetting extends cdktf.TerraformResource {
 
@@ -238,7 +238,7 @@ export class GeminiReleaseChannelSetting extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a GeminiReleaseChannelSetting resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the GeminiReleaseChannelSetting to import
-  * @param importFromId The id of the existing GeminiReleaseChannelSetting that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing GeminiReleaseChannelSetting that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the GeminiReleaseChannelSetting to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -250,7 +250,7 @@ export class GeminiReleaseChannelSetting extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/gemini_release_channel_setting google_gemini_release_channel_setting} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/gemini_release_channel_setting google_gemini_release_channel_setting} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -261,7 +261,7 @@ export class GeminiReleaseChannelSetting extends cdktf.TerraformResource {
       terraformResourceType: 'google_gemini_release_channel_setting',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

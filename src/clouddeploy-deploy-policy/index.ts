@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,17 +18,17 @@ export interface ClouddeployDeployPolicyConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#annotations ClouddeployDeployPolicy#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#annotations ClouddeployDeployPolicy#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Optional. Description of the 'DeployPolicy'. Max length is 255 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#description ClouddeployDeployPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#description ClouddeployDeployPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#id ClouddeployDeployPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#id ClouddeployDeployPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,47 +40,47 @@ export interface ClouddeployDeployPolicyConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#labels ClouddeployDeployPolicy#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#labels ClouddeployDeployPolicy#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#location ClouddeployDeployPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#location ClouddeployDeployPolicy#location}
   */
   readonly location: string;
   /**
   * Name of the 'DeployPolicy'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#name ClouddeployDeployPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#name ClouddeployDeployPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#project ClouddeployDeployPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#project ClouddeployDeployPolicy#project}
   */
   readonly project?: string;
   /**
   * Optional. When suspended, the policy will not prevent actions from occurring, even if the action violates the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#suspended ClouddeployDeployPolicy#suspended}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#suspended ClouddeployDeployPolicy#suspended}
   */
   readonly suspended?: boolean | cdktf.IResolvable;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#rules ClouddeployDeployPolicy#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#rules ClouddeployDeployPolicy#rules}
   */
   readonly rules: ClouddeployDeployPolicyRules[] | cdktf.IResolvable;
   /**
   * selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#selectors ClouddeployDeployPolicy#selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#selectors ClouddeployDeployPolicy#selectors}
   */
   readonly selectors: ClouddeployDeployPolicySelectors[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#timeouts ClouddeployDeployPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#timeouts ClouddeployDeployPolicy#timeouts}
   */
   readonly timeouts?: ClouddeployDeployPolicyTimeouts;
 }
@@ -88,19 +88,19 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTim
   /**
   * Day of a month. Must be from 1 to 31 and valid for the year and month.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#day ClouddeployDeployPolicy#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#day ClouddeployDeployPolicy#day}
   */
   readonly day?: number;
   /**
   * Month of a year. Must be from 1 to 12.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#month ClouddeployDeployPolicy#month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#month ClouddeployDeployPolicy#month}
   */
   readonly month?: number;
   /**
   * Year of the date. Must be from 1 to 9999.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#year ClouddeployDeployPolicy#year}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#year ClouddeployDeployPolicy#year}
   */
   readonly year?: number;
 }
@@ -244,25 +244,25 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTim
   /**
   * Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#hours ClouddeployDeployPolicy#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#hours ClouddeployDeployPolicy#hours}
   */
   readonly hours?: number;
   /**
   * Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#minutes ClouddeployDeployPolicy#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#minutes ClouddeployDeployPolicy#minutes}
   */
   readonly minutes?: number;
   /**
   * Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal to 999,999,999.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#nanos ClouddeployDeployPolicy#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#nanos ClouddeployDeployPolicy#nanos}
   */
   readonly nanos?: number;
   /**
   * Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or equal to 59. An API may allow the value 60 if it allows leap-seconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#seconds ClouddeployDeployPolicy#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#seconds ClouddeployDeployPolicy#seconds}
   */
   readonly seconds?: number;
 }
@@ -435,19 +435,19 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTim
   /**
   * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#day ClouddeployDeployPolicy#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#day ClouddeployDeployPolicy#day}
   */
   readonly day?: number;
   /**
   * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#month ClouddeployDeployPolicy#month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#month ClouddeployDeployPolicy#month}
   */
   readonly month?: number;
   /**
   * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#year ClouddeployDeployPolicy#year}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#year ClouddeployDeployPolicy#year}
   */
   readonly year?: number;
 }
@@ -591,25 +591,25 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTim
   /**
   * Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#hours ClouddeployDeployPolicy#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#hours ClouddeployDeployPolicy#hours}
   */
   readonly hours?: number;
   /**
   * Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#minutes ClouddeployDeployPolicy#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#minutes ClouddeployDeployPolicy#minutes}
   */
   readonly minutes?: number;
   /**
   * Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal to 999,999,999.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#nanos ClouddeployDeployPolicy#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#nanos ClouddeployDeployPolicy#nanos}
   */
   readonly nanos?: number;
   /**
   * Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or equal to 59. An API may allow the value 60 if it allows leap-seconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#seconds ClouddeployDeployPolicy#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#seconds ClouddeployDeployPolicy#seconds}
   */
   readonly seconds?: number;
 }
@@ -782,25 +782,25 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTim
   /**
   * end_date block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#end_date ClouddeployDeployPolicy#end_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#end_date ClouddeployDeployPolicy#end_date}
   */
   readonly endDate: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTimeWindowsEndDate;
   /**
   * end_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#end_time ClouddeployDeployPolicy#end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#end_time ClouddeployDeployPolicy#end_time}
   */
   readonly endTime: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTimeWindowsEndTime;
   /**
   * start_date block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#start_date ClouddeployDeployPolicy#start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#start_date ClouddeployDeployPolicy#start_date}
   */
   readonly startDate: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTimeWindowsStartDate;
   /**
   * start_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#start_time ClouddeployDeployPolicy#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#start_time ClouddeployDeployPolicy#start_time}
   */
   readonly startTime: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTimeWindowsStartTime;
 }
@@ -993,25 +993,25 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsWeekly
   /**
   * Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#hours ClouddeployDeployPolicy#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#hours ClouddeployDeployPolicy#hours}
   */
   readonly hours?: number;
   /**
   * Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#minutes ClouddeployDeployPolicy#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#minutes ClouddeployDeployPolicy#minutes}
   */
   readonly minutes?: number;
   /**
   * Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal to 999,999,999.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#nanos ClouddeployDeployPolicy#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#nanos ClouddeployDeployPolicy#nanos}
   */
   readonly nanos?: number;
   /**
   * Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or equal to 59. An API may allow the value 60 if it allows leap-seconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#seconds ClouddeployDeployPolicy#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#seconds ClouddeployDeployPolicy#seconds}
   */
   readonly seconds?: number;
 }
@@ -1184,25 +1184,25 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsWeekly
   /**
   * Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#hours ClouddeployDeployPolicy#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#hours ClouddeployDeployPolicy#hours}
   */
   readonly hours?: number;
   /**
   * Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#minutes ClouddeployDeployPolicy#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#minutes ClouddeployDeployPolicy#minutes}
   */
   readonly minutes?: number;
   /**
   * Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal to 999,999,999.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#nanos ClouddeployDeployPolicy#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#nanos ClouddeployDeployPolicy#nanos}
   */
   readonly nanos?: number;
   /**
   * Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or equal to 59. An API may allow the value 60 if it allows leap-seconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#seconds ClouddeployDeployPolicy#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#seconds ClouddeployDeployPolicy#seconds}
   */
   readonly seconds?: number;
 }
@@ -1375,19 +1375,19 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsWeekly
   /**
   * Optional. Days of week. If left empty, all days of the week will be included. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#days_of_week ClouddeployDeployPolicy#days_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#days_of_week ClouddeployDeployPolicy#days_of_week}
   */
   readonly daysOfWeek?: string[];
   /**
   * end_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#end_time ClouddeployDeployPolicy#end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#end_time ClouddeployDeployPolicy#end_time}
   */
   readonly endTime?: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsWeeklyWindowsEndTime;
   /**
   * start_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#start_time ClouddeployDeployPolicy#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#start_time ClouddeployDeployPolicy#start_time}
   */
   readonly startTime?: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsWeeklyWindowsStartTime;
 }
@@ -1563,19 +1563,19 @@ export interface ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindows {
   /**
   * Required. The time zone in IANA format IANA Time Zone Database (e.g. America/New_York).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#time_zone ClouddeployDeployPolicy#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#time_zone ClouddeployDeployPolicy#time_zone}
   */
   readonly timeZone: string;
   /**
   * one_time_windows block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#one_time_windows ClouddeployDeployPolicy#one_time_windows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#one_time_windows ClouddeployDeployPolicy#one_time_windows}
   */
   readonly oneTimeWindows?: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsOneTimeWindows[] | cdktf.IResolvable;
   /**
   * weekly_windows block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#weekly_windows ClouddeployDeployPolicy#weekly_windows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#weekly_windows ClouddeployDeployPolicy#weekly_windows}
   */
   readonly weeklyWindows?: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindowsWeeklyWindows[] | cdktf.IResolvable;
 }
@@ -1716,13 +1716,13 @@ export interface ClouddeployDeployPolicyRulesRolloutRestriction {
   /**
   * Optional. Rollout actions to be restricted as part of the policy. If left empty, all actions will be restricted. Possible values: ["ADVANCE", "APPROVE", "CANCEL", "CREATE", "IGNORE_JOB", "RETRY_JOB", "ROLLBACK", "TERMINATE_JOBRUN"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#actions ClouddeployDeployPolicy#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#actions ClouddeployDeployPolicy#actions}
   */
   readonly actions?: string[];
   /**
   * Required. ID of the rule. This id must be unique in the 'DeployPolicy' resource to which this rule belongs. The format is 'a-z{0,62}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#id ClouddeployDeployPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#id ClouddeployDeployPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1731,13 +1731,13 @@ export interface ClouddeployDeployPolicyRulesRolloutRestriction {
   /**
   * Optional. What invoked the action. If left empty, all invoker types will be restricted. Possible values: ["USER", "DEPLOY_AUTOMATION"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#invokers ClouddeployDeployPolicy#invokers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#invokers ClouddeployDeployPolicy#invokers}
   */
   readonly invokers?: string[];
   /**
   * time_windows block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#time_windows ClouddeployDeployPolicy#time_windows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#time_windows ClouddeployDeployPolicy#time_windows}
   */
   readonly timeWindows?: ClouddeployDeployPolicyRulesRolloutRestrictionTimeWindows;
 }
@@ -1907,7 +1907,7 @@ export interface ClouddeployDeployPolicyRules {
   /**
   * rollout_restriction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#rollout_restriction ClouddeployDeployPolicy#rollout_restriction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#rollout_restriction ClouddeployDeployPolicy#rollout_restriction}
   */
   readonly rolloutRestriction?: ClouddeployDeployPolicyRulesRolloutRestriction;
 }
@@ -2027,7 +2027,7 @@ export interface ClouddeployDeployPolicySelectorsDeliveryPipeline {
   * - The last segment of a pipeline name
   * - "*", all delivery pipelines in a location
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#id ClouddeployDeployPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#id ClouddeployDeployPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2036,7 +2036,7 @@ export interface ClouddeployDeployPolicySelectorsDeliveryPipeline {
   /**
   * DeliveryPipeline labels.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#labels ClouddeployDeployPolicy#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#labels ClouddeployDeployPolicy#labels}
   */
   readonly labels?: { [key: string]: string };
 }
@@ -2151,7 +2151,7 @@ export interface ClouddeployDeployPolicySelectorsTarget {
   /**
   * ID of the 'Target'. The value of this field could be one of the following: * The last segment of a target name. It only needs the ID to determine which target is being referred to * "*", all targets in a location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#id ClouddeployDeployPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#id ClouddeployDeployPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2160,7 +2160,7 @@ export interface ClouddeployDeployPolicySelectorsTarget {
   /**
   * Target labels.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#labels ClouddeployDeployPolicy#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#labels ClouddeployDeployPolicy#labels}
   */
   readonly labels?: { [key: string]: string };
 }
@@ -2275,13 +2275,13 @@ export interface ClouddeployDeployPolicySelectors {
   /**
   * delivery_pipeline block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#delivery_pipeline ClouddeployDeployPolicy#delivery_pipeline}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#delivery_pipeline ClouddeployDeployPolicy#delivery_pipeline}
   */
   readonly deliveryPipeline?: ClouddeployDeployPolicySelectorsDeliveryPipeline;
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#target ClouddeployDeployPolicy#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#target ClouddeployDeployPolicy#target}
   */
   readonly target?: ClouddeployDeployPolicySelectorsTarget;
 }
@@ -2426,15 +2426,15 @@ export class ClouddeployDeployPolicySelectorsList extends cdktf.ComplexList {
 }
 export interface ClouddeployDeployPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#create ClouddeployDeployPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#create ClouddeployDeployPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#delete ClouddeployDeployPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#delete ClouddeployDeployPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#update ClouddeployDeployPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#update ClouddeployDeployPolicy#update}
   */
   readonly update?: string;
 }
@@ -2586,7 +2586,7 @@ export class ClouddeployDeployPolicyTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy google_clouddeploy_deploy_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy google_clouddeploy_deploy_policy}
 */
 export class ClouddeployDeployPolicy extends cdktf.TerraformResource {
 
@@ -2602,7 +2602,7 @@ export class ClouddeployDeployPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ClouddeployDeployPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ClouddeployDeployPolicy to import
-  * @param importFromId The id of the existing ClouddeployDeployPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ClouddeployDeployPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ClouddeployDeployPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2614,7 +2614,7 @@ export class ClouddeployDeployPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/clouddeploy_deploy_policy google_clouddeploy_deploy_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/clouddeploy_deploy_policy google_clouddeploy_deploy_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2625,7 +2625,7 @@ export class ClouddeployDeployPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_clouddeploy_deploy_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

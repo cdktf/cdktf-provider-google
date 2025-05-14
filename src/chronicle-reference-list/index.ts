@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list
+// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ChronicleReferenceListConfig extends cdktf.TerraformMetaArgumen
   /**
   * Required. A user-provided description of the reference list.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#description ChronicleReferenceList#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#description ChronicleReferenceList#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#id ChronicleReferenceList#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#id ChronicleReferenceList#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,17 +28,17 @@ export interface ChronicleReferenceListConfig extends cdktf.TerraformMetaArgumen
   /**
   * The unique identifier for the Chronicle instance, which is the same as the customer ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#instance ChronicleReferenceList#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#instance ChronicleReferenceList#instance}
   */
   readonly instance: string;
   /**
   * The location of the resource. This is the geographical region where the Chronicle instance resides, such as "us" or "europe-west2".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#location ChronicleReferenceList#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#location ChronicleReferenceList#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#project ChronicleReferenceList#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#project ChronicleReferenceList#project}
   */
   readonly project?: string;
   /**
@@ -49,7 +49,7 @@ export interface ChronicleReferenceListConfig extends cdktf.TerraformMetaArgumen
   * - Has length < 256.
   * - Must be unique.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#reference_list_id ChronicleReferenceList#reference_list_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#reference_list_id ChronicleReferenceList#reference_list_id}
   */
   readonly referenceListId: string;
   /**
@@ -58,19 +58,19 @@ export interface ChronicleReferenceListConfig extends cdktf.TerraformMetaArgumen
   * REFERENCE_LIST_SYNTAX_TYPE_REGEX
   * REFERENCE_LIST_SYNTAX_TYPE_CIDR
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#syntax_type ChronicleReferenceList#syntax_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#syntax_type ChronicleReferenceList#syntax_type}
   */
   readonly syntaxType: string;
   /**
   * entries block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#entries ChronicleReferenceList#entries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#entries ChronicleReferenceList#entries}
   */
   readonly entries: ChronicleReferenceListEntries[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#timeouts ChronicleReferenceList#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#timeouts ChronicleReferenceList#timeouts}
   */
   readonly timeouts?: ChronicleReferenceListTimeouts;
 }
@@ -229,7 +229,7 @@ export interface ChronicleReferenceListEntries {
   /**
   * Required. The value of the entry. Maximum length is 512 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#value ChronicleReferenceList#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#value ChronicleReferenceList#value}
   */
   readonly value: string;
 }
@@ -342,15 +342,15 @@ export class ChronicleReferenceListEntriesList extends cdktf.ComplexList {
 }
 export interface ChronicleReferenceListTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#create ChronicleReferenceList#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#create ChronicleReferenceList#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#delete ChronicleReferenceList#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#delete ChronicleReferenceList#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#update ChronicleReferenceList#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#update ChronicleReferenceList#update}
   */
   readonly update?: string;
 }
@@ -502,7 +502,7 @@ export class ChronicleReferenceListTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list google_chronicle_reference_list}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list google_chronicle_reference_list}
 */
 export class ChronicleReferenceList extends cdktf.TerraformResource {
 
@@ -518,7 +518,7 @@ export class ChronicleReferenceList extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ChronicleReferenceList resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ChronicleReferenceList to import
-  * @param importFromId The id of the existing ChronicleReferenceList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ChronicleReferenceList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ChronicleReferenceList to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -530,7 +530,7 @@ export class ChronicleReferenceList extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/chronicle_reference_list google_chronicle_reference_list} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/chronicle_reference_list google_chronicle_reference_list} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -541,7 +541,7 @@ export class ChronicleReferenceList extends cdktf.TerraformResource {
       terraformResourceType: 'google_chronicle_reference_list',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.34.1',
+        providerVersion: '6.35.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

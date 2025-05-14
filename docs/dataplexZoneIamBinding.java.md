@@ -4,7 +4,7 @@
 
 ### DataplexZoneIamBinding <a name="DataplexZoneIamBinding" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding google_dataplex_zone_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding google_dataplex_zone_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer"></a>
 
@@ -45,14 +45,14 @@ DataplexZoneIamBinding.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.dataplexZone">dataplexZone</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.lake">lake</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.dataplexZone">dataplexZone</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.lake">lake</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition">DataplexZoneIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}. |
 
 ---
 
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}.
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#condition DataplexZoneIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#condition DataplexZoneIamBinding#condition}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -173,7 +173,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}.
 
 ---
 
@@ -181,7 +181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}.
 
 ---
 
@@ -649,7 +649,7 @@ The construct id used in the generated config for the DataplexZoneIamBinding to 
 
 The id of the existing DataplexZoneIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1049,9 +1049,9 @@ DataplexZoneIamBindingCondition.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#expression DataplexZoneIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#title DataplexZoneIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#description DataplexZoneIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#expression DataplexZoneIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#title DataplexZoneIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#description DataplexZoneIamBinding#description}. |
 
 ---
 
@@ -1063,7 +1063,7 @@ public java.lang.String getExpression();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#expression DataplexZoneIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#expression DataplexZoneIamBinding#expression}.
 
 ---
 
@@ -1075,7 +1075,7 @@ public java.lang.String getTitle();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#title DataplexZoneIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#title DataplexZoneIamBinding#title}.
 
 ---
 
@@ -1087,7 +1087,7 @@ public java.lang.String getDescription();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#description DataplexZoneIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#description DataplexZoneIamBinding#description}.
 
 ---
 
@@ -1132,14 +1132,14 @@ DataplexZoneIamBindingConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.dataplexZone">dataplexZone</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.lake">lake</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.dataplexZone">dataplexZone</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.lake">lake</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition">DataplexZoneIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}. |
 
 ---
 
@@ -1221,7 +1221,7 @@ public java.lang.String getDataplexZone();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}.
 
 ---
 
@@ -1233,7 +1233,7 @@ public java.lang.String getLake();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}.
 
 ---
 
@@ -1245,7 +1245,7 @@ public java.util.List<java.lang.String> getMembers();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}.
 
 ---
 
@@ -1257,7 +1257,7 @@ public java.lang.String getRole();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}.
 
 ---
 
@@ -1271,7 +1271,7 @@ public DataplexZoneIamBindingCondition getCondition();
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#condition DataplexZoneIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#condition DataplexZoneIamBinding#condition}
 
 ---
 
@@ -1283,7 +1283,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1298,7 +1298,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}.
 
 ---
 
@@ -1310,7 +1310,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.34.1/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}.
 
 ---
 
