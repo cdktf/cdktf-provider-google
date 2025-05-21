@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls
+// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +11,11 @@ export interface ServiceNetworkingVpcServiceControlsConfig extends cdktf.Terrafo
   * Desired VPC Service Controls state service producer VPC network, as
   * described at the top of this page.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#enabled ServiceNetworkingVpcServiceControls#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#enabled ServiceNetworkingVpcServiceControls#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#id ServiceNetworkingVpcServiceControls#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#id ServiceNetworkingVpcServiceControls#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,13 +24,13 @@ export interface ServiceNetworkingVpcServiceControlsConfig extends cdktf.Terrafo
   /**
   * The network that the consumer is using to connect with services.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#network ServiceNetworkingVpcServiceControls#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#network ServiceNetworkingVpcServiceControls#network}
   */
   readonly network: string;
   /**
   * The id of the Google Cloud project containing the consumer network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#project ServiceNetworkingVpcServiceControls#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#project ServiceNetworkingVpcServiceControls#project}
   */
   readonly project?: string;
   /**
@@ -43,27 +38,27 @@ export interface ServiceNetworkingVpcServiceControlsConfig extends cdktf.Terrafo
   * producer's organization. For Google services that support this
   * functionality, this value is 'servicenetworking.googleapis.com'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#service ServiceNetworkingVpcServiceControls#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#service ServiceNetworkingVpcServiceControls#service}
   */
   readonly service: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#timeouts ServiceNetworkingVpcServiceControls#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#timeouts ServiceNetworkingVpcServiceControls#timeouts}
   */
   readonly timeouts?: ServiceNetworkingVpcServiceControlsTimeouts;
 }
 export interface ServiceNetworkingVpcServiceControlsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#create ServiceNetworkingVpcServiceControls#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#create ServiceNetworkingVpcServiceControls#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#delete ServiceNetworkingVpcServiceControls#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#delete ServiceNetworkingVpcServiceControls#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#update ServiceNetworkingVpcServiceControls#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#update ServiceNetworkingVpcServiceControls#update}
   */
   readonly update?: string;
 }
@@ -215,7 +210,7 @@ export class ServiceNetworkingVpcServiceControlsTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls google_service_networking_vpc_service_controls}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls google_service_networking_vpc_service_controls}
 */
 export class ServiceNetworkingVpcServiceControls extends cdktf.TerraformResource {
 
@@ -231,7 +226,7 @@ export class ServiceNetworkingVpcServiceControls extends cdktf.TerraformResource
   * Generates CDKTF code for importing a ServiceNetworkingVpcServiceControls resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ServiceNetworkingVpcServiceControls to import
-  * @param importFromId The id of the existing ServiceNetworkingVpcServiceControls that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ServiceNetworkingVpcServiceControls that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ServiceNetworkingVpcServiceControls to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -243,7 +238,7 @@ export class ServiceNetworkingVpcServiceControls extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/service_networking_vpc_service_controls google_service_networking_vpc_service_controls} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/service_networking_vpc_service_controls google_service_networking_vpc_service_controls} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -254,7 +249,7 @@ export class ServiceNetworkingVpcServiceControls extends cdktf.TerraformResource
       terraformResourceType: 'google_service_networking_vpc_service_controls',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.35.0',
+        providerVersion: '6.36.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

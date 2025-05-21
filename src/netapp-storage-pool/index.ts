@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool
+// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,30 +11,36 @@ export interface NetappStoragePoolConfig extends cdktf.TerraformMetaArguments {
   * Specifies the Active Directory policy to be used. Format: 'projects/{{project}}/locations/{{location}}/activeDirectories/{{name}}'.
   * The policy needs to be in the same location as the storage pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#active_directory NetappStoragePool#active_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#active_directory NetappStoragePool#active_directory}
   */
   readonly activeDirectory?: string;
   /**
   * Optional. True if the storage pool supports Auto Tiering enabled volumes. Default is false.
   * Auto-tiering can be enabled after storage pool creation but it can't be disabled once enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#allow_auto_tiering NetappStoragePool#allow_auto_tiering}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#allow_auto_tiering NetappStoragePool#allow_auto_tiering}
   */
   readonly allowAutoTiering?: boolean | cdktf.IResolvable;
   /**
   * Capacity of the storage pool (in GiB).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#capacity_gib NetappStoragePool#capacity_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#capacity_gib NetappStoragePool#capacity_gib}
   */
   readonly capacityGib: string;
   /**
+  * Optional. True if using Independent Scaling of capacity and performance (Hyperdisk). Default is false.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#custom_performance_enabled NetappStoragePool#custom_performance_enabled}
+  */
+  readonly customPerformanceEnabled?: boolean | cdktf.IResolvable;
+  /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#description NetappStoragePool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#description NetappStoragePool#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#id NetappStoragePool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#id NetappStoragePool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -49,7 +50,7 @@ export interface NetappStoragePoolConfig extends cdktf.TerraformMetaArguments {
   * Specifies the CMEK policy to be used for volume encryption. Format: 'projects/{{project}}/locations/{{location}}/kmsConfigs/{{name}}'.
   * The policy needs to be in the same location as the storage pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#kms_config NetappStoragePool#kms_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#kms_config NetappStoragePool#kms_config}
   */
   readonly kmsConfig?: string;
   /**
@@ -59,77 +60,89 @@ export interface NetappStoragePoolConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#labels NetappStoragePool#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#labels NetappStoragePool#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * When enabled, the volumes uses Active Directory as LDAP name service for UID/GID lookups. Required to enable extended group support for NFSv3,
   * using security identifiers for NFSv4.1 or principal names for kerberized NFSv4.1.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#ldap_enabled NetappStoragePool#ldap_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#ldap_enabled NetappStoragePool#ldap_enabled}
   */
   readonly ldapEnabled?: boolean | cdktf.IResolvable;
   /**
   * Name of the location. For zonal Flex pools specify a zone name, in all other cases a region name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#location NetappStoragePool#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#location NetappStoragePool#location}
   */
   readonly location: string;
   /**
   * The resource name of the storage pool. Needs to be unique per location/region.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#name NetappStoragePool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#name NetappStoragePool#name}
   */
   readonly name: string;
   /**
   * VPC network name with format: 'projects/{{project}}/global/networks/{{network}}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#network NetappStoragePool#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#network NetappStoragePool#network}
   */
   readonly network: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#project NetappStoragePool#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#project NetappStoragePool#project}
   */
   readonly project?: string;
   /**
   * Specifies the replica zone for regional Flex pools. 'zone' and 'replica_zone' values can be swapped to initiate a
   * [zone switch](https://cloud.google.com/netapp/volumes/docs/configure-and-use/storage-pools/edit-or-delete-storage-pool#switch_active_and_replica_zones).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#replica_zone NetappStoragePool#replica_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#replica_zone NetappStoragePool#replica_zone}
   */
   readonly replicaZone?: string;
   /**
   * Service level of the storage pool. Possible values: ["PREMIUM", "EXTREME", "STANDARD", "FLEX"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#service_level NetappStoragePool#service_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#service_level NetappStoragePool#service_level}
   */
   readonly serviceLevel: string;
+  /**
+  * Optional. Custom Performance Total IOPS of the pool If not provided, it will be calculated based on the totalThroughputMibps
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#total_iops NetappStoragePool#total_iops}
+  */
+  readonly totalIops?: string;
+  /**
+  * Optional. Custom Performance Total Throughput of the pool (in MiB/s).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#total_throughput_mibps NetappStoragePool#total_throughput_mibps}
+  */
+  readonly totalThroughputMibps?: string;
   /**
   * Specifies the active zone for regional Flex pools. 'zone' and 'replica_zone' values can be swapped to initiate a
   * [zone switch](https://cloud.google.com/netapp/volumes/docs/configure-and-use/storage-pools/edit-or-delete-storage-pool#switch_active_and_replica_zones).
   * If you want to create a zonal Flex pool, specify a zone name for 'location' and omit 'zone'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#zone NetappStoragePool#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#zone NetappStoragePool#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#timeouts NetappStoragePool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#timeouts NetappStoragePool#timeouts}
   */
   readonly timeouts?: NetappStoragePoolTimeouts;
 }
 export interface NetappStoragePoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#create NetappStoragePool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#create NetappStoragePool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#delete NetappStoragePool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#delete NetappStoragePool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#update NetappStoragePool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#update NetappStoragePool#update}
   */
   readonly update?: string;
 }
@@ -281,7 +294,7 @@ export class NetappStoragePoolTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool google_netapp_storage_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool google_netapp_storage_pool}
 */
 export class NetappStoragePool extends cdktf.TerraformResource {
 
@@ -297,7 +310,7 @@ export class NetappStoragePool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappStoragePool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappStoragePool to import
-  * @param importFromId The id of the existing NetappStoragePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappStoragePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappStoragePool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -309,7 +322,7 @@ export class NetappStoragePool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/netapp_storage_pool google_netapp_storage_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/netapp_storage_pool google_netapp_storage_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -320,7 +333,7 @@ export class NetappStoragePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_netapp_storage_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.35.0',
+        providerVersion: '6.36.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -334,6 +347,7 @@ export class NetappStoragePool extends cdktf.TerraformResource {
     this._activeDirectory = config.activeDirectory;
     this._allowAutoTiering = config.allowAutoTiering;
     this._capacityGib = config.capacityGib;
+    this._customPerformanceEnabled = config.customPerformanceEnabled;
     this._description = config.description;
     this._id = config.id;
     this._kmsConfig = config.kmsConfig;
@@ -345,6 +359,8 @@ export class NetappStoragePool extends cdktf.TerraformResource {
     this._project = config.project;
     this._replicaZone = config.replicaZone;
     this._serviceLevel = config.serviceLevel;
+    this._totalIops = config.totalIops;
+    this._totalThroughputMibps = config.totalThroughputMibps;
     this._zone = config.zone;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -396,6 +412,22 @@ export class NetappStoragePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get capacityGibInput() {
     return this._capacityGib;
+  }
+
+  // custom_performance_enabled - computed: false, optional: true, required: false
+  private _customPerformanceEnabled?: boolean | cdktf.IResolvable; 
+  public get customPerformanceEnabled() {
+    return this.getBooleanAttribute('custom_performance_enabled');
+  }
+  public set customPerformanceEnabled(value: boolean | cdktf.IResolvable) {
+    this._customPerformanceEnabled = value;
+  }
+  public resetCustomPerformanceEnabled() {
+    this._customPerformanceEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customPerformanceEnabledInput() {
+    return this._customPerformanceEnabled;
   }
 
   // description - computed: false, optional: true, required: false
@@ -579,6 +611,38 @@ export class NetappStoragePool extends cdktf.TerraformResource {
     return this._terraformLabels;
   }
 
+  // total_iops - computed: false, optional: true, required: false
+  private _totalIops?: string; 
+  public get totalIops() {
+    return this.getStringAttribute('total_iops');
+  }
+  public set totalIops(value: string) {
+    this._totalIops = value;
+  }
+  public resetTotalIops() {
+    this._totalIops = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get totalIopsInput() {
+    return this._totalIops;
+  }
+
+  // total_throughput_mibps - computed: false, optional: true, required: false
+  private _totalThroughputMibps?: string; 
+  public get totalThroughputMibps() {
+    return this.getStringAttribute('total_throughput_mibps');
+  }
+  public set totalThroughputMibps(value: string) {
+    this._totalThroughputMibps = value;
+  }
+  public resetTotalThroughputMibps() {
+    this._totalThroughputMibps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get totalThroughputMibpsInput() {
+    return this._totalThroughputMibps;
+  }
+
   // volume_capacity_gib - computed: true, optional: false, required: false
   public get volumeCapacityGib() {
     return this.getStringAttribute('volume_capacity_gib');
@@ -630,6 +694,7 @@ export class NetappStoragePool extends cdktf.TerraformResource {
       active_directory: cdktf.stringToTerraform(this._activeDirectory),
       allow_auto_tiering: cdktf.booleanToTerraform(this._allowAutoTiering),
       capacity_gib: cdktf.stringToTerraform(this._capacityGib),
+      custom_performance_enabled: cdktf.booleanToTerraform(this._customPerformanceEnabled),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       kms_config: cdktf.stringToTerraform(this._kmsConfig),
@@ -641,6 +706,8 @@ export class NetappStoragePool extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       replica_zone: cdktf.stringToTerraform(this._replicaZone),
       service_level: cdktf.stringToTerraform(this._serviceLevel),
+      total_iops: cdktf.stringToTerraform(this._totalIops),
+      total_throughput_mibps: cdktf.stringToTerraform(this._totalThroughputMibps),
       zone: cdktf.stringToTerraform(this._zone),
       timeouts: netappStoragePoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -665,6 +732,12 @@ export class NetappStoragePool extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      custom_performance_enabled: {
+        value: cdktf.booleanToHclTerraform(this._customPerformanceEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       description: {
         value: cdktf.stringToHclTerraform(this._description),
@@ -728,6 +801,18 @@ export class NetappStoragePool extends cdktf.TerraformResource {
       },
       service_level: {
         value: cdktf.stringToHclTerraform(this._serviceLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      total_iops: {
+        value: cdktf.stringToHclTerraform(this._totalIops),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      total_throughput_mibps: {
+        value: cdktf.stringToHclTerraform(this._totalThroughputMibps),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector
+// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,7 +13,7 @@ export interface DeveloperConnectAccountConnectorConfig extends cdktf.TerraformM
   * to https://google.aip.dev/122#resource-id-segments Names must be unique
   * per-project per-location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#account_connector_id DeveloperConnectAccountConnector#account_connector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#account_connector_id DeveloperConnectAccountConnector#account_connector_id}
   */
   readonly accountConnectorId: string;
   /**
@@ -27,11 +22,11 @@ export interface DeveloperConnectAccountConnectorConfig extends cdktf.TerraformM
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#annotations DeveloperConnectAccountConnector#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#annotations DeveloperConnectAccountConnector#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#id DeveloperConnectAccountConnector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#id DeveloperConnectAccountConnector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -43,29 +38,29 @@ export interface DeveloperConnectAccountConnectorConfig extends cdktf.TerraformM
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#labels DeveloperConnectAccountConnector#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#labels DeveloperConnectAccountConnector#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#location DeveloperConnectAccountConnector#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#location DeveloperConnectAccountConnector#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#project DeveloperConnectAccountConnector#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#project DeveloperConnectAccountConnector#project}
   */
   readonly project?: string;
   /**
   * provider_oauth_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#provider_oauth_config DeveloperConnectAccountConnector#provider_oauth_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#provider_oauth_config DeveloperConnectAccountConnector#provider_oauth_config}
   */
   readonly providerOauthConfig?: DeveloperConnectAccountConnectorProviderOauthConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#timeouts DeveloperConnectAccountConnector#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#timeouts DeveloperConnectAccountConnector#timeouts}
   */
   readonly timeouts?: DeveloperConnectAccountConnectorTimeouts;
 }
@@ -75,7 +70,7 @@ export interface DeveloperConnectAccountConnectorProviderOauthConfig {
   * In the event of changing scopes, user records under AccountConnector will
   * be deleted and users will re-auth again.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#scopes DeveloperConnectAccountConnector#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#scopes DeveloperConnectAccountConnector#scopes}
   */
   readonly scopes: string[];
   /**
@@ -90,7 +85,7 @@ export interface DeveloperConnectAccountConnectorProviderOauthConfig {
   * NEW_RELIC
   * DATASTAX
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#system_provider_id DeveloperConnectAccountConnector#system_provider_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#system_provider_id DeveloperConnectAccountConnector#system_provider_id}
   */
   readonly systemProviderId?: string;
 }
@@ -200,15 +195,15 @@ export class DeveloperConnectAccountConnectorProviderOauthConfigOutputReference 
 }
 export interface DeveloperConnectAccountConnectorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#create DeveloperConnectAccountConnector#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#create DeveloperConnectAccountConnector#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#delete DeveloperConnectAccountConnector#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#delete DeveloperConnectAccountConnector#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#update DeveloperConnectAccountConnector#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#update DeveloperConnectAccountConnector#update}
   */
   readonly update?: string;
 }
@@ -360,7 +355,7 @@ export class DeveloperConnectAccountConnectorTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector google_developer_connect_account_connector}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector google_developer_connect_account_connector}
 */
 export class DeveloperConnectAccountConnector extends cdktf.TerraformResource {
 
@@ -376,7 +371,7 @@ export class DeveloperConnectAccountConnector extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DeveloperConnectAccountConnector resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DeveloperConnectAccountConnector to import
-  * @param importFromId The id of the existing DeveloperConnectAccountConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DeveloperConnectAccountConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DeveloperConnectAccountConnector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -388,7 +383,7 @@ export class DeveloperConnectAccountConnector extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/developer_connect_account_connector google_developer_connect_account_connector} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/developer_connect_account_connector google_developer_connect_account_connector} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -399,7 +394,7 @@ export class DeveloperConnectAccountConnector extends cdktf.TerraformResource {
       terraformResourceType: 'google_developer_connect_account_connector',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.35.0',
+        providerVersion: '6.36.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
