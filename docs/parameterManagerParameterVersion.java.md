@@ -4,7 +4,7 @@
 
 ### ParameterManagerParameterVersion <a name="ParameterManagerParameterVersion" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version google_parameter_manager_parameter_version}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version google_parameter_manager_parameter_version}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.Initializer"></a>
 
@@ -48,7 +48,7 @@ ParameterManagerParameterVersion.Builder.create(Construct scope, java.lang.Strin
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.Initializer.parameter.parameterData">parameterData</a></code> | <code>java.lang.String</code> | The Parameter data. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.Initializer.parameter.parameterVersionId">parameterVersionId</a></code> | <code>java.lang.String</code> | Version ID of the Parameter Version Resource. This must be unique within the Parameter. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.Initializer.parameter.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | The current state of Parameter Version. This field is only applicable for updating Parameter Version. |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersion.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts">ParameterManagerParameterVersionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -119,7 +119,7 @@ Must be unique amongst siblings in the same scope
 
 Parameter Manager Parameter resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#parameter ParameterManagerParameterVersion#parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#parameter ParameterManagerParameterVersion#parameter}
 
 ---
 
@@ -129,7 +129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Parameter data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#parameter_data ParameterManagerParameterVersion#parameter_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#parameter_data ParameterManagerParameterVersion#parameter_data}
 
 ---
 
@@ -139,7 +139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Version ID of the Parameter Version Resource. This must be unique within the Parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#parameter_version_id ParameterManagerParameterVersion#parameter_version_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#parameter_version_id ParameterManagerParameterVersion#parameter_version_id}
 
 ---
 
@@ -149,7 +149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The current state of Parameter Version. This field is only applicable for updating Parameter Version.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#disabled ParameterManagerParameterVersion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#disabled ParameterManagerParameterVersion#disabled}
 
 ---
 
@@ -157,7 +157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -170,7 +170,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#timeouts ParameterManagerParameterVersion#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#timeouts ParameterManagerParameterVersion#timeouts}
 
 ---
 
@@ -631,7 +631,7 @@ The construct id used in the generated config for the ParameterManagerParameterV
 
 The id of the existing ParameterManagerParameterVersion that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1046,7 +1046,7 @@ ParameterManagerParameterVersionConfig.builder()
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.parameterData">parameterData</a></code> | <code>java.lang.String</code> | The Parameter data. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.parameterVersionId">parameterVersionId</a></code> | <code>java.lang.String</code> | Version ID of the Parameter Version Resource. This must be unique within the Parameter. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | The current state of Parameter Version. This field is only applicable for updating Parameter Version. |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}. |
 | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts">ParameterManagerParameterVersionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1131,7 +1131,7 @@ public java.lang.String getParameter();
 
 Parameter Manager Parameter resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#parameter ParameterManagerParameterVersion#parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#parameter ParameterManagerParameterVersion#parameter}
 
 ---
 
@@ -1145,7 +1145,7 @@ public java.lang.String getParameterData();
 
 The Parameter data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#parameter_data ParameterManagerParameterVersion#parameter_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#parameter_data ParameterManagerParameterVersion#parameter_data}
 
 ---
 
@@ -1159,7 +1159,7 @@ public java.lang.String getParameterVersionId();
 
 Version ID of the Parameter Version Resource. This must be unique within the Parameter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#parameter_version_id ParameterManagerParameterVersion#parameter_version_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#parameter_version_id ParameterManagerParameterVersion#parameter_version_id}
 
 ---
 
@@ -1173,7 +1173,7 @@ public java.lang.Object getDisabled();
 
 The current state of Parameter Version. This field is only applicable for updating Parameter Version.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#disabled ParameterManagerParameterVersion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#disabled ParameterManagerParameterVersion#disabled}
 
 ---
 
@@ -1185,7 +1185,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1202,7 +1202,7 @@ public ParameterManagerParameterVersionTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#timeouts ParameterManagerParameterVersion#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#timeouts ParameterManagerParameterVersion#timeouts}
 
 ---
 
@@ -1224,9 +1224,9 @@ ParameterManagerParameterVersionTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#create ParameterManagerParameterVersion#create}. |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#delete ParameterManagerParameterVersion#delete}. |
-| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#update ParameterManagerParameterVersion#update}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#create ParameterManagerParameterVersion#create}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#delete ParameterManagerParameterVersion#delete}. |
+| <code><a href="#@cdktf/provider-google.parameterManagerParameterVersion.ParameterManagerParameterVersionTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#update ParameterManagerParameterVersion#update}. |
 
 ---
 
@@ -1238,7 +1238,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#create ParameterManagerParameterVersion#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#create ParameterManagerParameterVersion#create}.
 
 ---
 
@@ -1250,7 +1250,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#delete ParameterManagerParameterVersion#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#delete ParameterManagerParameterVersion#delete}.
 
 ---
 
@@ -1262,7 +1262,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/parameter_manager_parameter_version#update ParameterManagerParameterVersion#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/parameter_manager_parameter_version#update ParameterManagerParameterVersion#update}.
 
 ---
 

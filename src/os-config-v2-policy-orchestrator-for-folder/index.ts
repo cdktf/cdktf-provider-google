@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/os_config_v2_policy_orchestrator_for_folder
 // generated from terraform resource schema
 

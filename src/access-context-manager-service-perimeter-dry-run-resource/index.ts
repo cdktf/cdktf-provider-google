@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/access_context_manager_service_perimeter_dry_run_resource
 // generated from terraform resource schema
 
