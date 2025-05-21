@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test
+// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,18 +15,18 @@ export interface NetworkManagementConnectivityTestConfig extends cdktf.Terraform
   /**
   * Whether the analysis should skip firewall checking. Default value is false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#bypass_firewall_checks NetworkManagementConnectivityTest#bypass_firewall_checks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#bypass_firewall_checks NetworkManagementConnectivityTest#bypass_firewall_checks}
   */
   readonly bypassFirewallChecks?: boolean | cdktf.IResolvable;
   /**
   * The user-supplied description of the Connectivity Test.
   * Maximum of 512 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#description NetworkManagementConnectivityTest#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#description NetworkManagementConnectivityTest#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#id NetworkManagementConnectivityTest#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#id NetworkManagementConnectivityTest#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -39,23 +39,23 @@ export interface NetworkManagementConnectivityTestConfig extends cdktf.Terraform
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#labels NetworkManagementConnectivityTest#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#labels NetworkManagementConnectivityTest#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Unique name for the connectivity test.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#name NetworkManagementConnectivityTest#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#name NetworkManagementConnectivityTest#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#project NetworkManagementConnectivityTest#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#project NetworkManagementConnectivityTest#project}
   */
   readonly project?: string;
   /**
   * IP Protocol of the test. When not provided, "TCP" is assumed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#protocol NetworkManagementConnectivityTest#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#protocol NetworkManagementConnectivityTest#protocol}
   */
   readonly protocol?: string;
   /**
@@ -63,32 +63,32 @@ export interface NetworkManagementConnectivityTestConfig extends cdktf.Terraform
   * This is applicable to scenarios where a test can cross project
   * boundaries.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#related_projects NetworkManagementConnectivityTest#related_projects}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#related_projects NetworkManagementConnectivityTest#related_projects}
   */
   readonly relatedProjects?: string[];
   /**
   * Whether run analysis for the return path from destination to source.
   * Default value is false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#round_trip NetworkManagementConnectivityTest#round_trip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#round_trip NetworkManagementConnectivityTest#round_trip}
   */
   readonly roundTrip?: boolean | cdktf.IResolvable;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#destination NetworkManagementConnectivityTest#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#destination NetworkManagementConnectivityTest#destination}
   */
   readonly destination: NetworkManagementConnectivityTestDestination;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#source NetworkManagementConnectivityTest#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#source NetworkManagementConnectivityTest#source}
   */
   readonly source: NetworkManagementConnectivityTestSource;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#timeouts NetworkManagementConnectivityTest#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#timeouts NetworkManagementConnectivityTest#timeouts}
   */
   readonly timeouts?: NetworkManagementConnectivityTestTimeouts;
 }
@@ -96,14 +96,14 @@ export interface NetworkManagementConnectivityTestDestination {
   /**
   * A Cloud SQL instance URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#cloud_sql_instance NetworkManagementConnectivityTest#cloud_sql_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#cloud_sql_instance NetworkManagementConnectivityTest#cloud_sql_instance}
   */
   readonly cloudSqlInstance?: string;
   /**
   * Forwarding rule URI. Forwarding rules are frontends for load balancers,
   * PSC endpoints, and Protocol Forwarding.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#forwarding_rule NetworkManagementConnectivityTest#forwarding_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#forwarding_rule NetworkManagementConnectivityTest#forwarding_rule}
   */
   readonly forwardingRule?: string;
   /**
@@ -111,38 +111,38 @@ export interface NetworkManagementConnectivityTestDestination {
   * Requires gke_master_cluster to be set, can't be used simultaneoulsly with
   * ip_address or network. Applicable only to destination endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#fqdn NetworkManagementConnectivityTest#fqdn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#fqdn NetworkManagementConnectivityTest#fqdn}
   */
   readonly fqdn?: string;
   /**
   * A cluster URI for Google Kubernetes Engine cluster control plane.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#gke_master_cluster NetworkManagementConnectivityTest#gke_master_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#gke_master_cluster NetworkManagementConnectivityTest#gke_master_cluster}
   */
   readonly gkeMasterCluster?: string;
   /**
   * A Compute Engine instance URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#instance NetworkManagementConnectivityTest#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#instance NetworkManagementConnectivityTest#instance}
   */
   readonly instance?: string;
   /**
   * The IP address of the endpoint, which can be an external or internal IP.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#ip_address NetworkManagementConnectivityTest#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#ip_address NetworkManagementConnectivityTest#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * A VPC network URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#network NetworkManagementConnectivityTest#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#network NetworkManagementConnectivityTest#network}
   */
   readonly network?: string;
   /**
   * The IP protocol port of the endpoint. Only applicable when protocol is
   * TCP or UDP.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#port NetworkManagementConnectivityTest#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#port NetworkManagementConnectivityTest#port}
   */
   readonly port?: number;
   /**
@@ -156,19 +156,19 @@ export interface NetworkManagementConnectivityTestDestination {
   * from the service project. In this case, the network that the IP address
   * resides in is defined in the host project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#project_id NetworkManagementConnectivityTest#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#project_id NetworkManagementConnectivityTest#project_id}
   */
   readonly projectId?: string;
   /**
   * A Redis Cluster URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#redis_cluster NetworkManagementConnectivityTest#redis_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#redis_cluster NetworkManagementConnectivityTest#redis_cluster}
   */
   readonly redisCluster?: string;
   /**
   * A Redis Instance URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#redis_instance NetworkManagementConnectivityTest#redis_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#redis_instance NetworkManagementConnectivityTest#redis_instance}
   */
   readonly redisInstance?: string;
 }
@@ -544,7 +544,7 @@ export interface NetworkManagementConnectivityTestSourceAppEngineVersion {
   /**
   * An App Engine service version name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#uri NetworkManagementConnectivityTest#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#uri NetworkManagementConnectivityTest#uri}
   */
   readonly uri?: string;
 }
@@ -630,7 +630,7 @@ export interface NetworkManagementConnectivityTestSourceCloudFunction {
   /**
   * A Cloud Function name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#uri NetworkManagementConnectivityTest#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#uri NetworkManagementConnectivityTest#uri}
   */
   readonly uri?: string;
 }
@@ -716,7 +716,7 @@ export interface NetworkManagementConnectivityTestSourceCloudRunRevision {
   /**
   * A Cloud Run revision URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#uri NetworkManagementConnectivityTest#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#uri NetworkManagementConnectivityTest#uri}
   */
   readonly uri?: string;
 }
@@ -802,44 +802,44 @@ export interface NetworkManagementConnectivityTestSource {
   /**
   * A Cloud SQL instance URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#cloud_sql_instance NetworkManagementConnectivityTest#cloud_sql_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#cloud_sql_instance NetworkManagementConnectivityTest#cloud_sql_instance}
   */
   readonly cloudSqlInstance?: string;
   /**
   * A cluster URI for Google Kubernetes Engine cluster control plane.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#gke_master_cluster NetworkManagementConnectivityTest#gke_master_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#gke_master_cluster NetworkManagementConnectivityTest#gke_master_cluster}
   */
   readonly gkeMasterCluster?: string;
   /**
   * A Compute Engine instance URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#instance NetworkManagementConnectivityTest#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#instance NetworkManagementConnectivityTest#instance}
   */
   readonly instance?: string;
   /**
   * The IP address of the endpoint, which can be an external or internal IP.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#ip_address NetworkManagementConnectivityTest#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#ip_address NetworkManagementConnectivityTest#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * A VPC network URI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#network NetworkManagementConnectivityTest#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#network NetworkManagementConnectivityTest#network}
   */
   readonly network?: string;
   /**
   * Type of the network where the endpoint is located. Possible values: ["GCP_NETWORK", "NON_GCP_NETWORK"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#network_type NetworkManagementConnectivityTest#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#network_type NetworkManagementConnectivityTest#network_type}
   */
   readonly networkType?: string;
   /**
   * The IP protocol port of the endpoint. Only applicable when protocol is
   * TCP or UDP.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#port NetworkManagementConnectivityTest#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#port NetworkManagementConnectivityTest#port}
   */
   readonly port?: number;
   /**
@@ -853,25 +853,25 @@ export interface NetworkManagementConnectivityTestSource {
   * from the service project. In this case, the network that the IP address
   * resides in is defined in the host project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#project_id NetworkManagementConnectivityTest#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#project_id NetworkManagementConnectivityTest#project_id}
   */
   readonly projectId?: string;
   /**
   * app_engine_version block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#app_engine_version NetworkManagementConnectivityTest#app_engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#app_engine_version NetworkManagementConnectivityTest#app_engine_version}
   */
   readonly appEngineVersion?: NetworkManagementConnectivityTestSourceAppEngineVersion;
   /**
   * cloud_function block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#cloud_function NetworkManagementConnectivityTest#cloud_function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#cloud_function NetworkManagementConnectivityTest#cloud_function}
   */
   readonly cloudFunction?: NetworkManagementConnectivityTestSourceCloudFunction;
   /**
   * cloud_run_revision block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#cloud_run_revision NetworkManagementConnectivityTest#cloud_run_revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#cloud_run_revision NetworkManagementConnectivityTest#cloud_run_revision}
   */
   readonly cloudRunRevision?: NetworkManagementConnectivityTestSourceCloudRunRevision;
 }
@@ -1245,15 +1245,15 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
 }
 export interface NetworkManagementConnectivityTestTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#create NetworkManagementConnectivityTest#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#create NetworkManagementConnectivityTest#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#delete NetworkManagementConnectivityTest#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#delete NetworkManagementConnectivityTest#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#update NetworkManagementConnectivityTest#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#update NetworkManagementConnectivityTest#update}
   */
   readonly update?: string;
 }
@@ -1405,7 +1405,7 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test google_network_management_connectivity_test}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test google_network_management_connectivity_test}
 */
 export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
 
@@ -1421,7 +1421,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkManagementConnectivityTest resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkManagementConnectivityTest to import
-  * @param importFromId The id of the existing NetworkManagementConnectivityTest that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkManagementConnectivityTest that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkManagementConnectivityTest to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1433,7 +1433,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.35.0/docs/resources/network_management_connectivity_test google_network_management_connectivity_test} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/network_management_connectivity_test google_network_management_connectivity_test} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1444,7 +1444,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_management_connectivity_test',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.35.0',
+        providerVersion: '6.36.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
