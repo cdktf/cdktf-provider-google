@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation
+// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface BigqueryReservationConfig extends cdktf.TerraformMetaArguments 
   /**
   * Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#concurrency BigqueryReservation#concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#concurrency BigqueryReservation#concurrency}
   */
   readonly concurrency?: number;
   /**
   * The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#edition BigqueryReservation#edition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#edition BigqueryReservation#edition}
   */
   readonly edition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#id BigqueryReservation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#id BigqueryReservation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,24 +36,24 @@ export interface BigqueryReservationConfig extends cdktf.TerraformMetaArguments 
   * the same admin project. If true, a query using this reservation will execute with the slot
   * capacity specified above at most.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#ignore_idle_slots BigqueryReservation#ignore_idle_slots}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#ignore_idle_slots BigqueryReservation#ignore_idle_slots}
   */
   readonly ignoreIdleSlots?: boolean | cdktf.IResolvable;
   /**
   * The geographic location where the transfer config should reside.
   * Examples: US, EU, asia-northeast1. The default value is US.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#location BigqueryReservation#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#location BigqueryReservation#location}
   */
   readonly location?: string;
   /**
   * The name of the reservation. This field must only contain alphanumeric characters or dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#name BigqueryReservation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#name BigqueryReservation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#project BigqueryReservation#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#project BigqueryReservation#project}
   */
   readonly project?: string;
   /**
@@ -62,26 +62,26 @@ export interface BigqueryReservationConfig extends cdktf.TerraformMetaArguments 
   * reservation calls to create a failover reservation or in update reservation calls to convert
   * a non-failover reservation to a failover reservation(or vice versa).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#secondary_location BigqueryReservation#secondary_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#secondary_location BigqueryReservation#secondary_location}
   */
   readonly secondaryLocation?: string;
   /**
   * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
   * unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#slot_capacity BigqueryReservation#slot_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#slot_capacity BigqueryReservation#slot_capacity}
   */
   readonly slotCapacity: number;
   /**
   * autoscale block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#autoscale BigqueryReservation#autoscale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#autoscale BigqueryReservation#autoscale}
   */
   readonly autoscale?: BigqueryReservationAutoscale;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#timeouts BigqueryReservation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#timeouts BigqueryReservation#timeouts}
   */
   readonly timeouts?: BigqueryReservationTimeouts;
 }
@@ -255,7 +255,7 @@ export interface BigqueryReservationAutoscale {
   /**
   * Number of slots to be scaled when needed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#max_slots BigqueryReservation#max_slots}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#max_slots BigqueryReservation#max_slots}
   */
   readonly maxSlots?: number;
 }
@@ -344,15 +344,15 @@ export class BigqueryReservationAutoscaleOutputReference extends cdktf.ComplexOb
 }
 export interface BigqueryReservationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#create BigqueryReservation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#create BigqueryReservation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#delete BigqueryReservation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#delete BigqueryReservation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#update BigqueryReservation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#update BigqueryReservation#update}
   */
   readonly update?: string;
 }
@@ -504,7 +504,7 @@ export class BigqueryReservationTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation google_bigquery_reservation}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation google_bigquery_reservation}
 */
 export class BigqueryReservation extends cdktf.TerraformResource {
 
@@ -520,7 +520,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BigqueryReservation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BigqueryReservation to import
-  * @param importFromId The id of the existing BigqueryReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BigqueryReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BigqueryReservation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -532,7 +532,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/bigquery_reservation google_bigquery_reservation} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/bigquery_reservation google_bigquery_reservation} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -543,7 +543,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_reservation',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.0',
+        providerVersion: '6.36.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

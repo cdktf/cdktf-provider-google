@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/data-sources/parameter_manager_regional_parameters
+// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/parameter_manager_regional_parameters
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,22 +16,22 @@ export interface DataGoogleParameterManagerRegionalParametersConfig extends cdkt
   * Filter string, adhering to the rules in List-operation filtering. List only parameters matching the filter. 
   * If filter is empty, all regional parameters are listed from specific location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/data-sources/parameter_manager_regional_parameters#filter DataGoogleParameterManagerRegionalParameters#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/parameter_manager_regional_parameters#filter DataGoogleParameterManagerRegionalParameters#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/data-sources/parameter_manager_regional_parameters#id DataGoogleParameterManagerRegionalParameters#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/parameter_manager_regional_parameters#id DataGoogleParameterManagerRegionalParameters#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/data-sources/parameter_manager_regional_parameters#location DataGoogleParameterManagerRegionalParameters#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/parameter_manager_regional_parameters#location DataGoogleParameterManagerRegionalParameters#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/data-sources/parameter_manager_regional_parameters#project DataGoogleParameterManagerRegionalParameters#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/parameter_manager_regional_parameters#project DataGoogleParameterManagerRegionalParameters#project}
   */
   readonly project?: string;
 }
@@ -251,7 +251,7 @@ export class DataGoogleParameterManagerRegionalParametersParametersList extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/data-sources/parameter_manager_regional_parameters google_parameter_manager_regional_parameters}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/parameter_manager_regional_parameters google_parameter_manager_regional_parameters}
 */
 export class DataGoogleParameterManagerRegionalParameters extends cdktf.TerraformDataSource {
 
@@ -267,7 +267,7 @@ export class DataGoogleParameterManagerRegionalParameters extends cdktf.Terrafor
   * Generates CDKTF code for importing a DataGoogleParameterManagerRegionalParameters resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleParameterManagerRegionalParameters to import
-  * @param importFromId The id of the existing DataGoogleParameterManagerRegionalParameters that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/data-sources/parameter_manager_regional_parameters#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleParameterManagerRegionalParameters that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/parameter_manager_regional_parameters#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleParameterManagerRegionalParameters to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -279,7 +279,7 @@ export class DataGoogleParameterManagerRegionalParameters extends cdktf.Terrafor
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/data-sources/parameter_manager_regional_parameters google_parameter_manager_regional_parameters} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/parameter_manager_regional_parameters google_parameter_manager_regional_parameters} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -290,7 +290,7 @@ export class DataGoogleParameterManagerRegionalParameters extends cdktf.Terrafor
       terraformResourceType: 'google_parameter_manager_regional_parameters',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.0',
+        providerVersion: '6.36.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
