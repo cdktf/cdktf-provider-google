@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job
+// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface StorageBatchOperationsJobConfig extends cdktf.TerraformMetaArgu
   /**
   * If set to 'true', the storage batch operation job will not be deleted and new job will be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#delete_protection StorageBatchOperationsJob#delete_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#delete_protection StorageBatchOperationsJob#delete_protection}
   */
   readonly deleteProtection?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#id StorageBatchOperationsJob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#id StorageBatchOperationsJob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,47 +23,47 @@ export interface StorageBatchOperationsJobConfig extends cdktf.TerraformMetaArgu
   /**
   * The ID of the job.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#job_id StorageBatchOperationsJob#job_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#job_id StorageBatchOperationsJob#job_id}
   */
   readonly jobId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#project StorageBatchOperationsJob#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#project StorageBatchOperationsJob#project}
   */
   readonly project?: string;
   /**
   * bucket_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#bucket_list StorageBatchOperationsJob#bucket_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#bucket_list StorageBatchOperationsJob#bucket_list}
   */
   readonly bucketList?: StorageBatchOperationsJobBucketListStruct;
   /**
   * delete_object block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#delete_object StorageBatchOperationsJob#delete_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#delete_object StorageBatchOperationsJob#delete_object}
   */
   readonly deleteObject?: StorageBatchOperationsJobDeleteObject;
   /**
   * put_metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#put_metadata StorageBatchOperationsJob#put_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#put_metadata StorageBatchOperationsJob#put_metadata}
   */
   readonly putMetadata?: StorageBatchOperationsJobPutMetadata;
   /**
   * put_object_hold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#put_object_hold StorageBatchOperationsJob#put_object_hold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#put_object_hold StorageBatchOperationsJob#put_object_hold}
   */
   readonly putObjectHold?: StorageBatchOperationsJobPutObjectHold;
   /**
   * rewrite_object block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#rewrite_object StorageBatchOperationsJob#rewrite_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#rewrite_object StorageBatchOperationsJob#rewrite_object}
   */
   readonly rewriteObject?: StorageBatchOperationsJobRewriteObject;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#timeouts StorageBatchOperationsJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#timeouts StorageBatchOperationsJob#timeouts}
   */
   readonly timeouts?: StorageBatchOperationsJobTimeouts;
 }
@@ -76,7 +71,7 @@ export interface StorageBatchOperationsJobBucketListBucketsManifest {
   /**
   * Specifies objects in a manifest file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#manifest_location StorageBatchOperationsJob#manifest_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#manifest_location StorageBatchOperationsJob#manifest_location}
   */
   readonly manifestLocation?: string;
 }
@@ -160,7 +155,7 @@ export class StorageBatchOperationsJobBucketListBucketsManifestOutputReference e
 }
 export interface StorageBatchOperationsJobBucketListBucketsPrefixListStruct {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#included_object_prefixes StorageBatchOperationsJob#included_object_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#included_object_prefixes StorageBatchOperationsJob#included_object_prefixes}
   */
   readonly includedObjectPrefixes?: string[];
 }
@@ -246,19 +241,19 @@ export interface StorageBatchOperationsJobBucketListBuckets {
   /**
   * Bucket name for the objects to be transformed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#bucket StorageBatchOperationsJob#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#bucket StorageBatchOperationsJob#bucket}
   */
   readonly bucket: string;
   /**
   * manifest block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#manifest StorageBatchOperationsJob#manifest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#manifest StorageBatchOperationsJob#manifest}
   */
   readonly manifest?: StorageBatchOperationsJobBucketListBucketsManifest;
   /**
   * prefix_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#prefix_list StorageBatchOperationsJob#prefix_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#prefix_list StorageBatchOperationsJob#prefix_list}
   */
   readonly prefixList?: StorageBatchOperationsJobBucketListBucketsPrefixListStruct;
 }
@@ -399,7 +394,7 @@ export interface StorageBatchOperationsJobBucketListStruct {
   /**
   * buckets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#buckets StorageBatchOperationsJob#buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#buckets StorageBatchOperationsJob#buckets}
   */
   readonly buckets: StorageBatchOperationsJobBucketListBuckets;
 }
@@ -482,7 +477,7 @@ export interface StorageBatchOperationsJobDeleteObject {
   /**
   * enable flag to permanently delete object and all object versions if versioning is enabled on bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#permanent_object_deletion_enabled StorageBatchOperationsJob#permanent_object_deletion_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#permanent_object_deletion_enabled StorageBatchOperationsJob#permanent_object_deletion_enabled}
   */
   readonly permanentObjectDeletionEnabled: boolean | cdktf.IResolvable;
 }
@@ -565,43 +560,43 @@ export interface StorageBatchOperationsJobPutMetadata {
   /**
   * Cache-Control directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#cache_control StorageBatchOperationsJob#cache_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#cache_control StorageBatchOperationsJob#cache_control}
   */
   readonly cacheControl?: string;
   /**
   * Content-Disposition of the object data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#content_disposition StorageBatchOperationsJob#content_disposition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#content_disposition StorageBatchOperationsJob#content_disposition}
   */
   readonly contentDisposition?: string;
   /**
   * Content Encoding of the object data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#content_encoding StorageBatchOperationsJob#content_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#content_encoding StorageBatchOperationsJob#content_encoding}
   */
   readonly contentEncoding?: string;
   /**
   * Content-Language of the object data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#content_language StorageBatchOperationsJob#content_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#content_language StorageBatchOperationsJob#content_language}
   */
   readonly contentLanguage?: string;
   /**
   * Content-Type of the object data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#content_type StorageBatchOperationsJob#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#content_type StorageBatchOperationsJob#content_type}
   */
   readonly contentType?: string;
   /**
   * User-provided metadata, in key/value pairs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#custom_metadata StorageBatchOperationsJob#custom_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#custom_metadata StorageBatchOperationsJob#custom_metadata}
   */
   readonly customMetadata?: { [key: string]: string };
   /**
   * Updates the objects fixed custom time metadata.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#custom_time StorageBatchOperationsJob#custom_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#custom_time StorageBatchOperationsJob#custom_time}
   */
   readonly customTime?: string;
 }
@@ -861,13 +856,13 @@ export interface StorageBatchOperationsJobPutObjectHold {
   /**
   * set/unset to update event based hold for objects.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#event_based_hold StorageBatchOperationsJob#event_based_hold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#event_based_hold StorageBatchOperationsJob#event_based_hold}
   */
   readonly eventBasedHold?: string;
   /**
   * set/unset to update temporary based hold for objects.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#temporary_hold StorageBatchOperationsJob#temporary_hold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#temporary_hold StorageBatchOperationsJob#temporary_hold}
   */
   readonly temporaryHold?: string;
 }
@@ -982,7 +977,7 @@ export interface StorageBatchOperationsJobRewriteObject {
   /**
   * valid kms key
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#kms_key StorageBatchOperationsJob#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#kms_key StorageBatchOperationsJob#kms_key}
   */
   readonly kmsKey: string;
 }
@@ -1063,15 +1058,15 @@ export class StorageBatchOperationsJobRewriteObjectOutputReference extends cdktf
 }
 export interface StorageBatchOperationsJobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#create StorageBatchOperationsJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#create StorageBatchOperationsJob#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#delete StorageBatchOperationsJob#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#delete StorageBatchOperationsJob#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#update StorageBatchOperationsJob#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#update StorageBatchOperationsJob#update}
   */
   readonly update?: string;
 }
@@ -1223,7 +1218,7 @@ export class StorageBatchOperationsJobTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job google_storage_batch_operations_job}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job google_storage_batch_operations_job}
 */
 export class StorageBatchOperationsJob extends cdktf.TerraformResource {
 
@@ -1239,7 +1234,7 @@ export class StorageBatchOperationsJob extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StorageBatchOperationsJob resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StorageBatchOperationsJob to import
-  * @param importFromId The id of the existing StorageBatchOperationsJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StorageBatchOperationsJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StorageBatchOperationsJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1251,7 +1246,7 @@ export class StorageBatchOperationsJob extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/storage_batch_operations_job google_storage_batch_operations_job} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_batch_operations_job google_storage_batch_operations_job} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1262,7 +1257,7 @@ export class StorageBatchOperationsJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_batch_operations_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.0',
+        providerVersion: '6.36.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association
+// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +10,17 @@ export interface BackupDrBackupPlanAssociationConfig extends cdktf.TerraformMeta
   /**
   * The BP with which resource needs to be created
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#backup_plan BackupDrBackupPlanAssociation#backup_plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#backup_plan BackupDrBackupPlanAssociation#backup_plan}
   */
   readonly backupPlan: string;
   /**
   * The id of backupplan association
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#backup_plan_association_id BackupDrBackupPlanAssociation#backup_plan_association_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#backup_plan_association_id BackupDrBackupPlanAssociation#backup_plan_association_id}
   */
   readonly backupPlanAssociationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#id BackupDrBackupPlanAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#id BackupDrBackupPlanAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,29 +29,29 @@ export interface BackupDrBackupPlanAssociationConfig extends cdktf.TerraformMeta
   /**
   * The location for the backupplan association
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#location BackupDrBackupPlanAssociation#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#location BackupDrBackupPlanAssociation#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#project BackupDrBackupPlanAssociation#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#project BackupDrBackupPlanAssociation#project}
   */
   readonly project?: string;
   /**
   * The resource for which BPA needs to be created
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#resource BackupDrBackupPlanAssociation#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#resource BackupDrBackupPlanAssociation#resource}
   */
   readonly resource: string;
   /**
   * The resource type of workload on which backupplan is applied
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#resource_type BackupDrBackupPlanAssociation#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#resource_type BackupDrBackupPlanAssociation#resource_type}
   */
   readonly resourceType: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#timeouts BackupDrBackupPlanAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#timeouts BackupDrBackupPlanAssociation#timeouts}
   */
   readonly timeouts?: BackupDrBackupPlanAssociationTimeouts;
 }
@@ -228,11 +223,11 @@ export class BackupDrBackupPlanAssociationRulesConfigInfoList extends cdktf.Comp
 }
 export interface BackupDrBackupPlanAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#create BackupDrBackupPlanAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#create BackupDrBackupPlanAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#delete BackupDrBackupPlanAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#delete BackupDrBackupPlanAssociation#delete}
   */
   readonly delete?: string;
 }
@@ -355,7 +350,7 @@ export class BackupDrBackupPlanAssociationTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association google_backup_dr_backup_plan_association}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association google_backup_dr_backup_plan_association}
 */
 export class BackupDrBackupPlanAssociation extends cdktf.TerraformResource {
 
@@ -371,7 +366,7 @@ export class BackupDrBackupPlanAssociation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BackupDrBackupPlanAssociation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BackupDrBackupPlanAssociation to import
-  * @param importFromId The id of the existing BackupDrBackupPlanAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BackupDrBackupPlanAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BackupDrBackupPlanAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -383,7 +378,7 @@ export class BackupDrBackupPlanAssociation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/backup_dr_backup_plan_association google_backup_dr_backup_plan_association} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/backup_dr_backup_plan_association google_backup_dr_backup_plan_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -394,7 +389,7 @@ export class BackupDrBackupPlanAssociation extends cdktf.TerraformResource {
       terraformResourceType: 'google_backup_dr_backup_plan_association',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.0',
+        providerVersion: '6.36.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

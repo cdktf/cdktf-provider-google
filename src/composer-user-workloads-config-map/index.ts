@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map
+// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,17 +11,17 @@ export interface ComposerUserWorkloadsConfigMapConfig extends cdktf.TerraformMet
   * The "data" field of Kubernetes ConfigMap, organized in key-value pairs.
   * For details see: https://kubernetes.io/docs/concepts/configuration/configmap/
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#data ComposerUserWorkloadsConfigMap#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#data ComposerUserWorkloadsConfigMap#data}
   */
   readonly data?: { [key: string]: string };
   /**
   * Environment where the Kubernetes ConfigMap will be stored and used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#environment ComposerUserWorkloadsConfigMap#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#environment ComposerUserWorkloadsConfigMap#environment}
   */
   readonly environment: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#id ComposerUserWorkloadsConfigMap#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#id ComposerUserWorkloadsConfigMap#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -35,37 +30,37 @@ export interface ComposerUserWorkloadsConfigMapConfig extends cdktf.TerraformMet
   /**
   * Name of the Kubernetes ConfigMap.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#name ComposerUserWorkloadsConfigMap#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#name ComposerUserWorkloadsConfigMap#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#project ComposerUserWorkloadsConfigMap#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#project ComposerUserWorkloadsConfigMap#project}
   */
   readonly project?: string;
   /**
   * The location or Compute Engine region for the environment.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#region ComposerUserWorkloadsConfigMap#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#region ComposerUserWorkloadsConfigMap#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#timeouts ComposerUserWorkloadsConfigMap#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#timeouts ComposerUserWorkloadsConfigMap#timeouts}
   */
   readonly timeouts?: ComposerUserWorkloadsConfigMapTimeouts;
 }
 export interface ComposerUserWorkloadsConfigMapTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#create ComposerUserWorkloadsConfigMap#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#create ComposerUserWorkloadsConfigMap#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#delete ComposerUserWorkloadsConfigMap#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#delete ComposerUserWorkloadsConfigMap#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#update ComposerUserWorkloadsConfigMap#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#update ComposerUserWorkloadsConfigMap#update}
   */
   readonly update?: string;
 }
@@ -217,7 +212,7 @@ export class ComposerUserWorkloadsConfigMapTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map google_composer_user_workloads_config_map}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map google_composer_user_workloads_config_map}
 */
 export class ComposerUserWorkloadsConfigMap extends cdktf.TerraformResource {
 
@@ -233,7 +228,7 @@ export class ComposerUserWorkloadsConfigMap extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComposerUserWorkloadsConfigMap resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComposerUserWorkloadsConfigMap to import
-  * @param importFromId The id of the existing ComposerUserWorkloadsConfigMap that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComposerUserWorkloadsConfigMap that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComposerUserWorkloadsConfigMap to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -245,7 +240,7 @@ export class ComposerUserWorkloadsConfigMap extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/composer_user_workloads_config_map google_composer_user_workloads_config_map} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/composer_user_workloads_config_map google_composer_user_workloads_config_map} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -256,7 +251,7 @@ export class ComposerUserWorkloadsConfigMap extends cdktf.TerraformResource {
       terraformResourceType: 'google_composer_user_workloads_config_map',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.0',
+        providerVersion: '6.36.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

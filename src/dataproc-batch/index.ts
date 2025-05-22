@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch
+// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +11,11 @@ export interface DataprocBatchConfig extends cdktf.TerraformMetaArguments {
   * The ID to use for the batch, which will become the final component of the batch's resource name.
   * This value must be 4-63 characters. Valid characters are /[a-z][0-9]-/.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#batch_id DataprocBatch#batch_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#batch_id DataprocBatch#batch_id}
   */
   readonly batchId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#id DataprocBatch#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#id DataprocBatch#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -33,59 +28,59 @@ export interface DataprocBatchConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#labels DataprocBatch#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#labels DataprocBatch#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location in which the batch will be created in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#location DataprocBatch#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#location DataprocBatch#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#project DataprocBatch#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#project DataprocBatch#project}
   */
   readonly project?: string;
   /**
   * environment_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#environment_config DataprocBatch#environment_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#environment_config DataprocBatch#environment_config}
   */
   readonly environmentConfig?: DataprocBatchEnvironmentConfig;
   /**
   * pyspark_batch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#pyspark_batch DataprocBatch#pyspark_batch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#pyspark_batch DataprocBatch#pyspark_batch}
   */
   readonly pysparkBatch?: DataprocBatchPysparkBatch;
   /**
   * runtime_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#runtime_config DataprocBatch#runtime_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#runtime_config DataprocBatch#runtime_config}
   */
   readonly runtimeConfig?: DataprocBatchRuntimeConfig;
   /**
   * spark_batch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#spark_batch DataprocBatch#spark_batch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#spark_batch DataprocBatch#spark_batch}
   */
   readonly sparkBatch?: DataprocBatchSparkBatch;
   /**
   * spark_r_batch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#spark_r_batch DataprocBatch#spark_r_batch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#spark_r_batch DataprocBatch#spark_r_batch}
   */
   readonly sparkRBatch?: DataprocBatchSparkRBatch;
   /**
   * spark_sql_batch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#spark_sql_batch DataprocBatch#spark_sql_batch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#spark_sql_batch DataprocBatch#spark_sql_batch}
   */
   readonly sparkSqlBatch?: DataprocBatchSparkSqlBatch;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#timeouts DataprocBatch#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#timeouts DataprocBatch#timeouts}
   */
   readonly timeouts?: DataprocBatchTimeouts;
 }
@@ -471,25 +466,25 @@ export interface DataprocBatchEnvironmentConfigExecutionConfig {
   /**
   * The Cloud KMS key to use for encryption.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#kms_key DataprocBatch#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#kms_key DataprocBatch#kms_key}
   */
   readonly kmsKey?: string;
   /**
   * Tags used for network traffic control.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#network_tags DataprocBatch#network_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#network_tags DataprocBatch#network_tags}
   */
   readonly networkTags?: string[];
   /**
   * Network configuration for workload execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#network_uri DataprocBatch#network_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#network_uri DataprocBatch#network_uri}
   */
   readonly networkUri?: string;
   /**
   * Service account that used to execute workload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#service_account DataprocBatch#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#service_account DataprocBatch#service_account}
   */
   readonly serviceAccount?: string;
   /**
@@ -499,13 +494,13 @@ export interface DataprocBatchEnvironmentConfigExecutionConfig {
   * and then create and manage project-level, per-location staging and temporary buckets.
   * This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#staging_bucket DataprocBatch#staging_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#staging_bucket DataprocBatch#staging_bucket}
   */
   readonly stagingBucket?: string;
   /**
   * Subnetwork configuration for workload execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#subnetwork_uri DataprocBatch#subnetwork_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#subnetwork_uri DataprocBatch#subnetwork_uri}
   */
   readonly subnetworkUri?: string;
   /**
@@ -518,7 +513,7 @@ export interface DataprocBatchEnvironmentConfigExecutionConfig {
   * the conditions are treated as OR conditions: the workload will be terminated when it has been idle for idleTtl or
   * when ttl has been exceeded, whichever occurs first.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#ttl DataprocBatch#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#ttl DataprocBatch#ttl}
   */
   readonly ttl?: string;
 }
@@ -778,7 +773,7 @@ export interface DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServ
   /**
   * Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#dataproc_cluster DataprocBatch#dataproc_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#dataproc_cluster DataprocBatch#dataproc_cluster}
   */
   readonly dataprocCluster?: string;
 }
@@ -864,13 +859,13 @@ export interface DataprocBatchEnvironmentConfigPeripheralsConfig {
   /**
   * Resource name of an existing Dataproc Metastore service.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#metastore_service DataprocBatch#metastore_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#metastore_service DataprocBatch#metastore_service}
   */
   readonly metastoreService?: string;
   /**
   * spark_history_server_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#spark_history_server_config DataprocBatch#spark_history_server_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#spark_history_server_config DataprocBatch#spark_history_server_config}
   */
   readonly sparkHistoryServerConfig?: DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig;
 }
@@ -985,13 +980,13 @@ export interface DataprocBatchEnvironmentConfig {
   /**
   * execution_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#execution_config DataprocBatch#execution_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#execution_config DataprocBatch#execution_config}
   */
   readonly executionConfig?: DataprocBatchEnvironmentConfigExecutionConfig;
   /**
   * peripherals_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#peripherals_config DataprocBatch#peripherals_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#peripherals_config DataprocBatch#peripherals_config}
   */
   readonly peripheralsConfig?: DataprocBatchEnvironmentConfigPeripheralsConfig;
 }
@@ -1107,39 +1102,39 @@ export interface DataprocBatchPysparkBatch {
   * HCFS URIs of archives to be extracted into the working directory of each executor.
   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
   * The arguments to pass to the driver. Do not include arguments that can be set as batch
   * properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#args DataprocBatch#args}
   */
   readonly args?: string[];
   /**
   * HCFS URIs of files to be placed in the working directory of each executor.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
   */
   readonly fileUris?: string[];
   /**
   * HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
   * The HCFS URI of the main Python file to use as the Spark driver. Must be a .py file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#main_python_file_uri DataprocBatch#main_python_file_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#main_python_file_uri DataprocBatch#main_python_file_uri}
   */
   readonly mainPythonFileUri?: string;
   /**
   * HCFS file URIs of Python files to pass to the PySpark framework.
   * Supported file types: .py, .egg, and .zip.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#python_file_uris DataprocBatch#python_file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#python_file_uris DataprocBatch#python_file_uris}
   */
   readonly pythonFileUris?: string[];
 }
@@ -1370,7 +1365,7 @@ export interface DataprocBatchRuntimeConfigAutotuningConfig {
   /**
   * Optional. Scenarios for which tunings are applied. Possible values: ["SCALING", "BROADCAST_HASH_JOIN", "MEMORY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#scenarios DataprocBatch#scenarios}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#scenarios DataprocBatch#scenarios}
   */
   readonly scenarios?: string[];
 }
@@ -1456,31 +1451,31 @@ export interface DataprocBatchRuntimeConfig {
   /**
   * Optional. Cohort identifier. Identifies families of the workloads having the same shape, e.g. daily ETL jobs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#cohort DataprocBatch#cohort}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#cohort DataprocBatch#cohort}
   */
   readonly cohort?: string;
   /**
   * Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#container_image DataprocBatch#container_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#container_image DataprocBatch#container_image}
   */
   readonly containerImage?: string;
   /**
   * A mapping of property names to values, which are used to configure workload execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#properties DataprocBatch#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#properties DataprocBatch#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
   * Version of the batch runtime.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#version DataprocBatch#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#version DataprocBatch#version}
   */
   readonly version?: string;
   /**
   * autotuning_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#autotuning_config DataprocBatch#autotuning_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#autotuning_config DataprocBatch#autotuning_config}
   */
   readonly autotuningConfig?: DataprocBatchRuntimeConfigAutotuningConfig;
 }
@@ -1689,39 +1684,39 @@ export interface DataprocBatchSparkBatch {
   * HCFS URIs of archives to be extracted into the working directory of each executor.
   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
   * The arguments to pass to the driver. Do not include arguments that can be set as batch
   * properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#args DataprocBatch#args}
   */
   readonly args?: string[];
   /**
   * HCFS URIs of files to be placed in the working directory of each executor.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
   */
   readonly fileUris?: string[];
   /**
   * HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
   * The name of the driver main class. The jar file that contains the class must be in the
   * classpath or specified in jarFileUris.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#main_class DataprocBatch#main_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#main_class DataprocBatch#main_class}
   */
   readonly mainClass?: string;
   /**
   * The HCFS URI of the jar file that contains the main class.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#main_jar_file_uri DataprocBatch#main_jar_file_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#main_jar_file_uri DataprocBatch#main_jar_file_uri}
   */
   readonly mainJarFileUri?: string;
 }
@@ -1953,26 +1948,26 @@ export interface DataprocBatchSparkRBatch {
   * HCFS URIs of archives to be extracted into the working directory of each executor.
   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
   */
   readonly archiveUris?: string[];
   /**
   * The arguments to pass to the driver. Do not include arguments that can be set as batch
   * properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#args DataprocBatch#args}
   */
   readonly args?: string[];
   /**
   * HCFS URIs of files to be placed in the working directory of each executor.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
   */
   readonly fileUris?: string[];
   /**
   * The HCFS URI of the main R file to use as the driver. Must be a .R or .r file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#main_r_file_uri DataprocBatch#main_r_file_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#main_r_file_uri DataprocBatch#main_r_file_uri}
   */
   readonly mainRFileUri?: string;
 }
@@ -2145,19 +2140,19 @@ export interface DataprocBatchSparkSqlBatch {
   /**
   * HCFS URIs of jar files to be added to the Spark CLASSPATH.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
   */
   readonly jarFileUris?: string[];
   /**
   * The HCFS URI of the script that contains Spark SQL queries to execute.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#query_file_uri DataprocBatch#query_file_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#query_file_uri DataprocBatch#query_file_uri}
   */
   readonly queryFileUri?: string;
   /**
   * Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#query_variables DataprocBatch#query_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#query_variables DataprocBatch#query_variables}
   */
   readonly queryVariables?: { [key: string]: string };
 }
@@ -2299,15 +2294,15 @@ export class DataprocBatchSparkSqlBatchOutputReference extends cdktf.ComplexObje
 }
 export interface DataprocBatchTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#create DataprocBatch#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#create DataprocBatch#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#delete DataprocBatch#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#update DataprocBatch#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#update DataprocBatch#update}
   */
   readonly update?: string;
 }
@@ -2459,7 +2454,7 @@ export class DataprocBatchTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch google_dataproc_batch}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch google_dataproc_batch}
 */
 export class DataprocBatch extends cdktf.TerraformResource {
 
@@ -2475,7 +2470,7 @@ export class DataprocBatch extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataprocBatch resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataprocBatch to import
-  * @param importFromId The id of the existing DataprocBatch that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataprocBatch that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataprocBatch to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2487,7 +2482,7 @@ export class DataprocBatch extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/dataproc_batch google_dataproc_batch} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_batch google_dataproc_batch} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2498,7 +2493,7 @@ export class DataprocBatch extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_batch',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.0',
+        providerVersion: '6.36.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

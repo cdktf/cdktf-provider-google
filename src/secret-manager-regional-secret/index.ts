@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret
+// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -32,7 +27,7 @@ export interface SecretManagerRegionalSecretConfig extends cdktf.TerraformMetaAr
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#annotations SecretManagerRegionalSecret#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#annotations SecretManagerRegionalSecret#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
@@ -41,11 +36,11 @@ export interface SecretManagerRegionalSecretConfig extends cdktf.TerraformMetaAr
   * nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and
   * "2014-10-02T15:01:23.045123456Z". Only one of 'expire_time' or 'ttl' can be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#expire_time SecretManagerRegionalSecret#expire_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#expire_time SecretManagerRegionalSecret#expire_time}
   */
   readonly expireTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#id SecretManagerRegionalSecret#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#id SecretManagerRegionalSecret#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -69,30 +64,30 @@ export interface SecretManagerRegionalSecretConfig extends cdktf.TerraformMetaAr
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#labels SecretManagerRegionalSecret#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#labels SecretManagerRegionalSecret#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the regional secret. eg us-central1
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#location SecretManagerRegionalSecret#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#location SecretManagerRegionalSecret#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#project SecretManagerRegionalSecret#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#project SecretManagerRegionalSecret#project}
   */
   readonly project?: string;
   /**
   * This must be unique within the project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#secret_id SecretManagerRegionalSecret#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#secret_id SecretManagerRegionalSecret#secret_id}
   */
   readonly secretId: string;
   /**
   * The TTL for the regional secret. A duration in seconds with up to nine fractional digits,
   * terminated by 's'. Example: "3.5s". Only one of 'ttl' or 'expire_time' can be provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#ttl SecretManagerRegionalSecret#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#ttl SecretManagerRegionalSecret#ttl}
   */
   readonly ttl?: string;
   /**
@@ -106,7 +101,7 @@ export interface SecretManagerRegionalSecretConfig extends cdktf.TerraformMetaAr
   * An object containing a list of "key": value pairs. Example:
   * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#version_aliases SecretManagerRegionalSecret#version_aliases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#version_aliases SecretManagerRegionalSecret#version_aliases}
   */
   readonly versionAliases?: { [key: string]: string };
   /**
@@ -116,31 +111,31 @@ export interface SecretManagerRegionalSecretConfig extends cdktf.TerraformMetaAr
   * on calling destroy instead the version goes to a disabled state and
   * the actual destruction happens after this TTL expires. It must be atleast 24h.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#version_destroy_ttl SecretManagerRegionalSecret#version_destroy_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#version_destroy_ttl SecretManagerRegionalSecret#version_destroy_ttl}
   */
   readonly versionDestroyTtl?: string;
   /**
   * customer_managed_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#customer_managed_encryption SecretManagerRegionalSecret#customer_managed_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#customer_managed_encryption SecretManagerRegionalSecret#customer_managed_encryption}
   */
   readonly customerManagedEncryption?: SecretManagerRegionalSecretCustomerManagedEncryption;
   /**
   * rotation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#rotation SecretManagerRegionalSecret#rotation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#rotation SecretManagerRegionalSecret#rotation}
   */
   readonly rotation?: SecretManagerRegionalSecretRotation;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#timeouts SecretManagerRegionalSecret#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#timeouts SecretManagerRegionalSecret#timeouts}
   */
   readonly timeouts?: SecretManagerRegionalSecretTimeouts;
   /**
   * topics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#topics SecretManagerRegionalSecret#topics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#topics SecretManagerRegionalSecret#topics}
   */
   readonly topics?: SecretManagerRegionalSecretTopics[] | cdktf.IResolvable;
 }
@@ -148,7 +143,7 @@ export interface SecretManagerRegionalSecretCustomerManagedEncryption {
   /**
   * The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#kms_key_name SecretManagerRegionalSecret#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#kms_key_name SecretManagerRegionalSecret#kms_key_name}
   */
   readonly kmsKeyName: string;
 }
@@ -233,7 +228,7 @@ export interface SecretManagerRegionalSecretRotation {
   * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
   * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#next_rotation_time SecretManagerRegionalSecret#next_rotation_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#next_rotation_time SecretManagerRegionalSecret#next_rotation_time}
   */
   readonly nextRotationTime?: string;
   /**
@@ -242,7 +237,7 @@ export interface SecretManagerRegionalSecretRotation {
   * be set. 'next_rotation_time' will be advanced by this period when the service
   * automatically sends rotation notifications.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#rotation_period SecretManagerRegionalSecret#rotation_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#rotation_period SecretManagerRegionalSecret#rotation_period}
   */
   readonly rotationPeriod?: string;
 }
@@ -355,15 +350,15 @@ export class SecretManagerRegionalSecretRotationOutputReference extends cdktf.Co
 }
 export interface SecretManagerRegionalSecretTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#create SecretManagerRegionalSecret#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#create SecretManagerRegionalSecret#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#delete SecretManagerRegionalSecret#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#delete SecretManagerRegionalSecret#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#update SecretManagerRegionalSecret#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#update SecretManagerRegionalSecret#update}
   */
   readonly update?: string;
 }
@@ -519,7 +514,7 @@ export interface SecretManagerRegionalSecretTopics {
   * projects/* /topics/*. For publication to succeed, the Secret Manager Service
   * Agent service account must have pubsub.publisher permissions on the topic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#name SecretManagerRegionalSecret#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#name SecretManagerRegionalSecret#name}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -634,7 +629,7 @@ export class SecretManagerRegionalSecretTopicsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret google_secret_manager_regional_secret}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret google_secret_manager_regional_secret}
 */
 export class SecretManagerRegionalSecret extends cdktf.TerraformResource {
 
@@ -650,7 +645,7 @@ export class SecretManagerRegionalSecret extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SecretManagerRegionalSecret resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SecretManagerRegionalSecret to import
-  * @param importFromId The id of the existing SecretManagerRegionalSecret that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SecretManagerRegionalSecret that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SecretManagerRegionalSecret to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -662,7 +657,7 @@ export class SecretManagerRegionalSecret extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/secret_manager_regional_secret google_secret_manager_regional_secret} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/secret_manager_regional_secret google_secret_manager_regional_secret} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -673,7 +668,7 @@ export class SecretManagerRegionalSecret extends cdktf.TerraformResource {
       terraformResourceType: 'google_secret_manager_regional_secret',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.0',
+        providerVersion: '6.36.1',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
