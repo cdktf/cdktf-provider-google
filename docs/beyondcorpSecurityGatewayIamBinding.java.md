@@ -4,7 +4,7 @@
 
 ### BeyondcorpSecurityGatewayIamBinding <a name="BeyondcorpSecurityGatewayIamBinding" id="@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding google_beyondcorp_security_gateway_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding google_beyondcorp_security_gateway_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer"></a>
 
@@ -44,13 +44,13 @@ BeyondcorpSecurityGatewayIamBinding.Builder.create(Construct scope, java.lang.St
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#members BeyondcorpSecurityGatewayIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#role BeyondcorpSecurityGatewayIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.securityGatewayId">securityGatewayId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#security_gateway_id BeyondcorpSecurityGatewayIamBinding#security_gateway_id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#members BeyondcorpSecurityGatewayIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#role BeyondcorpSecurityGatewayIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.securityGatewayId">securityGatewayId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#security_gateway_id BeyondcorpSecurityGatewayIamBinding#security_gateway_id}. |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingCondition">BeyondcorpSecurityGatewayIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#id BeyondcorpSecurityGatewayIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#location BeyondcorpSecurityGatewayIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#project BeyondcorpSecurityGatewayIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#id BeyondcorpSecurityGatewayIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#location BeyondcorpSecurityGatewayIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBinding.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#project BeyondcorpSecurityGatewayIamBinding#project}. |
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#members BeyondcorpSecurityGatewayIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#members BeyondcorpSecurityGatewayIamBinding#members}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#role BeyondcorpSecurityGatewayIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#role BeyondcorpSecurityGatewayIamBinding#role}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#security_gateway_id BeyondcorpSecurityGatewayIamBinding#security_gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#security_gateway_id BeyondcorpSecurityGatewayIamBinding#security_gateway_id}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#condition BeyondcorpSecurityGatewayIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#condition BeyondcorpSecurityGatewayIamBinding#condition}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#id BeyondcorpSecurityGatewayIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#id BeyondcorpSecurityGatewayIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -163,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#location BeyondcorpSecurityGatewayIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#location BeyondcorpSecurityGatewayIamBinding#location}.
 
 ---
 
@@ -171,7 +171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#project BeyondcorpSecurityGatewayIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#project BeyondcorpSecurityGatewayIamBinding#project}.
 
 ---
 
@@ -639,7 +639,7 @@ The construct id used in the generated config for the BeyondcorpSecurityGatewayI
 
 The id of the existing BeyondcorpSecurityGatewayIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1017,9 +1017,9 @@ BeyondcorpSecurityGatewayIamBindingCondition.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#expression BeyondcorpSecurityGatewayIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#title BeyondcorpSecurityGatewayIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#description BeyondcorpSecurityGatewayIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#expression BeyondcorpSecurityGatewayIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#title BeyondcorpSecurityGatewayIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#description BeyondcorpSecurityGatewayIamBinding#description}. |
 
 ---
 
@@ -1031,7 +1031,7 @@ public java.lang.String getExpression();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#expression BeyondcorpSecurityGatewayIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#expression BeyondcorpSecurityGatewayIamBinding#expression}.
 
 ---
 
@@ -1043,7 +1043,7 @@ public java.lang.String getTitle();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#title BeyondcorpSecurityGatewayIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#title BeyondcorpSecurityGatewayIamBinding#title}.
 
 ---
 
@@ -1055,7 +1055,7 @@ public java.lang.String getDescription();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#description BeyondcorpSecurityGatewayIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#description BeyondcorpSecurityGatewayIamBinding#description}.
 
 ---
 
@@ -1099,13 +1099,13 @@ BeyondcorpSecurityGatewayIamBindingConfig.builder()
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#members BeyondcorpSecurityGatewayIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#role BeyondcorpSecurityGatewayIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.securityGatewayId">securityGatewayId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#security_gateway_id BeyondcorpSecurityGatewayIamBinding#security_gateway_id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#members BeyondcorpSecurityGatewayIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#role BeyondcorpSecurityGatewayIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.securityGatewayId">securityGatewayId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#security_gateway_id BeyondcorpSecurityGatewayIamBinding#security_gateway_id}. |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingCondition">BeyondcorpSecurityGatewayIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#id BeyondcorpSecurityGatewayIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#location BeyondcorpSecurityGatewayIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#project BeyondcorpSecurityGatewayIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#id BeyondcorpSecurityGatewayIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#location BeyondcorpSecurityGatewayIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayIamBinding.BeyondcorpSecurityGatewayIamBindingConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#project BeyondcorpSecurityGatewayIamBinding#project}. |
 
 ---
 
@@ -1187,7 +1187,7 @@ public java.util.List<java.lang.String> getMembers();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#members BeyondcorpSecurityGatewayIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#members BeyondcorpSecurityGatewayIamBinding#members}.
 
 ---
 
@@ -1199,7 +1199,7 @@ public java.lang.String getRole();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#role BeyondcorpSecurityGatewayIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#role BeyondcorpSecurityGatewayIamBinding#role}.
 
 ---
 
@@ -1211,7 +1211,7 @@ public java.lang.String getSecurityGatewayId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#security_gateway_id BeyondcorpSecurityGatewayIamBinding#security_gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#security_gateway_id BeyondcorpSecurityGatewayIamBinding#security_gateway_id}.
 
 ---
 
@@ -1225,7 +1225,7 @@ public BeyondcorpSecurityGatewayIamBindingCondition getCondition();
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#condition BeyondcorpSecurityGatewayIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#condition BeyondcorpSecurityGatewayIamBinding#condition}
 
 ---
 
@@ -1237,7 +1237,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#id BeyondcorpSecurityGatewayIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#id BeyondcorpSecurityGatewayIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1252,7 +1252,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#location BeyondcorpSecurityGatewayIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#location BeyondcorpSecurityGatewayIamBinding#location}.
 
 ---
 
@@ -1264,7 +1264,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/beyondcorp_security_gateway_iam_binding#project BeyondcorpSecurityGatewayIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/beyondcorp_security_gateway_iam_binding#project BeyondcorpSecurityGatewayIamBinding#project}.
 
 ---
 

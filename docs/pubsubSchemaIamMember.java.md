@@ -4,7 +4,7 @@
 
 ### PubsubSchemaIamMember <a name="PubsubSchemaIamMember" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member google_pubsub_schema_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member google_pubsub_schema_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer"></a>
 
@@ -43,12 +43,12 @@ PubsubSchemaIamMember.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.member">member</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#member PubsubSchemaIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#role PubsubSchemaIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.schema">schema</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#schema PubsubSchemaIamMember#schema}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.member">member</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#member PubsubSchemaIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#role PubsubSchemaIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.schema">schema</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#schema PubsubSchemaIamMember#schema}. |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition">PubsubSchemaIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#id PubsubSchemaIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#project PubsubSchemaIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#id PubsubSchemaIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMember.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#project PubsubSchemaIamMember#project}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#member PubsubSchemaIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#member PubsubSchemaIamMember#member}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#role PubsubSchemaIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#role PubsubSchemaIamMember#role}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#schema PubsubSchemaIamMember#schema}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#schema PubsubSchemaIamMember#schema}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#condition PubsubSchemaIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#condition PubsubSchemaIamMember#condition}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#id PubsubSchemaIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#id PubsubSchemaIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -161,7 +161,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#project PubsubSchemaIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#project PubsubSchemaIamMember#project}.
 
 ---
 
@@ -622,7 +622,7 @@ The construct id used in the generated config for the PubsubSchemaIamMember to i
 
 The id of the existing PubsubSchemaIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -978,9 +978,9 @@ PubsubSchemaIamMemberCondition.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#expression PubsubSchemaIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#title PubsubSchemaIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#description PubsubSchemaIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#expression PubsubSchemaIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#title PubsubSchemaIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#description PubsubSchemaIamMember#description}. |
 
 ---
 
@@ -992,7 +992,7 @@ public java.lang.String getExpression();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#expression PubsubSchemaIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#expression PubsubSchemaIamMember#expression}.
 
 ---
 
@@ -1004,7 +1004,7 @@ public java.lang.String getTitle();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#title PubsubSchemaIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#title PubsubSchemaIamMember#title}.
 
 ---
 
@@ -1016,7 +1016,7 @@ public java.lang.String getDescription();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#description PubsubSchemaIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#description PubsubSchemaIamMember#description}.
 
 ---
 
@@ -1059,12 +1059,12 @@ PubsubSchemaIamMemberConfig.builder()
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.member">member</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#member PubsubSchemaIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#role PubsubSchemaIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.schema">schema</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#schema PubsubSchemaIamMember#schema}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.member">member</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#member PubsubSchemaIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#role PubsubSchemaIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.schema">schema</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#schema PubsubSchemaIamMember#schema}. |
 | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberCondition">PubsubSchemaIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#id PubsubSchemaIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#project PubsubSchemaIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#id PubsubSchemaIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.pubsubSchemaIamMember.PubsubSchemaIamMemberConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#project PubsubSchemaIamMember#project}. |
 
 ---
 
@@ -1146,7 +1146,7 @@ public java.lang.String getMember();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#member PubsubSchemaIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#member PubsubSchemaIamMember#member}.
 
 ---
 
@@ -1158,7 +1158,7 @@ public java.lang.String getRole();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#role PubsubSchemaIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#role PubsubSchemaIamMember#role}.
 
 ---
 
@@ -1170,7 +1170,7 @@ public java.lang.String getSchema();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#schema PubsubSchemaIamMember#schema}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#schema PubsubSchemaIamMember#schema}.
 
 ---
 
@@ -1184,7 +1184,7 @@ public PubsubSchemaIamMemberCondition getCondition();
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#condition PubsubSchemaIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#condition PubsubSchemaIamMember#condition}
 
 ---
 
@@ -1196,7 +1196,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#id PubsubSchemaIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#id PubsubSchemaIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1211,7 +1211,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.0/docs/resources/pubsub_schema_iam_member#project PubsubSchemaIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/pubsub_schema_iam_member#project PubsubSchemaIamMember#project}.
 
 ---
 
