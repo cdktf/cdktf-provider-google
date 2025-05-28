@@ -4,7 +4,7 @@
 
 ### DataGoogleGkeHubFeature <a name="DataGoogleGkeHubFeature" id="@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeature"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/gke_hub_feature google_gke_hub_feature}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/gke_hub_feature google_gke_hub_feature}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeature.Initializer"></a>
 
@@ -379,7 +379,7 @@ The construct id used in the generated config for the DataGoogleGkeHubFeature to
 
 The id of the existing DataGoogleGkeHubFeature that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/gke_hub_feature#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/gke_hub_feature#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -773,8 +773,8 @@ const dataGoogleGkeHubFeatureConfig: dataGoogleGkeHubFeature.DataGoogleGkeHubFea
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeatureConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeatureConfig.property.location">location</a></code> | <code>string</code> | The location for the resource. |
 | <code><a href="#@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeatureConfig.property.name">name</a></code> | <code>string</code> | The full, unique name of this Feature resource. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeatureConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/gke_hub_feature#id DataGoogleGkeHubFeature#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeatureConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/gke_hub_feature#project DataGoogleGkeHubFeature#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeatureConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/gke_hub_feature#id DataGoogleGkeHubFeature#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGkeHubFeature.DataGoogleGkeHubFeatureConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/gke_hub_feature#project DataGoogleGkeHubFeature#project}. |
 
 ---
 
@@ -858,7 +858,7 @@ public readonly location: string;
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/gke_hub_feature#location DataGoogleGkeHubFeature#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/gke_hub_feature#location DataGoogleGkeHubFeature#location}
 
 ---
 
@@ -872,7 +872,7 @@ public readonly name: string;
 
 The full, unique name of this Feature resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/gke_hub_feature#name DataGoogleGkeHubFeature#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/gke_hub_feature#name DataGoogleGkeHubFeature#name}
 
 ---
 
@@ -884,7 +884,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/gke_hub_feature#id DataGoogleGkeHubFeature#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/gke_hub_feature#id DataGoogleGkeHubFeature#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -899,7 +899,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/gke_hub_feature#project DataGoogleGkeHubFeature#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/gke_hub_feature#project DataGoogleGkeHubFeature#project}.
 
 ---
 

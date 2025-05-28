@@ -4,7 +4,7 @@
 
 ### ChronicleDataAccessLabel <a name="ChronicleDataAccessLabel" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label google_chronicle_data_access_label}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label google_chronicle_data_access_label}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabel.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the ChronicleDataAccessLabel t
 
 The id of the existing ChronicleDataAccessLabel that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -987,8 +987,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/chronicledataaccess
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.location">Location</a></code> | <code>*string</code> | The location of the resource. |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.udmQuery">UdmQuery</a></code> | <code>*string</code> | A UDM query over event data. |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.description">Description</a></code> | <code>*string</code> | Optional. A description of the data access label for a human reader. |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#id ChronicleDataAccessLabel#id}. |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#project ChronicleDataAccessLabel#project}. |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#id ChronicleDataAccessLabel#id}. |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#project ChronicleDataAccessLabel#project}. |
 | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts">ChronicleDataAccessLabelTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1078,7 +1078,7 @@ display name and the final component of the label's resource name. The
 maximum number of characters should be 63. Regex pattern is as per AIP:
 https://google.aip.dev/122#resource-id-segments
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#data_access_label_id ChronicleDataAccessLabel#data_access_label_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#data_access_label_id ChronicleDataAccessLabel#data_access_label_id}
 
 ---
 
@@ -1092,7 +1092,7 @@ Instance *string
 
 The unique identifier for the Chronicle instance, which is the same as the customer ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#instance ChronicleDataAccessLabel#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#instance ChronicleDataAccessLabel#instance}
 
 ---
 
@@ -1108,7 +1108,7 @@ The location of the resource.
 
 This is the geographical region where the Chronicle instance resides, such as "us" or "europe-west2".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#location ChronicleDataAccessLabel#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#location ChronicleDataAccessLabel#location}
 
 ---
 
@@ -1122,7 +1122,7 @@ UdmQuery *string
 
 A UDM query over event data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#udm_query ChronicleDataAccessLabel#udm_query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#udm_query ChronicleDataAccessLabel#udm_query}
 
 ---
 
@@ -1136,7 +1136,7 @@ Description *string
 
 Optional. A description of the data access label for a human reader.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#description ChronicleDataAccessLabel#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#description ChronicleDataAccessLabel#description}
 
 ---
 
@@ -1148,7 +1148,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#id ChronicleDataAccessLabel#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#id ChronicleDataAccessLabel#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1163,7 +1163,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#project ChronicleDataAccessLabel#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#project ChronicleDataAccessLabel#project}.
 
 ---
 
@@ -1177,7 +1177,7 @@ Timeouts ChronicleDataAccessLabelTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#timeouts ChronicleDataAccessLabel#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#timeouts ChronicleDataAccessLabel#timeouts}
 
 ---
 
@@ -1199,9 +1199,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/chronicledataaccess
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#create ChronicleDataAccessLabel#create}. |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#delete ChronicleDataAccessLabel#delete}. |
-| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#update ChronicleDataAccessLabel#update}. |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#create ChronicleDataAccessLabel#create}. |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#delete ChronicleDataAccessLabel#delete}. |
+| <code><a href="#@cdktf/provider-google.chronicleDataAccessLabel.ChronicleDataAccessLabelTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#update ChronicleDataAccessLabel#update}. |
 
 ---
 
@@ -1213,7 +1213,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#create ChronicleDataAccessLabel#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#create ChronicleDataAccessLabel#create}.
 
 ---
 
@@ -1225,7 +1225,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#delete ChronicleDataAccessLabel#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#delete ChronicleDataAccessLabel#delete}.
 
 ---
 
@@ -1237,7 +1237,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/chronicle_data_access_label#update ChronicleDataAccessLabel#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/chronicle_data_access_label#update ChronicleDataAccessLabel#update}.
 
 ---
 

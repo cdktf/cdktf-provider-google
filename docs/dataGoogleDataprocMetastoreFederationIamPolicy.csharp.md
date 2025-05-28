@@ -4,7 +4,7 @@
 
 ### DataGoogleDataprocMetastoreFederationIamPolicy <a name="DataGoogleDataprocMetastoreFederationIamPolicy" id="@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy google_dataproc_metastore_federation_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy google_dataproc_metastore_federation_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicy.Initializer"></a>
 
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleDataprocMetastor
 
 The id of the existing DataGoogleDataprocMetastoreFederationIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -702,10 +702,10 @@ new DataGoogleDataprocMetastoreFederationIamPolicyConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.federationId">FederationId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#federation_id DataGoogleDataprocMetastoreFederationIamPolicy#federation_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#id DataGoogleDataprocMetastoreFederationIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#location DataGoogleDataprocMetastoreFederationIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#project DataGoogleDataprocMetastoreFederationIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.federationId">FederationId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#federation_id DataGoogleDataprocMetastoreFederationIamPolicy#federation_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#id DataGoogleDataprocMetastoreFederationIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#location DataGoogleDataprocMetastoreFederationIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDataprocMetastoreFederationIamPolicy.DataGoogleDataprocMetastoreFederationIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#project DataGoogleDataprocMetastoreFederationIamPolicy#project}. |
 
 ---
 
@@ -787,7 +787,7 @@ public string FederationId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#federation_id DataGoogleDataprocMetastoreFederationIamPolicy#federation_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#federation_id DataGoogleDataprocMetastoreFederationIamPolicy#federation_id}.
 
 ---
 
@@ -799,7 +799,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#id DataGoogleDataprocMetastoreFederationIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#id DataGoogleDataprocMetastoreFederationIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -814,7 +814,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#location DataGoogleDataprocMetastoreFederationIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#location DataGoogleDataprocMetastoreFederationIamPolicy#location}.
 
 ---
 
@@ -826,7 +826,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/dataproc_metastore_federation_iam_policy#project DataGoogleDataprocMetastoreFederationIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/dataproc_metastore_federation_iam_policy#project DataGoogleDataprocMetastoreFederationIamPolicy#project}.
 
 ---
 

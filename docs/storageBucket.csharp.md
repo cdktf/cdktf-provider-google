@@ -4,7 +4,7 @@
 
 ### StorageBucket <a name="StorageBucket" id="@cdktf/provider-google.storageBucket.StorageBucket"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket google_storage_bucket}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket google_storage_bucket}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucket.StorageBucket.Initializer"></a>
 
@@ -78,6 +78,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putCustomPlacementConfig">PutCustomPlacementConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putEncryption">PutEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putHierarchicalNamespace">PutHierarchicalNamespace</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putIpFilter">PutIpFilter</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putLifecycleRule">PutLifecycleRule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putLogging">PutLogging</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.putRetentionPolicy">PutRetentionPolicy</a></code> | *No description.* |
@@ -94,6 +95,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetForceDestroy">ResetForceDestroy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetHierarchicalNamespace">ResetHierarchicalNamespace</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetId">ResetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetIpFilter">ResetIpFilter</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetLabels">ResetLabels</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetLifecycleRule">ResetLifecycleRule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.resetLogging">ResetLogging</a></code> | *No description.* |
@@ -459,6 +461,18 @@ private void PutHierarchicalNamespace(StorageBucketHierarchicalNamespace Value)
 
 ---
 
+##### `PutIpFilter` <a name="PutIpFilter" id="@cdktf/provider-google.storageBucket.StorageBucket.putIpFilter"></a>
+
+```csharp
+private void PutIpFilter(StorageBucketIpFilter Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.storageBucket.StorageBucket.putIpFilter.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter">StorageBucketIpFilter</a>
+
+---
+
 ##### `PutLifecycleRule` <a name="PutLifecycleRule" id="@cdktf/provider-google.storageBucket.StorageBucket.putLifecycleRule"></a>
 
 ```csharp
@@ -595,6 +609,12 @@ private void ResetHierarchicalNamespace()
 
 ```csharp
 private void ResetId()
+```
+
+##### `ResetIpFilter` <a name="ResetIpFilter" id="@cdktf/provider-google.storageBucket.StorageBucket.resetIpFilter"></a>
+
+```csharp
+private void ResetIpFilter()
 ```
 
 ##### `ResetLabels` <a name="ResetLabels" id="@cdktf/provider-google.storageBucket.StorageBucket.resetLabels"></a>
@@ -784,7 +804,7 @@ The construct id used in the generated config for the StorageBucket to import.
 
 The id of the existing StorageBucket that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -820,6 +840,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.effectiveLabels">EffectiveLabels</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.encryption">Encryption</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketEncryptionOutputReference">StorageBucketEncryptionOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.hierarchicalNamespace">HierarchicalNamespace</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespaceOutputReference">StorageBucketHierarchicalNamespaceOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.ipFilter">IpFilter</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference">StorageBucketIpFilterOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.lifecycleRule">LifecycleRule</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLifecycleRuleList">StorageBucketLifecycleRuleList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.logging">Logging</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLoggingOutputReference">StorageBucketLoggingOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.projectNumber">ProjectNumber</a></code> | <code>double</code> | *No description.* |
@@ -842,6 +863,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.forceDestroyInput">ForceDestroyInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.hierarchicalNamespaceInput">HierarchicalNamespaceInput</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.ipFilterInput">IpFilterInput</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter">StorageBucketIpFilter</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.labelsInput">LabelsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.lifecycleRuleInput">LifecycleRuleInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucket.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
@@ -1076,6 +1098,16 @@ public StorageBucketHierarchicalNamespaceOutputReference HierarchicalNamespace {
 
 ---
 
+##### `IpFilter`<sup>Required</sup> <a name="IpFilter" id="@cdktf/provider-google.storageBucket.StorageBucket.property.ipFilter"></a>
+
+```csharp
+public StorageBucketIpFilterOutputReference IpFilter { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference">StorageBucketIpFilterOutputReference</a>
+
+---
+
 ##### `LifecycleRule`<sup>Required</sup> <a name="LifecycleRule" id="@cdktf/provider-google.storageBucket.StorageBucket.property.lifecycleRule"></a>
 
 ```csharp
@@ -1293,6 +1325,16 @@ public string IdInput { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `IpFilterInput`<sup>Optional</sup> <a name="IpFilterInput" id="@cdktf/provider-google.storageBucket.StorageBucket.property.ipFilterInput"></a>
+
+```csharp
+public StorageBucketIpFilter IpFilterInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter">StorageBucketIpFilter</a>
 
 ---
 
@@ -1638,7 +1680,7 @@ public object Enabled { get; set; }
 
 While set to true, autoclass automatically transitions objects in your bucket to appropriate storage classes based on each object's access pattern.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
 
 ---
 
@@ -1654,7 +1696,7 @@ The storage class that objects in the bucket eventually transition to if they ar
 
 Supported values include: NEARLINE, ARCHIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#terminal_storage_class StorageBucket#terminal_storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#terminal_storage_class StorageBucket#terminal_storage_class}
 
 ---
 
@@ -1684,6 +1726,7 @@ new StorageBucketConfig {
     object ForceDestroy = null,
     StorageBucketHierarchicalNamespace HierarchicalNamespace = null,
     string Id = null,
+    StorageBucketIpFilter IpFilter = null,
     System.Collections.Generic.IDictionary<string, string> Labels = null,
     object LifecycleRule = null,
     StorageBucketLogging Logging = null,
@@ -1722,7 +1765,8 @@ new StorageBucketConfig {
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.encryption">Encryption</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketEncryption">StorageBucketEncryption</a></code> | encryption block. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.forceDestroy">ForceDestroy</a></code> | <code>object</code> | When deleting a bucket, this boolean option will delete all contained objects, or anywhereCaches (if any). |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.hierarchicalNamespace">HierarchicalNamespace</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a></code> | hierarchical_namespace block. |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#id StorageBucket#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#id StorageBucket#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.ipFilter">IpFilter</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter">StorageBucketIpFilter</a></code> | ip_filter block. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | A set of key/value label pairs to assign to the bucket. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.lifecycleRule">LifecycleRule</a></code> | <code>object</code> | lifecycle_rule block. |
 | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketConfig.property.logging">Logging</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketLogging">StorageBucketLogging</a></code> | logging block. |
@@ -1820,7 +1864,7 @@ public string Location { get; set; }
 
 The Google Cloud Storage location or region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#location StorageBucket#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#location StorageBucket#location}
 
 ---
 
@@ -1834,7 +1878,7 @@ public string Name { get; set; }
 
 The name of the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#name StorageBucket#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#name StorageBucket#name}
 
 ---
 
@@ -1848,7 +1892,7 @@ public StorageBucketAutoclass Autoclass { get; set; }
 
 autoclass block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#autoclass StorageBucket#autoclass}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#autoclass StorageBucket#autoclass}
 
 ---
 
@@ -1862,7 +1906,7 @@ public object Cors { get; set; }
 
 cors block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#cors StorageBucket#cors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#cors StorageBucket#cors}
 
 ---
 
@@ -1876,7 +1920,7 @@ public StorageBucketCustomPlacementConfig CustomPlacementConfig { get; set; }
 
 custom_placement_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
 
 ---
 
@@ -1890,7 +1934,7 @@ public object DefaultEventBasedHold { get; set; }
 
 Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
 
 ---
 
@@ -1904,7 +1948,7 @@ public object EnableObjectRetention { get; set; }
 
 Enables each object in the bucket to have its own retention policy, which prevents deletion until stored for a specific length of time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#enable_object_retention StorageBucket#enable_object_retention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#enable_object_retention StorageBucket#enable_object_retention}
 
 ---
 
@@ -1918,7 +1962,7 @@ public StorageBucketEncryption Encryption { get; set; }
 
 encryption block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#encryption StorageBucket#encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#encryption StorageBucket#encryption}
 
 ---
 
@@ -1934,7 +1978,7 @@ When deleting a bucket, this boolean option will delete all contained objects, o
 
 If you try to delete a bucket that contains objects or anywhereCaches, Terraform will fail that run, deleting anywhereCaches may take 80 minutes to complete.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#force_destroy StorageBucket#force_destroy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#force_destroy StorageBucket#force_destroy}
 
 ---
 
@@ -1948,7 +1992,7 @@ public StorageBucketHierarchicalNamespace HierarchicalNamespace { get; set; }
 
 hierarchical_namespace block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#hierarchical_namespace StorageBucket#hierarchical_namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#hierarchical_namespace StorageBucket#hierarchical_namespace}
 
 ---
 
@@ -1960,10 +2004,24 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#id StorageBucket#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#id StorageBucket#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `IpFilter`<sup>Optional</sup> <a name="IpFilter" id="@cdktf/provider-google.storageBucket.StorageBucketConfig.property.ipFilter"></a>
+
+```csharp
+public StorageBucketIpFilter IpFilter { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter">StorageBucketIpFilter</a>
+
+ip_filter block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#ip_filter StorageBucket#ip_filter}
 
 ---
 
@@ -1977,7 +2035,7 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 A set of key/value label pairs to assign to the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#labels StorageBucket#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#labels StorageBucket#labels}
 
 ---
 
@@ -1991,7 +2049,7 @@ public object LifecycleRule { get; set; }
 
 lifecycle_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
 
 ---
 
@@ -2005,7 +2063,7 @@ public StorageBucketLogging Logging { get; set; }
 
 logging block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#logging StorageBucket#logging}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#logging StorageBucket#logging}
 
 ---
 
@@ -2021,7 +2079,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#project StorageBucket#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#project StorageBucket#project}
 
 ---
 
@@ -2035,7 +2093,7 @@ public string PublicAccessPrevention { get; set; }
 
 Prevents public access to a bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
 
 ---
 
@@ -2049,7 +2107,7 @@ public object RequesterPays { get; set; }
 
 Enables Requester Pays on a storage bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#requester_pays StorageBucket#requester_pays}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#requester_pays StorageBucket#requester_pays}
 
 ---
 
@@ -2063,7 +2121,7 @@ public StorageBucketRetentionPolicy RetentionPolicy { get; set; }
 
 retention_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#retention_policy StorageBucket#retention_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#retention_policy StorageBucket#retention_policy}
 
 ---
 
@@ -2079,7 +2137,7 @@ Specifies the RPO setting of bucket.
 
 If set 'ASYNC_TURBO', The Turbo Replication will be enabled for the dual-region bucket. Value 'DEFAULT' will set RPO setting to default. Turbo Replication is only for buckets in dual-regions.See the docs for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#rpo StorageBucket#rpo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#rpo StorageBucket#rpo}
 
 ---
 
@@ -2093,7 +2151,7 @@ public StorageBucketSoftDeletePolicy SoftDeletePolicy { get; set; }
 
 soft_delete_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#soft_delete_policy StorageBucket#soft_delete_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#soft_delete_policy StorageBucket#soft_delete_policy}
 
 ---
 
@@ -2107,7 +2165,7 @@ public string StorageClass { get; set; }
 
 The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
 
 ---
 
@@ -2121,7 +2179,7 @@ public StorageBucketTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#timeouts StorageBucket#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#timeouts StorageBucket#timeouts}
 
 ---
 
@@ -2135,7 +2193,7 @@ public object UniformBucketLevelAccess { get; set; }
 
 Enables uniform bucket-level access on a bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
 
 ---
 
@@ -2149,7 +2207,7 @@ public StorageBucketVersioning Versioning { get; set; }
 
 versioning block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#versioning StorageBucket#versioning}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#versioning StorageBucket#versioning}
 
 ---
 
@@ -2163,7 +2221,7 @@ public StorageBucketWebsite Website { get; set; }
 
 website block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#website StorageBucket#website}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#website StorageBucket#website}
 
 ---
 
@@ -2203,7 +2261,7 @@ public double MaxAgeSeconds { get; set; }
 
 The value, in seconds, to return in the Access-Control-Max-Age header used in preflight responses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#max_age_seconds StorageBucket#max_age_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#max_age_seconds StorageBucket#max_age_seconds}
 
 ---
 
@@ -2217,7 +2275,7 @@ public string[] Method { get; set; }
 
 The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#method StorageBucket#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#method StorageBucket#method}
 
 ---
 
@@ -2233,7 +2291,7 @@ The list of Origins eligible to receive CORS response headers.
 
 Note: "*" is permitted in the list of origins, and means "any Origin".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#origin StorageBucket#origin}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#origin StorageBucket#origin}
 
 ---
 
@@ -2247,7 +2305,7 @@ public string[] ResponseHeader { get; set; }
 
 The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#response_header StorageBucket#response_header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#response_header StorageBucket#response_header}
 
 ---
 
@@ -2283,7 +2341,7 @@ The list of individual regions that comprise a dual-region bucket.
 
 See the docs for a list of acceptable regions. Note: If any of the data_locations changes, it will recreate the bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#data_locations StorageBucket#data_locations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#data_locations StorageBucket#data_locations}
 
 ---
 
@@ -2319,7 +2377,7 @@ A Cloud KMS key that will be used to encrypt objects inserted into this bucket, 
 
 You must pay attention to whether the crypto key is available in the location that this bucket is created in. See the docs for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#default_kms_key_name StorageBucket#default_kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#default_kms_key_name StorageBucket#default_kms_key_name}
 
 ---
 
@@ -2353,7 +2411,157 @@ public object Enabled { get; set; }
 
 Set this field true to organize bucket with logical file system structure.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+
+---
+
+### StorageBucketIpFilter <a name="StorageBucketIpFilter" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilter"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilter.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new StorageBucketIpFilter {
+    string Mode,
+    StorageBucketIpFilterPublicNetworkSource PublicNetworkSource = null,
+    object VpcNetworkSources = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter.property.mode">Mode</a></code> | <code>string</code> | The mode of the IP filter. Valid values are 'Enabled' and 'Disabled'. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter.property.publicNetworkSource">PublicNetworkSource</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource">StorageBucketIpFilterPublicNetworkSource</a></code> | public_network_source block. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter.property.vpcNetworkSources">VpcNetworkSources</a></code> | <code>object</code> | vpc_network_sources block. |
+
+---
+
+##### `Mode`<sup>Required</sup> <a name="Mode" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilter.property.mode"></a>
+
+```csharp
+public string Mode { get; set; }
+```
+
+- *Type:* string
+
+The mode of the IP filter. Valid values are 'Enabled' and 'Disabled'.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#mode StorageBucket#mode}
+
+---
+
+##### `PublicNetworkSource`<sup>Optional</sup> <a name="PublicNetworkSource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilter.property.publicNetworkSource"></a>
+
+```csharp
+public StorageBucketIpFilterPublicNetworkSource PublicNetworkSource { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource">StorageBucketIpFilterPublicNetworkSource</a>
+
+public_network_source block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#public_network_source StorageBucket#public_network_source}
+
+---
+
+##### `VpcNetworkSources`<sup>Optional</sup> <a name="VpcNetworkSources" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilter.property.vpcNetworkSources"></a>
+
+```csharp
+public object VpcNetworkSources { get; set; }
+```
+
+- *Type:* object
+
+vpc_network_sources block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#vpc_network_sources StorageBucket#vpc_network_sources}
+
+---
+
+### StorageBucketIpFilterPublicNetworkSource <a name="StorageBucketIpFilterPublicNetworkSource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new StorageBucketIpFilterPublicNetworkSource {
+    string[] AllowedIpCidrRanges
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource.property.allowedIpCidrRanges">AllowedIpCidrRanges</a></code> | <code>string[]</code> | The list of public IPv4, IPv6 cidr ranges that are allowed to access the bucket. |
+
+---
+
+##### `AllowedIpCidrRanges`<sup>Required</sup> <a name="AllowedIpCidrRanges" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource.property.allowedIpCidrRanges"></a>
+
+```csharp
+public string[] AllowedIpCidrRanges { get; set; }
+```
+
+- *Type:* string[]
+
+The list of public IPv4, IPv6 cidr ranges that are allowed to access the bucket.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#allowed_ip_cidr_ranges StorageBucket#allowed_ip_cidr_ranges}
+
+---
+
+### StorageBucketIpFilterVpcNetworkSources <a name="StorageBucketIpFilterVpcNetworkSources" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSources"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSources.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new StorageBucketIpFilterVpcNetworkSources {
+    string[] AllowedIpCidrRanges,
+    string Network
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSources.property.allowedIpCidrRanges">AllowedIpCidrRanges</a></code> | <code>string[]</code> | The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSources.property.network">Network</a></code> | <code>string</code> | Name of the network. Format: projects/{PROJECT_ID}/global/networks/{NETWORK_NAME}. |
+
+---
+
+##### `AllowedIpCidrRanges`<sup>Required</sup> <a name="AllowedIpCidrRanges" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSources.property.allowedIpCidrRanges"></a>
+
+```csharp
+public string[] AllowedIpCidrRanges { get; set; }
+```
+
+- *Type:* string[]
+
+The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#allowed_ip_cidr_ranges StorageBucket#allowed_ip_cidr_ranges}
+
+---
+
+##### `Network`<sup>Required</sup> <a name="Network" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSources.property.network"></a>
+
+```csharp
+public string Network { get; set; }
+```
+
+- *Type:* string
+
+Name of the network. Format: projects/{PROJECT_ID}/global/networks/{NETWORK_NAME}.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#network StorageBucket#network}
 
 ---
 
@@ -2389,7 +2597,7 @@ public StorageBucketLifecycleRuleAction Action { get; set; }
 
 action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#action StorageBucket#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#action StorageBucket#action}
 
 ---
 
@@ -2403,7 +2611,7 @@ public StorageBucketLifecycleRuleCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#condition StorageBucket#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#condition StorageBucket#condition}
 
 ---
 
@@ -2439,7 +2647,7 @@ public string Type { get; set; }
 
 The type of the action of this Lifecycle Rule. Supported values include: Delete, SetStorageClass and AbortIncompleteMultipartUpload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#type StorageBucket#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#type StorageBucket#type}
 
 ---
 
@@ -2453,7 +2661,7 @@ public string StorageClass { get; set; }
 
 The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
 
 ---
 
@@ -2515,7 +2723,7 @@ public double Age { get; set; }
 
 Minimum age of an object in days to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#age StorageBucket#age}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#age StorageBucket#age}
 
 ---
 
@@ -2529,7 +2737,7 @@ public string CreatedBefore { get; set; }
 
 Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#created_before StorageBucket#created_before}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#created_before StorageBucket#created_before}
 
 ---
 
@@ -2543,7 +2751,7 @@ public string CustomTimeBefore { get; set; }
 
 Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#custom_time_before StorageBucket#custom_time_before}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#custom_time_before StorageBucket#custom_time_before}
 
 ---
 
@@ -2557,7 +2765,7 @@ public double DaysSinceCustomTime { get; set; }
 
 Number of days elapsed since the user-specified timestamp set on an object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#days_since_custom_time StorageBucket#days_since_custom_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#days_since_custom_time StorageBucket#days_since_custom_time}
 
 ---
 
@@ -2571,7 +2779,7 @@ public double DaysSinceNoncurrentTime { get; set; }
 
 Number of days elapsed since the noncurrent timestamp of an object. This 										condition is relevant only for versioned objects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
 
 ---
 
@@ -2585,7 +2793,7 @@ public string[] MatchesPrefix { get; set; }
 
 One or more matching name prefixes to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#matches_prefix StorageBucket#matches_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#matches_prefix StorageBucket#matches_prefix}
 
 ---
 
@@ -2599,7 +2807,7 @@ public string[] MatchesStorageClass { get; set; }
 
 Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
 
 ---
 
@@ -2613,7 +2821,7 @@ public string[] MatchesSuffix { get; set; }
 
 One or more matching name suffixes to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#matches_suffix StorageBucket#matches_suffix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#matches_suffix StorageBucket#matches_suffix}
 
 ---
 
@@ -2627,7 +2835,7 @@ public string NoncurrentTimeBefore { get; set; }
 
 Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#noncurrent_time_before StorageBucket#noncurrent_time_before}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#noncurrent_time_before StorageBucket#noncurrent_time_before}
 
 ---
 
@@ -2641,7 +2849,7 @@ public double NumNewerVersions { get; set; }
 
 Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#num_newer_versions StorageBucket#num_newer_versions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#num_newer_versions StorageBucket#num_newer_versions}
 
 ---
 
@@ -2657,7 +2865,7 @@ While set true, age value will be sent in the request even for zero value of the
 
 This field is only useful for setting 0 value to the age field. It can be used alone or together with age.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#send_age_if_zero StorageBucket#send_age_if_zero}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#send_age_if_zero StorageBucket#send_age_if_zero}
 
 ---
 
@@ -2673,7 +2881,7 @@ While set true, days_since_custom_time value will be sent in the request even fo
 
 This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#send_days_since_custom_time_if_zero StorageBucket#send_days_since_custom_time_if_zero}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#send_days_since_custom_time_if_zero StorageBucket#send_days_since_custom_time_if_zero}
 
 ---
 
@@ -2689,7 +2897,7 @@ While set true, days_since_noncurrent_time value will be sent in the request eve
 
 This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#send_days_since_noncurrent_time_if_zero StorageBucket#send_days_since_noncurrent_time_if_zero}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#send_days_since_noncurrent_time_if_zero StorageBucket#send_days_since_noncurrent_time_if_zero}
 
 ---
 
@@ -2705,7 +2913,7 @@ While set true, num_newer_versions value will be sent in the request even for ze
 
 This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#send_num_newer_versions_if_zero StorageBucket#send_num_newer_versions_if_zero}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#send_num_newer_versions_if_zero StorageBucket#send_num_newer_versions_if_zero}
 
 ---
 
@@ -2719,7 +2927,7 @@ public string WithState { get; set; }
 
 Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#with_state StorageBucket#with_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#with_state StorageBucket#with_state}
 
 ---
 
@@ -2755,7 +2963,7 @@ public string LogBucket { get; set; }
 
 The bucket that will receive log objects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#log_bucket StorageBucket#log_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#log_bucket StorageBucket#log_bucket}
 
 ---
 
@@ -2771,7 +2979,7 @@ The object prefix for log objects.
 
 If it's not provided, by default Google Cloud Storage sets this to this bucket's name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#log_object_prefix StorageBucket#log_object_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#log_object_prefix StorageBucket#log_object_prefix}
 
 ---
 
@@ -2809,7 +3017,7 @@ The period of time, in seconds, that objects in the bucket must be retained and 
 
 The value must be less than 3,155,760,000 seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#retention_period StorageBucket#retention_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#retention_period StorageBucket#retention_period}
 
 ---
 
@@ -2825,7 +3033,7 @@ If set to true, the bucket will be locked and permanently restrict edits to the 
 
 Caution: Locking a bucket is an irreversible action.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#is_locked StorageBucket#is_locked}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#is_locked StorageBucket#is_locked}
 
 ---
 
@@ -2861,7 +3069,7 @@ The duration in seconds that soft-deleted objects in the bucket will be retained
 
 Default value is 604800.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#retention_duration_seconds StorageBucket#retention_duration_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#retention_duration_seconds StorageBucket#retention_duration_seconds}
 
 ---
 
@@ -2883,9 +3091,9 @@ new StorageBucketTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#create StorageBucket#create}. |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#read StorageBucket#read}. |
-| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#update StorageBucket#update}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#create StorageBucket#create}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#read StorageBucket#read}. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#update StorageBucket#update}. |
 
 ---
 
@@ -2897,7 +3105,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#create StorageBucket#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#create StorageBucket#create}.
 
 ---
 
@@ -2909,7 +3117,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#read StorageBucket#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#read StorageBucket#read}.
 
 ---
 
@@ -2921,7 +3129,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#update StorageBucket#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#update StorageBucket#update}.
 
 ---
 
@@ -2955,7 +3163,7 @@ public object Enabled { get; set; }
 
 While set to true, versioning is fully enabled for this bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
 
 ---
 
@@ -2991,7 +3199,7 @@ public string MainPageSuffix { get; set; }
 
 Behaves as the bucket's directory index where missing objects are treated as potential directories.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#main_page_suffix StorageBucket#main_page_suffix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#main_page_suffix StorageBucket#main_page_suffix}
 
 ---
 
@@ -3005,7 +3213,7 @@ public string NotFoundPage { get; set; }
 
 The custom object to return when a requested resource is not found.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#not_found_page StorageBucket#not_found_page}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#not_found_page StorageBucket#not_found_page}
 
 ---
 
@@ -4663,6 +4871,1103 @@ public StorageBucketHierarchicalNamespace InternalValue { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketHierarchicalNamespace">StorageBucketHierarchicalNamespace</a>
+
+---
+
+
+### StorageBucketIpFilterOutputReference <a name="StorageBucketIpFilterOutputReference" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new StorageBucketIpFilterOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.putPublicNetworkSource">PutPublicNetworkSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.putVpcNetworkSources">PutVpcNetworkSources</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.resetPublicNetworkSource">ResetPublicNetworkSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.resetVpcNetworkSources">ResetVpcNetworkSources</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutPublicNetworkSource` <a name="PutPublicNetworkSource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.putPublicNetworkSource"></a>
+
+```csharp
+private void PutPublicNetworkSource(StorageBucketIpFilterPublicNetworkSource Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.putPublicNetworkSource.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource">StorageBucketIpFilterPublicNetworkSource</a>
+
+---
+
+##### `PutVpcNetworkSources` <a name="PutVpcNetworkSources" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.putVpcNetworkSources"></a>
+
+```csharp
+private void PutVpcNetworkSources(object Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.putVpcNetworkSources.parameter.value"></a>
+
+- *Type:* object
+
+---
+
+##### `ResetPublicNetworkSource` <a name="ResetPublicNetworkSource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.resetPublicNetworkSource"></a>
+
+```csharp
+private void ResetPublicNetworkSource()
+```
+
+##### `ResetVpcNetworkSources` <a name="ResetVpcNetworkSources" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.resetVpcNetworkSources"></a>
+
+```csharp
+private void ResetVpcNetworkSources()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.publicNetworkSource">PublicNetworkSource</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference">StorageBucketIpFilterPublicNetworkSourceOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.vpcNetworkSources">VpcNetworkSources</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList">StorageBucketIpFilterVpcNetworkSourcesList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.modeInput">ModeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.publicNetworkSourceInput">PublicNetworkSourceInput</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource">StorageBucketIpFilterPublicNetworkSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.vpcNetworkSourcesInput">VpcNetworkSourcesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.mode">Mode</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter">StorageBucketIpFilter</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `PublicNetworkSource`<sup>Required</sup> <a name="PublicNetworkSource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.publicNetworkSource"></a>
+
+```csharp
+public StorageBucketIpFilterPublicNetworkSourceOutputReference PublicNetworkSource { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference">StorageBucketIpFilterPublicNetworkSourceOutputReference</a>
+
+---
+
+##### `VpcNetworkSources`<sup>Required</sup> <a name="VpcNetworkSources" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.vpcNetworkSources"></a>
+
+```csharp
+public StorageBucketIpFilterVpcNetworkSourcesList VpcNetworkSources { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList">StorageBucketIpFilterVpcNetworkSourcesList</a>
+
+---
+
+##### `ModeInput`<sup>Optional</sup> <a name="ModeInput" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.modeInput"></a>
+
+```csharp
+public string ModeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `PublicNetworkSourceInput`<sup>Optional</sup> <a name="PublicNetworkSourceInput" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.publicNetworkSourceInput"></a>
+
+```csharp
+public StorageBucketIpFilterPublicNetworkSource PublicNetworkSourceInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource">StorageBucketIpFilterPublicNetworkSource</a>
+
+---
+
+##### `VpcNetworkSourcesInput`<sup>Optional</sup> <a name="VpcNetworkSourcesInput" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.vpcNetworkSourcesInput"></a>
+
+```csharp
+public object VpcNetworkSourcesInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `Mode`<sup>Required</sup> <a name="Mode" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.mode"></a>
+
+```csharp
+public string Mode { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterOutputReference.property.internalValue"></a>
+
+```csharp
+public StorageBucketIpFilter InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilter">StorageBucketIpFilter</a>
+
+---
+
+
+### StorageBucketIpFilterPublicNetworkSourceOutputReference <a name="StorageBucketIpFilterPublicNetworkSourceOutputReference" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new StorageBucketIpFilterPublicNetworkSourceOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.allowedIpCidrRangesInput">AllowedIpCidrRangesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.allowedIpCidrRanges">AllowedIpCidrRanges</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource">StorageBucketIpFilterPublicNetworkSource</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AllowedIpCidrRangesInput`<sup>Optional</sup> <a name="AllowedIpCidrRangesInput" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.allowedIpCidrRangesInput"></a>
+
+```csharp
+public string[] AllowedIpCidrRangesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedIpCidrRanges`<sup>Required</sup> <a name="AllowedIpCidrRanges" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.allowedIpCidrRanges"></a>
+
+```csharp
+public string[] AllowedIpCidrRanges { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSourceOutputReference.property.internalValue"></a>
+
+```csharp
+public StorageBucketIpFilterPublicNetworkSource InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterPublicNetworkSource">StorageBucketIpFilterPublicNetworkSource</a>
+
+---
+
+
+### StorageBucketIpFilterVpcNetworkSourcesList <a name="StorageBucketIpFilterVpcNetworkSourcesList" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new StorageBucketIpFilterVpcNetworkSourcesList(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.allWithMapKey"></a>
+
+```csharp
+private DynamicListTerraformIterator AllWithMapKey(string MapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `MapKeyAttributeName`<sup>Required</sup> <a name="MapKeyAttributeName" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* string
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.get"></a>
+
+```csharp
+private StorageBucketIpFilterVpcNetworkSourcesOutputReference Get(double Index)
+```
+
+###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.get.parameter.index"></a>
+
+- *Type:* double
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesList.property.internalValue"></a>
+
+```csharp
+public object InternalValue { get; }
+```
+
+- *Type:* object
+
+---
+
+
+### StorageBucketIpFilterVpcNetworkSourcesOutputReference <a name="StorageBucketIpFilterVpcNetworkSourcesOutputReference" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new StorageBucketIpFilterVpcNetworkSourcesOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* double
+
+the index of this item in the list.
+
+---
+
+##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.allowedIpCidrRangesInput">AllowedIpCidrRangesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.networkInput">NetworkInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.allowedIpCidrRanges">AllowedIpCidrRanges</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.network">Network</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AllowedIpCidrRangesInput`<sup>Optional</sup> <a name="AllowedIpCidrRangesInput" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.allowedIpCidrRangesInput"></a>
+
+```csharp
+public string[] AllowedIpCidrRangesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `NetworkInput`<sup>Optional</sup> <a name="NetworkInput" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.networkInput"></a>
+
+```csharp
+public string NetworkInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AllowedIpCidrRanges`<sup>Required</sup> <a name="AllowedIpCidrRanges" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.allowedIpCidrRanges"></a>
+
+```csharp
+public string[] AllowedIpCidrRanges { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `Network`<sup>Required</sup> <a name="Network" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.network"></a>
+
+```csharp
+public string Network { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.storageBucket.StorageBucketIpFilterVpcNetworkSourcesOutputReference.property.internalValue"></a>
+
+```csharp
+public object InternalValue { get; }
+```
+
+- *Type:* object
 
 ---
 

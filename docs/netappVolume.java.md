@@ -4,7 +4,7 @@
 
 ### NetappVolume <a name="NetappVolume" id="@cdktf/provider-google.netappVolume.NetappVolume"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume google_netapp_volume}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume google_netapp_volume}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.netappVolume.NetappVolume.Initializer"></a>
 
@@ -33,6 +33,7 @@ NetappVolume.Builder.create(Construct scope, java.lang.String id)
 //  .deletionPolicy(java.lang.String)
 //  .description(java.lang.String)
 //  .exportPolicy(NetappVolumeExportPolicy)
+//  .hybridReplicationParameters(NetappVolumeHybridReplicationParameters)
 //  .id(java.lang.String)
 //  .kerberosEnabled(java.lang.Boolean)
 //  .kerberosEnabled(IResolvable)
@@ -76,12 +77,13 @@ NetappVolume.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.deletionPolicy">deletionPolicy</a></code> | <code>java.lang.String</code> | Policy to determine if the volume should be deleted forcefully. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.exportPolicy">exportPolicy</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeExportPolicy">NetappVolumeExportPolicy</a></code> | export_policy block. |
-| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#id NetappVolume#id}. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.hybridReplicationParameters">hybridReplicationParameters</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a></code> | hybrid_replication_parameters block. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#id NetappVolume#id}. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.kerberosEnabled">kerberosEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Flag indicating if the volume is a kerberos volume or not, export policy rules control kerberos security modes (krb5, krb5i, krb5p). |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", "purpose": "testing" }'. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.largeCapacity">largeCapacity</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. Flag indicating if the volume will be a large capacity volume or a regular volume. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.multipleEndpoints">multipleEndpoints</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
-| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#project NetappVolume#project}. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#project NetappVolume#project}. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.restoreParameters">restoreParameters</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeRestoreParameters">NetappVolumeRestoreParameters</a></code> | restore_parameters block. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.restrictedActions">restrictedActions</a></code> | <code>java.util.List<java.lang.String></code> | List of actions that are restricted on this volume. Possible values: ["DELETE"]. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.securityStyle">securityStyle</a></code> | <code>java.lang.String</code> | Security Style of the Volume. |
@@ -160,7 +162,7 @@ Must be unique amongst siblings in the same scope
 
 Capacity of the volume (in GiB).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#capacity_gib NetappVolume#capacity_gib}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#capacity_gib NetappVolume#capacity_gib}
 
 ---
 
@@ -172,7 +174,7 @@ Name of the pool location.
 
 Usually a region name, expect for some STANDARD service level pools which require a zone name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#location NetappVolume#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#location NetappVolume#location}
 
 ---
 
@@ -182,7 +184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the volume. Needs to be unique per location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#name NetappVolume#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#name NetappVolume#name}
 
 ---
 
@@ -194,7 +196,7 @@ The protocol of the volume.
 
 Allowed combinations are '['NFSV3']', '['NFSV4']', '['SMB']', '['NFSV3', 'NFSV4']', '['SMB', 'NFSV3']' and '['SMB', 'NFSV4']'. Possible values: ["NFSV3", "NFSV4", "SMB"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#protocols NetappVolume#protocols}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#protocols NetappVolume#protocols}
 
 ---
 
@@ -204,7 +206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Share name (SMB) or export path (NFS) of the volume. Needs to be unique per location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#share_name NetappVolume#share_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#share_name NetappVolume#share_name}
 
 ---
 
@@ -214,7 +216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Name of the storage pool to create the volume in. Pool needs enough spare capacity to accommodate the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#storage_pool NetappVolume#storage_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#storage_pool NetappVolume#storage_pool}
 
 ---
 
@@ -224,7 +226,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 backup_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#backup_config NetappVolume#backup_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#backup_config NetappVolume#backup_config}
 
 ---
 
@@ -238,7 +240,7 @@ Volumes may have nested snapshot resources. Deleting such a volume will fail.
 Setting this parameter to FORCE will delete volumes including nested snapshots.
 Possible values: DEFAULT, FORCE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#deletion_policy NetappVolume#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#deletion_policy NetappVolume#deletion_policy}
 
 ---
 
@@ -248,7 +250,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#description NetappVolume#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#description NetappVolume#description}
 
 ---
 
@@ -258,7 +260,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 export_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#export_policy NetappVolume#export_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#export_policy NetappVolume#export_policy}
+
+---
+
+##### `hybridReplicationParameters`<sup>Optional</sup> <a name="hybridReplicationParameters" id="@cdktf/provider-google.netappVolume.NetappVolume.Initializer.parameter.hybridReplicationParameters"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a>
+
+hybrid_replication_parameters block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#hybrid_replication_parameters NetappVolume#hybrid_replication_parameters}
 
 ---
 
@@ -266,7 +278,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#id NetappVolume#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#id NetappVolume#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -279,7 +291,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Flag indicating if the volume is a kerberos volume or not, export policy rules control kerberos security modes (krb5, krb5i, krb5p).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#kerberos_enabled NetappVolume#kerberos_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#kerberos_enabled NetappVolume#kerberos_enabled}
 
 ---
 
@@ -292,7 +304,7 @@ Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#labels NetappVolume#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#labels NetappVolume#labels}
 
 ---
 
@@ -302,7 +314,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Flag indicating if the volume will be a large capacity volume or a regular volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#large_capacity NetappVolume#large_capacity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#large_capacity NetappVolume#large_capacity}
 
 ---
 
@@ -315,7 +327,7 @@ Optional.
 Flag indicating if the volume will have an IP address per node for volumes supporting multiple IP endpoints.
 Only the volume with largeCapacity will be allowed to have multiple endpoints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#multiple_endpoints NetappVolume#multiple_endpoints}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#multiple_endpoints NetappVolume#multiple_endpoints}
 
 ---
 
@@ -323,7 +335,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#project NetappVolume#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#project NetappVolume#project}.
 
 ---
 
@@ -333,7 +345,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 restore_parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#restore_parameters NetappVolume#restore_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#restore_parameters NetappVolume#restore_parameters}
 
 ---
 
@@ -343,7 +355,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 List of actions that are restricted on this volume. Possible values: ["DELETE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#restricted_actions NetappVolume#restricted_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#restricted_actions NetappVolume#restricted_actions}
 
 ---
 
@@ -356,7 +368,7 @@ Security Style of the Volume.
 Use UNIX to use UNIX or NFSV4 ACLs for file permissions.
 Use NTFS to use NTFS ACLs for file permissions. Can only be set for volumes which use SMB together with NFS as protocol. Possible values: ["NTFS", "UNIX"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#security_style NetappVolume#security_style}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#security_style NetappVolume#security_style}
 
 ---
 
@@ -366,7 +378,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Settings for volumes with SMB access. Possible values: ["ENCRYPT_DATA", "BROWSABLE", "CHANGE_NOTIFY", "NON_BROWSABLE", "OPLOCKS", "SHOW_SNAPSHOT", "SHOW_PREVIOUS_VERSIONS", "ACCESS_BASED_ENUMERATION", "CONTINUOUSLY_AVAILABLE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#smb_settings NetappVolume#smb_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#smb_settings NetappVolume#smb_settings}
 
 ---
 
@@ -376,7 +388,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 If enabled, a NFS volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots. Will enable "Previous Versions" support for SMB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#snapshot_directory NetappVolume#snapshot_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#snapshot_directory NetappVolume#snapshot_directory}
 
 ---
 
@@ -386,7 +398,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 snapshot_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#snapshot_policy NetappVolume#snapshot_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#snapshot_policy NetappVolume#snapshot_policy}
 
 ---
 
@@ -396,7 +408,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 tiering_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#tiering_policy NetappVolume#tiering_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#tiering_policy NetappVolume#tiering_policy}
 
 ---
 
@@ -406,7 +418,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
 
 ---
 
@@ -416,7 +428,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Unix permission the mount point will be created with. Default is 0770. Applicable for UNIX security style volumes only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#unix_permissions NetappVolume#unix_permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#unix_permissions NetappVolume#unix_permissions}
 
 ---
 
@@ -449,6 +461,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.putBackupConfig">putBackupConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.putExportPolicy">putExportPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.putHybridReplicationParameters">putHybridReplicationParameters</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.putRestoreParameters">putRestoreParameters</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.putSnapshotPolicy">putSnapshotPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.putTieringPolicy">putTieringPolicy</a></code> | *No description.* |
@@ -457,6 +470,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.resetDeletionPolicy">resetDeletionPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.resetDescription">resetDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.resetExportPolicy">resetExportPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.resetHybridReplicationParameters">resetHybridReplicationParameters</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.resetKerberosEnabled">resetKerberosEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.resetLabels">resetLabels</a></code> | *No description.* |
@@ -789,6 +803,18 @@ public void putExportPolicy(NetappVolumeExportPolicy value)
 
 ---
 
+##### `putHybridReplicationParameters` <a name="putHybridReplicationParameters" id="@cdktf/provider-google.netappVolume.NetappVolume.putHybridReplicationParameters"></a>
+
+```java
+public void putHybridReplicationParameters(NetappVolumeHybridReplicationParameters value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.netappVolume.NetappVolume.putHybridReplicationParameters.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a>
+
+---
+
 ##### `putRestoreParameters` <a name="putRestoreParameters" id="@cdktf/provider-google.netappVolume.NetappVolume.putRestoreParameters"></a>
 
 ```java
@@ -859,6 +885,12 @@ public void resetDescription()
 
 ```java
 public void resetExportPolicy()
+```
+
+##### `resetHybridReplicationParameters` <a name="resetHybridReplicationParameters" id="@cdktf/provider-google.netappVolume.NetappVolume.resetHybridReplicationParameters"></a>
+
+```java
+public void resetHybridReplicationParameters()
 ```
 
 ##### `resetId` <a name="resetId" id="@cdktf/provider-google.netappVolume.NetappVolume.resetId"></a>
@@ -1054,7 +1086,7 @@ The construct id used in the generated config for the NetappVolume to import.
 
 The id of the existing NetappVolume that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1092,6 +1124,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.encryptionType">encryptionType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.exportPolicy">exportPolicy</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeExportPolicyOutputReference">NetappVolumeExportPolicyOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.hasReplication">hasReplication</a></code> | <code>com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.hybridReplicationParameters">hybridReplicationParameters</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference">NetappVolumeHybridReplicationParametersOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.kmsConfig">kmsConfig</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.ldapEnabled">ldapEnabled</a></code> | <code>com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.mountOptions">mountOptions</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeMountOptionsList">NetappVolumeMountOptionsList</a></code> | *No description.* |
@@ -1113,6 +1146,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.deletionPolicyInput">deletionPolicyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.descriptionInput">descriptionInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.exportPolicyInput">exportPolicyInput</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeExportPolicy">NetappVolumeExportPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.hybridReplicationParametersInput">hybridReplicationParametersInput</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.kerberosEnabledInput">kerberosEnabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolume.property.labelsInput">labelsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
@@ -1377,6 +1411,16 @@ public IResolvable getHasReplication();
 
 ---
 
+##### `hybridReplicationParameters`<sup>Required</sup> <a name="hybridReplicationParameters" id="@cdktf/provider-google.netappVolume.NetappVolume.property.hybridReplicationParameters"></a>
+
+```java
+public NetappVolumeHybridReplicationParametersOutputReference getHybridReplicationParameters();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference">NetappVolumeHybridReplicationParametersOutputReference</a>
+
+---
+
 ##### `kmsConfig`<sup>Required</sup> <a name="kmsConfig" id="@cdktf/provider-google.netappVolume.NetappVolume.property.kmsConfig"></a>
 
 ```java
@@ -1584,6 +1628,16 @@ public NetappVolumeExportPolicy getExportPolicyInput();
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.netappVolume.NetappVolumeExportPolicy">NetappVolumeExportPolicy</a>
+
+---
+
+##### `hybridReplicationParametersInput`<sup>Optional</sup> <a name="hybridReplicationParametersInput" id="@cdktf/provider-google.netappVolume.NetappVolume.property.hybridReplicationParametersInput"></a>
+
+```java
+public NetappVolumeHybridReplicationParameters getHybridReplicationParametersInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a>
 
 ---
 
@@ -2032,7 +2086,7 @@ public java.util.List<java.lang.String> getBackupPolicies();
 
 Specify a single backup policy ID for scheduled backups. Format: 'projects/{{projectId}}/locations/{{location}}/backupPolicies/{{backupPolicyName}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#backup_policies NetappVolume#backup_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#backup_policies NetappVolume#backup_policies}
 
 ---
 
@@ -2046,7 +2100,7 @@ public java.lang.String getBackupVault();
 
 ID of the backup vault to use. A backup vault is reqired to create manual or scheduled backups. Format: 'projects/{{projectId}}/locations/{{location}}/backupVaults/{{backupVaultName}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#backup_vault NetappVolume#backup_vault}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#backup_vault NetappVolume#backup_vault}
 
 ---
 
@@ -2060,7 +2114,7 @@ public java.lang.Object getScheduledBackupEnabled();
 
 When set to true, scheduled backup is enabled on the volume. Omit if no backup_policy is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#scheduled_backup_enabled NetappVolume#scheduled_backup_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#scheduled_backup_enabled NetappVolume#scheduled_backup_enabled}
 
 ---
 
@@ -2093,6 +2147,7 @@ NetappVolumeConfig.builder()
 //  .deletionPolicy(java.lang.String)
 //  .description(java.lang.String)
 //  .exportPolicy(NetappVolumeExportPolicy)
+//  .hybridReplicationParameters(NetappVolumeHybridReplicationParameters)
 //  .id(java.lang.String)
 //  .kerberosEnabled(java.lang.Boolean)
 //  .kerberosEnabled(IResolvable)
@@ -2136,12 +2191,13 @@ NetappVolumeConfig.builder()
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.deletionPolicy">deletionPolicy</a></code> | <code>java.lang.String</code> | Policy to determine if the volume should be deleted forcefully. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.exportPolicy">exportPolicy</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeExportPolicy">NetappVolumeExportPolicy</a></code> | export_policy block. |
-| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#id NetappVolume#id}. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.hybridReplicationParameters">hybridReplicationParameters</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a></code> | hybrid_replication_parameters block. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#id NetappVolume#id}. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.kerberosEnabled">kerberosEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Flag indicating if the volume is a kerberos volume or not, export policy rules control kerberos security modes (krb5, krb5i, krb5p). |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", "purpose": "testing" }'. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.largeCapacity">largeCapacity</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. Flag indicating if the volume will be a large capacity volume or a regular volume. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.multipleEndpoints">multipleEndpoints</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Optional. |
-| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#project NetappVolume#project}. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#project NetappVolume#project}. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.restoreParameters">restoreParameters</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeRestoreParameters">NetappVolumeRestoreParameters</a></code> | restore_parameters block. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.restrictedActions">restrictedActions</a></code> | <code>java.util.List<java.lang.String></code> | List of actions that are restricted on this volume. Possible values: ["DELETE"]. |
 | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.securityStyle">securityStyle</a></code> | <code>java.lang.String</code> | Security Style of the Volume. |
@@ -2234,7 +2290,7 @@ public java.lang.String getCapacityGib();
 
 Capacity of the volume (in GiB).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#capacity_gib NetappVolume#capacity_gib}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#capacity_gib NetappVolume#capacity_gib}
 
 ---
 
@@ -2250,7 +2306,7 @@ Name of the pool location.
 
 Usually a region name, expect for some STANDARD service level pools which require a zone name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#location NetappVolume#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#location NetappVolume#location}
 
 ---
 
@@ -2264,7 +2320,7 @@ public java.lang.String getName();
 
 The name of the volume. Needs to be unique per location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#name NetappVolume#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#name NetappVolume#name}
 
 ---
 
@@ -2280,7 +2336,7 @@ The protocol of the volume.
 
 Allowed combinations are '['NFSV3']', '['NFSV4']', '['SMB']', '['NFSV3', 'NFSV4']', '['SMB', 'NFSV3']' and '['SMB', 'NFSV4']'. Possible values: ["NFSV3", "NFSV4", "SMB"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#protocols NetappVolume#protocols}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#protocols NetappVolume#protocols}
 
 ---
 
@@ -2294,7 +2350,7 @@ public java.lang.String getShareName();
 
 Share name (SMB) or export path (NFS) of the volume. Needs to be unique per location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#share_name NetappVolume#share_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#share_name NetappVolume#share_name}
 
 ---
 
@@ -2308,7 +2364,7 @@ public java.lang.String getStoragePool();
 
 Name of the storage pool to create the volume in. Pool needs enough spare capacity to accommodate the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#storage_pool NetappVolume#storage_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#storage_pool NetappVolume#storage_pool}
 
 ---
 
@@ -2322,7 +2378,7 @@ public NetappVolumeBackupConfig getBackupConfig();
 
 backup_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#backup_config NetappVolume#backup_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#backup_config NetappVolume#backup_config}
 
 ---
 
@@ -2340,7 +2396,7 @@ Volumes may have nested snapshot resources. Deleting such a volume will fail.
 Setting this parameter to FORCE will delete volumes including nested snapshots.
 Possible values: DEFAULT, FORCE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#deletion_policy NetappVolume#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#deletion_policy NetappVolume#deletion_policy}
 
 ---
 
@@ -2354,7 +2410,7 @@ public java.lang.String getDescription();
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#description NetappVolume#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#description NetappVolume#description}
 
 ---
 
@@ -2368,7 +2424,21 @@ public NetappVolumeExportPolicy getExportPolicy();
 
 export_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#export_policy NetappVolume#export_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#export_policy NetappVolume#export_policy}
+
+---
+
+##### `hybridReplicationParameters`<sup>Optional</sup> <a name="hybridReplicationParameters" id="@cdktf/provider-google.netappVolume.NetappVolumeConfig.property.hybridReplicationParameters"></a>
+
+```java
+public NetappVolumeHybridReplicationParameters getHybridReplicationParameters();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a>
+
+hybrid_replication_parameters block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#hybrid_replication_parameters NetappVolume#hybrid_replication_parameters}
 
 ---
 
@@ -2380,7 +2450,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#id NetappVolume#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#id NetappVolume#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2397,7 +2467,7 @@ public java.lang.Object getKerberosEnabled();
 
 Flag indicating if the volume is a kerberos volume or not, export policy rules control kerberos security modes (krb5, krb5i, krb5p).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#kerberos_enabled NetappVolume#kerberos_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#kerberos_enabled NetappVolume#kerberos_enabled}
 
 ---
 
@@ -2414,7 +2484,7 @@ Labels as key value pairs. Example: '{ "owner": "Bob", "department": "finance", 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#labels NetappVolume#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#labels NetappVolume#labels}
 
 ---
 
@@ -2428,7 +2498,7 @@ public java.lang.Object getLargeCapacity();
 
 Optional. Flag indicating if the volume will be a large capacity volume or a regular volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#large_capacity NetappVolume#large_capacity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#large_capacity NetappVolume#large_capacity}
 
 ---
 
@@ -2445,7 +2515,7 @@ Optional.
 Flag indicating if the volume will have an IP address per node for volumes supporting multiple IP endpoints.
 Only the volume with largeCapacity will be allowed to have multiple endpoints.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#multiple_endpoints NetappVolume#multiple_endpoints}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#multiple_endpoints NetappVolume#multiple_endpoints}
 
 ---
 
@@ -2457,7 +2527,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#project NetappVolume#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#project NetappVolume#project}.
 
 ---
 
@@ -2471,7 +2541,7 @@ public NetappVolumeRestoreParameters getRestoreParameters();
 
 restore_parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#restore_parameters NetappVolume#restore_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#restore_parameters NetappVolume#restore_parameters}
 
 ---
 
@@ -2485,7 +2555,7 @@ public java.util.List<java.lang.String> getRestrictedActions();
 
 List of actions that are restricted on this volume. Possible values: ["DELETE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#restricted_actions NetappVolume#restricted_actions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#restricted_actions NetappVolume#restricted_actions}
 
 ---
 
@@ -2502,7 +2572,7 @@ Security Style of the Volume.
 Use UNIX to use UNIX or NFSV4 ACLs for file permissions.
 Use NTFS to use NTFS ACLs for file permissions. Can only be set for volumes which use SMB together with NFS as protocol. Possible values: ["NTFS", "UNIX"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#security_style NetappVolume#security_style}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#security_style NetappVolume#security_style}
 
 ---
 
@@ -2516,7 +2586,7 @@ public java.util.List<java.lang.String> getSmbSettings();
 
 Settings for volumes with SMB access. Possible values: ["ENCRYPT_DATA", "BROWSABLE", "CHANGE_NOTIFY", "NON_BROWSABLE", "OPLOCKS", "SHOW_SNAPSHOT", "SHOW_PREVIOUS_VERSIONS", "ACCESS_BASED_ENUMERATION", "CONTINUOUSLY_AVAILABLE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#smb_settings NetappVolume#smb_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#smb_settings NetappVolume#smb_settings}
 
 ---
 
@@ -2530,7 +2600,7 @@ public java.lang.Object getSnapshotDirectory();
 
 If enabled, a NFS volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots. Will enable "Previous Versions" support for SMB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#snapshot_directory NetappVolume#snapshot_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#snapshot_directory NetappVolume#snapshot_directory}
 
 ---
 
@@ -2544,7 +2614,7 @@ public NetappVolumeSnapshotPolicy getSnapshotPolicy();
 
 snapshot_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#snapshot_policy NetappVolume#snapshot_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#snapshot_policy NetappVolume#snapshot_policy}
 
 ---
 
@@ -2558,7 +2628,7 @@ public NetappVolumeTieringPolicy getTieringPolicy();
 
 tiering_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#tiering_policy NetappVolume#tiering_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#tiering_policy NetappVolume#tiering_policy}
 
 ---
 
@@ -2572,7 +2642,7 @@ public NetappVolumeTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
 
 ---
 
@@ -2586,7 +2656,7 @@ public java.lang.String getUnixPermissions();
 
 Unix permission the mount point will be created with. Default is 0770. Applicable for UNIX security style volumes only.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#unix_permissions NetappVolume#unix_permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#unix_permissions NetappVolume#unix_permissions}
 
 ---
 
@@ -2621,7 +2691,7 @@ public java.lang.Object getRules();
 
 rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#rules NetappVolume#rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#rules NetappVolume#rules}
 
 ---
 
@@ -2683,7 +2753,7 @@ public java.lang.String getAccessType();
 
 Defines the access type for clients matching the 'allowedClients' specification. Possible values: ["READ_ONLY", "READ_WRITE", "READ_NONE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#access_type NetappVolume#access_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#access_type NetappVolume#access_type}
 
 ---
 
@@ -2697,7 +2767,7 @@ public java.lang.String getAllowedClients();
 
 Defines the client ingress specification (allowed clients) as a comma separated list with IPv4 CIDRs or IPv4 host addresses.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#allowed_clients NetappVolume#allowed_clients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#allowed_clients NetappVolume#allowed_clients}
 
 ---
 
@@ -2713,7 +2783,7 @@ If enabled, the root user (UID = 0) of the specified clients doesn't get mapped 
 
 This is also known as no_root_squash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#has_root_access NetappVolume#has_root_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#has_root_access NetappVolume#has_root_access}
 
 ---
 
@@ -2729,7 +2799,7 @@ If enabled (true) the rule defines a read only access for clients matching the '
 
 It enables nfs clients to mount using 'integrity' kerberos security mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#kerberos5i_read_only NetappVolume#kerberos5i_read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#kerberos5i_read_only NetappVolume#kerberos5i_read_only}
 
 ---
 
@@ -2745,7 +2815,7 @@ If enabled (true) the rule defines read and write access for clients matching th
 
 It enables nfs clients to mount using 'integrity' kerberos security mode. The 'kerberos5iReadOnly' value is ignored if this is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#kerberos5i_read_write NetappVolume#kerberos5i_read_write}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#kerberos5i_read_write NetappVolume#kerberos5i_read_write}
 
 ---
 
@@ -2761,7 +2831,7 @@ If enabled (true) the rule defines a read only access for clients matching the '
 
 It enables nfs clients to mount using 'privacy' kerberos security mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#kerberos5p_read_only NetappVolume#kerberos5p_read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#kerberos5p_read_only NetappVolume#kerberos5p_read_only}
 
 ---
 
@@ -2777,7 +2847,7 @@ If enabled (true) the rule defines read and write access for clients matching th
 
 It enables nfs clients to mount using 'privacy' kerberos security mode. The 'kerberos5pReadOnly' value is ignored if this is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#kerberos5p_read_write NetappVolume#kerberos5p_read_write}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#kerberos5p_read_write NetappVolume#kerberos5p_read_write}
 
 ---
 
@@ -2793,7 +2863,7 @@ If enabled (true) the rule defines a read only access for clients matching the '
 
 It enables nfs clients to mount using 'authentication' kerberos security mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#kerberos5_read_only NetappVolume#kerberos5_read_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#kerberos5_read_only NetappVolume#kerberos5_read_only}
 
 ---
 
@@ -2809,7 +2879,7 @@ If enabled (true) the rule defines read and write access for clients matching th
 
 It enables nfs clients to mount using 'authentication' kerberos security mode. The 'kerberos5ReadOnly' value is ignored if this is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#kerberos5_read_write NetappVolume#kerberos5_read_write}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#kerberos5_read_write NetappVolume#kerberos5_read_write}
 
 ---
 
@@ -2823,7 +2893,7 @@ public java.lang.Object getNfsv3();
 
 Enable to apply the export rule to NFSV3 clients.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#nfsv3 NetappVolume#nfsv3}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#nfsv3 NetappVolume#nfsv3}
 
 ---
 
@@ -2837,7 +2907,158 @@ public java.lang.Object getNfsv4();
 
 Enable to apply the export rule to NFSV4.1 clients.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#nfsv4 NetappVolume#nfsv4}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#nfsv4 NetappVolume#nfsv4}
+
+---
+
+### NetappVolumeHybridReplicationParameters <a name="NetappVolumeHybridReplicationParameters" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.netapp_volume.NetappVolumeHybridReplicationParameters;
+
+NetappVolumeHybridReplicationParameters.builder()
+//  .clusterLocation(java.lang.String)
+//  .description(java.lang.String)
+//  .labels(java.util.Map<java.lang.String, java.lang.String>)
+//  .peerClusterName(java.lang.String)
+//  .peerIpAddresses(java.lang.String)
+//  .peerSvmName(java.lang.String)
+//  .peerVolumeName(java.lang.String)
+//  .replication(java.lang.String)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.clusterLocation">clusterLocation</a></code> | <code>java.lang.String</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.description">description</a></code> | <code>java.lang.String</code> | Optional. Description of the replication. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.peerClusterName">peerClusterName</a></code> | <code>java.lang.String</code> | Required. Name of the user's local source cluster to be peered with the destination cluster. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.peerIpAddresses">peerIpAddresses</a></code> | <code>java.lang.String</code> | Required. List of node ip addresses to be peered with. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.peerSvmName">peerSvmName</a></code> | <code>java.lang.String</code> | Required. Name of the user's local source vserver svm to be peered with the destination vserver svm. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.peerVolumeName">peerVolumeName</a></code> | <code>java.lang.String</code> | Required. Name of the user's local source volume to be peered with the destination volume. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.replication">replication</a></code> | <code>java.lang.String</code> | Required. Desired name for the replication of this volume. |
+
+---
+
+##### `clusterLocation`<sup>Optional</sup> <a name="clusterLocation" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.clusterLocation"></a>
+
+```java
+public java.lang.String getClusterLocation();
+```
+
+- *Type:* java.lang.String
+
+Optional.
+
+Name of source cluster location associated with the Hybrid replication. This is a free-form field for the display purpose only.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#cluster_location NetappVolume#cluster_location}
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.description"></a>
+
+```java
+public java.lang.String getDescription();
+```
+
+- *Type:* java.lang.String
+
+Optional. Description of the replication.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#description NetappVolume#description}
+
+---
+
+##### `labels`<sup>Optional</sup> <a name="labels" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.labels"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getLabels();
+```
+
+- *Type:* java.util.Map<java.lang.String, java.lang.String>
+
+Optional.
+
+Labels to be added to the replication as the key value pairs.
+An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#labels NetappVolume#labels}
+
+---
+
+##### `peerClusterName`<sup>Optional</sup> <a name="peerClusterName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.peerClusterName"></a>
+
+```java
+public java.lang.String getPeerClusterName();
+```
+
+- *Type:* java.lang.String
+
+Required. Name of the user's local source cluster to be peered with the destination cluster.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#peer_cluster_name NetappVolume#peer_cluster_name}
+
+---
+
+##### `peerIpAddresses`<sup>Optional</sup> <a name="peerIpAddresses" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.peerIpAddresses"></a>
+
+```java
+public java.lang.String getPeerIpAddresses();
+```
+
+- *Type:* java.lang.String
+
+Required. List of node ip addresses to be peered with.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#peer_ip_addresses NetappVolume#peer_ip_addresses}
+
+---
+
+##### `peerSvmName`<sup>Optional</sup> <a name="peerSvmName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.peerSvmName"></a>
+
+```java
+public java.lang.String getPeerSvmName();
+```
+
+- *Type:* java.lang.String
+
+Required. Name of the user's local source vserver svm to be peered with the destination vserver svm.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#peer_svm_name NetappVolume#peer_svm_name}
+
+---
+
+##### `peerVolumeName`<sup>Optional</sup> <a name="peerVolumeName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.peerVolumeName"></a>
+
+```java
+public java.lang.String getPeerVolumeName();
+```
+
+- *Type:* java.lang.String
+
+Required. Name of the user's local source volume to be peered with the destination volume.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#peer_volume_name NetappVolume#peer_volume_name}
+
+---
+
+##### `replication`<sup>Optional</sup> <a name="replication" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters.property.replication"></a>
+
+```java
+public java.lang.String getReplication();
+```
+
+- *Type:* java.lang.String
+
+Required. Desired name for the replication of this volume.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#replication NetappVolume#replication}
 
 ---
 
@@ -2885,7 +3106,7 @@ public java.lang.String getSourceBackup();
 
 Full name of the backup to use for creating this volume. 'source_snapshot' and 'source_backup' cannot be used simultaneously. Format: 'projects/{{project}}/locations/{{location}}/backupVaults/{{backupVaultId}}/backups/{{backup}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#source_backup NetappVolume#source_backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#source_backup NetappVolume#source_backup}
 
 ---
 
@@ -2899,7 +3120,7 @@ public java.lang.String getSourceSnapshot();
 
 Full name of the snapshot to use for creating this volume. 'source_snapshot' and 'source_backup' cannot be used simultaneously. Format: 'projects/{{project}}/locations/{{location}}/volumes/{{volume}}/snapshots/{{snapshot}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#source_snapshot NetappVolume#source_snapshot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#source_snapshot NetappVolume#source_snapshot}
 
 ---
 
@@ -2942,7 +3163,7 @@ public NetappVolumeSnapshotPolicyDailySchedule getDailySchedule();
 
 daily_schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#daily_schedule NetappVolume#daily_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#daily_schedule NetappVolume#daily_schedule}
 
 ---
 
@@ -2959,7 +3180,7 @@ Enables automated snapshot creation according to defined schedule.
 Default is false.
 To disable automatic snapshot creation you have to remove the whole snapshot_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#enabled NetappVolume#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#enabled NetappVolume#enabled}
 
 ---
 
@@ -2973,7 +3194,7 @@ public NetappVolumeSnapshotPolicyHourlySchedule getHourlySchedule();
 
 hourly_schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#hourly_schedule NetappVolume#hourly_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#hourly_schedule NetappVolume#hourly_schedule}
 
 ---
 
@@ -2987,7 +3208,7 @@ public NetappVolumeSnapshotPolicyMonthlySchedule getMonthlySchedule();
 
 monthly_schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#monthly_schedule NetappVolume#monthly_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#monthly_schedule NetappVolume#monthly_schedule}
 
 ---
 
@@ -3001,7 +3222,7 @@ public NetappVolumeSnapshotPolicyWeeklySchedule getWeeklySchedule();
 
 weekly_schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#weekly_schedule NetappVolume#weekly_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#weekly_schedule NetappVolume#weekly_schedule}
 
 ---
 
@@ -3039,7 +3260,7 @@ public java.lang.Number getSnapshotsToKeep();
 
 The maximum number of snapshots to keep for the daily schedule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
 
 ---
 
@@ -3053,7 +3274,7 @@ public java.lang.Number getHour();
 
 Set the hour to create the snapshot (0-23), defaults to midnight (0).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#hour NetappVolume#hour}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#hour NetappVolume#hour}
 
 ---
 
@@ -3067,7 +3288,7 @@ public java.lang.Number getMinute();
 
 Set the minute of the hour to create the snapshot (0-59), defaults to the top of the hour (0).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#minute NetappVolume#minute}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#minute NetappVolume#minute}
 
 ---
 
@@ -3103,7 +3324,7 @@ public java.lang.Number getSnapshotsToKeep();
 
 The maximum number of snapshots to keep for the hourly schedule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
 
 ---
 
@@ -3117,7 +3338,7 @@ public java.lang.Number getMinute();
 
 Set the minute of the hour to create the snapshot (0-59), defaults to the top of the hour (0).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#minute NetappVolume#minute}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#minute NetappVolume#minute}
 
 ---
 
@@ -3157,7 +3378,7 @@ public java.lang.Number getSnapshotsToKeep();
 
 The maximum number of snapshots to keep for the monthly schedule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
 
 ---
 
@@ -3173,7 +3394,7 @@ Set the day or days of the month to make a snapshot (1-31).
 
 Accepts a comma separated number of days. Defaults to '1'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#days_of_month NetappVolume#days_of_month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#days_of_month NetappVolume#days_of_month}
 
 ---
 
@@ -3187,7 +3408,7 @@ public java.lang.Number getHour();
 
 Set the hour to create the snapshot (0-23), defaults to midnight (0).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#hour NetappVolume#hour}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#hour NetappVolume#hour}
 
 ---
 
@@ -3201,7 +3422,7 @@ public java.lang.Number getMinute();
 
 Set the minute of the hour to create the snapshot (0-59), defaults to the top of the hour (0).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#minute NetappVolume#minute}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#minute NetappVolume#minute}
 
 ---
 
@@ -3241,7 +3462,7 @@ public java.lang.Number getSnapshotsToKeep();
 
 The maximum number of snapshots to keep for the weekly schedule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#snapshots_to_keep NetappVolume#snapshots_to_keep}
 
 ---
 
@@ -3257,7 +3478,7 @@ Set the day or days of the week to make a snapshot.
 
 Accepts a comma separated days of the week. Defaults to 'Sunday'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#day NetappVolume#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#day NetappVolume#day}
 
 ---
 
@@ -3271,7 +3492,7 @@ public java.lang.Number getHour();
 
 Set the hour to create the snapshot (0-23), defaults to midnight (0).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#hour NetappVolume#hour}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#hour NetappVolume#hour}
 
 ---
 
@@ -3285,7 +3506,7 @@ public java.lang.Number getMinute();
 
 Set the minute of the hour to create the snapshot (0-59), defaults to the top of the hour (0).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#minute NetappVolume#minute}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#minute NetappVolume#minute}
 
 ---
 
@@ -3324,7 +3545,7 @@ Optional.
 Time in days to mark the volume's data block as cold and make it eligible for tiering, can be range from 2-183.
 Default is 31.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#cooling_threshold_days NetappVolume#cooling_threshold_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#cooling_threshold_days NetappVolume#cooling_threshold_days}
 
 ---
 
@@ -3340,7 +3561,7 @@ Optional.
 
 Flag indicating if the volume has tiering policy enable/pause. Default is PAUSED. Default value: "PAUSED" Possible values: ["ENABLED", "PAUSED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#tier_action NetappVolume#tier_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#tier_action NetappVolume#tier_action}
 
 ---
 
@@ -3362,9 +3583,9 @@ NetappVolumeTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#create NetappVolume#create}. |
-| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#delete NetappVolume#delete}. |
-| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#update NetappVolume#update}. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#create NetappVolume#create}. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#delete NetappVolume#delete}. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#update NetappVolume#update}. |
 
 ---
 
@@ -3376,7 +3597,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#create NetappVolume#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#create NetappVolume#create}.
 
 ---
 
@@ -3388,7 +3609,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#delete NetappVolume#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#delete NetappVolume#delete}.
 
 ---
 
@@ -3400,7 +3621,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/netapp_volume#update NetappVolume#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_volume#update NetappVolume#update}.
 
 ---
 
@@ -4768,6 +4989,487 @@ public java.lang.Object getInternalValue();
 ```
 
 - *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-google.netappVolume.NetappVolumeExportPolicyRules">NetappVolumeExportPolicyRules</a>
+
+---
+
+
+### NetappVolumeHybridReplicationParametersOutputReference <a name="NetappVolumeHybridReplicationParametersOutputReference" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.netapp_volume.NetappVolumeHybridReplicationParametersOutputReference;
+
+new NetappVolumeHybridReplicationParametersOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetClusterLocation">resetClusterLocation</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetDescription">resetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetLabels">resetLabels</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetPeerClusterName">resetPeerClusterName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetPeerIpAddresses">resetPeerIpAddresses</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetPeerSvmName">resetPeerSvmName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetPeerVolumeName">resetPeerVolumeName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetReplication">resetReplication</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetClusterLocation` <a name="resetClusterLocation" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetClusterLocation"></a>
+
+```java
+public void resetClusterLocation()
+```
+
+##### `resetDescription` <a name="resetDescription" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetDescription"></a>
+
+```java
+public void resetDescription()
+```
+
+##### `resetLabels` <a name="resetLabels" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetLabels"></a>
+
+```java
+public void resetLabels()
+```
+
+##### `resetPeerClusterName` <a name="resetPeerClusterName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetPeerClusterName"></a>
+
+```java
+public void resetPeerClusterName()
+```
+
+##### `resetPeerIpAddresses` <a name="resetPeerIpAddresses" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetPeerIpAddresses"></a>
+
+```java
+public void resetPeerIpAddresses()
+```
+
+##### `resetPeerSvmName` <a name="resetPeerSvmName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetPeerSvmName"></a>
+
+```java
+public void resetPeerSvmName()
+```
+
+##### `resetPeerVolumeName` <a name="resetPeerVolumeName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetPeerVolumeName"></a>
+
+```java
+public void resetPeerVolumeName()
+```
+
+##### `resetReplication` <a name="resetReplication" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.resetReplication"></a>
+
+```java
+public void resetReplication()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.clusterLocationInput">clusterLocationInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.descriptionInput">descriptionInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.labelsInput">labelsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerClusterNameInput">peerClusterNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerIpAddressesInput">peerIpAddressesInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerSvmNameInput">peerSvmNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerVolumeNameInput">peerVolumeNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.replicationInput">replicationInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.clusterLocation">clusterLocation</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.description">description</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerClusterName">peerClusterName</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerIpAddresses">peerIpAddresses</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerSvmName">peerSvmName</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerVolumeName">peerVolumeName</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.replication">replication</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `clusterLocationInput`<sup>Optional</sup> <a name="clusterLocationInput" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.clusterLocationInput"></a>
+
+```java
+public java.lang.String getClusterLocationInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `descriptionInput`<sup>Optional</sup> <a name="descriptionInput" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.descriptionInput"></a>
+
+```java
+public java.lang.String getDescriptionInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `labelsInput`<sup>Optional</sup> <a name="labelsInput" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.labelsInput"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getLabelsInput();
+```
+
+- *Type:* java.util.Map<java.lang.String, java.lang.String>
+
+---
+
+##### `peerClusterNameInput`<sup>Optional</sup> <a name="peerClusterNameInput" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerClusterNameInput"></a>
+
+```java
+public java.lang.String getPeerClusterNameInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `peerIpAddressesInput`<sup>Optional</sup> <a name="peerIpAddressesInput" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerIpAddressesInput"></a>
+
+```java
+public java.lang.String getPeerIpAddressesInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `peerSvmNameInput`<sup>Optional</sup> <a name="peerSvmNameInput" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerSvmNameInput"></a>
+
+```java
+public java.lang.String getPeerSvmNameInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `peerVolumeNameInput`<sup>Optional</sup> <a name="peerVolumeNameInput" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerVolumeNameInput"></a>
+
+```java
+public java.lang.String getPeerVolumeNameInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `replicationInput`<sup>Optional</sup> <a name="replicationInput" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.replicationInput"></a>
+
+```java
+public java.lang.String getReplicationInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `clusterLocation`<sup>Required</sup> <a name="clusterLocation" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.clusterLocation"></a>
+
+```java
+public java.lang.String getClusterLocation();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `description`<sup>Required</sup> <a name="description" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.description"></a>
+
+```java
+public java.lang.String getDescription();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `labels`<sup>Required</sup> <a name="labels" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.labels"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getLabels();
+```
+
+- *Type:* java.util.Map<java.lang.String, java.lang.String>
+
+---
+
+##### `peerClusterName`<sup>Required</sup> <a name="peerClusterName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerClusterName"></a>
+
+```java
+public java.lang.String getPeerClusterName();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `peerIpAddresses`<sup>Required</sup> <a name="peerIpAddresses" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerIpAddresses"></a>
+
+```java
+public java.lang.String getPeerIpAddresses();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `peerSvmName`<sup>Required</sup> <a name="peerSvmName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerSvmName"></a>
+
+```java
+public java.lang.String getPeerSvmName();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `peerVolumeName`<sup>Required</sup> <a name="peerVolumeName" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.peerVolumeName"></a>
+
+```java
+public java.lang.String getPeerVolumeName();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `replication`<sup>Required</sup> <a name="replication" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.replication"></a>
+
+```java
+public java.lang.String getReplication();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParametersOutputReference.property.internalValue"></a>
+
+```java
+public NetappVolumeHybridReplicationParameters getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.netappVolume.NetappVolumeHybridReplicationParameters">NetappVolumeHybridReplicationParameters</a>
 
 ---
 
