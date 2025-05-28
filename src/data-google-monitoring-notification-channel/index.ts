@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface DataGoogleMonitoringNotificationChannelConfig extends cdktf.Ter
   /**
   * An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel#display_name DataGoogleMonitoringNotificationChannel#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel#display_name DataGoogleMonitoringNotificationChannel#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel#id DataGoogleMonitoringNotificationChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel#id DataGoogleMonitoringNotificationChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,23 +29,23 @@ export interface DataGoogleMonitoringNotificationChannelConfig extends cdktf.Ter
   * determine if there are upstream changes to these fields. They can also be configured via
   * the sensitive_labels block, but cannot be configured in both places.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel#labels DataGoogleMonitoringNotificationChannel#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel#labels DataGoogleMonitoringNotificationChannel#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel#project DataGoogleMonitoringNotificationChannel#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel#project DataGoogleMonitoringNotificationChannel#project}
   */
   readonly project?: string;
   /**
   * The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the list of valid values such as "email", "slack", etc...
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel#type DataGoogleMonitoringNotificationChannel#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel#type DataGoogleMonitoringNotificationChannel#type}
   */
   readonly type?: string;
   /**
   * User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel#user_labels DataGoogleMonitoringNotificationChannel#user_labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel#user_labels DataGoogleMonitoringNotificationChannel#user_labels}
   */
   readonly userLabels?: { [key: string]: string };
 }
@@ -141,7 +136,7 @@ export class DataGoogleMonitoringNotificationChannelSensitiveLabelsList extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel google_monitoring_notification_channel}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel google_monitoring_notification_channel}
 */
 export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformDataSource {
 
@@ -157,7 +152,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   * Generates CDKTF code for importing a DataGoogleMonitoringNotificationChannel resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleMonitoringNotificationChannel to import
-  * @param importFromId The id of the existing DataGoogleMonitoringNotificationChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleMonitoringNotificationChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleMonitoringNotificationChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -169,7 +164,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/monitoring_notification_channel google_monitoring_notification_channel} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/monitoring_notification_channel google_monitoring_notification_channel} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -180,7 +175,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
       terraformResourceType: 'google_monitoring_notification_channel',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

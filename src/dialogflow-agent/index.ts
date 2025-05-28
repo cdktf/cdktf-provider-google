@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -20,7 +15,7 @@ export interface DialogflowAgentConfig extends cdktf.TerraformMetaArguments {
   * * API_VERSION_V2: V2 API.
   * * API_VERSION_V2_BETA_1: V2beta1 API. Possible values: ["API_VERSION_V1", "API_VERSION_V2", "API_VERSION_V2_BETA_1"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#api_version DialogflowAgent#api_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#api_version DialogflowAgent#api_version}
   */
   readonly apiVersion?: string;
   /**
@@ -28,7 +23,7 @@ export interface DialogflowAgentConfig extends cdktf.TerraformMetaArguments {
   * into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
   * from the API will be shown in the [avatarUriBackend] field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#avatar_uri DialogflowAgent#avatar_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#avatar_uri DialogflowAgent#avatar_uri}
   */
   readonly avatarUri?: string;
   /**
@@ -38,36 +33,36 @@ export interface DialogflowAgentConfig extends cdktf.TerraformMetaArguments {
   * triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
   * default of 0.3 is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#classification_threshold DialogflowAgent#classification_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#classification_threshold DialogflowAgent#classification_threshold}
   */
   readonly classificationThreshold?: number;
   /**
   * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
   * for a list of the currently supported language codes. This field cannot be updated after creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#default_language_code DialogflowAgent#default_language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#default_language_code DialogflowAgent#default_language_code}
   */
   readonly defaultLanguageCode: string;
   /**
   * The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#description DialogflowAgent#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#description DialogflowAgent#description}
   */
   readonly description?: string;
   /**
   * The name of this agent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#display_name DialogflowAgent#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#display_name DialogflowAgent#display_name}
   */
   readonly displayName: string;
   /**
   * Determines whether this agent should log conversation queries.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#enable_logging DialogflowAgent#enable_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#enable_logging DialogflowAgent#enable_logging}
   */
   readonly enableLogging?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#id DialogflowAgent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#id DialogflowAgent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -80,17 +75,17 @@ export interface DialogflowAgentConfig extends cdktf.TerraformMetaArguments {
   * * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
   * using @sys.any or very large developer entities. Possible values: ["MATCH_MODE_HYBRID", "MATCH_MODE_ML_ONLY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#match_mode DialogflowAgent#match_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#match_mode DialogflowAgent#match_mode}
   */
   readonly matchMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#project DialogflowAgent#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#project DialogflowAgent#project}
   */
   readonly project?: string;
   /**
   * The list of all languages supported by this agent (except for the defaultLanguageCode).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#supported_language_codes DialogflowAgent#supported_language_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#supported_language_codes DialogflowAgent#supported_language_codes}
   */
   readonly supportedLanguageCodes?: string[];
   /**
@@ -101,34 +96,34 @@ export interface DialogflowAgentConfig extends cdktf.TerraformMetaArguments {
   * NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
   * the Terraform state and Dialogflow if the agent tier is changed outside of Terraform. Possible values: ["TIER_STANDARD", "TIER_ENTERPRISE", "TIER_ENTERPRISE_PLUS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#tier DialogflowAgent#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#tier DialogflowAgent#tier}
   */
   readonly tier?: string;
   /**
   * The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
   * Europe/Paris.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#time_zone DialogflowAgent#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#time_zone DialogflowAgent#time_zone}
   */
   readonly timeZone: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#timeouts DialogflowAgent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#timeouts DialogflowAgent#timeouts}
   */
   readonly timeouts?: DialogflowAgentTimeouts;
 }
 export interface DialogflowAgentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#create DialogflowAgent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#create DialogflowAgent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#delete DialogflowAgent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#delete DialogflowAgent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#update DialogflowAgent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#update DialogflowAgent#update}
   */
   readonly update?: string;
 }
@@ -280,7 +275,7 @@ export class DialogflowAgentTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent google_dialogflow_agent}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent google_dialogflow_agent}
 */
 export class DialogflowAgent extends cdktf.TerraformResource {
 
@@ -296,7 +291,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DialogflowAgent resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DialogflowAgent to import
-  * @param importFromId The id of the existing DialogflowAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DialogflowAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DialogflowAgent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -308,7 +303,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dialogflow_agent google_dialogflow_agent} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dialogflow_agent google_dialogflow_agent} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -319,7 +314,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_agent',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

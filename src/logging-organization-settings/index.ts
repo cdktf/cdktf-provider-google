@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface LoggingOrganizationSettingsConfig extends cdktf.TerraformMetaAr
   /**
   * If set to true, the _Default sink in newly created projects and folders will created in a disabled state. This can be used to automatically disable log storage if there is already an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled manually if needed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#disable_default_sink LoggingOrganizationSettings#disable_default_sink}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#disable_default_sink LoggingOrganizationSettings#disable_default_sink}
   */
   readonly disableDefaultSink?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#id LoggingOrganizationSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#id LoggingOrganizationSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,39 +23,39 @@ export interface LoggingOrganizationSettingsConfig extends cdktf.TerraformMetaAr
   /**
   * The resource name for the configured Cloud KMS key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#kms_key_name LoggingOrganizationSettings#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#kms_key_name LoggingOrganizationSettings#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
   * The organization for which to retrieve or configure settings.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#organization LoggingOrganizationSettings#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#organization LoggingOrganizationSettings#organization}
   */
   readonly organization: string;
   /**
   * The storage location that Cloud Logging will use to create new resources when a location is needed but not explicitly provided.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#storage_location LoggingOrganizationSettings#storage_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#storage_location LoggingOrganizationSettings#storage_location}
   */
   readonly storageLocation?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#timeouts LoggingOrganizationSettings#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#timeouts LoggingOrganizationSettings#timeouts}
   */
   readonly timeouts?: LoggingOrganizationSettingsTimeouts;
 }
 export interface LoggingOrganizationSettingsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#create LoggingOrganizationSettings#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#create LoggingOrganizationSettings#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#delete LoggingOrganizationSettings#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#delete LoggingOrganizationSettings#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#update LoggingOrganizationSettings#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#update LoggingOrganizationSettings#update}
   */
   readonly update?: string;
 }
@@ -212,7 +207,7 @@ export class LoggingOrganizationSettingsTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings google_logging_organization_settings}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings google_logging_organization_settings}
 */
 export class LoggingOrganizationSettings extends cdktf.TerraformResource {
 
@@ -228,7 +223,7 @@ export class LoggingOrganizationSettings extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LoggingOrganizationSettings resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LoggingOrganizationSettings to import
-  * @param importFromId The id of the existing LoggingOrganizationSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LoggingOrganizationSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LoggingOrganizationSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -240,7 +235,7 @@ export class LoggingOrganizationSettings extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/logging_organization_settings google_logging_organization_settings} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/logging_organization_settings google_logging_organization_settings} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -251,7 +246,7 @@ export class LoggingOrganizationSettings extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_organization_settings',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

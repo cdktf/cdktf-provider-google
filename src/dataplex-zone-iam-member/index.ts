@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +8,54 @@ import * as cdktf from 'cdktf';
 
 export interface DataplexZoneIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#dataplex_zone DataplexZoneIamMember#dataplex_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#dataplex_zone DataplexZoneIamMember#dataplex_zone}
   */
   readonly dataplexZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#id DataplexZoneIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#id DataplexZoneIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#lake DataplexZoneIamMember#lake}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#lake DataplexZoneIamMember#lake}
   */
   readonly lake: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#location DataplexZoneIamMember#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#location DataplexZoneIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#member DataplexZoneIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#member DataplexZoneIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#project DataplexZoneIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#project DataplexZoneIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#role DataplexZoneIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#role DataplexZoneIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#condition DataplexZoneIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#condition DataplexZoneIamMember#condition}
   */
   readonly condition?: DataplexZoneIamMemberCondition;
 }
 export interface DataplexZoneIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#description DataplexZoneIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#description DataplexZoneIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#expression DataplexZoneIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#expression DataplexZoneIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#title DataplexZoneIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#title DataplexZoneIamMember#title}
   */
   readonly title: string;
 }
@@ -196,7 +191,7 @@ export class DataplexZoneIamMemberConditionOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member google_dataplex_zone_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member google_dataplex_zone_iam_member}
 */
 export class DataplexZoneIamMember extends cdktf.TerraformResource {
 
@@ -212,7 +207,7 @@ export class DataplexZoneIamMember extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataplexZoneIamMember resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataplexZoneIamMember to import
-  * @param importFromId The id of the existing DataplexZoneIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataplexZoneIamMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataplexZoneIamMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -224,7 +219,7 @@ export class DataplexZoneIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataplex_zone_iam_member google_dataplex_zone_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataplex_zone_iam_member google_dataplex_zone_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -235,7 +230,7 @@ export class DataplexZoneIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_zone_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

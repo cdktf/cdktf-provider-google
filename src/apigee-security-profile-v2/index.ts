@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface ApigeeSecurityProfileV2Config extends cdktf.TerraformMetaArgume
   /**
   * Description of the security profile.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#description ApigeeSecurityProfileV2#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#description ApigeeSecurityProfileV2#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#id ApigeeSecurityProfileV2#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#id ApigeeSecurityProfileV2#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,37 +24,37 @@ export interface ApigeeSecurityProfileV2Config extends cdktf.TerraformMetaArgume
   * The Apigee Organization associated with the Apigee Security Profile V2,
   * in the format 'organizations/{{org_name}}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#org_id ApigeeSecurityProfileV2#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#org_id ApigeeSecurityProfileV2#org_id}
   */
   readonly orgId: string;
   /**
   * Resource ID of the security profile.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#profile_id ApigeeSecurityProfileV2#profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#profile_id ApigeeSecurityProfileV2#profile_id}
   */
   readonly profileId: string;
   /**
   * profile_assessment_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#profile_assessment_configs ApigeeSecurityProfileV2#profile_assessment_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#profile_assessment_configs ApigeeSecurityProfileV2#profile_assessment_configs}
   */
   readonly profileAssessmentConfigs: ApigeeSecurityProfileV2ProfileAssessmentConfigs[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#timeouts ApigeeSecurityProfileV2#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#timeouts ApigeeSecurityProfileV2#timeouts}
   */
   readonly timeouts?: ApigeeSecurityProfileV2Timeouts;
 }
 export interface ApigeeSecurityProfileV2ProfileAssessmentConfigs {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#assessment ApigeeSecurityProfileV2#assessment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#assessment ApigeeSecurityProfileV2#assessment}
   */
   readonly assessment: string;
   /**
   * The weight of the assessment. Possible values: ["MINOR", "MODERATE", "MAJOR"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#weight ApigeeSecurityProfileV2#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#weight ApigeeSecurityProfileV2#weight}
   */
   readonly weight: string;
 }
@@ -198,15 +193,15 @@ export class ApigeeSecurityProfileV2ProfileAssessmentConfigsList extends cdktf.C
 }
 export interface ApigeeSecurityProfileV2Timeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#create ApigeeSecurityProfileV2#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#create ApigeeSecurityProfileV2#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#delete ApigeeSecurityProfileV2#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#delete ApigeeSecurityProfileV2#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#update ApigeeSecurityProfileV2#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#update ApigeeSecurityProfileV2#update}
   */
   readonly update?: string;
 }
@@ -358,7 +353,7 @@ export class ApigeeSecurityProfileV2TimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2 google_apigee_security_profile_v2}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2 google_apigee_security_profile_v2}
 */
 export class ApigeeSecurityProfileV2 extends cdktf.TerraformResource {
 
@@ -374,7 +369,7 @@ export class ApigeeSecurityProfileV2 extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeSecurityProfileV2 resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeSecurityProfileV2 to import
-  * @param importFromId The id of the existing ApigeeSecurityProfileV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeSecurityProfileV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeSecurityProfileV2 to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -386,7 +381,7 @@ export class ApigeeSecurityProfileV2 extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/apigee_security_profile_v2 google_apigee_security_profile_v2} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_security_profile_v2 google_apigee_security_profile_v2} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -397,7 +392,7 @@ export class ApigeeSecurityProfileV2 extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_security_profile_v2',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

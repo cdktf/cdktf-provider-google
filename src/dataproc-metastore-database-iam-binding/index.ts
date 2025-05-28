@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +8,54 @@ import * as cdktf from 'cdktf';
 
 export interface DataprocMetastoreDatabaseIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#database DataprocMetastoreDatabaseIamBinding#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#database DataprocMetastoreDatabaseIamBinding#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#id DataprocMetastoreDatabaseIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#id DataprocMetastoreDatabaseIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#location DataprocMetastoreDatabaseIamBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#location DataprocMetastoreDatabaseIamBinding#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#members DataprocMetastoreDatabaseIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#members DataprocMetastoreDatabaseIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#project DataprocMetastoreDatabaseIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#project DataprocMetastoreDatabaseIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#role DataprocMetastoreDatabaseIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#role DataprocMetastoreDatabaseIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#service_id DataprocMetastoreDatabaseIamBinding#service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#service_id DataprocMetastoreDatabaseIamBinding#service_id}
   */
   readonly serviceId: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#condition DataprocMetastoreDatabaseIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#condition DataprocMetastoreDatabaseIamBinding#condition}
   */
   readonly condition?: DataprocMetastoreDatabaseIamBindingCondition;
 }
 export interface DataprocMetastoreDatabaseIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#description DataprocMetastoreDatabaseIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#description DataprocMetastoreDatabaseIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#expression DataprocMetastoreDatabaseIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#expression DataprocMetastoreDatabaseIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#title DataprocMetastoreDatabaseIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#title DataprocMetastoreDatabaseIamBinding#title}
   */
   readonly title: string;
 }
@@ -196,7 +191,7 @@ export class DataprocMetastoreDatabaseIamBindingConditionOutputReference extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding google_dataproc_metastore_database_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding google_dataproc_metastore_database_iam_binding}
 */
 export class DataprocMetastoreDatabaseIamBinding extends cdktf.TerraformResource {
 
@@ -212,7 +207,7 @@ export class DataprocMetastoreDatabaseIamBinding extends cdktf.TerraformResource
   * Generates CDKTF code for importing a DataprocMetastoreDatabaseIamBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataprocMetastoreDatabaseIamBinding to import
-  * @param importFromId The id of the existing DataprocMetastoreDatabaseIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataprocMetastoreDatabaseIamBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataprocMetastoreDatabaseIamBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -224,7 +219,7 @@ export class DataprocMetastoreDatabaseIamBinding extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/dataproc_metastore_database_iam_binding google_dataproc_metastore_database_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/dataproc_metastore_database_iam_binding google_dataproc_metastore_database_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -235,7 +230,7 @@ export class DataprocMetastoreDatabaseIamBinding extends cdktf.TerraformResource
       terraformResourceType: 'google_dataproc_metastore_database_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

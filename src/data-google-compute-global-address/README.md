@@ -1,3 +1,3 @@
 # `data_google_compute_global_address`
 
-Refer to the Terraform Registry for docs: [`data_google_compute_global_address`](https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/data-sources/compute_global_address).
+Refer to the Terraform Registry for docs: [`data_google_compute_global_address`](https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/compute_global_address).

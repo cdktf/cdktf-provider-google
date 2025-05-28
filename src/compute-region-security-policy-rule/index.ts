@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -25,17 +20,17 @@ export interface ComputeRegionSecurityPolicyRuleConfig extends cdktf.TerraformMe
   * 
   * * throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#action ComputeRegionSecurityPolicyRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#action ComputeRegionSecurityPolicyRule#action}
   */
   readonly action: string;
   /**
   * An optional description of this resource. Provide this property when you create the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#description ComputeRegionSecurityPolicyRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#description ComputeRegionSecurityPolicyRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#id ComputeRegionSecurityPolicyRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#id ComputeRegionSecurityPolicyRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -44,7 +39,7 @@ export interface ComputeRegionSecurityPolicyRuleConfig extends cdktf.TerraformMe
   /**
   * If set to true, the specified action is not enforced.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#preview ComputeRegionSecurityPolicyRule#preview}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#preview ComputeRegionSecurityPolicyRule#preview}
   */
   readonly preview?: boolean | cdktf.IResolvable;
   /**
@@ -52,53 +47,53 @@ export interface ComputeRegionSecurityPolicyRuleConfig extends cdktf.TerraformMe
   * The priority must be a positive value between 0 and 2147483647.
   * Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#priority ComputeRegionSecurityPolicyRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#priority ComputeRegionSecurityPolicyRule#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#project ComputeRegionSecurityPolicyRule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#project ComputeRegionSecurityPolicyRule#project}
   */
   readonly project?: string;
   /**
   * The Region in which the created Region Security Policy rule should reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#region ComputeRegionSecurityPolicyRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#region ComputeRegionSecurityPolicyRule#region}
   */
   readonly region: string;
   /**
   * The name of the security policy this rule belongs to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#security_policy ComputeRegionSecurityPolicyRule#security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#security_policy ComputeRegionSecurityPolicyRule#security_policy}
   */
   readonly securityPolicy: string;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#match ComputeRegionSecurityPolicyRule#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#match ComputeRegionSecurityPolicyRule#match}
   */
   readonly match?: ComputeRegionSecurityPolicyRuleMatch;
   /**
   * network_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#network_match ComputeRegionSecurityPolicyRule#network_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#network_match ComputeRegionSecurityPolicyRule#network_match}
   */
   readonly networkMatch?: ComputeRegionSecurityPolicyRuleNetworkMatch;
   /**
   * preconfigured_waf_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#preconfigured_waf_config ComputeRegionSecurityPolicyRule#preconfigured_waf_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#preconfigured_waf_config ComputeRegionSecurityPolicyRule#preconfigured_waf_config}
   */
   readonly preconfiguredWafConfig?: ComputeRegionSecurityPolicyRulePreconfiguredWafConfig;
   /**
   * rate_limit_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#rate_limit_options ComputeRegionSecurityPolicyRule#rate_limit_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#rate_limit_options ComputeRegionSecurityPolicyRule#rate_limit_options}
   */
   readonly rateLimitOptions?: ComputeRegionSecurityPolicyRuleRateLimitOptions;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#timeouts ComputeRegionSecurityPolicyRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#timeouts ComputeRegionSecurityPolicyRule#timeouts}
   */
   readonly timeouts?: ComputeRegionSecurityPolicyRuleTimeouts;
 }
@@ -106,7 +101,7 @@ export interface ComputeRegionSecurityPolicyRuleMatchConfig {
   /**
   * CIDR IP address range. Maximum number of srcIpRanges allowed is 10.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#src_ip_ranges ComputeRegionSecurityPolicyRule#src_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#src_ip_ranges ComputeRegionSecurityPolicyRule#src_ip_ranges}
   */
   readonly srcIpRanges?: string[];
 }
@@ -192,7 +187,7 @@ export interface ComputeRegionSecurityPolicyRuleMatchExpr {
   /**
   * Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#expression ComputeRegionSecurityPolicyRule#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#expression ComputeRegionSecurityPolicyRule#expression}
   */
   readonly expression: string;
 }
@@ -276,19 +271,19 @@ export interface ComputeRegionSecurityPolicyRuleMatch {
   * Preconfigured versioned expression. If this field is specified, config must also be specified.
   * Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding srcIpRange field in config. Possible values: ["SRC_IPS_V1"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#versioned_expr ComputeRegionSecurityPolicyRule#versioned_expr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#versioned_expr ComputeRegionSecurityPolicyRule#versioned_expr}
   */
   readonly versionedExpr?: string;
   /**
   * config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#config ComputeRegionSecurityPolicyRule#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#config ComputeRegionSecurityPolicyRule#config}
   */
   readonly config?: ComputeRegionSecurityPolicyRuleMatchConfig;
   /**
   * expr block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#expr ComputeRegionSecurityPolicyRule#expr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#expr ComputeRegionSecurityPolicyRule#expr}
   */
   readonly expr?: ComputeRegionSecurityPolicyRuleMatchExpr;
 }
@@ -432,13 +427,13 @@ export interface ComputeRegionSecurityPolicyRuleNetworkMatchUserDefinedFields {
   /**
   * Name of the user-defined field, as given in the definition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#name ComputeRegionSecurityPolicyRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#name ComputeRegionSecurityPolicyRule#name}
   */
   readonly name?: string;
   /**
   * Matching values of the field. Each element can be a 32-bit unsigned decimal or hexadecimal (starting with "0x") number (e.g. "64") or range (e.g. "0x400-0x7ff").
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#values ComputeRegionSecurityPolicyRule#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#values ComputeRegionSecurityPolicyRule#values}
   */
   readonly values?: string[];
 }
@@ -585,49 +580,49 @@ export interface ComputeRegionSecurityPolicyRuleNetworkMatch {
   /**
   * Destination IPv4/IPv6 addresses or CIDR prefixes, in standard text format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#dest_ip_ranges ComputeRegionSecurityPolicyRule#dest_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#dest_ip_ranges ComputeRegionSecurityPolicyRule#dest_ip_ranges}
   */
   readonly destIpRanges?: string[];
   /**
   * Destination port numbers for TCP/UDP/SCTP. Each element can be a 16-bit unsigned decimal number (e.g. "80") or range (e.g. "0-1023").
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#dest_ports ComputeRegionSecurityPolicyRule#dest_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#dest_ports ComputeRegionSecurityPolicyRule#dest_ports}
   */
   readonly destPorts?: string[];
   /**
   * IPv4 protocol / IPv6 next header (after extension headers). Each element can be an 8-bit unsigned decimal number (e.g. "6"), range (e.g. "253-254"), or one of the following protocol names: "tcp", "udp", "icmp", "esp", "ah", "ipip", or "sctp".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#ip_protocols ComputeRegionSecurityPolicyRule#ip_protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#ip_protocols ComputeRegionSecurityPolicyRule#ip_protocols}
   */
   readonly ipProtocols?: string[];
   /**
   * BGP Autonomous System Number associated with the source IP address.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#src_asns ComputeRegionSecurityPolicyRule#src_asns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#src_asns ComputeRegionSecurityPolicyRule#src_asns}
   */
   readonly srcAsns?: number[];
   /**
   * Source IPv4/IPv6 addresses or CIDR prefixes, in standard text format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#src_ip_ranges ComputeRegionSecurityPolicyRule#src_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#src_ip_ranges ComputeRegionSecurityPolicyRule#src_ip_ranges}
   */
   readonly srcIpRanges?: string[];
   /**
   * Source port numbers for TCP/UDP/SCTP. Each element can be a 16-bit unsigned decimal number (e.g. "80") or range (e.g. "0-1023").
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#src_ports ComputeRegionSecurityPolicyRule#src_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#src_ports ComputeRegionSecurityPolicyRule#src_ports}
   */
   readonly srcPorts?: string[];
   /**
   * Two-letter ISO 3166-1 alpha-2 country code associated with the source IP address.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#src_region_codes ComputeRegionSecurityPolicyRule#src_region_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#src_region_codes ComputeRegionSecurityPolicyRule#src_region_codes}
   */
   readonly srcRegionCodes?: string[];
   /**
   * user_defined_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#user_defined_fields ComputeRegionSecurityPolicyRule#user_defined_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#user_defined_fields ComputeRegionSecurityPolicyRule#user_defined_fields}
   */
   readonly userDefinedFields?: ComputeRegionSecurityPolicyRuleNetworkMatchUserDefinedFields[] | cdktf.IResolvable;
 }
@@ -922,14 +917,14 @@ export interface ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusionR
   * CONTAINS: The operator matches if the field value contains the specified value.
   * EQUALS_ANY: The operator matches if the field value is any value. Possible values: ["CONTAINS", "ENDS_WITH", "EQUALS", "EQUALS_ANY", "STARTS_WITH"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#operator ComputeRegionSecurityPolicyRule#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#operator ComputeRegionSecurityPolicyRule#operator}
   */
   readonly operator: string;
   /**
   * A request field matching the specified value will be excluded from inspection during preconfigured WAF evaluation.
   * The field value must be given if the field operator is not EQUALS_ANY, and cannot be given if the field operator is EQUALS_ANY.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#value ComputeRegionSecurityPolicyRule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#value ComputeRegionSecurityPolicyRule#value}
   */
   readonly value?: string;
 }
@@ -1079,14 +1074,14 @@ export interface ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusionR
   * CONTAINS: The operator matches if the field value contains the specified value.
   * EQUALS_ANY: The operator matches if the field value is any value. Possible values: ["CONTAINS", "ENDS_WITH", "EQUALS", "EQUALS_ANY", "STARTS_WITH"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#operator ComputeRegionSecurityPolicyRule#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#operator ComputeRegionSecurityPolicyRule#operator}
   */
   readonly operator: string;
   /**
   * A request field matching the specified value will be excluded from inspection during preconfigured WAF evaluation.
   * The field value must be given if the field operator is not EQUALS_ANY, and cannot be given if the field operator is EQUALS_ANY.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#value ComputeRegionSecurityPolicyRule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#value ComputeRegionSecurityPolicyRule#value}
   */
   readonly value?: string;
 }
@@ -1236,14 +1231,14 @@ export interface ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusionR
   * CONTAINS: The operator matches if the field value contains the specified value.
   * EQUALS_ANY: The operator matches if the field value is any value. Possible values: ["CONTAINS", "ENDS_WITH", "EQUALS", "EQUALS_ANY", "STARTS_WITH"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#operator ComputeRegionSecurityPolicyRule#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#operator ComputeRegionSecurityPolicyRule#operator}
   */
   readonly operator: string;
   /**
   * A request field matching the specified value will be excluded from inspection during preconfigured WAF evaluation.
   * The field value must be given if the field operator is not EQUALS_ANY, and cannot be given if the field operator is EQUALS_ANY.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#value ComputeRegionSecurityPolicyRule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#value ComputeRegionSecurityPolicyRule#value}
   */
   readonly value?: string;
 }
@@ -1393,14 +1388,14 @@ export interface ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusionR
   * CONTAINS: The operator matches if the field value contains the specified value.
   * EQUALS_ANY: The operator matches if the field value is any value. Possible values: ["CONTAINS", "ENDS_WITH", "EQUALS", "EQUALS_ANY", "STARTS_WITH"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#operator ComputeRegionSecurityPolicyRule#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#operator ComputeRegionSecurityPolicyRule#operator}
   */
   readonly operator: string;
   /**
   * A request field matching the specified value will be excluded from inspection during preconfigured WAF evaluation.
   * The field value must be given if the field operator is not EQUALS_ANY, and cannot be given if the field operator is EQUALS_ANY.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#value ComputeRegionSecurityPolicyRule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#value ComputeRegionSecurityPolicyRule#value}
   */
   readonly value?: string;
 }
@@ -1545,37 +1540,37 @@ export interface ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusion 
   * A list of target rule IDs under the WAF rule set to apply the preconfigured WAF exclusion.
   * If omitted, it refers to all the rule IDs under the WAF rule set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#target_rule_ids ComputeRegionSecurityPolicyRule#target_rule_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#target_rule_ids ComputeRegionSecurityPolicyRule#target_rule_ids}
   */
   readonly targetRuleIds?: string[];
   /**
   * Target WAF rule set to apply the preconfigured WAF exclusion.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#target_rule_set ComputeRegionSecurityPolicyRule#target_rule_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#target_rule_set ComputeRegionSecurityPolicyRule#target_rule_set}
   */
   readonly targetRuleSet: string;
   /**
   * request_cookie block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#request_cookie ComputeRegionSecurityPolicyRule#request_cookie}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#request_cookie ComputeRegionSecurityPolicyRule#request_cookie}
   */
   readonly requestCookie?: ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusionRequestCookie[] | cdktf.IResolvable;
   /**
   * request_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#request_header ComputeRegionSecurityPolicyRule#request_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#request_header ComputeRegionSecurityPolicyRule#request_header}
   */
   readonly requestHeader?: ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusionRequestHeader[] | cdktf.IResolvable;
   /**
   * request_query_param block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#request_query_param ComputeRegionSecurityPolicyRule#request_query_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#request_query_param ComputeRegionSecurityPolicyRule#request_query_param}
   */
   readonly requestQueryParam?: ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusionRequestQueryParam[] | cdktf.IResolvable;
   /**
   * request_uri block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#request_uri ComputeRegionSecurityPolicyRule#request_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#request_uri ComputeRegionSecurityPolicyRule#request_uri}
   */
   readonly requestUri?: ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusionRequestUri[] | cdktf.IResolvable;
 }
@@ -1835,7 +1830,7 @@ export interface ComputeRegionSecurityPolicyRulePreconfiguredWafConfig {
   /**
   * exclusion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#exclusion ComputeRegionSecurityPolicyRule#exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#exclusion ComputeRegionSecurityPolicyRule#exclusion}
   */
   readonly exclusion?: ComputeRegionSecurityPolicyRulePreconfiguredWafConfigExclusion[] | cdktf.IResolvable;
 }
@@ -1921,13 +1916,13 @@ export interface ComputeRegionSecurityPolicyRuleRateLimitOptionsBanThreshold {
   /**
   * Number of HTTP(S) requests for calculating the threshold.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#count ComputeRegionSecurityPolicyRule#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#count ComputeRegionSecurityPolicyRule#count}
   */
   readonly count?: number;
   /**
   * Interval over which the threshold is computed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#interval_sec ComputeRegionSecurityPolicyRule#interval_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#interval_sec ComputeRegionSecurityPolicyRule#interval_sec}
   */
   readonly intervalSec?: number;
 }
@@ -2044,7 +2039,7 @@ export interface ComputeRegionSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConf
   * HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.
   * HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#enforce_on_key_name ComputeRegionSecurityPolicyRule#enforce_on_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#enforce_on_key_name ComputeRegionSecurityPolicyRule#enforce_on_key_name}
   */
   readonly enforceOnKeyName?: string;
   /**
@@ -2060,7 +2055,7 @@ export interface ComputeRegionSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConf
   * * TLS_JA3_FINGERPRINT: JA3 TLS/SSL fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3. If not available, the key type defaults to ALL.
   * * USER_IP: The IP address of the originating client, which is resolved based on "userIpRequestHeaders" configured with the security policy. If there is no "userIpRequestHeaders" configuration or an IP address cannot be resolved from it, the key type defaults to IP. Possible values: ["ALL", "IP", "HTTP_HEADER", "XFF_IP", "HTTP_COOKIE", "HTTP_PATH", "SNI", "REGION_CODE", "TLS_JA3_FINGERPRINT", "USER_IP"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#enforce_on_key_type ComputeRegionSecurityPolicyRule#enforce_on_key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#enforce_on_key_type ComputeRegionSecurityPolicyRule#enforce_on_key_type}
   */
   readonly enforceOnKeyType?: string;
 }
@@ -2207,13 +2202,13 @@ export interface ComputeRegionSecurityPolicyRuleRateLimitOptionsRateLimitThresho
   /**
   * Number of HTTP(S) requests for calculating the threshold.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#count ComputeRegionSecurityPolicyRule#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#count ComputeRegionSecurityPolicyRule#count}
   */
   readonly count?: number;
   /**
   * Interval over which the threshold is computed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#interval_sec ComputeRegionSecurityPolicyRule#interval_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#interval_sec ComputeRegionSecurityPolicyRule#interval_sec}
   */
   readonly intervalSec?: number;
 }
@@ -2329,14 +2324,14 @@ export interface ComputeRegionSecurityPolicyRuleRateLimitOptions {
   * Can only be specified if the action for the rule is "rate_based_ban".
   * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#ban_duration_sec ComputeRegionSecurityPolicyRule#ban_duration_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#ban_duration_sec ComputeRegionSecurityPolicyRule#ban_duration_sec}
   */
   readonly banDurationSec?: number;
   /**
   * Action to take for requests that are under the configured rate limit threshold.
   * Valid option is "allow" only.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#conform_action ComputeRegionSecurityPolicyRule#conform_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#conform_action ComputeRegionSecurityPolicyRule#conform_action}
   */
   readonly conformAction?: string;
   /**
@@ -2352,7 +2347,7 @@ export interface ComputeRegionSecurityPolicyRuleRateLimitOptions {
   * * TLS_JA3_FINGERPRINT: JA3 TLS/SSL fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3. If not available, the key type defaults to ALL.
   * * USER_IP: The IP address of the originating client, which is resolved based on "userIpRequestHeaders" configured with the security policy. If there is no "userIpRequestHeaders" configuration or an IP address cannot be resolved from it, the key type defaults to IP. Possible values: ["ALL", "IP", "HTTP_HEADER", "XFF_IP", "HTTP_COOKIE", "HTTP_PATH", "SNI", "REGION_CODE", "TLS_JA3_FINGERPRINT", "USER_IP"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#enforce_on_key ComputeRegionSecurityPolicyRule#enforce_on_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#enforce_on_key ComputeRegionSecurityPolicyRule#enforce_on_key}
   */
   readonly enforceOnKey?: string;
   /**
@@ -2360,32 +2355,32 @@ export interface ComputeRegionSecurityPolicyRuleRateLimitOptions {
   * HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.
   * HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#enforce_on_key_name ComputeRegionSecurityPolicyRule#enforce_on_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#enforce_on_key_name ComputeRegionSecurityPolicyRule#enforce_on_key_name}
   */
   readonly enforceOnKeyName?: string;
   /**
   * Action to take for requests that are above the configured rate limit threshold, to deny with a specified HTTP response code.
   * Valid options are deny(STATUS), where valid values for STATUS are 403, 404, 429, and 502.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#exceed_action ComputeRegionSecurityPolicyRule#exceed_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#exceed_action ComputeRegionSecurityPolicyRule#exceed_action}
   */
   readonly exceedAction?: string;
   /**
   * ban_threshold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#ban_threshold ComputeRegionSecurityPolicyRule#ban_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#ban_threshold ComputeRegionSecurityPolicyRule#ban_threshold}
   */
   readonly banThreshold?: ComputeRegionSecurityPolicyRuleRateLimitOptionsBanThreshold;
   /**
   * enforce_on_key_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#enforce_on_key_configs ComputeRegionSecurityPolicyRule#enforce_on_key_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#enforce_on_key_configs ComputeRegionSecurityPolicyRule#enforce_on_key_configs}
   */
   readonly enforceOnKeyConfigs?: ComputeRegionSecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigs[] | cdktf.IResolvable;
   /**
   * rate_limit_threshold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#rate_limit_threshold ComputeRegionSecurityPolicyRule#rate_limit_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#rate_limit_threshold ComputeRegionSecurityPolicyRule#rate_limit_threshold}
   */
   readonly rateLimitThreshold?: ComputeRegionSecurityPolicyRuleRateLimitOptionsRateLimitThreshold;
 }
@@ -2672,15 +2667,15 @@ export class ComputeRegionSecurityPolicyRuleRateLimitOptionsOutputReference exte
 }
 export interface ComputeRegionSecurityPolicyRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#create ComputeRegionSecurityPolicyRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#create ComputeRegionSecurityPolicyRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#delete ComputeRegionSecurityPolicyRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#delete ComputeRegionSecurityPolicyRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#update ComputeRegionSecurityPolicyRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#update ComputeRegionSecurityPolicyRule#update}
   */
   readonly update?: string;
 }
@@ -2832,7 +2827,7 @@ export class ComputeRegionSecurityPolicyRuleTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule google_compute_region_security_policy_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule google_compute_region_security_policy_rule}
 */
 export class ComputeRegionSecurityPolicyRule extends cdktf.TerraformResource {
 
@@ -2848,7 +2843,7 @@ export class ComputeRegionSecurityPolicyRule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRegionSecurityPolicyRule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRegionSecurityPolicyRule to import
-  * @param importFromId The id of the existing ComputeRegionSecurityPolicyRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRegionSecurityPolicyRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRegionSecurityPolicyRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2860,7 +2855,7 @@ export class ComputeRegionSecurityPolicyRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/compute_region_security_policy_rule google_compute_region_security_policy_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_region_security_policy_rule google_compute_region_security_policy_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2871,7 +2866,7 @@ export class ComputeRegionSecurityPolicyRule extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_security_policy_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
