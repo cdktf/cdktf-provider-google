@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +15,23 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   /**
   * Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
   */
   readonly defaultEventBasedHold?: boolean | cdktf.IResolvable;
   /**
   * Enables each object in the bucket to have its own retention policy, which prevents deletion until stored for a specific length of time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#enable_object_retention StorageBucket#enable_object_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#enable_object_retention StorageBucket#enable_object_retention}
   */
   readonly enableObjectRetention?: boolean | cdktf.IResolvable;
   /**
   * When deleting a bucket, this boolean option will delete all contained objects, or anywhereCaches (if any). If you try to delete a bucket that contains objects or anywhereCaches, Terraform will fail that run, deleting anywhereCaches may take 80 minutes to complete.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#force_destroy StorageBucket#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#force_destroy StorageBucket#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#id StorageBucket#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#id StorageBucket#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,127 +40,133 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   /**
   * A set of key/value label pairs to assign to the bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#labels StorageBucket#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#labels StorageBucket#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The Google Cloud Storage location or region.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#location StorageBucket#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#location StorageBucket#location}
   */
   readonly location: string;
   /**
   * The name of the bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#name StorageBucket#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#name StorageBucket#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#project StorageBucket#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#project StorageBucket#project}
   */
   readonly project?: string;
   /**
   * Prevents public access to a bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
   */
   readonly publicAccessPrevention?: string;
   /**
   * Enables Requester Pays on a storage bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#requester_pays StorageBucket#requester_pays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#requester_pays StorageBucket#requester_pays}
   */
   readonly requesterPays?: boolean | cdktf.IResolvable;
   /**
   * Specifies the RPO setting of bucket. If set 'ASYNC_TURBO', The Turbo Replication will be enabled for the dual-region bucket. Value 'DEFAULT' will set RPO setting to default. Turbo Replication is only for buckets in dual-regions.See the docs for more details.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#rpo StorageBucket#rpo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#rpo StorageBucket#rpo}
   */
   readonly rpo?: string;
   /**
   * The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
   */
   readonly storageClass?: string;
   /**
   * Enables uniform bucket-level access on a bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
   */
   readonly uniformBucketLevelAccess?: boolean | cdktf.IResolvable;
   /**
   * autoclass block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#autoclass StorageBucket#autoclass}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#autoclass StorageBucket#autoclass}
   */
   readonly autoclass?: StorageBucketAutoclass;
   /**
   * cors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#cors StorageBucket#cors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#cors StorageBucket#cors}
   */
   readonly cors?: StorageBucketCors[] | cdktf.IResolvable;
   /**
   * custom_placement_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
   */
   readonly customPlacementConfig?: StorageBucketCustomPlacementConfig;
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#encryption StorageBucket#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#encryption StorageBucket#encryption}
   */
   readonly encryption?: StorageBucketEncryption;
   /**
   * hierarchical_namespace block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#hierarchical_namespace StorageBucket#hierarchical_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#hierarchical_namespace StorageBucket#hierarchical_namespace}
   */
   readonly hierarchicalNamespace?: StorageBucketHierarchicalNamespace;
   /**
+  * ip_filter block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#ip_filter StorageBucket#ip_filter}
+  */
+  readonly ipFilter?: StorageBucketIpFilter;
+  /**
   * lifecycle_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
   */
   readonly lifecycleRule?: StorageBucketLifecycleRule[] | cdktf.IResolvable;
   /**
   * logging block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#logging StorageBucket#logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#logging StorageBucket#logging}
   */
   readonly logging?: StorageBucketLogging;
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#retention_policy StorageBucket#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#retention_policy StorageBucket#retention_policy}
   */
   readonly retentionPolicy?: StorageBucketRetentionPolicy;
   /**
   * soft_delete_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#soft_delete_policy StorageBucket#soft_delete_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#soft_delete_policy StorageBucket#soft_delete_policy}
   */
   readonly softDeletePolicy?: StorageBucketSoftDeletePolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#timeouts StorageBucket#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#timeouts StorageBucket#timeouts}
   */
   readonly timeouts?: StorageBucketTimeouts;
   /**
   * versioning block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#versioning StorageBucket#versioning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#versioning StorageBucket#versioning}
   */
   readonly versioning?: StorageBucketVersioning;
   /**
   * website block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#website StorageBucket#website}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#website StorageBucket#website}
   */
   readonly website?: StorageBucketWebsite;
 }
@@ -168,13 +174,13 @@ export interface StorageBucketAutoclass {
   /**
   * While set to true, autoclass automatically transitions objects in your bucket to appropriate storage classes based on each object's access pattern.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
   * The storage class that objects in the bucket eventually transition to if they are not read for a certain length of time. Supported values include: NEARLINE, ARCHIVE.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#terminal_storage_class StorageBucket#terminal_storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#terminal_storage_class StorageBucket#terminal_storage_class}
   */
   readonly terminalStorageClass?: string;
 }
@@ -286,25 +292,25 @@ export interface StorageBucketCors {
   /**
   * The value, in seconds, to return in the Access-Control-Max-Age header used in preflight responses.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#max_age_seconds StorageBucket#max_age_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#max_age_seconds StorageBucket#max_age_seconds}
   */
   readonly maxAgeSeconds?: number;
   /**
   * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#method StorageBucket#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#method StorageBucket#method}
   */
   readonly method?: string[];
   /**
   * The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#origin StorageBucket#origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#origin StorageBucket#origin}
   */
   readonly origin?: string[];
   /**
   * The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#response_header StorageBucket#response_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#response_header StorageBucket#response_header}
   */
   readonly responseHeader?: string[];
 }
@@ -509,7 +515,7 @@ export interface StorageBucketCustomPlacementConfig {
   /**
   * The list of individual regions that comprise a dual-region bucket. See the docs for a list of acceptable regions. Note: If any of the data_locations changes, it will recreate the bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#data_locations StorageBucket#data_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#data_locations StorageBucket#data_locations}
   */
   readonly dataLocations: string[];
 }
@@ -592,7 +598,7 @@ export interface StorageBucketEncryption {
   /**
   * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified. You must pay attention to whether the crypto key is available in the location that this bucket is created in. See the docs for more details.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#default_kms_key_name StorageBucket#default_kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#default_kms_key_name StorageBucket#default_kms_key_name}
   */
   readonly defaultKmsKeyName: string;
 }
@@ -675,7 +681,7 @@ export interface StorageBucketHierarchicalNamespace {
   /**
   * Set this field true to organize bucket with logical file system structure.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -754,17 +760,400 @@ export class StorageBucketHierarchicalNamespaceOutputReference extends cdktf.Com
     return this._enabled;
   }
 }
+export interface StorageBucketIpFilterPublicNetworkSource {
+  /**
+  * The list of public IPv4, IPv6 cidr ranges that are allowed to access the bucket.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#allowed_ip_cidr_ranges StorageBucket#allowed_ip_cidr_ranges}
+  */
+  readonly allowedIpCidrRanges: string[];
+}
+
+export function storageBucketIpFilterPublicNetworkSourceToTerraform(struct?: StorageBucketIpFilterPublicNetworkSourceOutputReference | StorageBucketIpFilterPublicNetworkSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_ip_cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedIpCidrRanges),
+  }
+}
+
+
+export function storageBucketIpFilterPublicNetworkSourceToHclTerraform(struct?: StorageBucketIpFilterPublicNetworkSourceOutputReference | StorageBucketIpFilterPublicNetworkSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_ip_cidr_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedIpCidrRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class StorageBucketIpFilterPublicNetworkSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageBucketIpFilterPublicNetworkSource | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedIpCidrRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedIpCidrRanges = this._allowedIpCidrRanges;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketIpFilterPublicNetworkSource | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedIpCidrRanges = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedIpCidrRanges = value.allowedIpCidrRanges;
+    }
+  }
+
+  // allowed_ip_cidr_ranges - computed: false, optional: false, required: true
+  private _allowedIpCidrRanges?: string[]; 
+  public get allowedIpCidrRanges() {
+    return this.getListAttribute('allowed_ip_cidr_ranges');
+  }
+  public set allowedIpCidrRanges(value: string[]) {
+    this._allowedIpCidrRanges = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedIpCidrRangesInput() {
+    return this._allowedIpCidrRanges;
+  }
+}
+export interface StorageBucketIpFilterVpcNetworkSources {
+  /**
+  * The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#allowed_ip_cidr_ranges StorageBucket#allowed_ip_cidr_ranges}
+  */
+  readonly allowedIpCidrRanges: string[];
+  /**
+  * Name of the network. Format: projects/{PROJECT_ID}/global/networks/{NETWORK_NAME}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#network StorageBucket#network}
+  */
+  readonly network: string;
+}
+
+export function storageBucketIpFilterVpcNetworkSourcesToTerraform(struct?: StorageBucketIpFilterVpcNetworkSources | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_ip_cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedIpCidrRanges),
+    network: cdktf.stringToTerraform(struct!.network),
+  }
+}
+
+
+export function storageBucketIpFilterVpcNetworkSourcesToHclTerraform(struct?: StorageBucketIpFilterVpcNetworkSources | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_ip_cidr_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedIpCidrRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    network: {
+      value: cdktf.stringToHclTerraform(struct!.network),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class StorageBucketIpFilterVpcNetworkSourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageBucketIpFilterVpcNetworkSources | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedIpCidrRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedIpCidrRanges = this._allowedIpCidrRanges;
+    }
+    if (this._network !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketIpFilterVpcNetworkSources | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowedIpCidrRanges = undefined;
+      this._network = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowedIpCidrRanges = value.allowedIpCidrRanges;
+      this._network = value.network;
+    }
+  }
+
+  // allowed_ip_cidr_ranges - computed: false, optional: false, required: true
+  private _allowedIpCidrRanges?: string[]; 
+  public get allowedIpCidrRanges() {
+    return this.getListAttribute('allowed_ip_cidr_ranges');
+  }
+  public set allowedIpCidrRanges(value: string[]) {
+    this._allowedIpCidrRanges = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedIpCidrRangesInput() {
+    return this._allowedIpCidrRanges;
+  }
+
+  // network - computed: false, optional: false, required: true
+  private _network?: string; 
+  public get network() {
+    return this.getStringAttribute('network');
+  }
+  public set network(value: string) {
+    this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network;
+  }
+}
+
+export class StorageBucketIpFilterVpcNetworkSourcesList extends cdktf.ComplexList {
+  public internalValue? : StorageBucketIpFilterVpcNetworkSources[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageBucketIpFilterVpcNetworkSourcesOutputReference {
+    return new StorageBucketIpFilterVpcNetworkSourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface StorageBucketIpFilter {
+  /**
+  * The mode of the IP filter. Valid values are 'Enabled' and 'Disabled'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#mode StorageBucket#mode}
+  */
+  readonly mode: string;
+  /**
+  * public_network_source block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#public_network_source StorageBucket#public_network_source}
+  */
+  readonly publicNetworkSource?: StorageBucketIpFilterPublicNetworkSource;
+  /**
+  * vpc_network_sources block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#vpc_network_sources StorageBucket#vpc_network_sources}
+  */
+  readonly vpcNetworkSources?: StorageBucketIpFilterVpcNetworkSources[] | cdktf.IResolvable;
+}
+
+export function storageBucketIpFilterToTerraform(struct?: StorageBucketIpFilterOutputReference | StorageBucketIpFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    public_network_source: storageBucketIpFilterPublicNetworkSourceToTerraform(struct!.publicNetworkSource),
+    vpc_network_sources: cdktf.listMapper(storageBucketIpFilterVpcNetworkSourcesToTerraform, true)(struct!.vpcNetworkSources),
+  }
+}
+
+
+export function storageBucketIpFilterToHclTerraform(struct?: StorageBucketIpFilterOutputReference | StorageBucketIpFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    public_network_source: {
+      value: storageBucketIpFilterPublicNetworkSourceToHclTerraform(struct!.publicNetworkSource),
+      isBlock: true,
+      type: "list",
+      storageClassType: "StorageBucketIpFilterPublicNetworkSourceList",
+    },
+    vpc_network_sources: {
+      value: cdktf.listMapperHcl(storageBucketIpFilterVpcNetworkSourcesToHclTerraform, true)(struct!.vpcNetworkSources),
+      isBlock: true,
+      type: "list",
+      storageClassType: "StorageBucketIpFilterVpcNetworkSourcesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class StorageBucketIpFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageBucketIpFilter | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._publicNetworkSource?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicNetworkSource = this._publicNetworkSource?.internalValue;
+    }
+    if (this._vpcNetworkSources?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vpcNetworkSources = this._vpcNetworkSources?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketIpFilter | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._mode = undefined;
+      this._publicNetworkSource.internalValue = undefined;
+      this._vpcNetworkSources.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._mode = value.mode;
+      this._publicNetworkSource.internalValue = value.publicNetworkSource;
+      this._vpcNetworkSources.internalValue = value.vpcNetworkSources;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // public_network_source - computed: false, optional: true, required: false
+  private _publicNetworkSource = new StorageBucketIpFilterPublicNetworkSourceOutputReference(this, "public_network_source");
+  public get publicNetworkSource() {
+    return this._publicNetworkSource;
+  }
+  public putPublicNetworkSource(value: StorageBucketIpFilterPublicNetworkSource) {
+    this._publicNetworkSource.internalValue = value;
+  }
+  public resetPublicNetworkSource() {
+    this._publicNetworkSource.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkSourceInput() {
+    return this._publicNetworkSource.internalValue;
+  }
+
+  // vpc_network_sources - computed: false, optional: true, required: false
+  private _vpcNetworkSources = new StorageBucketIpFilterVpcNetworkSourcesList(this, "vpc_network_sources", false);
+  public get vpcNetworkSources() {
+    return this._vpcNetworkSources;
+  }
+  public putVpcNetworkSources(value: StorageBucketIpFilterVpcNetworkSources[] | cdktf.IResolvable) {
+    this._vpcNetworkSources.internalValue = value;
+  }
+  public resetVpcNetworkSources() {
+    this._vpcNetworkSources.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcNetworkSourcesInput() {
+    return this._vpcNetworkSources.internalValue;
+  }
+}
 export interface StorageBucketLifecycleRuleAction {
   /**
   * The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
   */
   readonly storageClass?: string;
   /**
   * The type of the action of this Lifecycle Rule. Supported values include: Delete, SetStorageClass and AbortIncompleteMultipartUpload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#type StorageBucket#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#type StorageBucket#type}
   */
   readonly type: string;
 }
@@ -876,92 +1265,92 @@ export interface StorageBucketLifecycleRuleCondition {
   /**
   * Minimum age of an object in days to satisfy this condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#age StorageBucket#age}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#age StorageBucket#age}
   */
   readonly age?: number;
   /**
   * Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#created_before StorageBucket#created_before}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#created_before StorageBucket#created_before}
   */
   readonly createdBefore?: string;
   /**
   * Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#custom_time_before StorageBucket#custom_time_before}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#custom_time_before StorageBucket#custom_time_before}
   */
   readonly customTimeBefore?: string;
   /**
   * Number of days elapsed since the user-specified timestamp set on an object.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#days_since_custom_time StorageBucket#days_since_custom_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#days_since_custom_time StorageBucket#days_since_custom_time}
   */
   readonly daysSinceCustomTime?: number;
   /**
   * Number of days elapsed since the noncurrent timestamp of an object. This
   * 										condition is relevant only for versioned objects.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
   */
   readonly daysSinceNoncurrentTime?: number;
   /**
   * One or more matching name prefixes to satisfy this condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#matches_prefix StorageBucket#matches_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#matches_prefix StorageBucket#matches_prefix}
   */
   readonly matchesPrefix?: string[];
   /**
   * Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
   */
   readonly matchesStorageClass?: string[];
   /**
   * One or more matching name suffixes to satisfy this condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#matches_suffix StorageBucket#matches_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#matches_suffix StorageBucket#matches_suffix}
   */
   readonly matchesSuffix?: string[];
   /**
   * Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#noncurrent_time_before StorageBucket#noncurrent_time_before}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#noncurrent_time_before StorageBucket#noncurrent_time_before}
   */
   readonly noncurrentTimeBefore?: string;
   /**
   * Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#num_newer_versions StorageBucket#num_newer_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#num_newer_versions StorageBucket#num_newer_versions}
   */
   readonly numNewerVersions?: number;
   /**
   * While set true, age value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the age field. It can be used alone or together with age.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#send_age_if_zero StorageBucket#send_age_if_zero}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#send_age_if_zero StorageBucket#send_age_if_zero}
   */
   readonly sendAgeIfZero?: boolean | cdktf.IResolvable;
   /**
   * While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#send_days_since_custom_time_if_zero StorageBucket#send_days_since_custom_time_if_zero}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#send_days_since_custom_time_if_zero StorageBucket#send_days_since_custom_time_if_zero}
   */
   readonly sendDaysSinceCustomTimeIfZero?: boolean | cdktf.IResolvable;
   /**
   * While set true, days_since_noncurrent_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#send_days_since_noncurrent_time_if_zero StorageBucket#send_days_since_noncurrent_time_if_zero}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#send_days_since_noncurrent_time_if_zero StorageBucket#send_days_since_noncurrent_time_if_zero}
   */
   readonly sendDaysSinceNoncurrentTimeIfZero?: boolean | cdktf.IResolvable;
   /**
   * While set true, num_newer_versions value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#send_num_newer_versions_if_zero StorageBucket#send_num_newer_versions_if_zero}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#send_num_newer_versions_if_zero StorageBucket#send_num_newer_versions_if_zero}
   */
   readonly sendNumNewerVersionsIfZero?: boolean | cdktf.IResolvable;
   /**
   * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#with_state StorageBucket#with_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#with_state StorageBucket#with_state}
   */
   readonly withState?: string;
 }
@@ -1453,13 +1842,13 @@ export interface StorageBucketLifecycleRule {
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#action StorageBucket#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#action StorageBucket#action}
   */
   readonly action: StorageBucketLifecycleRuleAction;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#condition StorageBucket#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#condition StorageBucket#condition}
   */
   readonly condition: StorageBucketLifecycleRuleCondition;
 }
@@ -1600,13 +1989,13 @@ export interface StorageBucketLogging {
   /**
   * The bucket that will receive log objects.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#log_bucket StorageBucket#log_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#log_bucket StorageBucket#log_bucket}
   */
   readonly logBucket: string;
   /**
   * The object prefix for log objects. If it's not provided, by default Google Cloud Storage sets this to this bucket's name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#log_object_prefix StorageBucket#log_object_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#log_object_prefix StorageBucket#log_object_prefix}
   */
   readonly logObjectPrefix?: string;
 }
@@ -1718,13 +2107,13 @@ export interface StorageBucketRetentionPolicy {
   /**
   * If set to true, the bucket will be locked and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#is_locked StorageBucket#is_locked}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#is_locked StorageBucket#is_locked}
   */
   readonly isLocked?: boolean | cdktf.IResolvable;
   /**
   * The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#retention_period StorageBucket#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#retention_period StorageBucket#retention_period}
   */
   readonly retentionPeriod: number;
 }
@@ -1836,7 +2225,7 @@ export interface StorageBucketSoftDeletePolicy {
   /**
   * The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be permanently deleted. Default value is 604800.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#retention_duration_seconds StorageBucket#retention_duration_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#retention_duration_seconds StorageBucket#retention_duration_seconds}
   */
   readonly retentionDurationSeconds?: number;
 }
@@ -1925,15 +2314,15 @@ export class StorageBucketSoftDeletePolicyOutputReference extends cdktf.ComplexO
 }
 export interface StorageBucketTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#create StorageBucket#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#create StorageBucket#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#read StorageBucket#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#read StorageBucket#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#update StorageBucket#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#update StorageBucket#update}
   */
   readonly update?: string;
 }
@@ -2087,7 +2476,7 @@ export interface StorageBucketVersioning {
   /**
   * While set to true, versioning is fully enabled for this bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -2170,13 +2559,13 @@ export interface StorageBucketWebsite {
   /**
   * Behaves as the bucket's directory index where missing objects are treated as potential directories.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#main_page_suffix StorageBucket#main_page_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#main_page_suffix StorageBucket#main_page_suffix}
   */
   readonly mainPageSuffix?: string;
   /**
   * The custom object to return when a requested resource is not found.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#not_found_page StorageBucket#not_found_page}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#not_found_page StorageBucket#not_found_page}
   */
   readonly notFoundPage?: string;
 }
@@ -2289,7 +2678,7 @@ export class StorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket google_storage_bucket}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket google_storage_bucket}
 */
 export class StorageBucket extends cdktf.TerraformResource {
 
@@ -2305,7 +2694,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StorageBucket resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StorageBucket to import
-  * @param importFromId The id of the existing StorageBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StorageBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StorageBucket to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2317,7 +2706,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/storage_bucket google_storage_bucket} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/storage_bucket google_storage_bucket} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2328,7 +2717,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -2357,6 +2746,7 @@ export class StorageBucket extends cdktf.TerraformResource {
     this._customPlacementConfig.internalValue = config.customPlacementConfig;
     this._encryption.internalValue = config.encryption;
     this._hierarchicalNamespace.internalValue = config.hierarchicalNamespace;
+    this._ipFilter.internalValue = config.ipFilter;
     this._lifecycleRule.internalValue = config.lifecycleRule;
     this._logging.internalValue = config.logging;
     this._retentionPolicy.internalValue = config.retentionPolicy;
@@ -2689,6 +3079,22 @@ export class StorageBucket extends cdktf.TerraformResource {
     return this._hierarchicalNamespace.internalValue;
   }
 
+  // ip_filter - computed: false, optional: true, required: false
+  private _ipFilter = new StorageBucketIpFilterOutputReference(this, "ip_filter");
+  public get ipFilter() {
+    return this._ipFilter;
+  }
+  public putIpFilter(value: StorageBucketIpFilter) {
+    this._ipFilter.internalValue = value;
+  }
+  public resetIpFilter() {
+    this._ipFilter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipFilterInput() {
+    return this._ipFilter.internalValue;
+  }
+
   // lifecycle_rule - computed: false, optional: true, required: false
   private _lifecycleRule = new StorageBucketLifecycleRuleList(this, "lifecycle_rule", false);
   public get lifecycleRule() {
@@ -2825,6 +3231,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       custom_placement_config: storageBucketCustomPlacementConfigToTerraform(this._customPlacementConfig.internalValue),
       encryption: storageBucketEncryptionToTerraform(this._encryption.internalValue),
       hierarchical_namespace: storageBucketHierarchicalNamespaceToTerraform(this._hierarchicalNamespace.internalValue),
+      ip_filter: storageBucketIpFilterToTerraform(this._ipFilter.internalValue),
       lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform, true)(this._lifecycleRule.internalValue),
       logging: storageBucketLoggingToTerraform(this._logging.internalValue),
       retention_policy: storageBucketRetentionPolicyToTerraform(this._retentionPolicy.internalValue),
@@ -2944,6 +3351,12 @@ export class StorageBucket extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "StorageBucketHierarchicalNamespaceList",
+      },
+      ip_filter: {
+        value: storageBucketIpFilterToHclTerraform(this._ipFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StorageBucketIpFilterList",
       },
       lifecycle_rule: {
         value: cdktf.listMapperHcl(storageBucketLifecycleRuleToHclTerraform, true)(this._lifecycleRule.internalValue),

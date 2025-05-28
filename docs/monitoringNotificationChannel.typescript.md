@@ -4,7 +4,7 @@
 
 ### MonitoringNotificationChannel <a name="MonitoringNotificationChannel" id="@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannel"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel google_monitoring_notification_channel}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel google_monitoring_notification_channel}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannel.Initializer"></a>
 
@@ -563,7 +563,7 @@ The construct id used in the generated config for the MonitoringNotificationChan
 
 The id of the existing MonitoringNotificationChannel that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1048,9 +1048,9 @@ const monitoringNotificationChannelConfig: monitoringNotificationChannel.Monitor
 | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.displayName">displayName</a></code> | <code>string</code> | An optional human-readable name for this notification channel. |
 | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether notifications are forwarded to the described channel. |
 | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.forceDelete">forceDelete</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, the notification channel will be deleted regardless of its use in alert policies (the policies will be updated to remove the channel). |
-| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#id MonitoringNotificationChannel#id}. |
+| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#id MonitoringNotificationChannel#id}. |
 | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | Configuration fields that define the channel and its behavior. |
-| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#project MonitoringNotificationChannel#project}. |
+| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#project MonitoringNotificationChannel#project}. |
 | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.sensitiveLabels">sensitiveLabels</a></code> | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelSensitiveLabels">MonitoringNotificationChannelSensitiveLabels</a></code> | sensitive_labels block. |
 | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelTimeouts">MonitoringNotificationChannelTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelConfig.property.userLabels">userLabels</a></code> | <code>{[ key: string ]: string}</code> | User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. |
@@ -1139,7 +1139,7 @@ The type of the notification channel.
 
 This field matches the value of the NotificationChannelDescriptor.type field. See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the list of valid values such as "email", "slack", etc...
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#type MonitoringNotificationChannel#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#type MonitoringNotificationChannel#type}
 
 ---
 
@@ -1155,7 +1155,7 @@ An optional human-readable description of this notification channel.
 
 This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#description MonitoringNotificationChannel#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#description MonitoringNotificationChannel#description}
 
 ---
 
@@ -1171,7 +1171,7 @@ An optional human-readable name for this notification channel.
 
 It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#display_name MonitoringNotificationChannel#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#display_name MonitoringNotificationChannel#display_name}
 
 ---
 
@@ -1187,7 +1187,7 @@ Whether notifications are forwarded to the described channel.
 
 This makes it possible to disable delivery of notifications to a particular channel without removing the channel from all alerting policies that reference the channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the same set of alerting policies on the channel at some point in the future.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#enabled MonitoringNotificationChannel#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#enabled MonitoringNotificationChannel#enabled}
 
 ---
 
@@ -1205,7 +1205,7 @@ If false, channels that are still
 referenced by an existing alerting policy will fail to be
 deleted in a delete operation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#force_delete MonitoringNotificationChannel#force_delete}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#force_delete MonitoringNotificationChannel#force_delete}
 
 ---
 
@@ -1217,7 +1217,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#id MonitoringNotificationChannel#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#id MonitoringNotificationChannel#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1242,7 +1242,7 @@ Labels with sensitive data are obfuscated by the API and therefore Terraform can
 determine if there are upstream changes to these fields. They can also be configured via
 the sensitive_labels block, but cannot be configured in both places.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#labels MonitoringNotificationChannel#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#labels MonitoringNotificationChannel#labels}
 
 ---
 
@@ -1254,7 +1254,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#project MonitoringNotificationChannel#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#project MonitoringNotificationChannel#project}.
 
 ---
 
@@ -1268,7 +1268,7 @@ public readonly sensitiveLabels: MonitoringNotificationChannelSensitiveLabels;
 
 sensitive_labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#sensitive_labels MonitoringNotificationChannel#sensitive_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#sensitive_labels MonitoringNotificationChannel#sensitive_labels}
 
 ---
 
@@ -1282,7 +1282,7 @@ public readonly timeouts: MonitoringNotificationChannelTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#timeouts MonitoringNotificationChannel#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#timeouts MonitoringNotificationChannel#timeouts}
 
 ---
 
@@ -1298,7 +1298,7 @@ User-supplied key/value data that does not need to conform to the corresponding 
 
 This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#user_labels MonitoringNotificationChannel#user_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#user_labels MonitoringNotificationChannel#user_labels}
 
 ---
 
@@ -1332,7 +1332,7 @@ public readonly authToken: string;
 
 An authorization token for a notification channel. Channel types that support this field include: slack.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#auth_token MonitoringNotificationChannel#auth_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#auth_token MonitoringNotificationChannel#auth_token}
 
 ---
 
@@ -1346,7 +1346,7 @@ public readonly password: string;
 
 An password for a notification channel. Channel types that support this field include: webhook_basicauth.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#password MonitoringNotificationChannel#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#password MonitoringNotificationChannel#password}
 
 ---
 
@@ -1360,7 +1360,7 @@ public readonly serviceKey: string;
 
 An servicekey token for a notification channel. Channel types that support this field include: pagerduty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#service_key MonitoringNotificationChannel#service_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#service_key MonitoringNotificationChannel#service_key}
 
 ---
 
@@ -1378,9 +1378,9 @@ const monitoringNotificationChannelTimeouts: monitoringNotificationChannel.Monit
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#create MonitoringNotificationChannel#create}. |
-| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#delete MonitoringNotificationChannel#delete}. |
-| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#update MonitoringNotificationChannel#update}. |
+| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#create MonitoringNotificationChannel#create}. |
+| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#delete MonitoringNotificationChannel#delete}. |
+| <code><a href="#@cdktf/provider-google.monitoringNotificationChannel.MonitoringNotificationChannelTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#update MonitoringNotificationChannel#update}. |
 
 ---
 
@@ -1392,7 +1392,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#create MonitoringNotificationChannel#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#create MonitoringNotificationChannel#create}.
 
 ---
 
@@ -1404,7 +1404,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#delete MonitoringNotificationChannel#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#delete MonitoringNotificationChannel#delete}.
 
 ---
 
@@ -1416,7 +1416,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/monitoring_notification_channel#update MonitoringNotificationChannel#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/monitoring_notification_channel#update MonitoringNotificationChannel#update}.
 
 ---
 

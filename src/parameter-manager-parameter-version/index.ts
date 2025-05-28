@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version
+// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ParameterManagerParameterVersionConfig extends cdktf.TerraformM
   /**
   * The current state of Parameter Version. This field is only applicable for updating Parameter Version.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#disabled ParameterManagerParameterVersion#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#disabled ParameterManagerParameterVersion#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#id ParameterManagerParameterVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,39 +28,39 @@ export interface ParameterManagerParameterVersionConfig extends cdktf.TerraformM
   /**
   * Parameter Manager Parameter resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#parameter ParameterManagerParameterVersion#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#parameter ParameterManagerParameterVersion#parameter}
   */
   readonly parameter: string;
   /**
   * The Parameter data.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#parameter_data ParameterManagerParameterVersion#parameter_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#parameter_data ParameterManagerParameterVersion#parameter_data}
   */
   readonly parameterData: string;
   /**
   * Version ID of the Parameter Version Resource. This must be unique within the Parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#parameter_version_id ParameterManagerParameterVersion#parameter_version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#parameter_version_id ParameterManagerParameterVersion#parameter_version_id}
   */
   readonly parameterVersionId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#timeouts ParameterManagerParameterVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#timeouts ParameterManagerParameterVersion#timeouts}
   */
   readonly timeouts?: ParameterManagerParameterVersionTimeouts;
 }
 export interface ParameterManagerParameterVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#create ParameterManagerParameterVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#create ParameterManagerParameterVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#delete ParameterManagerParameterVersion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#delete ParameterManagerParameterVersion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#update ParameterManagerParameterVersion#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#update ParameterManagerParameterVersion#update}
   */
   readonly update?: string;
 }
@@ -212,7 +212,7 @@ export class ParameterManagerParameterVersionTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version google_parameter_manager_parameter_version}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version google_parameter_manager_parameter_version}
 */
 export class ParameterManagerParameterVersion extends cdktf.TerraformResource {
 
@@ -228,7 +228,7 @@ export class ParameterManagerParameterVersion extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ParameterManagerParameterVersion resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ParameterManagerParameterVersion to import
-  * @param importFromId The id of the existing ParameterManagerParameterVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ParameterManagerParameterVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ParameterManagerParameterVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -240,7 +240,7 @@ export class ParameterManagerParameterVersion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.36.1/docs/resources/parameter_manager_parameter_version google_parameter_manager_parameter_version} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/parameter_manager_parameter_version google_parameter_manager_parameter_version} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -251,7 +251,7 @@ export class ParameterManagerParameterVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_parameter_manager_parameter_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.36.1',
+        providerVersion: '6.37.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
