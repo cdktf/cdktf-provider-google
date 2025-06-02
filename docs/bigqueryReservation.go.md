@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.NewBigqueryReservation(scope Construct, id *string, config BigqueryReservationConfig) BigqueryReservation
 ```
@@ -467,7 +467,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.BigqueryReservation_IsConstruct(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.BigqueryReservation_IsTerraformElement(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ bigqueryreservation.BigqueryReservation_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.BigqueryReservation_IsTerraformResource(x interface{}) *bool
 ```
@@ -527,7 +527,7 @@ bigqueryreservation.BigqueryReservation_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.BigqueryReservation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1031,7 +1031,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationAutoscale.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 &bigqueryreservation.BigqueryReservationAutoscale {
 	MaxSlots: *f64,
@@ -1065,7 +1065,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 &bigqueryreservation.BigqueryReservationConfig {
 	Connection: interface{},
@@ -1077,7 +1077,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation
 	Provisioners: *[]interface{},
 	Name: *string,
 	SlotCapacity: *f64,
-	Autoscale: github.com/cdktf/cdktf-provider-google-go/google/v14.bigqueryReservation.BigqueryReservationAutoscale,
+	Autoscale: github.com/cdktf/cdktf-provider-google-go/google/v15.bigqueryReservation.BigqueryReservationAutoscale,
 	Concurrency: *f64,
 	Edition: *string,
 	Id: *string,
@@ -1085,7 +1085,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation
 	Location: *string,
 	Project: *string,
 	SecondaryLocation: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.bigqueryReservation.BigqueryReservationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.bigqueryReservation.BigqueryReservationTimeouts,
 }
 ```
 
@@ -1355,7 +1355,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationReplicationStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 &bigqueryreservation.BigqueryReservationReplicationStatus {
 
@@ -1368,7 +1368,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationReplicationStatusError.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 &bigqueryreservation.BigqueryReservationReplicationStatusError {
 
@@ -1381,7 +1381,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 &bigqueryreservation.BigqueryReservationTimeouts {
 	Create: *string,
@@ -1443,7 +1443,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationAutoscaleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.NewBigqueryReservationAutoscaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryReservationAutoscaleOutputReference
 ```
@@ -1732,7 +1732,7 @@ func InternalValue() BigqueryReservationAutoscale
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationReplicationStatusErrorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.NewBigqueryReservationReplicationStatusErrorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BigqueryReservationReplicationStatusErrorList
 ```
@@ -1881,7 +1881,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationReplicationStatusErrorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.NewBigqueryReservationReplicationStatusErrorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BigqueryReservationReplicationStatusErrorOutputReference
 ```
@@ -2170,7 +2170,7 @@ func InternalValue() BigqueryReservationReplicationStatusError
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationReplicationStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.NewBigqueryReservationReplicationStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BigqueryReservationReplicationStatusList
 ```
@@ -2319,7 +2319,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationReplicationStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.NewBigqueryReservationReplicationStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BigqueryReservationReplicationStatusOutputReference
 ```
@@ -2619,7 +2619,7 @@ func InternalValue() BigqueryReservationReplicationStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryReservation.BigqueryReservationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/bigqueryreservation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigqueryreservation"
 
 bigqueryreservation.NewBigqueryReservationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryReservationTimeoutsOutputReference
 ```
