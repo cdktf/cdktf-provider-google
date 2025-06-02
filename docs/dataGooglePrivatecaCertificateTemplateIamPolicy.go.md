@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePrivatecaCertificateTemplateIamPolicy.DataGooglePrivatecaCertificateTemplateIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprivatecacertificatetemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleprivatecacertificatetemplateiampolicy"
 
 datagoogleprivatecacertificatetemplateiampolicy.NewDataGooglePrivatecaCertificateTemplateIamPolicy(scope Construct, id *string, config DataGooglePrivatecaCertificateTemplateIamPolicyConfig) DataGooglePrivatecaCertificateTemplateIamPolicy
 ```
@@ -297,7 +297,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGooglePrivatecaCertificateTemplateIamPolicy.DataGooglePrivatecaCertificateTemplateIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprivatecacertificatetemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleprivatecacertificatetemplateiampolicy"
 
 datagoogleprivatecacertificatetemplateiampolicy.DataGooglePrivatecaCertificateTemplateIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGooglePrivatecaCertificateTemplateIamPolicy.DataGooglePrivatecaCertificateTemplateIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprivatecacertificatetemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleprivatecacertificatetemplateiampolicy"
 
 datagoogleprivatecacertificatetemplateiampolicy.DataGooglePrivatecaCertificateTemplateIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagoogleprivatecacertificatetemplateiampolicy.DataGooglePrivatecaCertificateTe
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGooglePrivatecaCertificateTemplateIamPolicy.DataGooglePrivatecaCertificateTemplateIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprivatecacertificatetemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleprivatecacertificatetemplateiampolicy"
 
 datagoogleprivatecacertificatetemplateiampolicy.DataGooglePrivatecaCertificateTemplateIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagoogleprivatecacertificatetemplateiampolicy.DataGooglePrivatecaCertificateTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGooglePrivatecaCertificateTemplateIamPolicy.DataGooglePrivatecaCertificateTemplateIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprivatecacertificatetemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleprivatecacertificatetemplateiampolicy"
 
 datagoogleprivatecacertificatetemplateiampolicy.DataGooglePrivatecaCertificateTemplateIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -674,7 +674,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePrivatecaCertificateTemplateIamPolicy.DataGooglePrivatecaCertificateTemplateIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleprivatecacertificatetemplateiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleprivatecacertificatetemplateiampolicy"
 
 &datagoogleprivatecacertificatetemplateiampolicy.DataGooglePrivatecaCertificateTemplateIamPolicyConfig {
 	Connection: interface{},

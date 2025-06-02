@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstance(scope Construct, id *string, config WorkbenchInstanceConfig) WorkbenchInstance
 ```
@@ -474,7 +474,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.WorkbenchInstance_IsConstruct(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.WorkbenchInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ workbenchinstance.WorkbenchInstance_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.WorkbenchInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -534,7 +534,7 @@ workbenchinstance.WorkbenchInstance_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.WorkbenchInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1137,7 +1137,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceConfig {
 	Connection: interface{},
@@ -1152,13 +1152,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
 	DesiredState: *string,
 	DisableProxyAccess: interface{},
 	EnableThirdPartyIdentity: interface{},
-	GceSetup: github.com/cdktf/cdktf-provider-google-go/google/v14.workbenchInstance.WorkbenchInstanceGceSetup,
+	GceSetup: github.com/cdktf/cdktf-provider-google-go/google/v15.workbenchInstance.WorkbenchInstanceGceSetup,
 	Id: *string,
 	InstanceId: *string,
 	InstanceOwners: *[]*string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.workbenchInstance.WorkbenchInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.workbenchInstance.WorkbenchInstanceTimeouts,
 }
 ```
 
@@ -1441,23 +1441,23 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetup {
 	AcceleratorConfigs: interface{},
-	BootDisk: github.com/cdktf/cdktf-provider-google-go/google/v14.workbenchInstance.WorkbenchInstanceGceSetupBootDisk,
-	ConfidentialInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.workbenchInstance.WorkbenchInstanceGceSetupConfidentialInstanceConfig,
-	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google/v14.workbenchInstance.WorkbenchInstanceGceSetupContainerImage,
-	DataDisks: github.com/cdktf/cdktf-provider-google-go/google/v14.workbenchInstance.WorkbenchInstanceGceSetupDataDisks,
+	BootDisk: github.com/cdktf/cdktf-provider-google-go/google/v15.workbenchInstance.WorkbenchInstanceGceSetupBootDisk,
+	ConfidentialInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v15.workbenchInstance.WorkbenchInstanceGceSetupConfidentialInstanceConfig,
+	ContainerImage: github.com/cdktf/cdktf-provider-google-go/google/v15.workbenchInstance.WorkbenchInstanceGceSetupContainerImage,
+	DataDisks: github.com/cdktf/cdktf-provider-google-go/google/v15.workbenchInstance.WorkbenchInstanceGceSetupDataDisks,
 	DisablePublicIp: interface{},
 	EnableIpForwarding: interface{},
 	MachineType: *string,
 	Metadata: *map[string]*string,
 	NetworkInterfaces: interface{},
 	ServiceAccounts: interface{},
-	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v14.workbenchInstance.WorkbenchInstanceGceSetupShieldedInstanceConfig,
+	ShieldedInstanceConfig: github.com/cdktf/cdktf-provider-google-go/google/v15.workbenchInstance.WorkbenchInstanceGceSetupShieldedInstanceConfig,
 	Tags: *[]*string,
-	VmImage: github.com/cdktf/cdktf-provider-google-go/google/v14.workbenchInstance.WorkbenchInstanceGceSetupVmImage,
+	VmImage: github.com/cdktf/cdktf-provider-google-go/google/v15.workbenchInstance.WorkbenchInstanceGceSetupVmImage,
 }
 ```
 
@@ -1683,7 +1683,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupAcceleratorConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupAcceleratorConfigs {
 	CoreCount: *string,
@@ -1733,7 +1733,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupBootDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupBootDisk {
 	DiskEncryption: *string,
@@ -1823,7 +1823,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupConfidentialInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupConfidentialInstanceConfig {
 	ConfidentialInstanceType: *string,
@@ -1857,7 +1857,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupContainerImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupContainerImage {
 	Repository: *string,
@@ -1907,7 +1907,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupDataDisks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupDataDisks {
 	DiskEncryption: *string,
@@ -1997,7 +1997,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfaces.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupNetworkInterfaces {
 	AccessConfigs: interface{},
@@ -2082,7 +2082,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfacesAccessConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupNetworkInterfacesAccessConfigs {
 	ExternalIp: *string,
@@ -2122,7 +2122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupServiceAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupServiceAccounts {
 	Email: *string,
@@ -2156,7 +2156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupShieldedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupShieldedInstanceConfig {
 	EnableIntegrityMonitoring: interface{},
@@ -2233,7 +2233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupVmImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceGceSetupVmImage {
 	Family: *string,
@@ -2299,7 +2299,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceHealthInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceHealthInfo {
 
@@ -2312,7 +2312,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceTimeouts {
 	Create: *string,
@@ -2372,7 +2372,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceUpgradeHistory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 &workbenchinstance.WorkbenchInstanceUpgradeHistory {
 
@@ -2387,7 +2387,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupAcceleratorConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupAcceleratorConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WorkbenchInstanceGceSetupAcceleratorConfigsList
 ```
@@ -2547,7 +2547,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupAcceleratorConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupAcceleratorConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WorkbenchInstanceGceSetupAcceleratorConfigsOutputReference
 ```
@@ -2872,7 +2872,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupBootDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupBootDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkbenchInstanceGceSetupBootDiskOutputReference
 ```
@@ -3237,7 +3237,7 @@ func InternalValue() WorkbenchInstanceGceSetupBootDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupConfidentialInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupConfidentialInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkbenchInstanceGceSetupConfidentialInstanceConfigOutputReference
 ```
@@ -3515,7 +3515,7 @@ func InternalValue() WorkbenchInstanceGceSetupConfidentialInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupContainerImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupContainerImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkbenchInstanceGceSetupContainerImageOutputReference
 ```
@@ -3815,7 +3815,7 @@ func InternalValue() WorkbenchInstanceGceSetupContainerImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupDataDisksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupDataDisksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkbenchInstanceGceSetupDataDisksOutputReference
 ```
@@ -4180,7 +4180,7 @@ func InternalValue() WorkbenchInstanceGceSetupDataDisks
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfacesAccessConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupNetworkInterfacesAccessConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WorkbenchInstanceGceSetupNetworkInterfacesAccessConfigsList
 ```
@@ -4340,7 +4340,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfacesAccessConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupNetworkInterfacesAccessConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WorkbenchInstanceGceSetupNetworkInterfacesAccessConfigsOutputReference
 ```
@@ -4629,7 +4629,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfacesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupNetworkInterfacesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WorkbenchInstanceGceSetupNetworkInterfacesList
 ```
@@ -4789,7 +4789,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfacesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupNetworkInterfacesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WorkbenchInstanceGceSetupNetworkInterfacesOutputReference
 ```
@@ -5185,7 +5185,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkbenchInstanceGceSetupOutputReference
 ```
@@ -5957,7 +5957,7 @@ func InternalValue() WorkbenchInstanceGceSetup
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupServiceAccountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupServiceAccountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WorkbenchInstanceGceSetupServiceAccountsList
 ```
@@ -6117,7 +6117,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupServiceAccountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupServiceAccountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WorkbenchInstanceGceSetupServiceAccountsOutputReference
 ```
@@ -6424,7 +6424,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupShieldedInstanceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupShieldedInstanceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkbenchInstanceGceSetupShieldedInstanceConfigOutputReference
 ```
@@ -6760,7 +6760,7 @@ func InternalValue() WorkbenchInstanceGceSetupShieldedInstanceConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupVmImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceGceSetupVmImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkbenchInstanceGceSetupVmImageOutputReference
 ```
@@ -7096,7 +7096,7 @@ func InternalValue() WorkbenchInstanceGceSetupVmImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceHealthInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceHealthInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WorkbenchInstanceHealthInfoList
 ```
@@ -7245,7 +7245,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceHealthInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceHealthInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WorkbenchInstanceHealthInfoOutputReference
 ```
@@ -7512,7 +7512,7 @@ func InternalValue() WorkbenchInstanceHealthInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkbenchInstanceTimeoutsOutputReference
 ```
@@ -7848,7 +7848,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceUpgradeHistoryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceUpgradeHistoryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WorkbenchInstanceUpgradeHistoryList
 ```
@@ -7997,7 +7997,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceUpgradeHistoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/workbenchinstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/workbenchinstance"
 
 workbenchinstance.NewWorkbenchInstanceUpgradeHistoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WorkbenchInstanceUpgradeHistoryOutputReference
 ```

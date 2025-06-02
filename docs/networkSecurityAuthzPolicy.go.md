@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicy(scope Construct, id *string, config NetworkSecurityAuthzPolicyConfig) NetworkSecurityAuthzPolicy
 ```
@@ -479,7 +479,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NetworkSecurityAuthzPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -511,7 +511,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NetworkSecurityAuthzPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -525,7 +525,7 @@ networksecurityauthzpolicy.NetworkSecurityAuthzPolicy_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NetworkSecurityAuthzPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -539,7 +539,7 @@ networksecurityauthzpolicy.NetworkSecurityAuthzPolicy_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NetworkSecurityAuthzPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1054,7 +1054,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyConfig {
 	Connection: interface{},
@@ -1067,14 +1067,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauth
 	Action: *string,
 	Location: *string,
 	Name: *string,
-	Target: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyTarget,
-	CustomProvider: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProvider,
+	Target: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyTarget,
+	CustomProvider: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProvider,
 	Description: *string,
 	HttpRules: interface{},
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyTimeouts,
 }
 ```
 
@@ -1344,11 +1344,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyCustomProvider {
-	AuthzExtension: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderAuthzExtension,
-	CloudIap: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderCloudIap,
+	AuthzExtension: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderAuthzExtension,
+	CloudIap: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderCloudIap,
 }
 ```
 
@@ -1394,7 +1394,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderAuthzExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyCustomProviderAuthzExtension {
 	Resources: *[]*string,
@@ -1430,7 +1430,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderCloudIap.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyCustomProviderCloudIap {
 	Enabled: interface{},
@@ -1464,11 +1464,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRules {
-	From: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFrom,
-	To: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesTo,
+	From: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFrom,
+	To: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesTo,
 	When: *string,
 }
 ```
@@ -1532,7 +1532,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFrom.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFrom {
 	NotSources: interface{},
@@ -1582,7 +1582,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSources {
 	Principals: interface{},
@@ -1632,7 +1632,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesPrincipals.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesPrincipals {
 	Contains: *string,
@@ -1747,11 +1747,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResources {
-	IamServiceAccount: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesIamServiceAccount,
-	TagValueIdSet: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesTagValueIdSet,
+	IamServiceAccount: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesIamServiceAccount,
+	TagValueIdSet: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesTagValueIdSet,
 }
 ```
 
@@ -1797,7 +1797,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesIamServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesIamServiceAccount {
 	Contains: *string,
@@ -1912,7 +1912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesTagValueIdSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesTagValueIdSet {
 	Ids: *[]*string,
@@ -1949,7 +1949,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromSources {
 	Principals: interface{},
@@ -1999,7 +1999,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesPrincipals.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesPrincipals {
 	Contains: *string,
@@ -2114,11 +2114,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResources {
-	IamServiceAccount: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesIamServiceAccount,
-	TagValueIdSet: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesTagValueIdSet,
+	IamServiceAccount: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesIamServiceAccount,
+	TagValueIdSet: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesTagValueIdSet,
 }
 ```
 
@@ -2164,7 +2164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesIamServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesIamServiceAccount {
 	Contains: *string,
@@ -2279,7 +2279,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesTagValueIdSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesTagValueIdSet {
 	Ids: *[]*string,
@@ -2316,7 +2316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesTo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesTo {
 	NotOperations: interface{},
@@ -2366,10 +2366,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperations {
-	HeaderSet: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSet,
+	HeaderSet: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSet,
 	Hosts: interface{},
 	Methods: *[]*string,
 	Paths: interface{},
@@ -2450,7 +2450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSet {
 	Headers: interface{},
@@ -2484,11 +2484,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeaders {
 	Name: *string,
-	Value: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersValue,
+	Value: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersValue,
 }
 ```
 
@@ -2534,7 +2534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersValue {
 	Contains: *string,
@@ -2649,7 +2649,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHosts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHosts {
 	Contains: *string,
@@ -2764,7 +2764,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsPaths.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsPaths {
 	Contains: *string,
@@ -2879,10 +2879,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToOperations {
-	HeaderSet: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSet,
+	HeaderSet: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSet,
 	Hosts: interface{},
 	Methods: *[]*string,
 	Paths: interface{},
@@ -2963,7 +2963,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSet {
 	Headers: interface{},
@@ -2997,11 +2997,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeaders {
 	Name: *string,
-	Value: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersValue,
+	Value: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersValue,
 }
 ```
 
@@ -3047,7 +3047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersValue {
 	Contains: *string,
@@ -3162,7 +3162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHosts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHosts {
 	Contains: *string,
@@ -3277,7 +3277,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsPaths.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsPaths {
 	Contains: *string,
@@ -3392,7 +3392,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyTarget {
 	LoadBalancingScheme: *string,
@@ -3444,7 +3444,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 &networksecurityauthzpolicy.NetworkSecurityAuthzPolicyTimeouts {
 	Create: *string,
@@ -3506,7 +3506,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderAuthzExtensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyCustomProviderAuthzExtensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyCustomProviderAuthzExtensionOutputReference
 ```
@@ -3777,7 +3777,7 @@ func InternalValue() NetworkSecurityAuthzPolicyCustomProviderAuthzExtension
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderCloudIapOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyCustomProviderCloudIapOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyCustomProviderCloudIapOutputReference
 ```
@@ -4048,7 +4048,7 @@ func InternalValue() NetworkSecurityAuthzPolicyCustomProviderCloudIap
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyCustomProviderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyCustomProviderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyCustomProviderOutputReference
 ```
@@ -4381,7 +4381,7 @@ func InternalValue() NetworkSecurityAuthzPolicyCustomProvider
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromNotSourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesList
 ```
@@ -4541,7 +4541,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromNotSourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesOutputReference
 ```
@@ -4892,7 +4892,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesPrincipalsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromNotSourcesPrincipalsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesPrincipalsList
 ```
@@ -5052,7 +5052,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesPrincipalsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromNotSourcesPrincipalsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesPrincipalsOutputReference
 ```
@@ -5464,7 +5464,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesIamServiceAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesIamServiceAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesIamServiceAccountOutputReference
 ```
@@ -5858,7 +5858,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesI
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesList
 ```
@@ -6018,7 +6018,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesOutputReference
 ```
@@ -6369,7 +6369,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesTagValueIdSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesTagValueIdSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesTagValueIdSetOutputReference
 ```
@@ -6647,7 +6647,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesFromNotSourcesResourcesT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesFromOutputReference
 ```
@@ -6980,7 +6980,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesFrom
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromSourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromSourcesList
 ```
@@ -7140,7 +7140,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromSourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromSourcesOutputReference
 ```
@@ -7491,7 +7491,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesPrincipalsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromSourcesPrincipalsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromSourcesPrincipalsList
 ```
@@ -7651,7 +7651,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesPrincipalsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromSourcesPrincipalsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromSourcesPrincipalsOutputReference
 ```
@@ -8063,7 +8063,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesIamServiceAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesIamServiceAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesIamServiceAccountOutputReference
 ```
@@ -8457,7 +8457,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesIamS
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesList
 ```
@@ -8617,7 +8617,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesOutputReference
 ```
@@ -8968,7 +8968,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesTagValueIdSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesTagValueIdSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesTagValueIdSetOutputReference
 ```
@@ -9246,7 +9246,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesFromSourcesResourcesTagV
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesList
 ```
@@ -9406,7 +9406,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesOutputReference
 ```
@@ -9786,7 +9786,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersList
 ```
@@ -9946,7 +9946,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersOutputReference
 ```
@@ -10284,7 +10284,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetHeadersValueOutputReference
 ```
@@ -10678,7 +10678,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSetOutputReference
 ```
@@ -10969,7 +10969,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHeaderSet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHostsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsHostsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHostsList
 ```
@@ -11129,7 +11129,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHostsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsHostsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsHostsOutputReference
 ```
@@ -11541,7 +11541,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsList
 ```
@@ -11701,7 +11701,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsOutputReference
 ```
@@ -12123,7 +12123,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsPathsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsPathsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsPathsList
 ```
@@ -12283,7 +12283,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToNotOperationsPathsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToNotOperationsPathsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesToNotOperationsPathsOutputReference
 ```
@@ -12695,7 +12695,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersList
 ```
@@ -12855,7 +12855,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersOutputReference
 ```
@@ -13193,7 +13193,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHeadersValueOutputReference
 ```
@@ -13587,7 +13587,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetHea
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSetOutputReference
 ```
@@ -13878,7 +13878,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesToOperationsHeaderSet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHostsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsHostsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesToOperationsHostsList
 ```
@@ -14038,7 +14038,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsHostsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsHostsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesToOperationsHostsOutputReference
 ```
@@ -14450,7 +14450,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesToOperationsList
 ```
@@ -14610,7 +14610,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesToOperationsOutputReference
 ```
@@ -15032,7 +15032,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsPathsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsPathsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityAuthzPolicyHttpRulesToOperationsPathsList
 ```
@@ -15192,7 +15192,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOperationsPathsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOperationsPathsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityAuthzPolicyHttpRulesToOperationsPathsOutputReference
 ```
@@ -15604,7 +15604,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyHttpRulesToOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyHttpRulesToOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyHttpRulesToOutputReference
 ```
@@ -15937,7 +15937,7 @@ func InternalValue() NetworkSecurityAuthzPolicyHttpRulesTo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyTargetOutputReference
 ```
@@ -16237,7 +16237,7 @@ func InternalValue() NetworkSecurityAuthzPolicyTarget
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityAuthzPolicy.NetworkSecurityAuthzPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityauthzpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityauthzpolicy"
 
 networksecurityauthzpolicy.NewNetworkSecurityAuthzPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityAuthzPolicyTimeoutsOutputReference
 ```

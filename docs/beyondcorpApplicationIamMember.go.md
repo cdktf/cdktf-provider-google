@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/beyondcorpapplicationiammember"
 
 beyondcorpapplicationiammember.NewBeyondcorpApplicationIamMember(scope Construct, id *string, config BeyondcorpApplicationIamMemberConfig) BeyondcorpApplicationIamMember
 ```
@@ -412,7 +412,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/beyondcorpapplicationiammember"
 
 beyondcorpapplicationiammember.BeyondcorpApplicationIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/beyondcorpapplicationiammember"
 
 beyondcorpapplicationiammember.BeyondcorpApplicationIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ beyondcorpapplicationiammember.BeyondcorpApplicationIamMember_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/beyondcorpapplicationiammember"
 
 beyondcorpapplicationiammember.BeyondcorpApplicationIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ beyondcorpapplicationiammember.BeyondcorpApplicationIamMember_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMember.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/beyondcorpapplicationiammember"
 
 beyondcorpapplicationiammember.BeyondcorpApplicationIamMember_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/beyondcorpapplicationiammember"
 
 &beyondcorpapplicationiammember.BeyondcorpApplicationIamMemberCondition {
 	Expression: *string,
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/beyondcorpapplicationiammember"
 
 &beyondcorpapplicationiammember.BeyondcorpApplicationIamMemberConfig {
 	Connection: interface{},
@@ -940,7 +940,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicati
 	Member: *string,
 	Role: *string,
 	SecurityGatewaysId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v14.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v15.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.beyondcorpApplicationIamMember.BeyondcorpApplicationIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/beyondcorpapplicationiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/beyondcorpapplicationiammember"
 
 beyondcorpapplicationiammember.NewBeyondcorpApplicationIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BeyondcorpApplicationIamMemberConditionOutputReference
 ```

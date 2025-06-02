@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleParameterManagerRegionalParameterVersionRender.DataGoogleParameterManagerRegionalParameterVersionRender.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleparametermanagerregionalparameterversionrender"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleparametermanagerregionalparameterversionrender"
 
 datagoogleparametermanagerregionalparameterversionrender.NewDataGoogleParameterManagerRegionalParameterVersionRender(scope Construct, id *string, config DataGoogleParameterManagerRegionalParameterVersionRenderConfig) DataGoogleParameterManagerRegionalParameterVersionRender
 ```
@@ -297,7 +297,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleParameterManagerRegionalParameterVersionRender.DataGoogleParameterManagerRegionalParameterVersionRender.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleparametermanagerregionalparameterversionrender"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleparametermanagerregionalparameterversionrender"
 
 datagoogleparametermanagerregionalparameterversionrender.DataGoogleParameterManagerRegionalParameterVersionRender_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleParameterManagerRegionalParameterVersionRender.DataGoogleParameterManagerRegionalParameterVersionRender.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleparametermanagerregionalparameterversionrender"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleparametermanagerregionalparameterversionrender"
 
 datagoogleparametermanagerregionalparameterversionrender.DataGoogleParameterManagerRegionalParameterVersionRender_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagoogleparametermanagerregionalparameterversionrender.DataGoogleParameterMana
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleParameterManagerRegionalParameterVersionRender.DataGoogleParameterManagerRegionalParameterVersionRender.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleparametermanagerregionalparameterversionrender"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleparametermanagerregionalparameterversionrender"
 
 datagoogleparametermanagerregionalparameterversionrender.DataGoogleParameterManagerRegionalParameterVersionRender_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagoogleparametermanagerregionalparameterversionrender.DataGoogleParameterMana
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleParameterManagerRegionalParameterVersionRender.DataGoogleParameterManagerRegionalParameterVersionRender.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleparametermanagerregionalparameterversionrender"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleparametermanagerregionalparameterversionrender"
 
 datagoogleparametermanagerregionalparameterversionrender.DataGoogleParameterManagerRegionalParameterVersionRender_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -718,7 +718,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleParameterManagerRegionalParameterVersionRender.DataGoogleParameterManagerRegionalParameterVersionRenderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagoogleparametermanagerregionalparameterversionrender"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleparametermanagerregionalparameterversionrender"
 
 &datagoogleparametermanagerregionalparameterversionrender.DataGoogleParameterManagerRegionalParameterVersionRenderConfig {
 	Connection: interface{},

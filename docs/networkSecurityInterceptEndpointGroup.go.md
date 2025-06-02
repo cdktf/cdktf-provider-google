@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NewNetworkSecurityInterceptEndpointGroup(scope Construct, id *string, config NetworkSecurityInterceptEndpointGroupConfig) NetworkSecurityInterceptEndpointGroup
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroup_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroup_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroup_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -990,7 +990,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupAssociations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 &networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroupAssociations {
 
@@ -1003,7 +1003,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinte
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 &networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroupConfig {
 	Connection: interface{},
@@ -1020,7 +1020,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinte
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v14.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupTimeouts,
 }
 ```
 
@@ -1235,7 +1235,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 &networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroup {
 
@@ -1248,7 +1248,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinte
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupLocations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 &networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupLocations {
 
@@ -1261,7 +1261,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinte
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 &networksecurityinterceptendpointgroup.NetworkSecurityInterceptEndpointGroupTimeouts {
 	Create: *string,
@@ -1323,7 +1323,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupAssociationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NewNetworkSecurityInterceptEndpointGroupAssociationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityInterceptEndpointGroupAssociationsList
 ```
@@ -1472,7 +1472,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupAssociationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NewNetworkSecurityInterceptEndpointGroupAssociationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityInterceptEndpointGroupAssociationsOutputReference
 ```
@@ -1772,7 +1772,7 @@ func InternalValue() NetworkSecurityInterceptEndpointGroupAssociations
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NewNetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupList
 ```
@@ -1921,7 +1921,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupLocationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NewNetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupLocationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupLocationsList
 ```
@@ -2070,7 +2070,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupLocationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NewNetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupLocationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupLocationsOutputReference
 ```
@@ -2359,7 +2359,7 @@ func InternalValue() NetworkSecurityInterceptEndpointGroupConnectedDeploymentGro
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NewNetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupOutputReference
 ```
@@ -2648,7 +2648,7 @@ func InternalValue() NetworkSecurityInterceptEndpointGroupConnectedDeploymentGro
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroup.NetworkSecurityInterceptEndpointGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/networksecurityinterceptendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroup"
 
 networksecurityinterceptendpointgroup.NewNetworkSecurityInterceptEndpointGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityInterceptEndpointGroupTimeoutsOutputReference
 ```

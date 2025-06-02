@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputestoragepooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglecomputestoragepooliampolicy"
 
 datagooglecomputestoragepooliampolicy.NewDataGoogleComputeStoragePoolIamPolicy(scope Construct, id *string, config DataGoogleComputeStoragePoolIamPolicyConfig) DataGoogleComputeStoragePoolIamPolicy
 ```
@@ -297,7 +297,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputestoragepooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglecomputestoragepooliampolicy"
 
 datagooglecomputestoragepooliampolicy.DataGoogleComputeStoragePoolIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputestoragepooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglecomputestoragepooliampolicy"
 
 datagooglecomputestoragepooliampolicy.DataGoogleComputeStoragePoolIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglecomputestoragepooliampolicy.DataGoogleComputeStoragePoolIamPolicy_IsTe
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputestoragepooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglecomputestoragepooliampolicy"
 
 datagooglecomputestoragepooliampolicy.DataGoogleComputeStoragePoolIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ datagooglecomputestoragepooliampolicy.DataGoogleComputeStoragePoolIamPolicy_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputestoragepooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglecomputestoragepooliampolicy"
 
 datagooglecomputestoragepooliampolicy.DataGoogleComputeStoragePoolIamPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -674,7 +674,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeStoragePoolIamPolicy.DataGoogleComputeStoragePoolIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v14/datagooglecomputestoragepooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglecomputestoragepooliampolicy"
 
 &datagooglecomputestoragepooliampolicy.DataGoogleComputeStoragePoolIamPolicyConfig {
 	Connection: interface{},
