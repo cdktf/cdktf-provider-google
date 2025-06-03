@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/sql_database_instance_latest_recovery_time
 // generated from terraform resource schema
 
