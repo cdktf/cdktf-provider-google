@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault
+// https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +10,23 @@ export interface NetappBackupVaultConfig extends cdktf.TerraformMetaArguments {
   /**
   * Region in which backup is stored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#backup_region NetappBackupVault#backup_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#backup_region NetappBackupVault#backup_region}
   */
   readonly backupRegion?: string;
   /**
   * Type of the backup vault to be created. Default is IN_REGION. Possible values: ["BACKUP_VAULT_TYPE_UNSPECIFIED", "IN_REGION", "CROSS_REGION"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#backup_vault_type NetappBackupVault#backup_vault_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#backup_vault_type NetappBackupVault#backup_vault_type}
   */
   readonly backupVaultType?: string;
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#description NetappBackupVault#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#description NetappBackupVault#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -44,43 +39,272 @@ export interface NetappBackupVaultConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#labels NetappBackupVault#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#labels NetappBackupVault#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Location (region) of the backup vault.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}
   */
   readonly location: string;
   /**
   * The resource name of the backup vault. Needs to be unique per location.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#project NetappBackupVault#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#project NetappBackupVault#project}
   */
   readonly project?: string;
   /**
+  * backup_retention_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#backup_retention_policy NetappBackupVault#backup_retention_policy}
+  */
+  readonly backupRetentionPolicy?: NetappBackupVaultBackupRetentionPolicy;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#timeouts NetappBackupVault#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#timeouts NetappBackupVault#timeouts}
   */
   readonly timeouts?: NetappBackupVaultTimeouts;
 }
+export interface NetappBackupVaultBackupRetentionPolicy {
+  /**
+  * Minimum retention duration in days for backups in the backup vault.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#backup_minimum_enforced_retention_days NetappBackupVault#backup_minimum_enforced_retention_days}
+  */
+  readonly backupMinimumEnforcedRetentionDays: number;
+  /**
+  * Indicates if the daily backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#daily_backup_immutable NetappBackupVault#daily_backup_immutable}
+  */
+  readonly dailyBackupImmutable?: boolean | cdktf.IResolvable;
+  /**
+  * Indicates if the manual backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#manual_backup_immutable NetappBackupVault#manual_backup_immutable}
+  */
+  readonly manualBackupImmutable?: boolean | cdktf.IResolvable;
+  /**
+  * Indicates if the monthly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#monthly_backup_immutable NetappBackupVault#monthly_backup_immutable}
+  */
+  readonly monthlyBackupImmutable?: boolean | cdktf.IResolvable;
+  /**
+  * Indicates if the weekly backups are immutable. At least one of daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#weekly_backup_immutable NetappBackupVault#weekly_backup_immutable}
+  */
+  readonly weeklyBackupImmutable?: boolean | cdktf.IResolvable;
+}
+
+export function netappBackupVaultBackupRetentionPolicyToTerraform(struct?: NetappBackupVaultBackupRetentionPolicyOutputReference | NetappBackupVaultBackupRetentionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    backup_minimum_enforced_retention_days: cdktf.numberToTerraform(struct!.backupMinimumEnforcedRetentionDays),
+    daily_backup_immutable: cdktf.booleanToTerraform(struct!.dailyBackupImmutable),
+    manual_backup_immutable: cdktf.booleanToTerraform(struct!.manualBackupImmutable),
+    monthly_backup_immutable: cdktf.booleanToTerraform(struct!.monthlyBackupImmutable),
+    weekly_backup_immutable: cdktf.booleanToTerraform(struct!.weeklyBackupImmutable),
+  }
+}
+
+
+export function netappBackupVaultBackupRetentionPolicyToHclTerraform(struct?: NetappBackupVaultBackupRetentionPolicyOutputReference | NetappBackupVaultBackupRetentionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    backup_minimum_enforced_retention_days: {
+      value: cdktf.numberToHclTerraform(struct!.backupMinimumEnforcedRetentionDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    daily_backup_immutable: {
+      value: cdktf.booleanToHclTerraform(struct!.dailyBackupImmutable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    manual_backup_immutable: {
+      value: cdktf.booleanToHclTerraform(struct!.manualBackupImmutable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    monthly_backup_immutable: {
+      value: cdktf.booleanToHclTerraform(struct!.monthlyBackupImmutable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    weekly_backup_immutable: {
+      value: cdktf.booleanToHclTerraform(struct!.weeklyBackupImmutable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NetappBackupVaultBackupRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetappBackupVaultBackupRetentionPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backupMinimumEnforcedRetentionDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backupMinimumEnforcedRetentionDays = this._backupMinimumEnforcedRetentionDays;
+    }
+    if (this._dailyBackupImmutable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dailyBackupImmutable = this._dailyBackupImmutable;
+    }
+    if (this._manualBackupImmutable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.manualBackupImmutable = this._manualBackupImmutable;
+    }
+    if (this._monthlyBackupImmutable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.monthlyBackupImmutable = this._monthlyBackupImmutable;
+    }
+    if (this._weeklyBackupImmutable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weeklyBackupImmutable = this._weeklyBackupImmutable;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetappBackupVaultBackupRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._backupMinimumEnforcedRetentionDays = undefined;
+      this._dailyBackupImmutable = undefined;
+      this._manualBackupImmutable = undefined;
+      this._monthlyBackupImmutable = undefined;
+      this._weeklyBackupImmutable = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._backupMinimumEnforcedRetentionDays = value.backupMinimumEnforcedRetentionDays;
+      this._dailyBackupImmutable = value.dailyBackupImmutable;
+      this._manualBackupImmutable = value.manualBackupImmutable;
+      this._monthlyBackupImmutable = value.monthlyBackupImmutable;
+      this._weeklyBackupImmutable = value.weeklyBackupImmutable;
+    }
+  }
+
+  // backup_minimum_enforced_retention_days - computed: false, optional: false, required: true
+  private _backupMinimumEnforcedRetentionDays?: number; 
+  public get backupMinimumEnforcedRetentionDays() {
+    return this.getNumberAttribute('backup_minimum_enforced_retention_days');
+  }
+  public set backupMinimumEnforcedRetentionDays(value: number) {
+    this._backupMinimumEnforcedRetentionDays = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupMinimumEnforcedRetentionDaysInput() {
+    return this._backupMinimumEnforcedRetentionDays;
+  }
+
+  // daily_backup_immutable - computed: false, optional: true, required: false
+  private _dailyBackupImmutable?: boolean | cdktf.IResolvable; 
+  public get dailyBackupImmutable() {
+    return this.getBooleanAttribute('daily_backup_immutable');
+  }
+  public set dailyBackupImmutable(value: boolean | cdktf.IResolvable) {
+    this._dailyBackupImmutable = value;
+  }
+  public resetDailyBackupImmutable() {
+    this._dailyBackupImmutable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dailyBackupImmutableInput() {
+    return this._dailyBackupImmutable;
+  }
+
+  // manual_backup_immutable - computed: false, optional: true, required: false
+  private _manualBackupImmutable?: boolean | cdktf.IResolvable; 
+  public get manualBackupImmutable() {
+    return this.getBooleanAttribute('manual_backup_immutable');
+  }
+  public set manualBackupImmutable(value: boolean | cdktf.IResolvable) {
+    this._manualBackupImmutable = value;
+  }
+  public resetManualBackupImmutable() {
+    this._manualBackupImmutable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualBackupImmutableInput() {
+    return this._manualBackupImmutable;
+  }
+
+  // monthly_backup_immutable - computed: false, optional: true, required: false
+  private _monthlyBackupImmutable?: boolean | cdktf.IResolvable; 
+  public get monthlyBackupImmutable() {
+    return this.getBooleanAttribute('monthly_backup_immutable');
+  }
+  public set monthlyBackupImmutable(value: boolean | cdktf.IResolvable) {
+    this._monthlyBackupImmutable = value;
+  }
+  public resetMonthlyBackupImmutable() {
+    this._monthlyBackupImmutable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthlyBackupImmutableInput() {
+    return this._monthlyBackupImmutable;
+  }
+
+  // weekly_backup_immutable - computed: false, optional: true, required: false
+  private _weeklyBackupImmutable?: boolean | cdktf.IResolvable; 
+  public get weeklyBackupImmutable() {
+    return this.getBooleanAttribute('weekly_backup_immutable');
+  }
+  public set weeklyBackupImmutable(value: boolean | cdktf.IResolvable) {
+    this._weeklyBackupImmutable = value;
+  }
+  public resetWeeklyBackupImmutable() {
+    this._weeklyBackupImmutable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeklyBackupImmutableInput() {
+    return this._weeklyBackupImmutable;
+  }
+}
 export interface NetappBackupVaultTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}
   */
   readonly update?: string;
 }
@@ -232,7 +456,7 @@ export class NetappBackupVaultTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault google_netapp_backup_vault}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault google_netapp_backup_vault}
 */
 export class NetappBackupVault extends cdktf.TerraformResource {
 
@@ -248,7 +472,7 @@ export class NetappBackupVault extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappBackupVault resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappBackupVault to import
-  * @param importFromId The id of the existing NetappBackupVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappBackupVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappBackupVault to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -260,7 +484,7 @@ export class NetappBackupVault extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/netapp_backup_vault google_netapp_backup_vault} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/netapp_backup_vault google_netapp_backup_vault} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -271,7 +495,7 @@ export class NetappBackupVault extends cdktf.TerraformResource {
       terraformResourceType: 'google_netapp_backup_vault',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.37.0',
+        providerVersion: '6.38.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -290,6 +514,7 @@ export class NetappBackupVault extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
+    this._backupRetentionPolicy.internalValue = config.backupRetentionPolicy;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -456,6 +681,22 @@ export class NetappBackupVault extends cdktf.TerraformResource {
     return this._terraformLabels;
   }
 
+  // backup_retention_policy - computed: false, optional: true, required: false
+  private _backupRetentionPolicy = new NetappBackupVaultBackupRetentionPolicyOutputReference(this, "backup_retention_policy");
+  public get backupRetentionPolicy() {
+    return this._backupRetentionPolicy;
+  }
+  public putBackupRetentionPolicy(value: NetappBackupVaultBackupRetentionPolicy) {
+    this._backupRetentionPolicy.internalValue = value;
+  }
+  public resetBackupRetentionPolicy() {
+    this._backupRetentionPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupRetentionPolicyInput() {
+    return this._backupRetentionPolicy.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new NetappBackupVaultTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -486,6 +727,7 @@ export class NetappBackupVault extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      backup_retention_policy: netappBackupVaultBackupRetentionPolicyToTerraform(this._backupRetentionPolicy.internalValue),
       timeouts: netappBackupVaultTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -539,6 +781,12 @@ export class NetappBackupVault extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      backup_retention_policy: {
+        value: netappBackupVaultBackupRetentionPolicyToHclTerraform(this._backupRetentionPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappBackupVaultBackupRetentionPolicyList",
       },
       timeouts: {
         value: netappBackupVaultTimeoutsToHclTerraform(this._timeouts.internalValue),

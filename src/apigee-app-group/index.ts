@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group
+// https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +10,23 @@ export interface ApigeeAppGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Channel identifier identifies the owner maintaining this grouping.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#channel_id ApigeeAppGroup#channel_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#channel_id ApigeeAppGroup#channel_id}
   */
   readonly channelId?: string;
   /**
   * A reference to the associated storefront/marketplace.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#channel_uri ApigeeAppGroup#channel_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#channel_uri ApigeeAppGroup#channel_uri}
   */
   readonly channelUri?: string;
   /**
   * App group name displayed in the UI
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#display_name ApigeeAppGroup#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#display_name ApigeeAppGroup#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#id ApigeeAppGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#id ApigeeAppGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,32 +35,32 @@ export interface ApigeeAppGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Name of the AppGroup. Characters you can use in the name are restricted to: A-Z0-9._-$ %.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#name ApigeeAppGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#name ApigeeAppGroup#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee app group,
   * in the format 'organizations/{{org_name}}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#org_id ApigeeAppGroup#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#org_id ApigeeAppGroup#org_id}
   */
   readonly orgId: string;
   /**
   * Valid values are active or inactive. Note that the status of the AppGroup should be updated via UpdateAppGroupRequest by setting the action as active or inactive. Possible values: ["active", "inactive"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#status ApigeeAppGroup#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#status ApigeeAppGroup#status}
   */
   readonly status?: string;
   /**
   * attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#attributes ApigeeAppGroup#attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#attributes ApigeeAppGroup#attributes}
   */
   readonly attributes?: ApigeeAppGroupAttributes[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#timeouts ApigeeAppGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#timeouts ApigeeAppGroup#timeouts}
   */
   readonly timeouts?: ApigeeAppGroupTimeouts;
 }
@@ -73,13 +68,13 @@ export interface ApigeeAppGroupAttributes {
   /**
   * Key of the attribute
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#name ApigeeAppGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#name ApigeeAppGroup#name}
   */
   readonly name?: string;
   /**
   * Value of the attribute
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#value ApigeeAppGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#value ApigeeAppGroup#value}
   */
   readonly value?: string;
 }
@@ -224,15 +219,15 @@ export class ApigeeAppGroupAttributesList extends cdktf.ComplexList {
 }
 export interface ApigeeAppGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#create ApigeeAppGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#create ApigeeAppGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#delete ApigeeAppGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#delete ApigeeAppGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#update ApigeeAppGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#update ApigeeAppGroup#update}
   */
   readonly update?: string;
 }
@@ -384,7 +379,7 @@ export class ApigeeAppGroupTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group google_apigee_app_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group google_apigee_app_group}
 */
 export class ApigeeAppGroup extends cdktf.TerraformResource {
 
@@ -400,7 +395,7 @@ export class ApigeeAppGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeAppGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeAppGroup to import
-  * @param importFromId The id of the existing ApigeeAppGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeAppGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeAppGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -412,7 +407,7 @@ export class ApigeeAppGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/apigee_app_group google_apigee_app_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/apigee_app_group google_apigee_app_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -423,7 +418,7 @@ export class ApigeeAppGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_app_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.37.0',
+        providerVersion: '6.38.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

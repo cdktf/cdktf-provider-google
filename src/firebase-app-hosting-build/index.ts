@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build
+// https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -20,29 +15,29 @@ export interface FirebaseAppHostingBuildConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#annotations FirebaseAppHostingBuild#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#annotations FirebaseAppHostingBuild#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * The ID of the Backend that this Build applies to
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#backend FirebaseAppHostingBuild#backend}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#backend FirebaseAppHostingBuild#backend}
   */
   readonly backend: string;
   /**
   * The user-specified ID of the build being created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#build_id FirebaseAppHostingBuild#build_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#build_id FirebaseAppHostingBuild#build_id}
   */
   readonly buildId: string;
   /**
   * Human-readable name. 63 character limit.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#display_name FirebaseAppHostingBuild#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#display_name FirebaseAppHostingBuild#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#id FirebaseAppHostingBuild#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#id FirebaseAppHostingBuild#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -55,29 +50,29 @@ export interface FirebaseAppHostingBuildConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#labels FirebaseAppHostingBuild#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#labels FirebaseAppHostingBuild#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the Backend that this Build applies to
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#location FirebaseAppHostingBuild#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#location FirebaseAppHostingBuild#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#project FirebaseAppHostingBuild#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#project FirebaseAppHostingBuild#project}
   */
   readonly project?: string;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#source FirebaseAppHostingBuild#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#source FirebaseAppHostingBuild#source}
   */
   readonly source: FirebaseAppHostingBuildSource;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#timeouts FirebaseAppHostingBuild#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#timeouts FirebaseAppHostingBuild#timeouts}
   */
   readonly timeouts?: FirebaseAppHostingBuildTimeouts;
 }
@@ -256,13 +251,13 @@ export interface FirebaseAppHostingBuildSourceCodebase {
   /**
   * The branch in the codebase to build from, using the latest commit.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#branch FirebaseAppHostingBuild#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#branch FirebaseAppHostingBuild#branch}
   */
   readonly branch?: string;
   /**
   * The commit in the codebase to build from.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#commit FirebaseAppHostingBuild#commit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#commit FirebaseAppHostingBuild#commit}
   */
   readonly commit?: string;
 }
@@ -408,7 +403,7 @@ export interface FirebaseAppHostingBuildSourceContainer {
   /**
   * A URI representing a container for the backend to use.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#image FirebaseAppHostingBuild#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#image FirebaseAppHostingBuild#image}
   */
   readonly image: string;
 }
@@ -491,13 +486,13 @@ export interface FirebaseAppHostingBuildSource {
   /**
   * codebase block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#codebase FirebaseAppHostingBuild#codebase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#codebase FirebaseAppHostingBuild#codebase}
   */
   readonly codebase?: FirebaseAppHostingBuildSourceCodebase;
   /**
   * container block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#container FirebaseAppHostingBuild#container}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#container FirebaseAppHostingBuild#container}
   */
   readonly container?: FirebaseAppHostingBuildSourceContainer;
 }
@@ -610,15 +605,15 @@ export class FirebaseAppHostingBuildSourceOutputReference extends cdktf.ComplexO
 }
 export interface FirebaseAppHostingBuildTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#create FirebaseAppHostingBuild#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#create FirebaseAppHostingBuild#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#delete FirebaseAppHostingBuild#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#delete FirebaseAppHostingBuild#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#update FirebaseAppHostingBuild#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#update FirebaseAppHostingBuild#update}
   */
   readonly update?: string;
 }
@@ -770,7 +765,7 @@ export class FirebaseAppHostingBuildTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build google_firebase_app_hosting_build}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build google_firebase_app_hosting_build}
 */
 export class FirebaseAppHostingBuild extends cdktf.TerraformResource {
 
@@ -786,7 +781,7 @@ export class FirebaseAppHostingBuild extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FirebaseAppHostingBuild resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FirebaseAppHostingBuild to import
-  * @param importFromId The id of the existing FirebaseAppHostingBuild that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FirebaseAppHostingBuild that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FirebaseAppHostingBuild to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -798,7 +793,7 @@ export class FirebaseAppHostingBuild extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/firebase_app_hosting_build google_firebase_app_hosting_build} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/firebase_app_hosting_build google_firebase_app_hosting_build} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -809,7 +804,7 @@ export class FirebaseAppHostingBuild extends cdktf.TerraformResource {
       terraformResourceType: 'google_firebase_app_hosting_build',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.37.0',
+        providerVersion: '6.38.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
