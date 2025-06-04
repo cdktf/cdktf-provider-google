@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgent(scope Construct, id *string, config DialogflowCxAgentConfig) DialogflowCxAgent
 ```
@@ -554,7 +554,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.DialogflowCxAgent_IsConstruct(x interface{}) *bool
 ```
@@ -586,7 +586,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.DialogflowCxAgent_IsTerraformElement(x interface{}) *bool
 ```
@@ -600,7 +600,7 @@ dialogflowcxagent.DialogflowCxAgent_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.DialogflowCxAgent_IsTerraformResource(x interface{}) *bool
 ```
@@ -614,7 +614,7 @@ dialogflowcxagent.DialogflowCxAgent_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgent.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.DialogflowCxAgent_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1261,13 +1261,13 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentAdvancedSettings {
-	AudioExportGcsDestination: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsAudioExportGcsDestination,
-	DtmfSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsDtmfSettings,
-	LoggingSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsLoggingSettings,
-	SpeechSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsSpeechSettings,
+	AudioExportGcsDestination: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsAudioExportGcsDestination,
+	DtmfSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsDtmfSettings,
+	LoggingSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsLoggingSettings,
+	SpeechSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsSpeechSettings,
 }
 ```
 
@@ -1343,7 +1343,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsAudioExportGcsDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentAdvancedSettingsAudioExportGcsDestination {
 	Uri: *string,
@@ -1380,7 +1380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsDtmfSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentAdvancedSettingsDtmfSettings {
 	Enabled: interface{},
@@ -1448,7 +1448,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsLoggingSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentAdvancedSettingsLoggingSettings {
 	EnableConsentBasedRedaction: interface{},
@@ -1514,7 +1514,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsSpeechSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentAdvancedSettingsSpeechSettings {
 	EndpointerSensitivity: *f64,
@@ -1599,7 +1599,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentConfig {
 	Connection: interface{},
@@ -1613,20 +1613,20 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
 	DisplayName: *string,
 	Location: *string,
 	TimeZone: *string,
-	AdvancedSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentAdvancedSettings,
+	AdvancedSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentAdvancedSettings,
 	AvatarUri: *string,
 	Description: *string,
 	EnableSpellCorrection: interface{},
 	EnableStackdriverLogging: interface{},
-	GenAppBuilderSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentGenAppBuilderSettings,
-	GitIntegrationSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentGitIntegrationSettings,
+	GenAppBuilderSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentGenAppBuilderSettings,
+	GitIntegrationSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentGitIntegrationSettings,
 	Id: *string,
 	Project: *string,
 	SecuritySettings: *string,
-	SpeechToTextSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentSpeechToTextSettings,
+	SpeechToTextSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentSpeechToTextSettings,
 	SupportedLanguageCodes: *[]*string,
-	TextToSpeechSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentTextToSpeechSettings,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentTimeouts,
+	TextToSpeechSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentTextToSpeechSettings,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentTimeouts,
 }
 ```
 
@@ -1997,7 +1997,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentGenAppBuilderSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentGenAppBuilderSettings {
 	Engine: *string,
@@ -2033,10 +2033,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentGitIntegrationSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentGitIntegrationSettings {
-	GithubSettings: github.com/cdktf/cdktf-provider-google-go/google/v15.dialogflowCxAgent.DialogflowCxAgentGitIntegrationSettingsGithubSettings,
+	GithubSettings: github.com/cdktf/cdktf-provider-google-go/google/v16.dialogflowCxAgent.DialogflowCxAgentGitIntegrationSettingsGithubSettings,
 }
 ```
 
@@ -2067,7 +2067,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentGitIntegrationSettingsGithubSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentGitIntegrationSettingsGithubSettings {
 	AccessToken: *string,
@@ -2165,7 +2165,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentSpeechToTextSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentSpeechToTextSettings {
 	EnableSpeechAdaptation: interface{},
@@ -2199,7 +2199,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentTextToSpeechSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentTextToSpeechSettings {
 	SynthesizeSpeechConfigs: *string,
@@ -2233,7 +2233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 &dialogflowcxagent.DialogflowCxAgentTimeouts {
 	Create: *string,
@@ -2295,7 +2295,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentAdvancedSettingsAudioExportGcsDestinationOutputReference
 ```
@@ -2573,7 +2573,7 @@ func InternalValue() DialogflowCxAgentAdvancedSettingsAudioExportGcsDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsDtmfSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentAdvancedSettingsDtmfSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentAdvancedSettingsDtmfSettingsOutputReference
 ```
@@ -2909,7 +2909,7 @@ func InternalValue() DialogflowCxAgentAdvancedSettingsDtmfSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsLoggingSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentAdvancedSettingsLoggingSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentAdvancedSettingsLoggingSettingsOutputReference
 ```
@@ -3245,7 +3245,7 @@ func InternalValue() DialogflowCxAgentAdvancedSettingsLoggingSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentAdvancedSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentAdvancedSettingsOutputReference
 ```
@@ -3662,7 +3662,7 @@ func InternalValue() DialogflowCxAgentAdvancedSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentAdvancedSettingsSpeechSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentAdvancedSettingsSpeechSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentAdvancedSettingsSpeechSettingsOutputReference
 ```
@@ -4027,7 +4027,7 @@ func InternalValue() DialogflowCxAgentAdvancedSettingsSpeechSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentGenAppBuilderSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentGenAppBuilderSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentGenAppBuilderSettingsOutputReference
 ```
@@ -4298,7 +4298,7 @@ func InternalValue() DialogflowCxAgentGenAppBuilderSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentGitIntegrationSettingsGithubSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentGitIntegrationSettingsGithubSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentGitIntegrationSettingsGithubSettingsOutputReference
 ```
@@ -4692,7 +4692,7 @@ func InternalValue() DialogflowCxAgentGitIntegrationSettingsGithubSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentGitIntegrationSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentGitIntegrationSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentGitIntegrationSettingsOutputReference
 ```
@@ -4983,7 +4983,7 @@ func InternalValue() DialogflowCxAgentGitIntegrationSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentSpeechToTextSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentSpeechToTextSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentSpeechToTextSettingsOutputReference
 ```
@@ -5261,7 +5261,7 @@ func InternalValue() DialogflowCxAgentSpeechToTextSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentTextToSpeechSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentTextToSpeechSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentTextToSpeechSettingsOutputReference
 ```
@@ -5539,7 +5539,7 @@ func InternalValue() DialogflowCxAgentTextToSpeechSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxAgent.DialogflowCxAgentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/dialogflowcxagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/dialogflowcxagent"
 
 dialogflowcxagent.NewDialogflowCxAgentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxAgentTimeoutsOutputReference
 ```

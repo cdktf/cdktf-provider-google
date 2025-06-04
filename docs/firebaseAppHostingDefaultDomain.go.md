@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdefaultdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdefaultdomain"
 
 firebaseapphostingdefaultdomain.NewFirebaseAppHostingDefaultDomain(scope Construct, id *string, config FirebaseAppHostingDefaultDomainConfig) FirebaseAppHostingDefaultDomain
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomain.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdefaultdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdefaultdomain"
 
 firebaseapphostingdefaultdomain.FirebaseAppHostingDefaultDomain_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomain.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdefaultdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdefaultdomain"
 
 firebaseapphostingdefaultdomain.FirebaseAppHostingDefaultDomain_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ firebaseapphostingdefaultdomain.FirebaseAppHostingDefaultDomain_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomain.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdefaultdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdefaultdomain"
 
 firebaseapphostingdefaultdomain.FirebaseAppHostingDefaultDomain_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ firebaseapphostingdefaultdomain.FirebaseAppHostingDefaultDomain_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomain.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdefaultdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdefaultdomain"
 
 firebaseapphostingdefaultdomain.FirebaseAppHostingDefaultDomain_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -917,7 +917,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomainConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdefaultdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdefaultdomain"
 
 &firebaseapphostingdefaultdomain.FirebaseAppHostingDefaultDomainConfig {
 	Connection: interface{},
@@ -933,7 +933,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 	Disabled: interface{},
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomainTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomainTimeouts,
 }
 ```
 
@@ -1130,7 +1130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomainTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdefaultdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdefaultdomain"
 
 &firebaseapphostingdefaultdomain.FirebaseAppHostingDefaultDomainTimeouts {
 	Create: *string,
@@ -1192,7 +1192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDefaultDomain.FirebaseAppHostingDefaultDomainTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdefaultdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdefaultdomain"
 
 firebaseapphostingdefaultdomain.NewFirebaseAppHostingDefaultDomainTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirebaseAppHostingDefaultDomainTimeoutsOutputReference
 ```

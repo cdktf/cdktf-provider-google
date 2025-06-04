@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 apigeesecuritymonitoringcondition.NewApigeeSecurityMonitoringCondition(scope Construct, id *string, config ApigeeSecurityMonitoringConditionConfig) ApigeeSecurityMonitoringCondition
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringCondition.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringCondition_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringCondition.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringCondition_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringCondition_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringCondition.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringCondition_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringCondition_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringCondition.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringCondition_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -923,7 +923,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 &apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringConditionConfig {
 	Connection: interface{},
@@ -938,8 +938,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonit
 	Profile: *string,
 	Scope: *string,
 	Id: *string,
-	IncludeAllResources: github.com/cdktf/cdktf-provider-google-go/google/v15.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionIncludeAllResources,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionTimeouts,
+	IncludeAllResources: github.com/cdktf/cdktf-provider-google-go/google/v16.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionIncludeAllResources,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionTimeouts,
 }
 ```
 
@@ -1138,7 +1138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionIncludeAllResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 &apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringConditionIncludeAllResources {
 
@@ -1151,7 +1151,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonit
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 &apigeesecuritymonitoringcondition.ApigeeSecurityMonitoringConditionTimeouts {
 	Create: *string,
@@ -1213,7 +1213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionIncludeAllResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 apigeesecuritymonitoringcondition.NewApigeeSecurityMonitoringConditionIncludeAllResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeSecurityMonitoringConditionIncludeAllResourcesOutputReference
 ```
@@ -1462,7 +1462,7 @@ func InternalValue() ApigeeSecurityMonitoringConditionIncludeAllResources
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSecurityMonitoringCondition.ApigeeSecurityMonitoringConditionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/apigeesecuritymonitoringcondition"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/apigeesecuritymonitoringcondition"
 
 apigeesecuritymonitoringcondition.NewApigeeSecurityMonitoringConditionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeSecurityMonitoringConditionTimeoutsOutputReference
 ```

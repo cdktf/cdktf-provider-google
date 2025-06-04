@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 datagooglespannerdatabase.NewDataGoogleSpannerDatabase(scope Construct, id *string, config DataGoogleSpannerDatabaseConfig) DataGoogleSpannerDatabase
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 datagooglespannerdatabase.DataGoogleSpannerDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 datagooglespannerdatabase.DataGoogleSpannerDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagooglespannerdatabase.DataGoogleSpannerDatabase_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 datagooglespannerdatabase.DataGoogleSpannerDatabase_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglespannerdatabase.DataGoogleSpannerDatabase_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 datagooglespannerdatabase.DataGoogleSpannerDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -733,7 +733,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 &datagooglespannerdatabase.DataGoogleSpannerDatabaseConfig {
 	Connection: interface{},
@@ -900,7 +900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseEncryptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 &datagooglespannerdatabase.DataGoogleSpannerDatabaseEncryptionConfig {
 
@@ -915,7 +915,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerda
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseEncryptionConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 datagooglespannerdatabase.NewDataGoogleSpannerDatabaseEncryptionConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSpannerDatabaseEncryptionConfigList
 ```
@@ -1064,7 +1064,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSpannerDatabase.DataGoogleSpannerDatabaseEncryptionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglespannerdatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglespannerdatabase"
 
 datagooglespannerdatabase.NewDataGoogleSpannerDatabaseEncryptionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSpannerDatabaseEncryptionConfigOutputReference
 ```

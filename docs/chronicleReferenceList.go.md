@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.NewChronicleReferenceList(scope Construct, id *string, config ChronicleReferenceListConfig) ChronicleReferenceList
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceList.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.ChronicleReferenceList_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceList.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.ChronicleReferenceList_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ chroniclereferencelist.ChronicleReferenceList_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceList.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.ChronicleReferenceList_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ chroniclereferencelist.ChronicleReferenceList_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceList.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.ChronicleReferenceList_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -978,7 +978,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 &chroniclereferencelist.ChronicleReferenceListConfig {
 	Connection: interface{},
@@ -996,7 +996,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencel
 	SyntaxType: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.chronicleReferenceList.ChronicleReferenceListTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.chronicleReferenceList.ChronicleReferenceListTimeouts,
 }
 ```
 
@@ -1233,7 +1233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListEntries.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 &chroniclereferencelist.ChronicleReferenceListEntries {
 	Value: *string,
@@ -1267,7 +1267,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListScopeInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 &chroniclereferencelist.ChronicleReferenceListScopeInfo {
 
@@ -1280,7 +1280,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencel
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListScopeInfoReferenceListScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 &chroniclereferencelist.ChronicleReferenceListScopeInfoReferenceListScope {
 
@@ -1293,7 +1293,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencel
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 &chroniclereferencelist.ChronicleReferenceListTimeouts {
 	Create: *string,
@@ -1355,7 +1355,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListEntriesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.NewChronicleReferenceListEntriesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ChronicleReferenceListEntriesList
 ```
@@ -1515,7 +1515,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListEntriesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.NewChronicleReferenceListEntriesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ChronicleReferenceListEntriesOutputReference
 ```
@@ -1804,7 +1804,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListScopeInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.NewChronicleReferenceListScopeInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ChronicleReferenceListScopeInfoList
 ```
@@ -1953,7 +1953,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListScopeInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.NewChronicleReferenceListScopeInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ChronicleReferenceListScopeInfoOutputReference
 ```
@@ -2231,7 +2231,7 @@ func InternalValue() ChronicleReferenceListScopeInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListScopeInfoReferenceListScopeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.NewChronicleReferenceListScopeInfoReferenceListScopeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ChronicleReferenceListScopeInfoReferenceListScopeList
 ```
@@ -2380,7 +2380,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListScopeInfoReferenceListScopeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.NewChronicleReferenceListScopeInfoReferenceListScopeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ChronicleReferenceListScopeInfoReferenceListScopeOutputReference
 ```
@@ -2658,7 +2658,7 @@ func InternalValue() ChronicleReferenceListScopeInfoReferenceListScope
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleReferenceList.ChronicleReferenceListTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclereferencelist"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclereferencelist"
 
 chroniclereferencelist.NewChronicleReferenceListTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ChronicleReferenceListTimeoutsOutputReference
 ```

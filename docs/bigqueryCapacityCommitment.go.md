@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryCapacityCommitment.BigqueryCapacityCommitment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/bigquerycapacitycommitment"
 
 bigquerycapacitycommitment.NewBigqueryCapacityCommitment(scope Construct, id *string, config BigqueryCapacityCommitmentConfig) BigqueryCapacityCommitment
 ```
@@ -447,7 +447,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryCapacityCommitment.BigqueryCapacityCommitment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/bigquerycapacitycommitment"
 
 bigquerycapacitycommitment.BigqueryCapacityCommitment_IsConstruct(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryCapacityCommitment.BigqueryCapacityCommitment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/bigquerycapacitycommitment"
 
 bigquerycapacitycommitment.BigqueryCapacityCommitment_IsTerraformElement(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ bigquerycapacitycommitment.BigqueryCapacityCommitment_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryCapacityCommitment.BigqueryCapacityCommitment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/bigquerycapacitycommitment"
 
 bigquerycapacitycommitment.BigqueryCapacityCommitment_IsTerraformResource(x interface{}) *bool
 ```
@@ -507,7 +507,7 @@ bigquerycapacitycommitment.BigqueryCapacityCommitment_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.bigqueryCapacityCommitment.BigqueryCapacityCommitment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/bigquerycapacitycommitment"
 
 bigquerycapacitycommitment.BigqueryCapacityCommitment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1000,7 +1000,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryCapacityCommitment.BigqueryCapacityCommitmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/bigquerycapacitycommitment"
 
 &bigquerycapacitycommitment.BigqueryCapacityCommitmentConfig {
 	Connection: interface{},
@@ -1019,7 +1019,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycom
 	Location: *string,
 	Project: *string,
 	RenewalPlan: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.bigqueryCapacityCommitment.BigqueryCapacityCommitmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.bigqueryCapacityCommitment.BigqueryCapacityCommitmentTimeouts,
 }
 ```
 
@@ -1268,7 +1268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryCapacityCommitment.BigqueryCapacityCommitmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/bigquerycapacitycommitment"
 
 &bigquerycapacitycommitment.BigqueryCapacityCommitmentTimeouts {
 	Create: *string,
@@ -1330,7 +1330,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryCapacityCommitment.BigqueryCapacityCommitmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/bigquerycapacitycommitment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/bigquerycapacitycommitment"
 
 bigquerycapacitycommitment.NewBigqueryCapacityCommitmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryCapacityCommitmentTimeoutsOutputReference
 ```

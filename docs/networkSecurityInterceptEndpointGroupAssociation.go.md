@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NewNetworkSecurityInterceptEndpointGroupAssociation(scope Construct, id *string, config NetworkSecurityInterceptEndpointGroupAssociationConfig) NetworkSecurityInterceptEndpointGroupAssociation
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpointGroupAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpointGroupAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpoin
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpointGroupAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpoin
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpointGroupAssociation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -990,7 +990,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 &networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpointGroupAssociationConfig {
 	Connection: interface{},
@@ -1007,7 +1007,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinte
 	InterceptEndpointGroupAssociationId: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationTimeouts,
 }
 ```
 
@@ -1225,7 +1225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationLocations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 &networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpointGroupAssociationLocations {
 
@@ -1238,7 +1238,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinte
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationLocationsDetails.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 &networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpointGroupAssociationLocationsDetails {
 
@@ -1251,7 +1251,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinte
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 &networksecurityinterceptendpointgroupassociation.NetworkSecurityInterceptEndpointGroupAssociationTimeouts {
 	Create: *string,
@@ -1313,7 +1313,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationLocationsDetailsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NewNetworkSecurityInterceptEndpointGroupAssociationLocationsDetailsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityInterceptEndpointGroupAssociationLocationsDetailsList
 ```
@@ -1462,7 +1462,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationLocationsDetailsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NewNetworkSecurityInterceptEndpointGroupAssociationLocationsDetailsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityInterceptEndpointGroupAssociationLocationsDetailsOutputReference
 ```
@@ -1751,7 +1751,7 @@ func InternalValue() NetworkSecurityInterceptEndpointGroupAssociationLocationsDe
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationLocationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NewNetworkSecurityInterceptEndpointGroupAssociationLocationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkSecurityInterceptEndpointGroupAssociationLocationsList
 ```
@@ -1900,7 +1900,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationLocationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NewNetworkSecurityInterceptEndpointGroupAssociationLocationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkSecurityInterceptEndpointGroupAssociationLocationsOutputReference
 ```
@@ -2189,7 +2189,7 @@ func InternalValue() NetworkSecurityInterceptEndpointGroupAssociationLocations
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkSecurityInterceptEndpointGroupAssociation.NetworkSecurityInterceptEndpointGroupAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/networksecurityinterceptendpointgroupassociation"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/networksecurityinterceptendpointgroupassociation"
 
 networksecurityinterceptendpointgroupassociation.NewNetworkSecurityInterceptEndpointGroupAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityInterceptEndpointGroupAssociationTimeoutsOutputReference
 ```
