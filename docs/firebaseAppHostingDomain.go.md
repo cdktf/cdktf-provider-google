@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomain(scope Construct, id *string, config FirebaseAppHostingDomainConfig) FirebaseAppHostingDomain
 ```
@@ -432,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomain.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.FirebaseAppHostingDomain_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomain.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.FirebaseAppHostingDomain_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ firebaseapphostingdomain.FirebaseAppHostingDomain_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomain.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.FirebaseAppHostingDomain_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ firebaseapphostingdomain.FirebaseAppHostingDomain_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomain.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.FirebaseAppHostingDomain_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -963,7 +963,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainConfig {
 	Connection: interface{},
@@ -978,8 +978,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 	Location: *string,
 	Id: *string,
 	Project: *string,
-	Serve: github.com/cdktf/cdktf-provider-google-go/google/v15.firebaseAppHostingDomain.FirebaseAppHostingDomainServe,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.firebaseAppHostingDomain.FirebaseAppHostingDomainTimeouts,
+	Serve: github.com/cdktf/cdktf-provider-google-go/google/v16.firebaseAppHostingDomain.FirebaseAppHostingDomainServe,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.firebaseAppHostingDomain.FirebaseAppHostingDomainTimeouts,
 }
 ```
 
@@ -1176,7 +1176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatus {
 
@@ -1189,7 +1189,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusIssues.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatusIssues {
 
@@ -1202,7 +1202,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdates.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdates {
 
@@ -1215,7 +1215,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesired.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesired {
 
@@ -1228,7 +1228,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredCheckError.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredCheckError {
 
@@ -1241,7 +1241,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredRecords.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredRecords {
 
@@ -1254,7 +1254,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscovered.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscovered {
 
@@ -1267,7 +1267,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredCheckError.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredCheckError {
 
@@ -1280,7 +1280,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredRecords.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredRecords {
 
@@ -1293,10 +1293,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingd
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainServe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainServe {
-	Redirect: github.com/cdktf/cdktf-provider-google-go/google/v15.firebaseAppHostingDomain.FirebaseAppHostingDomainServeRedirect,
+	Redirect: github.com/cdktf/cdktf-provider-google-go/google/v16.firebaseAppHostingDomain.FirebaseAppHostingDomainServeRedirect,
 }
 ```
 
@@ -1327,7 +1327,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainServeRedirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainServeRedirect {
 	Uri: *string,
@@ -1384,7 +1384,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 &firebaseapphostingdomain.FirebaseAppHostingDomainTimeouts {
 	Create: *string,
@@ -1446,7 +1446,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusIssuesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusIssuesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusIssuesList
 ```
@@ -1595,7 +1595,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusIssuesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusIssuesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusIssuesOutputReference
 ```
@@ -1895,7 +1895,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatusIssues
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusList
 ```
@@ -2044,7 +2044,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusOutputReference
 ```
@@ -2366,7 +2366,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredCheckErrorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredCheckErrorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredCheckErrorList
 ```
@@ -2515,7 +2515,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredCheckErrorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredCheckErrorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredCheckErrorOutputReference
 ```
@@ -2815,7 +2815,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredList
 ```
@@ -2964,7 +2964,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredOutputReference
 ```
@@ -3264,7 +3264,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredRecordsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredRecordsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredRecordsList
 ```
@@ -3413,7 +3413,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredRecordsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredRecordsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDesiredRecordsOutputReference
 ```
@@ -3735,7 +3735,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredCheckErrorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredCheckErrorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredCheckErrorList
 ```
@@ -3884,7 +3884,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredCheckErrorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredCheckErrorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredCheckErrorOutputReference
 ```
@@ -4184,7 +4184,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredList
 ```
@@ -4333,7 +4333,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredOutputReference
 ```
@@ -4633,7 +4633,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredRecordsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredRecordsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredRecordsList
 ```
@@ -4782,7 +4782,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredRecordsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredRecordsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesDiscoveredRecordsOutputReference
 ```
@@ -5104,7 +5104,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesList
 ```
@@ -5253,7 +5253,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdatesOutputReference
 ```
@@ -5564,7 +5564,7 @@ func InternalValue() FirebaseAppHostingDomainCustomDomainStatusRequiredDnsUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainServeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainServeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirebaseAppHostingDomainServeOutputReference
 ```
@@ -5855,7 +5855,7 @@ func InternalValue() FirebaseAppHostingDomainServe
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainServeRedirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainServeRedirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirebaseAppHostingDomainServeRedirectOutputReference
 ```
@@ -6155,7 +6155,7 @@ func InternalValue() FirebaseAppHostingDomainServeRedirect
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaseAppHostingDomain.FirebaseAppHostingDomainTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/firebaseapphostingdomain"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/firebaseapphostingdomain"
 
 firebaseapphostingdomain.NewFirebaseAppHostingDomainTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirebaseAppHostingDomainTimeoutsOutputReference
 ```

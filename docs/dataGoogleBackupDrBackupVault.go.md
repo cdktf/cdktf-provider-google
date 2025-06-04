@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBackupDrBackupVault.DataGoogleBackupDrBackupVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglebackupdrbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglebackupdrbackupvault"
 
 datagooglebackupdrbackupvault.NewDataGoogleBackupDrBackupVault(scope Construct, id *string, config DataGoogleBackupDrBackupVaultConfig) DataGoogleBackupDrBackupVault
 ```
@@ -290,7 +290,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleBackupDrBackupVault.DataGoogleBackupDrBackupVault.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglebackupdrbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglebackupdrbackupvault"
 
 datagooglebackupdrbackupvault.DataGoogleBackupDrBackupVault_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleBackupDrBackupVault.DataGoogleBackupDrBackupVault.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglebackupdrbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglebackupdrbackupvault"
 
 datagooglebackupdrbackupvault.DataGoogleBackupDrBackupVault_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagooglebackupdrbackupvault.DataGoogleBackupDrBackupVault_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleBackupDrBackupVault.DataGoogleBackupDrBackupVault.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglebackupdrbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglebackupdrbackupvault"
 
 datagooglebackupdrbackupvault.DataGoogleBackupDrBackupVault_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagooglebackupdrbackupvault.DataGoogleBackupDrBackupVault_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleBackupDrBackupVault.DataGoogleBackupDrBackupVault.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglebackupdrbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglebackupdrbackupvault"
 
 datagooglebackupdrbackupvault.DataGoogleBackupDrBackupVault_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -909,7 +909,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleBackupDrBackupVault.DataGoogleBackupDrBackupVaultConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglebackupdrbackupvault"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglebackupdrbackupvault"
 
 &datagooglebackupdrbackupvault.DataGoogleBackupDrBackupVaultConfig {
 	Connection: interface{},

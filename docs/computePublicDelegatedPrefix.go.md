@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePublicDelegatedPrefix.ComputePublicDelegatedPrefix.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelegatedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computepublicdelegatedprefix"
 
 computepublicdelegatedprefix.NewComputePublicDelegatedPrefix(scope Construct, id *string, config ComputePublicDelegatedPrefixConfig) ComputePublicDelegatedPrefix
 ```
@@ -440,7 +440,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computePublicDelegatedPrefix.ComputePublicDelegatedPrefix.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelegatedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computepublicdelegatedprefix"
 
 computepublicdelegatedprefix.ComputePublicDelegatedPrefix_IsConstruct(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computePublicDelegatedPrefix.ComputePublicDelegatedPrefix.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelegatedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computepublicdelegatedprefix"
 
 computepublicdelegatedprefix.ComputePublicDelegatedPrefix_IsTerraformElement(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ computepublicdelegatedprefix.ComputePublicDelegatedPrefix_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computePublicDelegatedPrefix.ComputePublicDelegatedPrefix.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelegatedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computepublicdelegatedprefix"
 
 computepublicdelegatedprefix.ComputePublicDelegatedPrefix_IsTerraformResource(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ computepublicdelegatedprefix.ComputePublicDelegatedPrefix_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computePublicDelegatedPrefix.ComputePublicDelegatedPrefix.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelegatedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computepublicdelegatedprefix"
 
 computepublicdelegatedprefix.ComputePublicDelegatedPrefix_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -982,7 +982,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePublicDelegatedPrefix.ComputePublicDelegatedPrefixConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelegatedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computepublicdelegatedprefix"
 
 &computepublicdelegatedprefix.ComputePublicDelegatedPrefixConfig {
 	Connection: interface{},
@@ -1002,7 +1002,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelega
 	IsLiveMigration: interface{},
 	Mode: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.computePublicDelegatedPrefix.ComputePublicDelegatedPrefixTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.computePublicDelegatedPrefix.ComputePublicDelegatedPrefixTimeouts,
 }
 ```
 
@@ -1271,7 +1271,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePublicDelegatedPrefix.ComputePublicDelegatedPrefixTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelegatedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computepublicdelegatedprefix"
 
 &computepublicdelegatedprefix.ComputePublicDelegatedPrefixTimeouts {
 	Create: *string,
@@ -1319,7 +1319,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePublicDelegatedPrefix.ComputePublicDelegatedPrefixTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computepublicdelegatedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computepublicdelegatedprefix"
 
 computepublicdelegatedprefix.NewComputePublicDelegatedPrefixTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputePublicDelegatedPrefixTimeoutsOutputReference
 ```

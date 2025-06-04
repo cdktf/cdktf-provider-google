@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.NewDataGoogleVmwareengineNsxCredentials(scope Construct, id *string, config DataGoogleVmwareengineNsxCredentialsConfig) DataGoogleVmwareengineNsxCredentials
 ```
@@ -283,7 +283,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsConstruct(x interface{}) *bool
 ```
@@ -315,7 +315,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsTerraformElement(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentials.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglevmwareenginensxcredentials"
 
 datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentials_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -616,7 +616,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleVmwareengineNsxCredentials.DataGoogleVmwareengineNsxCredentialsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagooglevmwareenginensxcredentials"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagooglevmwareenginensxcredentials"
 
 &datagooglevmwareenginensxcredentials.DataGoogleVmwareengineNsxCredentialsConfig {
 	Connection: interface{},

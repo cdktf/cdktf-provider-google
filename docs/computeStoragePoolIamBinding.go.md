@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeStoragePoolIamBinding.ComputeStoragePoolIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computestoragepooliambinding"
 
 computestoragepooliambinding.NewComputeStoragePoolIamBinding(scope Construct, id *string, config ComputeStoragePoolIamBindingConfig) ComputeStoragePoolIamBinding
 ```
@@ -419,7 +419,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeStoragePoolIamBinding.ComputeStoragePoolIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computestoragepooliambinding"
 
 computestoragepooliambinding.ComputeStoragePoolIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeStoragePoolIamBinding.ComputeStoragePoolIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computestoragepooliambinding"
 
 computestoragepooliambinding.ComputeStoragePoolIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ computestoragepooliambinding.ComputeStoragePoolIamBinding_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeStoragePoolIamBinding.ComputeStoragePoolIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computestoragepooliambinding"
 
 computestoragepooliambinding.ComputeStoragePoolIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ computestoragepooliambinding.ComputeStoragePoolIamBinding_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.computeStoragePoolIamBinding.ComputeStoragePoolIamBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computestoragepooliambinding"
 
 computestoragepooliambinding.ComputeStoragePoolIamBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeStoragePoolIamBinding.ComputeStoragePoolIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computestoragepooliambinding"
 
 &computestoragepooliambinding.ComputeStoragePoolIamBindingCondition {
 	Expression: *string,
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeStoragePoolIamBinding.ComputeStoragePoolIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computestoragepooliambinding"
 
 &computestoragepooliambinding.ComputeStoragePoolIamBindingConfig {
 	Connection: interface{},
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooli
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v15.computeStoragePoolIamBinding.ComputeStoragePoolIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v16.computeStoragePoolIamBinding.ComputeStoragePoolIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Zone: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeStoragePoolIamBinding.ComputeStoragePoolIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/computestoragepooliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/computestoragepooliambinding"
 
 computestoragepooliambinding.NewComputeStoragePoolIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeStoragePoolIamBindingConditionOutputReference
 ```

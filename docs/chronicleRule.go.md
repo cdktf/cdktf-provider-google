@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.NewChronicleRule(scope Construct, id *string, config ChronicleRuleConfig) ChronicleRule
 ```
@@ -447,7 +447,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.chronicleRule.ChronicleRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.ChronicleRule_IsConstruct(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.chronicleRule.ChronicleRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.ChronicleRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ chroniclerule.ChronicleRule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.chronicleRule.ChronicleRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.ChronicleRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -507,7 +507,7 @@ chroniclerule.ChronicleRule_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.chronicleRule.ChronicleRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.ChronicleRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1121,7 +1121,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleRule.ChronicleRuleCompilationDiagnostics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 &chroniclerule.ChronicleRuleCompilationDiagnostics {
 
@@ -1134,7 +1134,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleRule.ChronicleRuleCompilationDiagnosticsPosition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 &chroniclerule.ChronicleRuleCompilationDiagnosticsPosition {
 
@@ -1147,7 +1147,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleRule.ChronicleRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 &chroniclerule.ChronicleRuleConfig {
 	Connection: interface{},
@@ -1166,7 +1166,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
 	RuleId: *string,
 	Scope: *string,
 	Text: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.chronicleRule.ChronicleRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.chronicleRule.ChronicleRuleTimeouts,
 }
 ```
 
@@ -1429,7 +1429,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleRule.ChronicleRuleSeverity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 &chroniclerule.ChronicleRuleSeverity {
 
@@ -1442,7 +1442,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.chronicleRule.ChronicleRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 &chroniclerule.ChronicleRuleTimeouts {
 	Create: *string,
@@ -1504,7 +1504,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRuleCompilationDiagnosticsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.NewChronicleRuleCompilationDiagnosticsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ChronicleRuleCompilationDiagnosticsList
 ```
@@ -1653,7 +1653,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRuleCompilationDiagnosticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.NewChronicleRuleCompilationDiagnosticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ChronicleRuleCompilationDiagnosticsOutputReference
 ```
@@ -1964,7 +1964,7 @@ func InternalValue() ChronicleRuleCompilationDiagnostics
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRuleCompilationDiagnosticsPositionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.NewChronicleRuleCompilationDiagnosticsPositionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ChronicleRuleCompilationDiagnosticsPositionList
 ```
@@ -2113,7 +2113,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRuleCompilationDiagnosticsPositionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.NewChronicleRuleCompilationDiagnosticsPositionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ChronicleRuleCompilationDiagnosticsPositionOutputReference
 ```
@@ -2424,7 +2424,7 @@ func InternalValue() ChronicleRuleCompilationDiagnosticsPosition
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRuleSeverityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.NewChronicleRuleSeverityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ChronicleRuleSeverityList
 ```
@@ -2573,7 +2573,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRuleSeverityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.NewChronicleRuleSeverityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ChronicleRuleSeverityOutputReference
 ```
@@ -2851,7 +2851,7 @@ func InternalValue() ChronicleRuleSeverity
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.chronicleRule.ChronicleRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/chroniclerule"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/chroniclerule"
 
 chroniclerule.NewChronicleRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ChronicleRuleTimeoutsOutputReference
 ```

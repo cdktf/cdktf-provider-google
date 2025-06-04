@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 storagetransferagentpool.NewStorageTransferAgentPool(scope Construct, id *string, config StorageTransferAgentPoolConfig) StorageTransferAgentPool
 ```
@@ -439,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 storagetransferagentpool.StorageTransferAgentPool_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 storagetransferagentpool.StorageTransferAgentPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ storagetransferagentpool.StorageTransferAgentPool_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 storagetransferagentpool.StorageTransferAgentPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ storagetransferagentpool.StorageTransferAgentPool_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 storagetransferagentpool.StorageTransferAgentPool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -871,7 +871,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolBandwidthLimit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 &storagetransferagentpool.StorageTransferAgentPoolBandwidthLimit {
 	LimitMbps: *string,
@@ -905,7 +905,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 &storagetransferagentpool.StorageTransferAgentPoolConfig {
 	Connection: interface{},
@@ -916,11 +916,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagen
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	BandwidthLimit: github.com/cdktf/cdktf-provider-google-go/google/v15.storageTransferAgentPool.StorageTransferAgentPoolBandwidthLimit,
+	BandwidthLimit: github.com/cdktf/cdktf-provider-google-go/google/v16.storageTransferAgentPool.StorageTransferAgentPoolBandwidthLimit,
 	DisplayName: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.storageTransferAgentPool.StorageTransferAgentPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.storageTransferAgentPool.StorageTransferAgentPoolTimeouts,
 }
 ```
 
@@ -1113,7 +1113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 &storagetransferagentpool.StorageTransferAgentPoolTimeouts {
 	Create: *string,
@@ -1175,7 +1175,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolBandwidthLimitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 storagetransferagentpool.NewStorageTransferAgentPoolBandwidthLimitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageTransferAgentPoolBandwidthLimitOutputReference
 ```
@@ -1446,7 +1446,7 @@ func InternalValue() StorageTransferAgentPoolBandwidthLimit
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageTransferAgentPool.StorageTransferAgentPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagetransferagentpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagetransferagentpool"
 
 storagetransferagentpool.NewStorageTransferAgentPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageTransferAgentPoolTimeoutsOutputReference
 ```

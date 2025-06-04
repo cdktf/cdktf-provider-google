@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageFolder.StorageFolder.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagefolder"
 
 storagefolder.NewStorageFolder(scope Construct, id *string, config StorageFolderConfig) StorageFolder
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageFolder.StorageFolder.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagefolder"
 
 storagefolder.StorageFolder_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageFolder.StorageFolder.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagefolder"
 
 storagefolder.StorageFolder_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ storagefolder.StorageFolder_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageFolder.StorageFolder.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagefolder"
 
 storagefolder.StorageFolder_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ storagefolder.StorageFolder_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.storageFolder.StorageFolder.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagefolder"
 
 storagefolder.StorageFolder_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -855,7 +855,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageFolder.StorageFolderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagefolder"
 
 &storagefolder.StorageFolderConfig {
 	Connection: interface{},
@@ -869,7 +869,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
 	Name: *string,
 	ForceDestroy: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v15.storageFolder.StorageFolderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v16.storageFolder.StorageFolderTimeouts,
 }
 ```
 
@@ -1038,7 +1038,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageFolder.StorageFolderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagefolder"
 
 &storagefolder.StorageFolderTimeouts {
 	Create: *string,
@@ -1100,7 +1100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageFolder.StorageFolderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/storagefolder"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/storagefolder"
 
 storagefolder.NewStorageFolderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageFolderTimeoutsOutputReference
 ```

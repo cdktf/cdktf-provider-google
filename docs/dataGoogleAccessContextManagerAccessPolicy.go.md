@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.3
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleaccesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagoogleaccesscontextmanageraccesspolicy"
 
 datagoogleaccesscontextmanageraccesspolicy.NewDataGoogleAccessContextManagerAccessPolicy(scope Construct, id *string, config DataGoogleAccessContextManagerAccessPolicyConfig) DataGoogleAccessContextManagerAccessPolicy
 ```
@@ -290,7 +290,7 @@ func ResetScopes()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleaccesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagoogleaccesscontextmanageraccesspolicy"
 
 datagoogleaccesscontextmanageraccesspolicy.DataGoogleAccessContextManagerAccessPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -322,7 +322,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleaccesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagoogleaccesscontextmanageraccesspolicy"
 
 datagoogleaccesscontextmanageraccesspolicy.DataGoogleAccessContextManagerAccessPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ datagoogleaccesscontextmanageraccesspolicy.DataGoogleAccessContextManagerAccessP
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleaccesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagoogleaccesscontextmanageraccesspolicy"
 
 datagoogleaccesscontextmanageraccesspolicy.DataGoogleAccessContextManagerAccessPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ datagoogleaccesscontextmanageraccesspolicy.DataGoogleAccessContextManagerAccessP
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleaccesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagoogleaccesscontextmanageraccesspolicy"
 
 datagoogleaccesscontextmanageraccesspolicy.DataGoogleAccessContextManagerAccessPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -645,7 +645,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleAccessContextManagerAccessPolicy.DataGoogleAccessContextManagerAccessPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v15/datagoogleaccesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v16/datagoogleaccesscontextmanageraccesspolicy"
 
 &datagoogleaccesscontextmanageraccesspolicy.DataGoogleAccessContextManagerAccessPolicyConfig {
 	Connection: interface{},
