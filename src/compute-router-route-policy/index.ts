@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeRouterRoutePolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#id ComputeRouterRoutePolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#id ComputeRouterRoutePolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,41 +22,41 @@ export interface ComputeRouterRoutePolicyConfig extends cdktf.TerraformMetaArgum
   /**
   * Name of the route policy. This policy's name, which must be a resource ID segment and unique within all policies owned by the Router
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#name ComputeRouterRoutePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#name ComputeRouterRoutePolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#project ComputeRouterRoutePolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#project ComputeRouterRoutePolicy#project}
   */
   readonly project?: string;
   /**
   * Region where the router and NAT reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#region ComputeRouterRoutePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#region ComputeRouterRoutePolicy#region}
   */
   readonly region?: string;
   /**
   * The name of the Cloud Router in which this route policy will be configured.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#router ComputeRouterRoutePolicy#router}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#router ComputeRouterRoutePolicy#router}
   */
   readonly router: string;
   /**
   * This is policy's type, which is one of IMPORT or EXPORT Possible values: ["ROUTE_POLICY_TYPE_IMPORT", "ROUTE_POLICY_TYPE_EXPORT"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#type ComputeRouterRoutePolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#type ComputeRouterRoutePolicy#type}
   */
   readonly type?: string;
   /**
   * terms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#terms ComputeRouterRoutePolicy#terms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#terms ComputeRouterRoutePolicy#terms}
   */
   readonly terms: ComputeRouterRoutePolicyTerms[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#timeouts ComputeRouterRoutePolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#timeouts ComputeRouterRoutePolicy#timeouts}
   */
   readonly timeouts?: ComputeRouterRoutePolicyTimeouts;
 }
@@ -64,28 +64,28 @@ export interface ComputeRouterRoutePolicyTermsActions {
   /**
   * Description of the expression
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#description ComputeRouterRoutePolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#description ComputeRouterRoutePolicy#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression
   * Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#expression ComputeRouterRoutePolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#expression ComputeRouterRoutePolicy#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error
   * reporting, e.g. a file name and a position in the file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#location ComputeRouterRoutePolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#location ComputeRouterRoutePolicy#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its
   * purpose.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#title ComputeRouterRoutePolicy#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#title ComputeRouterRoutePolicy#title}
   */
   readonly title?: string;
 }
@@ -287,25 +287,25 @@ export interface ComputeRouterRoutePolicyTermsMatch {
   /**
   * Description of the expression
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#description ComputeRouterRoutePolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#description ComputeRouterRoutePolicy#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#expression ComputeRouterRoutePolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#expression ComputeRouterRoutePolicy#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#location ComputeRouterRoutePolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#location ComputeRouterRoutePolicy#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#title ComputeRouterRoutePolicy#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#title ComputeRouterRoutePolicy#title}
   */
   readonly title?: string;
 }
@@ -475,19 +475,19 @@ export interface ComputeRouterRoutePolicyTerms {
   /**
   * The evaluation priority for this term, which must be between 0 (inclusive) and 231 (exclusive), and unique within the list.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#priority ComputeRouterRoutePolicy#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#priority ComputeRouterRoutePolicy#priority}
   */
   readonly priority: number;
   /**
   * actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#actions ComputeRouterRoutePolicy#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#actions ComputeRouterRoutePolicy#actions}
   */
   readonly actions?: ComputeRouterRoutePolicyTermsActions[] | cdktf.IResolvable;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#match ComputeRouterRoutePolicy#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#match ComputeRouterRoutePolicy#match}
   */
   readonly match?: ComputeRouterRoutePolicyTermsMatch;
 }
@@ -658,15 +658,15 @@ export class ComputeRouterRoutePolicyTermsList extends cdktf.ComplexList {
 }
 export interface ComputeRouterRoutePolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#create ComputeRouterRoutePolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#create ComputeRouterRoutePolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#delete ComputeRouterRoutePolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#delete ComputeRouterRoutePolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#update ComputeRouterRoutePolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#update ComputeRouterRoutePolicy#update}
   */
   readonly update?: string;
 }
@@ -818,7 +818,7 @@ export class ComputeRouterRoutePolicyTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy google_compute_router_route_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy google_compute_router_route_policy}
 */
 export class ComputeRouterRoutePolicy extends cdktf.TerraformResource {
 
@@ -834,7 +834,7 @@ export class ComputeRouterRoutePolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeRouterRoutePolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeRouterRoutePolicy to import
-  * @param importFromId The id of the existing ComputeRouterRoutePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeRouterRoutePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeRouterRoutePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -846,7 +846,7 @@ export class ComputeRouterRoutePolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/compute_router_route_policy google_compute_router_route_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/compute_router_route_policy google_compute_router_route_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -857,7 +857,7 @@ export class ComputeRouterRoutePolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_route_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.37.0',
+        providerVersion: '6.38.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

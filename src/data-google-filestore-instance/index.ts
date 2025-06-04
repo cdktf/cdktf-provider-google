@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/filestore_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/data-sources/filestore_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleFilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/filestore_instance#id DataGoogleFilestoreInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/data-sources/filestore_instance#id DataGoogleFilestoreInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,17 +22,17 @@ export interface DataGoogleFilestoreInstanceConfig extends cdktf.TerraformMetaAr
   /**
   * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/filestore_instance#location DataGoogleFilestoreInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/data-sources/filestore_instance#location DataGoogleFilestoreInstance#location}
   */
   readonly location?: string;
   /**
   * The resource name of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/filestore_instance#name DataGoogleFilestoreInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/data-sources/filestore_instance#name DataGoogleFilestoreInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/filestore_instance#project DataGoogleFilestoreInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/data-sources/filestore_instance#project DataGoogleFilestoreInstance#project}
   */
   readonly project?: string;
 }
@@ -90,6 +90,11 @@ export class DataGoogleFilestoreInstanceEffectiveReplicationReplicasOutputRefere
   // last_active_sync_time - computed: true, optional: false, required: false
   public get lastActiveSyncTime() {
     return this.getStringAttribute('last_active_sync_time');
+  }
+
+  // peer_instance - computed: true, optional: false, required: false
+  public get peerInstance() {
+    return this.getStringAttribute('peer_instance');
   }
 
   // state - computed: true, optional: false, required: false
@@ -176,6 +181,11 @@ export class DataGoogleFilestoreInstanceEffectiveReplicationOutputReference exte
   private _replicas = new DataGoogleFilestoreInstanceEffectiveReplicationReplicasList(this, "replicas", false);
   public get replicas() {
     return this._replicas;
+  }
+
+  // role - computed: true, optional: false, required: false
+  public get role() {
+    return this.getStringAttribute('role');
   }
 }
 
@@ -868,7 +878,7 @@ export class DataGoogleFilestoreInstancePerformanceConfigList extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/filestore_instance google_filestore_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/data-sources/filestore_instance google_filestore_instance}
 */
 export class DataGoogleFilestoreInstance extends cdktf.TerraformDataSource {
 
@@ -884,7 +894,7 @@ export class DataGoogleFilestoreInstance extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleFilestoreInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleFilestoreInstance to import
-  * @param importFromId The id of the existing DataGoogleFilestoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/filestore_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleFilestoreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/data-sources/filestore_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleFilestoreInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -896,7 +906,7 @@ export class DataGoogleFilestoreInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/data-sources/filestore_instance google_filestore_instance} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/data-sources/filestore_instance google_filestore_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -907,7 +917,7 @@ export class DataGoogleFilestoreInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_filestore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.37.0',
+        providerVersion: '6.38.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

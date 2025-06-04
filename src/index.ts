@@ -443,6 +443,7 @@ export * as dataplexDatascan from './dataplex-datascan';
 export * as dataplexDatascanIamBinding from './dataplex-datascan-iam-binding';
 export * as dataplexDatascanIamMember from './dataplex-datascan-iam-member';
 export * as dataplexDatascanIamPolicy from './dataplex-datascan-iam-policy';
+export * as dataplexEntry from './dataplex-entry';
 export * as dataplexEntryGroup from './dataplex-entry-group';
 export * as dataplexEntryGroupIamBinding from './dataplex-entry-group-iam-binding';
 export * as dataplexEntryGroupIamMember from './dataplex-entry-group-iam-member';
@@ -1101,6 +1102,7 @@ export * as dataGoogleBigqueryConnectionIamPolicy from './data-google-bigquery-c
 export * as dataGoogleBigqueryDatapolicyDataPolicyIamPolicy from './data-google-bigquery-datapolicy-data-policy-iam-policy';
 export * as dataGoogleBigqueryDataset from './data-google-bigquery-dataset';
 export * as dataGoogleBigqueryDatasetIamPolicy from './data-google-bigquery-dataset-iam-policy';
+export * as dataGoogleBigqueryDatasets from './data-google-bigquery-datasets';
 export * as dataGoogleBigqueryDefaultServiceAccount from './data-google-bigquery-default-service-account';
 export * as dataGoogleBigqueryTable from './data-google-bigquery-table';
 export * as dataGoogleBigqueryTableIamPolicy from './data-google-bigquery-table-iam-policy';
