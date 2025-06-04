@@ -4,7 +4,7 @@
 
 ### IapTunnelIamMember <a name="IapTunnelIamMember" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member google_iap_tunnel_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member google_iap_tunnel_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer"></a>
 
@@ -40,11 +40,11 @@ iapTunnelIamMember.IapTunnelIamMember(
 | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#member IapTunnelIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#role IapTunnelIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#member IapTunnelIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#role IapTunnelIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition">IapTunnelIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#id IapTunnelIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#project IapTunnelIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#id IapTunnelIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#project IapTunnelIamMember#project}. |
 
 ---
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#member IapTunnelIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#member IapTunnelIamMember#member}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#role IapTunnelIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#role IapTunnelIamMember#role}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#condition IapTunnelIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#condition IapTunnelIamMember#condition}
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#id IapTunnelIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#id IapTunnelIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -149,7 +149,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#project IapTunnelIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#project IapTunnelIamMember#project}.
 
 ---
 
@@ -526,7 +526,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#expression IapTunnelIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#expression IapTunnelIamMember#expression}.
 
 ---
 
@@ -534,7 +534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#title IapTunnelIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#title IapTunnelIamMember#title}.
 
 ---
 
@@ -542,7 +542,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#description IapTunnelIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#description IapTunnelIamMember#description}.
 
 ---
 
@@ -678,7 +678,7 @@ The construct id used in the generated config for the IapTunnelIamMember to impo
 
 The id of the existing IapTunnelIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1012,9 +1012,9 @@ iapTunnelIamMember.IapTunnelIamMemberCondition(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#expression IapTunnelIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#title IapTunnelIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#description IapTunnelIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#expression IapTunnelIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#title IapTunnelIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#description IapTunnelIamMember#description}. |
 
 ---
 
@@ -1026,7 +1026,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#expression IapTunnelIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#expression IapTunnelIamMember#expression}.
 
 ---
 
@@ -1038,7 +1038,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#title IapTunnelIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#title IapTunnelIamMember#title}.
 
 ---
 
@@ -1050,7 +1050,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#description IapTunnelIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#description IapTunnelIamMember#description}.
 
 ---
 
@@ -1088,11 +1088,11 @@ iapTunnelIamMember.IapTunnelIamMemberConfig(
 | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#member IapTunnelIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#role IapTunnelIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#member IapTunnelIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#role IapTunnelIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberCondition">IapTunnelIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#id IapTunnelIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#project IapTunnelIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#id IapTunnelIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelIamMember.IapTunnelIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#project IapTunnelIamMember#project}. |
 
 ---
 
@@ -1174,7 +1174,7 @@ member: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#member IapTunnelIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#member IapTunnelIamMember#member}.
 
 ---
 
@@ -1186,7 +1186,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#role IapTunnelIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#role IapTunnelIamMember#role}.
 
 ---
 
@@ -1200,7 +1200,7 @@ condition: IapTunnelIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#condition IapTunnelIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#condition IapTunnelIamMember#condition}
 
 ---
 
@@ -1212,7 +1212,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#id IapTunnelIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#id IapTunnelIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1227,7 +1227,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.37.0/docs/resources/iap_tunnel_iam_member#project IapTunnelIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iap_tunnel_iam_member#project IapTunnelIamMember#project}.
 
 ---
 
