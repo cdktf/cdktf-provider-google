@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription
+// https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -32,7 +32,7 @@ export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   * If the subscriber never acknowledges the message, the Pub/Sub system
   * will eventually redeliver the message.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#ack_deadline_seconds PubsubSubscription#ack_deadline_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#ack_deadline_seconds PubsubSubscription#ack_deadline_seconds}
   */
   readonly ackDeadlineSeconds?: number;
   /**
@@ -46,7 +46,7 @@ export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   * Note that subscribers may still receive multiple copies of a message when 'enable_exactly_once_delivery'
   * is true if the message was published multiple times by a publisher client. These copies are considered distinct by Pub/Sub and have distinct messageId values
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#enable_exactly_once_delivery PubsubSubscription#enable_exactly_once_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#enable_exactly_once_delivery PubsubSubscription#enable_exactly_once_delivery}
   */
   readonly enableExactlyOnceDelivery?: boolean | cdktf.IResolvable;
   /**
@@ -54,7 +54,7 @@ export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   * the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
   * may be delivered in any order.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#enable_message_ordering PubsubSubscription#enable_message_ordering}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#enable_message_ordering PubsubSubscription#enable_message_ordering}
   */
   readonly enableMessageOrdering?: boolean | cdktf.IResolvable;
   /**
@@ -63,11 +63,11 @@ export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   * by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
   * you can't modify the filter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#filter PubsubSubscription#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#filter PubsubSubscription#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#id PubsubSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#id PubsubSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -80,7 +80,7 @@ export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#labels PubsubSubscription#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#labels PubsubSubscription#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -94,17 +94,17 @@ export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   * A duration in seconds with up to nine fractional digits, terminated
   * by 's'. Example: '"600.5s"'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#message_retention_duration PubsubSubscription#message_retention_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#message_retention_duration PubsubSubscription#message_retention_duration}
   */
   readonly messageRetentionDuration?: string;
   /**
   * Name of the subscription.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#name PubsubSubscription#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#name PubsubSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#project PubsubSubscription#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#project PubsubSubscription#project}
   */
   readonly project?: string;
   /**
@@ -113,7 +113,7 @@ export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   * they are acknowledged, until they fall out of the
   * messageRetentionDuration window.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#retain_acked_messages PubsubSubscription#retain_acked_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#retain_acked_messages PubsubSubscription#retain_acked_messages}
   */
   readonly retainAckedMessages?: boolean | cdktf.IResolvable;
   /**
@@ -121,49 +121,55 @@ export interface PubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   * (as in the id property of a google_pubsub_topic), or just a topic name if
   * the topic is in the same project as the subscription.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#topic PubsubSubscription#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#topic PubsubSubscription#topic}
   */
   readonly topic: string;
   /**
   * bigquery_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#bigquery_config PubsubSubscription#bigquery_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#bigquery_config PubsubSubscription#bigquery_config}
   */
   readonly bigqueryConfig?: PubsubSubscriptionBigqueryConfig;
   /**
   * cloud_storage_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#cloud_storage_config PubsubSubscription#cloud_storage_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#cloud_storage_config PubsubSubscription#cloud_storage_config}
   */
   readonly cloudStorageConfig?: PubsubSubscriptionCloudStorageConfig;
   /**
   * dead_letter_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#dead_letter_policy PubsubSubscription#dead_letter_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#dead_letter_policy PubsubSubscription#dead_letter_policy}
   */
   readonly deadLetterPolicy?: PubsubSubscriptionDeadLetterPolicy;
   /**
   * expiration_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#expiration_policy PubsubSubscription#expiration_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#expiration_policy PubsubSubscription#expiration_policy}
   */
   readonly expirationPolicy?: PubsubSubscriptionExpirationPolicy;
   /**
+  * message_transforms block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#message_transforms PubsubSubscription#message_transforms}
+  */
+  readonly messageTransforms?: PubsubSubscriptionMessageTransforms[] | cdktf.IResolvable;
+  /**
   * push_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#push_config PubsubSubscription#push_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#push_config PubsubSubscription#push_config}
   */
   readonly pushConfig?: PubsubSubscriptionPushConfig;
   /**
   * retry_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#retry_policy PubsubSubscription#retry_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#retry_policy PubsubSubscription#retry_policy}
   */
   readonly retryPolicy?: PubsubSubscriptionRetryPolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#timeouts PubsubSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#timeouts PubsubSubscription#timeouts}
   */
   readonly timeouts?: PubsubSubscriptionTimeouts;
 }
@@ -173,7 +179,7 @@ export interface PubsubSubscriptionBigqueryConfig {
   * are not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the schemas must be kept in sync
   * and any messages with extra fields are not written and remain in the subscription's backlog.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#drop_unknown_fields PubsubSubscription#drop_unknown_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#drop_unknown_fields PubsubSubscription#drop_unknown_fields}
   */
   readonly dropUnknownFields?: boolean | cdktf.IResolvable;
   /**
@@ -181,34 +187,34 @@ export interface PubsubSubscriptionBigqueryConfig {
   * [service agent](https://cloud.google.com/iam/docs/service-agents),
   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#service_account_email PubsubSubscription#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#service_account_email PubsubSubscription#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
   * The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#table PubsubSubscription#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#table PubsubSubscription#table}
   */
   readonly table: string;
   /**
   * When true, use the BigQuery table's schema as the columns to write to in BigQuery. Messages
   * must be published in JSON format. Only one of use_topic_schema and use_table_schema can be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#use_table_schema PubsubSubscription#use_table_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#use_table_schema PubsubSubscription#use_table_schema}
   */
   readonly useTableSchema?: boolean | cdktf.IResolvable;
   /**
   * When true, use the topic's schema as the columns to write to in BigQuery, if it exists.
   * Only one of use_topic_schema and use_table_schema can be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#use_topic_schema PubsubSubscription#use_topic_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#use_topic_schema PubsubSubscription#use_topic_schema}
   */
   readonly useTopicSchema?: boolean | cdktf.IResolvable;
   /**
   * When true, write the subscription name, messageId, publishTime, attributes, and orderingKey to additional columns in the table.
   * The subscription name, messageId, and publishTime fields are put in their own columns while all other message properties (other than data) are written to a JSON object in the attributes column.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#write_metadata PubsubSubscription#write_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#write_metadata PubsubSubscription#write_metadata}
   */
   readonly writeMetadata?: boolean | cdktf.IResolvable;
 }
@@ -436,13 +442,13 @@ export interface PubsubSubscriptionCloudStorageConfigAvroConfig {
   /**
   * When true, the output Cloud Storage file will be serialized using the topic schema, if it exists.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#use_topic_schema PubsubSubscription#use_topic_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#use_topic_schema PubsubSubscription#use_topic_schema}
   */
   readonly useTopicSchema?: boolean | cdktf.IResolvable;
   /**
   * When true, write the subscription name, messageId, publishTime, attributes, and orderingKey as additional fields in the output.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#write_metadata PubsubSubscription#write_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#write_metadata PubsubSubscription#write_metadata}
   */
   readonly writeMetadata?: boolean | cdktf.IResolvable;
 }
@@ -557,32 +563,32 @@ export interface PubsubSubscriptionCloudStorageConfig {
   /**
   * User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like "gs://".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#bucket PubsubSubscription#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#bucket PubsubSubscription#bucket}
   */
   readonly bucket: string;
   /**
   * User-provided format string specifying how to represent datetimes in Cloud Storage filenames.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#filename_datetime_format PubsubSubscription#filename_datetime_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#filename_datetime_format PubsubSubscription#filename_datetime_format}
   */
   readonly filenameDatetimeFormat?: string;
   /**
   * User-provided prefix for Cloud Storage filename.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#filename_prefix PubsubSubscription#filename_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#filename_prefix PubsubSubscription#filename_prefix}
   */
   readonly filenamePrefix?: string;
   /**
   * User-provided suffix for Cloud Storage filename. Must not end in "/".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#filename_suffix PubsubSubscription#filename_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#filename_suffix PubsubSubscription#filename_suffix}
   */
   readonly filenameSuffix?: string;
   /**
   * The maximum bytes that can be written to a Cloud Storage file before a new file is created. Min 1 KB, max 10 GiB.
   * The maxBytes limit may be exceeded in cases where messages are larger than the limit.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#max_bytes PubsubSubscription#max_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#max_bytes PubsubSubscription#max_bytes}
   */
   readonly maxBytes?: number;
   /**
@@ -590,13 +596,13 @@ export interface PubsubSubscriptionCloudStorageConfig {
   * May not exceed the subscription's acknowledgement deadline.
   * A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#max_duration PubsubSubscription#max_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#max_duration PubsubSubscription#max_duration}
   */
   readonly maxDuration?: string;
   /**
   * The maximum messages that can be written to a Cloud Storage file before a new file is created. Min 1000 messages.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#max_messages PubsubSubscription#max_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#max_messages PubsubSubscription#max_messages}
   */
   readonly maxMessages?: number;
   /**
@@ -604,13 +610,13 @@ export interface PubsubSubscriptionCloudStorageConfig {
   * [service agent](https://cloud.google.com/iam/docs/service-agents),
   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#service_account_email PubsubSubscription#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#service_account_email PubsubSubscription#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
   * avro_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#avro_config PubsubSubscription#avro_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#avro_config PubsubSubscription#avro_config}
   */
   readonly avroConfig?: PubsubSubscriptionCloudStorageConfigAvroConfig;
 }
@@ -940,7 +946,7 @@ export interface PubsubSubscriptionDeadLetterPolicy {
   * Users should ensure that there is a subscription attached to this topic
   * since messages published to a topic with no subscriptions are lost.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#dead_letter_topic PubsubSubscription#dead_letter_topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#dead_letter_topic PubsubSubscription#dead_letter_topic}
   */
   readonly deadLetterTopic?: string;
   /**
@@ -957,7 +963,7 @@ export interface PubsubSubscriptionDeadLetterPolicy {
   * 
   * If this parameter is 0, a default value of 5 is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#max_delivery_attempts PubsubSubscription#max_delivery_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#max_delivery_attempts PubsubSubscription#max_delivery_attempts}
   */
   readonly maxDeliveryAttempts?: number;
 }
@@ -1076,7 +1082,7 @@ export interface PubsubSubscriptionExpirationPolicy {
   * A duration in seconds with up to nine fractional digits, terminated by 's'.
   * Example - "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#ttl PubsubSubscription#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#ttl PubsubSubscription#ttl}
   */
   readonly ttl: string;
 }
@@ -1155,13 +1161,311 @@ export class PubsubSubscriptionExpirationPolicyOutputReference extends cdktf.Com
     return this._ttl;
   }
 }
+export interface PubsubSubscriptionMessageTransformsJavascriptUdf {
+  /**
+  * JavaScript code that contains a function 'function_name' with the
+  * following signature:
+  * ```
+  *   /**
+  *   * Transforms a Pub/Sub message.
+  *   *
+  *   * @return {(Object<string, (string | Object<string, string>)>|null)} - To
+  *   * filter a message, return 'null'. To transform a message return a map
+  *   * with the following keys:
+  *   *   - (required) 'data' : {string}
+  *   *   - (optional) 'attributes' : {Object<string, string>}
+  *   * Returning empty 'attributes' will remove all attributes from the
+  *   * message.
+  *   *
+  *   * @param  {(Object<string, (string | Object<string, string>)>} Pub/Sub
+  *   * message. Keys:
+  *   *   - (required) 'data' : {string}
+  *   *   - (required) 'attributes' : {Object<string, string>}
+  *   *
+  *   * @param  {Object<string, any>} metadata - Pub/Sub message metadata.
+  *   * Keys:
+  *   *   - (required) 'message_id'  : {string}
+  *   *   - (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format
+  *   *   - (optional) 'ordering_key': {string}
+  *   * /
+  *   function <function_name>(message, metadata) {
+  *   }
+  * ```
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#code PubsubSubscription#code}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
+  */
+  readonly code: string;
+  /**
+  * Name of the JavaScript function that should be applied to Pub/Sub messages.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#function_name PubsubSubscription#function_name}
+  */
+  readonly functionName: string;
+}
+
+export function pubsubSubscriptionMessageTransformsJavascriptUdfToTerraform(struct?: PubsubSubscriptionMessageTransformsJavascriptUdfOutputReference | PubsubSubscriptionMessageTransformsJavascriptUdf): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    code: cdktf.stringToTerraform(struct!.code),
+    function_name: cdktf.stringToTerraform(struct!.functionName),
+  }
+}
+
+
+export function pubsubSubscriptionMessageTransformsJavascriptUdfToHclTerraform(struct?: PubsubSubscriptionMessageTransformsJavascriptUdfOutputReference | PubsubSubscriptionMessageTransformsJavascriptUdf): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    code: {
+      value: cdktf.stringToHclTerraform(struct!.code),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    function_name: {
+      value: cdktf.stringToHclTerraform(struct!.functionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class PubsubSubscriptionMessageTransformsJavascriptUdfOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PubsubSubscriptionMessageTransformsJavascriptUdf | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._code !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.code = this._code;
+    }
+    if (this._functionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.functionName = this._functionName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PubsubSubscriptionMessageTransformsJavascriptUdf | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._code = undefined;
+      this._functionName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._code = value.code;
+      this._functionName = value.functionName;
+    }
+  }
+
+  // code - computed: false, optional: false, required: true
+  private _code?: string; 
+  public get code() {
+    return this.getStringAttribute('code');
+  }
+  public set code(value: string) {
+    this._code = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get codeInput() {
+    return this._code;
+  }
+
+  // function_name - computed: false, optional: false, required: true
+  private _functionName?: string; 
+  public get functionName() {
+    return this.getStringAttribute('function_name');
+  }
+  public set functionName(value: string) {
+    this._functionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get functionNameInput() {
+    return this._functionName;
+  }
+}
+export interface PubsubSubscriptionMessageTransforms {
+  /**
+  * Controls whether or not to use this transform. If not set or 'false',
+  * the transform will be applied to messages. Default: 'true'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#disabled PubsubSubscription#disabled}
+  */
+  readonly disabled?: boolean | cdktf.IResolvable;
+  /**
+  * javascript_udf block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#javascript_udf PubsubSubscription#javascript_udf}
+  */
+  readonly javascriptUdf?: PubsubSubscriptionMessageTransformsJavascriptUdf;
+}
+
+export function pubsubSubscriptionMessageTransformsToTerraform(struct?: PubsubSubscriptionMessageTransforms | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+    javascript_udf: pubsubSubscriptionMessageTransformsJavascriptUdfToTerraform(struct!.javascriptUdf),
+  }
+}
+
+
+export function pubsubSubscriptionMessageTransformsToHclTerraform(struct?: PubsubSubscriptionMessageTransforms | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disabled: {
+      value: cdktf.booleanToHclTerraform(struct!.disabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    javascript_udf: {
+      value: pubsubSubscriptionMessageTransformsJavascriptUdfToHclTerraform(struct!.javascriptUdf),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PubsubSubscriptionMessageTransformsJavascriptUdfList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class PubsubSubscriptionMessageTransformsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PubsubSubscriptionMessageTransforms | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._disabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disabled = this._disabled;
+    }
+    if (this._javascriptUdf?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.javascriptUdf = this._javascriptUdf?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PubsubSubscriptionMessageTransforms | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._disabled = undefined;
+      this._javascriptUdf.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._disabled = value.disabled;
+      this._javascriptUdf.internalValue = value.javascriptUdf;
+    }
+  }
+
+  // disabled - computed: false, optional: true, required: false
+  private _disabled?: boolean | cdktf.IResolvable; 
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+  public set disabled(value: boolean | cdktf.IResolvable) {
+    this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled;
+  }
+
+  // javascript_udf - computed: false, optional: true, required: false
+  private _javascriptUdf = new PubsubSubscriptionMessageTransformsJavascriptUdfOutputReference(this, "javascript_udf");
+  public get javascriptUdf() {
+    return this._javascriptUdf;
+  }
+  public putJavascriptUdf(value: PubsubSubscriptionMessageTransformsJavascriptUdf) {
+    this._javascriptUdf.internalValue = value;
+  }
+  public resetJavascriptUdf() {
+    this._javascriptUdf.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get javascriptUdfInput() {
+    return this._javascriptUdf.internalValue;
+  }
+}
+
+export class PubsubSubscriptionMessageTransformsList extends cdktf.ComplexList {
+  public internalValue? : PubsubSubscriptionMessageTransforms[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PubsubSubscriptionMessageTransformsOutputReference {
+    return new PubsubSubscriptionMessageTransformsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface PubsubSubscriptionPushConfigNoWrapper {
   /**
   * When true, writes the Pub/Sub message metadata to
   * 'x-goog-pubsub-<KEY>:<VAL>' headers of the HTTP request. Writes the
   * Pub/Sub message attributes to '<KEY>:<VAL>' headers of the HTTP request.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#write_metadata PubsubSubscription#write_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#write_metadata PubsubSubscription#write_metadata}
   */
   readonly writeMetadata: boolean | cdktf.IResolvable;
 }
@@ -1249,7 +1553,7 @@ export interface PubsubSubscriptionPushConfigOidcToken {
   * token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
   * Note: if not specified, the Push endpoint URL will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#audience PubsubSubscription#audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#audience PubsubSubscription#audience}
   */
   readonly audience?: string;
   /**
@@ -1258,7 +1562,7 @@ export interface PubsubSubscriptionPushConfigOidcToken {
   * subscriptions.modifyPushConfig RPCs) must have the
   * iam.serviceAccounts.actAs permission for the service account.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#service_account_email PubsubSubscription#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#service_account_email PubsubSubscription#service_account_email}
   */
   readonly serviceAccountEmail: string;
 }
@@ -1392,7 +1696,7 @@ export interface PubsubSubscriptionPushConfig {
   * - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
   * - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#attributes PubsubSubscription#attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#attributes PubsubSubscription#attributes}
   */
   readonly attributes?: { [key: string]: string };
   /**
@@ -1400,19 +1704,19 @@ export interface PubsubSubscriptionPushConfig {
   * For example, a Webhook endpoint might use
   * "https://example.com/push".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#push_endpoint PubsubSubscription#push_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#push_endpoint PubsubSubscription#push_endpoint}
   */
   readonly pushEndpoint: string;
   /**
   * no_wrapper block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#no_wrapper PubsubSubscription#no_wrapper}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#no_wrapper PubsubSubscription#no_wrapper}
   */
   readonly noWrapper?: PubsubSubscriptionPushConfigNoWrapper;
   /**
   * oidc_token block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#oidc_token PubsubSubscription#oidc_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#oidc_token PubsubSubscription#oidc_token}
   */
   readonly oidcToken?: PubsubSubscriptionPushConfigOidcToken;
 }
@@ -1583,14 +1887,14 @@ export interface PubsubSubscriptionRetryPolicy {
   * The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
   * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#maximum_backoff PubsubSubscription#maximum_backoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#maximum_backoff PubsubSubscription#maximum_backoff}
   */
   readonly maximumBackoff?: string;
   /**
   * The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
   * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#minimum_backoff PubsubSubscription#minimum_backoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#minimum_backoff PubsubSubscription#minimum_backoff}
   */
   readonly minimumBackoff?: string;
 }
@@ -1703,15 +2007,15 @@ export class PubsubSubscriptionRetryPolicyOutputReference extends cdktf.ComplexO
 }
 export interface PubsubSubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#create PubsubSubscription#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#create PubsubSubscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#delete PubsubSubscription#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#delete PubsubSubscription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#update PubsubSubscription#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#update PubsubSubscription#update}
   */
   readonly update?: string;
 }
@@ -1863,7 +2167,7 @@ export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription google_pubsub_subscription}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription google_pubsub_subscription}
 */
 export class PubsubSubscription extends cdktf.TerraformResource {
 
@@ -1879,7 +2183,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a PubsubSubscription resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the PubsubSubscription to import
-  * @param importFromId The id of the existing PubsubSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing PubsubSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the PubsubSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1891,7 +2195,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/pubsub_subscription google_pubsub_subscription} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/pubsub_subscription google_pubsub_subscription} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1902,7 +2206,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_subscription',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.38.0',
+        providerVersion: '6.39.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1928,6 +2232,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
     this._cloudStorageConfig.internalValue = config.cloudStorageConfig;
     this._deadLetterPolicy.internalValue = config.deadLetterPolicy;
     this._expirationPolicy.internalValue = config.expirationPolicy;
+    this._messageTransforms.internalValue = config.messageTransforms;
     this._pushConfig.internalValue = config.pushConfig;
     this._retryPolicy.internalValue = config.retryPolicy;
     this._timeouts.internalValue = config.timeouts;
@@ -2183,6 +2488,22 @@ export class PubsubSubscription extends cdktf.TerraformResource {
     return this._expirationPolicy.internalValue;
   }
 
+  // message_transforms - computed: false, optional: true, required: false
+  private _messageTransforms = new PubsubSubscriptionMessageTransformsList(this, "message_transforms", false);
+  public get messageTransforms() {
+    return this._messageTransforms;
+  }
+  public putMessageTransforms(value: PubsubSubscriptionMessageTransforms[] | cdktf.IResolvable) {
+    this._messageTransforms.internalValue = value;
+  }
+  public resetMessageTransforms() {
+    this._messageTransforms.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageTransformsInput() {
+    return this._messageTransforms.internalValue;
+  }
+
   // push_config - computed: false, optional: true, required: false
   private _pushConfig = new PubsubSubscriptionPushConfigOutputReference(this, "push_config");
   public get pushConfig() {
@@ -2252,6 +2573,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
       cloud_storage_config: pubsubSubscriptionCloudStorageConfigToTerraform(this._cloudStorageConfig.internalValue),
       dead_letter_policy: pubsubSubscriptionDeadLetterPolicyToTerraform(this._deadLetterPolicy.internalValue),
       expiration_policy: pubsubSubscriptionExpirationPolicyToTerraform(this._expirationPolicy.internalValue),
+      message_transforms: cdktf.listMapper(pubsubSubscriptionMessageTransformsToTerraform, true)(this._messageTransforms.internalValue),
       push_config: pubsubSubscriptionPushConfigToTerraform(this._pushConfig.internalValue),
       retry_policy: pubsubSubscriptionRetryPolicyToTerraform(this._retryPolicy.internalValue),
       timeouts: pubsubSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
@@ -2349,6 +2671,12 @@ export class PubsubSubscription extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "PubsubSubscriptionExpirationPolicyList",
+      },
+      message_transforms: {
+        value: cdktf.listMapperHcl(pubsubSubscriptionMessageTransformsToHclTerraform, true)(this._messageTransforms.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PubsubSubscriptionMessageTransformsList",
       },
       push_config: {
         value: pubsubSubscriptionPushConfigToHclTerraform(this._pushConfig.internalValue),

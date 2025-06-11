@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding
+// https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,23 +19,23 @@ export interface IamFoldersPolicyBindingConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#annotations IamFoldersPolicyBinding#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#annotations IamFoldersPolicyBinding#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Optional. The description of the policy binding. Must be less than or equal to 63 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#display_name IamFoldersPolicyBinding#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#display_name IamFoldersPolicyBinding#display_name}
   */
   readonly displayName?: string;
   /**
   * The parent folder for the PolicyBinding.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#folder IamFoldersPolicyBinding#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#folder IamFoldersPolicyBinding#folder}
   */
   readonly folder: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#id IamFoldersPolicyBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#id IamFoldersPolicyBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -44,19 +44,19 @@ export interface IamFoldersPolicyBindingConfig extends cdktf.TerraformMetaArgume
   /**
   * The location of the PolicyBinding.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#location IamFoldersPolicyBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#location IamFoldersPolicyBinding#location}
   */
   readonly location: string;
   /**
   * Required. Immutable. The resource name of the policy to be bound. The binding parent and policy must belong to the same Organization (or Project).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#policy IamFoldersPolicyBinding#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#policy IamFoldersPolicyBinding#policy}
   */
   readonly policy: string;
   /**
   * The Policy Binding ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#policy_binding_id IamFoldersPolicyBinding#policy_binding_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#policy_binding_id IamFoldersPolicyBinding#policy_binding_id}
   */
   readonly policyBindingId: string;
   /**
@@ -64,25 +64,25 @@ export interface IamFoldersPolicyBindingConfig extends cdktf.TerraformMetaArgume
   * field must be one of the following:  - Left empty (will be automatically set
   * to the policy kind) - The input policy kind   Possible values:  POLICY_KIND_UNSPECIFIED PRINCIPAL_ACCESS_BOUNDARY ACCESS
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#policy_kind IamFoldersPolicyBinding#policy_kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#policy_kind IamFoldersPolicyBinding#policy_kind}
   */
   readonly policyKind?: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#condition IamFoldersPolicyBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#condition IamFoldersPolicyBinding#condition}
   */
   readonly condition?: IamFoldersPolicyBindingCondition;
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#target IamFoldersPolicyBinding#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#target IamFoldersPolicyBinding#target}
   */
   readonly target: IamFoldersPolicyBindingTarget;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#timeouts IamFoldersPolicyBinding#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#timeouts IamFoldersPolicyBinding#timeouts}
   */
   readonly timeouts?: IamFoldersPolicyBindingTimeouts;
 }
@@ -90,25 +90,25 @@ export interface IamFoldersPolicyBindingCondition {
   /**
   * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#description IamFoldersPolicyBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#description IamFoldersPolicyBinding#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#expression IamFoldersPolicyBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#expression IamFoldersPolicyBinding#expression}
   */
   readonly expression?: string;
   /**
   * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#location IamFoldersPolicyBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#location IamFoldersPolicyBinding#location}
   */
   readonly location?: string;
   /**
   * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#title IamFoldersPolicyBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#title IamFoldersPolicyBinding#title}
   */
   readonly title?: string;
 }
@@ -284,7 +284,7 @@ export interface IamFoldersPolicyBindingTarget {
   * * Folder: '//cloudresourcemanager.googleapis.com/folders/FOLDER_ID'
   * It must be parent by the policy binding's parent (the folder).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#principal_set IamFoldersPolicyBinding#principal_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#principal_set IamFoldersPolicyBinding#principal_set}
   */
   readonly principalSet?: string;
 }
@@ -368,15 +368,15 @@ export class IamFoldersPolicyBindingTargetOutputReference extends cdktf.ComplexO
 }
 export interface IamFoldersPolicyBindingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#create IamFoldersPolicyBinding#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#create IamFoldersPolicyBinding#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#delete IamFoldersPolicyBinding#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#delete IamFoldersPolicyBinding#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#update IamFoldersPolicyBinding#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#update IamFoldersPolicyBinding#update}
   */
   readonly update?: string;
 }
@@ -528,7 +528,7 @@ export class IamFoldersPolicyBindingTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding google_iam_folders_policy_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding google_iam_folders_policy_binding}
 */
 export class IamFoldersPolicyBinding extends cdktf.TerraformResource {
 
@@ -544,7 +544,7 @@ export class IamFoldersPolicyBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IamFoldersPolicyBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IamFoldersPolicyBinding to import
-  * @param importFromId The id of the existing IamFoldersPolicyBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IamFoldersPolicyBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IamFoldersPolicyBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -556,7 +556,7 @@ export class IamFoldersPolicyBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/iam_folders_policy_binding google_iam_folders_policy_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/iam_folders_policy_binding google_iam_folders_policy_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -567,7 +567,7 @@ export class IamFoldersPolicyBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_folders_policy_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.38.0',
+        providerVersion: '6.39.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

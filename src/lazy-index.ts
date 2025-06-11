@@ -62,6 +62,7 @@ Object.defineProperty(exports, 'apigeeSharedflowDeployment', { get: function () 
 Object.defineProperty(exports, 'apigeeSyncAuthorization', { get: function () { return require('./apigee-sync-authorization'); } });
 Object.defineProperty(exports, 'apigeeTargetServer', { get: function () { return require('./apigee-target-server'); } });
 Object.defineProperty(exports, 'apihubApiHubInstance', { get: function () { return require('./apihub-api-hub-instance'); } });
+Object.defineProperty(exports, 'apihubCuration', { get: function () { return require('./apihub-curation'); } });
 Object.defineProperty(exports, 'apihubHostProjectRegistration', { get: function () { return require('./apihub-host-project-registration'); } });
 Object.defineProperty(exports, 'apikeysKey', { get: function () { return require('./apikeys-key'); } });
 Object.defineProperty(exports, 'appEngineApplication', { get: function () { return require('./app-engine-application'); } });
@@ -297,6 +298,8 @@ Object.defineProperty(exports, 'computeInstantSnapshotIamMember', { get: functio
 Object.defineProperty(exports, 'computeInstantSnapshotIamPolicy', { get: function () { return require('./compute-instant-snapshot-iam-policy'); } });
 Object.defineProperty(exports, 'computeInterconnect', { get: function () { return require('./compute-interconnect'); } });
 Object.defineProperty(exports, 'computeInterconnectAttachment', { get: function () { return require('./compute-interconnect-attachment'); } });
+Object.defineProperty(exports, 'computeInterconnectAttachmentGroup', { get: function () { return require('./compute-interconnect-attachment-group'); } });
+Object.defineProperty(exports, 'computeInterconnectGroup', { get: function () { return require('./compute-interconnect-group'); } });
 Object.defineProperty(exports, 'computeManagedSslCertificate', { get: function () { return require('./compute-managed-ssl-certificate'); } });
 Object.defineProperty(exports, 'computeNetwork', { get: function () { return require('./compute-network'); } });
 Object.defineProperty(exports, 'computeNetworkAttachment', { get: function () { return require('./compute-network-attachment'); } });
@@ -365,6 +368,7 @@ Object.defineProperty(exports, 'computeSnapshot', { get: function () { return re
 Object.defineProperty(exports, 'computeSnapshotIamBinding', { get: function () { return require('./compute-snapshot-iam-binding'); } });
 Object.defineProperty(exports, 'computeSnapshotIamMember', { get: function () { return require('./compute-snapshot-iam-member'); } });
 Object.defineProperty(exports, 'computeSnapshotIamPolicy', { get: function () { return require('./compute-snapshot-iam-policy'); } });
+Object.defineProperty(exports, 'computeSnapshotSettings', { get: function () { return require('./compute-snapshot-settings'); } });
 Object.defineProperty(exports, 'computeSslCertificate', { get: function () { return require('./compute-ssl-certificate'); } });
 Object.defineProperty(exports, 'computeSslPolicy', { get: function () { return require('./compute-ssl-policy'); } });
 Object.defineProperty(exports, 'computeStoragePool', { get: function () { return require('./compute-storage-pool'); } });
