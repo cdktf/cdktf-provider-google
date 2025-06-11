@@ -4,7 +4,7 @@
 
 ### DataplexGlossaryIamMember <a name="DataplexGlossaryIamMember" id="@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member google_dataplex_glossary_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member google_dataplex_glossary_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMember.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the DataplexGlossaryIamMember 
 
 The id of the existing DataplexGlossaryIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -886,9 +886,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/dataplexglossaryiam
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#expression DataplexGlossaryIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#title DataplexGlossaryIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#description DataplexGlossaryIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#expression DataplexGlossaryIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#title DataplexGlossaryIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#description DataplexGlossaryIamMember#description}. |
 
 ---
 
@@ -900,7 +900,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#expression DataplexGlossaryIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#expression DataplexGlossaryIamMember#expression}.
 
 ---
 
@@ -912,7 +912,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#title DataplexGlossaryIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#title DataplexGlossaryIamMember#title}.
 
 ---
 
@@ -924,7 +924,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#description DataplexGlossaryIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#description DataplexGlossaryIamMember#description}.
 
 ---
 
@@ -964,13 +964,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/dataplexglossaryiam
 | <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.glossaryId">GlossaryId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#glossary_id DataplexGlossaryIamMember#glossary_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#member DataplexGlossaryIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#role DataplexGlossaryIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.glossaryId">GlossaryId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#glossary_id DataplexGlossaryIamMember#glossary_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#member DataplexGlossaryIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#role DataplexGlossaryIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberCondition">DataplexGlossaryIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#id DataplexGlossaryIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#location DataplexGlossaryIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#project DataplexGlossaryIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#id DataplexGlossaryIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#location DataplexGlossaryIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexGlossaryIamMember.DataplexGlossaryIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#project DataplexGlossaryIamMember#project}. |
 
 ---
 
@@ -1052,7 +1052,7 @@ GlossaryId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#glossary_id DataplexGlossaryIamMember#glossary_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#glossary_id DataplexGlossaryIamMember#glossary_id}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#member DataplexGlossaryIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#member DataplexGlossaryIamMember#member}.
 
 ---
 
@@ -1076,7 +1076,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#role DataplexGlossaryIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#role DataplexGlossaryIamMember#role}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Condition DataplexGlossaryIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#condition DataplexGlossaryIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#condition DataplexGlossaryIamMember#condition}
 
 ---
 
@@ -1102,7 +1102,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#id DataplexGlossaryIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#id DataplexGlossaryIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1117,7 +1117,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#location DataplexGlossaryIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#location DataplexGlossaryIamMember#location}.
 
 ---
 
@@ -1129,7 +1129,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.38.0/docs/resources/dataplex_glossary_iam_member#project DataplexGlossaryIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/dataplex_glossary_iam_member#project DataplexGlossaryIamMember#project}.
 
 ---
 
