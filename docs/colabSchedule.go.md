@@ -4,7 +4,7 @@
 
 ### ColabSchedule <a name="ColabSchedule" id="@cdktf/provider-google.colabSchedule.ColabSchedule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule google_colab_schedule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule google_colab_schedule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabSchedule.ColabSchedule.Initializer"></a>
 
@@ -549,7 +549,7 @@ The construct id used in the generated config for the ColabSchedule to import.
 
 The id of the existing ColabSchedule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1102,9 +1102,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/colabschedule"
 | <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.allowQueueing">AllowQueueing</a></code> | <code>interface{}</code> | Whether new scheduled runs can be queued when max_concurrent_runs limit is reached. |
 | <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.desiredState">DesiredState</a></code> | <code>*string</code> | Desired state of the Colab Schedule. |
 | <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.endTime">EndTime</a></code> | <code>*string</code> | Timestamp after which no new runs can be scheduled. |
-| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#id ColabSchedule#id}. |
+| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#id ColabSchedule#id}. |
 | <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.maxRunCount">MaxRunCount</a></code> | <code>*string</code> | Maximum run count of the schedule. |
-| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#project ColabSchedule#project}. |
+| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#project ColabSchedule#project}. |
 | <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.startTime">StartTime</a></code> | <code>*string</code> | The timestamp after which the first run can be scheduled. |
 | <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleTimeouts">ColabScheduleTimeouts</a></code> | timeouts block. |
 
@@ -1190,7 +1190,7 @@ CreateNotebookExecutionJobRequest ColabScheduleCreateNotebookExecutionJobRequest
 
 create_notebook_execution_job_request block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#create_notebook_execution_job_request ColabSchedule#create_notebook_execution_job_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#create_notebook_execution_job_request ColabSchedule#create_notebook_execution_job_request}
 
 ---
 
@@ -1204,7 +1204,7 @@ Cron *string
 
 Cron schedule (https://en.wikipedia.org/wiki/Cron) to launch scheduled runs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#cron ColabSchedule#cron}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#cron ColabSchedule#cron}
 
 ---
 
@@ -1218,7 +1218,7 @@ DisplayName *string
 
 Required. The display name of the Schedule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#display_name ColabSchedule#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#display_name ColabSchedule#display_name}
 
 ---
 
@@ -1232,7 +1232,7 @@ Location *string
 
 The location for the resource: https://cloud.google.com/colab/docs/locations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#location ColabSchedule#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#location ColabSchedule#location}
 
 ---
 
@@ -1248,7 +1248,7 @@ Maximum number of runs that can be started concurrently for this Schedule.
 
 This is the limit for starting the scheduled requests and not the execution of the notebook execution jobs created by the requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#max_concurrent_run_count ColabSchedule#max_concurrent_run_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#max_concurrent_run_count ColabSchedule#max_concurrent_run_count}
 
 ---
 
@@ -1264,7 +1264,7 @@ Whether new scheduled runs can be queued when max_concurrent_runs limit is reach
 
 If set to true, new runs will be queued instead of skipped. Default to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#allow_queueing ColabSchedule#allow_queueing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#allow_queueing ColabSchedule#allow_queueing}
 
 ---
 
@@ -1280,7 +1280,7 @@ Desired state of the Colab Schedule.
 
 Set this field to 'ACTIVE' to start/resume the schedule, and 'PAUSED' to pause the schedule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#desired_state ColabSchedule#desired_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#desired_state ColabSchedule#desired_state}
 
 ---
 
@@ -1296,7 +1296,7 @@ Timestamp after which no new runs can be scheduled.
 
 If specified, the schedule will be completed when either end_time is reached or when scheduled_run_count >= max_run_count. Must be in the RFC 3339 (https://www.ietf.org/rfc/rfc3339.txt) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#end_time ColabSchedule#end_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#end_time ColabSchedule#end_time}
 
 ---
 
@@ -1308,7 +1308,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#id ColabSchedule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#id ColabSchedule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1327,7 +1327,7 @@ Maximum run count of the schedule.
 
 If specified, The schedule will be completed when either startedRunCount >= maxRunCount or when endTime is reached. If not specified, new runs will keep getting scheduled until this Schedule is paused or deleted. Already scheduled runs will be allowed to complete. Unset if not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#max_run_count ColabSchedule#max_run_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#max_run_count ColabSchedule#max_run_count}
 
 ---
 
@@ -1339,7 +1339,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#project ColabSchedule#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#project ColabSchedule#project}.
 
 ---
 
@@ -1355,7 +1355,7 @@ The timestamp after which the first run can be scheduled.
 
 Defaults to the schedule creation time. Must be in the RFC 3339 (https://www.ietf.org/rfc/rfc3339.txt) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#start_time ColabSchedule#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#start_time ColabSchedule#start_time}
 
 ---
 
@@ -1369,7 +1369,7 @@ Timeouts ColabScheduleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#timeouts ColabSchedule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#timeouts ColabSchedule#timeouts}
 
 ---
 
@@ -1403,7 +1403,7 @@ NotebookExecutionJob ColabScheduleCreateNotebookExecutionJobRequestNotebookExecu
 
 notebook_execution_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#notebook_execution_job ColabSchedule#notebook_execution_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#notebook_execution_job ColabSchedule#notebook_execution_job}
 
 ---
 
@@ -1451,7 +1451,7 @@ DisplayName *string
 
 Required. The display name of the Notebook Execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#display_name ColabSchedule#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#display_name ColabSchedule#display_name}
 
 ---
 
@@ -1465,7 +1465,7 @@ GcsOutputUri *string
 
 The Cloud Storage location to upload the result to. Format:'gs://bucket-name'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#gcs_output_uri ColabSchedule#gcs_output_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#gcs_output_uri ColabSchedule#gcs_output_uri}
 
 ---
 
@@ -1479,7 +1479,7 @@ NotebookRuntimeTemplateResourceName *string
 
 The NotebookRuntimeTemplate to source compute configuration from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#notebook_runtime_template_resource_name ColabSchedule#notebook_runtime_template_resource_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#notebook_runtime_template_resource_name ColabSchedule#notebook_runtime_template_resource_name}
 
 ---
 
@@ -1493,7 +1493,7 @@ DataformRepositorySource ColabScheduleCreateNotebookExecutionJobRequestNotebookE
 
 dataform_repository_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#dataform_repository_source ColabSchedule#dataform_repository_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#dataform_repository_source ColabSchedule#dataform_repository_source}
 
 ---
 
@@ -1509,7 +1509,7 @@ Max running time of the execution job in seconds (default 86400s / 24 hrs).
 
 A duration in seconds with up to nine fractional digits, ending with "s". Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#execution_timeout ColabSchedule#execution_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#execution_timeout ColabSchedule#execution_timeout}
 
 ---
 
@@ -1523,7 +1523,7 @@ ExecutionUser *string
 
 The user email to run the execution as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#execution_user ColabSchedule#execution_user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#execution_user ColabSchedule#execution_user}
 
 ---
 
@@ -1537,7 +1537,7 @@ GcsNotebookSource ColabScheduleCreateNotebookExecutionJobRequestNotebookExecutio
 
 gcs_notebook_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#gcs_notebook_source ColabSchedule#gcs_notebook_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#gcs_notebook_source ColabSchedule#gcs_notebook_source}
 
 ---
 
@@ -1551,7 +1551,7 @@ ServiceAccount *string
 
 The service account to run the execution as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#service_account ColabSchedule#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#service_account ColabSchedule#service_account}
 
 ---
 
@@ -1587,7 +1587,7 @@ DataformRepositoryResourceName *string
 
 The resource name of the Dataform Repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#dataform_repository_resource_name ColabSchedule#dataform_repository_resource_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#dataform_repository_resource_name ColabSchedule#dataform_repository_resource_name}
 
 ---
 
@@ -1601,7 +1601,7 @@ CommitSha *string
 
 The commit SHA to read repository with. If unset, the file will be read at HEAD.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#commit_sha ColabSchedule#commit_sha}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#commit_sha ColabSchedule#commit_sha}
 
 ---
 
@@ -1637,7 +1637,7 @@ Uri *string
 
 The Cloud Storage uri pointing to the ipynb file. Format: gs://bucket/notebook_file.ipynb.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#uri ColabSchedule#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#uri ColabSchedule#uri}
 
 ---
 
@@ -1653,7 +1653,7 @@ The version of the Cloud Storage object to read.
 
 If unset, the current version of the object is read. See https://cloud.google.com/storage/docs/metadata#generation-number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#generation ColabSchedule#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#generation ColabSchedule#generation}
 
 ---
 
@@ -1675,9 +1675,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/colabschedule"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#create ColabSchedule#create}. |
-| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#delete ColabSchedule#delete}. |
-| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#update ColabSchedule#update}. |
+| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#create ColabSchedule#create}. |
+| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#delete ColabSchedule#delete}. |
+| <code><a href="#@cdktf/provider-google.colabSchedule.ColabScheduleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#update ColabSchedule#update}. |
 
 ---
 
@@ -1689,7 +1689,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#create ColabSchedule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#create ColabSchedule#create}.
 
 ---
 
@@ -1701,7 +1701,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#delete ColabSchedule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#delete ColabSchedule#delete}.
 
 ---
 
@@ -1713,7 +1713,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/colab_schedule#update ColabSchedule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/colab_schedule#update ColabSchedule#update}.
 
 ---
 

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy
+// https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface NetworkConnectivityServiceConnectionPolicyConfig extends cdktf.
   /**
   * Free-text description of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#description NetworkConnectivityServiceConnectionPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#description NetworkConnectivityServiceConnectionPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#id NetworkConnectivityServiceConnectionPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#id NetworkConnectivityServiceConnectionPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,48 +32,48 @@ export interface NetworkConnectivityServiceConnectionPolicyConfig extends cdktf.
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#labels NetworkConnectivityServiceConnectionPolicy#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#labels NetworkConnectivityServiceConnectionPolicy#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the ServiceConnectionPolicy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#location NetworkConnectivityServiceConnectionPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#location NetworkConnectivityServiceConnectionPolicy#location}
   */
   readonly location: string;
   /**
   * The name of a ServiceConnectionPolicy. Format: projects/{project}/locations/{location}/serviceConnectionPolicies/{service_connection_policy} See: https://google.aip.dev/122#fields-representing-resource-names
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#name NetworkConnectivityServiceConnectionPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#name NetworkConnectivityServiceConnectionPolicy#name}
   */
   readonly name: string;
   /**
   * The resource path of the consumer network. Example: - projects/{projectNumOrId}/global/networks/{resourceId}.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#network NetworkConnectivityServiceConnectionPolicy#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#network NetworkConnectivityServiceConnectionPolicy#network}
   */
   readonly network: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#project NetworkConnectivityServiceConnectionPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#project NetworkConnectivityServiceConnectionPolicy#project}
   */
   readonly project?: string;
   /**
   * The service class identifier for which this ServiceConnectionPolicy is for. The service class identifier is a unique, symbolic representation of a ServiceClass.
   * It is provided by the Service Producer. Google services have a prefix of gcp. For example, gcp-cloud-sql. 3rd party services do not. For example, test-service-a3dfcx.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#service_class NetworkConnectivityServiceConnectionPolicy#service_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#service_class NetworkConnectivityServiceConnectionPolicy#service_class}
   */
   readonly serviceClass: string;
   /**
   * psc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#psc_config NetworkConnectivityServiceConnectionPolicy#psc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#psc_config NetworkConnectivityServiceConnectionPolicy#psc_config}
   */
   readonly pscConfig?: NetworkConnectivityServiceConnectionPolicyPscConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#timeouts NetworkConnectivityServiceConnectionPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#timeouts NetworkConnectivityServiceConnectionPolicy#timeouts}
   */
   readonly timeouts?: NetworkConnectivityServiceConnectionPolicyTimeouts;
 }
@@ -368,15 +368,36 @@ export class NetworkConnectivityServiceConnectionPolicyPscConnectionsList extend
 }
 export interface NetworkConnectivityServiceConnectionPolicyPscConfig {
   /**
+  * List of Projects, Folders, or Organizations from where the Producer instance can be within. For example,
+  * a network administrator can provide both 'organizations/foo' and 'projects/bar' as
+  * allowed_google_producers_resource_hierarchy_levels. This allowlists this network to connect with any Producer
+  * instance within the 'foo' organization or the 'bar' project. By default,
+  * allowedGoogleProducersResourceHierarchyLevel is empty. The format for each
+  * allowedGoogleProducersResourceHierarchyLevel is / where is one of 'projects', 'folders', or 'organizations'
+  * and is either the ID or the number of the resource type. Format for each
+  * allowedGoogleProducersResourceHierarchyLevel value: 'projects/' or 'folders/' or 'organizations/' Eg.
+  * [projects/my-project-id, projects/567, folders/891, organizations/123]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#allowed_google_producers_resource_hierarchy_level NetworkConnectivityServiceConnectionPolicy#allowed_google_producers_resource_hierarchy_level}
+  */
+  readonly allowedGoogleProducersResourceHierarchyLevel?: string[];
+  /**
   * Max number of PSC connections for this policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#limit NetworkConnectivityServiceConnectionPolicy#limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#limit NetworkConnectivityServiceConnectionPolicy#limit}
   */
   readonly limit?: string;
   /**
+  * ProducerInstanceLocation is used to specify which authorization mechanism to use to determine which projects
+  * the Producer instance can be within. Possible values: ["PRODUCER_INSTANCE_LOCATION_UNSPECIFIED", "CUSTOM_RESOURCE_HIERARCHY_LEVELS"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#producer_instance_location NetworkConnectivityServiceConnectionPolicy#producer_instance_location}
+  */
+  readonly producerInstanceLocation?: string;
+  /**
   * IDs of the subnetworks or fully qualified identifiers for the subnetworks
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#subnetworks NetworkConnectivityServiceConnectionPolicy#subnetworks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#subnetworks NetworkConnectivityServiceConnectionPolicy#subnetworks}
   */
   readonly subnetworks: string[];
 }
@@ -387,7 +408,9 @@ export function networkConnectivityServiceConnectionPolicyPscConfigToTerraform(s
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    allowed_google_producers_resource_hierarchy_level: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedGoogleProducersResourceHierarchyLevel),
     limit: cdktf.stringToTerraform(struct!.limit),
+    producer_instance_location: cdktf.stringToTerraform(struct!.producerInstanceLocation),
     subnetworks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.subnetworks),
   }
 }
@@ -399,8 +422,20 @@ export function networkConnectivityServiceConnectionPolicyPscConfigToHclTerrafor
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    allowed_google_producers_resource_hierarchy_level: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedGoogleProducersResourceHierarchyLevel),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
     limit: {
       value: cdktf.stringToHclTerraform(struct!.limit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    producer_instance_location: {
+      value: cdktf.stringToHclTerraform(struct!.producerInstanceLocation),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -431,9 +466,17 @@ export class NetworkConnectivityServiceConnectionPolicyPscConfigOutputReference 
   public get internalValue(): NetworkConnectivityServiceConnectionPolicyPscConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._allowedGoogleProducersResourceHierarchyLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedGoogleProducersResourceHierarchyLevel = this._allowedGoogleProducersResourceHierarchyLevel;
+    }
     if (this._limit !== undefined) {
       hasAnyValues = true;
       internalValueResult.limit = this._limit;
+    }
+    if (this._producerInstanceLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.producerInstanceLocation = this._producerInstanceLocation;
     }
     if (this._subnetworks !== undefined) {
       hasAnyValues = true;
@@ -445,14 +488,34 @@ export class NetworkConnectivityServiceConnectionPolicyPscConfigOutputReference 
   public set internalValue(value: NetworkConnectivityServiceConnectionPolicyPscConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._allowedGoogleProducersResourceHierarchyLevel = undefined;
       this._limit = undefined;
+      this._producerInstanceLocation = undefined;
       this._subnetworks = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedGoogleProducersResourceHierarchyLevel = value.allowedGoogleProducersResourceHierarchyLevel;
       this._limit = value.limit;
+      this._producerInstanceLocation = value.producerInstanceLocation;
       this._subnetworks = value.subnetworks;
     }
+  }
+
+  // allowed_google_producers_resource_hierarchy_level - computed: false, optional: true, required: false
+  private _allowedGoogleProducersResourceHierarchyLevel?: string[]; 
+  public get allowedGoogleProducersResourceHierarchyLevel() {
+    return this.getListAttribute('allowed_google_producers_resource_hierarchy_level');
+  }
+  public set allowedGoogleProducersResourceHierarchyLevel(value: string[]) {
+    this._allowedGoogleProducersResourceHierarchyLevel = value;
+  }
+  public resetAllowedGoogleProducersResourceHierarchyLevel() {
+    this._allowedGoogleProducersResourceHierarchyLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedGoogleProducersResourceHierarchyLevelInput() {
+    return this._allowedGoogleProducersResourceHierarchyLevel;
   }
 
   // limit - computed: false, optional: true, required: false
@@ -471,6 +534,22 @@ export class NetworkConnectivityServiceConnectionPolicyPscConfigOutputReference 
     return this._limit;
   }
 
+  // producer_instance_location - computed: true, optional: true, required: false
+  private _producerInstanceLocation?: string; 
+  public get producerInstanceLocation() {
+    return this.getStringAttribute('producer_instance_location');
+  }
+  public set producerInstanceLocation(value: string) {
+    this._producerInstanceLocation = value;
+  }
+  public resetProducerInstanceLocation() {
+    this._producerInstanceLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get producerInstanceLocationInput() {
+    return this._producerInstanceLocation;
+  }
+
   // subnetworks - computed: false, optional: false, required: true
   private _subnetworks?: string[]; 
   public get subnetworks() {
@@ -486,15 +565,15 @@ export class NetworkConnectivityServiceConnectionPolicyPscConfigOutputReference 
 }
 export interface NetworkConnectivityServiceConnectionPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#create NetworkConnectivityServiceConnectionPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#create NetworkConnectivityServiceConnectionPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#delete NetworkConnectivityServiceConnectionPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#delete NetworkConnectivityServiceConnectionPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#update NetworkConnectivityServiceConnectionPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#update NetworkConnectivityServiceConnectionPolicy#update}
   */
   readonly update?: string;
 }
@@ -646,7 +725,7 @@ export class NetworkConnectivityServiceConnectionPolicyTimeoutsOutputReference e
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy google_network_connectivity_service_connection_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy google_network_connectivity_service_connection_policy}
 */
 export class NetworkConnectivityServiceConnectionPolicy extends cdktf.TerraformResource {
 
@@ -662,7 +741,7 @@ export class NetworkConnectivityServiceConnectionPolicy extends cdktf.TerraformR
   * Generates CDKTF code for importing a NetworkConnectivityServiceConnectionPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkConnectivityServiceConnectionPolicy to import
-  * @param importFromId The id of the existing NetworkConnectivityServiceConnectionPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkConnectivityServiceConnectionPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkConnectivityServiceConnectionPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -674,7 +753,7 @@ export class NetworkConnectivityServiceConnectionPolicy extends cdktf.TerraformR
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/network_connectivity_service_connection_policy google_network_connectivity_service_connection_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/network_connectivity_service_connection_policy google_network_connectivity_service_connection_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -685,7 +764,7 @@ export class NetworkConnectivityServiceConnectionPolicy extends cdktf.TerraformR
       terraformResourceType: 'google_network_connectivity_service_connection_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.39.0',
+        providerVersion: '6.40.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

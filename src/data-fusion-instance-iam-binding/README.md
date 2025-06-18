@@ -1,3 +1,3 @@
 # `google_data_fusion_instance_iam_binding`
 
-Refer to the Terraform Registry for docs: [`google_data_fusion_instance_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/6.39.0/docs/resources/data_fusion_instance_iam_binding).
+Refer to the Terraform Registry for docs: [`google_data_fusion_instance_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/data_fusion_instance_iam_binding).
