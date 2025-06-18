@@ -521,6 +521,7 @@ export * as dialogflowCxIntent from './dialogflow-cx-intent';
 export * as dialogflowCxPage from './dialogflow-cx-page';
 export * as dialogflowCxSecuritySettings from './dialogflow-cx-security-settings';
 export * as dialogflowCxTestCase from './dialogflow-cx-test-case';
+export * as dialogflowCxTool from './dialogflow-cx-tool';
 export * as dialogflowCxVersion from './dialogflow-cx-version';
 export * as dialogflowCxWebhook from './dialogflow-cx-webhook';
 export * as dialogflowEntityType from './dialogflow-entity-type';
@@ -1226,6 +1227,7 @@ export * as dataGoogleDataCatalogTaxonomyIamPolicy from './data-google-data-cata
 export * as dataGoogleDataFusionInstanceIamPolicy from './data-google-data-fusion-instance-iam-policy';
 export * as dataGoogleDataplexAspectTypeIamPolicy from './data-google-dataplex-aspect-type-iam-policy';
 export * as dataGoogleDataplexAssetIamPolicy from './data-google-dataplex-asset-iam-policy';
+export * as dataGoogleDataplexDataQualityRules from './data-google-dataplex-data-quality-rules';
 export * as dataGoogleDataplexDatascanIamPolicy from './data-google-dataplex-datascan-iam-policy';
 export * as dataGoogleDataplexEntryGroupIamPolicy from './data-google-dataplex-entry-group-iam-policy';
 export * as dataGoogleDataplexEntryTypeIamPolicy from './data-google-dataplex-entry-type-iam-policy';
