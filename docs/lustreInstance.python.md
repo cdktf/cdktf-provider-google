@@ -4,7 +4,7 @@
 
 ### LustreInstance <a name="LustreInstance" id="@cdktf/provider-google.lustreInstance.LustreInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance google_lustre_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance google_lustre_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.lustreInstance.LustreInstance.Initializer"></a>
 
@@ -26,6 +26,7 @@ lustreInstance.LustreInstance(
   instance_id: str,
   location: str,
   network: str,
+  per_unit_storage_throughput: str,
   description: str = None,
   gke_support_enabled: typing.Union[bool, IResolvable] = None,
   id: str = None,
@@ -46,16 +47,17 @@ lustreInstance.LustreInstance(
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.capacityGib">capacity_gib</a></code> | <code>str</code> | Required. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.filesystem">filesystem</a></code> | <code>str</code> | Required. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.instanceId">instance_id</a></code> | <code>str</code> | Required. The name of the Managed Lustre instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.capacityGib">capacity_gib</a></code> | <code>str</code> | The storage capacity of the instance in gibibytes (GiB). Allowed values are from '18000' to '954000', in increments of 9000. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.filesystem">filesystem</a></code> | <code>str</code> | The filesystem name for this instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.instanceId">instance_id</a></code> | <code>str</code> | The name of the Managed Lustre instance. |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.location">location</a></code> | <code>str</code> | Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.network">network</a></code> | <code>str</code> | Required. Immutable. The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.description">description</a></code> | <code>str</code> | Optional. A user-readable description of the instance. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.gkeSupportEnabled">gke_support_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Optional. Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#id LustreInstance#id}. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Optional. Labels as key value pairs. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#project LustreInstance#project}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.network">network</a></code> | <code>str</code> | The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.perUnitStorageThroughput">per_unit_storage_throughput</a></code> | <code>str</code> | The throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500, 1000. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.description">description</a></code> | <code>str</code> | A user-readable description of the instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.gkeSupportEnabled">gke_support_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#id LustreInstance#id}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Labels as key value pairs. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#project LustreInstance#project}. |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts">LustreInstanceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -124,12 +126,9 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Required.
+The storage capacity of the instance in gibibytes (GiB). Allowed values are from '18000' to '954000', in increments of 9000.
 
-The storage capacity of the instance in gibibytes (GiB). Allowed values
-are from 18000 to 954000, in increments of 9000.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#capacity_gib LustreInstance#capacity_gib}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#capacity_gib LustreInstance#capacity_gib}
 
 ---
 
@@ -137,13 +136,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Required.
+The filesystem name for this instance.
 
-Immutable. The filesystem name for this instance. This name is used by client-side
-tools, including when mounting the instance. Must be 8 characters or less
-and may only contain letters and numbers.
+This name is used by client-side
+tools, including when mounting the instance. Must be eight characters or
+less and can only contain letters and numbers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#filesystem LustreInstance#filesystem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#filesystem LustreInstance#filesystem}
 
 ---
 
@@ -151,14 +150,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Required. The name of the Managed Lustre instance.
+The name of the Managed Lustre instance.
 
 * Must contain only lowercase letters, numbers, and hyphens.
 * Must start with a letter.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#instance_id LustreInstance#instance_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#instance_id LustreInstance#instance_id}
 
 ---
 
@@ -168,7 +167,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#location LustreInstance#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#location LustreInstance#location}
 
 ---
 
@@ -176,9 +175,19 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Required. Immutable. The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'.
+The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#network LustreInstance#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#network LustreInstance#network}
+
+---
+
+##### `per_unit_storage_throughput`<sup>Required</sup> <a name="per_unit_storage_throughput" id="@cdktf/provider-google.lustreInstance.LustreInstance.Initializer.parameter.perUnitStorageThroughput"></a>
+
+- *Type:* str
+
+The throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500, 1000.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#per_unit_storage_throughput LustreInstance#per_unit_storage_throughput}
 
 ---
 
@@ -186,9 +195,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Optional. A user-readable description of the instance.
+A user-readable description of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#description LustreInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#description LustreInstance#description}
 
 ---
 
@@ -196,9 +205,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Optional. Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported.
+Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#gke_support_enabled LustreInstance#gke_support_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#gke_support_enabled LustreInstance#gke_support_enabled}
 
 ---
 
@@ -206,7 +215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#id LustreInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#id LustreInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -217,12 +226,12 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Optional. Labels as key value pairs.
+Labels as key value pairs.
 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#labels LustreInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#labels LustreInstance#labels}
 
 ---
 
@@ -230,7 +239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#project LustreInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#project LustreInstance#project}.
 
 ---
 
@@ -240,7 +249,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#timeouts LustreInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#timeouts LustreInstance#timeouts}
 
 ---
 
@@ -620,7 +629,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#create LustreInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#create LustreInstance#create}.
 
 ---
 
@@ -628,7 +637,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#delete LustreInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#delete LustreInstance#delete}.
 
 ---
 
@@ -636,7 +645,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#update LustreInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#update LustreInstance#update}.
 
 ---
 
@@ -790,7 +799,7 @@ The construct id used in the generated config for the LustreInstance to import.
 
 The id of the existing LustreInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -837,6 +846,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.labelsInput">labels_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.networkInput">network_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.perUnitStorageThroughputInput">per_unit_storage_throughput_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts">LustreInstanceTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.capacityGib">capacity_gib</a></code> | <code>str</code> | *No description.* |
@@ -848,6 +858,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.network">network</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.perUnitStorageThroughput">per_unit_storage_throughput</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.project">project</a></code> | <code>str</code> | *No description.* |
 
 ---
@@ -1164,6 +1175,16 @@ network_input: str
 
 ---
 
+##### `per_unit_storage_throughput_input`<sup>Optional</sup> <a name="per_unit_storage_throughput_input" id="@cdktf/provider-google.lustreInstance.LustreInstance.property.perUnitStorageThroughputInput"></a>
+
+```python
+per_unit_storage_throughput_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `project_input`<sup>Optional</sup> <a name="project_input" id="@cdktf/provider-google.lustreInstance.LustreInstance.property.projectInput"></a>
 
 ```python
@@ -1274,6 +1295,16 @@ network: str
 
 ---
 
+##### `per_unit_storage_throughput`<sup>Required</sup> <a name="per_unit_storage_throughput" id="@cdktf/provider-google.lustreInstance.LustreInstance.property.perUnitStorageThroughput"></a>
+
+```python
+per_unit_storage_throughput: str
+```
+
+- *Type:* str
+
+---
+
 ##### `project`<sup>Required</sup> <a name="project" id="@cdktf/provider-google.lustreInstance.LustreInstance.property.project"></a>
 
 ```python
@@ -1324,6 +1355,7 @@ lustreInstance.LustreInstanceConfig(
   instance_id: str,
   location: str,
   network: str,
+  per_unit_storage_throughput: str,
   description: str = None,
   gke_support_enabled: typing.Union[bool, IResolvable] = None,
   id: str = None,
@@ -1344,16 +1376,17 @@ lustreInstance.LustreInstanceConfig(
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.capacityGib">capacity_gib</a></code> | <code>str</code> | Required. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.filesystem">filesystem</a></code> | <code>str</code> | Required. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.instanceId">instance_id</a></code> | <code>str</code> | Required. The name of the Managed Lustre instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.capacityGib">capacity_gib</a></code> | <code>str</code> | The storage capacity of the instance in gibibytes (GiB). Allowed values are from '18000' to '954000', in increments of 9000. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.filesystem">filesystem</a></code> | <code>str</code> | The filesystem name for this instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.instanceId">instance_id</a></code> | <code>str</code> | The name of the Managed Lustre instance. |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.location">location</a></code> | <code>str</code> | Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.network">network</a></code> | <code>str</code> | Required. Immutable. The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.description">description</a></code> | <code>str</code> | Optional. A user-readable description of the instance. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.gkeSupportEnabled">gke_support_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Optional. Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#id LustreInstance#id}. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Optional. Labels as key value pairs. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#project LustreInstance#project}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.network">network</a></code> | <code>str</code> | The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.perUnitStorageThroughput">per_unit_storage_throughput</a></code> | <code>str</code> | The throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500, 1000. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.description">description</a></code> | <code>str</code> | A user-readable description of the instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.gkeSupportEnabled">gke_support_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#id LustreInstance#id}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Labels as key value pairs. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#project LustreInstance#project}. |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts">LustreInstanceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1436,12 +1469,9 @@ capacity_gib: str
 
 - *Type:* str
 
-Required.
+The storage capacity of the instance in gibibytes (GiB). Allowed values are from '18000' to '954000', in increments of 9000.
 
-The storage capacity of the instance in gibibytes (GiB). Allowed values
-are from 18000 to 954000, in increments of 9000.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#capacity_gib LustreInstance#capacity_gib}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#capacity_gib LustreInstance#capacity_gib}
 
 ---
 
@@ -1453,13 +1483,13 @@ filesystem: str
 
 - *Type:* str
 
-Required.
+The filesystem name for this instance.
 
-Immutable. The filesystem name for this instance. This name is used by client-side
-tools, including when mounting the instance. Must be 8 characters or less
-and may only contain letters and numbers.
+This name is used by client-side
+tools, including when mounting the instance. Must be eight characters or
+less and can only contain letters and numbers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#filesystem LustreInstance#filesystem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#filesystem LustreInstance#filesystem}
 
 ---
 
@@ -1471,14 +1501,14 @@ instance_id: str
 
 - *Type:* str
 
-Required. The name of the Managed Lustre instance.
+The name of the Managed Lustre instance.
 
 * Must contain only lowercase letters, numbers, and hyphens.
 * Must start with a letter.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#instance_id LustreInstance#instance_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#instance_id LustreInstance#instance_id}
 
 ---
 
@@ -1492,7 +1522,7 @@ location: str
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#location LustreInstance#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#location LustreInstance#location}
 
 ---
 
@@ -1504,9 +1534,23 @@ network: str
 
 - *Type:* str
 
-Required. Immutable. The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'.
+The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#network LustreInstance#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#network LustreInstance#network}
+
+---
+
+##### `per_unit_storage_throughput`<sup>Required</sup> <a name="per_unit_storage_throughput" id="@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.perUnitStorageThroughput"></a>
+
+```python
+per_unit_storage_throughput: str
+```
+
+- *Type:* str
+
+The throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500, 1000.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#per_unit_storage_throughput LustreInstance#per_unit_storage_throughput}
 
 ---
 
@@ -1518,9 +1562,9 @@ description: str
 
 - *Type:* str
 
-Optional. A user-readable description of the instance.
+A user-readable description of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#description LustreInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#description LustreInstance#description}
 
 ---
 
@@ -1532,9 +1576,9 @@ gke_support_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Optional. Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported.
+Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#gke_support_enabled LustreInstance#gke_support_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#gke_support_enabled LustreInstance#gke_support_enabled}
 
 ---
 
@@ -1546,7 +1590,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#id LustreInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#id LustreInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1561,12 +1605,12 @@ labels: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Optional. Labels as key value pairs.
+Labels as key value pairs.
 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#labels LustreInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#labels LustreInstance#labels}
 
 ---
 
@@ -1578,7 +1622,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#project LustreInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#project LustreInstance#project}.
 
 ---
 
@@ -1592,7 +1636,7 @@ timeouts: LustreInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#timeouts LustreInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#timeouts LustreInstance#timeouts}
 
 ---
 
@@ -1614,9 +1658,9 @@ lustreInstance.LustreInstanceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#create LustreInstance#create}. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#delete LustreInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#update LustreInstance#update}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#create LustreInstance#create}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#delete LustreInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#update LustreInstance#update}. |
 
 ---
 
@@ -1628,7 +1672,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#create LustreInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#create LustreInstance#create}.
 
 ---
 
@@ -1640,7 +1684,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#delete LustreInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#delete LustreInstance#delete}.
 
 ---
 
@@ -1652,7 +1696,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#update LustreInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#update LustreInstance#update}.
 
 ---
 
