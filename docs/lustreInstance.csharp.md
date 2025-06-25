@@ -4,7 +4,7 @@
 
 ### LustreInstance <a name="LustreInstance" id="@cdktf/provider-google.lustreInstance.LustreInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance google_lustre_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance google_lustre_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.lustreInstance.LustreInstance.Initializer"></a>
 
@@ -522,7 +522,7 @@ The construct id used in the generated config for the LustreInstance to import.
 
 The id of the existing LustreInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -569,6 +569,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.labelsInput">LabelsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.networkInput">NetworkInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.perUnitStorageThroughputInput">PerUnitStorageThroughputInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.projectInput">ProjectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.capacityGib">CapacityGib</a></code> | <code>string</code> | *No description.* |
@@ -580,6 +581,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.location">Location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.network">Network</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.perUnitStorageThroughput">PerUnitStorageThroughput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstance.property.project">Project</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -896,6 +898,16 @@ public string NetworkInput { get; }
 
 ---
 
+##### `PerUnitStorageThroughputInput`<sup>Optional</sup> <a name="PerUnitStorageThroughputInput" id="@cdktf/provider-google.lustreInstance.LustreInstance.property.perUnitStorageThroughputInput"></a>
+
+```csharp
+public string PerUnitStorageThroughputInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `ProjectInput`<sup>Optional</sup> <a name="ProjectInput" id="@cdktf/provider-google.lustreInstance.LustreInstance.property.projectInput"></a>
 
 ```csharp
@@ -1006,6 +1018,16 @@ public string Network { get; }
 
 ---
 
+##### `PerUnitStorageThroughput`<sup>Required</sup> <a name="PerUnitStorageThroughput" id="@cdktf/provider-google.lustreInstance.LustreInstance.property.perUnitStorageThroughput"></a>
+
+```csharp
+public string PerUnitStorageThroughput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `Project`<sup>Required</sup> <a name="Project" id="@cdktf/provider-google.lustreInstance.LustreInstance.property.project"></a>
 
 ```csharp
@@ -1056,6 +1078,7 @@ new LustreInstanceConfig {
     string InstanceId,
     string Location,
     string Network,
+    string PerUnitStorageThroughput,
     string Description = null,
     object GkeSupportEnabled = null,
     string Id = null,
@@ -1076,16 +1099,17 @@ new LustreInstanceConfig {
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.capacityGib">CapacityGib</a></code> | <code>string</code> | Required. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.filesystem">Filesystem</a></code> | <code>string</code> | Required. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.instanceId">InstanceId</a></code> | <code>string</code> | Required. The name of the Managed Lustre instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.capacityGib">CapacityGib</a></code> | <code>string</code> | The storage capacity of the instance in gibibytes (GiB). Allowed values are from '18000' to '954000', in increments of 9000. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.filesystem">Filesystem</a></code> | <code>string</code> | The filesystem name for this instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.instanceId">InstanceId</a></code> | <code>string</code> | The name of the Managed Lustre instance. |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.location">Location</a></code> | <code>string</code> | Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.network">Network</a></code> | <code>string</code> | Required. Immutable. The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.description">Description</a></code> | <code>string</code> | Optional. A user-readable description of the instance. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.gkeSupportEnabled">GkeSupportEnabled</a></code> | <code>object</code> | Optional. Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#id LustreInstance#id}. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Optional. Labels as key value pairs. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#project LustreInstance#project}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.network">Network</a></code> | <code>string</code> | The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.perUnitStorageThroughput">PerUnitStorageThroughput</a></code> | <code>string</code> | The throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500, 1000. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.description">Description</a></code> | <code>string</code> | A user-readable description of the instance. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.gkeSupportEnabled">GkeSupportEnabled</a></code> | <code>object</code> | Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#id LustreInstance#id}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Labels as key value pairs. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#project LustreInstance#project}. |
 | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts">LustreInstanceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1168,12 +1192,9 @@ public string CapacityGib { get; set; }
 
 - *Type:* string
 
-Required.
+The storage capacity of the instance in gibibytes (GiB). Allowed values are from '18000' to '954000', in increments of 9000.
 
-The storage capacity of the instance in gibibytes (GiB). Allowed values
-are from 18000 to 954000, in increments of 9000.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#capacity_gib LustreInstance#capacity_gib}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#capacity_gib LustreInstance#capacity_gib}
 
 ---
 
@@ -1185,13 +1206,13 @@ public string Filesystem { get; set; }
 
 - *Type:* string
 
-Required.
+The filesystem name for this instance.
 
-Immutable. The filesystem name for this instance. This name is used by client-side
-tools, including when mounting the instance. Must be 8 characters or less
-and may only contain letters and numbers.
+This name is used by client-side
+tools, including when mounting the instance. Must be eight characters or
+less and can only contain letters and numbers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#filesystem LustreInstance#filesystem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#filesystem LustreInstance#filesystem}
 
 ---
 
@@ -1203,14 +1224,14 @@ public string InstanceId { get; set; }
 
 - *Type:* string
 
-Required. The name of the Managed Lustre instance.
+The name of the Managed Lustre instance.
 
 * Must contain only lowercase letters, numbers, and hyphens.
 * Must start with a letter.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#instance_id LustreInstance#instance_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#instance_id LustreInstance#instance_id}
 
 ---
 
@@ -1224,7 +1245,7 @@ public string Location { get; set; }
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#location LustreInstance#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#location LustreInstance#location}
 
 ---
 
@@ -1236,9 +1257,23 @@ public string Network { get; set; }
 
 - *Type:* string
 
-Required. Immutable. The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'.
+The full name of the VPC network to which the instance is connected. Must be in the format 'projects/{project_id}/global/networks/{network_name}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#network LustreInstance#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#network LustreInstance#network}
+
+---
+
+##### `PerUnitStorageThroughput`<sup>Required</sup> <a name="PerUnitStorageThroughput" id="@cdktf/provider-google.lustreInstance.LustreInstanceConfig.property.perUnitStorageThroughput"></a>
+
+```csharp
+public string PerUnitStorageThroughput { get; set; }
+```
+
+- *Type:* string
+
+The throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500, 1000.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#per_unit_storage_throughput LustreInstance#per_unit_storage_throughput}
 
 ---
 
@@ -1250,9 +1285,9 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Optional. A user-readable description of the instance.
+A user-readable description of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#description LustreInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#description LustreInstance#description}
 
 ---
 
@@ -1264,9 +1299,9 @@ public object GkeSupportEnabled { get; set; }
 
 - *Type:* object
 
-Optional. Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported.
+Indicates whether you want to enable support for GKE clients. By default, GKE clients are not supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#gke_support_enabled LustreInstance#gke_support_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#gke_support_enabled LustreInstance#gke_support_enabled}
 
 ---
 
@@ -1278,7 +1313,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#id LustreInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#id LustreInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1293,12 +1328,12 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Optional. Labels as key value pairs.
+Labels as key value pairs.
 
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#labels LustreInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#labels LustreInstance#labels}
 
 ---
 
@@ -1310,7 +1345,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#project LustreInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#project LustreInstance#project}.
 
 ---
 
@@ -1324,7 +1359,7 @@ public LustreInstanceTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#timeouts LustreInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#timeouts LustreInstance#timeouts}
 
 ---
 
@@ -1346,9 +1381,9 @@ new LustreInstanceTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#create LustreInstance#create}. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#delete LustreInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#update LustreInstance#update}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#create LustreInstance#create}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#delete LustreInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.lustreInstance.LustreInstanceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#update LustreInstance#update}. |
 
 ---
 
@@ -1360,7 +1395,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#create LustreInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#create LustreInstance#create}.
 
 ---
 
@@ -1372,7 +1407,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#delete LustreInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#delete LustreInstance#delete}.
 
 ---
 
@@ -1384,7 +1419,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#update LustreInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#update LustreInstance#update}.
 
 ---
 

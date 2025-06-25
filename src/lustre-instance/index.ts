@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,96 +13,103 @@ import * as cdktf from 'cdktf';
 
 export interface LustreInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Required. The storage capacity of the instance in gibibytes (GiB). Allowed values
-  * are from 18000 to 954000, in increments of 9000.
+  * The storage capacity of the instance in gibibytes (GiB). Allowed values
+  * are from '18000' to '954000', in increments of 9000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#capacity_gib LustreInstance#capacity_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#capacity_gib LustreInstance#capacity_gib}
   */
   readonly capacityGib: string;
   /**
-  * Optional. A user-readable description of the instance.
+  * A user-readable description of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#description LustreInstance#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#description LustreInstance#description}
   */
   readonly description?: string;
   /**
-  * Required. Immutable. The filesystem name for this instance. This name is used by client-side
-  * tools, including when mounting the instance. Must be 8 characters or less
-  * and may only contain letters and numbers.
+  * The filesystem name for this instance. This name is used by client-side
+  * tools, including when mounting the instance. Must be eight characters or
+  * less and can only contain letters and numbers.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#filesystem LustreInstance#filesystem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#filesystem LustreInstance#filesystem}
   */
   readonly filesystem: string;
   /**
-  * Optional. Indicates whether you want to enable support for GKE clients. By default,
+  * Indicates whether you want to enable support for GKE clients. By default,
   * GKE clients are not supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#gke_support_enabled LustreInstance#gke_support_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#gke_support_enabled LustreInstance#gke_support_enabled}
   */
   readonly gkeSupportEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#id LustreInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#id LustreInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Required. The name of the Managed Lustre instance.
+  * The name of the Managed Lustre instance.
   * 
   * * Must contain only lowercase letters, numbers, and hyphens.
   * * Must start with a letter.
   * * Must be between 1-63 characters.
   * * Must end with a number or a letter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#instance_id LustreInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#instance_id LustreInstance#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Optional. Labels as key value pairs.
+  * Labels as key value pairs.
   * 
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#labels LustreInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#labels LustreInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#location LustreInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#location LustreInstance#location}
   */
   readonly location: string;
   /**
-  * Required. Immutable. The full name of the VPC network to which the instance is connected.
+  * The full name of the VPC network to which the instance is connected.
   * Must be in the format
   * 'projects/{project_id}/global/networks/{network_name}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#network LustreInstance#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#network LustreInstance#network}
   */
   readonly network: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#project LustreInstance#project}
+  * The throughput of the instance in MB/s/TiB.
+  * Valid values are 125, 250, 500, 1000.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#per_unit_storage_throughput LustreInstance#per_unit_storage_throughput}
+  */
+  readonly perUnitStorageThroughput: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#project LustreInstance#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#timeouts LustreInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#timeouts LustreInstance#timeouts}
   */
   readonly timeouts?: LustreInstanceTimeouts;
 }
 export interface LustreInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#create LustreInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#create LustreInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#delete LustreInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#delete LustreInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#update LustreInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#update LustreInstance#update}
   */
   readonly update?: string;
 }
@@ -254,7 +261,7 @@ export class LustreInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance google_lustre_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance google_lustre_instance}
 */
 export class LustreInstance extends cdktf.TerraformResource {
 
@@ -270,7 +277,7 @@ export class LustreInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LustreInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LustreInstance to import
-  * @param importFromId The id of the existing LustreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LustreInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LustreInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -282,7 +289,7 @@ export class LustreInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/lustre_instance google_lustre_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/lustre_instance google_lustre_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -293,7 +300,7 @@ export class LustreInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_lustre_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.40.0',
+        providerVersion: '6.41.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -313,6 +320,7 @@ export class LustreInstance extends cdktf.TerraformResource {
     this._labels = config.labels;
     this._location = config.location;
     this._network = config.network;
+    this._perUnitStorageThroughput = config.perUnitStorageThroughput;
     this._project = config.project;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -471,6 +479,19 @@ export class LustreInstance extends cdktf.TerraformResource {
     return this._network;
   }
 
+  // per_unit_storage_throughput - computed: false, optional: false, required: true
+  private _perUnitStorageThroughput?: string; 
+  public get perUnitStorageThroughput() {
+    return this.getStringAttribute('per_unit_storage_throughput');
+  }
+  public set perUnitStorageThroughput(value: string) {
+    this._perUnitStorageThroughput = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perUnitStorageThroughputInput() {
+    return this._perUnitStorageThroughput;
+  }
+
   // project - computed: true, optional: true, required: false
   private _project?: string; 
   public get project() {
@@ -534,6 +555,7 @@ export class LustreInstance extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       network: cdktf.stringToTerraform(this._network),
+      per_unit_storage_throughput: cdktf.stringToTerraform(this._perUnitStorageThroughput),
       project: cdktf.stringToTerraform(this._project),
       timeouts: lustreInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -591,6 +613,12 @@ export class LustreInstance extends cdktf.TerraformResource {
       },
       network: {
         value: cdktf.stringToHclTerraform(this._network),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      per_unit_storage_throughput: {
+        value: cdktf.stringToHclTerraform(this._perUnitStorageThroughput),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
