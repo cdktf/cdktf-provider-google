@@ -64,6 +64,7 @@ Object.defineProperty(exports, 'apigeeTargetServer', { get: function () { return
 Object.defineProperty(exports, 'apihubApiHubInstance', { get: function () { return require('./apihub-api-hub-instance'); } });
 Object.defineProperty(exports, 'apihubCuration', { get: function () { return require('./apihub-curation'); } });
 Object.defineProperty(exports, 'apihubHostProjectRegistration', { get: function () { return require('./apihub-host-project-registration'); } });
+Object.defineProperty(exports, 'apihubPluginInstance', { get: function () { return require('./apihub-plugin-instance'); } });
 Object.defineProperty(exports, 'apikeysKey', { get: function () { return require('./apikeys-key'); } });
 Object.defineProperty(exports, 'appEngineApplication', { get: function () { return require('./app-engine-application'); } });
 Object.defineProperty(exports, 'appEngineApplicationUrlDispatchRules', { get: function () { return require('./app-engine-application-url-dispatch-rules'); } });
@@ -389,6 +390,7 @@ Object.defineProperty(exports, 'computeTargetTcpProxy', { get: function () { ret
 Object.defineProperty(exports, 'computeUrlMap', { get: function () { return require('./compute-url-map'); } });
 Object.defineProperty(exports, 'computeVpnGateway', { get: function () { return require('./compute-vpn-gateway'); } });
 Object.defineProperty(exports, 'computeVpnTunnel', { get: function () { return require('./compute-vpn-tunnel'); } });
+Object.defineProperty(exports, 'contactCenterInsightsView', { get: function () { return require('./contact-center-insights-view'); } });
 Object.defineProperty(exports, 'containerAnalysisNote', { get: function () { return require('./container-analysis-note'); } });
 Object.defineProperty(exports, 'containerAnalysisNoteIamBinding', { get: function () { return require('./container-analysis-note-iam-binding'); } });
 Object.defineProperty(exports, 'containerAnalysisNoteIamMember', { get: function () { return require('./container-analysis-note-iam-member'); } });
@@ -504,6 +506,7 @@ Object.defineProperty(exports, 'dataprocMetastoreServiceIamPolicy', { get: funct
 Object.defineProperty(exports, 'dataprocMetastoreTableIamBinding', { get: function () { return require('./dataproc-metastore-table-iam-binding'); } });
 Object.defineProperty(exports, 'dataprocMetastoreTableIamMember', { get: function () { return require('./dataproc-metastore-table-iam-member'); } });
 Object.defineProperty(exports, 'dataprocMetastoreTableIamPolicy', { get: function () { return require('./dataproc-metastore-table-iam-policy'); } });
+Object.defineProperty(exports, 'dataprocSessionTemplate', { get: function () { return require('./dataproc-session-template'); } });
 Object.defineProperty(exports, 'dataprocWorkflowTemplate', { get: function () { return require('./dataproc-workflow-template'); } });
 Object.defineProperty(exports, 'datastreamConnectionProfile', { get: function () { return require('./datastream-connection-profile'); } });
 Object.defineProperty(exports, 'datastreamPrivateConnection', { get: function () { return require('./datastream-private-connection'); } });
@@ -524,6 +527,7 @@ Object.defineProperty(exports, 'dialogflowCxTestCase', { get: function () { retu
 Object.defineProperty(exports, 'dialogflowCxTool', { get: function () { return require('./dialogflow-cx-tool'); } });
 Object.defineProperty(exports, 'dialogflowCxVersion', { get: function () { return require('./dialogflow-cx-version'); } });
 Object.defineProperty(exports, 'dialogflowCxWebhook', { get: function () { return require('./dialogflow-cx-webhook'); } });
+Object.defineProperty(exports, 'dialogflowEncryptionSpec', { get: function () { return require('./dialogflow-encryption-spec'); } });
 Object.defineProperty(exports, 'dialogflowEntityType', { get: function () { return require('./dialogflow-entity-type'); } });
 Object.defineProperty(exports, 'dialogflowFulfillment', { get: function () { return require('./dialogflow-fulfillment'); } });
 Object.defineProperty(exports, 'dialogflowIntent', { get: function () { return require('./dialogflow-intent'); } });

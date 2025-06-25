@@ -1,3 +1,3 @@
 # `google_vmwareengine_network`
 
-Refer to the Terraform Registry for docs: [`google_vmwareengine_network`](https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/vmwareengine_network).
+Refer to the Terraform Registry for docs: [`google_vmwareengine_network`](https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/vmwareengine_network).

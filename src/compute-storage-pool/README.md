@@ -1,3 +1,3 @@
 # `google_compute_storage_pool`
 
-Refer to the Terraform Registry for docs: [`google_compute_storage_pool`](https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/resources/compute_storage_pool).
+Refer to the Terraform Registry for docs: [`google_compute_storage_pool`](https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_storage_pool).

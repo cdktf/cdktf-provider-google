@@ -1,3 +1,3 @@
 # `data_google_backup_dr_data_source`
 
-Refer to the Terraform Registry for docs: [`data_google_backup_dr_data_source`](https://registry.terraform.io/providers/hashicorp/google/6.40.0/docs/data-sources/backup_dr_data_source).
+Refer to the Terraform Registry for docs: [`data_google_backup_dr_data_source`](https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/backup_dr_data_source).
