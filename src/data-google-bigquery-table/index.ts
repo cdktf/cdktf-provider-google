@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_table
+// https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_table
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface DataGoogleBigqueryTableConfig extends cdktf.TerraformMetaArgume
   /**
   * The dataset ID to create the table in. Changing this forces a new resource to be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_table#dataset_id DataGoogleBigqueryTable#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_table#dataset_id DataGoogleBigqueryTable#dataset_id}
   */
   readonly datasetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_table#id DataGoogleBigqueryTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_table#id DataGoogleBigqueryTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,13 +28,13 @@ export interface DataGoogleBigqueryTableConfig extends cdktf.TerraformMetaArgume
   /**
   * The ID of the project in which the resource belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_table#project DataGoogleBigqueryTable#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_table#project DataGoogleBigqueryTable#project}
   */
   readonly project?: string;
   /**
   * A unique ID for the resource. Changing this forces a new resource to be created.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_table#table_id DataGoogleBigqueryTable#table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_table#table_id DataGoogleBigqueryTable#table_id}
   */
   readonly tableId: string;
 }
@@ -2433,7 +2433,7 @@ export class DataGoogleBigqueryTableViewList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_table google_bigquery_table}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_table google_bigquery_table}
 */
 export class DataGoogleBigqueryTable extends cdktf.TerraformDataSource {
 
@@ -2449,7 +2449,7 @@ export class DataGoogleBigqueryTable extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleBigqueryTable resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleBigqueryTable to import
-  * @param importFromId The id of the existing DataGoogleBigqueryTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_table#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleBigqueryTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_table#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleBigqueryTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2461,7 +2461,7 @@ export class DataGoogleBigqueryTable extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_table google_bigquery_table} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_table google_bigquery_table} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2472,7 +2472,7 @@ export class DataGoogleBigqueryTable extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_bigquery_table',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.41.0',
+        providerVersion: '6.42.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

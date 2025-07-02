@@ -64,6 +64,7 @@ Object.defineProperty(exports, 'apigeeTargetServer', { get: function () { return
 Object.defineProperty(exports, 'apihubApiHubInstance', { get: function () { return require('./apihub-api-hub-instance'); } });
 Object.defineProperty(exports, 'apihubCuration', { get: function () { return require('./apihub-curation'); } });
 Object.defineProperty(exports, 'apihubHostProjectRegistration', { get: function () { return require('./apihub-host-project-registration'); } });
+Object.defineProperty(exports, 'apihubPlugin', { get: function () { return require('./apihub-plugin'); } });
 Object.defineProperty(exports, 'apihubPluginInstance', { get: function () { return require('./apihub-plugin-instance'); } });
 Object.defineProperty(exports, 'apikeysKey', { get: function () { return require('./apikeys-key'); } });
 Object.defineProperty(exports, 'appEngineApplication', { get: function () { return require('./app-engine-application'); } });
@@ -520,6 +521,7 @@ Object.defineProperty(exports, 'dialogflowCxAgent', { get: function () { return 
 Object.defineProperty(exports, 'dialogflowCxEntityType', { get: function () { return require('./dialogflow-cx-entity-type'); } });
 Object.defineProperty(exports, 'dialogflowCxEnvironment', { get: function () { return require('./dialogflow-cx-environment'); } });
 Object.defineProperty(exports, 'dialogflowCxFlow', { get: function () { return require('./dialogflow-cx-flow'); } });
+Object.defineProperty(exports, 'dialogflowCxGenerativeSettings', { get: function () { return require('./dialogflow-cx-generative-settings'); } });
 Object.defineProperty(exports, 'dialogflowCxIntent', { get: function () { return require('./dialogflow-cx-intent'); } });
 Object.defineProperty(exports, 'dialogflowCxPage', { get: function () { return require('./dialogflow-cx-page'); } });
 Object.defineProperty(exports, 'dialogflowCxSecuritySettings', { get: function () { return require('./dialogflow-cx-security-settings'); } });

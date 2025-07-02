@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace
+// https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ export interface HealthcareWorkspaceConfig extends cdktf.TerraformMetaArguments 
   * Identifies the dataset addressed by this request. Must be in the format
   * 'projects/{project}/locations/{location}/datasets/{dataset}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#dataset HealthcareWorkspace#dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#dataset HealthcareWorkspace#dataset}
   */
   readonly dataset: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#id HealthcareWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#id HealthcareWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -33,25 +33,25 @@ export interface HealthcareWorkspaceConfig extends cdktf.TerraformMetaArguments 
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#labels HealthcareWorkspace#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#labels HealthcareWorkspace#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the workspace, in the format 'projects/{projectId}/locations/{location}/datasets/{datasetId}/dataMapperWorkspaces/{workspaceId}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#name HealthcareWorkspace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#name HealthcareWorkspace#name}
   */
   readonly name: string;
   /**
   * settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#settings HealthcareWorkspace#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#settings HealthcareWorkspace#settings}
   */
   readonly settings: HealthcareWorkspaceSettings;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#timeouts HealthcareWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#timeouts HealthcareWorkspace#timeouts}
   */
   readonly timeouts?: HealthcareWorkspaceTimeouts;
 }
@@ -59,7 +59,7 @@ export interface HealthcareWorkspaceSettings {
   /**
   * Project IDs for data projects hosted in a workspace.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#data_project_ids HealthcareWorkspace#data_project_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#data_project_ids HealthcareWorkspace#data_project_ids}
   */
   readonly dataProjectIds: string[];
 }
@@ -140,15 +140,15 @@ export class HealthcareWorkspaceSettingsOutputReference extends cdktf.ComplexObj
 }
 export interface HealthcareWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#create HealthcareWorkspace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#create HealthcareWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#delete HealthcareWorkspace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#delete HealthcareWorkspace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#update HealthcareWorkspace#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#update HealthcareWorkspace#update}
   */
   readonly update?: string;
 }
@@ -300,7 +300,7 @@ export class HealthcareWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace google_healthcare_workspace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace google_healthcare_workspace}
 */
 export class HealthcareWorkspace extends cdktf.TerraformResource {
 
@@ -316,7 +316,7 @@ export class HealthcareWorkspace extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HealthcareWorkspace resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HealthcareWorkspace to import
-  * @param importFromId The id of the existing HealthcareWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HealthcareWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HealthcareWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -328,7 +328,7 @@ export class HealthcareWorkspace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/healthcare_workspace google_healthcare_workspace} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/healthcare_workspace google_healthcare_workspace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -339,7 +339,7 @@ export class HealthcareWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_workspace',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.41.0',
+        providerVersion: '6.42.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
