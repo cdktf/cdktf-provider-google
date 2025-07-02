@@ -1,3 +1,3 @@
 # `data_google_bigquery_dataset`
 
-Refer to the Terraform Registry for docs: [`data_google_bigquery_dataset`](https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/bigquery_dataset).
+Refer to the Terraform Registry for docs: [`data_google_bigquery_dataset`](https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/bigquery_dataset).
