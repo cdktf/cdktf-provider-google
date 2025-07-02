@@ -4,7 +4,7 @@
 
 ### ComputeInstantSnapshotIamMember <a name="ComputeInstantSnapshotIamMember" id="@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member google_compute_instant_snapshot_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member google_compute_instant_snapshot_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMember.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the ComputeInstantSnapshotIamM
 
 The id of the existing ComputeInstantSnapshotIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -886,9 +886,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/computeinstantsnaps
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#expression ComputeInstantSnapshotIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#title ComputeInstantSnapshotIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#description ComputeInstantSnapshotIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#expression ComputeInstantSnapshotIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#title ComputeInstantSnapshotIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#description ComputeInstantSnapshotIamMember#description}. |
 
 ---
 
@@ -900,7 +900,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#expression ComputeInstantSnapshotIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#expression ComputeInstantSnapshotIamMember#expression}.
 
 ---
 
@@ -912,7 +912,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#title ComputeInstantSnapshotIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#title ComputeInstantSnapshotIamMember#title}.
 
 ---
 
@@ -924,7 +924,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#description ComputeInstantSnapshotIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#description ComputeInstantSnapshotIamMember#description}.
 
 ---
 
@@ -964,13 +964,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/computeinstantsnaps
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#member ComputeInstantSnapshotIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#name ComputeInstantSnapshotIamMember#name}. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#role ComputeInstantSnapshotIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#member ComputeInstantSnapshotIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#name ComputeInstantSnapshotIamMember#name}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#role ComputeInstantSnapshotIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberCondition">ComputeInstantSnapshotIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#id ComputeInstantSnapshotIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#project ComputeInstantSnapshotIamMember#project}. |
-| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.zone">Zone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#zone ComputeInstantSnapshotIamMember#zone}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#id ComputeInstantSnapshotIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#project ComputeInstantSnapshotIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.computeInstantSnapshotIamMember.ComputeInstantSnapshotIamMemberConfig.property.zone">Zone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#zone ComputeInstantSnapshotIamMember#zone}. |
 
 ---
 
@@ -1052,7 +1052,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#member ComputeInstantSnapshotIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#member ComputeInstantSnapshotIamMember#member}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#name ComputeInstantSnapshotIamMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#name ComputeInstantSnapshotIamMember#name}.
 
 ---
 
@@ -1076,7 +1076,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#role ComputeInstantSnapshotIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#role ComputeInstantSnapshotIamMember#role}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Condition ComputeInstantSnapshotIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#condition ComputeInstantSnapshotIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#condition ComputeInstantSnapshotIamMember#condition}
 
 ---
 
@@ -1102,7 +1102,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#id ComputeInstantSnapshotIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#id ComputeInstantSnapshotIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1117,7 +1117,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#project ComputeInstantSnapshotIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#project ComputeInstantSnapshotIamMember#project}.
 
 ---
 
@@ -1129,7 +1129,7 @@ Zone *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/compute_instant_snapshot_iam_member#zone ComputeInstantSnapshotIamMember#zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instant_snapshot_iam_member#zone ComputeInstantSnapshotIamMember#zone}.
 
 ---
 

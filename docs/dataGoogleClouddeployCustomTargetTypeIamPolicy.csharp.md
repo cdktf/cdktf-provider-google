@@ -4,7 +4,7 @@
 
 ### DataGoogleClouddeployCustomTargetTypeIamPolicy <a name="DataGoogleClouddeployCustomTargetTypeIamPolicy" id="@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy google_clouddeploy_custom_target_type_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy google_clouddeploy_custom_target_type_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicy.Initializer"></a>
 
@@ -386,7 +386,7 @@ The construct id used in the generated config for the DataGoogleClouddeployCusto
 
 The id of the existing DataGoogleClouddeployCustomTargetTypeIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -702,10 +702,10 @@ new DataGoogleClouddeployCustomTargetTypeIamPolicyConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#name DataGoogleClouddeployCustomTargetTypeIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#id DataGoogleClouddeployCustomTargetTypeIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#location DataGoogleClouddeployCustomTargetTypeIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#project DataGoogleClouddeployCustomTargetTypeIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#name DataGoogleClouddeployCustomTargetTypeIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#id DataGoogleClouddeployCustomTargetTypeIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#location DataGoogleClouddeployCustomTargetTypeIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleClouddeployCustomTargetTypeIamPolicy.DataGoogleClouddeployCustomTargetTypeIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#project DataGoogleClouddeployCustomTargetTypeIamPolicy#project}. |
 
 ---
 
@@ -787,7 +787,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#name DataGoogleClouddeployCustomTargetTypeIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#name DataGoogleClouddeployCustomTargetTypeIamPolicy#name}.
 
 ---
 
@@ -799,7 +799,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#id DataGoogleClouddeployCustomTargetTypeIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#id DataGoogleClouddeployCustomTargetTypeIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -814,7 +814,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#location DataGoogleClouddeployCustomTargetTypeIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#location DataGoogleClouddeployCustomTargetTypeIamPolicy#location}.
 
 ---
 
@@ -826,7 +826,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#project DataGoogleClouddeployCustomTargetTypeIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/clouddeploy_custom_target_type_iam_policy#project DataGoogleClouddeployCustomTargetTypeIamPolicy#project}.
 
 ---
 

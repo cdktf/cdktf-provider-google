@@ -4,7 +4,7 @@
 
 ### StorageAnywhereCache <a name="StorageAnywhereCache" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache google_storage_anywhere_cache}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache google_storage_anywhere_cache}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer"></a>
 
@@ -44,7 +44,7 @@ storageAnywhereCache.StorageAnywhereCache(
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer.parameter.bucket">bucket</a></code> | <code>str</code> | A reference to Bucket resource. |
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer.parameter.zone">zone</a></code> | <code>str</code> | The zone in which the cache instance needs to be created. For example, 'us-central1-a.'. |
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer.parameter.admissionPolicy">admission_policy</a></code> | <code>str</code> | The cache admission policy dictates whether a block should be inserted upon a cache miss. |
-| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#id StorageAnywhereCache#id}. |
+| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#id StorageAnywhereCache#id}. |
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts">StorageAnywhereCacheTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCache.Initializer.parameter.ttl">ttl</a></code> | <code>str</code> | The TTL of all cache entries in whole seconds. e.g., "7200s". It defaults to '86400s'. |
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 A reference to Bucket resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#bucket StorageAnywhereCache#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#bucket StorageAnywhereCache#bucket}
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The zone in which the cache instance needs to be created. For example, 'us-central1-a.'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#zone StorageAnywhereCache#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#zone StorageAnywhereCache#zone}
 
 ---
 
@@ -138,7 +138,7 @@ The cache admission policy dictates whether a block should be inserted upon a ca
 
 Default value: "admit-on-first-miss" Possible values: ["admit-on-first-miss", "admit-on-second-miss"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#admission_policy StorageAnywhereCache#admission_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#admission_policy StorageAnywhereCache#admission_policy}
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#id StorageAnywhereCache#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#id StorageAnywhereCache#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -159,7 +159,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#timeouts StorageAnywhereCache#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#timeouts StorageAnywhereCache#timeouts}
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The TTL of all cache entries in whole seconds. e.g., "7200s". It defaults to '86400s'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#ttl StorageAnywhereCache#ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#ttl StorageAnywhereCache#ttl}
 
 ---
 
@@ -547,7 +547,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#create StorageAnywhereCache#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#create StorageAnywhereCache#create}.
 
 ---
 
@@ -555,7 +555,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#delete StorageAnywhereCache#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#delete StorageAnywhereCache#delete}.
 
 ---
 
@@ -563,7 +563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#update StorageAnywhereCache#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#update StorageAnywhereCache#update}.
 
 ---
 
@@ -705,7 +705,7 @@ The construct id used in the generated config for the StorageAnywhereCache to im
 
 The id of the existing StorageAnywhereCache that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1125,7 +1125,7 @@ storageAnywhereCache.StorageAnywhereCacheConfig(
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheConfig.property.bucket">bucket</a></code> | <code>str</code> | A reference to Bucket resource. |
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheConfig.property.zone">zone</a></code> | <code>str</code> | The zone in which the cache instance needs to be created. For example, 'us-central1-a.'. |
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheConfig.property.admissionPolicy">admission_policy</a></code> | <code>str</code> | The cache admission policy dictates whether a block should be inserted upon a cache miss. |
-| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#id StorageAnywhereCache#id}. |
+| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#id StorageAnywhereCache#id}. |
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts">StorageAnywhereCacheTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheConfig.property.ttl">ttl</a></code> | <code>str</code> | The TTL of all cache entries in whole seconds. e.g., "7200s". It defaults to '86400s'. |
 
@@ -1211,7 +1211,7 @@ bucket: str
 
 A reference to Bucket resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#bucket StorageAnywhereCache#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#bucket StorageAnywhereCache#bucket}
 
 ---
 
@@ -1225,7 +1225,7 @@ zone: str
 
 The zone in which the cache instance needs to be created. For example, 'us-central1-a.'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#zone StorageAnywhereCache#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#zone StorageAnywhereCache#zone}
 
 ---
 
@@ -1241,7 +1241,7 @@ The cache admission policy dictates whether a block should be inserted upon a ca
 
 Default value: "admit-on-first-miss" Possible values: ["admit-on-first-miss", "admit-on-second-miss"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#admission_policy StorageAnywhereCache#admission_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#admission_policy StorageAnywhereCache#admission_policy}
 
 ---
 
@@ -1253,7 +1253,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#id StorageAnywhereCache#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#id StorageAnywhereCache#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1270,7 +1270,7 @@ timeouts: StorageAnywhereCacheTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#timeouts StorageAnywhereCache#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#timeouts StorageAnywhereCache#timeouts}
 
 ---
 
@@ -1284,7 +1284,7 @@ ttl: str
 
 The TTL of all cache entries in whole seconds. e.g., "7200s". It defaults to '86400s'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#ttl StorageAnywhereCache#ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#ttl StorageAnywhereCache#ttl}
 
 ---
 
@@ -1306,9 +1306,9 @@ storageAnywhereCache.StorageAnywhereCacheTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#create StorageAnywhereCache#create}. |
-| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#delete StorageAnywhereCache#delete}. |
-| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#update StorageAnywhereCache#update}. |
+| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#create StorageAnywhereCache#create}. |
+| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#delete StorageAnywhereCache#delete}. |
+| <code><a href="#@cdktf/provider-google.storageAnywhereCache.StorageAnywhereCacheTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#update StorageAnywhereCache#update}. |
 
 ---
 
@@ -1320,7 +1320,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#create StorageAnywhereCache#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#create StorageAnywhereCache#create}.
 
 ---
 
@@ -1332,7 +1332,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#delete StorageAnywhereCache#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#delete StorageAnywhereCache#delete}.
 
 ---
 
@@ -1344,7 +1344,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.41.0/docs/resources/storage_anywhere_cache#update StorageAnywhereCache#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/storage_anywhere_cache#update StorageAnywhereCache#update}.
 
 ---
 
