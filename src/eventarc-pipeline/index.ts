@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline
+// https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,7 +18,7 @@ export interface EventarcPipelineConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#annotations EventarcPipeline#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#annotations EventarcPipeline#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
@@ -27,17 +27,17 @@ export interface EventarcPipelineConfig extends cdktf.TerraformMetaArguments {
   * will be used to encrypt messages. It must match the pattern
   * "projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#crypto_key_name EventarcPipeline#crypto_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#crypto_key_name EventarcPipeline#crypto_key_name}
   */
   readonly cryptoKeyName?: string;
   /**
   * Display name of resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#display_name EventarcPipeline#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#display_name EventarcPipeline#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#id EventarcPipeline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#id EventarcPipeline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -51,60 +51,60 @@ export interface EventarcPipelineConfig extends cdktf.TerraformMetaArguments {
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#labels EventarcPipeline#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#labels EventarcPipeline#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#location EventarcPipeline#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#location EventarcPipeline#location}
   */
   readonly location: string;
   /**
   * The user-provided ID to be assigned to the Pipeline. It should match the
   * format '^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#pipeline_id EventarcPipeline#pipeline_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#pipeline_id EventarcPipeline#pipeline_id}
   */
   readonly pipelineId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#project EventarcPipeline#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#project EventarcPipeline#project}
   */
   readonly project?: string;
   /**
   * destinations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#destinations EventarcPipeline#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#destinations EventarcPipeline#destinations}
   */
   readonly destinations: EventarcPipelineDestinations[] | cdktf.IResolvable;
   /**
   * input_payload_format block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#input_payload_format EventarcPipeline#input_payload_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#input_payload_format EventarcPipeline#input_payload_format}
   */
   readonly inputPayloadFormat?: EventarcPipelineInputPayloadFormat;
   /**
   * logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#logging_config EventarcPipeline#logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#logging_config EventarcPipeline#logging_config}
   */
   readonly loggingConfig?: EventarcPipelineLoggingConfig;
   /**
   * mediations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#mediations EventarcPipeline#mediations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#mediations EventarcPipeline#mediations}
   */
   readonly mediations?: EventarcPipelineMediations[] | cdktf.IResolvable;
   /**
   * retry_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#retry_policy EventarcPipeline#retry_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#retry_policy EventarcPipeline#retry_policy}
   */
   readonly retryPolicy?: EventarcPipelineRetryPolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#timeouts EventarcPipeline#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#timeouts EventarcPipeline#timeouts}
   */
   readonly timeouts?: EventarcPipelineTimeouts;
 }
@@ -114,7 +114,7 @@ export interface EventarcPipelineDestinationsAuthenticationConfigGoogleOidc {
   * identifies the recipient that the JWT is intended for. If
   * unspecified, the destination URI will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#audience EventarcPipeline#audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#audience EventarcPipeline#audience}
   */
   readonly audience?: string;
   /**
@@ -126,7 +126,7 @@ export interface EventarcPipelineDestinationsAuthenticationConfigGoogleOidc {
   * roles/roles/iam.serviceAccountTokenCreator role to allow the
   * Pipeline to create OpenID tokens for authenticated requests.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#service_account EventarcPipeline#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#service_account EventarcPipeline#service_account}
   */
   readonly serviceAccount: string;
 }
@@ -240,7 +240,7 @@ export interface EventarcPipelineDestinationsAuthenticationConfigOauthToken {
   * specified, "https://www.googleapis.com/auth/cloud-platform" will be
   * used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#scope EventarcPipeline#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#scope EventarcPipeline#scope}
   */
   readonly scope?: string;
   /**
@@ -253,7 +253,7 @@ export interface EventarcPipelineDestinationsAuthenticationConfigOauthToken {
   * roles/roles/iam.serviceAccountTokenCreator role to allow Pipeline
   * to create OAuth2 tokens for authenticated requests.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#service_account EventarcPipeline#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#service_account EventarcPipeline#service_account}
   */
   readonly serviceAccount: string;
 }
@@ -365,13 +365,13 @@ export interface EventarcPipelineDestinationsAuthenticationConfig {
   /**
   * google_oidc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#google_oidc EventarcPipeline#google_oidc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#google_oidc EventarcPipeline#google_oidc}
   */
   readonly googleOidc?: EventarcPipelineDestinationsAuthenticationConfigGoogleOidc;
   /**
   * oauth_token block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#oauth_token EventarcPipeline#oauth_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#oauth_token EventarcPipeline#oauth_token}
   */
   readonly oauthToken?: EventarcPipelineDestinationsAuthenticationConfigOauthToken;
 }
@@ -651,7 +651,7 @@ export interface EventarcPipelineDestinationsHttpEndpoint {
   * standard CloudEvent format. If it doesn't then the outgoing message
   * request may fail with a persistent error.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#message_binding_template EventarcPipeline#message_binding_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#message_binding_template EventarcPipeline#message_binding_template}
   */
   readonly messageBindingTemplate?: string;
   /**
@@ -661,7 +661,7 @@ export interface EventarcPipelineDestinationsHttpEndpoint {
   * Examples: 'https://svc.us-central1.p.local:8080/route'.
   * Only the HTTPS protocol is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#uri EventarcPipeline#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#uri EventarcPipeline#uri}
   */
   readonly uri: string;
 }
@@ -779,7 +779,7 @@ export interface EventarcPipelineDestinationsNetworkConfig {
   * Required for HTTP endpoint destinations. Must not be specified for
   * Workflows, MessageBus, or Topic destinations.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#network_attachment EventarcPipeline#network_attachment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#network_attachment EventarcPipeline#network_attachment}
   */
   readonly networkAttachment?: string;
 }
@@ -865,7 +865,7 @@ export interface EventarcPipelineDestinationsOutputPayloadFormatAvro {
   /**
   * The entire schema definition is stored in this field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
   */
   readonly schemaDefinition?: string;
 }
@@ -1000,7 +1000,7 @@ export interface EventarcPipelineDestinationsOutputPayloadFormatProtobuf {
   /**
   * The entire schema definition is stored in this field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
   */
   readonly schemaDefinition?: string;
 }
@@ -1086,19 +1086,19 @@ export interface EventarcPipelineDestinationsOutputPayloadFormat {
   /**
   * avro block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#avro EventarcPipeline#avro}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#avro EventarcPipeline#avro}
   */
   readonly avro?: EventarcPipelineDestinationsOutputPayloadFormatAvro;
   /**
   * json block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#json EventarcPipeline#json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#json EventarcPipeline#json}
   */
   readonly json?: EventarcPipelineDestinationsOutputPayloadFormatJson;
   /**
   * protobuf block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#protobuf EventarcPipeline#protobuf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#protobuf EventarcPipeline#protobuf}
   */
   readonly protobuf?: EventarcPipelineDestinationsOutputPayloadFormatProtobuf;
 }
@@ -1245,7 +1245,7 @@ export interface EventarcPipelineDestinations {
   * the Pipeline. Format:
   * 'projects/{project}/locations/{location}/messageBuses/{message_bus}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#message_bus EventarcPipeline#message_bus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#message_bus EventarcPipeline#message_bus}
   */
   readonly messageBus?: string;
   /**
@@ -1253,7 +1253,7 @@ export interface EventarcPipelineDestinations {
   * published. Format:
   * 'projects/{project}/locations/{location}/topics/{topic}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#topic EventarcPipeline#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#topic EventarcPipeline#topic}
   */
   readonly topic?: string;
   /**
@@ -1262,31 +1262,31 @@ export interface EventarcPipelineDestinations {
   * project as the Pipeline. Format:
   * 'projects/{project}/locations/{location}/workflows/{workflow}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#workflow EventarcPipeline#workflow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#workflow EventarcPipeline#workflow}
   */
   readonly workflow?: string;
   /**
   * authentication_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#authentication_config EventarcPipeline#authentication_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#authentication_config EventarcPipeline#authentication_config}
   */
   readonly authenticationConfig?: EventarcPipelineDestinationsAuthenticationConfig;
   /**
   * http_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#http_endpoint EventarcPipeline#http_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#http_endpoint EventarcPipeline#http_endpoint}
   */
   readonly httpEndpoint?: EventarcPipelineDestinationsHttpEndpoint;
   /**
   * network_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#network_config EventarcPipeline#network_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#network_config EventarcPipeline#network_config}
   */
   readonly networkConfig?: EventarcPipelineDestinationsNetworkConfig;
   /**
   * output_payload_format block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#output_payload_format EventarcPipeline#output_payload_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#output_payload_format EventarcPipeline#output_payload_format}
   */
   readonly outputPayloadFormat?: EventarcPipelineDestinationsOutputPayloadFormat;
 }
@@ -1578,7 +1578,7 @@ export interface EventarcPipelineInputPayloadFormatAvro {
   /**
   * The entire schema definition is stored in this field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
   */
   readonly schemaDefinition?: string;
 }
@@ -1713,7 +1713,7 @@ export interface EventarcPipelineInputPayloadFormatProtobuf {
   /**
   * The entire schema definition is stored in this field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#schema_definition EventarcPipeline#schema_definition}
   */
   readonly schemaDefinition?: string;
 }
@@ -1799,19 +1799,19 @@ export interface EventarcPipelineInputPayloadFormat {
   /**
   * avro block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#avro EventarcPipeline#avro}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#avro EventarcPipeline#avro}
   */
   readonly avro?: EventarcPipelineInputPayloadFormatAvro;
   /**
   * json block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#json EventarcPipeline#json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#json EventarcPipeline#json}
   */
   readonly json?: EventarcPipelineInputPayloadFormatJson;
   /**
   * protobuf block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#protobuf EventarcPipeline#protobuf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#protobuf EventarcPipeline#protobuf}
   */
   readonly protobuf?: EventarcPipelineInputPayloadFormatProtobuf;
 }
@@ -1956,7 +1956,7 @@ export interface EventarcPipelineLoggingConfig {
   * The minimum severity of logs that will be sent to Stackdriver/Platform
   * Telemetry. Logs at severitiy ≥ this value will be sent, unless it is NONE. Possible values: ["NONE", "DEBUG", "INFO", "NOTICE", "WARNING", "ERROR", "CRITICAL", "ALERT", "EMERGENCY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#log_severity EventarcPipeline#log_severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#log_severity EventarcPipeline#log_severity}
   */
   readonly logSeverity?: string;
 }
@@ -2117,7 +2117,7 @@ export interface EventarcPipelineMediationsTransformation {
   * representation of the CloudEvent. To convert that data to a JSON
   * string it can be chained with the toJsonString function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#transformation_template EventarcPipeline#transformation_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#transformation_template EventarcPipeline#transformation_template}
   */
   readonly transformationTemplate?: string;
 }
@@ -2203,7 +2203,7 @@ export interface EventarcPipelineMediations {
   /**
   * transformation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#transformation EventarcPipeline#transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#transformation EventarcPipeline#transformation}
   */
   readonly transformation?: EventarcPipelineMediationsTransformation;
 }
@@ -2323,7 +2323,7 @@ export interface EventarcPipelineRetryPolicy {
   * be between 1 and 100.
   * The default value for this field is 5.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#max_attempts EventarcPipeline#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#max_attempts EventarcPipeline#max_attempts}
   */
   readonly maxAttempts?: number;
   /**
@@ -2331,7 +2331,7 @@ export interface EventarcPipelineRetryPolicy {
   * must be between 1 and 600.
   * The default value for this field is 60.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#max_retry_delay EventarcPipeline#max_retry_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#max_retry_delay EventarcPipeline#max_retry_delay}
   */
   readonly maxRetryDelay?: string;
   /**
@@ -2339,7 +2339,7 @@ export interface EventarcPipelineRetryPolicy {
   * must be between 1 and 600.
   * The default value for this field is 5.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#min_retry_delay EventarcPipeline#min_retry_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#min_retry_delay EventarcPipeline#min_retry_delay}
   */
   readonly minRetryDelay?: string;
 }
@@ -2481,15 +2481,15 @@ export class EventarcPipelineRetryPolicyOutputReference extends cdktf.ComplexObj
 }
 export interface EventarcPipelineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#create EventarcPipeline#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#create EventarcPipeline#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#delete EventarcPipeline#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#delete EventarcPipeline#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#update EventarcPipeline#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#update EventarcPipeline#update}
   */
   readonly update?: string;
 }
@@ -2641,7 +2641,7 @@ export class EventarcPipelineTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline google_eventarc_pipeline}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline google_eventarc_pipeline}
 */
 export class EventarcPipeline extends cdktf.TerraformResource {
 
@@ -2657,7 +2657,7 @@ export class EventarcPipeline extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a EventarcPipeline resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the EventarcPipeline to import
-  * @param importFromId The id of the existing EventarcPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing EventarcPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the EventarcPipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2669,7 +2669,7 @@ export class EventarcPipeline extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/eventarc_pipeline google_eventarc_pipeline} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/eventarc_pipeline google_eventarc_pipeline} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2680,7 +2680,7 @@ export class EventarcPipeline extends cdktf.TerraformResource {
       terraformResourceType: 'google_eventarc_pipeline',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.42.0',
+        providerVersion: '6.43.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

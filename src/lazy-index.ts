@@ -391,6 +391,7 @@ Object.defineProperty(exports, 'computeTargetTcpProxy', { get: function () { ret
 Object.defineProperty(exports, 'computeUrlMap', { get: function () { return require('./compute-url-map'); } });
 Object.defineProperty(exports, 'computeVpnGateway', { get: function () { return require('./compute-vpn-gateway'); } });
 Object.defineProperty(exports, 'computeVpnTunnel', { get: function () { return require('./compute-vpn-tunnel'); } });
+Object.defineProperty(exports, 'contactCenterInsightsAnalysisRule', { get: function () { return require('./contact-center-insights-analysis-rule'); } });
 Object.defineProperty(exports, 'contactCenterInsightsView', { get: function () { return require('./contact-center-insights-view'); } });
 Object.defineProperty(exports, 'containerAnalysisNote', { get: function () { return require('./container-analysis-note'); } });
 Object.defineProperty(exports, 'containerAnalysisNoteIamBinding', { get: function () { return require('./container-analysis-note-iam-binding'); } });
@@ -734,6 +735,7 @@ Object.defineProperty(exports, 'integrationConnectorsEndpointAttachment', { get:
 Object.defineProperty(exports, 'integrationConnectorsManagedZone', { get: function () { return require('./integration-connectors-managed-zone'); } });
 Object.defineProperty(exports, 'integrationsAuthConfig', { get: function () { return require('./integrations-auth-config'); } });
 Object.defineProperty(exports, 'integrationsClient', { get: function () { return require('./integrations-client'); } });
+Object.defineProperty(exports, 'kmsAutokeyConfig', { get: function () { return require('./kms-autokey-config'); } });
 Object.defineProperty(exports, 'kmsCryptoKey', { get: function () { return require('./kms-crypto-key'); } });
 Object.defineProperty(exports, 'kmsCryptoKeyIamBinding', { get: function () { return require('./kms-crypto-key-iam-binding'); } });
 Object.defineProperty(exports, 'kmsCryptoKeyIamMember', { get: function () { return require('./kms-crypto-key-iam-member'); } });
@@ -743,6 +745,7 @@ Object.defineProperty(exports, 'kmsEkmConnection', { get: function () { return r
 Object.defineProperty(exports, 'kmsEkmConnectionIamBinding', { get: function () { return require('./kms-ekm-connection-iam-binding'); } });
 Object.defineProperty(exports, 'kmsEkmConnectionIamMember', { get: function () { return require('./kms-ekm-connection-iam-member'); } });
 Object.defineProperty(exports, 'kmsEkmConnectionIamPolicy', { get: function () { return require('./kms-ekm-connection-iam-policy'); } });
+Object.defineProperty(exports, 'kmsKeyHandle', { get: function () { return require('./kms-key-handle'); } });
 Object.defineProperty(exports, 'kmsKeyRing', { get: function () { return require('./kms-key-ring'); } });
 Object.defineProperty(exports, 'kmsKeyRingIamBinding', { get: function () { return require('./kms-key-ring-iam-binding'); } });
 Object.defineProperty(exports, 'kmsKeyRingIamMember', { get: function () { return require('./kms-key-ring-iam-member'); } });
@@ -781,6 +784,7 @@ Object.defineProperty(exports, 'memorystoreInstanceDesiredUserCreatedEndpoints',
 Object.defineProperty(exports, 'migrationCenterGroup', { get: function () { return require('./migration-center-group'); } });
 Object.defineProperty(exports, 'migrationCenterPreferenceSet', { get: function () { return require('./migration-center-preference-set'); } });
 Object.defineProperty(exports, 'mlEngineModel', { get: function () { return require('./ml-engine-model'); } });
+Object.defineProperty(exports, 'modelArmorTemplate', { get: function () { return require('./model-armor-template'); } });
 Object.defineProperty(exports, 'monitoringAlertPolicy', { get: function () { return require('./monitoring-alert-policy'); } });
 Object.defineProperty(exports, 'monitoringCustomService', { get: function () { return require('./monitoring-custom-service'); } });
 Object.defineProperty(exports, 'monitoringDashboard', { get: function () { return require('./monitoring-dashboard'); } });
@@ -1293,6 +1297,7 @@ Object.defineProperty(exports, 'dataGoogleIapWebIamPolicy', { get: function () {
 Object.defineProperty(exports, 'dataGoogleIapWebRegionBackendServiceIamPolicy', { get: function () { return require('./data-google-iap-web-region-backend-service-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleIapWebTypeAppEngineIamPolicy', { get: function () { return require('./data-google-iap-web-type-app-engine-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleIapWebTypeComputeIamPolicy', { get: function () { return require('./data-google-iap-web-type-compute-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleKmsAutokeyConfig', { get: function () { return require('./data-google-kms-autokey-config'); } });
 Object.defineProperty(exports, 'dataGoogleKmsCryptoKey', { get: function () { return require('./data-google-kms-crypto-key'); } });
 Object.defineProperty(exports, 'dataGoogleKmsCryptoKeyIamPolicy', { get: function () { return require('./data-google-kms-crypto-key-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleKmsCryptoKeyLatestVersion', { get: function () { return require('./data-google-kms-crypto-key-latest-version'); } });
@@ -1300,6 +1305,8 @@ Object.defineProperty(exports, 'dataGoogleKmsCryptoKeyVersion', { get: function 
 Object.defineProperty(exports, 'dataGoogleKmsCryptoKeyVersions', { get: function () { return require('./data-google-kms-crypto-key-versions'); } });
 Object.defineProperty(exports, 'dataGoogleKmsCryptoKeys', { get: function () { return require('./data-google-kms-crypto-keys'); } });
 Object.defineProperty(exports, 'dataGoogleKmsEkmConnectionIamPolicy', { get: function () { return require('./data-google-kms-ekm-connection-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleKmsKeyHandle', { get: function () { return require('./data-google-kms-key-handle'); } });
+Object.defineProperty(exports, 'dataGoogleKmsKeyHandles', { get: function () { return require('./data-google-kms-key-handles'); } });
 Object.defineProperty(exports, 'dataGoogleKmsKeyRing', { get: function () { return require('./data-google-kms-key-ring'); } });
 Object.defineProperty(exports, 'dataGoogleKmsKeyRingIamPolicy', { get: function () { return require('./data-google-kms-key-ring-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleKmsKeyRings', { get: function () { return require('./data-google-kms-key-rings'); } });
@@ -1321,6 +1328,7 @@ Object.defineProperty(exports, 'dataGoogleMonitoringMeshIstioService', { get: fu
 Object.defineProperty(exports, 'dataGoogleMonitoringNotificationChannel', { get: function () { return require('./data-google-monitoring-notification-channel'); } });
 Object.defineProperty(exports, 'dataGoogleMonitoringUptimeCheckIps', { get: function () { return require('./data-google-monitoring-uptime-check-ips'); } });
 Object.defineProperty(exports, 'dataGoogleNetblockIpRanges', { get: function () { return require('./data-google-netblock-ip-ranges'); } });
+Object.defineProperty(exports, 'dataGoogleNetworkManagementConnectivityTestRun', { get: function () { return require('./data-google-network-management-connectivity-test-run'); } });
 Object.defineProperty(exports, 'dataGoogleNetworkSecurityAddressGroupIamPolicy', { get: function () { return require('./data-google-network-security-address-group-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleNotebooksInstanceIamPolicy', { get: function () { return require('./data-google-notebooks-instance-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleNotebooksRuntimeIamPolicy', { get: function () { return require('./data-google-notebooks-runtime-iam-policy'); } });
@@ -1362,6 +1370,7 @@ Object.defineProperty(exports, 'dataGooglePubsubSubscription', { get: function (
 Object.defineProperty(exports, 'dataGooglePubsubSubscriptionIamPolicy', { get: function () { return require('./data-google-pubsub-subscription-iam-policy'); } });
 Object.defineProperty(exports, 'dataGooglePubsubTopic', { get: function () { return require('./data-google-pubsub-topic'); } });
 Object.defineProperty(exports, 'dataGooglePubsubTopicIamPolicy', { get: function () { return require('./data-google-pubsub-topic-iam-policy'); } });
+Object.defineProperty(exports, 'dataGoogleRedisCluster', { get: function () { return require('./data-google-redis-cluster'); } });
 Object.defineProperty(exports, 'dataGoogleRedisInstance', { get: function () { return require('./data-google-redis-instance'); } });
 Object.defineProperty(exports, 'dataGoogleSccSourceIamPolicy', { get: function () { return require('./data-google-scc-source-iam-policy'); } });
 Object.defineProperty(exports, 'dataGoogleSccV2OrganizationSourceIamPolicy', { get: function () { return require('./data-google-scc-v2-organization-source-iam-policy'); } });
