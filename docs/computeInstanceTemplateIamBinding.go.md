@@ -4,7 +4,7 @@
 
 ### ComputeInstanceTemplateIamBinding <a name="ComputeInstanceTemplateIamBinding" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding google_compute_instance_template_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding google_compute_instance_template_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBinding.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the ComputeInstanceTemplateIam
 
 The id of the existing ComputeInstanceTemplateIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -857,9 +857,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/computeinstancetemp
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#expression ComputeInstanceTemplateIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#title ComputeInstanceTemplateIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#description ComputeInstanceTemplateIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#expression ComputeInstanceTemplateIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#title ComputeInstanceTemplateIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#description ComputeInstanceTemplateIamBinding#description}. |
 
 ---
 
@@ -871,7 +871,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#expression ComputeInstanceTemplateIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#expression ComputeInstanceTemplateIamBinding#expression}.
 
 ---
 
@@ -883,7 +883,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#title ComputeInstanceTemplateIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#title ComputeInstanceTemplateIamBinding#title}.
 
 ---
 
@@ -895,7 +895,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#description ComputeInstanceTemplateIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#description ComputeInstanceTemplateIamBinding#description}.
 
 ---
 
@@ -934,12 +934,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/computeinstancetemp
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#members ComputeInstanceTemplateIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#name ComputeInstanceTemplateIamBinding#name}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#role ComputeInstanceTemplateIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#members ComputeInstanceTemplateIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#name ComputeInstanceTemplateIamBinding#name}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#role ComputeInstanceTemplateIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingCondition">ComputeInstanceTemplateIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#id ComputeInstanceTemplateIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#project ComputeInstanceTemplateIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#id ComputeInstanceTemplateIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.computeInstanceTemplateIamBinding.ComputeInstanceTemplateIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#project ComputeInstanceTemplateIamBinding#project}. |
 
 ---
 
@@ -1021,7 +1021,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#members ComputeInstanceTemplateIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#members ComputeInstanceTemplateIamBinding#members}.
 
 ---
 
@@ -1033,7 +1033,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#name ComputeInstanceTemplateIamBinding#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#name ComputeInstanceTemplateIamBinding#name}.
 
 ---
 
@@ -1045,7 +1045,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#role ComputeInstanceTemplateIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#role ComputeInstanceTemplateIamBinding#role}.
 
 ---
 
@@ -1059,7 +1059,7 @@ Condition ComputeInstanceTemplateIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#condition ComputeInstanceTemplateIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#condition ComputeInstanceTemplateIamBinding#condition}
 
 ---
 
@@ -1071,7 +1071,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#id ComputeInstanceTemplateIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#id ComputeInstanceTemplateIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1086,7 +1086,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/compute_instance_template_iam_binding#project ComputeInstanceTemplateIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_instance_template_iam_binding#project ComputeInstanceTemplateIamBinding#project}.
 
 ---
 
