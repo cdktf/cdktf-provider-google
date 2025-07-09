@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store
+// https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +15,7 @@ export interface DiscoveryEngineDataStoreConfig extends cdktf.TerraformMetaArgum
   /**
   * The content config of the data store. Possible values: ["NO_CONTENT", "CONTENT_REQUIRED", "PUBLIC_WEBSITE"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#content_config DiscoveryEngineDataStore#content_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#content_config DiscoveryEngineDataStore#content_config}
   */
   readonly contentConfig: string;
   /**
@@ -23,24 +23,24 @@ export interface DiscoveryEngineDataStoreConfig extends cdktf.TerraformMetaArgum
   * data store is not configured as site search (GENERIC vertical and
   * PUBLIC_WEBSITE contentConfig), this flag will be ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#create_advanced_site_search DiscoveryEngineDataStore#create_advanced_site_search}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#create_advanced_site_search DiscoveryEngineDataStore#create_advanced_site_search}
   */
   readonly createAdvancedSiteSearch?: boolean | cdktf.IResolvable;
   /**
   * The unique id of the data store.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#data_store_id DiscoveryEngineDataStore#data_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#data_store_id DiscoveryEngineDataStore#data_store_id}
   */
   readonly dataStoreId: string;
   /**
   * The display name of the data store. This field must be a UTF-8 encoded
   * string with a length limit of 128 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#display_name DiscoveryEngineDataStore#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#display_name DiscoveryEngineDataStore#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#id DiscoveryEngineDataStore#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#id DiscoveryEngineDataStore#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -49,18 +49,29 @@ export interface DiscoveryEngineDataStoreConfig extends cdktf.TerraformMetaArgum
   /**
   * The industry vertical that the data store registers. Possible values: ["GENERIC", "MEDIA", "HEALTHCARE_FHIR"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#industry_vertical DiscoveryEngineDataStore#industry_vertical}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#industry_vertical DiscoveryEngineDataStore#industry_vertical}
   */
   readonly industryVertical: string;
+  /**
+  * KMS key resource name which will be used to encrypt resources:
+  * '/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{keyId}'
+  * The KMS key to be used to protect this DataStore at creation time. Must be
+  * set for requests that need to comply with CMEK Org Policy protections.
+  * If this field is set and processed successfully, the DataStore will be
+  * protected by the KMS key, as indicated in the cmek_config field.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#kms_key_name DiscoveryEngineDataStore#kms_key_name}
+  */
+  readonly kmsKeyName?: string;
   /**
   * The geographic location where the data store should reside. The value can
   * only be one of "global", "us" and "eu".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#location DiscoveryEngineDataStore#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#location DiscoveryEngineDataStore#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#project DiscoveryEngineDataStore#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#project DiscoveryEngineDataStore#project}
   */
   readonly project?: string;
   /**
@@ -72,31 +83,31 @@ export interface DiscoveryEngineDataStoreConfig extends cdktf.TerraformMetaArgum
   * This flag cannot be specified if 'data_store.starting_schema' is
   * specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#skip_default_schema_creation DiscoveryEngineDataStore#skip_default_schema_creation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#skip_default_schema_creation DiscoveryEngineDataStore#skip_default_schema_creation}
   */
   readonly skipDefaultSchemaCreation?: boolean | cdktf.IResolvable;
   /**
   * The solutions that the data store enrolls. Possible values: ["SOLUTION_TYPE_RECOMMENDATION", "SOLUTION_TYPE_SEARCH", "SOLUTION_TYPE_CHAT", "SOLUTION_TYPE_GENERATIVE_CHAT"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#solution_types DiscoveryEngineDataStore#solution_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#solution_types DiscoveryEngineDataStore#solution_types}
   */
   readonly solutionTypes?: string[];
   /**
   * advanced_site_search_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#advanced_site_search_config DiscoveryEngineDataStore#advanced_site_search_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#advanced_site_search_config DiscoveryEngineDataStore#advanced_site_search_config}
   */
   readonly advancedSiteSearchConfig?: DiscoveryEngineDataStoreAdvancedSiteSearchConfig;
   /**
   * document_processing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#document_processing_config DiscoveryEngineDataStore#document_processing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#document_processing_config DiscoveryEngineDataStore#document_processing_config}
   */
   readonly documentProcessingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#timeouts DiscoveryEngineDataStore#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#timeouts DiscoveryEngineDataStore#timeouts}
   */
   readonly timeouts?: DiscoveryEngineDataStoreTimeouts;
 }
@@ -104,13 +115,13 @@ export interface DiscoveryEngineDataStoreAdvancedSiteSearchConfig {
   /**
   * If set true, automatic refresh is disabled for the DataStore.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#disable_automatic_refresh DiscoveryEngineDataStore#disable_automatic_refresh}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#disable_automatic_refresh DiscoveryEngineDataStore#disable_automatic_refresh}
   */
   readonly disableAutomaticRefresh?: boolean | cdktf.IResolvable;
   /**
   * If set true, initial indexing is disabled for the DataStore.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#disable_initial_index DiscoveryEngineDataStore#disable_initial_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#disable_initial_index DiscoveryEngineDataStore#disable_initial_index}
   */
   readonly disableInitialIndex?: boolean | cdktf.IResolvable;
 }
@@ -226,14 +237,14 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfigChunkingConfigL
   * The token size limit for each chunk.
   * Supported values: 100-500 (inclusive). Default value: 500.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#chunk_size DiscoveryEngineDataStore#chunk_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#chunk_size DiscoveryEngineDataStore#chunk_size}
   */
   readonly chunkSize?: number;
   /**
   * Whether to include appending different levels of headings to chunks from the middle of the document to prevent context loss.
   * Default value: False.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#include_ancestor_headings DiscoveryEngineDataStore#include_ancestor_headings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#include_ancestor_headings DiscoveryEngineDataStore#include_ancestor_headings}
   */
   readonly includeAncestorHeadings?: boolean | cdktf.IResolvable;
 }
@@ -348,7 +359,7 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfigChunkingConfig 
   /**
   * layout_based_chunking_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#layout_based_chunking_config DiscoveryEngineDataStore#layout_based_chunking_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#layout_based_chunking_config DiscoveryEngineDataStore#layout_based_chunking_config}
   */
   readonly layoutBasedChunkingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigChunkingConfigLayoutBasedChunkingConfig;
 }
@@ -480,6 +491,42 @@ export class DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfi
   }
 }
 export interface DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfig {
+  /**
+  * If true, the LLM based annotation is added to the image during parsing.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#enable_image_annotation DiscoveryEngineDataStore#enable_image_annotation}
+  */
+  readonly enableImageAnnotation?: boolean | cdktf.IResolvable;
+  /**
+  * If true, the LLM based annotation is added to the table during parsing.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#enable_table_annotation DiscoveryEngineDataStore#enable_table_annotation}
+  */
+  readonly enableTableAnnotation?: boolean | cdktf.IResolvable;
+  /**
+  * List of HTML classes to exclude from the parsed content.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#exclude_html_classes DiscoveryEngineDataStore#exclude_html_classes}
+  */
+  readonly excludeHtmlClasses?: string[];
+  /**
+  * List of HTML elements to exclude from the parsed content.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#exclude_html_elements DiscoveryEngineDataStore#exclude_html_elements}
+  */
+  readonly excludeHtmlElements?: string[];
+  /**
+  * List of HTML ids to exclude from the parsed content.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#exclude_html_ids DiscoveryEngineDataStore#exclude_html_ids}
+  */
+  readonly excludeHtmlIds?: string[];
+  /**
+  * Contains the required structure types to extract from the document. Supported values: 'shareholder-structure'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#structured_content_types DiscoveryEngineDataStore#structured_content_types}
+  */
+  readonly structuredContentTypes?: string[];
 }
 
 export function discoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfigToTerraform(struct?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfigOutputReference | DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfig): any {
@@ -488,6 +535,12 @@ export function discoveryEngineDataStoreDocumentProcessingConfigDefaultParsingCo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    enable_image_annotation: cdktf.booleanToTerraform(struct!.enableImageAnnotation),
+    enable_table_annotation: cdktf.booleanToTerraform(struct!.enableTableAnnotation),
+    exclude_html_classes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeHtmlClasses),
+    exclude_html_elements: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeHtmlElements),
+    exclude_html_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeHtmlIds),
+    structured_content_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.structuredContentTypes),
   }
 }
 
@@ -498,8 +551,46 @@ export function discoveryEngineDataStoreDocumentProcessingConfigDefaultParsingCo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    enable_image_annotation: {
+      value: cdktf.booleanToHclTerraform(struct!.enableImageAnnotation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_table_annotation: {
+      value: cdktf.booleanToHclTerraform(struct!.enableTableAnnotation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    exclude_html_classes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludeHtmlClasses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exclude_html_elements: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludeHtmlElements),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exclude_html_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludeHtmlIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    structured_content_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.structuredContentTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
   };
-  return attrs;
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfigOutputReference extends cdktf.ComplexObject {
@@ -516,23 +607,155 @@ export class DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfi
   public get internalValue(): DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._enableImageAnnotation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableImageAnnotation = this._enableImageAnnotation;
+    }
+    if (this._enableTableAnnotation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableTableAnnotation = this._enableTableAnnotation;
+    }
+    if (this._excludeHtmlClasses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeHtmlClasses = this._excludeHtmlClasses;
+    }
+    if (this._excludeHtmlElements !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeHtmlElements = this._excludeHtmlElements;
+    }
+    if (this._excludeHtmlIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeHtmlIds = this._excludeHtmlIds;
+    }
+    if (this._structuredContentTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.structuredContentTypes = this._structuredContentTypes;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
   public set internalValue(value: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._enableImageAnnotation = undefined;
+      this._enableTableAnnotation = undefined;
+      this._excludeHtmlClasses = undefined;
+      this._excludeHtmlElements = undefined;
+      this._excludeHtmlIds = undefined;
+      this._structuredContentTypes = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableImageAnnotation = value.enableImageAnnotation;
+      this._enableTableAnnotation = value.enableTableAnnotation;
+      this._excludeHtmlClasses = value.excludeHtmlClasses;
+      this._excludeHtmlElements = value.excludeHtmlElements;
+      this._excludeHtmlIds = value.excludeHtmlIds;
+      this._structuredContentTypes = value.structuredContentTypes;
     }
+  }
+
+  // enable_image_annotation - computed: false, optional: true, required: false
+  private _enableImageAnnotation?: boolean | cdktf.IResolvable; 
+  public get enableImageAnnotation() {
+    return this.getBooleanAttribute('enable_image_annotation');
+  }
+  public set enableImageAnnotation(value: boolean | cdktf.IResolvable) {
+    this._enableImageAnnotation = value;
+  }
+  public resetEnableImageAnnotation() {
+    this._enableImageAnnotation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableImageAnnotationInput() {
+    return this._enableImageAnnotation;
+  }
+
+  // enable_table_annotation - computed: false, optional: true, required: false
+  private _enableTableAnnotation?: boolean | cdktf.IResolvable; 
+  public get enableTableAnnotation() {
+    return this.getBooleanAttribute('enable_table_annotation');
+  }
+  public set enableTableAnnotation(value: boolean | cdktf.IResolvable) {
+    this._enableTableAnnotation = value;
+  }
+  public resetEnableTableAnnotation() {
+    this._enableTableAnnotation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableTableAnnotationInput() {
+    return this._enableTableAnnotation;
+  }
+
+  // exclude_html_classes - computed: false, optional: true, required: false
+  private _excludeHtmlClasses?: string[]; 
+  public get excludeHtmlClasses() {
+    return this.getListAttribute('exclude_html_classes');
+  }
+  public set excludeHtmlClasses(value: string[]) {
+    this._excludeHtmlClasses = value;
+  }
+  public resetExcludeHtmlClasses() {
+    this._excludeHtmlClasses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeHtmlClassesInput() {
+    return this._excludeHtmlClasses;
+  }
+
+  // exclude_html_elements - computed: false, optional: true, required: false
+  private _excludeHtmlElements?: string[]; 
+  public get excludeHtmlElements() {
+    return this.getListAttribute('exclude_html_elements');
+  }
+  public set excludeHtmlElements(value: string[]) {
+    this._excludeHtmlElements = value;
+  }
+  public resetExcludeHtmlElements() {
+    this._excludeHtmlElements = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeHtmlElementsInput() {
+    return this._excludeHtmlElements;
+  }
+
+  // exclude_html_ids - computed: false, optional: true, required: false
+  private _excludeHtmlIds?: string[]; 
+  public get excludeHtmlIds() {
+    return this.getListAttribute('exclude_html_ids');
+  }
+  public set excludeHtmlIds(value: string[]) {
+    this._excludeHtmlIds = value;
+  }
+  public resetExcludeHtmlIds() {
+    this._excludeHtmlIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeHtmlIdsInput() {
+    return this._excludeHtmlIds;
+  }
+
+  // structured_content_types - computed: false, optional: true, required: false
+  private _structuredContentTypes?: string[]; 
+  public get structuredContentTypes() {
+    return this.getListAttribute('structured_content_types');
+  }
+  public set structuredContentTypes(value: string[]) {
+    this._structuredContentTypes = value;
+  }
+  public resetStructuredContentTypes() {
+    this._structuredContentTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get structuredContentTypesInput() {
+    return this._structuredContentTypes;
   }
 }
 export interface DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigOcrParsingConfig {
   /**
   * If true, will use native text instead of OCR text on pages containing native text.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#use_native_text DiscoveryEngineDataStore#use_native_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#use_native_text DiscoveryEngineDataStore#use_native_text}
   */
   readonly useNativeText?: boolean | cdktf.IResolvable;
 }
@@ -618,19 +841,19 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingC
   /**
   * digital_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#digital_parsing_config DiscoveryEngineDataStore#digital_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#digital_parsing_config DiscoveryEngineDataStore#digital_parsing_config}
   */
   readonly digitalParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigDigitalParsingConfig;
   /**
   * layout_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#layout_parsing_config DiscoveryEngineDataStore#layout_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#layout_parsing_config DiscoveryEngineDataStore#layout_parsing_config}
   */
   readonly layoutParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigLayoutParsingConfig;
   /**
   * ocr_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#ocr_parsing_config DiscoveryEngineDataStore#ocr_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#ocr_parsing_config DiscoveryEngineDataStore#ocr_parsing_config}
   */
   readonly ocrParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfigOcrParsingConfig;
 }
@@ -820,6 +1043,42 @@ export class DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverri
   }
 }
 export interface DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfig {
+  /**
+  * If true, the LLM based annotation is added to the image during parsing.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#enable_image_annotation DiscoveryEngineDataStore#enable_image_annotation}
+  */
+  readonly enableImageAnnotation?: boolean | cdktf.IResolvable;
+  /**
+  * If true, the LLM based annotation is added to the table during parsing.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#enable_table_annotation DiscoveryEngineDataStore#enable_table_annotation}
+  */
+  readonly enableTableAnnotation?: boolean | cdktf.IResolvable;
+  /**
+  * List of HTML classes to exclude from the parsed content.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#exclude_html_classes DiscoveryEngineDataStore#exclude_html_classes}
+  */
+  readonly excludeHtmlClasses?: string[];
+  /**
+  * List of HTML elements to exclude from the parsed content.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#exclude_html_elements DiscoveryEngineDataStore#exclude_html_elements}
+  */
+  readonly excludeHtmlElements?: string[];
+  /**
+  * List of HTML ids to exclude from the parsed content.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#exclude_html_ids DiscoveryEngineDataStore#exclude_html_ids}
+  */
+  readonly excludeHtmlIds?: string[];
+  /**
+  * Contains the required structure types to extract from the document. Supported values: 'shareholder-structure'.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#structured_content_types DiscoveryEngineDataStore#structured_content_types}
+  */
+  readonly structuredContentTypes?: string[];
 }
 
 export function discoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfigToTerraform(struct?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfigOutputReference | DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfig): any {
@@ -828,6 +1087,12 @@ export function discoveryEngineDataStoreDocumentProcessingConfigParsingConfigOve
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    enable_image_annotation: cdktf.booleanToTerraform(struct!.enableImageAnnotation),
+    enable_table_annotation: cdktf.booleanToTerraform(struct!.enableTableAnnotation),
+    exclude_html_classes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeHtmlClasses),
+    exclude_html_elements: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeHtmlElements),
+    exclude_html_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeHtmlIds),
+    structured_content_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.structuredContentTypes),
   }
 }
 
@@ -838,8 +1103,46 @@ export function discoveryEngineDataStoreDocumentProcessingConfigParsingConfigOve
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    enable_image_annotation: {
+      value: cdktf.booleanToHclTerraform(struct!.enableImageAnnotation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_table_annotation: {
+      value: cdktf.booleanToHclTerraform(struct!.enableTableAnnotation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    exclude_html_classes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludeHtmlClasses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exclude_html_elements: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludeHtmlElements),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exclude_html_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludeHtmlIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    structured_content_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.structuredContentTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
   };
-  return attrs;
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfigOutputReference extends cdktf.ComplexObject {
@@ -856,23 +1159,155 @@ export class DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverri
   public get internalValue(): DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._enableImageAnnotation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableImageAnnotation = this._enableImageAnnotation;
+    }
+    if (this._enableTableAnnotation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableTableAnnotation = this._enableTableAnnotation;
+    }
+    if (this._excludeHtmlClasses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeHtmlClasses = this._excludeHtmlClasses;
+    }
+    if (this._excludeHtmlElements !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeHtmlElements = this._excludeHtmlElements;
+    }
+    if (this._excludeHtmlIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeHtmlIds = this._excludeHtmlIds;
+    }
+    if (this._structuredContentTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.structuredContentTypes = this._structuredContentTypes;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
   public set internalValue(value: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._enableImageAnnotation = undefined;
+      this._enableTableAnnotation = undefined;
+      this._excludeHtmlClasses = undefined;
+      this._excludeHtmlElements = undefined;
+      this._excludeHtmlIds = undefined;
+      this._structuredContentTypes = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableImageAnnotation = value.enableImageAnnotation;
+      this._enableTableAnnotation = value.enableTableAnnotation;
+      this._excludeHtmlClasses = value.excludeHtmlClasses;
+      this._excludeHtmlElements = value.excludeHtmlElements;
+      this._excludeHtmlIds = value.excludeHtmlIds;
+      this._structuredContentTypes = value.structuredContentTypes;
     }
+  }
+
+  // enable_image_annotation - computed: false, optional: true, required: false
+  private _enableImageAnnotation?: boolean | cdktf.IResolvable; 
+  public get enableImageAnnotation() {
+    return this.getBooleanAttribute('enable_image_annotation');
+  }
+  public set enableImageAnnotation(value: boolean | cdktf.IResolvable) {
+    this._enableImageAnnotation = value;
+  }
+  public resetEnableImageAnnotation() {
+    this._enableImageAnnotation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableImageAnnotationInput() {
+    return this._enableImageAnnotation;
+  }
+
+  // enable_table_annotation - computed: false, optional: true, required: false
+  private _enableTableAnnotation?: boolean | cdktf.IResolvable; 
+  public get enableTableAnnotation() {
+    return this.getBooleanAttribute('enable_table_annotation');
+  }
+  public set enableTableAnnotation(value: boolean | cdktf.IResolvable) {
+    this._enableTableAnnotation = value;
+  }
+  public resetEnableTableAnnotation() {
+    this._enableTableAnnotation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableTableAnnotationInput() {
+    return this._enableTableAnnotation;
+  }
+
+  // exclude_html_classes - computed: false, optional: true, required: false
+  private _excludeHtmlClasses?: string[]; 
+  public get excludeHtmlClasses() {
+    return this.getListAttribute('exclude_html_classes');
+  }
+  public set excludeHtmlClasses(value: string[]) {
+    this._excludeHtmlClasses = value;
+  }
+  public resetExcludeHtmlClasses() {
+    this._excludeHtmlClasses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeHtmlClassesInput() {
+    return this._excludeHtmlClasses;
+  }
+
+  // exclude_html_elements - computed: false, optional: true, required: false
+  private _excludeHtmlElements?: string[]; 
+  public get excludeHtmlElements() {
+    return this.getListAttribute('exclude_html_elements');
+  }
+  public set excludeHtmlElements(value: string[]) {
+    this._excludeHtmlElements = value;
+  }
+  public resetExcludeHtmlElements() {
+    this._excludeHtmlElements = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeHtmlElementsInput() {
+    return this._excludeHtmlElements;
+  }
+
+  // exclude_html_ids - computed: false, optional: true, required: false
+  private _excludeHtmlIds?: string[]; 
+  public get excludeHtmlIds() {
+    return this.getListAttribute('exclude_html_ids');
+  }
+  public set excludeHtmlIds(value: string[]) {
+    this._excludeHtmlIds = value;
+  }
+  public resetExcludeHtmlIds() {
+    this._excludeHtmlIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeHtmlIdsInput() {
+    return this._excludeHtmlIds;
+  }
+
+  // structured_content_types - computed: false, optional: true, required: false
+  private _structuredContentTypes?: string[]; 
+  public get structuredContentTypes() {
+    return this.getListAttribute('structured_content_types');
+  }
+  public set structuredContentTypes(value: string[]) {
+    this._structuredContentTypes = value;
+  }
+  public resetStructuredContentTypes() {
+    this._structuredContentTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get structuredContentTypesInput() {
+    return this._structuredContentTypes;
   }
 }
 export interface DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesOcrParsingConfig {
   /**
   * If true, will use native text instead of OCR text on pages containing native text.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#use_native_text DiscoveryEngineDataStore#use_native_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#use_native_text DiscoveryEngineDataStore#use_native_text}
   */
   readonly useNativeText?: boolean | cdktf.IResolvable;
 }
@@ -956,25 +1391,25 @@ export class DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverri
 }
 export interface DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverrides {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#file_type DiscoveryEngineDataStore#file_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#file_type DiscoveryEngineDataStore#file_type}
   */
   readonly fileType: string;
   /**
   * digital_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#digital_parsing_config DiscoveryEngineDataStore#digital_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#digital_parsing_config DiscoveryEngineDataStore#digital_parsing_config}
   */
   readonly digitalParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesDigitalParsingConfig;
   /**
   * layout_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#layout_parsing_config DiscoveryEngineDataStore#layout_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#layout_parsing_config DiscoveryEngineDataStore#layout_parsing_config}
   */
   readonly layoutParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesLayoutParsingConfig;
   /**
   * ocr_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#ocr_parsing_config DiscoveryEngineDataStore#ocr_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#ocr_parsing_config DiscoveryEngineDataStore#ocr_parsing_config}
   */
   readonly ocrParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverridesOcrParsingConfig;
 }
@@ -1176,19 +1611,19 @@ export interface DiscoveryEngineDataStoreDocumentProcessingConfig {
   /**
   * chunking_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#chunking_config DiscoveryEngineDataStore#chunking_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#chunking_config DiscoveryEngineDataStore#chunking_config}
   */
   readonly chunkingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigChunkingConfig;
   /**
   * default_parsing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#default_parsing_config DiscoveryEngineDataStore#default_parsing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#default_parsing_config DiscoveryEngineDataStore#default_parsing_config}
   */
   readonly defaultParsingConfig?: DiscoveryEngineDataStoreDocumentProcessingConfigDefaultParsingConfig;
   /**
   * parsing_config_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#parsing_config_overrides DiscoveryEngineDataStore#parsing_config_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#parsing_config_overrides DiscoveryEngineDataStore#parsing_config_overrides}
   */
   readonly parsingConfigOverrides?: DiscoveryEngineDataStoreDocumentProcessingConfigParsingConfigOverrides[] | cdktf.IResolvable;
 }
@@ -1335,15 +1770,15 @@ export class DiscoveryEngineDataStoreDocumentProcessingConfigOutputReference ext
 }
 export interface DiscoveryEngineDataStoreTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#create DiscoveryEngineDataStore#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#create DiscoveryEngineDataStore#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#delete DiscoveryEngineDataStore#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#delete DiscoveryEngineDataStore#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#update DiscoveryEngineDataStore#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#update DiscoveryEngineDataStore#update}
   */
   readonly update?: string;
 }
@@ -1495,7 +1930,7 @@ export class DiscoveryEngineDataStoreTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store google_discovery_engine_data_store}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store google_discovery_engine_data_store}
 */
 export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
 
@@ -1511,7 +1946,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DiscoveryEngineDataStore resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DiscoveryEngineDataStore to import
-  * @param importFromId The id of the existing DiscoveryEngineDataStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DiscoveryEngineDataStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DiscoveryEngineDataStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1523,7 +1958,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/resources/discovery_engine_data_store google_discovery_engine_data_store} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/discovery_engine_data_store google_discovery_engine_data_store} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1534,7 +1969,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
       terraformResourceType: 'google_discovery_engine_data_store',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.42.0',
+        providerVersion: '6.43.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1551,6 +1986,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._id = config.id;
     this._industryVertical = config.industryVertical;
+    this._kmsKeyName = config.kmsKeyName;
     this._location = config.location;
     this._project = config.project;
     this._skipDefaultSchemaCreation = config.skipDefaultSchemaCreation;
@@ -1656,6 +2092,22 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get industryVerticalInput() {
     return this._industryVertical;
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1784,6 +2236,7 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       industry_vertical: cdktf.stringToTerraform(this._industryVertical),
+      kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       skip_default_schema_creation: cdktf.booleanToTerraform(this._skipDefaultSchemaCreation),
@@ -1828,6 +2281,12 @@ export class DiscoveryEngineDataStore extends cdktf.TerraformResource {
       },
       industry_vertical: {
         value: cdktf.stringToHclTerraform(this._industryVertical),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key_name: {
+        value: cdktf.stringToHclTerraform(this._kmsKeyName),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

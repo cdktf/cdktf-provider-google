@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/compute_router_status
+// https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/compute_router_status
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeRouterStatusConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/compute_router_status#id DataGoogleComputeRouterStatus#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,19 +22,19 @@ export interface DataGoogleComputeRouterStatusConfig extends cdktf.TerraformMeta
   /**
   * Name of the router to query.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/compute_router_status#name DataGoogleComputeRouterStatus#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/compute_router_status#name DataGoogleComputeRouterStatus#name}
   */
   readonly name: string;
   /**
   * Project ID of the target router.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/compute_router_status#project DataGoogleComputeRouterStatus#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/compute_router_status#project DataGoogleComputeRouterStatus#project}
   */
   readonly project?: string;
   /**
   * Region of the target router.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/compute_router_status#region DataGoogleComputeRouterStatus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/compute_router_status#region DataGoogleComputeRouterStatus#region}
   */
   readonly region?: string;
 }
@@ -116,6 +116,82 @@ export class DataGoogleComputeRouterStatusBestRoutesAsPathsList extends cdktf.Co
   */
   public get(index: number): DataGoogleComputeRouterStatusBestRoutesAsPathsOutputReference {
     return new DataGoogleComputeRouterStatusBestRoutesAsPathsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeRouterStatusBestRoutesParams {
+}
+
+export function dataGoogleComputeRouterStatusBestRoutesParamsToTerraform(struct?: DataGoogleComputeRouterStatusBestRoutesParams): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleComputeRouterStatusBestRoutesParamsToHclTerraform(struct?: DataGoogleComputeRouterStatusBestRoutesParams): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleComputeRouterStatusBestRoutesParamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeRouterStatusBestRoutesParams | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeRouterStatusBestRoutesParams | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // resource_manager_tags - computed: true, optional: false, required: false
+  private _resourceManagerTags = new cdktf.StringMap(this, "resource_manager_tags");
+  public get resourceManagerTags() {
+    return this._resourceManagerTags;
+  }
+}
+
+export class DataGoogleComputeRouterStatusBestRoutesParamsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeRouterStatusBestRoutesParamsOutputReference {
+    return new DataGoogleComputeRouterStatusBestRoutesParamsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleComputeRouterStatusBestRoutesWarningsData {
@@ -426,6 +502,12 @@ export class DataGoogleComputeRouterStatusBestRoutesOutputReference extends cdkt
     return this.getStringAttribute('next_hop_vpn_tunnel');
   }
 
+  // params - computed: true, optional: false, required: false
+  private _params = new DataGoogleComputeRouterStatusBestRoutesParamsList(this, "params", false);
+  public get params() {
+    return this._params;
+  }
+
   // priority - computed: true, optional: false, required: false
   public get priority() {
     return this.getNumberAttribute('priority');
@@ -559,6 +641,82 @@ export class DataGoogleComputeRouterStatusBestRoutesForRouterAsPathsList extends
   */
   public get(index: number): DataGoogleComputeRouterStatusBestRoutesForRouterAsPathsOutputReference {
     return new DataGoogleComputeRouterStatusBestRoutesForRouterAsPathsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeRouterStatusBestRoutesForRouterParams {
+}
+
+export function dataGoogleComputeRouterStatusBestRoutesForRouterParamsToTerraform(struct?: DataGoogleComputeRouterStatusBestRoutesForRouterParams): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleComputeRouterStatusBestRoutesForRouterParamsToHclTerraform(struct?: DataGoogleComputeRouterStatusBestRoutesForRouterParams): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleComputeRouterStatusBestRoutesForRouterParamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeRouterStatusBestRoutesForRouterParams | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeRouterStatusBestRoutesForRouterParams | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // resource_manager_tags - computed: true, optional: false, required: false
+  private _resourceManagerTags = new cdktf.StringMap(this, "resource_manager_tags");
+  public get resourceManagerTags() {
+    return this._resourceManagerTags;
+  }
+}
+
+export class DataGoogleComputeRouterStatusBestRoutesForRouterParamsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeRouterStatusBestRoutesForRouterParamsOutputReference {
+    return new DataGoogleComputeRouterStatusBestRoutesForRouterParamsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleComputeRouterStatusBestRoutesForRouterWarningsData {
@@ -869,6 +1027,12 @@ export class DataGoogleComputeRouterStatusBestRoutesForRouterOutputReference ext
     return this.getStringAttribute('next_hop_vpn_tunnel');
   }
 
+  // params - computed: true, optional: false, required: false
+  private _params = new DataGoogleComputeRouterStatusBestRoutesForRouterParamsList(this, "params", false);
+  public get params() {
+    return this._params;
+  }
+
   // priority - computed: true, optional: false, required: false
   public get priority() {
     return this.getNumberAttribute('priority');
@@ -926,7 +1090,7 @@ export class DataGoogleComputeRouterStatusBestRoutesForRouterList extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/compute_router_status google_compute_router_status}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/compute_router_status google_compute_router_status}
 */
 export class DataGoogleComputeRouterStatus extends cdktf.TerraformDataSource {
 
@@ -942,7 +1106,7 @@ export class DataGoogleComputeRouterStatus extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleComputeRouterStatus resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleComputeRouterStatus to import
-  * @param importFromId The id of the existing DataGoogleComputeRouterStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/compute_router_status#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleComputeRouterStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/compute_router_status#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleComputeRouterStatus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -954,7 +1118,7 @@ export class DataGoogleComputeRouterStatus extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.42.0/docs/data-sources/compute_router_status google_compute_router_status} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/compute_router_status google_compute_router_status} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -965,7 +1129,7 @@ export class DataGoogleComputeRouterStatus extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_router_status',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.42.0',
+        providerVersion: '6.43.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
