@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,30 +18,30 @@ export interface ApigeeInstanceConfig extends cdktf.TerraformMetaArguments {
   * which the customers can provide during the instance creation. By default, the customer
   * project associated with the Apigee organization will be included to the list.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#consumer_accept_list ApigeeInstance#consumer_accept_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#consumer_accept_list ApigeeInstance#consumer_accept_list}
   */
   readonly consumerAcceptList?: string[];
   /**
   * Description of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#description ApigeeInstance#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#description ApigeeInstance#description}
   */
   readonly description?: string;
   /**
   * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
   * Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#disk_encryption_key_name ApigeeInstance#disk_encryption_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#disk_encryption_key_name ApigeeInstance#disk_encryption_key_name}
   */
   readonly diskEncryptionKeyName?: string;
   /**
   * Display name of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#display_name ApigeeInstance#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#display_name ApigeeInstance#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#id ApigeeInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#id ApigeeInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -56,53 +56,180 @@ export interface ApigeeInstanceConfig extends cdktf.TerraformMetaArguments {
   * for configuring their firewall needs to allow traffic from Apigee.
   * Input format: "a.b.c.d/22"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#ip_range ApigeeInstance#ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#ip_range ApigeeInstance#ip_range}
   */
   readonly ipRange?: string;
   /**
   * Required. Compute Engine location where the instance resides.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#location ApigeeInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#location ApigeeInstance#location}
   */
   readonly location: string;
   /**
   * Resource ID of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#name ApigeeInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#name ApigeeInstance#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee instance,
   * in the format 'organizations/{{org_name}}'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#org_id ApigeeInstance#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#org_id ApigeeInstance#org_id}
   */
   readonly orgId: string;
   /**
   * The size of the CIDR block range that will be reserved by the instance. For valid values,
   * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#peering_cidr_range ApigeeInstance#peering_cidr_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#peering_cidr_range ApigeeInstance#peering_cidr_range}
   */
   readonly peeringCidrRange?: string;
   /**
+  * access_logging_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#access_logging_config ApigeeInstance#access_logging_config}
+  */
+  readonly accessLoggingConfig?: ApigeeInstanceAccessLoggingConfig;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#timeouts ApigeeInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#timeouts ApigeeInstance#timeouts}
   */
   readonly timeouts?: ApigeeInstanceTimeouts;
 }
+export interface ApigeeInstanceAccessLoggingConfig {
+  /**
+  * Boolean flag that specifies whether the customer access log feature is enabled.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#enabled ApigeeInstance#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+  /**
+  * Ship the access log entries that match the statusCode defined in the filter.
+  * The statusCode is the only expected/supported filter field. (Ex: statusCode)
+  * The filter will parse it to the Common Expression Language semantics for expression
+  * evaluation to build the filter condition. (Ex: "filter": statusCode >= 200 && statusCode < 300 )
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#filter ApigeeInstance#filter}
+  */
+  readonly filter?: string;
+}
+
+export function apigeeInstanceAccessLoggingConfigToTerraform(struct?: ApigeeInstanceAccessLoggingConfigOutputReference | ApigeeInstanceAccessLoggingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    filter: cdktf.stringToTerraform(struct!.filter),
+  }
+}
+
+
+export function apigeeInstanceAccessLoggingConfigToHclTerraform(struct?: ApigeeInstanceAccessLoggingConfigOutputReference | ApigeeInstanceAccessLoggingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filter: {
+      value: cdktf.stringToHclTerraform(struct!.filter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ApigeeInstanceAccessLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApigeeInstanceAccessLoggingConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._filter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApigeeInstanceAccessLoggingConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._filter = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._filter = value.filter;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter?: string; 
+  public get filter() {
+    return this.getStringAttribute('filter');
+  }
+  public set filter(value: string) {
+    this._filter = value;
+  }
+  public resetFilter() {
+    this._filter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter;
+  }
+}
 export interface ApigeeInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#create ApigeeInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#create ApigeeInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#delete ApigeeInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#delete ApigeeInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#update ApigeeInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#update ApigeeInstance#update}
   */
   readonly update?: string;
 }
@@ -254,7 +381,7 @@ export class ApigeeInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance google_apigee_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance google_apigee_instance}
 */
 export class ApigeeInstance extends cdktf.TerraformResource {
 
@@ -270,7 +397,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApigeeInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApigeeInstance to import
-  * @param importFromId The id of the existing ApigeeInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApigeeInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApigeeInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -282,7 +409,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/apigee_instance google_apigee_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/apigee_instance google_apigee_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -293,7 +420,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.43.0',
+        providerVersion: '6.44.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -314,6 +441,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
     this._name = config.name;
     this._orgId = config.orgId;
     this._peeringCidrRange = config.peeringCidrRange;
+    this._accessLoggingConfig.internalValue = config.accessLoggingConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -487,6 +615,22 @@ export class ApigeeInstance extends cdktf.TerraformResource {
     return this.getStringAttribute('service_attachment');
   }
 
+  // access_logging_config - computed: false, optional: true, required: false
+  private _accessLoggingConfig = new ApigeeInstanceAccessLoggingConfigOutputReference(this, "access_logging_config");
+  public get accessLoggingConfig() {
+    return this._accessLoggingConfig;
+  }
+  public putAccessLoggingConfig(value: ApigeeInstanceAccessLoggingConfig) {
+    this._accessLoggingConfig.internalValue = value;
+  }
+  public resetAccessLoggingConfig() {
+    this._accessLoggingConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessLoggingConfigInput() {
+    return this._accessLoggingConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ApigeeInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -519,6 +663,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       org_id: cdktf.stringToTerraform(this._orgId),
       peering_cidr_range: cdktf.stringToTerraform(this._peeringCidrRange),
+      access_logging_config: apigeeInstanceAccessLoggingConfigToTerraform(this._accessLoggingConfig.internalValue),
       timeouts: apigeeInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -584,6 +729,12 @@ export class ApigeeInstance extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      access_logging_config: {
+        value: apigeeInstanceAccessLoggingConfigToHclTerraform(this._accessLoggingConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApigeeInstanceAccessLoggingConfigList",
       },
       timeouts: {
         value: apigeeInstanceTimeoutsToHclTerraform(this._timeouts.internalValue),
