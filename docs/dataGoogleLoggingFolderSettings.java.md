@@ -4,7 +4,7 @@
 
 ### DataGoogleLoggingFolderSettings <a name="DataGoogleLoggingFolderSettings" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/logging_folder_settings google_logging_folder_settings}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/logging_folder_settings google_logging_folder_settings}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer"></a>
 
@@ -40,7 +40,7 @@ DataGoogleLoggingFolderSettings.Builder.create(Construct scope, java.lang.String
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.folder">folder</a></code> | <code>java.lang.String</code> | The folder for which to retrieve settings. |
-| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettings.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 The folder for which to retrieve settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/logging_folder_settings#folder DataGoogleLoggingFolderSettings#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/logging_folder_settings#folder DataGoogleLoggingFolderSettings#folder}
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -451,7 +451,7 @@ The construct id used in the generated config for the DataGoogleLoggingFolderSet
 
 The id of the existing DataGoogleLoggingFolderSettings that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/logging_folder_settings#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/logging_folder_settings#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -770,7 +770,7 @@ DataGoogleLoggingFolderSettingsConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.folder">folder</a></code> | <code>java.lang.String</code> | The folder for which to retrieve settings. |
-| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleLoggingFolderSettings.DataGoogleLoggingFolderSettingsConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}. |
 
 ---
 
@@ -854,7 +854,7 @@ public java.lang.String getFolder();
 
 The folder for which to retrieve settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/logging_folder_settings#folder DataGoogleLoggingFolderSettings#folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/logging_folder_settings#folder DataGoogleLoggingFolderSettings#folder}
 
 ---
 
@@ -866,7 +866,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/logging_folder_settings#id DataGoogleLoggingFolderSettings#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
