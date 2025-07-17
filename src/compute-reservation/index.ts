@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation
+// https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,13 +13,20 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeReservationConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp is represented in RFC3339 text format.
+  * Cannot be used with delete_after_duration.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#delete_at_time ComputeReservation#delete_at_time}
+  */
+  readonly deleteAtTime?: string;
+  /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#description ComputeReservation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#description ComputeReservation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#id ComputeReservation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#id ComputeReservation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,11 +41,11 @@ export interface ComputeReservationConfig extends cdktf.TerraformMetaArguments {
   * characters must be a dash, lowercase letter, or digit, except the last
   * character, which cannot be a dash.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#name ComputeReservation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#name ComputeReservation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#project ComputeReservation#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#project ComputeReservation#project}
   */
   readonly project?: string;
   /**
@@ -46,37 +53,256 @@ export interface ComputeReservationConfig extends cdktf.TerraformMetaArguments {
   * consume this reservation. Otherwise, it can be consumed by VMs with
   * affinity for any reservation. Defaults to false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#specific_reservation_required ComputeReservation#specific_reservation_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#specific_reservation_required ComputeReservation#specific_reservation_required}
   */
   readonly specificReservationRequired?: boolean | cdktf.IResolvable;
   /**
   * The zone where the reservation is made.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#zone ComputeReservation#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#zone ComputeReservation#zone}
   */
   readonly zone: string;
   /**
+  * delete_after_duration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#delete_after_duration ComputeReservation#delete_after_duration}
+  */
+  readonly deleteAfterDuration?: ComputeReservationDeleteAfterDuration;
+  /**
+  * reservation_sharing_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#reservation_sharing_policy ComputeReservation#reservation_sharing_policy}
+  */
+  readonly reservationSharingPolicy?: ComputeReservationReservationSharingPolicy;
+  /**
   * share_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#share_settings ComputeReservation#share_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#share_settings ComputeReservation#share_settings}
   */
   readonly shareSettings?: ComputeReservationShareSettings;
   /**
   * specific_reservation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#specific_reservation ComputeReservation#specific_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#specific_reservation ComputeReservation#specific_reservation}
   */
   readonly specificReservation: ComputeReservationSpecificReservation;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#timeouts ComputeReservation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#timeouts ComputeReservation#timeouts}
   */
   readonly timeouts?: ComputeReservationTimeouts;
 }
+export interface ComputeReservationDeleteAfterDuration {
+  /**
+  * Number of nanoseconds for the auto-delete duration.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#nanos ComputeReservation#nanos}
+  */
+  readonly nanos?: number;
+  /**
+  * Number of seconds for the auto-delete duration.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#seconds ComputeReservation#seconds}
+  */
+  readonly seconds?: string;
+}
+
+export function computeReservationDeleteAfterDurationToTerraform(struct?: ComputeReservationDeleteAfterDurationOutputReference | ComputeReservationDeleteAfterDuration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
+
+export function computeReservationDeleteAfterDurationToHclTerraform(struct?: ComputeReservationDeleteAfterDurationOutputReference | ComputeReservationDeleteAfterDuration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    nanos: {
+      value: cdktf.numberToHclTerraform(struct!.nanos),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    seconds: {
+      value: cdktf.stringToHclTerraform(struct!.seconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeReservationDeleteAfterDurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeReservationDeleteAfterDuration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nanos !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeReservationDeleteAfterDuration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos;
+  }
+
+  // seconds - computed: false, optional: true, required: false
+  private _seconds?: string; 
+  public get seconds() {
+    return this.getStringAttribute('seconds');
+  }
+  public set seconds(value: string) {
+    this._seconds = value;
+  }
+  public resetSeconds() {
+    this._seconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds;
+  }
+}
+export interface ComputeReservationReservationSharingPolicy {
+  /**
+  * Sharing config for all Google Cloud services. Possible values: ["ALLOW_ALL", "DISALLOW_ALL"]
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#service_share_type ComputeReservation#service_share_type}
+  */
+  readonly serviceShareType?: string;
+}
+
+export function computeReservationReservationSharingPolicyToTerraform(struct?: ComputeReservationReservationSharingPolicyOutputReference | ComputeReservationReservationSharingPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    service_share_type: cdktf.stringToTerraform(struct!.serviceShareType),
+  }
+}
+
+
+export function computeReservationReservationSharingPolicyToHclTerraform(struct?: ComputeReservationReservationSharingPolicyOutputReference | ComputeReservationReservationSharingPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    service_share_type: {
+      value: cdktf.stringToHclTerraform(struct!.serviceShareType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeReservationReservationSharingPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeReservationReservationSharingPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._serviceShareType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceShareType = this._serviceShareType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeReservationReservationSharingPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._serviceShareType = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._serviceShareType = value.serviceShareType;
+    }
+  }
+
+  // service_share_type - computed: true, optional: true, required: false
+  private _serviceShareType?: string; 
+  public get serviceShareType() {
+    return this.getStringAttribute('service_share_type');
+  }
+  public set serviceShareType(value: string) {
+    this._serviceShareType = value;
+  }
+  public resetServiceShareType() {
+    this._serviceShareType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceShareTypeInput() {
+    return this._serviceShareType;
+  }
+}
 export interface ComputeReservationShareSettingsProjectMap {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#id ComputeReservation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#id ComputeReservation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -85,7 +311,7 @@ export interface ComputeReservationShareSettingsProjectMap {
   /**
   * The project id/number, should be same as the key of this project config in the project map.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#project_id ComputeReservation#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#project_id ComputeReservation#project_id}
   */
   readonly projectId?: string;
 }
@@ -229,13 +455,13 @@ export interface ComputeReservationShareSettings {
   /**
   * Type of sharing for this shared-reservation Possible values: ["LOCAL", "SPECIFIC_PROJECTS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#share_type ComputeReservation#share_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#share_type ComputeReservation#share_type}
   */
   readonly shareType?: string;
   /**
   * project_map block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#project_map ComputeReservation#project_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#project_map ComputeReservation#project_map}
   */
   readonly projectMap?: ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable;
 }
@@ -351,7 +577,7 @@ export interface ComputeReservationSpecificReservationInstancePropertiesGuestAcc
   * The number of the guest accelerator cards exposed to
   * this instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#accelerator_count ComputeReservation#accelerator_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#accelerator_count ComputeReservation#accelerator_count}
   */
   readonly acceleratorCount: number;
   /**
@@ -361,7 +587,7 @@ export interface ComputeReservationSpecificReservationInstancePropertiesGuestAcc
   * 
   * If you are creating an instance template, specify only the accelerator name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#accelerator_type ComputeReservation#accelerator_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#accelerator_type ComputeReservation#accelerator_type}
   */
   readonly acceleratorType: string;
 }
@@ -502,13 +728,13 @@ export interface ComputeReservationSpecificReservationInstancePropertiesLocalSsd
   /**
   * The size of the disk in base-2 GB.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#disk_size_gb ComputeReservation#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#disk_size_gb ComputeReservation#disk_size_gb}
   */
   readonly diskSizeGb: number;
   /**
   * The disk interface to use for attaching this disk. Default value: "SCSI" Possible values: ["SCSI", "NVME"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#interface ComputeReservation#interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#interface ComputeReservation#interface}
   */
   readonly interface?: string;
 }
@@ -652,7 +878,7 @@ export interface ComputeReservationSpecificReservationInstanceProperties {
   /**
   * The name of the machine type to reserve.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#machine_type ComputeReservation#machine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#machine_type ComputeReservation#machine_type}
   */
   readonly machineType: string;
   /**
@@ -661,19 +887,19 @@ export interface ComputeReservationSpecificReservationInstanceProperties {
   * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
   * for information on available CPU platforms.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#min_cpu_platform ComputeReservation#min_cpu_platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#min_cpu_platform ComputeReservation#min_cpu_platform}
   */
   readonly minCpuPlatform?: string;
   /**
   * guest_accelerators block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#guest_accelerators ComputeReservation#guest_accelerators}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#guest_accelerators ComputeReservation#guest_accelerators}
   */
   readonly guestAccelerators?: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[] | cdktf.IResolvable;
   /**
   * local_ssds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#local_ssds ComputeReservation#local_ssds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#local_ssds ComputeReservation#local_ssds}
   */
   readonly localSsds?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[] | cdktf.IResolvable;
 }
@@ -843,15 +1069,22 @@ export interface ComputeReservationSpecificReservation {
   /**
   * The number of resources that are allocated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#count ComputeReservation#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#count ComputeReservation#count}
   */
   readonly count: number;
   /**
+  * Specifies the instance template to create the reservation. If you use this field, you must exclude the
+  * instanceProperties field.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#source_instance_template ComputeReservation#source_instance_template}
+  */
+  readonly sourceInstanceTemplate?: string;
+  /**
   * instance_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#instance_properties ComputeReservation#instance_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#instance_properties ComputeReservation#instance_properties}
   */
-  readonly instanceProperties: ComputeReservationSpecificReservationInstanceProperties;
+  readonly instanceProperties?: ComputeReservationSpecificReservationInstanceProperties;
 }
 
 export function computeReservationSpecificReservationToTerraform(struct?: ComputeReservationSpecificReservationOutputReference | ComputeReservationSpecificReservation): any {
@@ -861,6 +1094,7 @@ export function computeReservationSpecificReservationToTerraform(struct?: Comput
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
+    source_instance_template: cdktf.stringToTerraform(struct!.sourceInstanceTemplate),
     instance_properties: computeReservationSpecificReservationInstancePropertiesToTerraform(struct!.instanceProperties),
   }
 }
@@ -877,6 +1111,12 @@ export function computeReservationSpecificReservationToHclTerraform(struct?: Com
       isBlock: false,
       type: "simple",
       storageClassType: "number",
+    },
+    source_instance_template: {
+      value: cdktf.stringToHclTerraform(struct!.sourceInstanceTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
     },
     instance_properties: {
       value: computeReservationSpecificReservationInstancePropertiesToHclTerraform(struct!.instanceProperties),
@@ -908,6 +1148,10 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
+    if (this._sourceInstanceTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceInstanceTemplate = this._sourceInstanceTemplate;
+    }
     if (this._instanceProperties?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.instanceProperties = this._instanceProperties?.internalValue;
@@ -919,11 +1163,13 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
     if (value === undefined) {
       this.isEmptyObject = false;
       this._count = undefined;
+      this._sourceInstanceTemplate = undefined;
       this._instanceProperties.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
+      this._sourceInstanceTemplate = value.sourceInstanceTemplate;
       this._instanceProperties.internalValue = value.instanceProperties;
     }
   }
@@ -946,13 +1192,32 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
     return this.getNumberAttribute('in_use_count');
   }
 
-  // instance_properties - computed: false, optional: false, required: true
+  // source_instance_template - computed: false, optional: true, required: false
+  private _sourceInstanceTemplate?: string; 
+  public get sourceInstanceTemplate() {
+    return this.getStringAttribute('source_instance_template');
+  }
+  public set sourceInstanceTemplate(value: string) {
+    this._sourceInstanceTemplate = value;
+  }
+  public resetSourceInstanceTemplate() {
+    this._sourceInstanceTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInstanceTemplateInput() {
+    return this._sourceInstanceTemplate;
+  }
+
+  // instance_properties - computed: false, optional: true, required: false
   private _instanceProperties = new ComputeReservationSpecificReservationInstancePropertiesOutputReference(this, "instance_properties");
   public get instanceProperties() {
     return this._instanceProperties;
   }
   public putInstanceProperties(value: ComputeReservationSpecificReservationInstanceProperties) {
     this._instanceProperties.internalValue = value;
+  }
+  public resetInstanceProperties() {
+    this._instanceProperties.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get instancePropertiesInput() {
@@ -961,15 +1226,15 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
 }
 export interface ComputeReservationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#create ComputeReservation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#create ComputeReservation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#delete ComputeReservation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#delete ComputeReservation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#update ComputeReservation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#update ComputeReservation#update}
   */
   readonly update?: string;
 }
@@ -1121,7 +1386,7 @@ export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation google_compute_reservation}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation google_compute_reservation}
 */
 export class ComputeReservation extends cdktf.TerraformResource {
 
@@ -1137,7 +1402,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeReservation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeReservation to import
-  * @param importFromId The id of the existing ComputeReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeReservation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1149,7 +1414,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/compute_reservation google_compute_reservation} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_reservation google_compute_reservation} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1160,7 +1425,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_reservation',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.43.0',
+        providerVersion: '6.44.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1171,12 +1436,15 @@ export class ComputeReservation extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._deleteAtTime = config.deleteAtTime;
     this._description = config.description;
     this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._specificReservationRequired = config.specificReservationRequired;
     this._zone = config.zone;
+    this._deleteAfterDuration.internalValue = config.deleteAfterDuration;
+    this._reservationSharingPolicy.internalValue = config.reservationSharingPolicy;
     this._shareSettings.internalValue = config.shareSettings;
     this._specificReservation.internalValue = config.specificReservation;
     this._timeouts.internalValue = config.timeouts;
@@ -1194,6 +1462,22 @@ export class ComputeReservation extends cdktf.TerraformResource {
   // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
     return this.getStringAttribute('creation_timestamp');
+  }
+
+  // delete_at_time - computed: true, optional: true, required: false
+  private _deleteAtTime?: string; 
+  public get deleteAtTime() {
+    return this.getStringAttribute('delete_at_time');
+  }
+  public set deleteAtTime(value: string) {
+    this._deleteAtTime = value;
+  }
+  public resetDeleteAtTime() {
+    this._deleteAtTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteAtTimeInput() {
+    return this._deleteAtTime;
   }
 
   // description - computed: false, optional: true, required: false
@@ -1296,6 +1580,38 @@ export class ComputeReservation extends cdktf.TerraformResource {
     return this._zone;
   }
 
+  // delete_after_duration - computed: false, optional: true, required: false
+  private _deleteAfterDuration = new ComputeReservationDeleteAfterDurationOutputReference(this, "delete_after_duration");
+  public get deleteAfterDuration() {
+    return this._deleteAfterDuration;
+  }
+  public putDeleteAfterDuration(value: ComputeReservationDeleteAfterDuration) {
+    this._deleteAfterDuration.internalValue = value;
+  }
+  public resetDeleteAfterDuration() {
+    this._deleteAfterDuration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteAfterDurationInput() {
+    return this._deleteAfterDuration.internalValue;
+  }
+
+  // reservation_sharing_policy - computed: false, optional: true, required: false
+  private _reservationSharingPolicy = new ComputeReservationReservationSharingPolicyOutputReference(this, "reservation_sharing_policy");
+  public get reservationSharingPolicy() {
+    return this._reservationSharingPolicy;
+  }
+  public putReservationSharingPolicy(value: ComputeReservationReservationSharingPolicy) {
+    this._reservationSharingPolicy.internalValue = value;
+  }
+  public resetReservationSharingPolicy() {
+    this._reservationSharingPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservationSharingPolicyInput() {
+    return this._reservationSharingPolicy.internalValue;
+  }
+
   // share_settings - computed: false, optional: true, required: false
   private _shareSettings = new ComputeReservationShareSettingsOutputReference(this, "share_settings");
   public get shareSettings() {
@@ -1347,12 +1663,15 @@ export class ComputeReservation extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      delete_at_time: cdktf.stringToTerraform(this._deleteAtTime),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       specific_reservation_required: cdktf.booleanToTerraform(this._specificReservationRequired),
       zone: cdktf.stringToTerraform(this._zone),
+      delete_after_duration: computeReservationDeleteAfterDurationToTerraform(this._deleteAfterDuration.internalValue),
+      reservation_sharing_policy: computeReservationReservationSharingPolicyToTerraform(this._reservationSharingPolicy.internalValue),
       share_settings: computeReservationShareSettingsToTerraform(this._shareSettings.internalValue),
       specific_reservation: computeReservationSpecificReservationToTerraform(this._specificReservation.internalValue),
       timeouts: computeReservationTimeoutsToTerraform(this._timeouts.internalValue),
@@ -1361,6 +1680,12 @@ export class ComputeReservation extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      delete_at_time: {
+        value: cdktf.stringToHclTerraform(this._deleteAtTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       description: {
         value: cdktf.stringToHclTerraform(this._description),
         isBlock: false,
@@ -1396,6 +1721,18 @@ export class ComputeReservation extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      delete_after_duration: {
+        value: computeReservationDeleteAfterDurationToHclTerraform(this._deleteAfterDuration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeReservationDeleteAfterDurationList",
+      },
+      reservation_sharing_policy: {
+        value: computeReservationReservationSharingPolicyToHclTerraform(this._reservationSharingPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ComputeReservationReservationSharingPolicyList",
       },
       share_settings: {
         value: computeReservationShareSettingsToHclTerraform(this._shareSettings.internalValue),

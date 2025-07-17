@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain
+// https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,18 +15,18 @@ export interface FirebaseAppHostingDomainConfig extends cdktf.TerraformMetaArgum
   /**
   * The ID of the Backend that this Domain is associated with
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#backend FirebaseAppHostingDomain#backend}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#backend FirebaseAppHostingDomain#backend}
   */
   readonly backend: string;
   /**
   * Id of the domain to create.
   * Must be a valid domain name, such as "foo.com"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#domain_id FirebaseAppHostingDomain#domain_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#domain_id FirebaseAppHostingDomain#domain_id}
   */
   readonly domainId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#id FirebaseAppHostingDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#id FirebaseAppHostingDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -35,23 +35,23 @@ export interface FirebaseAppHostingDomainConfig extends cdktf.TerraformMetaArgum
   /**
   * The location of the Backend that this Domain is associated with
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#location FirebaseAppHostingDomain#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#location FirebaseAppHostingDomain#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#project FirebaseAppHostingDomain#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#project FirebaseAppHostingDomain#project}
   */
   readonly project?: string;
   /**
   * serve block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#serve FirebaseAppHostingDomain#serve}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#serve FirebaseAppHostingDomain#serve}
   */
   readonly serve?: FirebaseAppHostingDomainServe;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#timeouts FirebaseAppHostingDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#timeouts FirebaseAppHostingDomain#timeouts}
   */
   readonly timeouts?: FirebaseAppHostingDomainTimeouts;
 }
@@ -868,7 +868,7 @@ export interface FirebaseAppHostingDomainServeRedirect {
   * The status code to use in a redirect response. Must be a valid HTTP 3XX
   * status code. Defaults to 302 if not present.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#status FirebaseAppHostingDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#status FirebaseAppHostingDomain#status}
   */
   readonly status?: string;
   /**
@@ -876,7 +876,7 @@ export interface FirebaseAppHostingDomainServeRedirect {
   * prepended to the original request path. URI without a scheme are
   * assumed to be HTTPS.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#uri FirebaseAppHostingDomain#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#uri FirebaseAppHostingDomain#uri}
   */
   readonly uri: string;
 }
@@ -988,7 +988,7 @@ export interface FirebaseAppHostingDomainServe {
   /**
   * redirect block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#redirect FirebaseAppHostingDomain#redirect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#redirect FirebaseAppHostingDomain#redirect}
   */
   readonly redirect?: FirebaseAppHostingDomainServeRedirect;
 }
@@ -1072,15 +1072,15 @@ export class FirebaseAppHostingDomainServeOutputReference extends cdktf.ComplexO
 }
 export interface FirebaseAppHostingDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#create FirebaseAppHostingDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#create FirebaseAppHostingDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#delete FirebaseAppHostingDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#delete FirebaseAppHostingDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#update FirebaseAppHostingDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#update FirebaseAppHostingDomain#update}
   */
   readonly update?: string;
 }
@@ -1232,7 +1232,7 @@ export class FirebaseAppHostingDomainTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain google_firebase_app_hosting_domain}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain google_firebase_app_hosting_domain}
 */
 export class FirebaseAppHostingDomain extends cdktf.TerraformResource {
 
@@ -1248,7 +1248,7 @@ export class FirebaseAppHostingDomain extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FirebaseAppHostingDomain resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FirebaseAppHostingDomain to import
-  * @param importFromId The id of the existing FirebaseAppHostingDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FirebaseAppHostingDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FirebaseAppHostingDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1260,7 +1260,7 @@ export class FirebaseAppHostingDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/firebase_app_hosting_domain google_firebase_app_hosting_domain} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/firebase_app_hosting_domain google_firebase_app_hosting_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1271,7 +1271,7 @@ export class FirebaseAppHostingDomain extends cdktf.TerraformResource {
       terraformResourceType: 'google_firebase_app_hosting_domain',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.43.0',
+        providerVersion: '6.44.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

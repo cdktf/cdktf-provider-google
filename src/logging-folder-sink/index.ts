@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink
+// https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,35 +15,35 @@ export interface LoggingFolderSinkConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of this sink. The maximum length of the description is 8000 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
   */
   readonly description?: string;
   /**
   * The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#destination LoggingFolderSink#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#destination LoggingFolderSink#destination}
   */
   readonly destination: string;
   /**
   * If set to True, then this sink is disabled and it does not export any log entries.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when exporting logs. Only log entries that match the filter are exported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
   */
   readonly filter?: string;
   /**
   * The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is accepted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#folder LoggingFolderSink#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#folder LoggingFolderSink#folder}
   */
   readonly folder: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#id LoggingFolderSink#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#id LoggingFolderSink#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -52,31 +52,31 @@ export interface LoggingFolderSinkConfig extends cdktf.TerraformMetaArguments {
   /**
   * Whether or not to include children folders in the sink export. If true, logs associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#include_children LoggingFolderSink#include_children}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#include_children LoggingFolderSink#include_children}
   */
   readonly includeChildren?: boolean | cdktf.IResolvable;
   /**
   * Whether or not to intercept logs from child projects. If true, matching logs will not match with sinks in child resources, except _Required sinks. This sink will be visible to child resources when listing sinks.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#intercept_children LoggingFolderSink#intercept_children}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#intercept_children LoggingFolderSink#intercept_children}
   */
   readonly interceptChildren?: boolean | cdktf.IResolvable;
   /**
   * The name of the logging sink.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
   */
   readonly name: string;
   /**
   * bigquery_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#bigquery_options LoggingFolderSink#bigquery_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#bigquery_options LoggingFolderSink#bigquery_options}
   */
   readonly bigqueryOptions?: LoggingFolderSinkBigqueryOptions;
   /**
   * exclusions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#exclusions LoggingFolderSink#exclusions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#exclusions LoggingFolderSink#exclusions}
   */
   readonly exclusions?: LoggingFolderSinkExclusions[] | cdktf.IResolvable;
 }
@@ -84,7 +84,7 @@ export interface LoggingFolderSinkBigqueryOptions {
   /**
   * Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#use_partitioned_tables LoggingFolderSink#use_partitioned_tables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#use_partitioned_tables LoggingFolderSink#use_partitioned_tables}
   */
   readonly usePartitionedTables: boolean | cdktf.IResolvable;
 }
@@ -167,25 +167,25 @@ export interface LoggingFolderSinkExclusions {
   /**
   * A description of this exclusion.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
   */
   readonly description?: string;
   /**
   * If set to True, then this exclusion is disabled and it does not exclude any log entries
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
   */
   readonly filter: string;
   /**
   * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
   */
   readonly name: string;
 }
@@ -382,7 +382,7 @@ export class LoggingFolderSinkExclusionsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink google_logging_folder_sink}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink google_logging_folder_sink}
 */
 export class LoggingFolderSink extends cdktf.TerraformResource {
 
@@ -398,7 +398,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LoggingFolderSink resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LoggingFolderSink to import
-  * @param importFromId The id of the existing LoggingFolderSink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LoggingFolderSink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LoggingFolderSink to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -410,7 +410,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.43.0/docs/resources/logging_folder_sink google_logging_folder_sink} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_folder_sink google_logging_folder_sink} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -421,7 +421,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_folder_sink',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.43.0',
+        providerVersion: '6.44.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
