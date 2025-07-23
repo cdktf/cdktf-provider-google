@@ -4,7 +4,7 @@
 
 ### LoggingProjectExclusion <a name="LoggingProjectExclusion" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion google_logging_project_exclusion}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion google_logging_project_exclusion}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer"></a>
 
@@ -495,7 +495,7 @@ The construct id used in the generated config for the LoggingProjectExclusion to
 
 The id of the existing LoggingProjectExclusion that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -861,8 +861,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/loggingprojectexclu
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.name">Name</a></code> | <code>*string</code> | The name of the logging exclusion. |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.description">Description</a></code> | <code>*string</code> | A human-readable description. |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.disabled">Disabled</a></code> | <code>interface{}</code> | Whether this exclusion rule should be disabled or not. This defaults to false. |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#id LoggingProjectExclusion#id}. |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#project LoggingProjectExclusion#project}. |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#id LoggingProjectExclusion#id}. |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#project LoggingProjectExclusion#project}. |
 
 ---
 
@@ -946,7 +946,7 @@ Filter *string
 
 The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#filter LoggingProjectExclusion#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#filter LoggingProjectExclusion#filter}
 
 ---
 
@@ -960,7 +960,7 @@ Name *string
 
 The name of the logging exclusion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#name LoggingProjectExclusion#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#name LoggingProjectExclusion#name}
 
 ---
 
@@ -974,7 +974,7 @@ Description *string
 
 A human-readable description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#description LoggingProjectExclusion#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#description LoggingProjectExclusion#description}
 
 ---
 
@@ -988,7 +988,7 @@ Disabled interface{}
 
 Whether this exclusion rule should be disabled or not. This defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#disabled LoggingProjectExclusion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#disabled LoggingProjectExclusion#disabled}
 
 ---
 
@@ -1000,7 +1000,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#id LoggingProjectExclusion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#id LoggingProjectExclusion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1015,7 +1015,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/logging_project_exclusion#project LoggingProjectExclusion#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/logging_project_exclusion#project LoggingProjectExclusion#project}.
 
 ---
 
