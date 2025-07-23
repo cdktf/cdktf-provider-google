@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules
+// https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ComputeFirewallPolicyWithRulesConfig extends cdktf.TerraformMet
   /**
   * An optional description of this resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#description ComputeFirewallPolicyWithRules#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#description ComputeFirewallPolicyWithRules#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#id ComputeFirewallPolicyWithRules#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#id ComputeFirewallPolicyWithRules#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,25 +29,25 @@ export interface ComputeFirewallPolicyWithRulesConfig extends cdktf.TerraformMet
   * The parent of this FirewallPolicy in the Cloud Resource Hierarchy.
   * Format: organizations/{organization_id} or folders/{folder_id}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#parent ComputeFirewallPolicyWithRules#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#parent ComputeFirewallPolicyWithRules#parent}
   */
   readonly parent: string;
   /**
   * A textual name of the security policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#short_name ComputeFirewallPolicyWithRules#short_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#short_name ComputeFirewallPolicyWithRules#short_name}
   */
   readonly shortName: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#rule ComputeFirewallPolicyWithRules#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#rule ComputeFirewallPolicyWithRules#rule}
   */
   readonly rule: ComputeFirewallPolicyWithRulesRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#timeouts ComputeFirewallPolicyWithRules#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#timeouts ComputeFirewallPolicyWithRules#timeouts}
   */
   readonly timeouts?: ComputeFirewallPolicyWithRulesTimeouts;
 }
@@ -129,6 +129,86 @@ export class ComputeFirewallPolicyWithRulesPredefinedRulesMatchLayer4ConfigList 
   */
   public get(index: number): ComputeFirewallPolicyWithRulesPredefinedRulesMatchLayer4ConfigOutputReference {
     return new ComputeFirewallPolicyWithRulesPredefinedRulesMatchLayer4ConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTag {
+}
+
+export function computeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTagToTerraform(struct?: ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function computeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTagToHclTerraform(struct?: ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTag | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTag | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+}
+
+export class ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTagList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTagOutputReference {
+    return new ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface ComputeFirewallPolicyWithRulesPredefinedRulesMatch {
@@ -233,6 +313,12 @@ export class ComputeFirewallPolicyWithRulesPredefinedRulesMatchOutputReference e
     return this.getListAttribute('src_region_codes');
   }
 
+  // src_secure_tag - computed: true, optional: false, required: false
+  private _srcSecureTag = new ComputeFirewallPolicyWithRulesPredefinedRulesMatchSrcSecureTagList(this, "src_secure_tag", false);
+  public get srcSecureTag() {
+    return this._srcSecureTag;
+  }
+
   // src_threat_intelligences - computed: true, optional: false, required: false
   public get srcThreatIntelligences() {
     return this.getListAttribute('src_threat_intelligences');
@@ -255,6 +341,86 @@ export class ComputeFirewallPolicyWithRulesPredefinedRulesMatchList extends cdkt
   */
   public get(index: number): ComputeFirewallPolicyWithRulesPredefinedRulesMatchOutputReference {
     return new ComputeFirewallPolicyWithRulesPredefinedRulesMatchOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTag {
+}
+
+export function computeFirewallPolicyWithRulesPredefinedRulesTargetSecureTagToTerraform(struct?: ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function computeFirewallPolicyWithRulesPredefinedRulesTargetSecureTagToHclTerraform(struct?: ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTag | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTag | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+}
+
+export class ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTagList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTagOutputReference {
+    return new ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface ComputeFirewallPolicyWithRulesPredefinedRules {
@@ -359,6 +525,12 @@ export class ComputeFirewallPolicyWithRulesPredefinedRulesOutputReference extend
     return this.getListAttribute('target_resources');
   }
 
+  // target_secure_tag - computed: true, optional: false, required: false
+  private _targetSecureTag = new ComputeFirewallPolicyWithRulesPredefinedRulesTargetSecureTagList(this, "target_secure_tag", false);
+  public get targetSecureTag() {
+    return this._targetSecureTag;
+  }
+
   // target_service_accounts - computed: true, optional: false, required: false
   public get targetServiceAccounts() {
     return this.getListAttribute('target_service_accounts');
@@ -396,7 +568,7 @@ export interface ComputeFirewallPolicyWithRulesRuleMatchLayer4Config {
   * known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp),
   * or the IP protocol number.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#ip_protocol ComputeFirewallPolicyWithRules#ip_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#ip_protocol ComputeFirewallPolicyWithRules#ip_protocol}
   */
   readonly ipProtocol: string;
   /**
@@ -407,7 +579,7 @@ export interface ComputeFirewallPolicyWithRulesRuleMatchLayer4Config {
   * Example inputs include: ["22"], ["80","443"], and
   * ["12345-12349"].
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#ports ComputeFirewallPolicyWithRules#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#ports ComputeFirewallPolicyWithRules#ports}
   */
   readonly ports?: string[];
 }
@@ -547,26 +719,150 @@ export class ComputeFirewallPolicyWithRulesRuleMatchLayer4ConfigList extends cdk
     return new ComputeFirewallPolicyWithRulesRuleMatchLayer4ConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTag {
+  /**
+  * Name of the secure tag, created with TagManager's TagValue API.
+  * @pattern tagValues/[0-9]+
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#name ComputeFirewallPolicyWithRules#name}
+  */
+  readonly name?: string;
+}
+
+export function computeFirewallPolicyWithRulesRuleMatchSrcSecureTagToTerraform(struct?: ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function computeFirewallPolicyWithRulesRuleMatchSrcSecureTagToHclTerraform(struct?: ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTag | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTag | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+}
+
+export class ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTagList extends cdktf.ComplexList {
+  public internalValue? : ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTag[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTagOutputReference {
+    return new ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeFirewallPolicyWithRulesRuleMatch {
   /**
   * Address groups which should be matched against the traffic destination.
   * Maximum number of destination address groups is 10.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#dest_address_groups ComputeFirewallPolicyWithRules#dest_address_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#dest_address_groups ComputeFirewallPolicyWithRules#dest_address_groups}
   */
   readonly destAddressGroups?: string[];
   /**
   * Fully Qualified Domain Name (FQDN) which should be matched against
   * traffic destination. Maximum number of destination fqdn allowed is 100.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#dest_fqdns ComputeFirewallPolicyWithRules#dest_fqdns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#dest_fqdns ComputeFirewallPolicyWithRules#dest_fqdns}
   */
   readonly destFqdns?: string[];
   /**
   * Destination IP address range in CIDR format. Required for
   * EGRESS rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#dest_ip_ranges ComputeFirewallPolicyWithRules#dest_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#dest_ip_ranges ComputeFirewallPolicyWithRules#dest_ip_ranges}
   */
   readonly destIpRanges?: string[];
   /**
@@ -575,35 +871,35 @@ export interface ComputeFirewallPolicyWithRulesRuleMatch {
   * ISO 3166 alpha-2 country codes. ex."US"
   * Maximum number of destination region codes allowed is 5000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#dest_region_codes ComputeFirewallPolicyWithRules#dest_region_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#dest_region_codes ComputeFirewallPolicyWithRules#dest_region_codes}
   */
   readonly destRegionCodes?: string[];
   /**
   * Names of Network Threat Intelligence lists.
   * The IPs in these lists will be matched against traffic destination.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#dest_threat_intelligences ComputeFirewallPolicyWithRules#dest_threat_intelligences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#dest_threat_intelligences ComputeFirewallPolicyWithRules#dest_threat_intelligences}
   */
   readonly destThreatIntelligences?: string[];
   /**
   * Address groups which should be matched against the traffic source.
   * Maximum number of source address groups is 10.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#src_address_groups ComputeFirewallPolicyWithRules#src_address_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#src_address_groups ComputeFirewallPolicyWithRules#src_address_groups}
   */
   readonly srcAddressGroups?: string[];
   /**
   * Fully Qualified Domain Name (FQDN) which should be matched against
   * traffic source. Maximum number of source fqdn allowed is 100.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#src_fqdns ComputeFirewallPolicyWithRules#src_fqdns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#src_fqdns ComputeFirewallPolicyWithRules#src_fqdns}
   */
   readonly srcFqdns?: string[];
   /**
   * Source IP address range in CIDR format. Required for
   * INGRESS rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#src_ip_ranges ComputeFirewallPolicyWithRules#src_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#src_ip_ranges ComputeFirewallPolicyWithRules#src_ip_ranges}
   */
   readonly srcIpRanges?: string[];
   /**
@@ -612,22 +908,28 @@ export interface ComputeFirewallPolicyWithRulesRuleMatch {
   * ISO 3166 alpha-2 country codes. ex."US"
   * Maximum number of source region codes allowed is 5000.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#src_region_codes ComputeFirewallPolicyWithRules#src_region_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#src_region_codes ComputeFirewallPolicyWithRules#src_region_codes}
   */
   readonly srcRegionCodes?: string[];
   /**
   * Names of Network Threat Intelligence lists.
   * The IPs in these lists will be matched against traffic source.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#src_threat_intelligences ComputeFirewallPolicyWithRules#src_threat_intelligences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#src_threat_intelligences ComputeFirewallPolicyWithRules#src_threat_intelligences}
   */
   readonly srcThreatIntelligences?: string[];
   /**
   * layer4_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#layer4_config ComputeFirewallPolicyWithRules#layer4_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#layer4_config ComputeFirewallPolicyWithRules#layer4_config}
   */
   readonly layer4Config: ComputeFirewallPolicyWithRulesRuleMatchLayer4Config[] | cdktf.IResolvable;
+  /**
+  * src_secure_tag block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#src_secure_tag ComputeFirewallPolicyWithRules#src_secure_tag}
+  */
+  readonly srcSecureTag?: ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTag[] | cdktf.IResolvable;
 }
 
 export function computeFirewallPolicyWithRulesRuleMatchToTerraform(struct?: ComputeFirewallPolicyWithRulesRuleMatchOutputReference | ComputeFirewallPolicyWithRulesRuleMatch): any {
@@ -647,6 +949,7 @@ export function computeFirewallPolicyWithRulesRuleMatchToTerraform(struct?: Comp
     src_region_codes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.srcRegionCodes),
     src_threat_intelligences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.srcThreatIntelligences),
     layer4_config: cdktf.listMapper(computeFirewallPolicyWithRulesRuleMatchLayer4ConfigToTerraform, true)(struct!.layer4Config),
+    src_secure_tag: cdktf.listMapper(computeFirewallPolicyWithRulesRuleMatchSrcSecureTagToTerraform, true)(struct!.srcSecureTag),
   }
 }
 
@@ -723,6 +1026,12 @@ export function computeFirewallPolicyWithRulesRuleMatchToHclTerraform(struct?: C
       type: "list",
       storageClassType: "ComputeFirewallPolicyWithRulesRuleMatchLayer4ConfigList",
     },
+    src_secure_tag: {
+      value: cdktf.listMapperHcl(computeFirewallPolicyWithRulesRuleMatchSrcSecureTagToHclTerraform, true)(struct!.srcSecureTag),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTagList",
+    },
   };
 
   // remove undefined attributes
@@ -787,6 +1096,10 @@ export class ComputeFirewallPolicyWithRulesRuleMatchOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.layer4Config = this._layer4Config?.internalValue;
     }
+    if (this._srcSecureTag?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.srcSecureTag = this._srcSecureTag?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -804,6 +1117,7 @@ export class ComputeFirewallPolicyWithRulesRuleMatchOutputReference extends cdkt
       this._srcRegionCodes = undefined;
       this._srcThreatIntelligences = undefined;
       this._layer4Config.internalValue = undefined;
+      this._srcSecureTag.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -818,6 +1132,7 @@ export class ComputeFirewallPolicyWithRulesRuleMatchOutputReference extends cdkt
       this._srcRegionCodes = value.srcRegionCodes;
       this._srcThreatIntelligences = value.srcThreatIntelligences;
       this._layer4Config.internalValue = value.layer4Config;
+      this._srcSecureTag.internalValue = value.srcSecureTag;
     }
   }
 
@@ -993,25 +1308,165 @@ export class ComputeFirewallPolicyWithRulesRuleMatchOutputReference extends cdkt
   public get layer4ConfigInput() {
     return this._layer4Config.internalValue;
   }
+
+  // src_secure_tag - computed: false, optional: true, required: false
+  private _srcSecureTag = new ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTagList(this, "src_secure_tag", false);
+  public get srcSecureTag() {
+    return this._srcSecureTag;
+  }
+  public putSrcSecureTag(value: ComputeFirewallPolicyWithRulesRuleMatchSrcSecureTag[] | cdktf.IResolvable) {
+    this._srcSecureTag.internalValue = value;
+  }
+  public resetSrcSecureTag() {
+    this._srcSecureTag.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get srcSecureTagInput() {
+    return this._srcSecureTag.internalValue;
+  }
+}
+export interface ComputeFirewallPolicyWithRulesRuleTargetSecureTag {
+  /**
+  * Name of the secure tag, created with TagManager's TagValue API.
+  * @pattern tagValues/[0-9]+
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#name ComputeFirewallPolicyWithRules#name}
+  */
+  readonly name?: string;
+}
+
+export function computeFirewallPolicyWithRulesRuleTargetSecureTagToTerraform(struct?: ComputeFirewallPolicyWithRulesRuleTargetSecureTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function computeFirewallPolicyWithRulesRuleTargetSecureTagToHclTerraform(struct?: ComputeFirewallPolicyWithRulesRuleTargetSecureTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ComputeFirewallPolicyWithRulesRuleTargetSecureTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeFirewallPolicyWithRulesRuleTargetSecureTag | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeFirewallPolicyWithRulesRuleTargetSecureTag | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+}
+
+export class ComputeFirewallPolicyWithRulesRuleTargetSecureTagList extends cdktf.ComplexList {
+  public internalValue? : ComputeFirewallPolicyWithRulesRuleTargetSecureTag[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeFirewallPolicyWithRulesRuleTargetSecureTagOutputReference {
+    return new ComputeFirewallPolicyWithRulesRuleTargetSecureTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface ComputeFirewallPolicyWithRulesRule {
   /**
   * The Action to perform when the client connection triggers the rule. Can currently be either
   * "allow", "deny", "apply_security_profile_group" or "goto_next".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#action ComputeFirewallPolicyWithRules#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#action ComputeFirewallPolicyWithRules#action}
   */
   readonly action: string;
   /**
   * A description of the rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#description ComputeFirewallPolicyWithRules#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#description ComputeFirewallPolicyWithRules#description}
   */
   readonly description?: string;
   /**
   * The direction in which this rule applies. If unspecified an INGRESS rule is created. Possible values: ["INGRESS", "EGRESS"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#direction ComputeFirewallPolicyWithRules#direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#direction ComputeFirewallPolicyWithRules#direction}
   */
   readonly direction?: string;
   /**
@@ -1020,7 +1475,7 @@ export interface ComputeFirewallPolicyWithRulesRule {
   * not exist. If this is unspecified, the firewall policy rule will be
   * enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#disabled ComputeFirewallPolicyWithRules#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#disabled ComputeFirewallPolicyWithRules#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
@@ -1028,7 +1483,7 @@ export interface ComputeFirewallPolicyWithRulesRule {
   * If logging is enabled, logs will be exported to the
   * configured export destination in Stackdriver.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#enable_logging ComputeFirewallPolicyWithRules#enable_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#enable_logging ComputeFirewallPolicyWithRules#enable_logging}
   */
   readonly enableLogging?: boolean | cdktf.IResolvable;
   /**
@@ -1036,14 +1491,14 @@ export interface ComputeFirewallPolicyWithRulesRule {
   * between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
   * highest priority and 2147483647 is the lowest priority.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#priority ComputeFirewallPolicyWithRules#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#priority ComputeFirewallPolicyWithRules#priority}
   */
   readonly priority: number;
   /**
   * An optional name for the rule. This field is not a unique identifier
   * and can be updated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#rule_name ComputeFirewallPolicyWithRules#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#rule_name ComputeFirewallPolicyWithRules#rule_name}
   */
   readonly ruleName?: string;
   /**
@@ -1052,7 +1507,7 @@ export interface ComputeFirewallPolicyWithRulesRule {
   * https://networksecurity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-profile-group
   * Must be specified if action is 'apply_security_profile_group'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#security_profile_group ComputeFirewallPolicyWithRules#security_profile_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#security_profile_group ComputeFirewallPolicyWithRules#security_profile_group}
   */
   readonly securityProfileGroup?: string;
   /**
@@ -1061,29 +1516,35 @@ export interface ComputeFirewallPolicyWithRulesRule {
   * this rule. If this field is left blank, all VMs
   * within the organization will receive the rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#target_resources ComputeFirewallPolicyWithRules#target_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#target_resources ComputeFirewallPolicyWithRules#target_resources}
   */
   readonly targetResources?: string[];
   /**
   * A list of service accounts indicating the sets of
   * instances that are applied with this rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#target_service_accounts ComputeFirewallPolicyWithRules#target_service_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#target_service_accounts ComputeFirewallPolicyWithRules#target_service_accounts}
   */
   readonly targetServiceAccounts?: string[];
   /**
   * Boolean flag indicating if the traffic should be TLS decrypted.
   * It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#tls_inspect ComputeFirewallPolicyWithRules#tls_inspect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#tls_inspect ComputeFirewallPolicyWithRules#tls_inspect}
   */
   readonly tlsInspect?: boolean | cdktf.IResolvable;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#match ComputeFirewallPolicyWithRules#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#match ComputeFirewallPolicyWithRules#match}
   */
   readonly match: ComputeFirewallPolicyWithRulesRuleMatch;
+  /**
+  * target_secure_tag block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#target_secure_tag ComputeFirewallPolicyWithRules#target_secure_tag}
+  */
+  readonly targetSecureTag?: ComputeFirewallPolicyWithRulesRuleTargetSecureTag[] | cdktf.IResolvable;
 }
 
 export function computeFirewallPolicyWithRulesRuleToTerraform(struct?: ComputeFirewallPolicyWithRulesRule | cdktf.IResolvable): any {
@@ -1104,6 +1565,7 @@ export function computeFirewallPolicyWithRulesRuleToTerraform(struct?: ComputeFi
     target_service_accounts: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.targetServiceAccounts),
     tls_inspect: cdktf.booleanToTerraform(struct!.tlsInspect),
     match: computeFirewallPolicyWithRulesRuleMatchToTerraform(struct!.match),
+    target_secure_tag: cdktf.listMapper(computeFirewallPolicyWithRulesRuleTargetSecureTagToTerraform, true)(struct!.targetSecureTag),
   }
 }
 
@@ -1186,6 +1648,12 @@ export function computeFirewallPolicyWithRulesRuleToHclTerraform(struct?: Comput
       type: "list",
       storageClassType: "ComputeFirewallPolicyWithRulesRuleMatchList",
     },
+    target_secure_tag: {
+      value: cdktf.listMapperHcl(computeFirewallPolicyWithRulesRuleTargetSecureTagToHclTerraform, true)(struct!.targetSecureTag),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ComputeFirewallPolicyWithRulesRuleTargetSecureTagList",
+    },
   };
 
   // remove undefined attributes
@@ -1260,6 +1728,10 @@ export class ComputeFirewallPolicyWithRulesRuleOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.match = this._match?.internalValue;
     }
+    if (this._targetSecureTag?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetSecureTag = this._targetSecureTag?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1279,6 +1751,7 @@ export class ComputeFirewallPolicyWithRulesRuleOutputReference extends cdktf.Com
       this._targetServiceAccounts = undefined;
       this._tlsInspect = undefined;
       this._match.internalValue = undefined;
+      this._targetSecureTag.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -1299,6 +1772,7 @@ export class ComputeFirewallPolicyWithRulesRuleOutputReference extends cdktf.Com
       this._targetServiceAccounts = value.targetServiceAccounts;
       this._tlsInspect = value.tlsInspect;
       this._match.internalValue = value.match;
+      this._targetSecureTag.internalValue = value.targetSecureTag;
     }
   }
 
@@ -1484,6 +1958,22 @@ export class ComputeFirewallPolicyWithRulesRuleOutputReference extends cdktf.Com
   public get matchInput() {
     return this._match.internalValue;
   }
+
+  // target_secure_tag - computed: false, optional: true, required: false
+  private _targetSecureTag = new ComputeFirewallPolicyWithRulesRuleTargetSecureTagList(this, "target_secure_tag", false);
+  public get targetSecureTag() {
+    return this._targetSecureTag;
+  }
+  public putTargetSecureTag(value: ComputeFirewallPolicyWithRulesRuleTargetSecureTag[] | cdktf.IResolvable) {
+    this._targetSecureTag.internalValue = value;
+  }
+  public resetTargetSecureTag() {
+    this._targetSecureTag.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetSecureTagInput() {
+    return this._targetSecureTag.internalValue;
+  }
 }
 
 export class ComputeFirewallPolicyWithRulesRuleList extends cdktf.ComplexList {
@@ -1507,15 +1997,15 @@ export class ComputeFirewallPolicyWithRulesRuleList extends cdktf.ComplexList {
 }
 export interface ComputeFirewallPolicyWithRulesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#create ComputeFirewallPolicyWithRules#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#create ComputeFirewallPolicyWithRules#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#delete ComputeFirewallPolicyWithRules#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#delete ComputeFirewallPolicyWithRules#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#update ComputeFirewallPolicyWithRules#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#update ComputeFirewallPolicyWithRules#update}
   */
   readonly update?: string;
 }
@@ -1667,7 +2157,7 @@ export class ComputeFirewallPolicyWithRulesTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules google_compute_firewall_policy_with_rules}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules google_compute_firewall_policy_with_rules}
 */
 export class ComputeFirewallPolicyWithRules extends cdktf.TerraformResource {
 
@@ -1683,7 +2173,7 @@ export class ComputeFirewallPolicyWithRules extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ComputeFirewallPolicyWithRules resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ComputeFirewallPolicyWithRules to import
-  * @param importFromId The id of the existing ComputeFirewallPolicyWithRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ComputeFirewallPolicyWithRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ComputeFirewallPolicyWithRules to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1695,7 +2185,7 @@ export class ComputeFirewallPolicyWithRules extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/compute_firewall_policy_with_rules google_compute_firewall_policy_with_rules} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/compute_firewall_policy_with_rules google_compute_firewall_policy_with_rules} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1706,7 +2196,7 @@ export class ComputeFirewallPolicyWithRules extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_firewall_policy_with_rules',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.44.0',
+        providerVersion: '6.45.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
