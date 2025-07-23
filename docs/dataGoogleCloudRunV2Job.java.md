@@ -4,7 +4,7 @@
 
 ### DataGoogleCloudRunV2Job <a name="DataGoogleCloudRunV2Job" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job google_cloud_run_v2_job}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job google_cloud_run_v2_job}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer"></a>
 
@@ -42,9 +42,9 @@ DataGoogleCloudRunV2Job.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Name of the Job. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | The location of the cloud run job. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2Job.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}. |
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 Name of the Job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#name DataGoogleCloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#name DataGoogleCloudRunV2Job#name}
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -135,7 +135,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The location of the cloud run job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#location DataGoogleCloudRunV2Job#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#location DataGoogleCloudRunV2Job#location}
 
 ---
 
@@ -143,7 +143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}.
 
 ---
 
@@ -487,7 +487,7 @@ The construct id used in the generated config for the DataGoogleCloudRunV2Job to
 
 The id of the existing DataGoogleCloudRunV2Job that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1096,9 +1096,9 @@ DataGoogleCloudRunV2JobConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobConfig.property.name">name</a></code> | <code>java.lang.String</code> | Name of the Job. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobConfig.property.location">location</a></code> | <code>java.lang.String</code> | The location of the cloud run job. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}. |
 
 ---
 
@@ -1182,7 +1182,7 @@ public java.lang.String getName();
 
 Name of the Job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#name DataGoogleCloudRunV2Job#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#name DataGoogleCloudRunV2Job#name}
 
 ---
 
@@ -1194,7 +1194,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#id DataGoogleCloudRunV2Job#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1211,7 +1211,7 @@ public java.lang.String getLocation();
 
 The location of the cloud run job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#location DataGoogleCloudRunV2Job#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#location DataGoogleCloudRunV2Job#location}
 
 ---
 
@@ -1223,7 +1223,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/cloud_run_v2_job#project DataGoogleCloudRunV2Job#project}.
 
 ---
 
@@ -1403,6 +1403,18 @@ DataGoogleCloudRunV2JobTemplateTemplateContainersStartupProbeTcpSocket.builder()
 import com.hashicorp.cdktf.providers.google.data_google_cloud_run_v2_job.DataGoogleCloudRunV2JobTemplateTemplateContainersVolumeMounts;
 
 DataGoogleCloudRunV2JobTemplateTemplateContainersVolumeMounts.builder()
+    .build();
+```
+
+
+### DataGoogleCloudRunV2JobTemplateTemplateNodeSelector <a name="DataGoogleCloudRunV2JobTemplateTemplateNodeSelector" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelector"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelector.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_cloud_run_v2_job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelector;
+
+DataGoogleCloudRunV2JobTemplateTemplateNodeSelector.builder()
     .build();
 ```
 
@@ -8950,6 +8962,433 @@ public java.lang.String getFqn();
 ---
 
 
+### DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList <a name="DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_cloud_run_v2_job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList;
+
+new DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Boolean wrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.get"></a>
+
+```java
+public DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference get(java.lang.Number index)
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.get.parameter.index"></a>
+
+- *Type:* java.lang.Number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+
+### DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference <a name="DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.data_google_cloud_run_v2_job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference;
+
+new DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute, java.lang.Number complexObjectIndex, java.lang.Boolean complexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>java.lang.Number</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>java.lang.Boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* java.lang.Number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* java.lang.Boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.property.accelerator">accelerator</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelector">DataGoogleCloudRunV2JobTemplateTemplateNodeSelector</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `accelerator`<sup>Required</sup> <a name="accelerator" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.property.accelerator"></a>
+
+```java
+public java.lang.String getAccelerator();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorOutputReference.property.internalValue"></a>
+
+```java
+public DataGoogleCloudRunV2JobTemplateTemplateNodeSelector getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelector">DataGoogleCloudRunV2JobTemplateTemplateNodeSelector</a>
+
+---
+
+
 ### DataGoogleCloudRunV2JobTemplateTemplateOutputReference <a name="DataGoogleCloudRunV2JobTemplateTemplateOutputReference" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.Initializer"></a>
@@ -9182,6 +9621,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.property.encryptionKey">encryptionKey</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.property.executionEnvironment">executionEnvironment</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.property.maxRetries">maxRetries</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.property.nodeSelector">nodeSelector</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList">DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.property.serviceAccount">serviceAccount</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.property.timeout">timeout</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.property.volumes">volumes</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateVolumesList">DataGoogleCloudRunV2JobTemplateTemplateVolumesList</a></code> | *No description.* |
@@ -9251,6 +9691,16 @@ public java.lang.Number getMaxRetries();
 ```
 
 - *Type:* java.lang.Number
+
+---
+
+##### `nodeSelector`<sup>Required</sup> <a name="nodeSelector" id="@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateOutputReference.property.nodeSelector"></a>
+
+```java
+public DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList getNodeSelector();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleCloudRunV2Job.DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList">DataGoogleCloudRunV2JobTemplateTemplateNodeSelectorList</a>
 
 ---
 

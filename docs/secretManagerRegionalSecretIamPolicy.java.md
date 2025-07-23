@@ -4,7 +4,7 @@
 
 ### SecretManagerRegionalSecretIamPolicy <a name="SecretManagerRegionalSecretIamPolicy" id="@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy google_secret_manager_regional_secret_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy google_secret_manager_regional_secret_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer"></a>
 
@@ -42,11 +42,11 @@ SecretManagerRegionalSecretIamPolicy.Builder.create(Construct scope, java.lang.S
 | <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#policy_data SecretManagerRegionalSecretIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.secretId">secretId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#secret_id SecretManagerRegionalSecretIamPolicy#secret_id}. |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#id SecretManagerRegionalSecretIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#location SecretManagerRegionalSecretIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#project SecretManagerRegionalSecretIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#policy_data SecretManagerRegionalSecretIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.secretId">secretId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#secret_id SecretManagerRegionalSecretIamPolicy#secret_id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#id SecretManagerRegionalSecretIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#location SecretManagerRegionalSecretIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicy.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#project SecretManagerRegionalSecretIamPolicy#project}. |
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#policy_data SecretManagerRegionalSecretIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#policy_data SecretManagerRegionalSecretIamPolicy#policy_data}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#secret_id SecretManagerRegionalSecretIamPolicy#secret_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#secret_id SecretManagerRegionalSecretIamPolicy#secret_id}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#id SecretManagerRegionalSecretIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#id SecretManagerRegionalSecretIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#location SecretManagerRegionalSecretIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#location SecretManagerRegionalSecretIamPolicy#location}.
 
 ---
 
@@ -149,7 +149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#project SecretManagerRegionalSecretIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#project SecretManagerRegionalSecretIamPolicy#project}.
 
 ---
 
@@ -597,7 +597,7 @@ The construct id used in the generated config for the SecretManagerRegionalSecre
 
 The id of the existing SecretManagerRegionalSecretIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -951,11 +951,11 @@ SecretManagerRegionalSecretIamPolicyConfig.builder()
 | <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#policy_data SecretManagerRegionalSecretIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.secretId">secretId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#secret_id SecretManagerRegionalSecretIamPolicy#secret_id}. |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#id SecretManagerRegionalSecretIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#location SecretManagerRegionalSecretIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#project SecretManagerRegionalSecretIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#policy_data SecretManagerRegionalSecretIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.secretId">secretId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#secret_id SecretManagerRegionalSecretIamPolicy#secret_id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#id SecretManagerRegionalSecretIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#location SecretManagerRegionalSecretIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.secretManagerRegionalSecretIamPolicy.SecretManagerRegionalSecretIamPolicyConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#project SecretManagerRegionalSecretIamPolicy#project}. |
 
 ---
 
@@ -1037,7 +1037,7 @@ public java.lang.String getPolicyData();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#policy_data SecretManagerRegionalSecretIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#policy_data SecretManagerRegionalSecretIamPolicy#policy_data}.
 
 ---
 
@@ -1049,7 +1049,7 @@ public java.lang.String getSecretId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#secret_id SecretManagerRegionalSecretIamPolicy#secret_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#secret_id SecretManagerRegionalSecretIamPolicy#secret_id}.
 
 ---
 
@@ -1061,7 +1061,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#id SecretManagerRegionalSecretIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#id SecretManagerRegionalSecretIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1076,7 +1076,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#location SecretManagerRegionalSecretIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#location SecretManagerRegionalSecretIamPolicy#location}.
 
 ---
 
@@ -1088,7 +1088,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/secret_manager_regional_secret_iam_policy#project SecretManagerRegionalSecretIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/secret_manager_regional_secret_iam_policy#project SecretManagerRegionalSecretIamPolicy#project}.
 
 ---
 

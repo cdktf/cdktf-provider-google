@@ -150,6 +150,7 @@ Object.defineProperty(exports, 'bigtableInstanceIamMember', { get: function () {
 Object.defineProperty(exports, 'bigtableInstanceIamPolicy', { get: function () { return require('./bigtable-instance-iam-policy'); } });
 Object.defineProperty(exports, 'bigtableLogicalView', { get: function () { return require('./bigtable-logical-view'); } });
 Object.defineProperty(exports, 'bigtableMaterializedView', { get: function () { return require('./bigtable-materialized-view'); } });
+Object.defineProperty(exports, 'bigtableSchemaBundle', { get: function () { return require('./bigtable-schema-bundle'); } });
 Object.defineProperty(exports, 'bigtableTable', { get: function () { return require('./bigtable-table'); } });
 Object.defineProperty(exports, 'bigtableTableIamBinding', { get: function () { return require('./bigtable-table-iam-binding'); } });
 Object.defineProperty(exports, 'bigtableTableIamMember', { get: function () { return require('./bigtable-table-iam-member'); } });
@@ -524,6 +525,7 @@ Object.defineProperty(exports, 'dialogflowCxEntityType', { get: function () { re
 Object.defineProperty(exports, 'dialogflowCxEnvironment', { get: function () { return require('./dialogflow-cx-environment'); } });
 Object.defineProperty(exports, 'dialogflowCxFlow', { get: function () { return require('./dialogflow-cx-flow'); } });
 Object.defineProperty(exports, 'dialogflowCxGenerativeSettings', { get: function () { return require('./dialogflow-cx-generative-settings'); } });
+Object.defineProperty(exports, 'dialogflowCxGenerator', { get: function () { return require('./dialogflow-cx-generator'); } });
 Object.defineProperty(exports, 'dialogflowCxIntent', { get: function () { return require('./dialogflow-cx-intent'); } });
 Object.defineProperty(exports, 'dialogflowCxPage', { get: function () { return require('./dialogflow-cx-page'); } });
 Object.defineProperty(exports, 'dialogflowCxSecuritySettings', { get: function () { return require('./dialogflow-cx-security-settings'); } });
@@ -786,6 +788,7 @@ Object.defineProperty(exports, 'memorystoreInstanceDesiredUserCreatedEndpoints',
 Object.defineProperty(exports, 'migrationCenterGroup', { get: function () { return require('./migration-center-group'); } });
 Object.defineProperty(exports, 'migrationCenterPreferenceSet', { get: function () { return require('./migration-center-preference-set'); } });
 Object.defineProperty(exports, 'mlEngineModel', { get: function () { return require('./ml-engine-model'); } });
+Object.defineProperty(exports, 'modelArmorFloorsetting', { get: function () { return require('./model-armor-floorsetting'); } });
 Object.defineProperty(exports, 'modelArmorTemplate', { get: function () { return require('./model-armor-template'); } });
 Object.defineProperty(exports, 'monitoringAlertPolicy', { get: function () { return require('./monitoring-alert-policy'); } });
 Object.defineProperty(exports, 'monitoringCustomService', { get: function () { return require('./monitoring-custom-service'); } });
@@ -1057,6 +1060,7 @@ Object.defineProperty(exports, 'transcoderJobTemplate', { get: function () { ret
 Object.defineProperty(exports, 'vertexAiDataset', { get: function () { return require('./vertex-ai-dataset'); } });
 Object.defineProperty(exports, 'vertexAiDeploymentResourcePool', { get: function () { return require('./vertex-ai-deployment-resource-pool'); } });
 Object.defineProperty(exports, 'vertexAiEndpoint', { get: function () { return require('./vertex-ai-endpoint'); } });
+Object.defineProperty(exports, 'vertexAiEndpointWithModelGardenDeployment', { get: function () { return require('./vertex-ai-endpoint-with-model-garden-deployment'); } });
 Object.defineProperty(exports, 'vertexAiFeatureGroup', { get: function () { return require('./vertex-ai-feature-group'); } });
 Object.defineProperty(exports, 'vertexAiFeatureGroupFeature', { get: function () { return require('./vertex-ai-feature-group-feature'); } });
 Object.defineProperty(exports, 'vertexAiFeatureOnlineStore', { get: function () { return require('./vertex-ai-feature-online-store'); } });

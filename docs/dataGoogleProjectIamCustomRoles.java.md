@@ -4,7 +4,7 @@
 
 ### DataGoogleProjectIamCustomRoles <a name="DataGoogleProjectIamCustomRoles" id="@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles google_project_iam_custom_roles}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles google_project_iam_custom_roles}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer"></a>
 
@@ -42,10 +42,10 @@ DataGoogleProjectIamCustomRoles.Builder.create(Construct scope, java.lang.String
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#id DataGoogleProjectIamCustomRoles#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#project DataGoogleProjectIamCustomRoles#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.showDeleted">showDeleted</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#show_deleted DataGoogleProjectIamCustomRoles#show_deleted}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.view">view</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#view DataGoogleProjectIamCustomRoles#view}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#id DataGoogleProjectIamCustomRoles#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#project DataGoogleProjectIamCustomRoles#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.showDeleted">showDeleted</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#show_deleted DataGoogleProjectIamCustomRoles#show_deleted}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRoles.Initializer.parameter.view">view</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#view DataGoogleProjectIamCustomRoles#view}. |
 
 ---
 
@@ -113,7 +113,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#id DataGoogleProjectIamCustomRoles#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#id DataGoogleProjectIamCustomRoles#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -124,7 +124,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#project DataGoogleProjectIamCustomRoles#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#project DataGoogleProjectIamCustomRoles#project}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#show_deleted DataGoogleProjectIamCustomRoles#show_deleted}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#show_deleted DataGoogleProjectIamCustomRoles#show_deleted}.
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#view DataGoogleProjectIamCustomRoles#view}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#view DataGoogleProjectIamCustomRoles#view}.
 
 ---
 
@@ -491,7 +491,7 @@ The construct id used in the generated config for the DataGoogleProjectIamCustom
 
 The id of the existing DataGoogleProjectIamCustomRoles that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -801,10 +801,10 @@ DataGoogleProjectIamCustomRolesConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#id DataGoogleProjectIamCustomRoles#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#project DataGoogleProjectIamCustomRoles#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.showDeleted">showDeleted</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#show_deleted DataGoogleProjectIamCustomRoles#show_deleted}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.view">view</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#view DataGoogleProjectIamCustomRoles#view}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#id DataGoogleProjectIamCustomRoles#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#project DataGoogleProjectIamCustomRoles#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.showDeleted">showDeleted</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#show_deleted DataGoogleProjectIamCustomRoles#show_deleted}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectIamCustomRoles.DataGoogleProjectIamCustomRolesConfig.property.view">view</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#view DataGoogleProjectIamCustomRoles#view}. |
 
 ---
 
@@ -886,7 +886,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#id DataGoogleProjectIamCustomRoles#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#id DataGoogleProjectIamCustomRoles#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -901,7 +901,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#project DataGoogleProjectIamCustomRoles#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#project DataGoogleProjectIamCustomRoles#project}.
 
 ---
 
@@ -913,7 +913,7 @@ public java.lang.Object getShowDeleted();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#show_deleted DataGoogleProjectIamCustomRoles#show_deleted}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#show_deleted DataGoogleProjectIamCustomRoles#show_deleted}.
 
 ---
 
@@ -925,7 +925,7 @@ public java.lang.String getView();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/project_iam_custom_roles#view DataGoogleProjectIamCustomRoles#view}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/project_iam_custom_roles#view DataGoogleProjectIamCustomRoles#view}.
 
 ---
 

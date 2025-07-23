@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template
+// https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataprocSessionTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#id DataprocSessionTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#id DataprocSessionTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,54 +26,54 @@ export interface DataprocSessionTemplateConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#labels DataprocSessionTemplate#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#labels DataprocSessionTemplate#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location in which the session template will be created in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#location DataprocSessionTemplate#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#location DataprocSessionTemplate#location}
   */
   readonly location?: string;
   /**
   * The resource name of the session template in the following format:
   * projects/{project}/locations/{location}/sessionTemplates/{template_id}
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#name DataprocSessionTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#name DataprocSessionTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#project DataprocSessionTemplate#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#project DataprocSessionTemplate#project}
   */
   readonly project?: string;
   /**
   * environment_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#environment_config DataprocSessionTemplate#environment_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#environment_config DataprocSessionTemplate#environment_config}
   */
   readonly environmentConfig?: DataprocSessionTemplateEnvironmentConfig;
   /**
   * jupyter_session block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#jupyter_session DataprocSessionTemplate#jupyter_session}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#jupyter_session DataprocSessionTemplate#jupyter_session}
   */
   readonly jupyterSession?: DataprocSessionTemplateJupyterSession;
   /**
   * runtime_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#runtime_config DataprocSessionTemplate#runtime_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#runtime_config DataprocSessionTemplate#runtime_config}
   */
   readonly runtimeConfig?: DataprocSessionTemplateRuntimeConfig;
   /**
   * spark_connect_session block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#spark_connect_session DataprocSessionTemplate#spark_connect_session}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#spark_connect_session DataprocSessionTemplate#spark_connect_session}
   */
   readonly sparkConnectSession?: DataprocSessionTemplateSparkConnectSession;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#timeouts DataprocSessionTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#timeouts DataprocSessionTemplate#timeouts}
   */
   readonly timeouts?: DataprocSessionTemplateTimeouts;
 }
@@ -81,19 +81,19 @@ export interface DataprocSessionTemplateEnvironmentConfigExecutionConfig {
   /**
   * The Cloud KMS key to use for encryption.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#kms_key DataprocSessionTemplate#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#kms_key DataprocSessionTemplate#kms_key}
   */
   readonly kmsKey?: string;
   /**
   * Tags used for network traffic control.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#network_tags DataprocSessionTemplate#network_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#network_tags DataprocSessionTemplate#network_tags}
   */
   readonly networkTags?: string[];
   /**
   * Service account that used to execute workload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#service_account DataprocSessionTemplate#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#service_account DataprocSessionTemplate#service_account}
   */
   readonly serviceAccount?: string;
   /**
@@ -103,13 +103,13 @@ export interface DataprocSessionTemplateEnvironmentConfigExecutionConfig {
   * and then create and manage project-level, per-location staging and temporary buckets.
   * This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#staging_bucket DataprocSessionTemplate#staging_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#staging_bucket DataprocSessionTemplate#staging_bucket}
   */
   readonly stagingBucket?: string;
   /**
   * Subnetwork configuration for workload execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#subnetwork_uri DataprocSessionTemplate#subnetwork_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#subnetwork_uri DataprocSessionTemplate#subnetwork_uri}
   */
   readonly subnetworkUri?: string;
   /**
@@ -122,7 +122,7 @@ export interface DataprocSessionTemplateEnvironmentConfigExecutionConfig {
   * the conditions are treated as OR conditions: the workload will be terminated when it has been idle for idleTtl or
   * when ttl has been exceeded, whichever occurs first.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#ttl DataprocSessionTemplate#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#ttl DataprocSessionTemplate#ttl}
   */
   readonly ttl?: string;
 }
@@ -353,7 +353,7 @@ export interface DataprocSessionTemplateEnvironmentConfigPeripheralsConfigSparkH
   /**
   * Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#dataproc_cluster DataprocSessionTemplate#dataproc_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#dataproc_cluster DataprocSessionTemplate#dataproc_cluster}
   */
   readonly dataprocCluster?: string;
 }
@@ -439,13 +439,13 @@ export interface DataprocSessionTemplateEnvironmentConfigPeripheralsConfig {
   /**
   * Resource name of an existing Dataproc Metastore service.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#metastore_service DataprocSessionTemplate#metastore_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#metastore_service DataprocSessionTemplate#metastore_service}
   */
   readonly metastoreService?: string;
   /**
   * spark_history_server_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#spark_history_server_config DataprocSessionTemplate#spark_history_server_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#spark_history_server_config DataprocSessionTemplate#spark_history_server_config}
   */
   readonly sparkHistoryServerConfig?: DataprocSessionTemplateEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig;
 }
@@ -560,13 +560,13 @@ export interface DataprocSessionTemplateEnvironmentConfig {
   /**
   * execution_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#execution_config DataprocSessionTemplate#execution_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#execution_config DataprocSessionTemplate#execution_config}
   */
   readonly executionConfig?: DataprocSessionTemplateEnvironmentConfigExecutionConfig;
   /**
   * peripherals_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#peripherals_config DataprocSessionTemplate#peripherals_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#peripherals_config DataprocSessionTemplate#peripherals_config}
   */
   readonly peripheralsConfig?: DataprocSessionTemplateEnvironmentConfigPeripheralsConfig;
 }
@@ -681,13 +681,13 @@ export interface DataprocSessionTemplateJupyterSession {
   /**
   * Display name, shown in the Jupyter kernelspec card.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#display_name DataprocSessionTemplate#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#display_name DataprocSessionTemplate#display_name}
   */
   readonly displayName?: string;
   /**
   * Kernel to be used with Jupyter interactive session. Possible values: ["PYTHON", "SCALA"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#kernel DataprocSessionTemplate#kernel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#kernel DataprocSessionTemplate#kernel}
   */
   readonly kernel?: string;
 }
@@ -802,19 +802,19 @@ export interface DataprocSessionTemplateRuntimeConfig {
   /**
   * Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#container_image DataprocSessionTemplate#container_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#container_image DataprocSessionTemplate#container_image}
   */
   readonly containerImage?: string;
   /**
   * A mapping of property names to values, which are used to configure workload execution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#properties DataprocSessionTemplate#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#properties DataprocSessionTemplate#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
   * Version of the session runtime.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#version DataprocSessionTemplate#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#version DataprocSessionTemplate#version}
   */
   readonly version?: string;
 }
@@ -1011,15 +1011,15 @@ export class DataprocSessionTemplateSparkConnectSessionOutputReference extends c
 }
 export interface DataprocSessionTemplateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#create DataprocSessionTemplate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#create DataprocSessionTemplate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#delete DataprocSessionTemplate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#delete DataprocSessionTemplate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#update DataprocSessionTemplate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#update DataprocSessionTemplate#update}
   */
   readonly update?: string;
 }
@@ -1171,7 +1171,7 @@ export class DataprocSessionTemplateTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template google_dataproc_session_template}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template google_dataproc_session_template}
 */
 export class DataprocSessionTemplate extends cdktf.TerraformResource {
 
@@ -1187,7 +1187,7 @@ export class DataprocSessionTemplate extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataprocSessionTemplate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataprocSessionTemplate to import
-  * @param importFromId The id of the existing DataprocSessionTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataprocSessionTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataprocSessionTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1199,7 +1199,7 @@ export class DataprocSessionTemplate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/resources/dataproc_session_template google_dataproc_session_template} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_session_template google_dataproc_session_template} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1210,7 +1210,7 @@ export class DataprocSessionTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_session_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.44.0',
+        providerVersion: '6.45.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

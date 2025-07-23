@@ -4,7 +4,7 @@
 
 ### DataGoogleKmsKeyHandle <a name="DataGoogleKmsKeyHandle" id="@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle google_kms_key_handle}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle google_kms_key_handle}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle.Initializer"></a>
 
@@ -41,8 +41,8 @@ dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle(
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle.Initializer.parameter.location">location</a></code> | <code>str</code> | The location for the KeyHandle. A full list of valid locations can be found by running 'gcloud kms locations list'. |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name for the KeyHandle. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#id DataGoogleKmsKeyHandle#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#project DataGoogleKmsKeyHandle#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#id DataGoogleKmsKeyHandle#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandle.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#project DataGoogleKmsKeyHandle#project}. |
 
 ---
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 The location for the KeyHandle. A full list of valid locations can be found by running 'gcloud kms locations list'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#location DataGoogleKmsKeyHandle#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#location DataGoogleKmsKeyHandle#location}
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The resource name for the KeyHandle.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#name DataGoogleKmsKeyHandle#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#name DataGoogleKmsKeyHandle#name}
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#id DataGoogleKmsKeyHandle#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#id DataGoogleKmsKeyHandle#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#project DataGoogleKmsKeyHandle#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#project DataGoogleKmsKeyHandle#project}.
 
 ---
 
@@ -514,7 +514,7 @@ The construct id used in the generated config for the DataGoogleKmsKeyHandle to 
 
 The id of the existing DataGoogleKmsKeyHandle that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -832,8 +832,8 @@ dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandleConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandleConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandleConfig.property.location">location</a></code> | <code>str</code> | The location for the KeyHandle. A full list of valid locations can be found by running 'gcloud kms locations list'. |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandleConfig.property.name">name</a></code> | <code>str</code> | The resource name for the KeyHandle. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandleConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#id DataGoogleKmsKeyHandle#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandleConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#project DataGoogleKmsKeyHandle#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandleConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#id DataGoogleKmsKeyHandle#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyHandle.DataGoogleKmsKeyHandleConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#project DataGoogleKmsKeyHandle#project}. |
 
 ---
 
@@ -917,7 +917,7 @@ location: str
 
 The location for the KeyHandle. A full list of valid locations can be found by running 'gcloud kms locations list'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#location DataGoogleKmsKeyHandle#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#location DataGoogleKmsKeyHandle#location}
 
 ---
 
@@ -931,7 +931,7 @@ name: str
 
 The resource name for the KeyHandle.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#name DataGoogleKmsKeyHandle#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#name DataGoogleKmsKeyHandle#name}
 
 ---
 
@@ -943,7 +943,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#id DataGoogleKmsKeyHandle#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#id DataGoogleKmsKeyHandle#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -958,7 +958,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.44.0/docs/data-sources/kms_key_handle#project DataGoogleKmsKeyHandle#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/data-sources/kms_key_handle#project DataGoogleKmsKeyHandle#project}.
 
 ---
 
