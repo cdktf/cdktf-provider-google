@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config
+// https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface BackupDrServiceConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config#id BackupDrServiceConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config#id BackupDrServiceConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,33 +22,33 @@ export interface BackupDrServiceConfigConfig extends cdktf.TerraformMetaArgument
   /**
   * The location in which the Service config is to be initialized.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config#location BackupDrServiceConfig#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config#location BackupDrServiceConfig#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config#project BackupDrServiceConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config#project BackupDrServiceConfig#project}
   */
   readonly project?: string;
   /**
   * The resource type to which the default service config will be applied.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config#resource_type BackupDrServiceConfig#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config#resource_type BackupDrServiceConfig#resource_type}
   */
   readonly resourceType: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config#timeouts BackupDrServiceConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config#timeouts BackupDrServiceConfig#timeouts}
   */
   readonly timeouts?: BackupDrServiceConfigTimeouts;
 }
 export interface BackupDrServiceConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config#create BackupDrServiceConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config#create BackupDrServiceConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config#delete BackupDrServiceConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config#delete BackupDrServiceConfig#delete}
   */
   readonly delete?: string;
 }
@@ -171,7 +171,7 @@ export class BackupDrServiceConfigTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config google_backup_dr_service_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config google_backup_dr_service_config}
 */
 export class BackupDrServiceConfig extends cdktf.TerraformResource {
 
@@ -187,7 +187,7 @@ export class BackupDrServiceConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BackupDrServiceConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BackupDrServiceConfig to import
-  * @param importFromId The id of the existing BackupDrServiceConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BackupDrServiceConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BackupDrServiceConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -199,7 +199,7 @@ export class BackupDrServiceConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/backup_dr_service_config google_backup_dr_service_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/backup_dr_service_config google_backup_dr_service_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -210,7 +210,7 @@ export class BackupDrServiceConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_backup_dr_service_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.45.0',
+        providerVersion: '6.46.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
