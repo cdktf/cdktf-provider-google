@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source
+// https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,7 +18,7 @@ export interface EventarcGoogleApiSourceConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
   * Please refer to the field 'effective_annotations' for all of the annotations present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#annotations EventarcGoogleApiSource#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#annotations EventarcGoogleApiSource#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
@@ -28,7 +28,7 @@ export interface EventarcGoogleApiSourceConfig extends cdktf.TerraformMetaArgume
   * It must match the pattern
   * 'projects/* /locations/* /keyRings/* /cryptoKeys/*'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#crypto_key_name EventarcGoogleApiSource#crypto_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#crypto_key_name EventarcGoogleApiSource#crypto_key_name}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -38,24 +38,24 @@ export interface EventarcGoogleApiSourceConfig extends cdktf.TerraformMetaArgume
   * It must be point to the full resource name of a MessageBus. Format:
   * "projects/{PROJECT_ID}/locations/{region}/messagesBuses/{MESSAGE_BUS_ID)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#destination EventarcGoogleApiSource#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#destination EventarcGoogleApiSource#destination}
   */
   readonly destination: string;
   /**
   * Resource display name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#display_name EventarcGoogleApiSource#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#display_name EventarcGoogleApiSource#display_name}
   */
   readonly displayName?: string;
   /**
   * The user-provided ID to be assigned to the GoogleApiSource. It should match
   * the format '^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#google_api_source_id EventarcGoogleApiSource#google_api_source_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#google_api_source_id EventarcGoogleApiSource#google_api_source_id}
   */
   readonly googleApiSourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#id EventarcGoogleApiSource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#id EventarcGoogleApiSource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -67,29 +67,29 @@ export interface EventarcGoogleApiSourceConfig extends cdktf.TerraformMetaArgume
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#labels EventarcGoogleApiSource#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#labels EventarcGoogleApiSource#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#location EventarcGoogleApiSource#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#location EventarcGoogleApiSource#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#project EventarcGoogleApiSource#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#project EventarcGoogleApiSource#project}
   */
   readonly project?: string;
   /**
   * logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#logging_config EventarcGoogleApiSource#logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#logging_config EventarcGoogleApiSource#logging_config}
   */
   readonly loggingConfig?: EventarcGoogleApiSourceLoggingConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#timeouts EventarcGoogleApiSource#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#timeouts EventarcGoogleApiSource#timeouts}
   */
   readonly timeouts?: EventarcGoogleApiSourceTimeouts;
 }
@@ -98,7 +98,7 @@ export interface EventarcGoogleApiSourceLoggingConfig {
   * The minimum severity of logs that will be sent to Stackdriver/Platform
   * Telemetry. Logs at severitiy ≥ this value will be sent, unless it is NONE. Possible values: ["NONE", "DEBUG", "INFO", "NOTICE", "WARNING", "ERROR", "CRITICAL", "ALERT", "EMERGENCY"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#log_severity EventarcGoogleApiSource#log_severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#log_severity EventarcGoogleApiSource#log_severity}
   */
   readonly logSeverity?: string;
 }
@@ -182,15 +182,15 @@ export class EventarcGoogleApiSourceLoggingConfigOutputReference extends cdktf.C
 }
 export interface EventarcGoogleApiSourceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#create EventarcGoogleApiSource#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#create EventarcGoogleApiSource#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#delete EventarcGoogleApiSource#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#delete EventarcGoogleApiSource#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#update EventarcGoogleApiSource#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#update EventarcGoogleApiSource#update}
   */
   readonly update?: string;
 }
@@ -342,7 +342,7 @@ export class EventarcGoogleApiSourceTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source google_eventarc_google_api_source}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source google_eventarc_google_api_source}
 */
 export class EventarcGoogleApiSource extends cdktf.TerraformResource {
 
@@ -358,7 +358,7 @@ export class EventarcGoogleApiSource extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a EventarcGoogleApiSource resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the EventarcGoogleApiSource to import
-  * @param importFromId The id of the existing EventarcGoogleApiSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing EventarcGoogleApiSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the EventarcGoogleApiSource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -370,7 +370,7 @@ export class EventarcGoogleApiSource extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/eventarc_google_api_source google_eventarc_google_api_source} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/eventarc_google_api_source google_eventarc_google_api_source} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -381,7 +381,7 @@ export class EventarcGoogleApiSource extends cdktf.TerraformResource {
       terraformResourceType: 'google_eventarc_google_api_source',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.45.0',
+        providerVersion: '6.46.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

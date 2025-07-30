@@ -4,7 +4,7 @@
 
 ### NotebooksRuntimeIamMember <a name="NotebooksRuntimeIamMember" id="@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member google_notebooks_runtime_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member google_notebooks_runtime_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMember.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the NotebooksRuntimeIamMember 
 
 The id of the existing NotebooksRuntimeIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -882,9 +882,9 @@ const notebooksRuntimeIamMemberCondition: notebooksRuntimeIamMember.NotebooksRun
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#expression NotebooksRuntimeIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#title NotebooksRuntimeIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#description NotebooksRuntimeIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#expression NotebooksRuntimeIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#title NotebooksRuntimeIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#description NotebooksRuntimeIamMember#description}. |
 
 ---
 
@@ -896,7 +896,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#expression NotebooksRuntimeIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#expression NotebooksRuntimeIamMember#expression}.
 
 ---
 
@@ -908,7 +908,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#title NotebooksRuntimeIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#title NotebooksRuntimeIamMember#title}.
 
 ---
 
@@ -920,7 +920,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#description NotebooksRuntimeIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#description NotebooksRuntimeIamMember#description}.
 
 ---
 
@@ -945,13 +945,13 @@ const notebooksRuntimeIamMemberConfig: notebooksRuntimeIamMember.NotebooksRuntim
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#member NotebooksRuntimeIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#role NotebooksRuntimeIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.runtimeName">runtimeName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#runtime_name NotebooksRuntimeIamMember#runtime_name}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#member NotebooksRuntimeIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#role NotebooksRuntimeIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.runtimeName">runtimeName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#runtime_name NotebooksRuntimeIamMember#runtime_name}. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberCondition">NotebooksRuntimeIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#id NotebooksRuntimeIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#location NotebooksRuntimeIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#project NotebooksRuntimeIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#id NotebooksRuntimeIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#location NotebooksRuntimeIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamMember.NotebooksRuntimeIamMemberConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#project NotebooksRuntimeIamMember#project}. |
 
 ---
 
@@ -1033,7 +1033,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#member NotebooksRuntimeIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#member NotebooksRuntimeIamMember#member}.
 
 ---
 
@@ -1045,7 +1045,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#role NotebooksRuntimeIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#role NotebooksRuntimeIamMember#role}.
 
 ---
 
@@ -1057,7 +1057,7 @@ public readonly runtimeName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#runtime_name NotebooksRuntimeIamMember#runtime_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#runtime_name NotebooksRuntimeIamMember#runtime_name}.
 
 ---
 
@@ -1071,7 +1071,7 @@ public readonly condition: NotebooksRuntimeIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#condition NotebooksRuntimeIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#condition NotebooksRuntimeIamMember#condition}
 
 ---
 
@@ -1083,7 +1083,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#id NotebooksRuntimeIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#id NotebooksRuntimeIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1098,7 +1098,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#location NotebooksRuntimeIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#location NotebooksRuntimeIamMember#location}.
 
 ---
 
@@ -1110,7 +1110,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/notebooks_runtime_iam_member#project NotebooksRuntimeIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/notebooks_runtime_iam_member#project NotebooksRuntimeIamMember#project}.
 
 ---
 

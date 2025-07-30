@@ -4,7 +4,7 @@
 
 ### ApihubPlugin <a name="ApihubPlugin" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin google_apihub_plugin}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin google_apihub_plugin}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer"></a>
 
@@ -58,9 +58,9 @@ ApihubPlugin.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | The plugin description. Max length is 2000 characters (Unicode code points). |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.documentation">documentation</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginDocumentation">ApihubPluginDocumentation</a></code> | documentation block. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.hostingService">hostingService</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginHostingService">ApihubPluginHostingService</a></code> | hosting_service block. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#id ApihubPlugin#id}. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#id ApihubPlugin#id}. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.pluginCategory">pluginCategory</a></code> | <code>java.lang.String</code> | Possible values: PLUGIN_CATEGORY_UNSPECIFIED API_GATEWAY API_PRODUCER. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#project ApihubPlugin#project}. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#project ApihubPlugin#project}. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPlugin.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a></code> | timeouts block. |
 
 ---
@@ -131,7 +131,7 @@ Must be unique amongst siblings in the same scope
 
 The display name of the plugin. Max length is 50 characters (Unicode code points).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
 
 ---
 
@@ -141,7 +141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#location ApihubPlugin#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#location ApihubPlugin#location}
 
 ---
 
@@ -164,7 +164,7 @@ of format
 its length is limited to 1000 characters and valid characters are
 /a-z[0-9]-_/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#plugin_id ApihubPlugin#plugin_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#plugin_id ApihubPlugin#plugin_id}
 
 ---
 
@@ -174,7 +174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 actions_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#actions_config ApihubPlugin#actions_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#actions_config ApihubPlugin#actions_config}
 
 ---
 
@@ -184,7 +184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 config_template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#config_template ApihubPlugin#config_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#config_template ApihubPlugin#config_template}
 
 ---
 
@@ -194,7 +194,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The plugin description. Max length is 2000 characters (Unicode code points).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
 
 ---
 
@@ -204,7 +204,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 documentation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#documentation ApihubPlugin#documentation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#documentation ApihubPlugin#documentation}
 
 ---
 
@@ -214,7 +214,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 hosting_service block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#hosting_service ApihubPlugin#hosting_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#hosting_service ApihubPlugin#hosting_service}
 
 ---
 
@@ -222,7 +222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#id ApihubPlugin#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#id ApihubPlugin#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -235,7 +235,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Possible values: PLUGIN_CATEGORY_UNSPECIFIED API_GATEWAY API_PRODUCER.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#plugin_category ApihubPlugin#plugin_category}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#plugin_category ApihubPlugin#plugin_category}
 
 ---
 
@@ -243,7 +243,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#project ApihubPlugin#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#project ApihubPlugin#project}.
 
 ---
 
@@ -253,7 +253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#timeouts ApihubPlugin#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#timeouts ApihubPlugin#timeouts}
 
 ---
 
@@ -808,7 +808,7 @@ The construct id used in the generated config for the ApihubPlugin to import.
 
 The id of the existing ApihubPlugin that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1358,7 +1358,7 @@ public java.lang.String getDescription();
 
 The description of the operation performed by the action.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
 
 ---
 
@@ -1372,7 +1372,7 @@ public java.lang.String getDisplayName();
 
 The display name of the action.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
 
 ---
 
@@ -1386,7 +1386,7 @@ public java.lang.String getId();
 
 The id of the action.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#id ApihubPlugin#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#id ApihubPlugin#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1403,7 +1403,7 @@ public java.lang.String getTriggerMode();
 
 The trigger mode supported by the action. Possible values: TRIGGER_MODE_UNSPECIFIED API_HUB_ON_DEMAND_TRIGGER API_HUB_SCHEDULE_TRIGGER NON_API_HUB_MANAGED.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#trigger_mode ApihubPlugin#trigger_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#trigger_mode ApihubPlugin#trigger_mode}
 
 ---
 
@@ -1461,9 +1461,9 @@ ApihubPluginConfig.builder()
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.description">description</a></code> | <code>java.lang.String</code> | The plugin description. Max length is 2000 characters (Unicode code points). |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.documentation">documentation</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginDocumentation">ApihubPluginDocumentation</a></code> | documentation block. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.hostingService">hostingService</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginHostingService">ApihubPluginHostingService</a></code> | hosting_service block. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#id ApihubPlugin#id}. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#id ApihubPlugin#id}. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.pluginCategory">pluginCategory</a></code> | <code>java.lang.String</code> | Possible values: PLUGIN_CATEGORY_UNSPECIFIED API_GATEWAY API_PRODUCER. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#project ApihubPlugin#project}. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#project ApihubPlugin#project}. |
 | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts">ApihubPluginTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1548,7 +1548,7 @@ public java.lang.String getDisplayName();
 
 The display name of the plugin. Max length is 50 characters (Unicode code points).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
 
 ---
 
@@ -1562,7 +1562,7 @@ public java.lang.String getLocation();
 
 Resource ID segment making up resource 'name'. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#location ApihubPlugin#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#location ApihubPlugin#location}
 
 ---
 
@@ -1589,7 +1589,7 @@ of format
 its length is limited to 1000 characters and valid characters are
 /a-z[0-9]-_/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#plugin_id ApihubPlugin#plugin_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#plugin_id ApihubPlugin#plugin_id}
 
 ---
 
@@ -1603,7 +1603,7 @@ public java.lang.Object getActionsConfig();
 
 actions_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#actions_config ApihubPlugin#actions_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#actions_config ApihubPlugin#actions_config}
 
 ---
 
@@ -1617,7 +1617,7 @@ public ApihubPluginConfigTemplate getConfigTemplate();
 
 config_template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#config_template ApihubPlugin#config_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#config_template ApihubPlugin#config_template}
 
 ---
 
@@ -1631,7 +1631,7 @@ public java.lang.String getDescription();
 
 The plugin description. Max length is 2000 characters (Unicode code points).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
 
 ---
 
@@ -1645,7 +1645,7 @@ public ApihubPluginDocumentation getDocumentation();
 
 documentation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#documentation ApihubPlugin#documentation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#documentation ApihubPlugin#documentation}
 
 ---
 
@@ -1659,7 +1659,7 @@ public ApihubPluginHostingService getHostingService();
 
 hosting_service block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#hosting_service ApihubPlugin#hosting_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#hosting_service ApihubPlugin#hosting_service}
 
 ---
 
@@ -1671,7 +1671,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#id ApihubPlugin#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#id ApihubPlugin#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1688,7 +1688,7 @@ public java.lang.String getPluginCategory();
 
 Possible values: PLUGIN_CATEGORY_UNSPECIFIED API_GATEWAY API_PRODUCER.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#plugin_category ApihubPlugin#plugin_category}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#plugin_category ApihubPlugin#plugin_category}
 
 ---
 
@@ -1700,7 +1700,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#project ApihubPlugin#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#project ApihubPlugin#project}.
 
 ---
 
@@ -1714,7 +1714,7 @@ public ApihubPluginTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#timeouts ApihubPlugin#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#timeouts ApihubPlugin#timeouts}
 
 ---
 
@@ -1751,7 +1751,7 @@ public java.lang.Object getAdditionalConfigTemplate();
 
 additional_config_template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#additional_config_template ApihubPlugin#additional_config_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#additional_config_template ApihubPlugin#additional_config_template}
 
 ---
 
@@ -1765,7 +1765,7 @@ public ApihubPluginConfigTemplateAuthConfigTemplate getAuthConfigTemplate();
 
 auth_config_template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#auth_config_template ApihubPlugin#auth_config_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#auth_config_template ApihubPlugin#auth_config_template}
 
 ---
 
@@ -1814,7 +1814,7 @@ public java.lang.String getId();
 
 ID of the config variable. Must be unique within the configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#id ApihubPlugin#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#id ApihubPlugin#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1831,7 +1831,7 @@ public java.lang.String getValueType();
 
 Type of the parameter: string, int, bool etc. Possible values: VALUE_TYPE_UNSPECIFIED STRING INT BOOL SECRET ENUM MULTI_SELECT MULTI_STRING MULTI_INT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#value_type ApihubPlugin#value_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#value_type ApihubPlugin#value_type}
 
 ---
 
@@ -1845,7 +1845,7 @@ public java.lang.String getDescription();
 
 Description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
 
 ---
 
@@ -1859,7 +1859,7 @@ public java.lang.Object getEnumOptions();
 
 enum_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#enum_options ApihubPlugin#enum_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#enum_options ApihubPlugin#enum_options}
 
 ---
 
@@ -1873,7 +1873,7 @@ public java.lang.Object getMultiSelectOptions();
 
 multi_select_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#multi_select_options ApihubPlugin#multi_select_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#multi_select_options ApihubPlugin#multi_select_options}
 
 ---
 
@@ -1887,7 +1887,7 @@ public java.lang.Object getRequired();
 
 Flag represents that this 'ConfigVariable' must be provided for a PluginInstance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#required ApihubPlugin#required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#required ApihubPlugin#required}
 
 ---
 
@@ -1901,7 +1901,7 @@ public java.lang.String getValidationRegex();
 
 Regular expression in RE2 syntax used for validating the 'value' of a 'ConfigVariable'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#validation_regex ApihubPlugin#validation_regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#validation_regex ApihubPlugin#validation_regex}
 
 ---
 
@@ -1939,7 +1939,7 @@ public java.lang.String getDisplayName();
 
 Display name of the option.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
 
 ---
 
@@ -1953,7 +1953,7 @@ public java.lang.String getId();
 
 Id of the option.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#id ApihubPlugin#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#id ApihubPlugin#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1970,7 +1970,7 @@ public java.lang.String getDescription();
 
 Description of the option.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
 
 ---
 
@@ -2008,7 +2008,7 @@ public java.lang.String getDisplayName();
 
 Display name of the option.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#display_name ApihubPlugin#display_name}
 
 ---
 
@@ -2022,7 +2022,7 @@ public java.lang.String getId();
 
 Id of the option.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#id ApihubPlugin#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#id ApihubPlugin#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2039,7 +2039,7 @@ public java.lang.String getDescription();
 
 Description of the option.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#description ApihubPlugin#description}
 
 ---
 
@@ -2075,7 +2075,7 @@ public java.util.List<java.lang.String> getSupportedAuthTypes();
 
 The list of authentication types supported by the plugin.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#supported_auth_types ApihubPlugin#supported_auth_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#supported_auth_types ApihubPlugin#supported_auth_types}
 
 ---
 
@@ -2089,7 +2089,7 @@ public ApihubPluginConfigTemplateAuthConfigTemplateServiceAccount getServiceAcco
 
 service_account block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#service_account ApihubPlugin#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#service_account ApihubPlugin#service_account}
 
 ---
 
@@ -2126,7 +2126,7 @@ The service account to be used for authenticating request.
 The 'iam.serviceAccounts.getAccessToken' permission should be granted on
 this service account to the impersonator service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#service_account ApihubPlugin#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#service_account ApihubPlugin#service_account}
 
 ---
 
@@ -2160,7 +2160,7 @@ public java.lang.String getExternalUri();
 
 The uri of the externally hosted documentation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#external_uri ApihubPlugin#external_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#external_uri ApihubPlugin#external_uri}
 
 ---
 
@@ -2197,7 +2197,7 @@ The URI of the service implemented by the plugin developer, used to invoke the p
 This information is only required for
 user defined plugins.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#service_uri ApihubPlugin#service_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#service_uri ApihubPlugin#service_uri}
 
 ---
 
@@ -2218,8 +2218,8 @@ ApihubPluginTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#create ApihubPlugin#create}. |
-| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#delete ApihubPlugin#delete}. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#create ApihubPlugin#create}. |
+| <code><a href="#@cdktf/provider-google.apihubPlugin.ApihubPluginTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#delete ApihubPlugin#delete}. |
 
 ---
 
@@ -2231,7 +2231,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#create ApihubPlugin#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#create ApihubPlugin#create}.
 
 ---
 
@@ -2243,7 +2243,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/apihub_plugin#delete ApihubPlugin#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/apihub_plugin#delete ApihubPlugin#delete}.
 
 ---
 
