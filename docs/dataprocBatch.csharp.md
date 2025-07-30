@@ -4,7 +4,7 @@
 
 ### DataprocBatch <a name="DataprocBatch" id="@cdktf/provider-google.dataprocBatch.DataprocBatch"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch google_dataproc_batch}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch google_dataproc_batch}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatch.Initializer"></a>
 
@@ -642,7 +642,7 @@ The construct id used in the generated config for the DataprocBatch to import.
 
 The id of the existing DataprocBatch that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1276,10 +1276,10 @@ new DataprocBatchConfig {
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.batchId">BatchId</a></code> | <code>string</code> | The ID to use for the batch, which will become the final component of the batch's resource name. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.environmentConfig">EnvironmentConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfig">DataprocBatchEnvironmentConfig</a></code> | environment_config block. |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#id DataprocBatch#id}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#id DataprocBatch#id}. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | The labels to associate with this batch. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.location">Location</a></code> | <code>string</code> | The location in which the batch will be created in. |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#project DataprocBatch#project}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#project DataprocBatch#project}. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.pysparkBatch">PysparkBatch</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchPysparkBatch">DataprocBatchPysparkBatch</a></code> | pyspark_batch block. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.runtimeConfig">RuntimeConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchRuntimeConfig">DataprocBatchRuntimeConfig</a></code> | runtime_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchConfig.property.sparkBatch">SparkBatch</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchSparkBatch">DataprocBatchSparkBatch</a></code> | spark_batch block. |
@@ -1371,7 +1371,7 @@ The ID to use for the batch, which will become the final component of the batch'
 
 This value must be 4-63 characters. Valid characters are /[a-z][0-9]-/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#batch_id DataprocBatch#batch_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#batch_id DataprocBatch#batch_id}
 
 ---
 
@@ -1385,7 +1385,7 @@ public DataprocBatchEnvironmentConfig EnvironmentConfig { get; set; }
 
 environment_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#environment_config DataprocBatch#environment_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#environment_config DataprocBatch#environment_config}
 
 ---
 
@@ -1397,7 +1397,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#id DataprocBatch#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#id DataprocBatch#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1417,7 +1417,7 @@ The labels to associate with this batch.
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#labels DataprocBatch#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#labels DataprocBatch#labels}
 
 ---
 
@@ -1431,7 +1431,7 @@ public string Location { get; set; }
 
 The location in which the batch will be created in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#location DataprocBatch#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#location DataprocBatch#location}
 
 ---
 
@@ -1443,7 +1443,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#project DataprocBatch#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#project DataprocBatch#project}.
 
 ---
 
@@ -1457,7 +1457,7 @@ public DataprocBatchPysparkBatch PysparkBatch { get; set; }
 
 pyspark_batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#pyspark_batch DataprocBatch#pyspark_batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#pyspark_batch DataprocBatch#pyspark_batch}
 
 ---
 
@@ -1471,7 +1471,7 @@ public DataprocBatchRuntimeConfig RuntimeConfig { get; set; }
 
 runtime_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#runtime_config DataprocBatch#runtime_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#runtime_config DataprocBatch#runtime_config}
 
 ---
 
@@ -1485,7 +1485,7 @@ public DataprocBatchSparkBatch SparkBatch { get; set; }
 
 spark_batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#spark_batch DataprocBatch#spark_batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#spark_batch DataprocBatch#spark_batch}
 
 ---
 
@@ -1499,7 +1499,7 @@ public DataprocBatchSparkRBatch SparkRBatch { get; set; }
 
 spark_r_batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#spark_r_batch DataprocBatch#spark_r_batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#spark_r_batch DataprocBatch#spark_r_batch}
 
 ---
 
@@ -1513,7 +1513,7 @@ public DataprocBatchSparkSqlBatch SparkSqlBatch { get; set; }
 
 spark_sql_batch block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#spark_sql_batch DataprocBatch#spark_sql_batch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#spark_sql_batch DataprocBatch#spark_sql_batch}
 
 ---
 
@@ -1527,7 +1527,7 @@ public DataprocBatchTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#timeouts DataprocBatch#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#timeouts DataprocBatch#timeouts}
 
 ---
 
@@ -1563,7 +1563,7 @@ public DataprocBatchEnvironmentConfigExecutionConfig ExecutionConfig { get; set;
 
 execution_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#execution_config DataprocBatch#execution_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#execution_config DataprocBatch#execution_config}
 
 ---
 
@@ -1577,7 +1577,7 @@ public DataprocBatchEnvironmentConfigPeripheralsConfig PeripheralsConfig { get; 
 
 peripherals_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#peripherals_config DataprocBatch#peripherals_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#peripherals_config DataprocBatch#peripherals_config}
 
 ---
 
@@ -1589,6 +1589,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Google;
 
 new DataprocBatchEnvironmentConfigExecutionConfig {
+    DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig AuthenticationConfig = null,
     string KmsKey = null,
     string[] NetworkTags = null,
     string NetworkUri = null,
@@ -1603,6 +1604,7 @@ new DataprocBatchEnvironmentConfigExecutionConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.property.authenticationConfig">AuthenticationConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig</a></code> | authentication_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.property.kmsKey">KmsKey</a></code> | <code>string</code> | The Cloud KMS key to use for encryption. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.property.networkTags">NetworkTags</a></code> | <code>string[]</code> | Tags used for network traffic control. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.property.networkUri">NetworkUri</a></code> | <code>string</code> | Network configuration for workload execution. |
@@ -1610,6 +1612,20 @@ new DataprocBatchEnvironmentConfigExecutionConfig {
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.property.stagingBucket">StagingBucket</a></code> | <code>string</code> | A Cloud Storage bucket used to stage workload dependencies, config files, and store workload output and other ephemeral data, such as Spark history files. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.property.subnetworkUri">SubnetworkUri</a></code> | <code>string</code> | Subnetwork configuration for workload execution. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.property.ttl">Ttl</a></code> | <code>string</code> | The duration after which the workload will be terminated. |
+
+---
+
+##### `AuthenticationConfig`<sup>Optional</sup> <a name="AuthenticationConfig" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfig.property.authenticationConfig"></a>
+
+```csharp
+public DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig AuthenticationConfig { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig</a>
+
+authentication_config block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#authentication_config DataprocBatch#authentication_config}
 
 ---
 
@@ -1623,7 +1639,7 @@ public string KmsKey { get; set; }
 
 The Cloud KMS key to use for encryption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#kms_key DataprocBatch#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#kms_key DataprocBatch#kms_key}
 
 ---
 
@@ -1637,7 +1653,7 @@ public string[] NetworkTags { get; set; }
 
 Tags used for network traffic control.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#network_tags DataprocBatch#network_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#network_tags DataprocBatch#network_tags}
 
 ---
 
@@ -1651,7 +1667,7 @@ public string NetworkUri { get; set; }
 
 Network configuration for workload execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#network_uri DataprocBatch#network_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#network_uri DataprocBatch#network_uri}
 
 ---
 
@@ -1665,7 +1681,7 @@ public string ServiceAccount { get; set; }
 
 Service account that used to execute workload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#service_account DataprocBatch#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#service_account DataprocBatch#service_account}
 
 ---
 
@@ -1684,7 +1700,7 @@ Cloud Dataproc will determine a Cloud Storage location according to the region w
 and then create and manage project-level, per-location staging and temporary buckets.
 This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#staging_bucket DataprocBatch#staging_bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#staging_bucket DataprocBatch#staging_bucket}
 
 ---
 
@@ -1698,7 +1714,7 @@ public string SubnetworkUri { get; set; }
 
 Subnetwork configuration for workload execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#subnetwork_uri DataprocBatch#subnetwork_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#subnetwork_uri DataprocBatch#subnetwork_uri}
 
 ---
 
@@ -1720,7 +1736,41 @@ Minimum value is 10 minutes; maximum value is 14 days. If both ttl and idleTtl a
 the conditions are treated as OR conditions: the workload will be terminated when it has been idle for idleTtl or
 when ttl has been exceeded, whichever occurs first.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#ttl DataprocBatch#ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#ttl DataprocBatch#ttl}
+
+---
+
+### DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig <a name="DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig {
+    string UserWorkloadAuthenticationType = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig.property.userWorkloadAuthenticationType">UserWorkloadAuthenticationType</a></code> | <code>string</code> | Authentication type for the user workload running in containers. Possible values: ["SERVICE_ACCOUNT", "END_USER_CREDENTIALS"]. |
+
+---
+
+##### `UserWorkloadAuthenticationType`<sup>Optional</sup> <a name="UserWorkloadAuthenticationType" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig.property.userWorkloadAuthenticationType"></a>
+
+```csharp
+public string UserWorkloadAuthenticationType { get; set; }
+```
+
+- *Type:* string
+
+Authentication type for the user workload running in containers. Possible values: ["SERVICE_ACCOUNT", "END_USER_CREDENTIALS"].
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#user_workload_authentication_type DataprocBatch#user_workload_authentication_type}
 
 ---
 
@@ -1756,7 +1806,7 @@ public string MetastoreService { get; set; }
 
 Resource name of an existing Dataproc Metastore service.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#metastore_service DataprocBatch#metastore_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#metastore_service DataprocBatch#metastore_service}
 
 ---
 
@@ -1770,7 +1820,7 @@ public DataprocBatchEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig S
 
 spark_history_server_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#spark_history_server_config DataprocBatch#spark_history_server_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#spark_history_server_config DataprocBatch#spark_history_server_config}
 
 ---
 
@@ -1804,7 +1854,7 @@ public string DataprocCluster { get; set; }
 
 Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#dataproc_cluster DataprocBatch#dataproc_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#dataproc_cluster DataprocBatch#dataproc_cluster}
 
 ---
 
@@ -1850,7 +1900,7 @@ HCFS URIs of archives to be extracted into the working directory of each executo
 
 Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
 
 ---
 
@@ -1867,7 +1917,7 @@ The arguments to pass to the driver.
 Do not include arguments that can be set as batch
 properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#args DataprocBatch#args}
 
 ---
 
@@ -1881,7 +1931,7 @@ public string[] FileUris { get; set; }
 
 HCFS URIs of files to be placed in the working directory of each executor.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
 
 ---
 
@@ -1895,7 +1945,7 @@ public string[] JarFileUris { get; set; }
 
 HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
 
 ---
 
@@ -1909,7 +1959,7 @@ public string MainPythonFileUri { get; set; }
 
 The HCFS URI of the main Python file to use as the Spark driver. Must be a .py file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#main_python_file_uri DataprocBatch#main_python_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#main_python_file_uri DataprocBatch#main_python_file_uri}
 
 ---
 
@@ -1923,7 +1973,7 @@ public string[] PythonFileUris { get; set; }
 
 HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#python_file_uris DataprocBatch#python_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#python_file_uris DataprocBatch#python_file_uris}
 
 ---
 
@@ -1965,7 +2015,7 @@ public DataprocBatchRuntimeConfigAutotuningConfig AutotuningConfig { get; set; }
 
 autotuning_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#autotuning_config DataprocBatch#autotuning_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#autotuning_config DataprocBatch#autotuning_config}
 
 ---
 
@@ -1979,7 +2029,7 @@ public string Cohort { get; set; }
 
 Optional. Cohort identifier. Identifies families of the workloads having the same shape, e.g. daily ETL jobs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#cohort DataprocBatch#cohort}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#cohort DataprocBatch#cohort}
 
 ---
 
@@ -1993,7 +2043,7 @@ public string ContainerImage { get; set; }
 
 Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#container_image DataprocBatch#container_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#container_image DataprocBatch#container_image}
 
 ---
 
@@ -2007,7 +2057,7 @@ public System.Collections.Generic.IDictionary<string, string> Properties { get; 
 
 A mapping of property names to values, which are used to configure workload execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#properties DataprocBatch#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#properties DataprocBatch#properties}
 
 ---
 
@@ -2021,7 +2071,7 @@ public string Version { get; set; }
 
 Version of the batch runtime.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#version DataprocBatch#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#version DataprocBatch#version}
 
 ---
 
@@ -2055,7 +2105,7 @@ public string[] Scenarios { get; set; }
 
 Optional. Scenarios for which tunings are applied. Possible values: ["SCALING", "BROADCAST_HASH_JOIN", "MEMORY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#scenarios DataprocBatch#scenarios}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#scenarios DataprocBatch#scenarios}
 
 ---
 
@@ -2140,7 +2190,7 @@ HCFS URIs of archives to be extracted into the working directory of each executo
 
 Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
 
 ---
 
@@ -2157,7 +2207,7 @@ The arguments to pass to the driver.
 Do not include arguments that can be set as batch
 properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#args DataprocBatch#args}
 
 ---
 
@@ -2171,7 +2221,7 @@ public string[] FileUris { get; set; }
 
 HCFS URIs of files to be placed in the working directory of each executor.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
 
 ---
 
@@ -2185,7 +2235,7 @@ public string[] JarFileUris { get; set; }
 
 HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
 
 ---
 
@@ -2202,7 +2252,7 @@ The name of the driver main class.
 The jar file that contains the class must be in the
 classpath or specified in jarFileUris.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#main_class DataprocBatch#main_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#main_class DataprocBatch#main_class}
 
 ---
 
@@ -2216,7 +2266,7 @@ public string MainJarFileUri { get; set; }
 
 The HCFS URI of the jar file that contains the main class.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#main_jar_file_uri DataprocBatch#main_jar_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#main_jar_file_uri DataprocBatch#main_jar_file_uri}
 
 ---
 
@@ -2258,7 +2308,7 @@ HCFS URIs of archives to be extracted into the working directory of each executo
 
 Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#archive_uris DataprocBatch#archive_uris}
 
 ---
 
@@ -2275,7 +2325,7 @@ The arguments to pass to the driver.
 Do not include arguments that can be set as batch
 properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#args DataprocBatch#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#args DataprocBatch#args}
 
 ---
 
@@ -2289,7 +2339,7 @@ public string[] FileUris { get; set; }
 
 HCFS URIs of files to be placed in the working directory of each executor.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#file_uris DataprocBatch#file_uris}
 
 ---
 
@@ -2305,7 +2355,7 @@ The HCFS URI of the main R file to use as the driver.
 
 Must be a .R or .r file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#main_r_file_uri DataprocBatch#main_r_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#main_r_file_uri DataprocBatch#main_r_file_uri}
 
 ---
 
@@ -2343,7 +2393,7 @@ public string[] JarFileUris { get; set; }
 
 HCFS URIs of jar files to be added to the Spark CLASSPATH.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#jar_file_uris DataprocBatch#jar_file_uris}
 
 ---
 
@@ -2357,7 +2407,7 @@ public string QueryFileUri { get; set; }
 
 The HCFS URI of the script that contains Spark SQL queries to execute.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#query_file_uri DataprocBatch#query_file_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#query_file_uri DataprocBatch#query_file_uri}
 
 ---
 
@@ -2371,7 +2421,7 @@ public System.Collections.Generic.IDictionary<string, string> QueryVariables { g
 
 Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#query_variables DataprocBatch#query_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#query_variables DataprocBatch#query_variables}
 
 ---
 
@@ -2406,9 +2456,9 @@ new DataprocBatchTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#create DataprocBatch#create}. |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}. |
-| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#update DataprocBatch#update}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#create DataprocBatch#create}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#update DataprocBatch#update}. |
 
 ---
 
@@ -2420,7 +2470,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#create DataprocBatch#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#create DataprocBatch#create}.
 
 ---
 
@@ -2432,7 +2482,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#delete DataprocBatch#delete}.
 
 ---
 
@@ -2444,11 +2494,289 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataproc_batch#update DataprocBatch#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataproc_batch#update DataprocBatch#update}.
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference <a name="DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.resetUserWorkloadAuthenticationType">ResetUserWorkloadAuthenticationType</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetUserWorkloadAuthenticationType` <a name="ResetUserWorkloadAuthenticationType" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.resetUserWorkloadAuthenticationType"></a>
+
+```csharp
+private void ResetUserWorkloadAuthenticationType()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.userWorkloadAuthenticationTypeInput">UserWorkloadAuthenticationTypeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.userWorkloadAuthenticationType">UserWorkloadAuthenticationType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `UserWorkloadAuthenticationTypeInput`<sup>Optional</sup> <a name="UserWorkloadAuthenticationTypeInput" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.userWorkloadAuthenticationTypeInput"></a>
+
+```csharp
+public string UserWorkloadAuthenticationTypeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `UserWorkloadAuthenticationType`<sup>Required</sup> <a name="UserWorkloadAuthenticationType" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.userWorkloadAuthenticationType"></a>
+
+```csharp
+public string UserWorkloadAuthenticationType { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference.property.internalValue"></a>
+
+```csharp
+public DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig</a>
+
+---
+
 
 ### DataprocBatchEnvironmentConfigExecutionConfigOutputReference <a name="DataprocBatchEnvironmentConfigExecutionConfigOutputReference" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference"></a>
 
@@ -2500,6 +2828,8 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.putAuthenticationConfig">PutAuthenticationConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.resetAuthenticationConfig">ResetAuthenticationConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.resetKmsKey">ResetKmsKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.resetNetworkTags">ResetNetworkTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.resetNetworkUri">ResetNetworkUri</a></code> | *No description.* |
@@ -2660,6 +2990,24 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `PutAuthenticationConfig` <a name="PutAuthenticationConfig" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.putAuthenticationConfig"></a>
+
+```csharp
+private void PutAuthenticationConfig(DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.putAuthenticationConfig.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig</a>
+
+---
+
+##### `ResetAuthenticationConfig` <a name="ResetAuthenticationConfig" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.resetAuthenticationConfig"></a>
+
+```csharp
+private void ResetAuthenticationConfig()
+```
+
 ##### `ResetKmsKey` <a name="ResetKmsKey" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.resetKmsKey"></a>
 
 ```csharp
@@ -2709,6 +3057,8 @@ private void ResetTtl()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.authenticationConfig">AuthenticationConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.authenticationConfigInput">AuthenticationConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.kmsKeyInput">KmsKeyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.networkTagsInput">NetworkTagsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.networkUriInput">NetworkUriInput</a></code> | <code>string</code> | *No description.* |
@@ -2748,6 +3098,26 @@ public string Fqn { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `AuthenticationConfig`<sup>Required</sup> <a name="AuthenticationConfig" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.authenticationConfig"></a>
+
+```csharp
+public DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference AuthenticationConfig { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfigOutputReference</a>
+
+---
+
+##### `AuthenticationConfigInput`<sup>Optional</sup> <a name="AuthenticationConfigInput" id="@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigOutputReference.property.authenticationConfigInput"></a>
+
+```csharp
+public DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig AuthenticationConfigInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataprocBatch.DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig">DataprocBatchEnvironmentConfigExecutionConfigAuthenticationConfig</a>
 
 ---
 

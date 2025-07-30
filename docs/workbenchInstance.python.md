@@ -4,7 +4,7 @@
 
 ### WorkbenchInstance <a name="WorkbenchInstance" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance google_workbench_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance google_workbench_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer"></a>
 
@@ -25,6 +25,7 @@ workbenchInstance.WorkbenchInstance(
   name: str,
   desired_state: str = None,
   disable_proxy_access: typing.Union[bool, IResolvable] = None,
+  enable_managed_euc: typing.Union[bool, IResolvable] = None,
   enable_third_party_identity: typing.Union[bool, IResolvable] = None,
   gce_setup: WorkbenchInstanceGceSetup = None,
   id: str = None,
@@ -51,13 +52,14 @@ workbenchInstance.WorkbenchInstance(
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.name">name</a></code> | <code>str</code> | The name of this workbench instance. Format: 'projects/{project_id}/locations/{location}/instances/{instance_id}'. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.desiredState">desired_state</a></code> | <code>str</code> | Desired state of the Workbench Instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.disableProxyAccess">disable_proxy_access</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Optional. If true, the workbench instance will not register with the proxy. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.enableManagedEuc">enable_managed_euc</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Flag to enable managed end user credentials for the instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.enableThirdPartyIdentity">enable_third_party_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Flag that specifies that a notebook can be accessed with third party identity provider. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.gceSetup">gce_setup</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup">WorkbenchInstanceGceSetup</a></code> | gce_setup block. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#id WorkbenchInstance#id}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#id WorkbenchInstance#id}. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.instanceId">instance_id</a></code> | <code>str</code> | Required. User-defined unique ID of this instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.instanceOwners">instance_owners</a></code> | <code>typing.List[str]</code> | 'Optional. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Optional. Labels to apply to this instance. These can be later modified by the UpdateInstance method. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#project WorkbenchInstance#project}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#project WorkbenchInstance#project}. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts">WorkbenchInstanceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -128,7 +130,7 @@ Must be unique amongst siblings in the same scope
 
 Part of 'parent'. See documentation of 'projectsId'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#location WorkbenchInstance#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#location WorkbenchInstance#location}
 
 ---
 
@@ -138,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of this workbench instance. Format: 'projects/{project_id}/locations/{location}/instances/{instance_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
 
 ---
 
@@ -150,7 +152,7 @@ Desired state of the Workbench Instance.
 
 Set this field to 'ACTIVE' to start the Instance, and 'STOPPED' to stop the Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#desired_state WorkbenchInstance#desired_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#desired_state WorkbenchInstance#desired_state}
 
 ---
 
@@ -160,7 +162,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. If true, the workbench instance will not register with the proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disable_proxy_access WorkbenchInstance#disable_proxy_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disable_proxy_access WorkbenchInstance#disable_proxy_access}
+
+---
+
+##### `enable_managed_euc`<sup>Optional</sup> <a name="enable_managed_euc" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.Initializer.parameter.enableManagedEuc"></a>
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Flag to enable managed end user credentials for the instance.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_managed_euc WorkbenchInstance#enable_managed_euc}
 
 ---
 
@@ -170,7 +182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Flag that specifies that a notebook can be accessed with third party identity provider.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_third_party_identity WorkbenchInstance#enable_third_party_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_third_party_identity WorkbenchInstance#enable_third_party_identity}
 
 ---
 
@@ -180,7 +192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 gce_setup block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#gce_setup WorkbenchInstance#gce_setup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#gce_setup WorkbenchInstance#gce_setup}
 
 ---
 
@@ -188,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#id WorkbenchInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#id WorkbenchInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -201,7 +213,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Required. User-defined unique ID of this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#instance_id WorkbenchInstance#instance_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#instance_id WorkbenchInstance#instance_id}
 
 ---
 
@@ -217,7 +229,7 @@ the service account users of your VM instance''s service account can use the ins
 If specified, sets the access mode to 'Single user'. For more details, see
 https://cloud.google.com/vertex-ai/docs/workbench/instances/manage-access-jupyterlab'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#instance_owners WorkbenchInstance#instance_owners}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#instance_owners WorkbenchInstance#instance_owners}
 
 ---
 
@@ -230,7 +242,7 @@ Optional. Labels to apply to this instance. These can be later modified by the U
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#labels WorkbenchInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#labels WorkbenchInstance#labels}
 
 ---
 
@@ -238,7 +250,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#project WorkbenchInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#project WorkbenchInstance#project}.
 
 ---
 
@@ -248,7 +260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#timeouts WorkbenchInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#timeouts WorkbenchInstance#timeouts}
 
 ---
 
@@ -283,6 +295,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.putTimeouts">put_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetDesiredState">reset_desired_state</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetDisableProxyAccess">reset_disable_proxy_access</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetEnableManagedEuc">reset_enable_managed_euc</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetEnableThirdPartyIdentity">reset_enable_third_party_identity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetGceSetup">reset_gce_setup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetId">reset_id</a></code> | *No description.* |
@@ -633,6 +646,7 @@ def put_gce_setup(
   machine_type: str = None,
   metadata: typing.Mapping[str] = None,
   network_interfaces: typing.Union[IResolvable, typing.List[WorkbenchInstanceGceSetupNetworkInterfaces]] = None,
+  reservation_affinity: WorkbenchInstanceGceSetupReservationAffinity = None,
   service_accounts: typing.Union[IResolvable, typing.List[WorkbenchInstanceGceSetupServiceAccounts]] = None,
   shielded_instance_config: WorkbenchInstanceGceSetupShieldedInstanceConfig = None,
   tags: typing.List[str] = None,
@@ -646,7 +660,7 @@ def put_gce_setup(
 
 accelerator_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#accelerator_configs WorkbenchInstance#accelerator_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#accelerator_configs WorkbenchInstance#accelerator_configs}
 
 ---
 
@@ -656,7 +670,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 boot_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#boot_disk WorkbenchInstance#boot_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#boot_disk WorkbenchInstance#boot_disk}
 
 ---
 
@@ -666,7 +680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 confidential_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#confidential_instance_config WorkbenchInstance#confidential_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#confidential_instance_config WorkbenchInstance#confidential_instance_config}
 
 ---
 
@@ -676,7 +690,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 container_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#container_image WorkbenchInstance#container_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#container_image WorkbenchInstance#container_image}
 
 ---
 
@@ -686,7 +700,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 data_disks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#data_disks WorkbenchInstance#data_disks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#data_disks WorkbenchInstance#data_disks}
 
 ---
 
@@ -696,7 +710,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. If true, no external IP will be assigned to this VM instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disable_public_ip WorkbenchInstance#disable_public_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disable_public_ip WorkbenchInstance#disable_public_ip}
 
 ---
 
@@ -706,7 +720,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_ip_forwarding WorkbenchInstance#enable_ip_forwarding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_ip_forwarding WorkbenchInstance#enable_ip_forwarding}
 
 ---
 
@@ -716,7 +730,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The machine type of the VM instance. https://cloud.google.com/compute/docs/machine-resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#machine_type WorkbenchInstance#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#machine_type WorkbenchInstance#machine_type}
 
 ---
 
@@ -726,7 +740,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Custom metadata to apply to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#metadata WorkbenchInstance#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#metadata WorkbenchInstance#metadata}
 
 ---
 
@@ -736,7 +750,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 network_interfaces block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#network_interfaces WorkbenchInstance#network_interfaces}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#network_interfaces WorkbenchInstance#network_interfaces}
+
+---
+
+###### `reservation_affinity`<sup>Optional</sup> <a name="reservation_affinity" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.putGceSetup.parameter.reservationAffinity"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity">WorkbenchInstanceGceSetupReservationAffinity</a>
+
+reservation_affinity block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#reservation_affinity WorkbenchInstance#reservation_affinity}
 
 ---
 
@@ -746,7 +770,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 service_accounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#service_accounts WorkbenchInstance#service_accounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#service_accounts WorkbenchInstance#service_accounts}
 
 ---
 
@@ -756,7 +780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#shielded_instance_config WorkbenchInstance#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#shielded_instance_config WorkbenchInstance#shielded_instance_config}
 
 ---
 
@@ -766,7 +790,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The Compute Engine tags to add to instance (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#tags WorkbenchInstance#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#tags WorkbenchInstance#tags}
 
 ---
 
@@ -776,7 +800,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 vm_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#vm_image WorkbenchInstance#vm_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#vm_image WorkbenchInstance#vm_image}
 
 ---
 
@@ -794,7 +818,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#create WorkbenchInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#create WorkbenchInstance#create}.
 
 ---
 
@@ -802,7 +826,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}.
 
 ---
 
@@ -810,7 +834,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#update WorkbenchInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#update WorkbenchInstance#update}.
 
 ---
 
@@ -824,6 +848,12 @@ def reset_desired_state() -> None
 
 ```python
 def reset_disable_proxy_access() -> None
+```
+
+##### `reset_enable_managed_euc` <a name="reset_enable_managed_euc" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetEnableManagedEuc"></a>
+
+```python
+def reset_enable_managed_euc() -> None
 ```
 
 ##### `reset_enable_third_party_identity` <a name="reset_enable_third_party_identity" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.resetEnableThirdPartyIdentity"></a>
@@ -988,7 +1018,7 @@ The construct id used in the generated config for the WorkbenchInstance to impor
 
 The id of the existing WorkbenchInstance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1032,6 +1062,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.upgradeHistory">upgrade_history</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceUpgradeHistoryList">WorkbenchInstanceUpgradeHistoryList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.desiredStateInput">desired_state_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.disableProxyAccessInput">disable_proxy_access_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.enableManagedEucInput">enable_managed_euc_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.enableThirdPartyIdentityInput">enable_third_party_identity_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.gceSetupInput">gce_setup_input</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup">WorkbenchInstanceGceSetup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
@@ -1044,6 +1075,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.4
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts">WorkbenchInstanceTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.desiredState">desired_state</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.disableProxyAccess">disable_proxy_access</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.enableManagedEuc">enable_managed_euc</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.enableThirdPartyIdentity">enable_third_party_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.instanceId">instance_id</a></code> | <code>str</code> | *No description.* |
@@ -1337,6 +1369,16 @@ disable_proxy_access_input: typing.Union[bool, IResolvable]
 
 ---
 
+##### `enable_managed_euc_input`<sup>Optional</sup> <a name="enable_managed_euc_input" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.enableManagedEucInput"></a>
+
+```python
+enable_managed_euc_input: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
 ##### `enable_third_party_identity_input`<sup>Optional</sup> <a name="enable_third_party_identity_input" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.enableThirdPartyIdentityInput"></a>
 
 ```python
@@ -1451,6 +1493,16 @@ desired_state: str
 
 ```python
 disable_proxy_access: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
+##### `enable_managed_euc`<sup>Required</sup> <a name="enable_managed_euc" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstance.property.enableManagedEuc"></a>
+
+```python
+enable_managed_euc: typing.Union[bool, IResolvable]
 ```
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
@@ -1576,6 +1628,7 @@ workbenchInstance.WorkbenchInstanceConfig(
   name: str,
   desired_state: str = None,
   disable_proxy_access: typing.Union[bool, IResolvable] = None,
+  enable_managed_euc: typing.Union[bool, IResolvable] = None,
   enable_third_party_identity: typing.Union[bool, IResolvable] = None,
   gce_setup: WorkbenchInstanceGceSetup = None,
   id: str = None,
@@ -1602,13 +1655,14 @@ workbenchInstance.WorkbenchInstanceConfig(
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.name">name</a></code> | <code>str</code> | The name of this workbench instance. Format: 'projects/{project_id}/locations/{location}/instances/{instance_id}'. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.desiredState">desired_state</a></code> | <code>str</code> | Desired state of the Workbench Instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.disableProxyAccess">disable_proxy_access</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Optional. If true, the workbench instance will not register with the proxy. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.enableManagedEuc">enable_managed_euc</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Flag to enable managed end user credentials for the instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.enableThirdPartyIdentity">enable_third_party_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Flag that specifies that a notebook can be accessed with third party identity provider. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.gceSetup">gce_setup</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup">WorkbenchInstanceGceSetup</a></code> | gce_setup block. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#id WorkbenchInstance#id}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#id WorkbenchInstance#id}. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.instanceId">instance_id</a></code> | <code>str</code> | Required. User-defined unique ID of this instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.instanceOwners">instance_owners</a></code> | <code>typing.List[str]</code> | 'Optional. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Optional. Labels to apply to this instance. These can be later modified by the UpdateInstance method. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#project WorkbenchInstance#project}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#project WorkbenchInstance#project}. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts">WorkbenchInstanceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1693,7 +1747,7 @@ location: str
 
 Part of 'parent'. See documentation of 'projectsId'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#location WorkbenchInstance#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#location WorkbenchInstance#location}
 
 ---
 
@@ -1707,7 +1761,7 @@ name: str
 
 The name of this workbench instance. Format: 'projects/{project_id}/locations/{location}/instances/{instance_id}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
 
 ---
 
@@ -1723,7 +1777,7 @@ Desired state of the Workbench Instance.
 
 Set this field to 'ACTIVE' to start the Instance, and 'STOPPED' to stop the Instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#desired_state WorkbenchInstance#desired_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#desired_state WorkbenchInstance#desired_state}
 
 ---
 
@@ -1737,7 +1791,21 @@ disable_proxy_access: typing.Union[bool, IResolvable]
 
 Optional. If true, the workbench instance will not register with the proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disable_proxy_access WorkbenchInstance#disable_proxy_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disable_proxy_access WorkbenchInstance#disable_proxy_access}
+
+---
+
+##### `enable_managed_euc`<sup>Optional</sup> <a name="enable_managed_euc" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceConfig.property.enableManagedEuc"></a>
+
+```python
+enable_managed_euc: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Flag to enable managed end user credentials for the instance.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_managed_euc WorkbenchInstance#enable_managed_euc}
 
 ---
 
@@ -1751,7 +1819,7 @@ enable_third_party_identity: typing.Union[bool, IResolvable]
 
 Flag that specifies that a notebook can be accessed with third party identity provider.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_third_party_identity WorkbenchInstance#enable_third_party_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_third_party_identity WorkbenchInstance#enable_third_party_identity}
 
 ---
 
@@ -1765,7 +1833,7 @@ gce_setup: WorkbenchInstanceGceSetup
 
 gce_setup block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#gce_setup WorkbenchInstance#gce_setup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#gce_setup WorkbenchInstance#gce_setup}
 
 ---
 
@@ -1777,7 +1845,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#id WorkbenchInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#id WorkbenchInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1794,7 +1862,7 @@ instance_id: str
 
 Required. User-defined unique ID of this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#instance_id WorkbenchInstance#instance_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#instance_id WorkbenchInstance#instance_id}
 
 ---
 
@@ -1814,7 +1882,7 @@ the service account users of your VM instance''s service account can use the ins
 If specified, sets the access mode to 'Single user'. For more details, see
 https://cloud.google.com/vertex-ai/docs/workbench/instances/manage-access-jupyterlab'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#instance_owners WorkbenchInstance#instance_owners}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#instance_owners WorkbenchInstance#instance_owners}
 
 ---
 
@@ -1831,7 +1899,7 @@ Optional. Labels to apply to this instance. These can be later modified by the U
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#labels WorkbenchInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#labels WorkbenchInstance#labels}
 
 ---
 
@@ -1843,7 +1911,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#project WorkbenchInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#project WorkbenchInstance#project}.
 
 ---
 
@@ -1857,7 +1925,7 @@ timeouts: WorkbenchInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#timeouts WorkbenchInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#timeouts WorkbenchInstance#timeouts}
 
 ---
 
@@ -1879,6 +1947,7 @@ workbenchInstance.WorkbenchInstanceGceSetup(
   machine_type: str = None,
   metadata: typing.Mapping[str] = None,
   network_interfaces: typing.Union[IResolvable, typing.List[WorkbenchInstanceGceSetupNetworkInterfaces]] = None,
+  reservation_affinity: WorkbenchInstanceGceSetupReservationAffinity = None,
   service_accounts: typing.Union[IResolvable, typing.List[WorkbenchInstanceGceSetupServiceAccounts]] = None,
   shielded_instance_config: WorkbenchInstanceGceSetupShieldedInstanceConfig = None,
   tags: typing.List[str] = None,
@@ -1900,6 +1969,7 @@ workbenchInstance.WorkbenchInstanceGceSetup(
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.property.machineType">machine_type</a></code> | <code>str</code> | Optional. The machine type of the VM instance. https://cloud.google.com/compute/docs/machine-resource. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.property.metadata">metadata</a></code> | <code>typing.Mapping[str]</code> | Optional. Custom metadata to apply to this instance. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.property.networkInterfaces">network_interfaces</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfaces">WorkbenchInstanceGceSetupNetworkInterfaces</a>]]</code> | network_interfaces block. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.property.reservationAffinity">reservation_affinity</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity">WorkbenchInstanceGceSetupReservationAffinity</a></code> | reservation_affinity block. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.property.serviceAccounts">service_accounts</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupServiceAccounts">WorkbenchInstanceGceSetupServiceAccounts</a>]]</code> | service_accounts block. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.property.shieldedInstanceConfig">shielded_instance_config</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupShieldedInstanceConfig">WorkbenchInstanceGceSetupShieldedInstanceConfig</a></code> | shielded_instance_config block. |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.property.tags">tags</a></code> | <code>typing.List[str]</code> | Optional. The Compute Engine tags to add to instance (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)). |
@@ -1917,7 +1987,7 @@ accelerator_configs: typing.Union[IResolvable, typing.List[WorkbenchInstanceGceS
 
 accelerator_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#accelerator_configs WorkbenchInstance#accelerator_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#accelerator_configs WorkbenchInstance#accelerator_configs}
 
 ---
 
@@ -1931,7 +2001,7 @@ boot_disk: WorkbenchInstanceGceSetupBootDisk
 
 boot_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#boot_disk WorkbenchInstance#boot_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#boot_disk WorkbenchInstance#boot_disk}
 
 ---
 
@@ -1945,7 +2015,7 @@ confidential_instance_config: WorkbenchInstanceGceSetupConfidentialInstanceConfi
 
 confidential_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#confidential_instance_config WorkbenchInstance#confidential_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#confidential_instance_config WorkbenchInstance#confidential_instance_config}
 
 ---
 
@@ -1959,7 +2029,7 @@ container_image: WorkbenchInstanceGceSetupContainerImage
 
 container_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#container_image WorkbenchInstance#container_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#container_image WorkbenchInstance#container_image}
 
 ---
 
@@ -1973,7 +2043,7 @@ data_disks: WorkbenchInstanceGceSetupDataDisks
 
 data_disks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#data_disks WorkbenchInstance#data_disks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#data_disks WorkbenchInstance#data_disks}
 
 ---
 
@@ -1987,7 +2057,7 @@ disable_public_ip: typing.Union[bool, IResolvable]
 
 Optional. If true, no external IP will be assigned to this VM instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disable_public_ip WorkbenchInstance#disable_public_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disable_public_ip WorkbenchInstance#disable_public_ip}
 
 ---
 
@@ -2001,7 +2071,7 @@ enable_ip_forwarding: typing.Union[bool, IResolvable]
 
 Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_ip_forwarding WorkbenchInstance#enable_ip_forwarding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_ip_forwarding WorkbenchInstance#enable_ip_forwarding}
 
 ---
 
@@ -2015,7 +2085,7 @@ machine_type: str
 
 Optional. The machine type of the VM instance. https://cloud.google.com/compute/docs/machine-resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#machine_type WorkbenchInstance#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#machine_type WorkbenchInstance#machine_type}
 
 ---
 
@@ -2029,7 +2099,7 @@ metadata: typing.Mapping[str]
 
 Optional. Custom metadata to apply to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#metadata WorkbenchInstance#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#metadata WorkbenchInstance#metadata}
 
 ---
 
@@ -2043,7 +2113,21 @@ network_interfaces: typing.Union[IResolvable, typing.List[WorkbenchInstanceGceSe
 
 network_interfaces block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#network_interfaces WorkbenchInstance#network_interfaces}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#network_interfaces WorkbenchInstance#network_interfaces}
+
+---
+
+##### `reservation_affinity`<sup>Optional</sup> <a name="reservation_affinity" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup.property.reservationAffinity"></a>
+
+```python
+reservation_affinity: WorkbenchInstanceGceSetupReservationAffinity
+```
+
+- *Type:* <a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity">WorkbenchInstanceGceSetupReservationAffinity</a>
+
+reservation_affinity block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#reservation_affinity WorkbenchInstance#reservation_affinity}
 
 ---
 
@@ -2057,7 +2141,7 @@ service_accounts: typing.Union[IResolvable, typing.List[WorkbenchInstanceGceSetu
 
 service_accounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#service_accounts WorkbenchInstance#service_accounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#service_accounts WorkbenchInstance#service_accounts}
 
 ---
 
@@ -2071,7 +2155,7 @@ shielded_instance_config: WorkbenchInstanceGceSetupShieldedInstanceConfig
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#shielded_instance_config WorkbenchInstance#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#shielded_instance_config WorkbenchInstance#shielded_instance_config}
 
 ---
 
@@ -2085,7 +2169,7 @@ tags: typing.List[str]
 
 Optional. The Compute Engine tags to add to instance (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#tags WorkbenchInstance#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#tags WorkbenchInstance#tags}
 
 ---
 
@@ -2099,7 +2183,7 @@ vm_image: WorkbenchInstanceGceSetupVmImage
 
 vm_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#vm_image WorkbenchInstance#vm_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#vm_image WorkbenchInstance#vm_image}
 
 ---
 
@@ -2135,7 +2219,7 @@ core_count: str
 
 Optional. Count of cores of this accelerator.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#core_count WorkbenchInstance#core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#core_count WorkbenchInstance#core_count}
 
 ---
 
@@ -2149,7 +2233,7 @@ type: str
 
 Optional. Type of this accelerator. Possible values: ["NVIDIA_TESLA_P100", "NVIDIA_TESLA_V100", "NVIDIA_TESLA_P4", "NVIDIA_TESLA_T4", "NVIDIA_TESLA_A100", "NVIDIA_A100_80GB", "NVIDIA_L4", "NVIDIA_TESLA_T4_VWS", "NVIDIA_TESLA_P100_VWS", "NVIDIA_TESLA_P4_VWS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#type WorkbenchInstance#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#type WorkbenchInstance#type}
 
 ---
 
@@ -2189,7 +2273,7 @@ disk_encryption: str
 
 Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["GMEK", "CMEK"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
 
 ---
 
@@ -2207,7 +2291,7 @@ The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). If not specified, this defaults to the
 recommended value of 150GB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
 
 ---
 
@@ -2221,7 +2305,7 @@ disk_type: str
 
 Optional. Indicates the type of the disk. Possible values: ["PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
 
 ---
 
@@ -2239,7 +2323,7 @@ The KMS key used to encrypt the disks, only
 applicable if disk_encryption is CMEK. Format: 'projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}'
 Learn more about using your own encryption keys.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
 
 ---
 
@@ -2273,7 +2357,7 @@ confidential_instance_type: str
 
 Defines the type of technology used by the confidential instance. Possible values: ["SEV"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#confidential_instance_type WorkbenchInstance#confidential_instance_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#confidential_instance_type WorkbenchInstance#confidential_instance_type}
 
 ---
 
@@ -2309,7 +2393,7 @@ repository: str
 
 The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#repository WorkbenchInstance#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#repository WorkbenchInstance#repository}
 
 ---
 
@@ -2323,7 +2407,7 @@ tag: str
 
 The tag of the container image. If not specified, this defaults to the latest tag.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#tag WorkbenchInstance#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#tag WorkbenchInstance#tag}
 
 ---
 
@@ -2363,7 +2447,7 @@ disk_encryption: str
 
 Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["GMEK", "CMEK"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
 
 ---
 
@@ -2381,7 +2465,7 @@ The size of the disk in GB attached to this VM instance,
 up to a maximum of 64000 GB (64 TB). If not specified, this defaults to
 100.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
 
 ---
 
@@ -2395,7 +2479,7 @@ disk_type: str
 
 Optional. Input only. Indicates the type of the disk. Possible values: ["PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
 
 ---
 
@@ -2413,7 +2497,7 @@ The KMS key used to encrypt the disks,
 only applicable if disk_encryption is CMEK. Format: 'projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}'
 Learn more about using your own encryption keys.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
 
 ---
 
@@ -2453,7 +2537,7 @@ access_configs: typing.Union[IResolvable, typing.List[WorkbenchInstanceGceSetupN
 
 access_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#access_configs WorkbenchInstance#access_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#access_configs WorkbenchInstance#access_configs}
 
 ---
 
@@ -2467,7 +2551,7 @@ network: str
 
 Optional. The name of the VPC that this VM instance is in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#network WorkbenchInstance#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#network WorkbenchInstance#network}
 
 ---
 
@@ -2484,7 +2568,7 @@ Optional.
 The type of vNIC to be used on this interface. This
 may be gVNIC or VirtioNet. Possible values: ["VIRTIO_NET", "GVNIC"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#nic_type WorkbenchInstance#nic_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#nic_type WorkbenchInstance#nic_type}
 
 ---
 
@@ -2498,7 +2582,7 @@ subnet: str
 
 Optional. The name of the subnet that this VM instance is in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#subnet WorkbenchInstance#subnet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#subnet WorkbenchInstance#subnet}
 
 ---
 
@@ -2538,7 +2622,84 @@ undefined to use an IP from a shared ephemeral IP address pool. If you
 specify a static external IP address, it must live in the same region as
 the zone of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#external_ip WorkbenchInstance#external_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#external_ip WorkbenchInstance#external_ip}
+
+---
+
+### WorkbenchInstanceGceSetupReservationAffinity <a name="WorkbenchInstanceGceSetupReservationAffinity" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import workbench_instance
+
+workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity(
+  consume_reservation_type: str = None,
+  key: str = None,
+  values: typing.List[str] = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity.property.consumeReservationType">consume_reservation_type</a></code> | <code>str</code> | Specifies the type of reservation from which this instance can consume resources: RESERVATION_ANY (default), RESERVATION_SPECIFIC, or RESERVATION_NONE. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity.property.key">key</a></code> | <code>str</code> | Corresponds to the label key of a reservation resource. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity.property.values">values</a></code> | <code>typing.List[str]</code> | Corresponds to the label values of a reservation resource. |
+
+---
+
+##### `consume_reservation_type`<sup>Optional</sup> <a name="consume_reservation_type" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity.property.consumeReservationType"></a>
+
+```python
+consume_reservation_type: str
+```
+
+- *Type:* str
+
+Specifies the type of reservation from which this instance can consume resources: RESERVATION_ANY (default), RESERVATION_SPECIFIC, or RESERVATION_NONE.
+
+Possible values: ["RESERVATION_NONE", "RESERVATION_ANY", "RESERVATION_SPECIFIC"]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#consume_reservation_type WorkbenchInstance#consume_reservation_type}
+
+---
+
+##### `key`<sup>Optional</sup> <a name="key" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity.property.key"></a>
+
+```python
+key: str
+```
+
+- *Type:* str
+
+Corresponds to the label key of a reservation resource.
+
+To target a
+RESERVATION_SPECIFIC by name, use compute.googleapis.com/reservation-name
+as the key and specify the name of your reservation as its value.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#key WorkbenchInstance#key}
+
+---
+
+##### `values`<sup>Optional</sup> <a name="values" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity.property.values"></a>
+
+```python
+values: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Corresponds to the label values of a reservation resource.
+
+This can be
+either a name to a reservation in the same project or
+"projects/different-project/reservations/some-reservation-name"
+to target a shared reservation in the same zone but in a different project.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#values WorkbenchInstance#values}
 
 ---
 
@@ -2572,7 +2733,7 @@ email: str
 
 Optional. Email address of the service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#email WorkbenchInstance#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#email WorkbenchInstance#email}
 
 ---
 
@@ -2616,7 +2777,7 @@ instance. The attestation is performed against the integrity policy baseline.
 This baseline is initially derived from the implicitly trusted boot image
 when the VM instance is created. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_integrity_monitoring WorkbenchInstance#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_integrity_monitoring WorkbenchInstance#enable_integrity_monitoring}
 
 ---
 
@@ -2635,7 +2796,7 @@ Secure Boot helps ensure that the system only runs authentic software by verifyi
 the digital signature of all boot components, and halting the boot process
 if signature verification fails. Disabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_secure_boot WorkbenchInstance#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_secure_boot WorkbenchInstance#enable_secure_boot}
 
 ---
 
@@ -2649,7 +2810,7 @@ enable_vtpm: typing.Union[bool, IResolvable]
 
 Optional. Defines whether the VM instance has the vTPM enabled. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_vtpm WorkbenchInstance#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_vtpm WorkbenchInstance#enable_vtpm}
 
 ---
 
@@ -2687,7 +2848,7 @@ family: str
 
 Optional. Use this VM image family to find the image; the newest image in this family will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#family WorkbenchInstance#family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#family WorkbenchInstance#family}
 
 ---
 
@@ -2701,7 +2862,7 @@ name: str
 
 Optional. Use VM image name to find the image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
 
 ---
 
@@ -2715,7 +2876,7 @@ project: str
 
 The name of the Google Cloud project that this VM image belongs to. Format: {project_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
 
 ---
 
@@ -2748,9 +2909,9 @@ workbenchInstance.WorkbenchInstanceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#create WorkbenchInstance#create}. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#update WorkbenchInstance#update}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#create WorkbenchInstance#create}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#update WorkbenchInstance#update}. |
 
 ---
 
@@ -2762,7 +2923,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#create WorkbenchInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#create WorkbenchInstance#create}.
 
 ---
 
@@ -2774,7 +2935,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#delete WorkbenchInstance#delete}.
 
 ---
 
@@ -2786,7 +2947,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#update WorkbenchInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#update WorkbenchInstance#update}.
 
 ---
 
@@ -5873,6 +6034,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putContainerImage">put_container_image</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putDataDisks">put_data_disks</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putNetworkInterfaces">put_network_interfaces</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putReservationAffinity">put_reservation_affinity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putServiceAccounts">put_service_accounts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putShieldedInstanceConfig">put_shielded_instance_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putVmImage">put_vm_image</a></code> | *No description.* |
@@ -5886,6 +6048,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetMachineType">reset_machine_type</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetMetadata">reset_metadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetNetworkInterfaces">reset_network_interfaces</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetReservationAffinity">reset_reservation_affinity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetServiceAccounts">reset_service_accounts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetShieldedInstanceConfig">reset_shielded_instance_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetTags">reset_tags</a></code> | *No description.* |
@@ -6096,7 +6259,7 @@ def put_boot_disk(
 
 Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["GMEK", "CMEK"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
 
 ---
 
@@ -6110,7 +6273,7 @@ The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). If not specified, this defaults to the
 recommended value of 150GB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
 
 ---
 
@@ -6120,7 +6283,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Indicates the type of the disk. Possible values: ["PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
 
 ---
 
@@ -6134,7 +6297,7 @@ The KMS key used to encrypt the disks, only
 applicable if disk_encryption is CMEK. Format: 'projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}'
 Learn more about using your own encryption keys.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
 
 ---
 
@@ -6152,7 +6315,7 @@ def put_confidential_instance_config(
 
 Defines the type of technology used by the confidential instance. Possible values: ["SEV"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#confidential_instance_type WorkbenchInstance#confidential_instance_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#confidential_instance_type WorkbenchInstance#confidential_instance_type}
 
 ---
 
@@ -6171,7 +6334,7 @@ def put_container_image(
 
 The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#repository WorkbenchInstance#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#repository WorkbenchInstance#repository}
 
 ---
 
@@ -6181,7 +6344,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The tag of the container image. If not specified, this defaults to the latest tag.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#tag WorkbenchInstance#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#tag WorkbenchInstance#tag}
 
 ---
 
@@ -6202,7 +6365,7 @@ def put_data_disks(
 
 Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["GMEK", "CMEK"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_encryption WorkbenchInstance#disk_encryption}
 
 ---
 
@@ -6216,7 +6379,7 @@ The size of the disk in GB attached to this VM instance,
 up to a maximum of 64000 GB (64 TB). If not specified, this defaults to
 100.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_size_gb WorkbenchInstance#disk_size_gb}
 
 ---
 
@@ -6226,7 +6389,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Input only. Indicates the type of the disk. Possible values: ["PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#disk_type WorkbenchInstance#disk_type}
 
 ---
 
@@ -6240,7 +6403,7 @@ The KMS key used to encrypt the disks,
 only applicable if disk_encryption is CMEK. Format: 'projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}'
 Learn more about using your own encryption keys.'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#kms_key WorkbenchInstance#kms_key}
 
 ---
 
@@ -6255,6 +6418,57 @@ def put_network_interfaces(
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putNetworkInterfaces.parameter.value"></a>
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfaces">WorkbenchInstanceGceSetupNetworkInterfaces</a>]]
+
+---
+
+##### `put_reservation_affinity` <a name="put_reservation_affinity" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putReservationAffinity"></a>
+
+```python
+def put_reservation_affinity(
+  consume_reservation_type: str = None,
+  key: str = None,
+  values: typing.List[str] = None
+) -> None
+```
+
+###### `consume_reservation_type`<sup>Optional</sup> <a name="consume_reservation_type" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putReservationAffinity.parameter.consumeReservationType"></a>
+
+- *Type:* str
+
+Specifies the type of reservation from which this instance can consume resources: RESERVATION_ANY (default), RESERVATION_SPECIFIC, or RESERVATION_NONE.
+
+Possible values: ["RESERVATION_NONE", "RESERVATION_ANY", "RESERVATION_SPECIFIC"]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#consume_reservation_type WorkbenchInstance#consume_reservation_type}
+
+---
+
+###### `key`<sup>Optional</sup> <a name="key" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putReservationAffinity.parameter.key"></a>
+
+- *Type:* str
+
+Corresponds to the label key of a reservation resource.
+
+To target a
+RESERVATION_SPECIFIC by name, use compute.googleapis.com/reservation-name
+as the key and specify the name of your reservation as its value.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#key WorkbenchInstance#key}
+
+---
+
+###### `values`<sup>Optional</sup> <a name="values" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.putReservationAffinity.parameter.values"></a>
+
+- *Type:* typing.List[str]
+
+Corresponds to the label values of a reservation resource.
+
+This can be
+either a name to a reservation in the same project or
+"projects/different-project/reservations/some-reservation-name"
+to target a shared reservation in the same zone but in a different project.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#values WorkbenchInstance#values}
 
 ---
 
@@ -6294,7 +6508,7 @@ instance. The attestation is performed against the integrity policy baseline.
 This baseline is initially derived from the implicitly trusted boot image
 when the VM instance is created. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_integrity_monitoring WorkbenchInstance#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_integrity_monitoring WorkbenchInstance#enable_integrity_monitoring}
 
 ---
 
@@ -6309,7 +6523,7 @@ Secure Boot helps ensure that the system only runs authentic software by verifyi
 the digital signature of all boot components, and halting the boot process
 if signature verification fails. Disabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_secure_boot WorkbenchInstance#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_secure_boot WorkbenchInstance#enable_secure_boot}
 
 ---
 
@@ -6319,7 +6533,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Defines whether the VM instance has the vTPM enabled. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#enable_vtpm WorkbenchInstance#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#enable_vtpm WorkbenchInstance#enable_vtpm}
 
 ---
 
@@ -6339,7 +6553,7 @@ def put_vm_image(
 
 Optional. Use this VM image family to find the image; the newest image in this family will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#family WorkbenchInstance#family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#family WorkbenchInstance#family}
 
 ---
 
@@ -6349,7 +6563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Use VM image name to find the image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#name WorkbenchInstance#name}
 
 ---
 
@@ -6359,7 +6573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the Google Cloud project that this VM image belongs to. Format: {project_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/workbench_instance#project WorkbenchInstance#project}
 
 ---
 
@@ -6423,6 +6637,12 @@ def reset_metadata() -> None
 def reset_network_interfaces() -> None
 ```
 
+##### `reset_reservation_affinity` <a name="reset_reservation_affinity" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetReservationAffinity"></a>
+
+```python
+def reset_reservation_affinity() -> None
+```
+
 ##### `reset_service_accounts` <a name="reset_service_accounts" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.resetServiceAccounts"></a>
 
 ```python
@@ -6460,6 +6680,7 @@ def reset_vm_image() -> None
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.containerImage">container_image</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupContainerImageOutputReference">WorkbenchInstanceGceSetupContainerImageOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.dataDisks">data_disks</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupDataDisksOutputReference">WorkbenchInstanceGceSetupDataDisksOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.networkInterfaces">network_interfaces</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfacesList">WorkbenchInstanceGceSetupNetworkInterfacesList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.reservationAffinity">reservation_affinity</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference">WorkbenchInstanceGceSetupReservationAffinityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.serviceAccounts">service_accounts</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupServiceAccountsList">WorkbenchInstanceGceSetupServiceAccountsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.shieldedInstanceConfig">shielded_instance_config</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupShieldedInstanceConfigOutputReference">WorkbenchInstanceGceSetupShieldedInstanceConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.vmImage">vm_image</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupVmImageOutputReference">WorkbenchInstanceGceSetupVmImageOutputReference</a></code> | *No description.* |
@@ -6473,6 +6694,7 @@ def reset_vm_image() -> None
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.machineTypeInput">machine_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.metadataInput">metadata_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.networkInterfacesInput">network_interfaces_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfaces">WorkbenchInstanceGceSetupNetworkInterfaces</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.reservationAffinityInput">reservation_affinity_input</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity">WorkbenchInstanceGceSetupReservationAffinity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.serviceAccountsInput">service_accounts_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupServiceAccounts">WorkbenchInstanceGceSetupServiceAccounts</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.shieldedInstanceConfigInput">shielded_instance_config_input</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupShieldedInstanceConfig">WorkbenchInstanceGceSetupShieldedInstanceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.tagsInput">tags_input</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -6567,6 +6789,16 @@ network_interfaces: WorkbenchInstanceGceSetupNetworkInterfacesList
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupNetworkInterfacesList">WorkbenchInstanceGceSetupNetworkInterfacesList</a>
+
+---
+
+##### `reservation_affinity`<sup>Required</sup> <a name="reservation_affinity" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.reservationAffinity"></a>
+
+```python
+reservation_affinity: WorkbenchInstanceGceSetupReservationAffinityOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference">WorkbenchInstanceGceSetupReservationAffinityOutputReference</a>
 
 ---
 
@@ -6700,6 +6932,16 @@ network_interfaces_input: typing.Union[IResolvable, typing.List[WorkbenchInstanc
 
 ---
 
+##### `reservation_affinity_input`<sup>Optional</sup> <a name="reservation_affinity_input" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.reservationAffinityInput"></a>
+
+```python
+reservation_affinity_input: WorkbenchInstanceGceSetupReservationAffinity
+```
+
+- *Type:* <a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity">WorkbenchInstanceGceSetupReservationAffinity</a>
+
+---
+
 ##### `service_accounts_input`<sup>Optional</sup> <a name="service_accounts_input" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupOutputReference.property.serviceAccountsInput"></a>
 
 ```python
@@ -6797,6 +7039,367 @@ internal_value: WorkbenchInstanceGceSetup
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetup">WorkbenchInstanceGceSetup</a>
+
+---
+
+
+### WorkbenchInstanceGceSetupReservationAffinityOutputReference <a name="WorkbenchInstanceGceSetupReservationAffinityOutputReference" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import workbench_instance
+
+workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resetConsumeReservationType">reset_consume_reservation_type</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resetKey">reset_key</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resetValues">reset_values</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_consume_reservation_type` <a name="reset_consume_reservation_type" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resetConsumeReservationType"></a>
+
+```python
+def reset_consume_reservation_type() -> None
+```
+
+##### `reset_key` <a name="reset_key" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resetKey"></a>
+
+```python
+def reset_key() -> None
+```
+
+##### `reset_values` <a name="reset_values" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.resetValues"></a>
+
+```python
+def reset_values() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.consumeReservationTypeInput">consume_reservation_type_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.keyInput">key_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.valuesInput">values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.consumeReservationType">consume_reservation_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.values">values</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity">WorkbenchInstanceGceSetupReservationAffinity</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `consume_reservation_type_input`<sup>Optional</sup> <a name="consume_reservation_type_input" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.consumeReservationTypeInput"></a>
+
+```python
+consume_reservation_type_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `key_input`<sup>Optional</sup> <a name="key_input" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.keyInput"></a>
+
+```python
+key_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `values_input`<sup>Optional</sup> <a name="values_input" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.valuesInput"></a>
+
+```python
+values_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `consume_reservation_type`<sup>Required</sup> <a name="consume_reservation_type" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.consumeReservationType"></a>
+
+```python
+consume_reservation_type: str
+```
+
+- *Type:* str
+
+---
+
+##### `key`<sup>Required</sup> <a name="key" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.key"></a>
+
+```python
+key: str
+```
+
+- *Type:* str
+
+---
+
+##### `values`<sup>Required</sup> <a name="values" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.values"></a>
+
+```python
+values: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinityOutputReference.property.internalValue"></a>
+
+```python
+internal_value: WorkbenchInstanceGceSetupReservationAffinity
+```
+
+- *Type:* <a href="#@cdktf/provider-google.workbenchInstance.WorkbenchInstanceGceSetupReservationAffinity">WorkbenchInstanceGceSetupReservationAffinity</a>
 
 ---
 

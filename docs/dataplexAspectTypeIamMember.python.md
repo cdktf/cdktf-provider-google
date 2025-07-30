@@ -4,7 +4,7 @@
 
 ### DataplexAspectTypeIamMember <a name="DataplexAspectTypeIamMember" id="@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member google_dataplex_aspect_type_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member google_dataplex_aspect_type_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer"></a>
 
@@ -42,13 +42,13 @@ dataplexAspectTypeIamMember.DataplexAspectTypeIamMember(
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.aspectTypeId">aspect_type_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#aspect_type_id DataplexAspectTypeIamMember#aspect_type_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#member DataplexAspectTypeIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#role DataplexAspectTypeIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.aspectTypeId">aspect_type_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#aspect_type_id DataplexAspectTypeIamMember#aspect_type_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#member DataplexAspectTypeIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#role DataplexAspectTypeIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition">DataplexAspectTypeIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#id DataplexAspectTypeIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#location DataplexAspectTypeIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#project DataplexAspectTypeIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#id DataplexAspectTypeIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#location DataplexAspectTypeIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#project DataplexAspectTypeIamMember#project}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#aspect_type_id DataplexAspectTypeIamMember#aspect_type_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#aspect_type_id DataplexAspectTypeIamMember#aspect_type_id}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#member DataplexAspectTypeIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#member DataplexAspectTypeIamMember#member}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#role DataplexAspectTypeIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#role DataplexAspectTypeIamMember#role}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#condition DataplexAspectTypeIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#condition DataplexAspectTypeIamMember#condition}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#id DataplexAspectTypeIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#id DataplexAspectTypeIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -161,7 +161,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#location DataplexAspectTypeIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#location DataplexAspectTypeIamMember#location}.
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#project DataplexAspectTypeIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#project DataplexAspectTypeIamMember#project}.
 
 ---
 
@@ -547,7 +547,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#expression DataplexAspectTypeIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#expression DataplexAspectTypeIamMember#expression}.
 
 ---
 
@@ -555,7 +555,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#title DataplexAspectTypeIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#title DataplexAspectTypeIamMember#title}.
 
 ---
 
@@ -563,7 +563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#description DataplexAspectTypeIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#description DataplexAspectTypeIamMember#description}.
 
 ---
 
@@ -705,7 +705,7 @@ The construct id used in the generated config for the DataplexAspectTypeIamMembe
 
 The id of the existing DataplexAspectTypeIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1083,9 +1083,9 @@ dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#expression DataplexAspectTypeIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#title DataplexAspectTypeIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#description DataplexAspectTypeIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#expression DataplexAspectTypeIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#title DataplexAspectTypeIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#description DataplexAspectTypeIamMember#description}. |
 
 ---
 
@@ -1097,7 +1097,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#expression DataplexAspectTypeIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#expression DataplexAspectTypeIamMember#expression}.
 
 ---
 
@@ -1109,7 +1109,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#title DataplexAspectTypeIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#title DataplexAspectTypeIamMember#title}.
 
 ---
 
@@ -1121,7 +1121,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#description DataplexAspectTypeIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#description DataplexAspectTypeIamMember#description}.
 
 ---
 
@@ -1161,13 +1161,13 @@ dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig(
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.aspectTypeId">aspect_type_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#aspect_type_id DataplexAspectTypeIamMember#aspect_type_id}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#member DataplexAspectTypeIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#role DataplexAspectTypeIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.aspectTypeId">aspect_type_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#aspect_type_id DataplexAspectTypeIamMember#aspect_type_id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#member DataplexAspectTypeIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#role DataplexAspectTypeIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberCondition">DataplexAspectTypeIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#id DataplexAspectTypeIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#location DataplexAspectTypeIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#project DataplexAspectTypeIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#id DataplexAspectTypeIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#location DataplexAspectTypeIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexAspectTypeIamMember.DataplexAspectTypeIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#project DataplexAspectTypeIamMember#project}. |
 
 ---
 
@@ -1249,7 +1249,7 @@ aspect_type_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#aspect_type_id DataplexAspectTypeIamMember#aspect_type_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#aspect_type_id DataplexAspectTypeIamMember#aspect_type_id}.
 
 ---
 
@@ -1261,7 +1261,7 @@ member: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#member DataplexAspectTypeIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#member DataplexAspectTypeIamMember#member}.
 
 ---
 
@@ -1273,7 +1273,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#role DataplexAspectTypeIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#role DataplexAspectTypeIamMember#role}.
 
 ---
 
@@ -1287,7 +1287,7 @@ condition: DataplexAspectTypeIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#condition DataplexAspectTypeIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#condition DataplexAspectTypeIamMember#condition}
 
 ---
 
@@ -1299,7 +1299,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#id DataplexAspectTypeIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#id DataplexAspectTypeIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1314,7 +1314,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#location DataplexAspectTypeIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#location DataplexAspectTypeIamMember#location}.
 
 ---
 
@@ -1326,7 +1326,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/dataplex_aspect_type_iam_member#project DataplexAspectTypeIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/dataplex_aspect_type_iam_member#project DataplexAspectTypeIamMember#project}.
 
 ---
 

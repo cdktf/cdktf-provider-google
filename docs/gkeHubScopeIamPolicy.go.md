@@ -4,7 +4,7 @@
 
 ### GkeHubScopeIamPolicy <a name="GkeHubScopeIamPolicy" id="@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy google_gke_hub_scope_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy google_gke_hub_scope_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicy.Initializer"></a>
 
@@ -481,7 +481,7 @@ The construct id used in the generated config for the GkeHubScopeIamPolicy to im
 
 The id of the existing GkeHubScopeIamPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -808,10 +808,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v16/gkehubscopeiampolic
 | <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#policy_data GkeHubScopeIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.scopeId">ScopeId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#scope_id GkeHubScopeIamPolicy#scope_id}. |
-| <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#id GkeHubScopeIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#project GkeHubScopeIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#policy_data GkeHubScopeIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.scopeId">ScopeId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#scope_id GkeHubScopeIamPolicy#scope_id}. |
+| <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#id GkeHubScopeIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.gkeHubScopeIamPolicy.GkeHubScopeIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#project GkeHubScopeIamPolicy#project}. |
 
 ---
 
@@ -893,7 +893,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#policy_data GkeHubScopeIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#policy_data GkeHubScopeIamPolicy#policy_data}.
 
 ---
 
@@ -905,7 +905,7 @@ ScopeId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#scope_id GkeHubScopeIamPolicy#scope_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#scope_id GkeHubScopeIamPolicy#scope_id}.
 
 ---
 
@@ -917,7 +917,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#id GkeHubScopeIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#id GkeHubScopeIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -932,7 +932,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.45.0/docs/resources/gke_hub_scope_iam_policy#project GkeHubScopeIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/gke_hub_scope_iam_policy#project GkeHubScopeIamPolicy#project}.
 
 ---
 
