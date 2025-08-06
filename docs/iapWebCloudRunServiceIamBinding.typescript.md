@@ -4,7 +4,7 @@
 
 ### IapWebCloudRunServiceIamBinding <a name="IapWebCloudRunServiceIamBinding" id="@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding google_iap_web_cloud_run_service_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding google_iap_web_cloud_run_service_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBinding.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the IapWebCloudRunServiceIamBi
 
 The id of the existing IapWebCloudRunServiceIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -882,9 +882,9 @@ const iapWebCloudRunServiceIamBindingCondition: iapWebCloudRunServiceIamBinding.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#expression IapWebCloudRunServiceIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#title IapWebCloudRunServiceIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#description IapWebCloudRunServiceIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#expression IapWebCloudRunServiceIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#title IapWebCloudRunServiceIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#description IapWebCloudRunServiceIamBinding#description}. |
 
 ---
 
@@ -896,7 +896,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#expression IapWebCloudRunServiceIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#expression IapWebCloudRunServiceIamBinding#expression}.
 
 ---
 
@@ -908,7 +908,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#title IapWebCloudRunServiceIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#title IapWebCloudRunServiceIamBinding#title}.
 
 ---
 
@@ -920,7 +920,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#description IapWebCloudRunServiceIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#description IapWebCloudRunServiceIamBinding#description}.
 
 ---
 
@@ -945,13 +945,13 @@ const iapWebCloudRunServiceIamBindingConfig: iapWebCloudRunServiceIamBinding.Iap
 | <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.cloudRunServiceName">cloudRunServiceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#cloud_run_service_name IapWebCloudRunServiceIamBinding#cloud_run_service_name}. |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.members">members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#members IapWebCloudRunServiceIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#role IapWebCloudRunServiceIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.cloudRunServiceName">cloudRunServiceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#cloud_run_service_name IapWebCloudRunServiceIamBinding#cloud_run_service_name}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.members">members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#members IapWebCloudRunServiceIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#role IapWebCloudRunServiceIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingCondition">IapWebCloudRunServiceIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#id IapWebCloudRunServiceIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#location IapWebCloudRunServiceIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#project IapWebCloudRunServiceIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#id IapWebCloudRunServiceIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#location IapWebCloudRunServiceIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.iapWebCloudRunServiceIamBinding.IapWebCloudRunServiceIamBindingConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#project IapWebCloudRunServiceIamBinding#project}. |
 
 ---
 
@@ -1033,7 +1033,7 @@ public readonly cloudRunServiceName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#cloud_run_service_name IapWebCloudRunServiceIamBinding#cloud_run_service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#cloud_run_service_name IapWebCloudRunServiceIamBinding#cloud_run_service_name}.
 
 ---
 
@@ -1045,7 +1045,7 @@ public readonly members: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#members IapWebCloudRunServiceIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#members IapWebCloudRunServiceIamBinding#members}.
 
 ---
 
@@ -1057,7 +1057,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#role IapWebCloudRunServiceIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#role IapWebCloudRunServiceIamBinding#role}.
 
 ---
 
@@ -1071,7 +1071,7 @@ public readonly condition: IapWebCloudRunServiceIamBindingCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#condition IapWebCloudRunServiceIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#condition IapWebCloudRunServiceIamBinding#condition}
 
 ---
 
@@ -1083,7 +1083,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#id IapWebCloudRunServiceIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#id IapWebCloudRunServiceIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1098,7 +1098,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#location IapWebCloudRunServiceIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#location IapWebCloudRunServiceIamBinding#location}.
 
 ---
 
@@ -1110,7 +1110,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/iap_web_cloud_run_service_iam_binding#project IapWebCloudRunServiceIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/iap_web_cloud_run_service_iam_binding#project IapWebCloudRunServiceIamBinding#project}.
 
 ---
 
