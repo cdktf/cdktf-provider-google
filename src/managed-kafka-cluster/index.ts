@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster
+// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ManagedKafkaClusterConfig extends cdktf.TerraformMetaArguments 
   /**
   * The ID to use for the cluster, which will become the final component of the cluster's name. The ID must be 1-63 characters long, and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' to comply with RFC 1035. This value is structured like: 'my-cluster-id'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#cluster_id ManagedKafkaCluster#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#cluster_id ManagedKafkaCluster#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#id ManagedKafkaCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#id ManagedKafkaCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,55 +31,61 @@ export interface ManagedKafkaClusterConfig extends cdktf.TerraformMetaArguments 
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#labels ManagedKafkaCluster#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#labels ManagedKafkaCluster#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * ID of the location of the Kafka resource. See https://cloud.google.com/managed-kafka/docs/locations for a list of supported locations.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#location ManagedKafkaCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#location ManagedKafkaCluster#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#project ManagedKafkaCluster#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#project ManagedKafkaCluster#project}
   */
   readonly project?: string;
   /**
   * capacity_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#capacity_config ManagedKafkaCluster#capacity_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#capacity_config ManagedKafkaCluster#capacity_config}
   */
   readonly capacityConfig: ManagedKafkaClusterCapacityConfig;
   /**
   * gcp_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#gcp_config ManagedKafkaCluster#gcp_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#gcp_config ManagedKafkaCluster#gcp_config}
   */
   readonly gcpConfig: ManagedKafkaClusterGcpConfig;
   /**
   * rebalance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#rebalance_config ManagedKafkaCluster#rebalance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#rebalance_config ManagedKafkaCluster#rebalance_config}
   */
   readonly rebalanceConfig?: ManagedKafkaClusterRebalanceConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#timeouts ManagedKafkaCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#timeouts ManagedKafkaCluster#timeouts}
   */
   readonly timeouts?: ManagedKafkaClusterTimeouts;
+  /**
+  * tls_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#tls_config ManagedKafkaCluster#tls_config}
+  */
+  readonly tlsConfig?: ManagedKafkaClusterTlsConfig;
 }
 export interface ManagedKafkaClusterCapacityConfig {
   /**
   * The memory to provision for the cluster in bytes. The value must be between 1 GiB and 8 GiB per vCPU. Ex. 1024Mi, 4Gi.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#memory_bytes ManagedKafkaCluster#memory_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#memory_bytes ManagedKafkaCluster#memory_bytes}
   */
   readonly memoryBytes: string;
   /**
   * The number of vCPUs to provision for the cluster. The minimum is 3.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#vcpu_count ManagedKafkaCluster#vcpu_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#vcpu_count ManagedKafkaCluster#vcpu_count}
   */
   readonly vcpuCount: string;
 }
@@ -188,7 +194,7 @@ export interface ManagedKafkaClusterGcpConfigAccessConfigNetworkConfigs {
   /**
   * Name of the VPC subnet from which the cluster is accessible. Both broker and bootstrap server IP addresses and DNS entries are automatically created in the subnet. There can only be one subnet per network, and the subnet must be located in the same region as the cluster. The project may differ. The name of the subnet must be in the format 'projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#subnet ManagedKafkaCluster#subnet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#subnet ManagedKafkaCluster#subnet}
   */
   readonly subnet: string;
 }
@@ -303,7 +309,7 @@ export interface ManagedKafkaClusterGcpConfigAccessConfig {
   /**
   * network_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#network_configs ManagedKafkaCluster#network_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#network_configs ManagedKafkaCluster#network_configs}
   */
   readonly networkConfigs: ManagedKafkaClusterGcpConfigAccessConfigNetworkConfigs[] | cdktf.IResolvable;
 }
@@ -386,13 +392,13 @@ export interface ManagedKafkaClusterGcpConfig {
   /**
   * The Cloud KMS Key name to use for encryption. The key must be located in the same region as the cluster and cannot be changed. Must be in the format 'projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#kms_key ManagedKafkaCluster#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#kms_key ManagedKafkaCluster#kms_key}
   */
   readonly kmsKey?: string;
   /**
   * access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#access_config ManagedKafkaCluster#access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#access_config ManagedKafkaCluster#access_config}
   */
   readonly accessConfig: ManagedKafkaClusterGcpConfigAccessConfig;
 }
@@ -504,7 +510,7 @@ export interface ManagedKafkaClusterRebalanceConfig {
   /**
   * The rebalance behavior for the cluster. When not specified, defaults to 'NO_REBALANCE'. Possible values: 'MODE_UNSPECIFIED', 'NO_REBALANCE', 'AUTO_REBALANCE_ON_SCALE_UP'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#mode ManagedKafkaCluster#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#mode ManagedKafkaCluster#mode}
   */
   readonly mode?: string;
 }
@@ -588,15 +594,15 @@ export class ManagedKafkaClusterRebalanceConfigOutputReference extends cdktf.Com
 }
 export interface ManagedKafkaClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#create ManagedKafkaCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#create ManagedKafkaCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#delete ManagedKafkaCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#delete ManagedKafkaCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#update ManagedKafkaCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#update ManagedKafkaCluster#update}
   */
   readonly update?: string;
 }
@@ -746,9 +752,331 @@ export class ManagedKafkaClusterTimeoutsOutputReference extends cdktf.ComplexObj
     return this._update;
   }
 }
+export interface ManagedKafkaClusterTlsConfigTrustConfigCasConfigs {
+  /**
+  * The name of the CA pool to pull CA certificates from. The CA pool does not need to be in the same project or location as the Kafka cluster. Must be in the format 'projects/PROJECT_ID/locations/LOCATION/caPools/CA_POOL_ID.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#ca_pool ManagedKafkaCluster#ca_pool}
+  */
+  readonly caPool: string;
+}
+
+export function managedKafkaClusterTlsConfigTrustConfigCasConfigsToTerraform(struct?: ManagedKafkaClusterTlsConfigTrustConfigCasConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ca_pool: cdktf.stringToTerraform(struct!.caPool),
+  }
+}
+
+
+export function managedKafkaClusterTlsConfigTrustConfigCasConfigsToHclTerraform(struct?: ManagedKafkaClusterTlsConfigTrustConfigCasConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ca_pool: {
+      value: cdktf.stringToHclTerraform(struct!.caPool),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ManagedKafkaClusterTlsConfigTrustConfigCasConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ManagedKafkaClusterTlsConfigTrustConfigCasConfigs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._caPool !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.caPool = this._caPool;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ManagedKafkaClusterTlsConfigTrustConfigCasConfigs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._caPool = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._caPool = value.caPool;
+    }
+  }
+
+  // ca_pool - computed: false, optional: false, required: true
+  private _caPool?: string; 
+  public get caPool() {
+    return this.getStringAttribute('ca_pool');
+  }
+  public set caPool(value: string) {
+    this._caPool = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get caPoolInput() {
+    return this._caPool;
+  }
+}
+
+export class ManagedKafkaClusterTlsConfigTrustConfigCasConfigsList extends cdktf.ComplexList {
+  public internalValue? : ManagedKafkaClusterTlsConfigTrustConfigCasConfigs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ManagedKafkaClusterTlsConfigTrustConfigCasConfigsOutputReference {
+    return new ManagedKafkaClusterTlsConfigTrustConfigCasConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ManagedKafkaClusterTlsConfigTrustConfig {
+  /**
+  * cas_configs block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#cas_configs ManagedKafkaCluster#cas_configs}
+  */
+  readonly casConfigs?: ManagedKafkaClusterTlsConfigTrustConfigCasConfigs[] | cdktf.IResolvable;
+}
+
+export function managedKafkaClusterTlsConfigTrustConfigToTerraform(struct?: ManagedKafkaClusterTlsConfigTrustConfigOutputReference | ManagedKafkaClusterTlsConfigTrustConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cas_configs: cdktf.listMapper(managedKafkaClusterTlsConfigTrustConfigCasConfigsToTerraform, true)(struct!.casConfigs),
+  }
+}
+
+
+export function managedKafkaClusterTlsConfigTrustConfigToHclTerraform(struct?: ManagedKafkaClusterTlsConfigTrustConfigOutputReference | ManagedKafkaClusterTlsConfigTrustConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cas_configs: {
+      value: cdktf.listMapperHcl(managedKafkaClusterTlsConfigTrustConfigCasConfigsToHclTerraform, true)(struct!.casConfigs),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ManagedKafkaClusterTlsConfigTrustConfigCasConfigsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ManagedKafkaClusterTlsConfigTrustConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ManagedKafkaClusterTlsConfigTrustConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._casConfigs?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.casConfigs = this._casConfigs?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ManagedKafkaClusterTlsConfigTrustConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._casConfigs.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._casConfigs.internalValue = value.casConfigs;
+    }
+  }
+
+  // cas_configs - computed: false, optional: true, required: false
+  private _casConfigs = new ManagedKafkaClusterTlsConfigTrustConfigCasConfigsList(this, "cas_configs", false);
+  public get casConfigs() {
+    return this._casConfigs;
+  }
+  public putCasConfigs(value: ManagedKafkaClusterTlsConfigTrustConfigCasConfigs[] | cdktf.IResolvable) {
+    this._casConfigs.internalValue = value;
+  }
+  public resetCasConfigs() {
+    this._casConfigs.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get casConfigsInput() {
+    return this._casConfigs.internalValue;
+  }
+}
+export interface ManagedKafkaClusterTlsConfig {
+  /**
+  * The rules for mapping mTLS certificate Distinguished Names (DNs) to shortened principal names for Kafka ACLs. This field corresponds exactly to the ssl.principal.mapping.rules broker config and matches the format and syntax defined in the Apache Kafka documentation. Setting or modifying this field will trigger a rolling restart of the Kafka brokers to apply the change. An empty string means that the default Kafka behavior is used. Example: 'RULE:^CN=(.?),OU=ServiceUsers.$/$1@example.com/,DEFAULT'
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#ssl_principal_mapping_rules ManagedKafkaCluster#ssl_principal_mapping_rules}
+  */
+  readonly sslPrincipalMappingRules?: string;
+  /**
+  * trust_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#trust_config ManagedKafkaCluster#trust_config}
+  */
+  readonly trustConfig?: ManagedKafkaClusterTlsConfigTrustConfig;
+}
+
+export function managedKafkaClusterTlsConfigToTerraform(struct?: ManagedKafkaClusterTlsConfigOutputReference | ManagedKafkaClusterTlsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ssl_principal_mapping_rules: cdktf.stringToTerraform(struct!.sslPrincipalMappingRules),
+    trust_config: managedKafkaClusterTlsConfigTrustConfigToTerraform(struct!.trustConfig),
+  }
+}
+
+
+export function managedKafkaClusterTlsConfigToHclTerraform(struct?: ManagedKafkaClusterTlsConfigOutputReference | ManagedKafkaClusterTlsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ssl_principal_mapping_rules: {
+      value: cdktf.stringToHclTerraform(struct!.sslPrincipalMappingRules),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    trust_config: {
+      value: managedKafkaClusterTlsConfigTrustConfigToHclTerraform(struct!.trustConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ManagedKafkaClusterTlsConfigTrustConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ManagedKafkaClusterTlsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ManagedKafkaClusterTlsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sslPrincipalMappingRules !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslPrincipalMappingRules = this._sslPrincipalMappingRules;
+    }
+    if (this._trustConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustConfig = this._trustConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ManagedKafkaClusterTlsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._sslPrincipalMappingRules = undefined;
+      this._trustConfig.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._sslPrincipalMappingRules = value.sslPrincipalMappingRules;
+      this._trustConfig.internalValue = value.trustConfig;
+    }
+  }
+
+  // ssl_principal_mapping_rules - computed: false, optional: true, required: false
+  private _sslPrincipalMappingRules?: string; 
+  public get sslPrincipalMappingRules() {
+    return this.getStringAttribute('ssl_principal_mapping_rules');
+  }
+  public set sslPrincipalMappingRules(value: string) {
+    this._sslPrincipalMappingRules = value;
+  }
+  public resetSslPrincipalMappingRules() {
+    this._sslPrincipalMappingRules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslPrincipalMappingRulesInput() {
+    return this._sslPrincipalMappingRules;
+  }
+
+  // trust_config - computed: false, optional: true, required: false
+  private _trustConfig = new ManagedKafkaClusterTlsConfigTrustConfigOutputReference(this, "trust_config");
+  public get trustConfig() {
+    return this._trustConfig;
+  }
+  public putTrustConfig(value: ManagedKafkaClusterTlsConfigTrustConfig) {
+    this._trustConfig.internalValue = value;
+  }
+  public resetTrustConfig() {
+    this._trustConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustConfigInput() {
+    return this._trustConfig.internalValue;
+  }
+}
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster google_managed_kafka_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster google_managed_kafka_cluster}
 */
 export class ManagedKafkaCluster extends cdktf.TerraformResource {
 
@@ -764,7 +1092,7 @@ export class ManagedKafkaCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ManagedKafkaCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ManagedKafkaCluster to import
-  * @param importFromId The id of the existing ManagedKafkaCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ManagedKafkaCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ManagedKafkaCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -776,7 +1104,7 @@ export class ManagedKafkaCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/managed_kafka_cluster google_managed_kafka_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/managed_kafka_cluster google_managed_kafka_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -787,7 +1115,7 @@ export class ManagedKafkaCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_managed_kafka_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.46.0',
+        providerVersion: '6.47.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -807,6 +1135,7 @@ export class ManagedKafkaCluster extends cdktf.TerraformResource {
     this._gcpConfig.internalValue = config.gcpConfig;
     this._rebalanceConfig.internalValue = config.rebalanceConfig;
     this._timeouts.internalValue = config.timeouts;
+    this._tlsConfig.internalValue = config.tlsConfig;
   }
 
   // ==========
@@ -977,6 +1306,22 @@ export class ManagedKafkaCluster extends cdktf.TerraformResource {
     return this._timeouts.internalValue;
   }
 
+  // tls_config - computed: false, optional: true, required: false
+  private _tlsConfig = new ManagedKafkaClusterTlsConfigOutputReference(this, "tls_config");
+  public get tlsConfig() {
+    return this._tlsConfig;
+  }
+  public putTlsConfig(value: ManagedKafkaClusterTlsConfig) {
+    this._tlsConfig.internalValue = value;
+  }
+  public resetTlsConfig() {
+    this._tlsConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsConfigInput() {
+    return this._tlsConfig.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -992,6 +1337,7 @@ export class ManagedKafkaCluster extends cdktf.TerraformResource {
       gcp_config: managedKafkaClusterGcpConfigToTerraform(this._gcpConfig.internalValue),
       rebalance_config: managedKafkaClusterRebalanceConfigToTerraform(this._rebalanceConfig.internalValue),
       timeouts: managedKafkaClusterTimeoutsToTerraform(this._timeouts.internalValue),
+      tls_config: managedKafkaClusterTlsConfigToTerraform(this._tlsConfig.internalValue),
     };
   }
 
@@ -1050,6 +1396,12 @@ export class ManagedKafkaCluster extends cdktf.TerraformResource {
         isBlock: true,
         type: "struct",
         storageClassType: "ManagedKafkaClusterTimeouts",
+      },
+      tls_config: {
+        value: managedKafkaClusterTlsConfigToHclTerraform(this._tlsConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ManagedKafkaClusterTlsConfigList",
       },
     };
 
