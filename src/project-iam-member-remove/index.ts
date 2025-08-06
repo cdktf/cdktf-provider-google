@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/project_iam_member_remove
+// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/project_iam_member_remove
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface ProjectIamMemberRemoveConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/project_iam_member_remove#id ProjectIamMemberRemove#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/project_iam_member_remove#id ProjectIamMemberRemove#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,25 +22,25 @@ export interface ProjectIamMemberRemoveConfig extends cdktf.TerraformMetaArgumen
   /**
   * The IAM principal that should not have the target role.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/project_iam_member_remove#member ProjectIamMemberRemove#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/project_iam_member_remove#member ProjectIamMemberRemove#member}
   */
   readonly member: string;
   /**
   * The project id of the target project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/project_iam_member_remove#project ProjectIamMemberRemove#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/project_iam_member_remove#project ProjectIamMemberRemove#project}
   */
   readonly project: string;
   /**
   * The target role that should be removed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/project_iam_member_remove#role ProjectIamMemberRemove#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/project_iam_member_remove#role ProjectIamMemberRemove#role}
   */
   readonly role: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/project_iam_member_remove google_project_iam_member_remove}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/project_iam_member_remove google_project_iam_member_remove}
 */
 export class ProjectIamMemberRemove extends cdktf.TerraformResource {
 
@@ -56,7 +56,7 @@ export class ProjectIamMemberRemove extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ProjectIamMemberRemove resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ProjectIamMemberRemove to import
-  * @param importFromId The id of the existing ProjectIamMemberRemove that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/project_iam_member_remove#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ProjectIamMemberRemove that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/project_iam_member_remove#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ProjectIamMemberRemove to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -68,7 +68,7 @@ export class ProjectIamMemberRemove extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/project_iam_member_remove google_project_iam_member_remove} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/project_iam_member_remove google_project_iam_member_remove} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -79,7 +79,7 @@ export class ProjectIamMemberRemove extends cdktf.TerraformResource {
       terraformResourceType: 'google_project_iam_member_remove',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.46.0',
+        providerVersion: '6.47.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

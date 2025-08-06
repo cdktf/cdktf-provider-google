@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function
+// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,71 +15,71 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   /**
   * Memory (in MB), available to the function. Default value is 256. Possible values include 128, 256, 512, 1024, etc.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#available_memory_mb CloudfunctionsFunction#available_memory_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#available_memory_mb CloudfunctionsFunction#available_memory_mb}
   */
   readonly availableMemoryMb?: number;
   /**
   *  A set of key/value environment variable pairs available during build time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#build_environment_variables CloudfunctionsFunction#build_environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#build_environment_variables CloudfunctionsFunction#build_environment_variables}
   */
   readonly buildEnvironmentVariables?: { [key: string]: string };
   /**
   * The fully-qualified name of the service account to be used for the build step of deploying this function
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#build_service_account CloudfunctionsFunction#build_service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#build_service_account CloudfunctionsFunction#build_service_account}
   */
   readonly buildServiceAccount?: string;
   /**
   * Name of the Cloud Build Custom Worker Pool that should be used to build the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#build_worker_pool CloudfunctionsFunction#build_worker_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#build_worker_pool CloudfunctionsFunction#build_worker_pool}
   */
   readonly buildWorkerPool?: string;
   /**
   * Description of the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#description CloudfunctionsFunction#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#description CloudfunctionsFunction#description}
   */
   readonly description?: string;
   /**
   * Docker Registry to use for storing the function's Docker images. Allowed values are ARTIFACT_REGISTRY (default) and CONTAINER_REGISTRY.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#docker_registry CloudfunctionsFunction#docker_registry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#docker_registry CloudfunctionsFunction#docker_registry}
   */
   readonly dockerRegistry?: string;
   /**
   * User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry for storing images built with Cloud Build.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#docker_repository CloudfunctionsFunction#docker_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#docker_repository CloudfunctionsFunction#docker_repository}
   */
   readonly dockerRepository?: string;
   /**
   * Name of the function that will be executed when the Google Cloud Function is triggered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#entry_point CloudfunctionsFunction#entry_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#entry_point CloudfunctionsFunction#entry_point}
   */
   readonly entryPoint?: string;
   /**
   * A set of key/value environment variable pairs to assign to the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#environment_variables CloudfunctionsFunction#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#environment_variables CloudfunctionsFunction#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
   * The security level for the function. Defaults to SECURE_OPTIONAL. Valid only if trigger_http is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#https_trigger_security_level CloudfunctionsFunction#https_trigger_security_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#https_trigger_security_level CloudfunctionsFunction#https_trigger_security_level}
   */
   readonly httpsTriggerSecurityLevel?: string;
   /**
   * URL which triggers function execution. Returned only if trigger_http is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#https_trigger_url CloudfunctionsFunction#https_trigger_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#https_trigger_url CloudfunctionsFunction#https_trigger_url}
   */
   readonly httpsTriggerUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#id CloudfunctionsFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#id CloudfunctionsFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -88,13 +88,13 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   /**
   * String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#ingress_settings CloudfunctionsFunction#ingress_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#ingress_settings CloudfunctionsFunction#ingress_settings}
   */
   readonly ingressSettings?: string;
   /**
   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#kms_key_name CloudfunctionsFunction#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#kms_key_name CloudfunctionsFunction#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
@@ -103,79 +103,79 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * 				Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#labels CloudfunctionsFunction#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#labels CloudfunctionsFunction#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The limit on the maximum number of function instances that may coexist at a given time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#max_instances CloudfunctionsFunction#max_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#max_instances CloudfunctionsFunction#max_instances}
   */
   readonly maxInstances?: number;
   /**
   * The limit on the minimum number of function instances that may coexist at a given time.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#min_instances CloudfunctionsFunction#min_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#min_instances CloudfunctionsFunction#min_instances}
   */
   readonly minInstances?: number;
   /**
   * A user-defined name of the function. Function names must be unique globally.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#name CloudfunctionsFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#name CloudfunctionsFunction#name}
   */
   readonly name: string;
   /**
   * Project of the function. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#project CloudfunctionsFunction#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#project CloudfunctionsFunction#project}
   */
   readonly project?: string;
   /**
   * Region of function. If it is not provided, the provider region is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#region CloudfunctionsFunction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#region CloudfunctionsFunction#region}
   */
   readonly region?: string;
   /**
   * The runtime in which the function is going to run. Eg. "nodejs20", "python37", "go111".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#runtime CloudfunctionsFunction#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#runtime CloudfunctionsFunction#runtime}
   */
   readonly runtime: string;
   /**
   *  If provided, the self-provided service account to run the function with.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#service_account_email CloudfunctionsFunction#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#service_account_email CloudfunctionsFunction#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
   * The GCS bucket containing the zip archive which contains the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#source_archive_bucket CloudfunctionsFunction#source_archive_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#source_archive_bucket CloudfunctionsFunction#source_archive_bucket}
   */
   readonly sourceArchiveBucket?: string;
   /**
   * The source archive object (file) in archive bucket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#source_archive_object CloudfunctionsFunction#source_archive_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#source_archive_object CloudfunctionsFunction#source_archive_object}
   */
   readonly sourceArchiveObject?: string;
   /**
   * Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#timeout CloudfunctionsFunction#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#timeout CloudfunctionsFunction#timeout}
   */
   readonly timeout?: number;
   /**
   * Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as https_trigger_url. Cannot be used with trigger_bucket and trigger_topic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#trigger_http CloudfunctionsFunction#trigger_http}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#trigger_http CloudfunctionsFunction#trigger_http}
   */
   readonly triggerHttp?: boolean | cdktf.IResolvable;
   /**
   * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is projects/* /locations/* /connectors/*.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#vpc_connector CloudfunctionsFunction#vpc_connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#vpc_connector CloudfunctionsFunction#vpc_connector}
    *
   * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
@@ -183,45 +183,106 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   /**
   * The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are ALL_TRAFFIC and PRIVATE_RANGES_ONLY. Defaults to PRIVATE_RANGES_ONLY. If unset, this field preserves the previously set value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#vpc_connector_egress_settings CloudfunctionsFunction#vpc_connector_egress_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#vpc_connector_egress_settings CloudfunctionsFunction#vpc_connector_egress_settings}
   */
   readonly vpcConnectorEgressSettings?: string;
   /**
+  * automatic_update_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#automatic_update_policy CloudfunctionsFunction#automatic_update_policy}
+  */
+  readonly automaticUpdatePolicy?: CloudfunctionsFunctionAutomaticUpdatePolicy;
+  /**
   * event_trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#event_trigger CloudfunctionsFunction#event_trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#event_trigger CloudfunctionsFunction#event_trigger}
   */
   readonly eventTrigger?: CloudfunctionsFunctionEventTrigger;
   /**
+  * on_deploy_update_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#on_deploy_update_policy CloudfunctionsFunction#on_deploy_update_policy}
+  */
+  readonly onDeployUpdatePolicy?: CloudfunctionsFunctionOnDeployUpdatePolicy;
+  /**
   * secret_environment_variables block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#secret_environment_variables CloudfunctionsFunction#secret_environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#secret_environment_variables CloudfunctionsFunction#secret_environment_variables}
   */
   readonly secretEnvironmentVariables?: CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable;
   /**
   * secret_volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#secret_volumes CloudfunctionsFunction#secret_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#secret_volumes CloudfunctionsFunction#secret_volumes}
   */
   readonly secretVolumes?: CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable;
   /**
   * source_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#source_repository CloudfunctionsFunction#source_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#source_repository CloudfunctionsFunction#source_repository}
   */
   readonly sourceRepository?: CloudfunctionsFunctionSourceRepository;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#timeouts CloudfunctionsFunction#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#timeouts CloudfunctionsFunction#timeouts}
   */
   readonly timeouts?: CloudfunctionsFunctionTimeouts;
+}
+export interface CloudfunctionsFunctionAutomaticUpdatePolicy {
+}
+
+export function cloudfunctionsFunctionAutomaticUpdatePolicyToTerraform(struct?: CloudfunctionsFunctionAutomaticUpdatePolicyOutputReference | CloudfunctionsFunctionAutomaticUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function cloudfunctionsFunctionAutomaticUpdatePolicyToHclTerraform(struct?: CloudfunctionsFunctionAutomaticUpdatePolicyOutputReference | CloudfunctionsFunctionAutomaticUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class CloudfunctionsFunctionAutomaticUpdatePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudfunctionsFunctionAutomaticUpdatePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudfunctionsFunctionAutomaticUpdatePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 }
 export interface CloudfunctionsFunctionEventTriggerFailurePolicy {
   /**
   * Whether the function should be retried on failure. Defaults to false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#retry CloudfunctionsFunction#retry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#retry CloudfunctionsFunction#retry}
   */
   readonly retry: boolean | cdktf.IResolvable;
 }
@@ -304,19 +365,19 @@ export interface CloudfunctionsFunctionEventTrigger {
   /**
   * The type of event to observe. For example: "google.storage.object.finalize". See the documentation on calling Cloud Functions for a full reference of accepted triggers.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#event_type CloudfunctionsFunction#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#event_type CloudfunctionsFunction#event_type}
   */
   readonly eventType: string;
   /**
   * The name or partial URI of the resource from which to observe events. For example, "myBucket" or "projects/my-project/topics/my-topic"
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#resource CloudfunctionsFunction#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#resource CloudfunctionsFunction#resource}
   */
   readonly resource: string;
   /**
   * failure_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#failure_policy CloudfunctionsFunction#failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#failure_policy CloudfunctionsFunction#failure_policy}
   */
   readonly failurePolicy?: CloudfunctionsFunctionEventTriggerFailurePolicy;
 }
@@ -450,29 +511,83 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
     return this._failurePolicy.internalValue;
   }
 }
+export interface CloudfunctionsFunctionOnDeployUpdatePolicy {
+}
+
+export function cloudfunctionsFunctionOnDeployUpdatePolicyToTerraform(struct?: CloudfunctionsFunctionOnDeployUpdatePolicyOutputReference | CloudfunctionsFunctionOnDeployUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function cloudfunctionsFunctionOnDeployUpdatePolicyToHclTerraform(struct?: CloudfunctionsFunctionOnDeployUpdatePolicyOutputReference | CloudfunctionsFunctionOnDeployUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class CloudfunctionsFunctionOnDeployUpdatePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudfunctionsFunctionOnDeployUpdatePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudfunctionsFunctionOnDeployUpdatePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // runtime_version - computed: true, optional: false, required: false
+  public get runtimeVersion() {
+    return this.getStringAttribute('runtime_version');
+  }
+}
 export interface CloudfunctionsFunctionSecretEnvironmentVariables {
   /**
   * Name of the environment variable.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#key CloudfunctionsFunction#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#key CloudfunctionsFunction#key}
   */
   readonly key: string;
   /**
   * Project identifier (due to a known limitation, only project number is supported by this field) of the project that contains the secret. If not set, it will be populated with the function's project, assuming that the secret exists in the same project as of the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#project_id CloudfunctionsFunction#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#project_id CloudfunctionsFunction#project_id}
   */
   readonly projectId?: string;
   /**
   * ID of the secret in secret manager (not the full resource name).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#secret CloudfunctionsFunction#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#secret CloudfunctionsFunction#secret}
   */
   readonly secret: string;
   /**
   * Version of the secret (version number or the string "latest"). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#version CloudfunctionsFunction#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#version CloudfunctionsFunction#version}
   */
   readonly version: string;
 }
@@ -668,13 +783,13 @@ export interface CloudfunctionsFunctionSecretVolumesVersions {
   /**
   * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as "/etc/secrets" and path as "/secret_foo" would mount the secret value file at "/etc/secrets/secret_foo".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#path CloudfunctionsFunction#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#path CloudfunctionsFunction#path}
   */
   readonly path: string;
   /**
   * Version of the secret (version number or the string "latest"). It is preferable to use "latest" version with secret volumes as secret value changes are reflected immediately.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#version CloudfunctionsFunction#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#version CloudfunctionsFunction#version}
   */
   readonly version: string;
 }
@@ -815,25 +930,25 @@ export interface CloudfunctionsFunctionSecretVolumes {
   /**
   * The path within the container to mount the secret volume. For example, setting the mount_path as "/etc/secrets" would mount the secret value files under the "/etc/secrets" directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: "/etc/secrets" Restricted mount paths: "/cloudsql", "/dev/log", "/pod", "/proc", "/var/log".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#mount_path CloudfunctionsFunction#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#mount_path CloudfunctionsFunction#mount_path}
   */
   readonly mountPath: string;
   /**
   * Project identifier (due to a known limitation, only project number is supported by this field) of the project that contains the secret. If not set, it will be populated with the function's project, assuming that the secret exists in the same project as of the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#project_id CloudfunctionsFunction#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#project_id CloudfunctionsFunction#project_id}
   */
   readonly projectId?: string;
   /**
   * ID of the secret in secret manager (not the full resource name).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#secret CloudfunctionsFunction#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#secret CloudfunctionsFunction#secret}
   */
   readonly secret: string;
   /**
   * versions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#versions CloudfunctionsFunction#versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#versions CloudfunctionsFunction#versions}
   */
   readonly versions?: CloudfunctionsFunctionSecretVolumesVersions[] | cdktf.IResolvable;
 }
@@ -1032,7 +1147,7 @@ export interface CloudfunctionsFunctionSourceRepository {
   /**
   * The URL pointing to the hosted repository where the function is defined.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#url CloudfunctionsFunction#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#url CloudfunctionsFunction#url}
   */
   readonly url: string;
 }
@@ -1118,19 +1233,19 @@ export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf
 }
 export interface CloudfunctionsFunctionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#create CloudfunctionsFunction#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#create CloudfunctionsFunction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#delete CloudfunctionsFunction#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#delete CloudfunctionsFunction#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#read CloudfunctionsFunction#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#read CloudfunctionsFunction#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#update CloudfunctionsFunction#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#update CloudfunctionsFunction#update}
   */
   readonly update?: string;
 }
@@ -1311,7 +1426,7 @@ export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function google_cloudfunctions_function}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function google_cloudfunctions_function}
 */
 export class CloudfunctionsFunction extends cdktf.TerraformResource {
 
@@ -1327,7 +1442,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudfunctionsFunction resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudfunctionsFunction to import
-  * @param importFromId The id of the existing CloudfunctionsFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudfunctionsFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudfunctionsFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1339,7 +1454,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/cloudfunctions_function google_cloudfunctions_function} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/cloudfunctions_function google_cloudfunctions_function} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1350,7 +1465,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.46.0',
+        providerVersion: '6.47.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1389,7 +1504,9 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     this._triggerHttp = config.triggerHttp;
     this._vpcConnector = config.vpcConnector;
     this._vpcConnectorEgressSettings = config.vpcConnectorEgressSettings;
+    this._automaticUpdatePolicy.internalValue = config.automaticUpdatePolicy;
     this._eventTrigger.internalValue = config.eventTrigger;
+    this._onDeployUpdatePolicy.internalValue = config.onDeployUpdatePolicy;
     this._secretEnvironmentVariables.internalValue = config.secretEnvironmentVariables;
     this._secretVolumes.internalValue = config.secretVolumes;
     this._sourceRepository.internalValue = config.sourceRepository;
@@ -1864,6 +1981,22 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     return this._vpcConnectorEgressSettings;
   }
 
+  // automatic_update_policy - computed: false, optional: true, required: false
+  private _automaticUpdatePolicy = new CloudfunctionsFunctionAutomaticUpdatePolicyOutputReference(this, "automatic_update_policy");
+  public get automaticUpdatePolicy() {
+    return this._automaticUpdatePolicy;
+  }
+  public putAutomaticUpdatePolicy(value: CloudfunctionsFunctionAutomaticUpdatePolicy) {
+    this._automaticUpdatePolicy.internalValue = value;
+  }
+  public resetAutomaticUpdatePolicy() {
+    this._automaticUpdatePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticUpdatePolicyInput() {
+    return this._automaticUpdatePolicy.internalValue;
+  }
+
   // event_trigger - computed: false, optional: true, required: false
   private _eventTrigger = new CloudfunctionsFunctionEventTriggerOutputReference(this, "event_trigger");
   public get eventTrigger() {
@@ -1878,6 +2011,22 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get eventTriggerInput() {
     return this._eventTrigger.internalValue;
+  }
+
+  // on_deploy_update_policy - computed: false, optional: true, required: false
+  private _onDeployUpdatePolicy = new CloudfunctionsFunctionOnDeployUpdatePolicyOutputReference(this, "on_deploy_update_policy");
+  public get onDeployUpdatePolicy() {
+    return this._onDeployUpdatePolicy;
+  }
+  public putOnDeployUpdatePolicy(value: CloudfunctionsFunctionOnDeployUpdatePolicy) {
+    this._onDeployUpdatePolicy.internalValue = value;
+  }
+  public resetOnDeployUpdatePolicy() {
+    this._onDeployUpdatePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onDeployUpdatePolicyInput() {
+    return this._onDeployUpdatePolicy.internalValue;
   }
 
   // secret_environment_variables - computed: false, optional: true, required: false
@@ -1978,7 +2127,9 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       trigger_http: cdktf.booleanToTerraform(this._triggerHttp),
       vpc_connector: cdktf.stringToTerraform(this._vpcConnector),
       vpc_connector_egress_settings: cdktf.stringToTerraform(this._vpcConnectorEgressSettings),
+      automatic_update_policy: cloudfunctionsFunctionAutomaticUpdatePolicyToTerraform(this._automaticUpdatePolicy.internalValue),
       event_trigger: cloudfunctionsFunctionEventTriggerToTerraform(this._eventTrigger.internalValue),
+      on_deploy_update_policy: cloudfunctionsFunctionOnDeployUpdatePolicyToTerraform(this._onDeployUpdatePolicy.internalValue),
       secret_environment_variables: cdktf.listMapper(cloudfunctionsFunctionSecretEnvironmentVariablesToTerraform, true)(this._secretEnvironmentVariables.internalValue),
       secret_volumes: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesToTerraform, true)(this._secretVolumes.internalValue),
       source_repository: cloudfunctionsFunctionSourceRepositoryToTerraform(this._sourceRepository.internalValue),
@@ -2156,11 +2307,23 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      automatic_update_policy: {
+        value: cloudfunctionsFunctionAutomaticUpdatePolicyToHclTerraform(this._automaticUpdatePolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudfunctionsFunctionAutomaticUpdatePolicyList",
+      },
       event_trigger: {
         value: cloudfunctionsFunctionEventTriggerToHclTerraform(this._eventTrigger.internalValue),
         isBlock: true,
         type: "list",
         storageClassType: "CloudfunctionsFunctionEventTriggerList",
+      },
+      on_deploy_update_policy: {
+        value: cloudfunctionsFunctionOnDeployUpdatePolicyToHclTerraform(this._onDeployUpdatePolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CloudfunctionsFunctionOnDeployUpdatePolicyList",
       },
       secret_environment_variables: {
         value: cdktf.listMapperHcl(cloudfunctionsFunctionSecretEnvironmentVariablesToHclTerraform, true)(this._secretEnvironmentVariables.internalValue),

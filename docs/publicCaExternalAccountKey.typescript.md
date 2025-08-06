@@ -4,7 +4,7 @@
 
 ### PublicCaExternalAccountKey <a name="PublicCaExternalAccountKey" id="@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key google_public_ca_external_account_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key google_public_ca_external_account_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKey.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the PublicCaExternalAccountKey
 
 The id of the existing PublicCaExternalAccountKey that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -856,9 +856,9 @@ const publicCaExternalAccountKeyConfig: publicCaExternalAccountKey.PublicCaExter
 | <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#id PublicCaExternalAccountKey#id}. |
+| <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#id PublicCaExternalAccountKey#id}. |
 | <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.location">location</a></code> | <code>string</code> | Location for the externalAccountKey. Currently only 'global' is supported. |
-| <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#project PublicCaExternalAccountKey#project}. |
+| <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#project PublicCaExternalAccountKey#project}. |
 | <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyTimeouts">PublicCaExternalAccountKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -941,7 +941,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#id PublicCaExternalAccountKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#id PublicCaExternalAccountKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -958,7 +958,7 @@ public readonly location: string;
 
 Location for the externalAccountKey. Currently only 'global' is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#location PublicCaExternalAccountKey#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#location PublicCaExternalAccountKey#location}
 
 ---
 
@@ -970,7 +970,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#project PublicCaExternalAccountKey#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#project PublicCaExternalAccountKey#project}.
 
 ---
 
@@ -984,7 +984,7 @@ public readonly timeouts: PublicCaExternalAccountKeyTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#timeouts PublicCaExternalAccountKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#timeouts PublicCaExternalAccountKey#timeouts}
 
 ---
 
@@ -1002,8 +1002,8 @@ const publicCaExternalAccountKeyTimeouts: publicCaExternalAccountKey.PublicCaExt
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#create PublicCaExternalAccountKey#create}. |
-| <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#delete PublicCaExternalAccountKey#delete}. |
+| <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#create PublicCaExternalAccountKey#create}. |
+| <code><a href="#@cdktf/provider-google.publicCaExternalAccountKey.PublicCaExternalAccountKeyTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#delete PublicCaExternalAccountKey#delete}. |
 
 ---
 
@@ -1015,7 +1015,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#create PublicCaExternalAccountKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#create PublicCaExternalAccountKey#create}.
 
 ---
 
@@ -1027,7 +1027,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/public_ca_external_account_key#delete PublicCaExternalAccountKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/public_ca_external_account_key#delete PublicCaExternalAccountKey#delete}.
 
 ---
 

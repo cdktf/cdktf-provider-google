@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config
+// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface StorageInsightsDatasetConfigConfig extends cdktf.TerraformMetaA
   /**
   * The user-defined ID of the DatasetConfig
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#dataset_config_id StorageInsightsDatasetConfig#dataset_config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#dataset_config_id StorageInsightsDatasetConfig#dataset_config_id}
   */
   readonly datasetConfigId: string;
   /**
   * An optional user-provided description for the dataset configuration with a maximum length of 256 characters.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#description StorageInsightsDatasetConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#description StorageInsightsDatasetConfig#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#id StorageInsightsDatasetConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#id StorageInsightsDatasetConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,7 +34,7 @@ export interface StorageInsightsDatasetConfigConfig extends cdktf.TerraformMetaA
   /**
   * If set to true, the request includes all the newly created buckets in the dataset that meet the inclusion and exclusion rules.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#include_newly_created_buckets StorageInsightsDatasetConfig#include_newly_created_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#include_newly_created_buckets StorageInsightsDatasetConfig#include_newly_created_buckets}
   */
   readonly includeNewlyCreatedBuckets?: boolean | cdktf.IResolvable;
   /**
@@ -44,84 +44,84 @@ export interface StorageInsightsDatasetConfigConfig extends cdktf.TerraformMetaA
   * -> **Note** A dataset config resource can only be destroyed once it is unlinked,
   * so users must set this field to false to unlink the dataset and destroy the dataset config resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#link_dataset StorageInsightsDatasetConfig#link_dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#link_dataset StorageInsightsDatasetConfig#link_dataset}
   */
   readonly linkDataset?: boolean | cdktf.IResolvable;
   /**
   * The location of the DatasetConfig.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#location StorageInsightsDatasetConfig#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#location StorageInsightsDatasetConfig#location}
   */
   readonly location: string;
   /**
   * Organization resource ID that the source projects should belong to.
   * Projects that do not belong to the provided organization are not considered when creating the dataset.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#organization_number StorageInsightsDatasetConfig#organization_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#organization_number StorageInsightsDatasetConfig#organization_number}
   */
   readonly organizationNumber?: string;
   /**
   * Defines the options for providing a source organization for the DatasetConfig.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#organization_scope StorageInsightsDatasetConfig#organization_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#organization_scope StorageInsightsDatasetConfig#organization_scope}
   */
   readonly organizationScope?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#project StorageInsightsDatasetConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#project StorageInsightsDatasetConfig#project}
   */
   readonly project?: string;
   /**
   * Number of days of history that must be retained.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#retention_period_days StorageInsightsDatasetConfig#retention_period_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#retention_period_days StorageInsightsDatasetConfig#retention_period_days}
   */
   readonly retentionPeriodDays: number;
   /**
   * exclude_cloud_storage_buckets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#exclude_cloud_storage_buckets StorageInsightsDatasetConfig#exclude_cloud_storage_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#exclude_cloud_storage_buckets StorageInsightsDatasetConfig#exclude_cloud_storage_buckets}
   */
   readonly excludeCloudStorageBuckets?: StorageInsightsDatasetConfigExcludeCloudStorageBuckets;
   /**
   * exclude_cloud_storage_locations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#exclude_cloud_storage_locations StorageInsightsDatasetConfig#exclude_cloud_storage_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#exclude_cloud_storage_locations StorageInsightsDatasetConfig#exclude_cloud_storage_locations}
   */
   readonly excludeCloudStorageLocations?: StorageInsightsDatasetConfigExcludeCloudStorageLocations;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#identity StorageInsightsDatasetConfig#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#identity StorageInsightsDatasetConfig#identity}
   */
   readonly identity: StorageInsightsDatasetConfigIdentity;
   /**
   * include_cloud_storage_buckets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#include_cloud_storage_buckets StorageInsightsDatasetConfig#include_cloud_storage_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#include_cloud_storage_buckets StorageInsightsDatasetConfig#include_cloud_storage_buckets}
   */
   readonly includeCloudStorageBuckets?: StorageInsightsDatasetConfigIncludeCloudStorageBuckets;
   /**
   * include_cloud_storage_locations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#include_cloud_storage_locations StorageInsightsDatasetConfig#include_cloud_storage_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#include_cloud_storage_locations StorageInsightsDatasetConfig#include_cloud_storage_locations}
   */
   readonly includeCloudStorageLocations?: StorageInsightsDatasetConfigIncludeCloudStorageLocations;
   /**
   * source_folders block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#source_folders StorageInsightsDatasetConfig#source_folders}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#source_folders StorageInsightsDatasetConfig#source_folders}
   */
   readonly sourceFolders?: StorageInsightsDatasetConfigSourceFolders;
   /**
   * source_projects block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#source_projects StorageInsightsDatasetConfig#source_projects}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#source_projects StorageInsightsDatasetConfig#source_projects}
   */
   readonly sourceProjects?: StorageInsightsDatasetConfigSourceProjects;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#timeouts StorageInsightsDatasetConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#timeouts StorageInsightsDatasetConfig#timeouts}
   */
   readonly timeouts?: StorageInsightsDatasetConfigTimeouts;
 }
@@ -210,7 +210,7 @@ export interface StorageInsightsDatasetConfigExcludeCloudStorageBucketsCloudStor
   * The list of cloud storage bucket names to exclude in the DatasetConfig.
   * Exactly one of the bucket_name and bucket_prefix_regex should be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#bucket_name StorageInsightsDatasetConfig#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#bucket_name StorageInsightsDatasetConfig#bucket_name}
   */
   readonly bucketName?: string;
   /**
@@ -218,7 +218,7 @@ export interface StorageInsightsDatasetConfigExcludeCloudStorageBucketsCloudStor
   * Regex should follow the syntax specified in google/re2 on GitHub.
   * Exactly one of the bucket_name and bucket_prefix_regex should be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#bucket_prefix_regex StorageInsightsDatasetConfig#bucket_prefix_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#bucket_prefix_regex StorageInsightsDatasetConfig#bucket_prefix_regex}
   */
   readonly bucketPrefixRegex?: string;
 }
@@ -365,7 +365,7 @@ export interface StorageInsightsDatasetConfigExcludeCloudStorageBuckets {
   /**
   * cloud_storage_buckets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#cloud_storage_buckets StorageInsightsDatasetConfig#cloud_storage_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#cloud_storage_buckets StorageInsightsDatasetConfig#cloud_storage_buckets}
   */
   readonly cloudStorageBuckets: StorageInsightsDatasetConfigExcludeCloudStorageBucketsCloudStorageBuckets[] | cdktf.IResolvable;
 }
@@ -448,7 +448,7 @@ export interface StorageInsightsDatasetConfigExcludeCloudStorageLocations {
   /**
   * The list of cloud storage locations to exclude in the DatasetConfig.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#locations StorageInsightsDatasetConfig#locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#locations StorageInsightsDatasetConfig#locations}
   */
   readonly locations: string[];
 }
@@ -531,7 +531,7 @@ export interface StorageInsightsDatasetConfigIdentity {
   /**
   * Type of identity to use for the DatasetConfig. Possible values: ["IDENTITY_TYPE_PER_CONFIG", "IDENTITY_TYPE_PER_PROJECT"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#type StorageInsightsDatasetConfig#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#type StorageInsightsDatasetConfig#type}
   */
   readonly type: string;
 }
@@ -620,7 +620,7 @@ export interface StorageInsightsDatasetConfigIncludeCloudStorageBucketsCloudStor
   * The list of cloud storage bucket names to include in the DatasetConfig.
   * Exactly one of the bucket_name and bucket_prefix_regex should be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#bucket_name StorageInsightsDatasetConfig#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#bucket_name StorageInsightsDatasetConfig#bucket_name}
   */
   readonly bucketName?: string;
   /**
@@ -628,7 +628,7 @@ export interface StorageInsightsDatasetConfigIncludeCloudStorageBucketsCloudStor
   * Regex should follow the syntax specified in google/re2 on GitHub.
   * Exactly one of the bucket_name and bucket_prefix_regex should be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#bucket_prefix_regex StorageInsightsDatasetConfig#bucket_prefix_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#bucket_prefix_regex StorageInsightsDatasetConfig#bucket_prefix_regex}
   */
   readonly bucketPrefixRegex?: string;
 }
@@ -775,7 +775,7 @@ export interface StorageInsightsDatasetConfigIncludeCloudStorageBuckets {
   /**
   * cloud_storage_buckets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#cloud_storage_buckets StorageInsightsDatasetConfig#cloud_storage_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#cloud_storage_buckets StorageInsightsDatasetConfig#cloud_storage_buckets}
   */
   readonly cloudStorageBuckets: StorageInsightsDatasetConfigIncludeCloudStorageBucketsCloudStorageBuckets[] | cdktf.IResolvable;
 }
@@ -858,7 +858,7 @@ export interface StorageInsightsDatasetConfigIncludeCloudStorageLocations {
   /**
   * The list of cloud storage locations to include in the DatasetConfig.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#locations StorageInsightsDatasetConfig#locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#locations StorageInsightsDatasetConfig#locations}
   */
   readonly locations: string[];
 }
@@ -941,7 +941,7 @@ export interface StorageInsightsDatasetConfigSourceFolders {
   /**
   * The list of folder numbers to include in the DatasetConfig.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#folder_numbers StorageInsightsDatasetConfig#folder_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#folder_numbers StorageInsightsDatasetConfig#folder_numbers}
   */
   readonly folderNumbers?: string[];
 }
@@ -1027,7 +1027,7 @@ export interface StorageInsightsDatasetConfigSourceProjects {
   /**
   * The list of project numbers to include in the DatasetConfig.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#project_numbers StorageInsightsDatasetConfig#project_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#project_numbers StorageInsightsDatasetConfig#project_numbers}
   */
   readonly projectNumbers?: string[];
 }
@@ -1111,15 +1111,15 @@ export class StorageInsightsDatasetConfigSourceProjectsOutputReference extends c
 }
 export interface StorageInsightsDatasetConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#create StorageInsightsDatasetConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#create StorageInsightsDatasetConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#delete StorageInsightsDatasetConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#delete StorageInsightsDatasetConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#update StorageInsightsDatasetConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#update StorageInsightsDatasetConfig#update}
   */
   readonly update?: string;
 }
@@ -1271,7 +1271,7 @@ export class StorageInsightsDatasetConfigTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config google_storage_insights_dataset_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config google_storage_insights_dataset_config}
 */
 export class StorageInsightsDatasetConfig extends cdktf.TerraformResource {
 
@@ -1287,7 +1287,7 @@ export class StorageInsightsDatasetConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StorageInsightsDatasetConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StorageInsightsDatasetConfig to import
-  * @param importFromId The id of the existing StorageInsightsDatasetConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StorageInsightsDatasetConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StorageInsightsDatasetConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1299,7 +1299,7 @@ export class StorageInsightsDatasetConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/resources/storage_insights_dataset_config google_storage_insights_dataset_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/storage_insights_dataset_config google_storage_insights_dataset_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1310,7 +1310,7 @@ export class StorageInsightsDatasetConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_insights_dataset_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.46.0',
+        providerVersion: '6.47.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

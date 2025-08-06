@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/logging_project_cmek_settings
+// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/logging_project_cmek_settings
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleLoggingProjectCmekSettingsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/logging_project_cmek_settings#id DataGoogleLoggingProjectCmekSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/logging_project_cmek_settings#id DataGoogleLoggingProjectCmekSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -27,17 +27,17 @@ export interface DataGoogleLoggingProjectCmekSettingsConfig extends cdktf.Terraf
   * 				The Cloud KMS key used by the bucket can be updated by changing the kmsKeyName to a new valid key name. Encryption operations that are in progress will be completed with the key that was in use when they started. Decryption operations will be completed using the key that was used at the time of encryption unless access to that key has been revoked.
   * 				See [Enabling CMEK for Logging Buckets](https://cloud.google.com/logging/docs/routing/managed-encryption-storage) for more information.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/logging_project_cmek_settings#kms_key_name DataGoogleLoggingProjectCmekSettings#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/logging_project_cmek_settings#kms_key_name DataGoogleLoggingProjectCmekSettings#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/logging_project_cmek_settings#project DataGoogleLoggingProjectCmekSettings#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/logging_project_cmek_settings#project DataGoogleLoggingProjectCmekSettings#project}
   */
   readonly project: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/logging_project_cmek_settings google_logging_project_cmek_settings}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/logging_project_cmek_settings google_logging_project_cmek_settings}
 */
 export class DataGoogleLoggingProjectCmekSettings extends cdktf.TerraformDataSource {
 
@@ -53,7 +53,7 @@ export class DataGoogleLoggingProjectCmekSettings extends cdktf.TerraformDataSou
   * Generates CDKTF code for importing a DataGoogleLoggingProjectCmekSettings resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleLoggingProjectCmekSettings to import
-  * @param importFromId The id of the existing DataGoogleLoggingProjectCmekSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/logging_project_cmek_settings#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleLoggingProjectCmekSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/logging_project_cmek_settings#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleLoggingProjectCmekSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -65,7 +65,7 @@ export class DataGoogleLoggingProjectCmekSettings extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/logging_project_cmek_settings google_logging_project_cmek_settings} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/logging_project_cmek_settings google_logging_project_cmek_settings} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -76,7 +76,7 @@ export class DataGoogleLoggingProjectCmekSettings extends cdktf.TerraformDataSou
       terraformResourceType: 'google_logging_project_cmek_settings',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.46.0',
+        providerVersion: '6.47.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

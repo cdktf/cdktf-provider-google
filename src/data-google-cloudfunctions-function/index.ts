@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/cloudfunctions_function
+// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/cloudfunctions_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/cloudfunctions_function#id DataGoogleCloudfunctionsFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/cloudfunctions_function#id DataGoogleCloudfunctionsFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,21 +22,91 @@ export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformM
   /**
   * A user-defined name of the function. Function names must be unique globally.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/cloudfunctions_function#name DataGoogleCloudfunctionsFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/cloudfunctions_function#name DataGoogleCloudfunctionsFunction#name}
   */
   readonly name: string;
   /**
   * Project of the function. If it is not provided, the provider project is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/cloudfunctions_function#project DataGoogleCloudfunctionsFunction#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/cloudfunctions_function#project DataGoogleCloudfunctionsFunction#project}
   */
   readonly project?: string;
   /**
   * Region of function. If it is not provided, the provider region is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/cloudfunctions_function#region DataGoogleCloudfunctionsFunction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/cloudfunctions_function#region DataGoogleCloudfunctionsFunction#region}
   */
   readonly region?: string;
+}
+export interface DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicy {
+}
+
+export function dataGoogleCloudfunctionsFunctionAutomaticUpdatePolicyToTerraform(struct?: DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleCloudfunctionsFunctionAutomaticUpdatePolicyToHclTerraform(struct?: DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicyOutputReference {
+    return new DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy {
 }
@@ -197,6 +267,81 @@ export class DataGoogleCloudfunctionsFunctionEventTriggerList extends cdktf.Comp
   */
   public get(index: number): DataGoogleCloudfunctionsFunctionEventTriggerOutputReference {
     return new DataGoogleCloudfunctionsFunctionEventTriggerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicy {
+}
+
+export function dataGoogleCloudfunctionsFunctionOnDeployUpdatePolicyToTerraform(struct?: DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataGoogleCloudfunctionsFunctionOnDeployUpdatePolicyToHclTerraform(struct?: DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // runtime_version - computed: true, optional: false, required: false
+  public get runtimeVersion() {
+    return this.getStringAttribute('runtime_version');
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicyOutputReference {
+    return new DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleCloudfunctionsFunctionSecretEnvironmentVariables {
@@ -542,7 +687,7 @@ export class DataGoogleCloudfunctionsFunctionSourceRepositoryList extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/cloudfunctions_function google_cloudfunctions_function}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/cloudfunctions_function google_cloudfunctions_function}
 */
 export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource {
 
@@ -558,7 +703,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   * Generates CDKTF code for importing a DataGoogleCloudfunctionsFunction resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleCloudfunctionsFunction to import
-  * @param importFromId The id of the existing DataGoogleCloudfunctionsFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/cloudfunctions_function#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleCloudfunctionsFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/cloudfunctions_function#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleCloudfunctionsFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -570,7 +715,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.46.0/docs/data-sources/cloudfunctions_function google_cloudfunctions_function} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/cloudfunctions_function google_cloudfunctions_function} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -581,7 +726,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.46.0',
+        providerVersion: '6.47.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -601,6 +746,12 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // automatic_update_policy - computed: true, optional: false, required: false
+  private _automaticUpdatePolicy = new DataGoogleCloudfunctionsFunctionAutomaticUpdatePolicyList(this, "automatic_update_policy", false);
+  public get automaticUpdatePolicy() {
+    return this._automaticUpdatePolicy;
+  }
 
   // available_memory_mb - computed: true, optional: false, required: false
   public get availableMemoryMb() {
@@ -724,6 +875,12 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // on_deploy_update_policy - computed: true, optional: false, required: false
+  private _onDeployUpdatePolicy = new DataGoogleCloudfunctionsFunctionOnDeployUpdatePolicyList(this, "on_deploy_update_policy", false);
+  public get onDeployUpdatePolicy() {
+    return this._onDeployUpdatePolicy;
   }
 
   // project - computed: false, optional: true, required: false
