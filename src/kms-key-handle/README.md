@@ -1,3 +1,3 @@
 # `google_kms_key_handle`
 
-Refer to the Terraform Registry for docs: [`google_kms_key_handle`](https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/kms_key_handle).
+Refer to the Terraform Registry for docs: [`google_kms_key_handle`](https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/kms_key_handle).

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances
+// https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface DataGoogleSqlDatabaseInstancesConfig extends cdktf.TerraformMet
   /**
   * To filter out the database instances which are of the specified database version.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances#database_version DataGoogleSqlDatabaseInstances#database_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances#database_version DataGoogleSqlDatabaseInstances#database_version}
   */
   readonly databaseVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances#id DataGoogleSqlDatabaseInstances#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances#id DataGoogleSqlDatabaseInstances#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,31 +28,31 @@ export interface DataGoogleSqlDatabaseInstancesConfig extends cdktf.TerraformMet
   /**
   * Project ID of the project that contains the instances.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances#project DataGoogleSqlDatabaseInstances#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances#project DataGoogleSqlDatabaseInstances#project}
   */
   readonly project?: string;
   /**
   * To filter out the database instances which are located in this specified region.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances#region DataGoogleSqlDatabaseInstances#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances#region DataGoogleSqlDatabaseInstances#region}
   */
   readonly region?: string;
   /**
   * To filter out the database instances based on the current state of the database instance, valid values include : "SQL_INSTANCE_STATE_UNSPECIFIED", "RUNNABLE", "SUSPENDED", "PENDING_DELETE", "PENDING_CREATE", "MAINTENANCE" and "FAILED".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances#state DataGoogleSqlDatabaseInstances#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances#state DataGoogleSqlDatabaseInstances#state}
   */
   readonly state?: string;
   /**
   * To filter out the database instances based on the machine type.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances#tier DataGoogleSqlDatabaseInstances#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances#tier DataGoogleSqlDatabaseInstances#tier}
   */
   readonly tier?: string;
   /**
   * To filter out the database instances which are located in this specified zone.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances#zone DataGoogleSqlDatabaseInstances#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances#zone DataGoogleSqlDatabaseInstances#zone}
   */
   readonly zone?: string;
 }
@@ -510,6 +510,11 @@ export class DataGoogleSqlDatabaseInstancesInstancesReplicationClusterOutputRefe
   // failover_dr_replica_name - computed: true, optional: false, required: false
   public get failoverDrReplicaName() {
     return this.getStringAttribute('failover_dr_replica_name');
+  }
+
+  // psa_write_endpoint - computed: true, optional: false, required: false
+  public get psaWriteEndpoint() {
+    return this.getStringAttribute('psa_write_endpoint');
   }
 }
 
@@ -1764,6 +1769,11 @@ export class DataGoogleSqlDatabaseInstancesInstancesSettingsIpConfigurationPscCo
     return cdktf.Fn.tolist(this.getListAttribute('allowed_consumer_projects'));
   }
 
+  // network_attachment_uri - computed: true, optional: false, required: false
+  public get networkAttachmentUri() {
+    return this.getStringAttribute('network_attachment_uri');
+  }
+
   // psc_auto_connections - computed: true, optional: false, required: false
   private _pscAutoConnections = new DataGoogleSqlDatabaseInstancesInstancesSettingsIpConfigurationPscConfigPscAutoConnectionsList(this, "psc_auto_connections", false);
   public get pscAutoConnections() {
@@ -2414,6 +2424,11 @@ export class DataGoogleSqlDatabaseInstancesInstancesSettingsOutputReference exte
     return this.getStringAttribute('edition');
   }
 
+  // effective_availability_type - computed: true, optional: false, required: false
+  public get effectiveAvailabilityType() {
+    return this.getStringAttribute('effective_availability_type');
+  }
+
   // enable_dataplex_integration - computed: true, optional: false, required: false
   public get enableDataplexIntegration() {
     return this.getBooleanAttribute('enable_dataplex_integration');
@@ -2634,6 +2649,11 @@ export class DataGoogleSqlDatabaseInstancesInstancesOutputReference extends cdkt
     return this.getStringAttribute('name');
   }
 
+  // node_count - computed: true, optional: false, required: false
+  public get nodeCount() {
+    return this.getNumberAttribute('node_count');
+  }
+
   // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
@@ -2730,7 +2750,7 @@ export class DataGoogleSqlDatabaseInstancesInstancesList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances google_sql_database_instances}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances google_sql_database_instances}
 */
 export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
 
@@ -2746,7 +2766,7 @@ export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleSqlDatabaseInstances resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleSqlDatabaseInstances to import
-  * @param importFromId The id of the existing DataGoogleSqlDatabaseInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleSqlDatabaseInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleSqlDatabaseInstances to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2758,7 +2778,7 @@ export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/sql_database_instances google_sql_database_instances} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/sql_database_instances google_sql_database_instances} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2769,7 +2789,7 @@ export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instances',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.47.0',
+        providerVersion: '6.48.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

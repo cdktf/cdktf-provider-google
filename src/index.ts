@@ -531,6 +531,7 @@ export * as dialogflowCxGenerativeSettings from './dialogflow-cx-generative-sett
 export * as dialogflowCxGenerator from './dialogflow-cx-generator';
 export * as dialogflowCxIntent from './dialogflow-cx-intent';
 export * as dialogflowCxPage from './dialogflow-cx-page';
+export * as dialogflowCxPlaybook from './dialogflow-cx-playbook';
 export * as dialogflowCxSecuritySettings from './dialogflow-cx-security-settings';
 export * as dialogflowCxTestCase from './dialogflow-cx-test-case';
 export * as dialogflowCxTool from './dialogflow-cx-tool';
@@ -1082,6 +1083,7 @@ export * as vertexAiFeaturestoreEntitytypeFeature from './vertex-ai-featurestore
 export * as vertexAiIndex from './vertex-ai-index';
 export * as vertexAiIndexEndpoint from './vertex-ai-index-endpoint';
 export * as vertexAiIndexEndpointDeployedIndex from './vertex-ai-index-endpoint-deployed-index';
+export * as vertexAiRagEngineConfig from './vertex-ai-rag-engine-config';
 export * as vertexAiTensorboard from './vertex-ai-tensorboard';
 export * as vmwareengineCluster from './vmwareengine-cluster';
 export * as vmwareengineExternalAccessRule from './vmwareengine-external-access-rule';
@@ -1115,8 +1117,11 @@ export * as dataGoogleApphubDiscoveredWorkload from './data-google-apphub-discov
 export * as dataGoogleArtifactRegistryDockerImage from './data-google-artifact-registry-docker-image';
 export * as dataGoogleArtifactRegistryDockerImages from './data-google-artifact-registry-docker-images';
 export * as dataGoogleArtifactRegistryLocations from './data-google-artifact-registry-locations';
+export * as dataGoogleArtifactRegistryPackage from './data-google-artifact-registry-package';
+export * as dataGoogleArtifactRegistryRepositories from './data-google-artifact-registry-repositories';
 export * as dataGoogleArtifactRegistryRepository from './data-google-artifact-registry-repository';
 export * as dataGoogleArtifactRegistryRepositoryIamPolicy from './data-google-artifact-registry-repository-iam-policy';
+export * as dataGoogleArtifactRegistryVersion from './data-google-artifact-registry-version';
 export * as dataGoogleBackupDrBackup from './data-google-backup-dr-backup';
 export * as dataGoogleBackupDrBackupPlan from './data-google-backup-dr-backup-plan';
 export * as dataGoogleBackupDrBackupPlanAssociation from './data-google-backup-dr-backup-plan-association';

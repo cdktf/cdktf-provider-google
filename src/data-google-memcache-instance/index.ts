@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/memcache_instance
+// https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/memcache_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleMemcacheInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/memcache_instance#id DataGoogleMemcacheInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/memcache_instance#id DataGoogleMemcacheInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,17 +22,17 @@ export interface DataGoogleMemcacheInstanceConfig extends cdktf.TerraformMetaArg
   /**
   * The resource name of the instance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/memcache_instance#name DataGoogleMemcacheInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/memcache_instance#name DataGoogleMemcacheInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/memcache_instance#project DataGoogleMemcacheInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/memcache_instance#project DataGoogleMemcacheInstance#project}
   */
   readonly project?: string;
   /**
   * The region of the Memcache instance. If it is not provided, the provider region is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/memcache_instance#region DataGoogleMemcacheInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/memcache_instance#region DataGoogleMemcacheInstance#region}
   */
   readonly region?: string;
 }
@@ -646,7 +646,7 @@ export class DataGoogleMemcacheInstanceNodeConfigList extends cdktf.ComplexList 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/memcache_instance google_memcache_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/memcache_instance google_memcache_instance}
 */
 export class DataGoogleMemcacheInstance extends cdktf.TerraformDataSource {
 
@@ -662,7 +662,7 @@ export class DataGoogleMemcacheInstance extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataGoogleMemcacheInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataGoogleMemcacheInstance to import
-  * @param importFromId The id of the existing DataGoogleMemcacheInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/memcache_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataGoogleMemcacheInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/memcache_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataGoogleMemcacheInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -674,7 +674,7 @@ export class DataGoogleMemcacheInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/data-sources/memcache_instance google_memcache_instance} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/data-sources/memcache_instance google_memcache_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -685,7 +685,7 @@ export class DataGoogleMemcacheInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_memcache_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.47.0',
+        providerVersion: '6.48.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
