@@ -4,7 +4,7 @@
 
 ### DataCatalogTagTemplateIamBinding <a name="DataCatalogTagTemplateIamBinding" id="@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding google_data_catalog_tag_template_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding google_data_catalog_tag_template_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBinding.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the DataCatalogTagTemplateIamB
 
 The id of the existing DataCatalogTagTemplateIamBinding that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -886,9 +886,9 @@ new DataCatalogTagTemplateIamBindingCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#expression DataCatalogTagTemplateIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#title DataCatalogTagTemplateIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#description DataCatalogTagTemplateIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#expression DataCatalogTagTemplateIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#title DataCatalogTagTemplateIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#description DataCatalogTagTemplateIamBinding#description}. |
 
 ---
 
@@ -900,7 +900,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#expression DataCatalogTagTemplateIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#expression DataCatalogTagTemplateIamBinding#expression}.
 
 ---
 
@@ -912,7 +912,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#title DataCatalogTagTemplateIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#title DataCatalogTagTemplateIamBinding#title}.
 
 ---
 
@@ -924,7 +924,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#description DataCatalogTagTemplateIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#description DataCatalogTagTemplateIamBinding#description}.
 
 ---
 
@@ -964,13 +964,13 @@ new DataCatalogTagTemplateIamBindingConfig {
 | <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#members DataCatalogTagTemplateIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#role DataCatalogTagTemplateIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.tagTemplate">TagTemplate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#tag_template DataCatalogTagTemplateIamBinding#tag_template}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#members DataCatalogTagTemplateIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#role DataCatalogTagTemplateIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.tagTemplate">TagTemplate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#tag_template DataCatalogTagTemplateIamBinding#tag_template}. |
 | <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingCondition">DataCatalogTagTemplateIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#id DataCatalogTagTemplateIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#project DataCatalogTagTemplateIamBinding#project}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#region DataCatalogTagTemplateIamBinding#region}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#id DataCatalogTagTemplateIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#project DataCatalogTagTemplateIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogTagTemplateIamBinding.DataCatalogTagTemplateIamBindingConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#region DataCatalogTagTemplateIamBinding#region}. |
 
 ---
 
@@ -1052,7 +1052,7 @@ public string[] Members { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#members DataCatalogTagTemplateIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#members DataCatalogTagTemplateIamBinding#members}.
 
 ---
 
@@ -1064,7 +1064,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#role DataCatalogTagTemplateIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#role DataCatalogTagTemplateIamBinding#role}.
 
 ---
 
@@ -1076,7 +1076,7 @@ public string TagTemplate { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#tag_template DataCatalogTagTemplateIamBinding#tag_template}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#tag_template DataCatalogTagTemplateIamBinding#tag_template}.
 
 ---
 
@@ -1090,7 +1090,7 @@ public DataCatalogTagTemplateIamBindingCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#condition DataCatalogTagTemplateIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#condition DataCatalogTagTemplateIamBinding#condition}
 
 ---
 
@@ -1102,7 +1102,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#id DataCatalogTagTemplateIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#id DataCatalogTagTemplateIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1117,7 +1117,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#project DataCatalogTagTemplateIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#project DataCatalogTagTemplateIamBinding#project}.
 
 ---
 
@@ -1129,7 +1129,7 @@ public string Region { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/data_catalog_tag_template_iam_binding#region DataCatalogTagTemplateIamBinding#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/data_catalog_tag_template_iam_binding#region DataCatalogTagTemplateIamBinding#region}.
 
 ---
 

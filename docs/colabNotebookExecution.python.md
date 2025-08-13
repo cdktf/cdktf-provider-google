@@ -4,7 +4,7 @@
 
 ### ColabNotebookExecution <a name="ColabNotebookExecution" id="@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution google_colab_notebook_execution}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution google_colab_notebook_execution}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer"></a>
 
@@ -57,10 +57,10 @@ colabNotebookExecution.ColabNotebookExecution(
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.executionTimeout">execution_timeout</a></code> | <code>str</code> | Max running time of the execution job in seconds (default 86400s / 24 hrs). |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.executionUser">execution_user</a></code> | <code>str</code> | The user email to run the execution as. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.gcsNotebookSource">gcs_notebook_source</a></code> | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionGcsNotebookSource">ColabNotebookExecutionGcsNotebookSource</a></code> | gcs_notebook_source block. |
-| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#id ColabNotebookExecution#id}. |
+| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#id ColabNotebookExecution#id}. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.notebookExecutionJobId">notebook_execution_job_id</a></code> | <code>str</code> | User specified ID for the Notebook Execution Job. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.notebookRuntimeTemplateResourceName">notebook_runtime_template_resource_name</a></code> | <code>str</code> | The NotebookRuntimeTemplate to source compute configuration from. |
-| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#project ColabNotebookExecution#project}. |
+| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#project ColabNotebookExecution#project}. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.serviceAccount">service_account</a></code> | <code>str</code> | The service account to run the execution as. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecution.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionTimeouts">ColabNotebookExecutionTimeouts</a></code> | timeouts block. |
 
@@ -132,7 +132,7 @@ Must be unique amongst siblings in the same scope
 
 Required. The display name of the Notebook Execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#display_name ColabNotebookExecution#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#display_name ColabNotebookExecution#display_name}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Cloud Storage location to upload the result to. Format:'gs://bucket-name'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#gcs_output_uri ColabNotebookExecution#gcs_output_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#gcs_output_uri ColabNotebookExecution#gcs_output_uri}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The location for the resource: https://cloud.google.com/colab/docs/locations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#location ColabNotebookExecution#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#location ColabNotebookExecution#location}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 dataform_repository_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#dataform_repository_source ColabNotebookExecution#dataform_repository_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#dataform_repository_source ColabNotebookExecution#dataform_repository_source}
 
 ---
 
@@ -172,7 +172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 direct_notebook_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#direct_notebook_source ColabNotebookExecution#direct_notebook_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#direct_notebook_source ColabNotebookExecution#direct_notebook_source}
 
 ---
 
@@ -182,7 +182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Max running time of the execution job in seconds (default 86400s / 24 hrs).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#execution_timeout ColabNotebookExecution#execution_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#execution_timeout ColabNotebookExecution#execution_timeout}
 
 ---
 
@@ -192,7 +192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The user email to run the execution as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#execution_user ColabNotebookExecution#execution_user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#execution_user ColabNotebookExecution#execution_user}
 
 ---
 
@@ -202,7 +202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 gcs_notebook_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#gcs_notebook_source ColabNotebookExecution#gcs_notebook_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#gcs_notebook_source ColabNotebookExecution#gcs_notebook_source}
 
 ---
 
@@ -210,7 +210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#id ColabNotebookExecution#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#id ColabNotebookExecution#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -223,7 +223,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 User specified ID for the Notebook Execution Job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#notebook_execution_job_id ColabNotebookExecution#notebook_execution_job_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#notebook_execution_job_id ColabNotebookExecution#notebook_execution_job_id}
 
 ---
 
@@ -233,7 +233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The NotebookRuntimeTemplate to source compute configuration from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#notebook_runtime_template_resource_name ColabNotebookExecution#notebook_runtime_template_resource_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#notebook_runtime_template_resource_name ColabNotebookExecution#notebook_runtime_template_resource_name}
 
 ---
 
@@ -241,7 +241,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#project ColabNotebookExecution#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#project ColabNotebookExecution#project}.
 
 ---
 
@@ -251,7 +251,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The service account to run the execution as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#service_account ColabNotebookExecution#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#service_account ColabNotebookExecution#service_account}
 
 ---
 
@@ -261,7 +261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#timeouts ColabNotebookExecution#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#timeouts ColabNotebookExecution#timeouts}
 
 ---
 
@@ -650,7 +650,7 @@ def put_dataform_repository_source(
 
 The resource name of the Dataform Repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#dataform_repository_resource_name ColabNotebookExecution#dataform_repository_resource_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#dataform_repository_resource_name ColabNotebookExecution#dataform_repository_resource_name}
 
 ---
 
@@ -660,7 +660,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The commit SHA to read repository with. If unset, the file will be read at HEAD.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#commit_sha ColabNotebookExecution#commit_sha}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#commit_sha ColabNotebookExecution#commit_sha}
 
 ---
 
@@ -678,7 +678,7 @@ def put_direct_notebook_source(
 
 The base64-encoded contents of the input notebook file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#content ColabNotebookExecution#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#content ColabNotebookExecution#content}
 
 ---
 
@@ -697,7 +697,7 @@ def put_gcs_notebook_source(
 
 The Cloud Storage uri pointing to the ipynb file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#uri ColabNotebookExecution#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#uri ColabNotebookExecution#uri}
 
 ---
 
@@ -709,7 +709,7 @@ The version of the Cloud Storage object to read.
 
 If unset, the current version of the object is read. See https://cloud.google.com/storage/docs/metadata#generation-number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#generation ColabNotebookExecution#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#generation ColabNotebookExecution#generation}
 
 ---
 
@@ -726,7 +726,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#create ColabNotebookExecution#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#create ColabNotebookExecution#create}.
 
 ---
 
@@ -734,7 +734,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#delete ColabNotebookExecution#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#delete ColabNotebookExecution#delete}.
 
 ---
 
@@ -918,7 +918,7 @@ The construct id used in the generated config for the ColabNotebookExecution to 
 
 The id of the existing ColabNotebookExecution that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1472,10 +1472,10 @@ colabNotebookExecution.ColabNotebookExecutionConfig(
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.executionTimeout">execution_timeout</a></code> | <code>str</code> | Max running time of the execution job in seconds (default 86400s / 24 hrs). |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.executionUser">execution_user</a></code> | <code>str</code> | The user email to run the execution as. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.gcsNotebookSource">gcs_notebook_source</a></code> | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionGcsNotebookSource">ColabNotebookExecutionGcsNotebookSource</a></code> | gcs_notebook_source block. |
-| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#id ColabNotebookExecution#id}. |
+| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#id ColabNotebookExecution#id}. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.notebookExecutionJobId">notebook_execution_job_id</a></code> | <code>str</code> | User specified ID for the Notebook Execution Job. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.notebookRuntimeTemplateResourceName">notebook_runtime_template_resource_name</a></code> | <code>str</code> | The NotebookRuntimeTemplate to source compute configuration from. |
-| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#project ColabNotebookExecution#project}. |
+| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#project ColabNotebookExecution#project}. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.serviceAccount">service_account</a></code> | <code>str</code> | The service account to run the execution as. |
 | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionTimeouts">ColabNotebookExecutionTimeouts</a></code> | timeouts block. |
 
@@ -1561,7 +1561,7 @@ display_name: str
 
 Required. The display name of the Notebook Execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#display_name ColabNotebookExecution#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#display_name ColabNotebookExecution#display_name}
 
 ---
 
@@ -1575,7 +1575,7 @@ gcs_output_uri: str
 
 The Cloud Storage location to upload the result to. Format:'gs://bucket-name'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#gcs_output_uri ColabNotebookExecution#gcs_output_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#gcs_output_uri ColabNotebookExecution#gcs_output_uri}
 
 ---
 
@@ -1589,7 +1589,7 @@ location: str
 
 The location for the resource: https://cloud.google.com/colab/docs/locations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#location ColabNotebookExecution#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#location ColabNotebookExecution#location}
 
 ---
 
@@ -1603,7 +1603,7 @@ dataform_repository_source: ColabNotebookExecutionDataformRepositorySource
 
 dataform_repository_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#dataform_repository_source ColabNotebookExecution#dataform_repository_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#dataform_repository_source ColabNotebookExecution#dataform_repository_source}
 
 ---
 
@@ -1617,7 +1617,7 @@ direct_notebook_source: ColabNotebookExecutionDirectNotebookSource
 
 direct_notebook_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#direct_notebook_source ColabNotebookExecution#direct_notebook_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#direct_notebook_source ColabNotebookExecution#direct_notebook_source}
 
 ---
 
@@ -1631,7 +1631,7 @@ execution_timeout: str
 
 Max running time of the execution job in seconds (default 86400s / 24 hrs).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#execution_timeout ColabNotebookExecution#execution_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#execution_timeout ColabNotebookExecution#execution_timeout}
 
 ---
 
@@ -1645,7 +1645,7 @@ execution_user: str
 
 The user email to run the execution as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#execution_user ColabNotebookExecution#execution_user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#execution_user ColabNotebookExecution#execution_user}
 
 ---
 
@@ -1659,7 +1659,7 @@ gcs_notebook_source: ColabNotebookExecutionGcsNotebookSource
 
 gcs_notebook_source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#gcs_notebook_source ColabNotebookExecution#gcs_notebook_source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#gcs_notebook_source ColabNotebookExecution#gcs_notebook_source}
 
 ---
 
@@ -1671,7 +1671,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#id ColabNotebookExecution#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#id ColabNotebookExecution#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1688,7 +1688,7 @@ notebook_execution_job_id: str
 
 User specified ID for the Notebook Execution Job.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#notebook_execution_job_id ColabNotebookExecution#notebook_execution_job_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#notebook_execution_job_id ColabNotebookExecution#notebook_execution_job_id}
 
 ---
 
@@ -1702,7 +1702,7 @@ notebook_runtime_template_resource_name: str
 
 The NotebookRuntimeTemplate to source compute configuration from.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#notebook_runtime_template_resource_name ColabNotebookExecution#notebook_runtime_template_resource_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#notebook_runtime_template_resource_name ColabNotebookExecution#notebook_runtime_template_resource_name}
 
 ---
 
@@ -1714,7 +1714,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#project ColabNotebookExecution#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#project ColabNotebookExecution#project}.
 
 ---
 
@@ -1728,7 +1728,7 @@ service_account: str
 
 The service account to run the execution as.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#service_account ColabNotebookExecution#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#service_account ColabNotebookExecution#service_account}
 
 ---
 
@@ -1742,7 +1742,7 @@ timeouts: ColabNotebookExecutionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#timeouts ColabNotebookExecution#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#timeouts ColabNotebookExecution#timeouts}
 
 ---
 
@@ -1778,7 +1778,7 @@ dataform_repository_resource_name: str
 
 The resource name of the Dataform Repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#dataform_repository_resource_name ColabNotebookExecution#dataform_repository_resource_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#dataform_repository_resource_name ColabNotebookExecution#dataform_repository_resource_name}
 
 ---
 
@@ -1792,7 +1792,7 @@ commit_sha: str
 
 The commit SHA to read repository with. If unset, the file will be read at HEAD.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#commit_sha ColabNotebookExecution#commit_sha}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#commit_sha ColabNotebookExecution#commit_sha}
 
 ---
 
@@ -1826,7 +1826,7 @@ content: str
 
 The base64-encoded contents of the input notebook file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#content ColabNotebookExecution#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#content ColabNotebookExecution#content}
 
 ---
 
@@ -1862,7 +1862,7 @@ uri: str
 
 The Cloud Storage uri pointing to the ipynb file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#uri ColabNotebookExecution#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#uri ColabNotebookExecution#uri}
 
 ---
 
@@ -1878,7 +1878,7 @@ The version of the Cloud Storage object to read.
 
 If unset, the current version of the object is read. See https://cloud.google.com/storage/docs/metadata#generation-number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#generation ColabNotebookExecution#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#generation ColabNotebookExecution#generation}
 
 ---
 
@@ -1899,8 +1899,8 @@ colabNotebookExecution.ColabNotebookExecutionTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#create ColabNotebookExecution#create}. |
-| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#delete ColabNotebookExecution#delete}. |
+| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#create ColabNotebookExecution#create}. |
+| <code><a href="#@cdktf/provider-google.colabNotebookExecution.ColabNotebookExecutionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#delete ColabNotebookExecution#delete}. |
 
 ---
 
@@ -1912,7 +1912,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#create ColabNotebookExecution#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#create ColabNotebookExecution#create}.
 
 ---
 
@@ -1924,7 +1924,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/colab_notebook_execution#delete ColabNotebookExecution#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/colab_notebook_execution#delete ColabNotebookExecution#delete}.
 
 ---
 

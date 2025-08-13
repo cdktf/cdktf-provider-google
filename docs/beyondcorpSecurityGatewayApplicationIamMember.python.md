@@ -4,7 +4,7 @@
 
 ### BeyondcorpSecurityGatewayApplicationIamMember <a name="BeyondcorpSecurityGatewayApplicationIamMember" id="@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member google_beyondcorp_security_gateway_application_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member google_beyondcorp_security_gateway_application_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer"></a>
 
@@ -42,13 +42,13 @@ beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicati
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.applicationId">application_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#application_id BeyondcorpSecurityGatewayApplicationIamMember#application_id}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#member BeyondcorpSecurityGatewayApplicationIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#role BeyondcorpSecurityGatewayApplicationIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.securityGatewayId">security_gateway_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#security_gateway_id BeyondcorpSecurityGatewayApplicationIamMember#security_gateway_id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.applicationId">application_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#application_id BeyondcorpSecurityGatewayApplicationIamMember#application_id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#member BeyondcorpSecurityGatewayApplicationIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#role BeyondcorpSecurityGatewayApplicationIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.securityGatewayId">security_gateway_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#security_gateway_id BeyondcorpSecurityGatewayApplicationIamMember#security_gateway_id}. |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberCondition">BeyondcorpSecurityGatewayApplicationIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#id BeyondcorpSecurityGatewayApplicationIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#project BeyondcorpSecurityGatewayApplicationIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#id BeyondcorpSecurityGatewayApplicationIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#project BeyondcorpSecurityGatewayApplicationIamMember#project}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#application_id BeyondcorpSecurityGatewayApplicationIamMember#application_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#application_id BeyondcorpSecurityGatewayApplicationIamMember#application_id}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#member BeyondcorpSecurityGatewayApplicationIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#member BeyondcorpSecurityGatewayApplicationIamMember#member}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#role BeyondcorpSecurityGatewayApplicationIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#role BeyondcorpSecurityGatewayApplicationIamMember#role}.
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#security_gateway_id BeyondcorpSecurityGatewayApplicationIamMember#security_gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#security_gateway_id BeyondcorpSecurityGatewayApplicationIamMember#security_gateway_id}.
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#condition BeyondcorpSecurityGatewayApplicationIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#condition BeyondcorpSecurityGatewayApplicationIamMember#condition}
 
 ---
 
@@ -158,7 +158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#id BeyondcorpSecurityGatewayApplicationIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#id BeyondcorpSecurityGatewayApplicationIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -169,7 +169,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#project BeyondcorpSecurityGatewayApplicationIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#project BeyondcorpSecurityGatewayApplicationIamMember#project}.
 
 ---
 
@@ -546,7 +546,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#expression BeyondcorpSecurityGatewayApplicationIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#expression BeyondcorpSecurityGatewayApplicationIamMember#expression}.
 
 ---
 
@@ -554,7 +554,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#title BeyondcorpSecurityGatewayApplicationIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#title BeyondcorpSecurityGatewayApplicationIamMember#title}.
 
 ---
 
@@ -562,7 +562,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#description BeyondcorpSecurityGatewayApplicationIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#description BeyondcorpSecurityGatewayApplicationIamMember#description}.
 
 ---
 
@@ -698,7 +698,7 @@ The construct id used in the generated config for the BeyondcorpSecurityGatewayA
 
 The id of the existing BeyondcorpSecurityGatewayApplicationIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1076,9 +1076,9 @@ beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicati
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#expression BeyondcorpSecurityGatewayApplicationIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#title BeyondcorpSecurityGatewayApplicationIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#description BeyondcorpSecurityGatewayApplicationIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#expression BeyondcorpSecurityGatewayApplicationIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#title BeyondcorpSecurityGatewayApplicationIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#description BeyondcorpSecurityGatewayApplicationIamMember#description}. |
 
 ---
 
@@ -1090,7 +1090,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#expression BeyondcorpSecurityGatewayApplicationIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#expression BeyondcorpSecurityGatewayApplicationIamMember#expression}.
 
 ---
 
@@ -1102,7 +1102,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#title BeyondcorpSecurityGatewayApplicationIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#title BeyondcorpSecurityGatewayApplicationIamMember#title}.
 
 ---
 
@@ -1114,7 +1114,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#description BeyondcorpSecurityGatewayApplicationIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#description BeyondcorpSecurityGatewayApplicationIamMember#description}.
 
 ---
 
@@ -1154,13 +1154,13 @@ beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicati
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.applicationId">application_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#application_id BeyondcorpSecurityGatewayApplicationIamMember#application_id}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#member BeyondcorpSecurityGatewayApplicationIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#role BeyondcorpSecurityGatewayApplicationIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.securityGatewayId">security_gateway_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#security_gateway_id BeyondcorpSecurityGatewayApplicationIamMember#security_gateway_id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.applicationId">application_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#application_id BeyondcorpSecurityGatewayApplicationIamMember#application_id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#member BeyondcorpSecurityGatewayApplicationIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#role BeyondcorpSecurityGatewayApplicationIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.securityGatewayId">security_gateway_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#security_gateway_id BeyondcorpSecurityGatewayApplicationIamMember#security_gateway_id}. |
 | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberCondition">BeyondcorpSecurityGatewayApplicationIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#id BeyondcorpSecurityGatewayApplicationIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#project BeyondcorpSecurityGatewayApplicationIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#id BeyondcorpSecurityGatewayApplicationIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpSecurityGatewayApplicationIamMember.BeyondcorpSecurityGatewayApplicationIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#project BeyondcorpSecurityGatewayApplicationIamMember#project}. |
 
 ---
 
@@ -1242,7 +1242,7 @@ application_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#application_id BeyondcorpSecurityGatewayApplicationIamMember#application_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#application_id BeyondcorpSecurityGatewayApplicationIamMember#application_id}.
 
 ---
 
@@ -1254,7 +1254,7 @@ member: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#member BeyondcorpSecurityGatewayApplicationIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#member BeyondcorpSecurityGatewayApplicationIamMember#member}.
 
 ---
 
@@ -1266,7 +1266,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#role BeyondcorpSecurityGatewayApplicationIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#role BeyondcorpSecurityGatewayApplicationIamMember#role}.
 
 ---
 
@@ -1278,7 +1278,7 @@ security_gateway_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#security_gateway_id BeyondcorpSecurityGatewayApplicationIamMember#security_gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#security_gateway_id BeyondcorpSecurityGatewayApplicationIamMember#security_gateway_id}.
 
 ---
 
@@ -1292,7 +1292,7 @@ condition: BeyondcorpSecurityGatewayApplicationIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#condition BeyondcorpSecurityGatewayApplicationIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#condition BeyondcorpSecurityGatewayApplicationIamMember#condition}
 
 ---
 
@@ -1304,7 +1304,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#id BeyondcorpSecurityGatewayApplicationIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#id BeyondcorpSecurityGatewayApplicationIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1319,7 +1319,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/beyondcorp_security_gateway_application_iam_member#project BeyondcorpSecurityGatewayApplicationIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/beyondcorp_security_gateway_application_iam_member#project BeyondcorpSecurityGatewayApplicationIamMember#project}.
 
 ---
 

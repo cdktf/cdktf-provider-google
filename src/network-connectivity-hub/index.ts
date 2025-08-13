@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub
+// https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface NetworkConnectivityHubConfig extends cdktf.TerraformMetaArgumen
   /**
   * An optional description of the hub.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#description NetworkConnectivityHub#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#description NetworkConnectivityHub#description}
   */
   readonly description?: string;
   /**
   * Whether Private Service Connect transitivity is enabled for the hub. If true, Private Service Connect endpoints in VPC spokes attached to the hub are made accessible to other VPC spokes attached to the hub. The default value is false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#export_psc NetworkConnectivityHub#export_psc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#export_psc NetworkConnectivityHub#export_psc}
   */
   readonly exportPsc?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#id NetworkConnectivityHub#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#id NetworkConnectivityHub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,35 +37,35 @@ export interface NetworkConnectivityHubConfig extends cdktf.TerraformMetaArgumen
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#labels NetworkConnectivityHub#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#labels NetworkConnectivityHub#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Immutable. The name of the hub. Hub names must be unique. They use the following form: 'projects/{project_number}/locations/global/hubs/{hub_id}'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#name NetworkConnectivityHub#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#name NetworkConnectivityHub#name}
   */
   readonly name?: string;
   /**
   * Optional. The policy mode of this hub. This field can be either PRESET or CUSTOM. If unspecified, the policyMode defaults to PRESET. Possible values: ["CUSTOM", "PRESET"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#policy_mode NetworkConnectivityHub#policy_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#policy_mode NetworkConnectivityHub#policy_mode}
   */
   readonly policyMode?: string;
   /**
   * Optional. The topology implemented in this hub. Currently, this field is only used when policyMode = PRESET. The available preset topologies are MESH and STAR. If presetTopology is unspecified and policyMode = PRESET, the presetTopology defaults to MESH. When policyMode = CUSTOM, the presetTopology is set to PRESET_TOPOLOGY_UNSPECIFIED. Possible values: ["MESH", "STAR"]
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#preset_topology NetworkConnectivityHub#preset_topology}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#preset_topology NetworkConnectivityHub#preset_topology}
   */
   readonly presetTopology?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#timeouts NetworkConnectivityHub#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#timeouts NetworkConnectivityHub#timeouts}
   */
   readonly timeouts?: NetworkConnectivityHubTimeouts;
 }
@@ -146,15 +146,15 @@ export class NetworkConnectivityHubRoutingVpcsList extends cdktf.ComplexList {
 }
 export interface NetworkConnectivityHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#create NetworkConnectivityHub#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#create NetworkConnectivityHub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#delete NetworkConnectivityHub#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#delete NetworkConnectivityHub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#update NetworkConnectivityHub#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#update NetworkConnectivityHub#update}
   */
   readonly update?: string;
 }
@@ -306,7 +306,7 @@ export class NetworkConnectivityHubTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub google_network_connectivity_hub}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub google_network_connectivity_hub}
 */
 export class NetworkConnectivityHub extends cdktf.TerraformResource {
 
@@ -322,7 +322,7 @@ export class NetworkConnectivityHub extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkConnectivityHub resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkConnectivityHub to import
-  * @param importFromId The id of the existing NetworkConnectivityHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkConnectivityHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkConnectivityHub to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -334,7 +334,7 @@ export class NetworkConnectivityHub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_connectivity_hub google_network_connectivity_hub} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_connectivity_hub google_network_connectivity_hub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -345,7 +345,7 @@ export class NetworkConnectivityHub extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_connectivity_hub',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.47.0',
+        providerVersion: '6.48.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,

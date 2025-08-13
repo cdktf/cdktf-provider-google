@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group
+// https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ export interface NetworkSecurityInterceptEndpointGroupConfig extends cdktf.Terra
   * User-provided description of the endpoint group.
   * Used as additional context for the endpoint group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#description NetworkSecurityInterceptEndpointGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#description NetworkSecurityInterceptEndpointGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#id NetworkSecurityInterceptEndpointGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#id NetworkSecurityInterceptEndpointGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,14 +31,14 @@ export interface NetworkSecurityInterceptEndpointGroupConfig extends cdktf.Terra
   * 'projects/123456789/locations/global/interceptDeploymentGroups/my-dg'.
   * See https://google.aip.dev/124.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#intercept_deployment_group NetworkSecurityInterceptEndpointGroup#intercept_deployment_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#intercept_deployment_group NetworkSecurityInterceptEndpointGroup#intercept_deployment_group}
   */
   readonly interceptDeploymentGroup: string;
   /**
   * The ID to use for the endpoint group, which will become the final component
   * of the endpoint group's resource name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#intercept_endpoint_group_id NetworkSecurityInterceptEndpointGroup#intercept_endpoint_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#intercept_endpoint_group_id NetworkSecurityInterceptEndpointGroup#intercept_endpoint_group_id}
   */
   readonly interceptEndpointGroupId: string;
   /**
@@ -47,23 +47,23 @@ export interface NetworkSecurityInterceptEndpointGroupConfig extends cdktf.Terra
   * **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
   * Please refer to the field 'effective_labels' for all of the labels present on the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#labels NetworkSecurityInterceptEndpointGroup#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#labels NetworkSecurityInterceptEndpointGroup#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The cloud location of the endpoint group, currently restricted to 'global'.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#location NetworkSecurityInterceptEndpointGroup#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#location NetworkSecurityInterceptEndpointGroup#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#project NetworkSecurityInterceptEndpointGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#project NetworkSecurityInterceptEndpointGroup#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#timeouts NetworkSecurityInterceptEndpointGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#timeouts NetworkSecurityInterceptEndpointGroup#timeouts}
   */
   readonly timeouts?: NetworkSecurityInterceptEndpointGroupTimeouts;
 }
@@ -315,15 +315,15 @@ export class NetworkSecurityInterceptEndpointGroupConnectedDeploymentGroupList e
 }
 export interface NetworkSecurityInterceptEndpointGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#create NetworkSecurityInterceptEndpointGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#create NetworkSecurityInterceptEndpointGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#delete NetworkSecurityInterceptEndpointGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#delete NetworkSecurityInterceptEndpointGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#update NetworkSecurityInterceptEndpointGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#update NetworkSecurityInterceptEndpointGroup#update}
   */
   readonly update?: string;
 }
@@ -475,7 +475,7 @@ export class NetworkSecurityInterceptEndpointGroupTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group google_network_security_intercept_endpoint_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group google_network_security_intercept_endpoint_group}
 */
 export class NetworkSecurityInterceptEndpointGroup extends cdktf.TerraformResource {
 
@@ -491,7 +491,7 @@ export class NetworkSecurityInterceptEndpointGroup extends cdktf.TerraformResour
   * Generates CDKTF code for importing a NetworkSecurityInterceptEndpointGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkSecurityInterceptEndpointGroup to import
-  * @param importFromId The id of the existing NetworkSecurityInterceptEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkSecurityInterceptEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkSecurityInterceptEndpointGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -503,7 +503,7 @@ export class NetworkSecurityInterceptEndpointGroup extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/network_security_intercept_endpoint_group google_network_security_intercept_endpoint_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/network_security_intercept_endpoint_group google_network_security_intercept_endpoint_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -514,7 +514,7 @@ export class NetworkSecurityInterceptEndpointGroup extends cdktf.TerraformResour
       terraformResourceType: 'google_network_security_intercept_endpoint_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '6.47.0',
+        providerVersion: '6.48.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
