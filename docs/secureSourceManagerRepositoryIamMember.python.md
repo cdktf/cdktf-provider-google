@@ -4,7 +4,7 @@
 
 ### SecureSourceManagerRepositoryIamMember <a name="SecureSourceManagerRepositoryIamMember" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member google_secure_source_manager_repository_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member google_secure_source_manager_repository_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer"></a>
 
@@ -42,13 +42,13 @@ secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember(
 | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#member SecureSourceManagerRepositoryIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.repositoryId">repository_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#repository_id SecureSourceManagerRepositoryIamMember#repository_id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#role SecureSourceManagerRepositoryIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#member SecureSourceManagerRepositoryIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.repositoryId">repository_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#repository_id SecureSourceManagerRepositoryIamMember#repository_id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#role SecureSourceManagerRepositoryIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition">SecureSourceManagerRepositoryIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#id SecureSourceManagerRepositoryIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#location SecureSourceManagerRepositoryIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#project SecureSourceManagerRepositoryIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#id SecureSourceManagerRepositoryIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#location SecureSourceManagerRepositoryIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMember.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#project SecureSourceManagerRepositoryIamMember#project}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#member SecureSourceManagerRepositoryIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#member SecureSourceManagerRepositoryIamMember#member}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#repository_id SecureSourceManagerRepositoryIamMember#repository_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#repository_id SecureSourceManagerRepositoryIamMember#repository_id}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#role SecureSourceManagerRepositoryIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#role SecureSourceManagerRepositoryIamMember#role}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#condition SecureSourceManagerRepositoryIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#condition SecureSourceManagerRepositoryIamMember#condition}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#id SecureSourceManagerRepositoryIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#id SecureSourceManagerRepositoryIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -161,7 +161,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#location SecureSourceManagerRepositoryIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#location SecureSourceManagerRepositoryIamMember#location}.
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#project SecureSourceManagerRepositoryIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#project SecureSourceManagerRepositoryIamMember#project}.
 
 ---
 
@@ -547,7 +547,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#expression SecureSourceManagerRepositoryIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#expression SecureSourceManagerRepositoryIamMember#expression}.
 
 ---
 
@@ -555,7 +555,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#title SecureSourceManagerRepositoryIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#title SecureSourceManagerRepositoryIamMember#title}.
 
 ---
 
@@ -563,7 +563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#description SecureSourceManagerRepositoryIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#description SecureSourceManagerRepositoryIamMember#description}.
 
 ---
 
@@ -705,7 +705,7 @@ The construct id used in the generated config for the SecureSourceManagerReposit
 
 The id of the existing SecureSourceManagerRepositoryIamMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1083,9 +1083,9 @@ secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCon
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#expression SecureSourceManagerRepositoryIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#title SecureSourceManagerRepositoryIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#description SecureSourceManagerRepositoryIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#expression SecureSourceManagerRepositoryIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#title SecureSourceManagerRepositoryIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#description SecureSourceManagerRepositoryIamMember#description}. |
 
 ---
 
@@ -1097,7 +1097,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#expression SecureSourceManagerRepositoryIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#expression SecureSourceManagerRepositoryIamMember#expression}.
 
 ---
 
@@ -1109,7 +1109,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#title SecureSourceManagerRepositoryIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#title SecureSourceManagerRepositoryIamMember#title}.
 
 ---
 
@@ -1121,7 +1121,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#description SecureSourceManagerRepositoryIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#description SecureSourceManagerRepositoryIamMember#description}.
 
 ---
 
@@ -1161,13 +1161,13 @@ secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCon
 | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#member SecureSourceManagerRepositoryIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.repositoryId">repository_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#repository_id SecureSourceManagerRepositoryIamMember#repository_id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#role SecureSourceManagerRepositoryIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#member SecureSourceManagerRepositoryIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.repositoryId">repository_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#repository_id SecureSourceManagerRepositoryIamMember#repository_id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#role SecureSourceManagerRepositoryIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberCondition">SecureSourceManagerRepositoryIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#id SecureSourceManagerRepositoryIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#location SecureSourceManagerRepositoryIamMember#location}. |
-| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#project SecureSourceManagerRepositoryIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#id SecureSourceManagerRepositoryIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#location SecureSourceManagerRepositoryIamMember#location}. |
+| <code><a href="#@cdktf/provider-google.secureSourceManagerRepositoryIamMember.SecureSourceManagerRepositoryIamMemberConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#project SecureSourceManagerRepositoryIamMember#project}. |
 
 ---
 
@@ -1249,7 +1249,7 @@ member: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#member SecureSourceManagerRepositoryIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#member SecureSourceManagerRepositoryIamMember#member}.
 
 ---
 
@@ -1261,7 +1261,7 @@ repository_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#repository_id SecureSourceManagerRepositoryIamMember#repository_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#repository_id SecureSourceManagerRepositoryIamMember#repository_id}.
 
 ---
 
@@ -1273,7 +1273,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#role SecureSourceManagerRepositoryIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#role SecureSourceManagerRepositoryIamMember#role}.
 
 ---
 
@@ -1287,7 +1287,7 @@ condition: SecureSourceManagerRepositoryIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#condition SecureSourceManagerRepositoryIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#condition SecureSourceManagerRepositoryIamMember#condition}
 
 ---
 
@@ -1299,7 +1299,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#id SecureSourceManagerRepositoryIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#id SecureSourceManagerRepositoryIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1314,7 +1314,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#location SecureSourceManagerRepositoryIamMember#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#location SecureSourceManagerRepositoryIamMember#location}.
 
 ---
 
@@ -1326,7 +1326,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.47.0/docs/resources/secure_source_manager_repository_iam_member#project SecureSourceManagerRepositoryIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/6.48.0/docs/resources/secure_source_manager_repository_iam_member#project SecureSourceManagerRepositoryIamMember#project}.
 
 ---
 
